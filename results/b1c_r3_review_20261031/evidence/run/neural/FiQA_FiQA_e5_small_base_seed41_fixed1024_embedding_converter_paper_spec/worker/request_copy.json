@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "embedding_converter",
+  "regime": "anchors",
+  "seed": 41,
+  "lockpath": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+  "output": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec/worker",
+  "paired_source": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec/FiQA_paired_source.npy",
+  "paired_target": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec/FiQA_paired_target.npy",
+  "full_source": "/network-volume/arc2_recovery_20261030/restored/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "input_sha256": {
+    "paired_source": "9f87bd6bae9f6f1010564bfdd4623af7221297a70c9d5b2bd65bc2e187e2be6a",
+    "paired_target": "670f0065dd08f892180e13fb86cdd3aa9488a37686f1693d6bc6e4b74ddd648b",
+    "full_source": "6840bcf6eead122758d6f5eae3f8cf4149b7604485e405adbf4c536e45af1fbf"
+  }
+}

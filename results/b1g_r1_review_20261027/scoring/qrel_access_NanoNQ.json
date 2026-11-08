@@ -1,0 +1,13 @@
+{
+  "dataset": "NanoNQ",
+  "first_dev_qrel_open": "2026-10-27T13:31:02.892175+00:00",
+  "first_access_receipt": "first_dev_qrel_open.json",
+  "expected_source": {
+    "format": "parquet",
+    "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+    "bytes": 2020,
+    "implicit_binary_grade": 1,
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoNQ.parquet"
+  },
+  "exposure": "DEV, not independent confirmation"
+}

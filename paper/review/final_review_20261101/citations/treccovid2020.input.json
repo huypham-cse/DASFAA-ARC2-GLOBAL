@@ -1,0 +1,21 @@
+{
+  "key": "treccovid2020",
+  "bib_entry": "@article{treccovid2020,\n  author = {Voorhees, Ellen and Alam, Tasmeer and Bedrick, Steven and Demner-Fushman, Dina and Hersh, William R. and Lo, Kyle and Roberts, Kirk and Soboroff, Ian and Wang, Lucy Lu},\n  title = {TREC-COVID: constructing a pandemic information retrieval test collection},\n  journal = {ACM SIGIR Forum},\n  volume = {54},\n  number = {1},\n  pages = {1--12},\n  year = {2020},\n  doi = {10.1145/3451964.3451965},\n}",
+  "contexts": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 16,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    }
+  ],
+  "primary_source_record": {
+    "key": "treccovid2020",
+    "source_file": "citation_sources/treccovid_doi_bib.txt",
+    "metadata_url": "https://doi.org/10.1145/3451964.3451965",
+    "verification": "publisher-export",
+    "sha256": "ab91b30aaa3e8573062078ef5da8528a61de936eeb68e2fe153c61074a40ed40",
+    "metadata_type": "article",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

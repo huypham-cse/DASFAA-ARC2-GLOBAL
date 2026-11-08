@@ -1,0 +1,29 @@
+{
+  "folder_id": "1Qeoyl4goCaZ8MiE2PIkvDIhX9GYoTAuC",
+  "items": [
+    {
+      "id": "1A0now2KekeBy2wO_9AlALkG20ZGwe3e9",
+      "name": "archives",
+      "mime": "application/vnd.google-apps.folder",
+      "size": null
+    },
+    {
+      "id": "1ANv1DG21AM-0FenbJWQyDvQXSMCaDqFM",
+      "name": "inventory.json",
+      "mime": "application/json",
+      "size": 14561861
+    },
+    {
+      "id": "1UzHof1TqGcioKuKmUC4fL1i8dUSn3_s0",
+      "name": "prior_inventory_comparison.json",
+      "mime": "application/json",
+      "size": 198
+    },
+    {
+      "id": "1qdIGeRbIpAMrl0WCZdg8DKmt57pr6_RK",
+      "name": "status.json",
+      "mime": "application/json",
+      "size": 451
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+@inproceedings{NEURIPS DATASETS AND BENCHMARKS2021_65b9eea6,
+ author = {Log\'{e}, C\'{e}cile and Ross, Emily and Dadey, David and Jain, Saahil and Saporta, Adriel and Ng, Andrew and Rajpurkar, Pranav and Rajpurkar, Pranav},
+ booktitle = {Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks},
+ editor = {J. Vanschoren and S. Yeung},
+ pages = {},
+ title = {Q-Pain: A Question Answering Dataset to Measure Social Bias in Pain Management},
+ url = {https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Paper-round1.pdf},
+ volume = {1},
+ year = {2021}
+}

@@ -1,0 +1,26 @@
+{
+  "status": "R5_SMOKE_TO_FULL_LAUNCHED",
+  "utc": "2026-10-26T13:45:39.959364+00:00",
+  "host": "103.73.232.201",
+  "code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "checkout": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5",
+  "argv": [
+    "/root/arc2_p3h_20261020/venv/bin/python",
+    "-u",
+    "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/ops/b1p_campaign.py",
+    "--code-commit",
+    "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+    "--name",
+    "mini_r5_20261026"
+  ],
+  "resume_step": 25000,
+  "checkpoint_sha256": "42568657061faa8c408a7c0c7cba1482f334a0478cc1233eb5b7d18784dc9f09",
+  "source_files_verified": 25,
+  "smoke_first": true,
+  "no_artificial_caps": true,
+  "no_next_item_auto_launch": true,
+  "earlier_empty_bundle_upload_bytes": 0,
+  "pid": 32086,
+  "launched_utc": "2026-10-26T13:45:40.055315+00:00",
+  "lock_sha256": "0224200454b0deb8f2176e509d8bd99da0f59c7ae7b12a2488ec6eadad7308ad"
+}

@@ -1,0 +1,205 @@
+Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability (https://arxiv.org/abs/2609.05339)
+citeturn135academia12 [wordlim: 200] Published: last month; An agent can keep the same memory store and still forget: a new model may interpret old notes differently, mixed embedding versions may break retrieval, and repair may fail without the original evidence. ... Conversely, compressed NOTES exhibit high model coupling, with accuracy shifting asymmetrically by $+9.91$ or $-13.28$ percentage points depending on the specific migration direction.
+Title: Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability
+Authors: Ankit Goyal, Jaideep Ray
+Date: Fri Sep  4 16:44:17 2026
+
+Model upgrades are routine; memory migrations are not. An agent can keep the same memory store and still forget: a new model may interpret old notes differently, mixed embedding versions may break retrieval, and repair may fail without the original evidence. We compare memory as the same history is preserved verbatim for long-context reading (LC-RAW), divided into chunks for retrieval-augmented generation (RAG), compressed by a model into natural-language notes (NOTES), or normalized into a fixed-schema knowledge graph (KG-fixed). The study uses 48 synthetic histories with randomized answer codes, exact scoring, and two open-weight models with sub 10 billion parameters. Our measurements show that fixed-schema structures transfer reliably, with KG-fixed accuracy changing by only $+0.0004 \pm 0.0020$ following a writer swap. Conversely, compressed NOTES exhibit high model coupling, with accuracy shifting asymmetrically by $+9.91$ or $-13.28$ percentage points depending on the specific migration direction. In RAG systems, partial embedding migrations using a 50/50 mixed index capture only a 4.96-point accuracy improvement, forfeiting the majority of the 11.90-point gain achieved through full re-embedding. Diagnostic decomposition attributes 80% ($0.467 \pm 0.014$) of the NOTES accuracy deficit to information lost during initial construction, whereas retrieval failures drive 81% ($0.364 \pm 0.012$) of the RAG deficit. Finally, store-only repair of NOTES fails to reach a 90% performance recovery target in all 48 test cases, whereas retaining the raw source history enables successful recovery in 34 of 48 cases for one tested direction. These findings highlight the necessity of direction-specific migration testing, strict embedding space isolation, and the retention of source histories for memory repair.--------------------------------------------------------------------------------
+embedding-translation/README.md at main · DBgroup-Edinburgh/embedding-translation · GitHub (https://github.com/DBgroup-Edinburgh/embedding-translation/blob/main/README.md)
+citeturn135search0 [wordlim: 200] Crawled: last week; It is the reference implementation for the ICML 2026 paper "Generalizable and Composable Multi-Model Embedding Translation" (Beining Yang, Yang Cao). ... The H-MoE scripts additionally need `torch` + this repo's `embedding_translation`; the LA2M scripts are pure numpy / sklearn / faiss.
+
+# 🧭 embedding-translation
+
+### Generalizable & Composable Multi-Model Embedding Translation
+
+Learn a mapping `f : A → B` between two embedding spaces so that vectors from one model can be searched, mixed, and chained in another model's space — without re-embedding the corpus.
+
+Quick Start · Reproduction · Core Concepts · Repository Layout · Citation
+
+## 🔥 Highlights
+
+  * One mapper, eight strategies. Procrustes, CCA, linear / simple-linear MLPs, nonlinear, Gromov–Wasserstein, LA2M, and the headline hierarchical Mixture-of-Experts (H-MoE) translator — each in its own folder, selected by config.
+  * H-MoE with LoRA experts. A shared SELU backbone plus per-node low-rank adapters over an agglomerative-style tree, with cascade routing. Localized capacity at ~2× the parameters of a monolithic MLP.
+  * Three deployment scenarios out of the box: pairwise out-of-distribution translation, multi-model mixing into one shared search space, and multi-model chaining through a hub model.
+--------------------------------------------------------------------------------
+Migrate to a New Embedding Model - Qdrant (https://qdrant.tech/documentation/tutorials-operations/embedding-model-migration/)
+citeturn135search1 [wordlim: 200] Crawled: today; This tutorial will guide you step-by-step through the two options for migrating to a new model with zero downtime, and shows how to compare retrieval quality on your own queries before you switch any traffic. ... A migration process copies the data from the old collection to the new one, re-embedding vectors using the new model. ...                 vector=models.Document( ... Start from a labeled set of queries, with the documents that should be returned for each one.
+
+## Check Retrieval Quality Before Switching
+
+A new embedding model is not automatically better on your data, so measure it before you move traffic. Both embeddings exist side by side at this point (two collections in a blue-green migration, two named vectors in the other option), which makes it possible to run identical queries against each and compare the results.
+
+Start from a labeled set of queries, with the documents that should be returned for each one. Measuring Retrieval Relevance explains how to build it from logs, human annotation, or synthetic queries, and how to choose metrics. Use real queries from your application where you can, because a model that wins on generic benchmarks can still lose on your domain.
+
+To score both setups, follow these steps:
+
+  1. Query each setup with the same inputs. For every query in the labeled set, ask the old setup and the new setup for the top `k` results. Use the same `k` for both. In a blue-green migration, that means querying the old and new collections, each with its own model. With named vectors, query the one collection twice and select the old or new vector each time, again with the matching model.
+  2. Collect the ranked results per query. Record the document IDs in the order returned, along with their scores. Make sure the IDs use the same format as the IDs in your labeled set (for example, strings on both sides), or nothing will match.
+  3. Compute the metrics against the labels. Use an evaluation library such as ranx for Python, or implement the metrics yourself in other languages. Three metrics cover most cases:
+     * Recall@10: the share of the relevant documents that appear in the top 10.
+     * MRR: the average of 1 divided by the rank of the first relevant result, which rewards putting a correct answer near the top.
+     * nDCG@10: a score that rewards relevant documents appearing higher in the list, and handles graded relevance.
+  4. Compare the two score sets.
+
+
+Read the comparison with these points in mind:
+
+  * Decide the bar first. Pick what metric to look at, and how big the gains have to be to justify the switch to a new embedding model. Different metrics can rank the two models differently.
+  * Look at individual queries. Average can often hide a group of queries that got worse on the new embedding model. Sort the query by score and read the biggest regression.
+  * Weigh the costs. A model with larger vectors needs more memory and disk, and may change search latency. Compare these on the new collection as well as the quality scores.
+  * Without labels, you can only measure difference. The overlap between the top results of both models tells you how much the switch changes what users see, not which results are better. Review the queries with the lowest overlap by hand.
+
+If the new model does not clear the bar, stop here. Production still serves the old embeddings, so the only cleanup is deleting the new collection, or the new named vector with `delete_vector_name`.--------------------------------------------------------------------------------
+Plan the embedding change as a migration · Inference Institute (https://inference.institute/research/re-embedding-is-a-migration/)
+citeturn135search2 [wordlim: 200] Published: 3 months ago; Crawled: 3 weeks ago; Changing an embedding model can require a new index, a retrieval evaluation and a controlled cutover. ... Treat a change of embedding model as a migration with explicit compatibility, evaluation and recovery conditions. ... A model with stronger published benchmark results can behave differently on a corpus containing specialist vocabulary, tables or short documents. ... Its size and coverage should follow the consequences of a missed or incorrectly returned document, rather than a universal question count. ... There is no general answer to which embedding model is right, and this is not an argument for staying on an old one.
+
+Data · 16 Jul 2026 · 5 min read
+
+# Plan the embedding change as a migration
+
+Changing an embedding model can require a new index, a retrieval evaluation and a controlled cutover. Record the source versions, transformations and permissions needed to rebuild the service before committing to the switch.
+
+Inference Institute
+Data research
+
+Data / Conceptual study[ R ]
+
+Separate before comparing.
+
+  1. Development groups
+  2. Hold-out boundary
+  3. Test groups
+
+Keep development and test groups separate before comparing performance. No measured results are shown.
+
+An embedding model with stronger benchmark results or lower prices can be worth adopting. The investment decision also needs the cost of rebuilding the index, testing retrieval and retaining a recovery route. A configuration change can start a migration whose work extends well beyond that setting.
+
+Check compatibility between the stored vectors and the proposed query model. Different embedding models generally produce different vector spaces, so comparing their outputs without a validated compatibility arrangement can make retrieval unreliable. --------------------------------------------------------------------------------
+Migrating embedding models without breaking search — ManyLayers Blog (https://manylayers.io/blog/embedding-model-migration-zero-downtime/)
+citeturn135search3 [wordlim: 200] Published: 6 months ago; Crawled: last week; If your RAG pipeline has a measured retrieval precision at k issue — relevant documents are not being returned — and you’ve ruled out chunking strategy and query preprocessing as causes, then a better embedding model may help. ... Evaluate the new model against your actual documents and queries before writing a line of migration code. ... You’re re-embedding every document in the old collection using the new model and writing the result to `docs_v2`, while production traffic continues to flow normally against `docs_v1`.
+
+## Step 2: Dual-write for new documents
+
+Once you’ve decided to migrate, the first production change is dual-write: every new document that enters your system gets embedded with both the old model and the new model and written to two separate vector collections.
+    
+    `old_collection: "docs_v1"   # old embedding model, all historical docs
+    new_collection: "docs_v2"   # new embedding model, only new docs so far`
+
+During dual-write, your search pipeline continues to read from `docs_v1`. The `docs_v2` collection is write-only — it accumulates new documents but is not queried yet. This is safe because `docs_v2` is incomplete (historical documents haven’t been reindexed yet), and searching an incomplete index produces worse results than the complete old index.
+
+Dual-write has two costs to account for: the additional embedding API calls (roughly 2x your embedding cost during the transition period) and the storage for the second collection. Budget for both in advance.
+
+### How long does dual-write run?
+--------------------------------------------------------------------------------
+Re-Embedding Migration: Upgrade RAG Indexes Safely · Formation Blog (https://formation.dev/blog/embedding-model-upgrade-migration)
+citeturn135search4 [wordlim: 200] Published: last month; Crawled: last month; That makes an embedding model upgrade a data migration, not a routine application rollout. A design that only changes the model used for new documents leaves the system with a mixed-version index whose similarity scores have no established interpretation unless the model provider explicitly documents compatibility. ... Retrieval works because the document vectors and query vector are produced under the same compatible mapping, then compared with the index's configured distance function and normalization assumptions. ... A new-model query can rank old-model chunks arbitrarily, producing irrelevant or missing context and potentially incorrect or incomplete answers.
+
+# Embedding Model Upgrades Are Data Migrations, Not Rollouts
+
+ImageFormationSeptember 10, 2026 7 min read
+
+Image: Embedding Model Upgrades Are Data Migrations, Not Rollouts
+
+An embedding is derived state: the output of a particular embedding model version applied to a particular representation of source data. When that model changes, the safe default is to treat the result as a new vector space. Completing the upgrade therefore requires re-embedding every searchable item in that namespace and moving retrieval to a compatible index.
+
+That makes an embedding model upgrade a data migration, not a routine application rollout. A design that only changes the model used for new documents leaves the system with a mixed-version index whose similarity scores have no established interpretation unless the model provider explicitly documents compatibility.
+
+In a senior system-design interview, this distinction connects model selection to data lineage, deployment, recovery, and freshness.
+--------------------------------------------------------------------------------
+embedflow · PyPI (https://pypi.org/project/embedflow/0.3.0/)
+citeturn135search5 [wordlim: 200] Published: last month; Crawled: last week; Progressive embedding-model migration over existing vector indexes.
+
+EmbedFlow lets a new embedding model serve over candidates from an existing vector index while target document vectors are materialized progressively. ... Different representation spaces can still preserve useful retrieval neighborhoods. ...       --documents ./documents.jsonl \
+--------------------------------------------------------------------------------
+Treat Embedding Model Changes as Index Migrations (https://nalar.dev/treat-embedding-model-changes-as-index-migrations/)
+citeturn135search6 [wordlim: 200] Published: last month; Crawled: 4 weeks ago; Changing an embedding model changes vector coordinates, score distributions, and retrieval behavior, so stored vectors need an explicit migration boundary. ...   * Incremental updates need version metadata ... A model replacement is easier to evaluate when old and new representations coexist in separate indexes for a limited period. ... If only top-ranked documents matter, ranking agreement and relevance judgments are more informative than comparing raw vector coordinates. ... The serving path can switch between complete representation versions instead of trying to reconstruct which individual records were encoded by which model after a mixed migration.
+--------------------------------------------------------------------------------
+Re-Embedding a Corpus Without Downtime — AkoyaSoft (https://akoyasoft.com/insights/re-embedding-corpus-without-downtime)
+citeturn135search7 [wordlim: 200] Published: 2 months ago; Crawled: last month; A better embedding model ships, your evaluation set says it wins, and you discover that adopting it means recomputing every vector you own — because embeddings from two different models do not share a space, and a nearest-neighbour search across a mixed index returns confident nonsense. ... The instinct is to re-embed lazily: new documents use the new model, old documents get upgraded as they are touched. ... If it is missing, every document that changes during the migration window is missing or stale in the new index the moment you cut over. ... Run your retrieval evaluation against the new index and compare to the old one on identical inputs.
+--------------------------------------------------------------------------------
+Changing your embedding model is a migration, not a setting | JarvisBitz Tech (https://www.jarvisbitz.com/insights/embedding-model-changes-reindexing)
+citeturn135search8 [wordlim: 200] Published: last month; Crawled: last month; # Changing your embedding model is a migration, not a setting ... A September 2025 paper proposes learning a small transform between the old and new embedding spaces rather than re-embedding everything, and reports that it "recovers 95-99% of the retrieval recall (Recall@10, MRR)" while adding "less than 10 microseconds of query latency" and reducing "recompute costs by over 100 times" compared with full re-indexing. ... Queries return a blend of correctly and incorrectly placed documents, so results are plausible enough to pass a spot check and wrong often enough to matter, and the pattern of failure looks random because it depends on which space a given document happened to land in.
+--------------------------------------------------------------------------------
+Generalizable and Composable Multi-Model Embedding Translation · ICML 2026 (https://knot.forkjoin.ai/papers/generalizable-and-composable-multi-model-embedding-translation)
+citeturn135search9 [wordlim: 200] Crawled: 3 days ago; # Generalizable and Composable Multi-Model Embedding Translation ... Furthermore, multi-model mixing and chaining only degrade our performance in Recall@100 by $0.5\% -- 2.6\%$, compared to $7.2\% -- 92.3\%$ recall drop by existing methods.
+--------------------------------------------------------------------------------
+Vecski: translate embeddings for a gradual model migration (https://www.loo.ski/insights/vecski-embedding-model-migration)
+citeturn135search10 [wordlim: 200] Published: 3 weeks ago; Crawled: 2 weeks ago; Move existing document vectors toward a new space  | Old model → new model  | The original stored vectors can supply the migration input  | Whether translated documents work well with native queries from the new model ... Keep a separate, untouched evaluation set for the migration decision, and test retrieval against the actual index.
+--------------------------------------------------------------------------------
+IncDSI: Incrementally Updatable Document Retrieval (https://proceedings.mlr.press/v202/kishore23a/kishore23a.pdf)
+citeturn135search13 [wordlim: 200] Published: 3.4 years ago; Because queries can be noisy, we average over the \(k\) available queries to develop a representative query embedding \(\bar{q}_{n+1} = \frac{1}{k}\sum_{i=1}^{k} q_{i,n+1}\) that should retrieve the new document (\(k\) is variable for every document). ... For some original document \(j\), we denote the cached set of training queries as \(\{z_{i,j}\}_{i=1}^{k}\), all training queries corresponding to the initial documents are cached after training the initial retrieval model \(M^0\) for efficiency. ... where \(\lambda_1 \in (0,1)\) balances the objectives for accurately retrieving the new document and preserving the retrieval performance for the old documents, and \(\lambda_2\) controls the weight for L2 regularization.
+--------------------------------------------------------------------------------
+Migrate Embedding Models Without Breaking Retrieval (https://nalar.dev/migrate-embedding-models-without-breaking-retrieval/)
+citeturn135search11 [wordlim: 200] Published: last month; Crawled: 4 weeks ago; # Migrate Embedding Models Without Breaking Retrieval ... This article explains the mental model behind that problem, then develops a safe migration pattern: version the embedding space, build a new index beside the old one, evaluate both on the same queries, and switch traffic only after the new system meets the required quality and operational targets. ... They also make incremental repair possible without guessing which vector corresponds to which source record. ... Stored document vectors encode the geometry of the model and preprocessing pipeline that created them, so new query vectors should not be mixed with an old index merely because their dimensions match.
+--------------------------------------------------------------------------------
+Continual Learning for Generative Retrieval over Dynamic Corpora (https://arxiv.org/abs/2308.14968)
+citeturn135academia14 [wordlim: 200] Published: 3.2 years ago; In many practical scenarios, however, document collections are dynamic, where new documents are continuously added to the corpus. ... We put forward a novel Continual-LEarner for generatiVE Retrieval (CLEVER) model and make two major contributions to continual learning for GR: (i) To encode new documents into docids with low computational cost, we present Incremental Product Quantization, which updates a partial quantization codebook according to two adaptive thresholds; and (ii) To memorize new documents for querying without forgetting previous knowledge, we propose a memory-augmented learning mechanism, to form meaningful connections between old and new documents.
+--------------------------------------------------------------------------------
+TREBALL FINAL DE MÀSTER (https://repositori.udl.cat/server/api/core/bitstreams/10a0aa4c-6d1c-468a-bde9-72a2481a2c66/content)
+citeturn135search15 [wordlim: 200] Published: 1.6 years ago; minimal costs: embedding generation through incremental processing. ... Thus, when a query is made, the system can retrieve information from both old and
+new documents, ensuring more complete and up-to-date responses. ... this approach allows the system to adapt to new needs without requiring full model
+retraining, leveraging the retrieval capabilities inherent to RAG systems.
+--------------------------------------------------------------------------------
+Vivid (https://peter.bednar.website.tuke.sk/mz/MZ_RAG_N.pdf)
+citeturn135search16 [wordlim: 200] Published: 11 months ago; Crawled: 7 months ago;   • a new embedding model ...   • Incremental updating: only embed new or changed documents.
+  • Distillation-based upgrades: map old embeddings to new space (still experimental).
+--------------------------------------------------------------------------------
+Forward Compatible Training for Large-Scale Embedding Retrieval Systems (https://arxiv.org/abs/2112.02805)
+citeturn135academia17 [wordlim: 200] Published: 4.9 years ago; In visual retrieval systems, updating the embedding model requires recomputing features for every piece of data. ... FCT obtains model compatibility when the new and old models are trained across different datasets, losses, and architectures.
+--------------------------------------------------------------------------------
+Is there a way to re-embed existing documents after changing the embedding model? (https://www.reddit.com/r/unsloth/comments/1x55ewx/is_there_a_way_to_reembed_existing_documents/)
+citeturn135reddit18 [wordlim: 200] Published: 2 weeks ago; The problem is that I cannot find an option to re-embed all previously uploaded documents with the new embedding model. ... If only new documents or queries use the new model while old documents keep their old embeddings, retrieval/similarity search can become inconsistent or effectively broken.
+--------------------------------------------------------------------------------
+4 Implementation (https://aclanthology.org/anthology-files/anthology-files/pdf/emnlp/2024.emnlp-demo.10.pdf)
+citeturn135search19 [wordlim: 200] Published: 2.0 years ago; **Data Source**  Our study incorporates a fine-tuned retrieval embedding model to enhance conversational document retrieval. ... Our retrieval model, BGE M3 Embedding (Chen et al., 2024), is fine-tuned on our collected multi-turn document retrieval data. ... The length of both queries and documents is truncated to 512.
+--------------------------------------------------------------------------------
+I had to re-embed 5 million documents because I changed embedding models. Here's how to never be in that position. (https://www.reddit.com/r/Rag/comments/1rqw1oo/i_had_to_reembed_5_million_documents_because_i/)
+citeturn135reddit20 [wordlim: 200] Published: 7 months ago; The point is storing them separately from the vectors so when you switch embedding models you re-embed from stored chunks instead of re-processing raw documents from scratch. just 2 different pipeline stages but same data. ... You can simply retrieve every single document in the entire search engine step by step, and then add a new vector without removing the old one. ... There are way better ways to improve retrieval that do not require this or re-embedding. ... I trained a simple model to map old to new, and a small (10K) hold out tested ok as I recall. ... It is designed to have incremental processing by default, and only changed logic will rerun.
+--------------------------------------------------------------------------------
+I worry about embedding model drift more than another service in my RAG stack (https://www.reddit.com/r/Rag/comments/1xb07fu/i_worry_about_embedding_model_drift_more_than/)
+citeturn135reddit21 [wordlim: 200] Published: last week; It also means an embedding-model change needs to be treated as a data migration decision, rather than an ordinary application release. ... An edit is a delete plus a write on the new side, keyed by document id, so you never patch a vector that was embedded with the old model. ... Then compare old and new retrieval against the same source state. ... To change models, I'd load the replacement under a new name and re-embed the stored documents before switching queries over.
+--------------------------------------------------------------------------------
+Towards Continual Knowledge Graph Embedding via Incremental Distillation (https://arxiv.org/abs/2405.04453)
+citeturn135academia22 [wordlim: 200] Published: 2.5 years ago; Traditional knowledge graph embedding (KGE) methods typically require preserving the entire knowledge graph (KG) with significant training costs when new knowledge emerges. To address this issue, the continual knowledge graph embedding (CKGE) task has been proposed to train the KGE model by learning emerging knowledge efficiently while simultaneously preserving decent old knowledge. ... Secondly, to preserve the old knowledge effectively, we devise a novel incremental distillation mechanism, which facilitates the seamless transfer of entity representations from the previous layer to the next one, promoting old knowledge preservation.
+--------------------------------------------------------------------------------
+My hybrid search ran vector-only for months and nothing warned me: an update on the one-model, one-table RAG pipeline (https://www.reddit.com/r/Rag/comments/1uvl9cx/my_hybrid_search_ran_vectoronly_for_months_and/)
+citeturn135reddit23 [wordlim: 200] Published: 3 months ago; A few months back I simplified a production RAG pipeline (customer support platform, three sources: uploaded docs, scraped web pages, resolved support conversations) down to one contextualized embedding model and a single pgvector table with hybrid search (vector + BM25 + RRF) and a reranker. ... No errors, no degraded-mode logs, just quietly worse retrieval on exact-term queries (product names, codes, phrases in the "wrong" language). ... ** The tradeoff with contextualized embeddings is that they aren't incremental (all chunks of a doc must be embedded together). That grew into proper migration infrastructure: ... * Embed-first transactional re-ingestion: the new chunks are embedded \*before\* the old ones are swapped out, so an embedding API failure keeps the old chunks instead of leaving content unsearchable.
+--------------------------------------------------------------------------------
+Standard RAG has no concept of document versions: cost me a while to figure out why answers kept blending superseded policies (https://www.reddit.com/r/LangChain/comments/1tnx5ku/standard_rag_has_no_concept_of_document_versions/)
+citeturn135reddit24 [wordlim: 200] Published: 5 months ago; The AI was pulling from multiple versions of the same document and synthesizing them like they were all current. ... First instinct was metadata filtering, tag each doc with a `status` field (current / superseded / draft) and filter at retrieval time. This helps and is worth doing regardless, but it doesn't solve the underlying structural problem: questions that require *reasoning across relationships* between documents.
+--------------------------------------------------------------------------------
+How do you handle switching embedding models on a large corpus? Curious what people actually do in production. (https://www.reddit.com/r/Rag/comments/1u9ye6j/how_do_you_handle_switching_embedding_models_on_a/)
+citeturn135reddit25 [wordlim: 200] Published: 4 months ago; * When a better embedding model came out, did you actually migrate, or did you just stay on your old one because the migration was too painful? ... before touching the index i pull the top few thousand real queries from logs, freeze them as a golden set with the chunk ids people actually clicked or that the answer cited, then embed that set with both models and diff recall@k and mrr side by side. half the time the shiny new model wins on mteb and loses on your domain, and you just saved yourself a million-doc re-embed. if it does win, the same golden set becomes your cutover gate: the shadow index has to beat the old index on those metrics before code flips, not just "finish backfilling."
+other thing that saves real money, at least for me, is you usually don't need to migrate the whole corpus. retrieval is long-tailed, a small fraction of chunks get pulled for most queries. re-embed the hot set first, run on a mixed index, and backfill the cold tail lazily or never. a few hundred lines of python over your query logs tells you exactly where that cut is.
+--------------------------------------------------------------------------------
+Half my "hallucinations" were a retrieval bug: a superseded clause and an active one had near-identical embedding distance (https://www.reddit.com/r/Rag/comments/1u0vhrz/half_my_hallucinations_were_a_retrieval_bug_a/)
+citeturn135reddit26 [wordlim: 200] Published: 4 months ago; Spent a month convinced my retrieval problem was a model problem. ... this is such a common failure mode and it almost never gets diagnosed correctly because everyone blames the LLM first. the embedding similarity problem youre describing gets way worse with versioned documents, policy docs, loan agreements, anything that gets amended. the old and new clause share ~90% of the same vocabulary so cosine distance between them is tiny, sometimes under 0.05. what actually helps is tagging chunks with document metadat at extraction time (version, effective date, supersession status) so you can filter before retrieval, not after. fwiw did you end up solving it with metadata filters or did you restructure how the chunks were split?
+--------------------------------------------------------------------------------
+How do you keep embeddings in sync when the source data changes? (https://www.reddit.com/r/Rag/comments/1wygu37/how_do_you_keep_embeddings_in_sync_when_the/)
+citeturn135reddit27 [wordlim: 200] Published: 3 weeks ago; My documents get edited often, and I keep finding answers based on old versions because the embeddings were never updated. ... instead of a cron job, try a postgres trigger that fires pg\_notify on content change, then a small worker listening on that channel re-embeds immediately instead of waiting for the next scheduled pass. closes most of the staleness window without a custom change tracker. also tag each embedding with the content hash it was built from and filter out mismatches at query time, so a stale chunk just drops out of results instead of answering with old info while the re-embed queue catches up. ... The sneaky failure: edit a doc mid-section and every chunk after the edit gets a new hash even when the text is identical, because boundaries shifted. ... Access policy changed - the document content is still accurate but permissions changed, so it should no longer be retrieved for certain users. ... You need the retrieval layer to check access at query time, not just at ingestion time. ... I'd store a hash of the chunk text and the embedding model ID with each vector.
+--------------------------------------------------------------------------------
+Search engine indexing (https://en.wikipedia.org/wiki/Search_engine_indexing)
+citeturn135search28 [wordlim: 200] Crawled: 3 weeks ago; The indexer must first check whether it is updating old content or adding new content. ... This is commonly referred to as a producer-consumer model. ... The architecture may be designed to support incremental indexing, where a merge identifies the document or documents to be added or updated and then parses each document into words. ... Because the inverted index stores a list of the documents containing each word, the search engine can use direct access to find the documents associated with each word in the query in order to retrieve the matching documents quickly. ... If search engines index this content as if it were normal content, the quality of the index and search quality may be degraded due to the mixed content and improper word proximity. ... *  Tomasic, A., et al.: Incremental Updates of Inverted Lists for Text Document Retrieval.
+--------------------------------------------------------------------------------
+whats your actual strategy for keeping a rag index fresh? not the theory, what are you actually doing in prod (https://www.reddit.com/r/Rag/comments/1w6lmxc/whats_your_actual_strategy_for_keeping_a_rag/)
+citeturn135reddit29 [wordlim: 200] Published: last month; i ingest a few thousand pages, mostly docs, pricing and policy pages. one of the pricing pages changed its numbers back in march, but my vectors obviously still had the old version. retrieval kept returning it with high similarity for weeks.
+
+nothing was technically broken. the model wasnt hallucinating either. retrieval was doing exactly what it was supposed to do, it was just retrieving something that used to be true.
+
+i initially fixed this by re-embedding everything every night. turns out thats pretty stupid lol. most pages dont change on a given day, so i was paying to re-embed thousands of pages just to catch the handful that actually changed.
+--------------------------------------------------------------------------------
+[D] Updating embedding model while keeping compatibility with older versions (https://www.reddit.com/r/MachineLearning/comments/xc4aas)
+citeturn135reddit30 [wordlim: 200] Published: 4.1 years ago; Crawled: 4.1 years ago; I have a large dataset that is continuously getting larger with new data, and an embedding model I run on incoming data to store a vectorized representation of said data which is then used for various downstream tasks. ... Given that can have multiple version of the same model (different version of encoder), it is possible to train a downstream task with old and new encoder and condition on one-hot encoder tag for each version (Task incremental learning)
+--------------------------------------------------------------------------------
+Anyone figure out how to avoid re-embedding entire docs when they update? (https://www.reddit.com/r/Rag/comments/1mhr7xi/anyone_figure_out_how_to_avoid_reembedding_entire/)
+citeturn135reddit31 [wordlim: 200] Published: 1.2 years ago; The issue I keep hitting: every time something changes, I end up re-parsing and re-embedding the *entire* document. ...   my main concern is although the cost of incremental updates gets solved here - isn't storage on a knowledge graph a lot more expensive compared to vector based storage? ... You’ll just append new documents to your existing knowledge graph. ... I'd recommend using a local embedding model over an API if you want to optimize for cost further. ... "It bloats the vector DB" you delete the old embeddings, so the vector count shouldn't change that much, or I am missing something?
+--------------------------------------------------------------------------------
+Incremental encoding (https://en.wikipedia.org/wiki/Incremental_encoding)
+citeturn135search32 [wordlim: 200] Crawled: last week; Incremental encoding is widely used in information retrieval to compress the lexicons used in search indexes; these list all the words found in all the documents and a pointer for each one to a list of locations.
+--------------------------------------------------------------------------------
+What we learned building hybrid retrieval for website RAG: three content levels, RRF, and autocomplete (https://www.reddit.com/r/Rag/comments/1vn09ig/what_we_learned_building_hybrid_retrieval_for/)
+citeturn135reddit33 [wordlim: 200] Published: 2 months ago; * **Pages:** one document per URL, including the title, description, language, and a page-level embedding. ... This makes retrieval quality more important than prompt tuning: if the right passage is missing, the generation step cannot reliably recover it. ... Schema changes and embedding-model migrations therefore require more coordination than they would in a shared index with a tenant filter. ... * Do you retrieve sentences, larger chunks, or parent documents?
+--------------------------------------------------------------------------------
+Vector space model (https://en.wikipedia.org/wiki/Vector_space_model)
+citeturn135search34 [wordlim: 200] Crawled: last week; Model for representing text documents ... Unlike Boolean, when a document is added using term frequency-inverse document frequency weights, the inverse document frequencies of the terms in the new document decrease while that of the remaining terms increase. ... This behavior models the original motivation of Salton and his colleagues that a document collection represented in a low density region could yield better retrieval results. ... It contains incremental (memory-efficient) algorithms for term frequency-inverse document frequency, latent semantic indexing, random projections and latent Dirichlet allocation.
+

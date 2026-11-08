@@ -1,0 +1,69 @@
+{
+  "status": "B1G_RANK_PASS",
+  "request_sha256": "3cb004443de1b394cf10951fba612f0319b49845b599866eb6ad8924ec741970",
+  "group_id": "FiQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized",
+  "input_hashes": {
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy": "6840bcf6eead122758d6f5eae3f8cf4149b7604485e405adbf4c536e45af1fbf",
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_queries.npy": "78062f32f7f834aa04d8a0f82bc584d16a4672b393a0cb767269069709aca41c",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c.npy": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_FiQA_9edadfd39a8a05da.npy": "6a46319fe7b4732bd2cf05c16ce9872b9200d9816c8bbbeead543a1b934f5ee8",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/FiQA_e5_small_base_seed67/parameters.npz": "b3984cdec369d59b4141985b29e4e2f2b18603f4eeaa6b3911ac4e8bbba2ef71",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2.npy": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/db04c2cdc0fe2ac80c23783c8035fd894abc2360b92660f2bd43f1221ee8dab1.npy": "a9e3771a0c768433f788b2475c0d5ec9947284407a8e8d880691c5cca994d47c",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_ridge_affine_l10_bias_regularized_seed67_25pct.npy": "c8fe37028fbff90dd752edc864ab4baf8d168234ddecd7b89d932dac74c3356f",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24.npy": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/61078e34e3cb31870c9e2a3ad61bfb55c1000becb048fdda41a156b42f79a4a0.npy": "6810182414c6e409cf9cc31411866021770700a739c77ee6d7df35c8b1b4b9e0",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_ridge_affine_l10_bias_regularized_seed67_50pct.npy": "438587d84a2385278d41d60b14f0e00560160147b456ddb6af4f1389ffbf4c61",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19.npy": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/07f821b5981e257767c8f8f2cd308fd686530dfc751ebeea7e28ddf49e6b4e21.npy": "c38dd96dc218db746a245be52b24a9bbff53006e2ceef382c20e59d4e69b12b5",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_ridge_affine_l10_bias_regularized_seed67_75pct.npy": "5a68cb91c8235509a241e7a188342349a150d0084c3b399859c3f3b076a60f8f"
+  },
+  "failures": [],
+  "new_physical_document_encodes": 0,
+  "new_fits": 0,
+  "qrels_read": false,
+  "artificial_time_or_memory_caps": null,
+  "pid": 4051353,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "started_unix": 1793082787.0359123,
+  "dataset": "FiQA",
+  "pair": "e5_small_base",
+  "seed": 67,
+  "regime": "fixed1024",
+  "method": "ridge_affine_l10_bias_regularized",
+  "documents": 57638,
+  "queries": 500,
+  "sample_documents": 512,
+  "proxy_semantics": "pristine prediction for every document, including anchors",
+  "score_arithmetic": "float32 query batch16 @ gallery.T; stable row-order ties; identical ID exclusion",
+  "cases": [
+    {
+      "case_id": "FiQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized_25pct",
+      "status": "PASS",
+      "after_sha256": "c8fe37028fbff90dd752edc864ab4baf8d168234ddecd7b89d932dac74c3356f"
+    },
+    {
+      "case_id": "FiQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized_50pct",
+      "status": "PASS",
+      "after_sha256": "438587d84a2385278d41d60b14f0e00560160147b456ddb6af4f1389ffbf4c61"
+    },
+    {
+      "case_id": "FiQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized_75pct",
+      "status": "PASS",
+      "after_sha256": "5a68cb91c8235509a241e7a188342349a150d0084c3b399859c3f3b076a60f8f"
+    }
+  ],
+  "artifacts": {
+    "before.npy": {
+      "sha256": "ab56024706c562ad938afb1929e5d73f41b6bdf5da54f6cfa84c9a9848549a19"
+    },
+    "sample_proxy.npy": {
+      "sha256": "fb8c4af603bffb2c0c727bfb1204c201ddcd0132ae36ff838fb2f8a406c90de3"
+    }
+  },
+  "wall_seconds": 12.654480596072972,
+  "peak_process_rss_bytes": 891604992,
+  "ended_unix": 1793082799.6908615
+}

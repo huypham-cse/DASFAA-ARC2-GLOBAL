@@ -1,0 +1,139 @@
+{
+  "audit_key": "minilm2020",
+  "decision": "KEEP",
+  "audited_at_utc": "2026-11-01T14:06:09.653752+00:00",
+  "reviewer": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "review_type": "fresh single-entry current-file audit",
+    "independence_limit": "Same model family; not an external reviewer or venue acceptance decision."
+  },
+  "scope": {
+    "bibliography": "paper/references.bib:125-132",
+    "citation_scan": "all current paper/sections/*.tex",
+    "actual_use_count": 1,
+    "manuscript_edited": false,
+    "experiments_run": false,
+    "prior_reviewer_reports_used": false
+  },
+  "axes": [
+    {
+      "axis": "existence",
+      "status": "VERIFIED",
+      "decision": "KEEP",
+      "evidence": "Live NeurIPS 2020 proceedings page identifies the paper and its authors; publisher BibTeX was independently retrieved."
+    },
+    {
+      "axis": "bibliographic_metadata",
+      "status": "VERIFIED",
+      "decision": "KEEP",
+      "evidence": "All fields present in the current entry match publisher BibTeX: six authors in order, title, booktitle, volume 33, pages 5776--5788, year 2020. Omitted editors, publisher and URL are optional completeness fields, not errors."
+    },
+    {
+      "axis": "contextual_support",
+      "status": "SUPPORTED_WITH_SCOPE",
+      "decision": "KEEP",
+      "evidence": "The sole citation at related-work.tex:32 is broad encoder-family/training background. The NeurIPS paper supports MiniLM Transformer compression by self-attention distillation. It does not document the later all-MiniLM-L6-v2 contrastively trained sentence checkpoint; the setup separately supplies its pinned maintainer card."
+    }
+  ],
+  "actual_uses": [
+    {
+      "path": "paper/sections/related-work.tex",
+      "line": 32,
+      "text": "Sentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}."
+    }
+  ],
+  "checkpoint_provenance": {
+    "status": "PINNED_MAINTAINER_CARDS_PRESENT_AND_RETRIEVED",
+    "location": "paper/sections/experimental-setup.tex:20-26",
+    "source_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "source_card_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "destination_model": "sentence-transformers/all-distilroberta-v1",
+    "destination_card_revision": "842eaed40bee4d61673a81c92d5689a8fed7a09f",
+    "finding": "The source card describes a 384-dimensional sentence encoder, initialized from nreimers/MiniLM-L6-H384-uncased and later contrastively fine-tuned on sentence pairs. The destination card describes the 768-dimensional sentence encoder based on distilroberta-base. These are checkpoint provenance sources distinct from minilm2020 architecture background.",
+    "unverified": "This audit does not compare experiment manifests or actual downloaded weight bytes with those model revisions. The manuscript claim that run revisions/input hashes are pinned, runtime 128-token settings, and empirical results are not validated here. E5 cards belong to other entries and were not audited."
+  },
+  "sources": [
+    {
+      "id": "neurips_abstract",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+      "type": "publisher primary source",
+      "access": "retrieved_live",
+      "http_status": 200,
+      "sha256": "b154fcb2f0cf219ed515f3e7d79b808674d9f90f5d092631a43d53fee14fd18d",
+      "retrieved_at_utc": "2026-11-01T14:06:08.163932+00:00"
+    },
+    {
+      "id": "neurips_bibtex",
+      "url": "https://proceedings.neurips.cc/paper/2020/file/3f5ee243547dee91fbd053c1c4a845aa-Bibtex.bib",
+      "type": "publisher primary source",
+      "access": "retrieved_live",
+      "http_status": 200,
+      "sha256": "8cb35c8fda7619ca903261ab69c318b2f45838255ed099cbdc926f6c0e06e76c",
+      "retrieved_at_utc": "2026-11-01T14:06:08.973931+00:00"
+    },
+    {
+      "id": "minilm_pinned_card",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md",
+      "type": "checkpoint maintainer model card",
+      "access": "retrieved_live",
+      "http_status": 200,
+      "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+      "retrieved_at_utc": "2026-11-01T14:06:09.297194+00:00"
+    },
+    {
+      "id": "destination_pinned_card",
+      "url": "https://huggingface.co/sentence-transformers/all-distilroberta-v1/resolve/842eaed40bee4d61673a81c92d5689a8fed7a09f/README.md",
+      "type": "checkpoint maintainer model card",
+      "access": "retrieved_live",
+      "http_status": 200,
+      "sha256": "565f15ef1c8232cf21b91aa9125bd852f54f2f676c662324732ee3d4d3a43a8c",
+      "retrieved_at_utc": "2026-11-01T14:06:09.651753+00:00"
+    }
+  ],
+  "access_limits": [
+    "The browser tool could read the NeurIPS abstract and pinned MiniLM blob page. It rejected publisher BibTeX as unsupported content type; a direct Python HTTPS request retrieved HTTP 200.",
+    "The browser tool returned an internal access error for the pinned DistilRoBERTa blob/raw URLs; direct HTTPS retrieval of the exact pinned resolve URL succeeded with HTTP 200.",
+    "No secondary search result, prior reviewer verdict, or old citation-context bundle was used as evidence. The full NeurIPS PDF was not inspected; abstract plus publisher BibTeX suffice for this broad current use."
+  ],
+  "current_file_hashes": [
+    {
+      "path": "paper/references.bib",
+      "sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+    },
+    {
+      "path": "paper/sections/abstract.tex",
+      "sha256": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4"
+    },
+    {
+      "path": "paper/sections/conclusion.tex",
+      "sha256": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7"
+    },
+    {
+      "path": "paper/sections/discussion.tex",
+      "sha256": "834323c766a49b3b3874b660b9e6fdad3b660e8b5d93a5afeeae0c22fea01240"
+    },
+    {
+      "path": "paper/sections/experimental-setup.tex",
+      "sha256": "c6dfc7e773e6f448118013e5f11ec35eed6f849f7fb475bb1d690b1e07220828"
+    },
+    {
+      "path": "paper/sections/introduction.tex",
+      "sha256": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f"
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "sha256": "c4babc62dd94e8c6e2ccd6b921ea9d82db762ddf73df5c6efe71a3f022ce0e37"
+    },
+    {
+      "path": "paper/sections/related-work.tex",
+      "sha256": "bb47d22e21547ef1e96f4eb3634cda7039d2d6078082bae302d6507380a2b10f"
+    },
+    {
+      "path": "paper/sections/results.tex",
+      "sha256": "a8d76c0bc6ffcd14af3d461baf406837e3cd34a371585cd1e9754c28a64bafd3"
+    }
+  ],
+  "required_changes": [],
+  "optional_clarity": "If future wording claims sentence-retrieval training details, cite the pinned all-MiniLM-L6-v2 maintainer card at that wording; do not attribute them solely to minilm2020."
+}

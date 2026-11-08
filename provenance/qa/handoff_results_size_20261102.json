@@ -1,0 +1,102 @@
+[
+  {
+    "name": "b1a_first_failure_20261025",
+    "MiB": 0.0016088485717773438,
+    "files": 2
+  },
+  {
+    "name": "b1a_r1_20261025",
+    "MiB": 11.99749755859375,
+    "files": 113
+  },
+  {
+    "name": "b1b_20261026",
+    "MiB": 65.21104907989502,
+    "files": 51
+  },
+  {
+    "name": "b1c_r3_review_20261031",
+    "MiB": 119.02964496612549,
+    "files": 1563
+  },
+  {
+    "name": "b1c_smoke_main_r1_review_20261028",
+    "MiB": 0.051177978515625,
+    "files": 1
+  },
+  {
+    "name": "b1c_smoke_mini_r1_review_20261028",
+    "MiB": 0.05139446258544922,
+    "files": 1
+  },
+  {
+    "name": "b1g_r1_review_20261027",
+    "MiB": 1398.7711324691772,
+    "files": 4323
+  },
+  {
+    "name": "b1mp0_first_attempt_receipts_20261026",
+    "MiB": 0.11502265930175781,
+    "files": 17
+  },
+  {
+    "name": "b1mp0_r1_review_20261026",
+    "MiB": 106.27191543579102,
+    "files": 947
+  },
+  {
+    "name": "b1p_first_smoke_receipts_20261026",
+    "MiB": 0.15450477600097656,
+    "files": 32
+  },
+  {
+    "name": "b1p_full_h100_r4_smoke_review_20261026",
+    "MiB": 0.38605594635009766,
+    "files": 47
+  },
+  {
+    "name": "b1p_mini_r3b_smoke_review_20261026",
+    "MiB": 0.5268659591674805,
+    "files": 47
+  },
+  {
+    "name": "b1p_mini_r5_smoke_review_20261026",
+    "MiB": 0.46758556365966797,
+    "files": 47
+  },
+  {
+    "name": "b1p_mini_runtime_review_20261026",
+    "MiB": 0.1406879425048828,
+    "files": 37
+  },
+  {
+    "name": "b1p_r1_smoke_receipts_20261026",
+    "MiB": 0.24054718017578125,
+    "files": 36
+  },
+  {
+    "name": "b1p_r2_smoke_failure_receipts_20261026",
+    "MiB": 0.18839645385742188,
+    "files": 40
+  },
+  {
+    "name": "b1p_r5_review_20261027",
+    "MiB": 64.1576452255249,
+    "files": 546
+  },
+  {
+    "name": "b2_review_20261101",
+    "MiB": 175.62545680999756,
+    "files": 1165
+  },
+  {
+    "name": "fiqa_development",
+    "MiB": 15.731342315673828,
+    "files": 85
+  },
+  {
+    "name": "tc1l_local_r1_20261102",
+    "MiB": 134.68787670135498,
+    "files": 94
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "status": "BACKUP_RESTART_PROGRESS_VERIFIED",
+  "latest_event": {
+    "status": "FILES_COPIED_VERIFIED",
+    "files": 425,
+    "bytes": 8684339866,
+    "utc": "20261030T120438_728323Z"
+  },
+  "persisted_inventory_files": 2010,
+  "persisted_coverage_files": 425,
+  "persisted_verified_bytes": 8684339866,
+  "coverage_scope": "Current restarted session; not a sum with old-session counts, not a complete backup",
+  "training_unchanged": true,
+  "operator_sha256": "d8f83d857a282d92e57862b2e034f2960504ee17eb3a0bc733405981a4e4c9a9"
+}

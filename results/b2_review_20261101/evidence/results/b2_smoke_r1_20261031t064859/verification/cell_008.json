@@ -1,0 +1,10 @@
+{
+  "dataset": "synthetic",
+  "pair": "synthetic",
+  "seed": 17,
+  "budget": "25pct",
+  "method": "arc2_global_tangent2_r1",
+  "endpoint_sha256": "9b8aee581b8818706e159b730a3f5dd102cc98961c63f8da7dadabb588ffb254",
+  "ranking_sha256": "09eb042f1db75adb128f01a195863b5f82fc7fddf49544bf4f571fad82b8994c",
+  "all_top100_ids_and_order_equal": true
+}

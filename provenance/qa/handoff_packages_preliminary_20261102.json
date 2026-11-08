@@ -1,0 +1,25 @@
+{
+  "source_commit": "7d42ec802600816378f24617241d7cb7efe87c9f",
+  "development": {
+    "file_count": 7110,
+    "uncompressed_bytes": 2031659190,
+    "bytes": 1550448470,
+    "sha256": "34a628a191e1fd111fffb0476b2078f6951624a30c27dda5a2f229916516d273",
+    "all_members_hash_verified": true,
+    "R3_files_preserved": 6258,
+    "literal_assignment_candidates": 0,
+    "partial_path": "D:\\DASFAA-2027-paper\\tmp\\handoff_20261102_r2\\development.zip.partial",
+    "final_path": "D:\\ARC2-Global_Development_20261102.zip"
+  },
+  "overleaf": {
+    "file_count": 27,
+    "uncompressed_bytes": 1617845,
+    "bytes": 1399769,
+    "sha256": "1b817ad70e9bd53988c1a3b576da627415d288fdb50b1a847d9c3a016bb5b926",
+    "all_members_hash_verified": true,
+    "partial_path": "D:\\DASFAA-2027-paper\\tmp\\handoff_20261102_r2\\overleaf.zip.partial",
+    "final_path": "D:\\ARC2-Global_Overleaf_20261102.zip"
+  },
+  "status": "HASH_VERIFIED_PENDING_ISOLATED_SMOKES",
+  "no_original_deletion": true
+}

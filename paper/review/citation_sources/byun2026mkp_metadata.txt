@@ -1,0 +1,9 @@
+@misc{byun2026multimodalknowledgepreservingadapter,
+      title={Multi-modal Knowledge Preserving Adapter for Embedding Backward Compatibility}, 
+      author={Jaeseok Byun and Gukyeong Kwon and Han-Kai Hsu and Meher Gitika Karumuri and Zhikang Zhang and Hao Yang and Davide Modolo},
+      year={2026},
+      eprint={2609.16875},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.16875}, 
+}

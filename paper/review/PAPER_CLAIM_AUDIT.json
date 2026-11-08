@@ -1,0 +1,8 @@
+{
+  "canonical_report": "../PAPER_CLAIM_AUDIT.json",
+  "verdict": "PASS",
+  "scope": "Latest final polished snapshot; see canonical report for exact scope/hashes.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "historical_interruption": "final_review_20261101/EARLIER_REVIEW_UNAVAILABLE.json"
+}

@@ -1,0 +1,69 @@
+{
+  "status": "B1G_RANK_PASS",
+  "request_sha256": "1675bb1efa12daacc220b1f2175cb53c39117e597c1cfcf47186b57de588ee0c",
+  "group_id": "FiQA_minilm_distilroberta_seed41_fixed1024_procrustes_global",
+  "input_hashes": {
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782",
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/q16c_arc2_dev/q16c_encode_20261018T003211/dev_queries.npy": "826911a012bb37e0b117f0929517ee3c21345dc9f402cda71c47cf677a550375",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3.npy": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_FiQA_9edadfd39a8a05da.npy": "6a46319fe7b4732bd2cf05c16ce9872b9200d9816c8bbbeead543a1b934f5ee8",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/FiQA_minilm_distilroberta_seed41/parameters.npz": "f15799ed833f1b8dedbb3aae046df75414ebce1fb9f53ebef27cf8afe4e750b3",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8.npy": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/b3ad66eea7da052bca845337cc97e6cc2b0348dcacffe82ae72a2dd091c7428a.npy": "61ba5675ca071641fb0f761e70b5b160c0eb0166a79298f69afbe77369dfb0dc",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_minilm_distilroberta_procrustes_global_seed41_25pct.npy": "1e2b29a3666fd1f708ddea79657714b245d9a6a6241fba7d01b4b923bdcbe2ca",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a.npy": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/38b06ed5316ecd9cf9d1c0a0fa3e780da17ceb5324b1886933c2a2ab388b5c0c.npy": "a9b5abffbbc72b18c6be0a73891bfab595c015daf90b214ebb57db205a273f2c",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_minilm_distilroberta_procrustes_global_seed41_50pct.npy": "7467ebc004d94bce24c1692b45177dde58873704b9dcd5d648e09d6a63228205",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18.npy": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/9c8933906fb9ba533a591d245a07100252b4f785e748c702499c4e7eca3f439e.npy": "ae4fd36b4e97da8e9219fbc49a6e72d068e7e349dac8ef791ae41ab5dfa09c0a",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_minilm_distilroberta_procrustes_global_seed41_75pct.npy": "6222e71fb5d70198278240f59ea60ded36a619003966d7fe00e3a7f3241add20"
+  },
+  "failures": [],
+  "new_physical_document_encodes": 0,
+  "new_fits": 0,
+  "qrels_read": false,
+  "artificial_time_or_memory_caps": null,
+  "pid": 4053476,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "started_unix": 1793082969.593399,
+  "dataset": "FiQA",
+  "pair": "minilm_distilroberta",
+  "seed": 41,
+  "regime": "fixed1024",
+  "method": "procrustes_global",
+  "documents": 57638,
+  "queries": 500,
+  "sample_documents": 512,
+  "proxy_semantics": "pristine prediction for every document, including anchors",
+  "score_arithmetic": "float32 query batch16 @ gallery.T; stable row-order ties; identical ID exclusion",
+  "cases": [
+    {
+      "case_id": "FiQA_minilm_distilroberta_seed41_fixed1024_procrustes_global_25pct",
+      "status": "PASS",
+      "after_sha256": "1e2700f02039851dbdd3f18e5b0cea4f4a551781f75b19660d9dc5bde4d9dab1"
+    },
+    {
+      "case_id": "FiQA_minilm_distilroberta_seed41_fixed1024_procrustes_global_50pct",
+      "status": "PASS",
+      "after_sha256": "1e3c0ad49712064b9ee273b2e679e3fb53eb10d1aaf13da663cf071c1b31bc99"
+    },
+    {
+      "case_id": "FiQA_minilm_distilroberta_seed41_fixed1024_procrustes_global_75pct",
+      "status": "PASS",
+      "after_sha256": "6222e71fb5d70198278240f59ea60ded36a619003966d7fe00e3a7f3241add20"
+    }
+  ],
+  "artifacts": {
+    "before.npy": {
+      "sha256": "94390e22191e55aeab13d22dd420597600a15ee8fd13c01681cd933cc52eb80d"
+    },
+    "sample_proxy.npy": {
+      "sha256": "fd39a60f1af95203f4bd82242686caab82be92b315c5a8953ac1f520f2f9b47a"
+    }
+  },
+  "wall_seconds": 12.673308741301298,
+  "peak_process_rss_bytes": 891236352,
+  "ended_unix": 1793082982.2671812
+}

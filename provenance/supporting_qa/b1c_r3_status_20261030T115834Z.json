@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-30T11:58:34+00:00",
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+    "group_index": 103,
+    "groups_total": 120,
+    "rankings_complete": 307,
+    "rankings_total": 358
+  },
+  "full_status": "B1C_R3_RUNNING",
+  "worker_status": "RUNNING",
+  "failures": [],
+  "output_available_bytes": 601589370880,
+  "scientific_code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "selection_progress.jsonl": {
+    "step": 8250,
+    "elapsed_seconds": 344.6236854251474,
+    "gradients_finite": true,
+    "parameters_finite": true
+  }
+}

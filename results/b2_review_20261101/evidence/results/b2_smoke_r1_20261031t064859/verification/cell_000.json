@@ -1,0 +1,10 @@
+{
+  "dataset": "synthetic",
+  "pair": "synthetic",
+  "seed": null,
+  "budget": "full",
+  "method": "full_x",
+  "endpoint_sha256": "874701c61378249285c7ab14ac586f8bb6c27e4b30c888b1428ff88d26a09b93",
+  "ranking_sha256": "30ffeff2f4c7eb83d4868be038e79c7f087c088938f631a57fe6efb005ccbc6f",
+  "all_top100_ids_and_order_equal": true
+}

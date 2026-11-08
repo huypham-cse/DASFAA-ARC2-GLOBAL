@@ -1,0 +1,47 @@
+{
+  "status": "RENDERED_FROM_VERIFIED_RESULTS",
+  "generated_utc": "2026-10-27T13:39:43.395425+00:00",
+  "bundle": "D:\\DASFAA-2027-paper\\results\\b1g_r1_review_20261027",
+  "generation_code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+  "lock_sha256": "ea12eb90173d9b1f9f93883f1efa157946c67a91169d3c6a57f35eef7c316c53",
+  "inputs_sha256": {
+    "D:\\DASFAA-2027-paper\\provenance\\qa\\b1g_completed_verification_r2_20261027.json": "cb84dc4358702695f3d3a0191e90270917ed9c5e4d81a9bdf3883d5222479217",
+    "D:\\DASFAA-2027-paper\\tools\\render_b1g_report.py": "b7e84b2087678d8546af6de52b57d54b727ab4262160736d9f5dcdd7d8c412a4",
+    "D:\\DASFAA-2027-paper\\results\\b1g_r1_review_20261027\\scoring\\results_summary.json": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f",
+    "D:\\DASFAA-2027-paper\\results\\b1g_r1_review_20261027\\scoring\\completed.json": "9b5de52e634bc59a722bc6de7dfedee52efcfbc8b3bf5b26e1f81fa517f41a0a",
+    "D:\\DASFAA-2027-paper\\results\\b1g_r1_review_20261027\\main\\diagnostics_seal.json": "37a2e0ff7ee8af4395d5a325434262e3e3ecd719e760427b6a39ed1a6160bcee",
+    "D:\\DASFAA-2027-paper\\results\\b1g_r1_review_20261027\\mini\\diagnostics_seal.json": "7ac44def85ed51a412d2e9b847d01b767b800497a99bc8d16437fe9ebd6db4e2"
+  },
+  "outputs_sha256": {
+    "SUMMARY.md": "0ab1114335049cf0e2e0b733903445837d235ddd35f9ccd588d17ce00582985c",
+    "diagnostic_tables.csv": "820a13c4425ed6b6977dae15a42ccd559d6ca4dd70e567765bd10578d1e1fa5e",
+    "diagnostic_cases.csv": "2949f45a1e14984789880ad9047aa991b1e155d6105853b159512a74fcd6de3a",
+    "figures/b1g_mixed_gallery_diagnostics.csv": "5bfcaf95255b642aef5bf1388698b933a6f85d6c26b2d16d2a00d049da84cd15",
+    "figures/b1g_mixed_gallery_diagnostics.pdf": "f90949434f6395aafca4e95eb7e993ad688006d663c8b782311293d0600fd8ba",
+    "figures/b1g_mixed_gallery_diagnostics.svg": "545dbc7f60e85f1d49b1986d5d31dd916e8acb4aca342fb85882ebc0df96cbab",
+    "figures/b1g_mixed_gallery_diagnostics.png": "e02e5f4974fe9d0b963bede9ec5b84cf2b0b4223eb2157a8fd03c30a2243f101"
+  },
+  "python": "3.12.10",
+  "style": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "figure_size_inches": [
+      15,
+      8
+    ],
+    "raster_dpi": 300,
+    "figure_conditions": 12,
+    "colors": {
+      "arc2_global_tangent2_r1": "#0F4D92",
+      "procrustes_global": "#B64342",
+      "ridge_affine_l10_bias_regularized": "#42949E"
+    },
+    "intervals": "none; descriptive five-seed means"
+  },
+  "new_scientific_computation": false,
+  "data_processing": "descriptive aggregation of saved metrics/diagnostics only",
+  "visual_qa": "PASS: PNG and independently rasterized PDF visually inspected; six panels, legends, axes and exact fitting-pair labels readable; SVG XML/editable text validated. Receipt provenance/qa/b1g_figure_visual_verification_20261027.json.",
+  "figure_skill": "D:/graph4paper/figures4papers/scientific-figure-making/SKILL.md",
+  "figure_demo": "D:/graph4paper/figures4papers/figure_ImmunoStruct/plot_bars.py"
+}

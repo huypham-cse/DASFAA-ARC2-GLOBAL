@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "local artifact/array verification; not paper claim audit",
+  "la2m_oracle_cases": 25,
+  "ridge_independent_cases": 15,
+  "official_simplelinear_cuda_cases": 5,
+  "main_shape": [
+    1024,
+    384,
+    768
+  ],
+  "main_la2m_clusters": 20,
+  "saved_main_la2m_max_delta": 0.0,
+  "new_qrel_reads": 0,
+  "benchmark_quality_results": false,
+  "frozen_ARC2_changed": false,
+  "next_action": "STOP - wait for user confirmation before B1-M"
+}

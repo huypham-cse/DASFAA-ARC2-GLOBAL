@@ -1,0 +1,89 @@
+﻿{
+    "key":  "la2m",
+    "existence":  "YES",
+    "metadata":  {
+                     "title":  "Integrating Vector Databases across Embedding Models",
+                     "authors":  [
+                                     "Beining Yang",
+                                     "Yang Cao",
+                                     "Yang Ren"
+                                 ],
+                     "year":  2025,
+                     "venue":  "Proceedings of the ACM on Management of Data",
+                     "volume":  "3",
+                     "number":  "6",
+                     "pages":  "1--28",
+                     "article_number":  "338 (institutional record)",
+                     "doi":  "10.1145/3769803",
+                     "version":  "Published journal article; distinct from its SIGMOD 2026 presentation. Institutional repository labels the linked PDF an accepted author manuscript.",
+                     "published_print":  "2025-12-04",
+                     "published_online":  "2025-12-05",
+                     "matches_input":  true
+                 },
+    "sources":  [
+                    {
+                        "url":  "https://api.crossref.org/works/10.1145/3769803",
+                        "access":  "LIVE API via Invoke-RestMethod, 2026-11-01",
+                        "what_verified":  "Publisher-deposited journal-article metadata: canonical title, author order, DOI, PACMMOD volume 3 issue 6, pages 1-28, December 2025 publication dates. Input metadata matches."
+                    },
+                    {
+                        "url":  "https://www.research.ed.ac.uk/en/publications/integrating-vector-databases-across-embedding-models/",
+                        "access":  "LIVE institutional page",
+                        "what_verified":  "Author identities and order, integration topic, local-isometry hypothesis, PACMMOD 3(6), article 338, 28 pages, and SIGMOD 2026 event. Its accepted/in-press 23 August 2025 label is repository status, not the final journal publication date."
+                    },
+                    {
+                        "url":  "https://homepages.inf.ed.ac.uk/ycao/pub-year.html",
+                        "access":  "LIVE official author publication page",
+                        "what_verified":  "Lists the same work and author order under SIGMOD 2026; corroborates presentation-year distinction."
+                    },
+                    {
+                        "url":  "https://github.com/DBgroup-Edinburgh/embedding-translation/blob/5e62baf1544264847ce3d8feeabd1ded6499b064/reproduce-scripts/la2m/exp_la2m.py",
+                        "access":  "LIVE GitHub API resolved main to this commit; raw source retrieved live",
+                        "what_verified":  "Authors research-group code identifies A2M as global mean-centered Procrustes and LA2M as source-reference k-means with local fits and nearest-centroid routing. Lines 105-126 implement global A2M, cluster fits for \u003e=2 references and singleton global fallback; line 160 includes 20 among sweep settings. This is implementation evidence, not a claim that these choices were all mandated by the original paper."
+                    },
+                    {
+                        "url":  "https://github.com/DBgroup-Edinburgh/embedding-translation/blob/main/README.md",
+                        "access":  "LIVE web lookup",
+                        "what_verified":  "Repository identifies its LA2M reproduction folder with this SIGMOD work and separately cites the PACMMOD article as year 2025 with presentation at SIGMOD 2026."
+                    },
+                    {
+                        "url":  "https://www.research.ed.ac.uk/files/572061340/main.pdf",
+                        "access":  "LIVE attempt: HTTP 403",
+                        "what_verified":  "No PDF content verified; no inferred section, theorem, original setting, or quantitative claim is attributed to an unread PDF."
+                    }
+                ],
+    "uses":  [
+                 {
+                     "file":  "sections/experimental-setup.tex",
+                     "line":  44,
+                     "assessment":  "SUPPORTS",
+                     "reason":  "The cited A2M/LA2M baseline family is appropriate. Live authors code supports centered global rectangular Procrustes, source-reference clusters, \u003e=2-reference local fits, and global fallback for singletons. Twenty clusters is one supported configuration. The paragraph expressly declares adaptations rather than exact original-setting reproduction. Citation alone does not verify this manuscript implementation or its results; that is outside this per-entry audit."
+                 },
+                 {
+                     "file":  "sections/introduction.tex",
+                     "line":  7,
+                     "assessment":  "SUPPORTS",
+                     "reason":  "LA2M is an appropriate source for the local-alignment alternative and global orthogonal alignment context. The claim is qualitative and makes no unsupported numerical or superiority assertion. The neighboring neural-regression claim is assigned to the separate simplelinear citation and is not audited here."
+                 },
+                 {
+                     "file":  "sections/related-work.tex",
+                     "line":  6,
+                     "assessment":  "SUPPORTS",
+                     "reason":  "The institutional abstract establishes cross-model vector-database integration via the local-isometry hypothesis. Live author-group code explicitly identifies global A2M and clustered local LA2M, supporting the supplied summary. PDF was inaccessible, so this conclusion relies on abstract plus official implementation rather than unverified full-text detail."
+                 }
+             ],
+    "verdict":  "KEEP",
+    "exact_fix":  null,
+    "optional_improvement":  "Optionally add note = {Presented at SIGMOD 2026}; retain year 2025 and journal-article type. This clarification is not required to repair the correct current entry.",
+    "confidence":  {
+                       "overall":  "HIGH",
+                       "metadata":  "HIGH",
+                       "claim_support":  "HIGH for qualitative scope and declared implementation; original-paper full-text settings were not independently inspected"
+                   },
+    "limitations":  [
+                        "No inaccessible PDF content was guessed.",
+                        "The manuscript local code, results, and other citation keys were not reviewed."
+                    ],
+    "review_independence":  "same-family",
+    "acceptance_status":  "provisional"
+}

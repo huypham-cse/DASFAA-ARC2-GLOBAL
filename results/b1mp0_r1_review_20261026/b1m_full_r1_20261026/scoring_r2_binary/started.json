@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-10-25T19:06:39.320680+00:00",
+  "status": "VALIDATING_FORMAT_REPAIR_AFTER_PRIOR_DEV_ACCESS",
+  "lock_path": "/root/arc2_global_paper_20261025/code_55a600f/configs/b1m_score_r2_lock.json",
+  "lock_sha256": "b165de5ce8fccd2e13e11bb93bfe41160e8cd180dbd196fa4fd4c3b10b805b32",
+  "scorer_sha256": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "scorer_code_commit": "55a600f104ded05562d4212d7c07a1330701a4b0",
+  "rescore_context": {
+    "original_lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+    "ranking_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+    "original_code_commit": "4056612dcccac74fdf84ccf67783ab87afd85c26",
+    "prior_failure_sha256": "9e787eeda5c99e562b672615303999f5b6c5f907a33f387ec6176a4da1070cfc",
+    "prior_failure_path": "scoring/failure.json",
+    "prior_first_access_sha256": "5f8843b7d5fe0e5919ba25699068bd5002ffc4fbad7c32223ed34335d9d10ed7"
+  },
+  "numpy": "2.4.6",
+  "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+  "exposure": "DEV only; FiQA previously inspected",
+  "failures": []
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS_MAIN_SMOKE_RETAINED_MINI_PENDING",
+  "source_commit": "1df7c3eb39c671752e37fcda5dcfb004f51bd03d",
+  "origin_project_commit": "585b8b809352f51a877c264a2485a7f8023a89d3",
+  "wall_seconds": 211.18836204335093,
+  "mode": "synthetic only, not benchmark quality",
+  "new_qrel_reads": 0,
+  "new_scientific_rankings": 0,
+  "mini_amendment_commit": "74c6a75f8574aaee01fe270aa3e174ef1783e2ce",
+  "mini_deployment_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+  "mini_current_stage": "new matching smoke +453file transport; full queued behind both gates",
+  "time": 1793158013.8862622
+}

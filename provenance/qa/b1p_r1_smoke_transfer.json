@@ -1,0 +1,7 @@
+{
+  "archive_sha256": "4e1fb68b7585dc7edc8ef826efca2ac9eefef0b5a02666ecf83f8c7223909abc",
+  "bytes": 56424,
+  "source_root": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results",
+  "scope": "smoke receipts; full checkpoints/arrays preserved on H100",
+  "local_result": "D:\\DASFAA-2027-paper\\results\\b1p_r1_smoke_receipts_20261026"
+}

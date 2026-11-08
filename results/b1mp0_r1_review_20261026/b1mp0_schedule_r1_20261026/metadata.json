@@ -1,0 +1,83 @@
+{
+  "status": "FAILED_PRESERVED",
+  "code_commit": "4056612dcccac74fdf84ccf67783ab87afd85c26",
+  "authorized_items": [
+    "B1-M",
+    "B1-P0"
+  ],
+  "automatic_next_stage": false,
+  "jobs": [
+    {
+      "job": "p0_smoke",
+      "started_unix": 1792954124.0260413,
+      "argv": [
+        "/root/arc2_p3h_20261020/venv/bin/python",
+        "/root/arc2_global_paper_20261025/code_4056612/ops/b1p0_worker.py",
+        "--lock",
+        "/root/arc2_global_paper_20261025/code_4056612/configs/b1p0_lock.json",
+        "--stage",
+        "smoke",
+        "--output",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1p0_smoke_r1_20261026",
+        "--code-commit",
+        "4056612dcccac74fdf84ccf67783ab87afd85c26"
+      ],
+      "exit_code": 0,
+      "ended_unix": 1792954125.1534355
+    },
+    {
+      "job": "mechanism_smoke",
+      "started_unix": 1792954125.153879,
+      "argv": [
+        "/root/arc2_p3h_20261020/venv/bin/python",
+        "/root/arc2_global_paper_20261025/code_4056612/ops/b1m_stage.py",
+        "--stage",
+        "smoke",
+        "--output",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_smoke_r1_20261026",
+        "--code-commit",
+        "4056612dcccac74fdf84ccf67783ab87afd85c26"
+      ],
+      "exit_code": 0,
+      "ended_unix": 1792954126.4894788
+    },
+    {
+      "job": "p0_full",
+      "started_unix": 1792954126.4899397,
+      "argv": [
+        "/root/arc2_p3h_20261020/venv/bin/python",
+        "/root/arc2_global_paper_20261025/code_4056612/ops/b1p0_worker.py",
+        "--lock",
+        "/root/arc2_global_paper_20261025/code_4056612/configs/b1p0_lock.json",
+        "--stage",
+        "full",
+        "--output",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1p0_full_r1_20261026",
+        "--code-commit",
+        "4056612dcccac74fdf84ccf67783ab87afd85c26"
+      ],
+      "exit_code": 0,
+      "ended_unix": 1792954131.1376605
+    },
+    {
+      "job": "mechanism_full",
+      "started_unix": 1792954131.1379867,
+      "argv": [
+        "/root/arc2_p3h_20261020/venv/bin/python",
+        "/root/arc2_global_paper_20261025/code_4056612/ops/b1m_stage.py",
+        "--stage",
+        "full",
+        "--output",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026",
+        "--code-commit",
+        "4056612dcccac74fdf84ccf67783ab87afd85c26",
+        "--smoke",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_smoke_r1_20261026",
+        "--p0-smoke",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1p0_smoke_r1_20261026"
+      ],
+      "exit_code": 1,
+      "ended_unix": 1792954973.2016845
+    }
+  ]
+}

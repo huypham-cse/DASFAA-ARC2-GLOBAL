@@ -1,0 +1,788 @@
+    ARC2-Global: Tangent-Corrected Alignment
+        for Embedding-Index Migration
+
+                             Anonymous Author(s)
+
+                             Anonymous Institution
+
+
+
+      Abstract. Embedding-model upgrades must preserve retrieval quality
+      while document re-encoding proceeds under a limited budget. We pro-
+      pose ARC2-Global, a compact document adapter that refines centered
+      Procrustes alignment with two ridge-fitted tangent corrections. The
+      updates target cosine-relevant directions and collapse into one affine
+      map, preserving native destination queries without neural mapper
+      training. Across four development collections, two encoder migrations
+      and three anchor-inclusive budgets, ARC2-Global achieves the highest
+      macro nDCG@10 among six evaluated methods. Its gain over Procrustes
+      is 0.0243, with family-adjusted interval [0.0181, 0.0308]; the second
+      correction adds 0.0069. On prospective TREC-COVID/E5, gains over
+      the evaluated Converter range from 0.2000 to 0.2572. A descriptive
+      comparison across all five collections further shows E5 ARC2 at 25%
+      coverage exceeding Converter and affine ridge at 75%. On TREC-
+      COVID/MiniLM, 75% coverage yields 0.5195 nDCG versus native
+      Full-Y’s 0.5203, with the highest Recall@100 point mean among the six
+      adapters. The final 384-to-768-dimensional coefficient matrix occupies
+      1.13 MiB, using 114.7 times fewer parameter bytes than the evaluated
+      Converter.
+
+      Keywords: Embedding migration · Vector retrieval · Representation
+      alignment · Mixed galleries
+
+
+1   Introduction
+Embedding-model upgrades create a practical index-maintenance problem:
+destination-model queries must remain effective while legacy document vectors
+are replaced gradually. A staged migration learns from paired source and
+destination embeddings, maps the remaining documents, and replaces these
+proxies as true destination vectors become available. The useful operating point
+is an intermediate index that delivers strong retrieval quality with limited
+destination-document exposure.
+    The intermediate index must rank true destination embeddings and mapped
+proxies together. A mapper that works well on a proxy-only gallery can change
+behavior after true vectors are inserted. Cosine retrieval also depends on direc-
+tion, whereas coordinate regression spends capacity on radial errors that disap-
+pear after normalization. This motivates a directional document adapter that
+preserves compact inference and searches with the native destination query.
+2         Anonymous Author(s)
+
+    Document-side conversion and query-side adaptation already provide routes
+across embedding spaces [17,11]. Orthogonal alignment supplies a compact geo-
+metric starting point, while local alignment and neural regression provide more
+flexible alternatives [16,2]. We investigate a complementary design: correcting
+the prediction error that changes vector direction while retaining one affine doc-
+ument map.
+    ARC2-Global applies two tangent corrections to a centered rectangular Pro-
+crustes map. For each paired document, it projects destination error onto the
+tangent plane at the predicted direction, rescales it to the raw prediction, and
+fits an affine ridge update. Repeating this operation twice yields coefficients
+that collapse into one affine map followed by normalization. Native destination
+queries then search true and proxy vectors together, with each newly encoded
+document replacing its proxy under the same identifier (Fig. 1).
+    The results identify a strong quality–exposure trade-off. On four development
+collections, the fixed 1,024-pair adapter leads all five baseline configurations in
+macro nDCG@10 across two migrations and three budgets, gaining 0.0243 over
+Procrustes. The second correction adds 0.0069 without adding an inference stage.
+On the prospective TREC-COVID collection, E5 gains over Converter and ridge
+persist at every budget. Across all five collections, E5 ARC2 at 25% coverage
+also exceeds these two alternatives at 75% in a descriptive comparison. Matched
+all-paid fitting strengthens MiniLM adaptation by another 0.0596 nDCG at the
+same paid-document budget.
+Our contributions are:
+
+    – Directional refinement with affine inference. Two tangent-residual
+      ridge updates target prediction direction and improve measured development
+      retrieval while retaining one compact document map and native destination
+      queries.
+    – Strong quality at matched fitting exposure. Across two migrations
+      and three paid-document budgets, the four-collection development macro
+      favors ARC2-Global over all five evaluated alternatives. Ablations quantify
+      the value of the second update, and all-paid fitting tests the method beyond
+      fixed-anchor supervision.
+    – Useful quality at lower document exposure. A held-collection evalua-
+      tion confirms E5 gains over Converter and affine ridge at each tested budget.
+      The descriptive 25%-versus-75% comparison exposes a useful migration op-
+      erating point, while mixed-gallery diagnostics explain why adapter choice
+      must be evaluated after native-vector insertion.
+
+2      Related Work
+
+Document-side translation and mixed databases. Embedding-Converter learns
+document-side conversion using regression together with global and local simi-
+larity losses [17]. Yang et al. study integration across embedding models through
+global alignment and locally fitted isometries, giving the A2M and LA2M ap-
+proaches [16]. Their authors’ repository also provides the SimpleLinear neu-
+                    Tangent-Corrected Alignment for Embedding-Index Migration                            3
+
+
+ (a) Model upgrade          (b) Learn a compact adapter                  (d) Encoding budget
+
+   Source xd = g(d)          Paired document embeddings (xa , ya )       Illustrative corpus: N = 24
+  New query model h
+      user query              Centered Procrustes              B0         Full re-encode
+                                                                                                    24
+   “How tall is the
+    Eiffel Tower?”               Two tangent corrections                  ARC2-Global
+                                T = r [y − (uy T )u],    λ = 10                        12
+     New query                        yd = N ([xd , 1]B2 )
+                                      b                                    8 anchors + 4 backfill
+      yq = h(q)
+                            (c) Encode a few, map the rest               (e) One mixed gallery
+     source index
+                            Paid documents         Map remaining               Rank by ⟨yq , gd ⟩
+
+  spaces do not match                                        xd            1    Eiffel Tower
+                                                                           330 m, Paris        true
+                                                             B2
+   Goal: serve yq
+   during migration                                                        2    Tower history
+                                                                           opened in 1889 proxy
+     anchor pairs                                       proxy b
+                                                              yd
+                               |A ∪ S| = 12                   backfill
+     true yd                                                               3    Gustave Eiffel
+                             anchors included                              tower engineer     proxy
+     proxy b
+           yd                 12 true vectors      replace proxy               no query mapping
+
+
+
+Fig. 1. A worked ARC2-Global migration. Paired document vectors train centered Pro-
+crustes and two tangent corrections, yielding one affine adapter. Unencoded documents
+remain searchable through proxies; backfill replaces them with native vectors in the
+same gallery. The 24-document corpus, eight anchors, four additional encodings and
+displayed hits are illustrative, not measured retrieval results.
+
+
+ral mapper used in our comparison [2]. More recently, Yang and Cao study
+out-of-distribution translation, multi-model mixing, and chaining, with a hier-
+archical mixture of experts and residual regularization along target principal
+directions [15]. Their localized expert structure addresses broader multi-model
+integration; our directional target uses the tangent plane at each anchor’s cur-
+rent prediction, and both corrections collapse into one global affine map. HMoE
+provides related-work context; our evaluated panel comprises the five configura-
+tions specified in Sect. 4. FastFill already combines visual feature alignment with
+uncertainty-based partial backfilling, and shows that replacement can initially
+reduce retrieval performance [3]. Building on these migration settings, we study
+the two-correction affine computation and its relevance-judged text-retrieval be-
+havior under anchor-inclusive encoding budgets.
+
+Compatibility and translation direction. Backward-compatible representation
+learning trains a new encoder to remain usable with previously computed gallery
+features [9]. Drift-Adapter instead fits a post-hoc map from new-model queries
+to an existing legacy index, comparing Procrustes, low-rank affine, and residual
+neural adapters [11]. Spherical interpolation refines Procrustes-aligned queries
+4       Anonymous Author(s)
+
+through SLERP between old and aligned new query directions [7]; ARC2 instead
+fits tangent ridge updates to document anchors. ARC2-Global shares the use of
+paired embeddings and frozen encoders, but maps legacy document vectors into
+the destination space. Its evaluation concerns mapped and native destination
+documents competing as re-encoding progresses.
+
+Geometric alignment and refinement. Orthogonal Procrustes provides the clas-
+sical least-squares alignment underlying our initialization [8]. Recent work con-
+nects approximate preservation of pairwise inner products to bounds on Pro-
+crustes alignment error and demonstrates interoperability across retrieval mod-
+els [5]. Unpaired translation pursues a different supervision regime: vec2vec
+learns translation through a shared latent representation without known cor-
+respondences [4], while mini-vec2vec combines pseudo-pair construction, Pro-
+crustes estimation, and iterative matching and clustering refinements [1]. Thus,
+linear translation, Procrustes initialization, and refinement are all established
+ingredients. ARC2-Global uses known document correspondences and a specific
+finite refinement: exactly two ridge-fitted tangent corrections to a centered rect-
+angular Procrustes initialization. Both corrections are folded into one affine co-
+efficient matrix, followed by row normalization at application time. This differs
+from discovering pseudo-correspondences, learning a latent translator, or routing
+documents among local maps.
+
+Retrieval evaluation. BEIR emphasizes retrieval across heterogeneous tasks and
+domains [10], while NanoBEIR provides smaller collections suitable for develop-
+ment comparisons [18]. Sentence-BERT, MiniLM, and E5 supply established en-
+coder families and training approaches relevant to our model transitions [6,14,13].
+Our evaluation targets judged retrieval quality in actual mixed galleries, sep-
+arating that quantity from agreement with a destination ranking or approxi-
+mate nearest-neighbor overlap. This distinction matters because accurately re-
+constructing individual vectors and preserving their internal neighborhoods do
+not directly measure the relevance of the final combined ranking. The exper-
+imental question is therefore whether the correction improves retrieval under
+a matched encoding budget, and in which encoder and gallery conditions that
+improvement persists.
+
+
+3     ARC2-Global: Angular Refinement for Mixed Galleries
+
+ARC2-Global converts legacy document vectors into destination-space proxies
+and combines them with true destination vectors. Two direction-focused correc-
+tions refine one global affine map.
+
+
+3.1   Migration Setting and Budget
+Let a corpus contain N documents with stored, unit-normalized source embed-
+dings xi ∈ Rds , written as row vectors. The destination encoder produces unit
+              Tangent-Corrected Alignment for Embedding-Index Migration           5
+
+vectors yi ∈ Rdt , but obtaining every yi requires encoding the entire corpus again.
+We seek destination-space document representations using only a budgeted set of
+destination document vectors. The dimensions may differ; our evaluated encoder
+pairs map ds = 384 to dt = 768. Queries are encoded directly by the destination
+query encoder; the document map aligns with that existing destination query
+space.
+   Let A be the paired anchor set used for fitting and S the set selected for
+document replacement. The unique destination-document budget is
+
+                           b = |A ∪ S|,      b = ⌊ρN ⌋.                         (1)
+
+Anchors consume this budget. Our selection starts with A and fills the remain-
+ing slots from a fixed random document order, skipping duplicates, so A ⊆ S
+and |S| = b. Larger budgets extend the same order and retain the same fitted
+anchors. The principal setting uses m = |A| = 1,024 pairs; an all-paid-pairs
+comparison separately fits on every paid pair. Fit uses paired document vec-
+tors without queries or relevance labels. This separates the amount of fitting
+supervision from the number of true vectors in the gallery. The same map serves
+several replacement budgets; after full replacement, scores depend entirely on
+the destination encoder.
+
+3.2   Centered Rectangular Initialization
+A centered Procrustes map supplies a geometric starting point before angular
+refinement. Stack the source and destination anchors as XA ∈ Rm×ds and YA ∈
+Rm×dt , with row means µs and µt . Using a thin singular value decomposition,
+compute
+              (YA − 1µt )⊤ (XA − 1µs ) = U ΣV ⊤ ,    W = U V ⊤.           (2)
+Here W ∈ Rdt ×ds is rectangular and semiorthogonal. Centering permits transla-
+tion; the rectangular map accommodates unequal dimensions. Its raw prediction
+is (x − µs )W ⊤ + µt .
+    We expand this prediction into an affine coefficient matrix so that subsequent
+corrections can be accumulated without adding inference stages. With p = ds +1
+and xe = [x, 1], define
+
+                        W⊤
+                              
+            B0 =                 ∈ Rp×dt ,    eB0 = (x − µs )W ⊤ + µt .
+                                              x                                (3)
+                   µt − µs W ⊤
+
+This expansion preserves raw prediction norms, without row normalization or a
+fitted scale; those norms enter the correction targets. The raw affine expansion
+uses float64 coefficients computed from the float32 Procrustes means and matrix.
+
+3.3   Two Tangent-Residual Ridge Corrections
+Write N (z) = z/∥z∥2 for a nonzero vector z. Cosine retrieval depends on docu-
+ment direction, whereas a raw vector residual also contains a radial component.
+6       Anonymous Author(s)
+
+We therefore project each anchor target onto the tangent plane at its current
+                         e = [XA , 1]. At update t ∈ {0, 1}, for anchor j set
+predicted direction. Let X
+       (t)                                     (t)   (t)        (t)     (t)   (t)
+     zj = x
+          ej Bt ,                          rj = ∥zj ∥2 ,       uj = zj /rj ,
+               h         (t) i
+      (t)  (t)     (t)
+     Tj = rj yj − uj yj⊤ uj .                                                       (4)
+
+                                         (t)
+The bracketed term is orthogonal to uj . The norm factor converts this direc-
+tional discrepancy into a target in raw prediction coordinates.
+    The target has a direct cosine-loss interpretation. For a nonzero row predic-
+tion z and unit destination anchor yj , define ℓj (z) = 1−yj N (z)⊤ . Differentiation
+gives
+                          yj − (uyj⊤ )u        (t)       (t)         (t)
+            ∇z ℓj (z) = −               ,    Tj = −(rj )2 ∇z ℓj (zj ).            (5)
+                              ∥z∥2
+The target is a norm-scaled negative cosine gradient. Shared affine regression
+smooths targets across anchors, so fitted row corrections need not be tangent.
+   One global ridge regression shares these correction targets across anchors.
+Stacking their rows into T (t) , we solve
+                            e − T (t) ∥2F + λ∥∆∥2F ,
+              ∆t = arg min ∥X∆                                                      (6)
+                    ∆∈Rp×dt
+                   e ⊤ (X
+                  =X    eXe ⊤ + λIm )−1 T (t) ,      Bt+1 = Bt + ∆t .               (7)
+
+The penalty regularizes the correction, including its intercept. Equivalently,
+changing variables to the updated coefficient matrix yields
+
+             Bt+1 = arg min ∥XC   e t + T (t) )∥2F + λ∥C − Bt ∥2F .
+                             e − (XB                                                (8)
+                        C
+
+This fit centers its correction penalty on the current affine map while matching
+norm-scaled cosine descent targets. Unlike direct zero-centered ridge onto YA ,
+the update retains the existing alignment while fitting its directional correction.
+We fix λ = 10 and perform exactly two updates, recomputing targets after the
+first; the development ablation in Sect. 5 measures the second update’s contri-
+bution. A Cholesky factorization is reused across updates. The refined map is
+unconstrained; fitting requires paired document vectors and linear solves, with
+no neural mapper training.
+    The norm factor also gives positive global scale equivariance. In exact arith-
+metic with nonzero predictions, T (cB) = cT (B) for a common c > 0. Linearity of
+the ridge solve therefore scales each update by c; by induction both accumulated
+maps scale by c, leaving normalized inference unchanged. This property concerns
+a common coefficient scale, not arbitrary per-document changes or guaranteed
+finite-step cosine improvement.
+               Tangent-Corrected Alignment for Embedding-Index Migration            7
+
+Table 1. ARC2-Global fitting and gallery construction. All document vectors supplied
+to fitting or replacement are unit normalized.
+
+ 1 Form paired anchors XA , YA and augmented design X   e = [XA , 1].
+ 2 Compute centered Procrustes and raw affine B0 using Eqs. (2)–(3).
+ 3 Factor X
+          eX  e ⊤ + 10Im once.
+ 4 For t = 0, 1: compute T (t) from Eq. (4), solve Eq. (7), and accumulate
+   Bt+1 .
+ 5 Store B2 ; map documents with ybi = N ([xi , 1]B2 ).
+ 6 Replace rows in S by yi ; search with destination query vectors.
+
+
+3.4   Affine Proxies and Mixed Retrieval
+The two corrections collapse into the final coefficient matrix B2 . For each docu-
+ment, compute a proxy ybi = N ([xi , 1]B2 ) and construct
+                                     (
+                                       yi , i ∈ S,
+                               gi =                                            (9)
+                                       ybi , i ∈
+                                               / S.
+Every anchor is replaced by its actual fitted destination vector. For a unit des-
+tination query q, rank documents by qgi⊤ . True and proxy vectors therefore
+compete in one score space. This competition makes mixed-gallery quality a dis-
+tinct evaluation target: proxy approximation quality alone does not determine
+how replacement changes their relative scores. We use exact float32 inner prod-
+ucts, sorting by descending score and then ascending document row index for
+ties; dataset-defined identical query/document IDs are excluded where specified.
+Table 1 summarizes the complete computation.
+
+3.5   Computation and Storage
+The final mapper has pdt coefficients regardless of anchor count. For 384 → 768,
+this is 295,680 float32 values, or 1,182,720 bytes (1.13 MiB), including the inter-
+cept. This is coefficient storage; fitting objects, document galleries, and encoder
+weights are additional. Application requires one affine multiplication and nor-
+malization per document, with O(N pdt ) arithmetic for a complete proxy gallery.
+    Fitting cost depends on the solver backend. Beyond the cross-covariance and
+rectangular SVD, costing O(mds dt ) and O(ds dt min(ds , dt )), respectively, the
+reference dual implementation forms an m×m Gram matrix in O(m2 p) time, fac-
+tors it in O(m3 ), and spends O(m2 dt + mpdt ) per correction. Its Gram storage is
+O(m2 ). A separately identified primal backend solves (X e ⊤Xe + λIp )∆t = X e ⊤ T (t)
+                     2     3                                          2
+instead, with O(mp + p ) construction and factorization and O(p ) Gram stor-
+age; it supports larger paired sets. Each primal correction costs O(mpdt + p2 dt ).
+The equations are equivalent in exact arithmetic, while floating-point rankings
+can differ near ties. Updates use float64 and the final coefficient is stored as
+float32. Finally, |A ∪ S| measures logical destination-vector exposure in cached-
+vector evaluations. It does not measure physical encoding work, deployment
+latency, or end-to-end migration savings.
+8        Anonymous Author(s)
+
+4     Experimental Setup
+
+We ask three questions: does angular refinement improve fixed-supervision align-
+ment, how does it compare with other mappers at a matched encoding budget,
+and which gains transfer to a prospectively held collection? All experiments use
+exact retrieval, isolating representation quality from approximate-index effects.
+
+Collections and migrations. Development uses FiQA (57,638 documents, 500
+development queries), NanoNQ (5,035/50), NanoHotpotQA (5,090/50), and
+NanoFEVER (4,996/50), drawn from BEIR and NanoBEIR [10,18]. FiQA
+informed method selection after its scores were inspected; all four collections are
+development evidence. We subsequently fixed a separate confirmation on the
+BEIR release of TREC-COVID [12,10]. Its input manifest contains all 171,332
+documents and 50 queries. For this study, labels remained closed until every
+ranking and endpoint had been sealed and separately verified. This distinguishes
+development evidence from the prospective test. We evaluate two 384-to-768-
+dimensional migrations: all-MiniLM-L6-v2 to all-distilroberta-v1, and
+e5-small-v2 to e5-base-v2.1 Model revisions and input hashes are pinned.
+Text encoding uses normalized float32 vectors, a maximum of 128 tokens, and
+the E5 query/passage prefixes.
+
+Matched supervision and exposure. The main matrix crosses four development
+collections, two migrations, three paid-document budgets (25/50/75%), six
+methods, and seeds 17, 29, 41, 53, and 67. All methods fit the same ordered
+1,024 paired anchors and replace the same paid document rows. Paid sets
+contain all anchors and are nested, with exactly ⌊ρN ⌋ unique target document
+vectors; the accounting is |A∪S|, including anchors. On the Nano collections and
+TREC-COVID, independent seeded streams sample anchors without replace-
+ment and a document permutation; unseen permutation rows fill the budget.
+FiQA retains its historical anchor/order arrays. Neither fitting nor selection
+uses relevance labels. Paid nonanchor vectors provide replacement only in this
+fixed-anchor regime. A separate FiQA experiment holds the 50% paid set fixed
+and compares fitting on 1,024 versus all 28,819 paid pairs. All-paid ARC2 fits
+use the float64 primal backend in Sect. 3.5; their fixed-anchor comparisons reuse
+the dual-backend rankings. Both implement the same two-update rule.
+
+Comparison methods. We retain the full five-baseline panel: centered rectangu-
+lar Procrustes (an A2M adaptation); LA2M with 20 source-anchor clusters, local
+alignment for clusters with at least two anchors and global fallback for singletons;
+SimpleLinear; affine ridge with λ = 10 and a regularized bias; and Embedding-
+Converter [16,2,17]. SimpleLinear uses pinned official code: despite its name, the
+locked configuration is a five-layer SELU MLP, trained for the final 50 epochs
+with batch size 4,028 and the MSE plus cosine loss, without qrel-based stopping.
+Converter is a paper-specification adaptation with a 50,000-update selection run,
+1
+    Pinned maintainer cards: MiniLM, DistilRoBERTa, E5-small, and E5-base.
+                Tangent-Corrected Alignment for Embedding-Index Migration              9
+
+batch size 64, and local neighborhood size 100. Paired-vector validation MAE
+selects the earliest minimum at 250-update checkpoints; a fresh fit uses all fitting
+pairs for that selected length. Unlike the original retrieval-based validation, this
+adaptation uses paired-vector MAE to respect paired-document-only supervi-
+sion. These are the declared implementations and training policies, rather than
+claims to reproduce every original-paper setting. ARC2-Global remains fixed at
+two tangent updates and λ = 10 throughout.
+
+Retrieval and inference. Destination queries search a single gallery containing
+unit-normalized proxies and paid true vectors, using exact float32 inner prod-
+ucts and top-100 retrieval. Score ties use original document row order; identi-
+cal query/document IDs are excluded. Native Full-X and Full-Y use their own
+query/document encoders throughout and provide reference operating points.
+Our primary metric is graded nDCG@10 with gain 2rel − 1; auxiliary Recall@100
+measures coverage over all positive judgments, including positives outside a Nano
+corpus. All queries count; unjudged documents are nonrelevant. The prospec-
+tive figure reports both metrics; a companion Recall table is included in the
+manuscript-source package.
+    Each locked analysis uses 20,000 paired query-bootstrap draws after aver-
+aging the five mapping seeds. Development macro effects weight the 24 collec-
+tion/migration/budget conditions equally and resample queries within each col-
+lection. Within each analysis, the same sampled query indices are shared across
+methods, budgets and migrations for that collection. Saved 99% percentile inter-
+vals give approximate 95% coverage for the five-comparison family; the ablations
+have a separate five-contrast family. The all-paid experiment uses its predeclared
+32-contrast family. TREC-COVID has 30 primary contrasts (five baselines, two
+migrations, three budgets), with approximately 99.8333% individual percentile
+intervals for approximate 95% family coverage. Its independent units are the
+50 queries. Recall intervals are nominal 95% descriptive intervals. An interval
+touching zero is unresolved. These intervals condition on the five observed map-
+ping seeds and fixed collections and encoder pairs; development intervals do not
+adjust for method selection.2
+
+
+5     Results
+We evaluate ranking quality, the value of angular refinement, transfer to a held
+collection, and useful operating points under limited document exposure.
+
+5.1     Broad Retrieval Gains with a Compact Adapter
+ARC2-Global achieves the highest macro nDCG@10 among the six evaluated
+methods (Table 2). Its gain over Procrustes is 0.0243, with family-adjusted in-
+terval [0.0181, 0.0308]. The effect extends across both migrations: descriptive
+2
+    Code, full baseline settings (configs/baselines.json) and manifests are packaged
+    in a separate research reproducibility artifact. An anonymous public link is pending.
+10                     Anonymous Author(s)
+
+Table 2. Development means at matched 1,024-pair supervision, equally weighting
+24 conditions. Differences are ARC2 minus baseline; intervals give approximate 95%
+family coverage. Bold/underline mark the best/second unrounded adapter means; blue
+identifies ARC2.
+
+                     Method           nDCG@10 ↑ R@100 ↑ ∆ nDCG                     Family interval
+                     ARC2-Global            0.5275     0.8659         —                         —
+                     Procrustes              0.5032   0.8661     +0.0243        [+0.0181, +0.0308]
+                     LA2M20                  0.4234    0.7758    +0.1041        [+0.0861, +0.1229]
+                     SimpleLinear            0.3554    0.6130    +0.1721        [+0.1499, +0.1947]
+                     Affine ridge            0.4318    0.7441    +0.0957        [+0.0754, +0.1164]
+                     Converter               0.3663    0.7641    +0.1612        [+0.1427, +0.1799]
+
+
+                           (a) MiniLM → DistilRoBERTa                   (b) E5-small → E5-base
+                     0.7                                        0.7
+
+                     0.6                                        0.6
+     Macro nDCG@10
+
+
+
+
+                     0.5                                        0.5
+
+                     0.4                                        0.4
+
+                     0.3                                        0.3
+
+                     0.2                                       0.2
+                           25          50           75             25                 50             75
+                                             Paid destination documents (%)
+
+                             ARC2-Global      LA2M20             Affine ridge        Native Full-X
+                             Procrustes       SimpleLinear       Converter           Native Full-Y
+
+
+Fig. 2. Development quality at anchor-inclusive paid-document coverage. Points aver-
+age five seeds and then weight the four collection means equally. All six adapters and
+both native references are retained. Lines connect the three measured budgets; they
+do not imply intermediate measurements.
+
+
+pair-wise gains are 0.0257 for MiniLM and 0.0229 for E5. Each of the four
+collection-level macros also favors ARC2 over every baseline. At the finer con-
+dition level, ARC2 leads Procrustes in 23 of 24 point means and every other
+baseline in all 24. Figure 2 shows the complete budget curves.
+    The improvement concerns top-ranked relevance: macro Recall is 0.8659 ver-
+sus Procrustes’ 0.8661, with descriptive difference interval [−0.0049, 0.0043]. The
+single negative Procrustes nDCG point difference is FiQA/E5 at 75% (−0.0036).
+Native Full-X and Full-Y provide the full-corpus operating context.
+                Tangent-Corrected Alignment for Embedding-Index Migration              11
+
+
+                                           +0.0243
+         2 steps − 0 steps
+                                   +0.0069
+          2 steps − 1 step
+                                                                       +0.0957
+      ARC2 − affine ridge
+
+                                 +0.0032
+          λ = 1 − λ = 10
+                             -0.0093
+        λ = 100 − λ = 10
+
+                        −0.02     0.00         0.04            0.08                 0.12
+                                   ∆ macro nDCG@10 (family-adjusted intervals)
+
+
+Fig. 3. Development mechanism controls. Dots show equal-condition macro nDCG
+differences; bars retain the saved 99% intervals of the separate five-contrast family. The
+last two rows change the penalty at two steps. All intervals use the same continuous
+horizontal scale.
+
+
+5.2    The Second Correction Adds Value without an Inference Stage
+A second correction adds 0.0069 macro nDCG beyond one step, with family
+interval [0.0038, 0.0100]. The point gain appears in 22 of 24 conditions and in
+each of the five seed-level macros. Recomputing the tangent target therefore
+provides a repeatable development benefit while the final mapper remains one
+affine stage. The complete initialized refinement gains 0.0957 over affine ridge
+(Fig. 3); this comparison jointly evaluates tangent targeting and the retained
+alignment prior.
+    The penalty controls favor moderate regularization. Changing λ from 10 to 1
+gives +0.0032, with an interval crossing zero; changing it to 100 gives −0.0093,
+with a wholly negative interval. The evaluated method keeps λ = 10 and exactly
+two corrections.
+
+5.3    Prospective Transfer: Strong E5 Gains and MiniLM Coverage
+On the held collection, E5 ARC2 exceeds the evaluated Converter and affine
+ridge at all three migration budgets. At 25% coverage, the Converter gain is
+0.2572, with family interval [0.1757, 0.3376]. At 50%, ARC2 reaches 0.5904 nDCG
+versus Converter’s 0.3590 and ridge’s 0.3281 (Table 3). Across both migrations,
+the 30-contrast family supports five improvements over Converter, four over ridge
+and two over SimpleLinear. The table marks all eleven supported comparisons.
+    MiniLM provides a useful partial-migration operating point: at 75% coverage,
+ARC2 reaches 0.5195 nDCG versus native Full-Y’s 0.5203, while one quarter of
+the gallery still uses proxies. Its Recall@100 point mean is the highest among
+12        Anonymous Author(s)
+
+Table 3. Prospective TREC-COVID nDCG@10 (higher is better), averaged over five
+seeds. †: positive ARC2-minus-baseline interval in the 30-contrast family. Unmarked
+baseline cells are unresolved. Bold/underline rank the six adapters before rounding;
+native references are separate.
+
+        Method            MiniLM → DistilRoBERTa          E5-small → E5-base
+                             25%        50%       75%     25%       50%        75%
+        ARC2-Global 0.4619 0.5000              0.5195    0.5628    0.5904 0.6098
+        Procrustes    0.4620 0.5046           0.5195    0.5660    0.6067 0.6198
+        LA2M20       0.4634 0.5073             0.5186    0.5206    0.5898 0.6188
+        SimpleLinear  0.4610 0.5076            0.5193   0.4299†   0.5287† 0.5785
+        Affine ridge  0.4322 0.4854           0.5012†   0.2986†   0.3281† 0.3278†
+        Converter    0.4224† 0.4780†           0.5033   0.3056†   0.3590† 0.4098†
+        Native Full-X           0.4935 (native)              0.6805 (native)
+        Native Full-Y           0.5203 (native)              0.6421 (native)
+
+Table 4. E5 nDCG: ARC2 at 25% exceeds Converter and ridge at 75% on all five
+collections. Blue identifies ARC2. Proc.: Procrustes; SL: SimpleLinear; native references
+show full-corpus quality. TREC-COVID is prospective; other rows are development.
+Cross-budget point comparisons are post-hoc descriptive.
+
+     Collection             25% coverage            75% coverage           Native
+                        ARC2    Proc. LA2M20       SL Ridge Conv. Full-X Full-Y
+     FiQA               0.2731 0.2718    0.1416 0.2781 0.1610 0.2095 0.3465 0.3891
+     NanoNQ             0.5071 0.4852    0.3640 0.4839 0.4428 0.4021 0.6595 0.6669
+     NanoHotpotQA       0.5845 0.5512    0.3869 0.6174 0.5053 0.5016 0.8278 0.8193
+     NanoFEVER          0.7555 0.7147    0.4991 0.7087 0.7290 0.7326 0.8984 0.8963
+     TREC-COVID 0.5628 0.5660            0.5206 0.5785 0.3278 0.4098 0.6805 0.6421
+
+
+
+the six adapters at each budget, reaching 0.0998 at 75% versus native Full-
+Y’s 0.1052. E5 reaches 0.0997 Recall at 75%, versus Full-Y’s 0.1162 (Fig. 4).
+These auxiliary results distinguish coverage at 100 from relevance near the top;
+proximity in nDCG is not an equivalence test.
+    Geometric alignment remains competitive: before rounding, Procrustes has
+higher nDCG point means in all six cells, although its MiniLM/75% difference
+is below 0.0001. All Procrustes and LA2M nDCG family intervals cross zero.
+The confirmed advantages therefore concern the evaluated Converter, ridge and
+SimpleLinear configurations.
+
+5.4     Higher E5 Quality at Lower Document Exposure
+A useful budget pattern extends across all five collections (Table 4): E5 ARC2
+at 25% coverage exceeds both Converter and affine ridge at 75%. On TREC-
+COVID, the respective nDCG means are 0.5628, 0.4098 and 0.3278. The advan-
+                                      Tangent-Corrected Alignment for Embedding-Index Migration              13
+
+                                                                                     Panel-specific y ranges
+                                 (a) MiniLM → DistilRoBERTa                  (b) E5-small → E5-base
+ nDCG@10 (primary)                                                   0.7
+                          0.51
+                                                                     0.6
+                          0.48                                       0.5
+
+                          0.45                                       0.4
+
+                          0.42                                       0.3
+
+
+                                 (c) MiniLM → DistilRoBERTa                  (d) E5-small → E5-base
+ Recall@100 (auxiliary)
+
+
+
+
+                          0.10                                      0.11
+
+                                                                    0.08
+                          0.08
+                                                                    0.05
+
+                          0.06                                       0.02
+                                 25           50           75             25             50             75
+                                                    Paid destination documents (%)
+
+
+                                   ARC2-Global       LA2M20           Affine ridge     Native Full-X
+                                   Procrustes        SimpleLinear     Converter        Native Full-Y
+
+
+Fig. 4. Prospective TREC-COVID at fixed 1,024-anchor supervision: (a,b) primary
+nDCG@10; (c,d) auxiliary Recall@100. Points average five seeds. All six adapters and
+native references are shown, with explicitly panel-specific vertical ranges. Recall curves
+are descriptive.
+
+
+tage is visible even after the two comparators receive a much larger set of true
+destination vectors.
+    This is a post-hoc descriptive comparison of the measured budgets, rather
+than an additional member of the matched-budget inferential family. The table
+retains 25% geometric alternatives, 75% SimpleLinear and both native refer-
+ences. It identifies observed quality–exposure operating points; physical savings
+and the minimum budget needed for equal quality require separate measure-
+ments.
+
+
+5.5                        Paid Pairs Strengthen MiniLM Adaptation
+Using already-paid pairs improves MiniLM adaptation without increasing the
+50% document budget. ARC2 rises from 0.3075 to 0.3671 nDCG, a gain of 0.0596
+with family interval [0.0393, 0.0806]. In matched all-paid comparisons it exceeds
+14     Anonymous Author(s)
+
+Table 5. FiQA at 50% coverage. Fixed/All fit 1,024/28,819 pairs; N/R de-
+note nDCG@10/Recall@100. On All-N baseline cells, †/‡ mark positive/negative
+ARC2 differences in the 32-contrast family; unmarked comparisons are unresolved.
+Bold/underline rank matched adapter columns; native rows are references.
+
+     Method           MiniLM → DistilRoBERTa           E5-small → E5-base
+                      Fixed N     All N     All R Fixed N       All N   All R
+     ARC2-Global       0.3075     0.3671    0.6922   0.3116    0.2919 0.5595
+     Procrustes         0.2858   0.3334†    0.6905    0.3100 0.3362‡ 0.6534
+     LA2M20             0.2377   0.3389†   0.6950     0.2300 0.3293‡ 0.6473
+     SimpleLinear       0.2360   0.3323†    0.6778    0.1942 0.1679† 0.3618
+     Affine ridge       0.2890   0.3673     0.6800    0.1479 0.2270† 0.4245
+     Converter          0.2496   0.3258†    0.6633    0.1397   0.2625 0.5789
+     Native Full-X     0.3900 (native)     0.7002    0.3465 (native)    0.6453
+     Native Full-Y     0.4047 (native)     0.7039    0.3891 (native)    0.6968
+
+
+
+Procrustes, LA2M, SimpleLinear and Converter; ridge is unresolved. Table 5
+makes these family decisions visible.
+    E5 changes the method ordering: ARC2 trails all-paid Procrustes and LA2M,
+exceeds SimpleLinear and ridge, and is unresolved against Converter. Its fixed-
+to-all-paid change, 0.3116 to 0.2919, is unresolved. Fixed-anchor MiniLM ARC2
+also trails every all-paid baseline in the cross-regime family comparisons. All-
+paid fitting retains λ = 10 in the summed objective; it tests the fixed procedure
+at larger supervision, rather than isolating data quantity at a fixed effective
+penalty.
+
+Evaluate the gallery that will be searched. With each fitted map fixed, true-vector
+replacement raises MiniLM all-paid nDCG from 0.3510 to 0.3671, but lowers E5
+from 0.3149 to 0.2919. For E5, Recall falls from 0.6542 to 0.5595 and the paid-
+document share of top-10 results falls from 0.4916 to 0.0647, despite 50% paid
+coverage. These measured replacement effects make mixed-gallery relevance the
+appropriate selection criterion: proxy-only quality can favor a different operating
+point from the gallery containing native and mapped vectors.
+
+
+6    Practical Value of Directional Adaptation
+Compact inference with stronger development ranking. The 295,680 float32 coef-
+ficients occupy 1.13 MiB, or 114.7 times fewer parameter bytes than the evaluated
+Converter. Both corrections are absorbed into this matrix. Affine ridge has the
+same coefficient count; refinement provides the measured quality benefit, while
+affine mapping provides compactness.
+
+When the adapter is useful. ARC2 targets required destination-model queries
+during staged document replacement. E5 demonstrates useful quality at limited
+               Tangent-Corrected Alignment for Embedding-Index Migration             15
+
+exposure; MiniLM benefits from fitting all paid pairs without increasing docu-
+ment coverage. Procrustes and LA2M remain competitive on the held collection,
+so deployment choice should follow encoder-specific mixed-gallery validation.
+When source queries remain acceptable, Full-X is also viable: all 24 partial-
+development five-seed ARC2 condition means are below it.
+
+Efficiency in the measured units. Destination-vector exposure, coefficient storage
+and the absence of neural mapper training describe the demonstrated resource
+advantages. Physical encoding time, index resources and serving SLOs require
+deployment measurements.
+
+
+7   Conclusion
+ARC2-Global turns two tangent ridge corrections into one compact affine
+adapter. It leads five alternatives in development macro nDCG, transfers sub-
+stantial E5 gains over Converter and ridge to TREC-COVID, and exposes
+useful 25%-versus-75% quality–coverage operating points. Stronger all-paid
+MiniLM adaptation and measured replacement effects further show why migra-
+tion should be evaluated in the mixed gallery that serves destination queries.
+Angular refinement offers a practical route to budgeted index migration.
+
+
+References
+ 1. Dar, G.: mini-vec2vec: Scaling universal geometry alignment with linear transfor-
+    mations (2026), https://arxiv.org/abs/2510.02348
+ 2. DBgroup Edinburgh: Embedding translation: Reference implementation.
+    Software      repository    (2026),     https://github.com/DBgroup-Edinburgh/
+    embedding-translation, revision 5e62baf15442; SimpleLinear implementa-
+    tion
+ 3. Jaeckle, F., Faghri, F., Farhadi, A., Tuzel, O., Pouransari, H.: Fastfill: Efficient
+    compatible model update. In: International Conference on Learning Representa-
+    tions (2023)
+ 4. Jha, R., Zhang, C., Shmatikov, V., Morris, J.: Harnessing the universal geometry of
+    embeddings. In: Advances in Neural Information Processing Systems. vol. 38, Main
+    Conference, pp. 45963–45987 (2025). https://doi.org/10.52202/085713-1530
+ 5. Maystre, L., Gonzalez, A.O., Park, C., Dolga, R., Berariu, T., Zhao, Y., Ciosek,
+    K.: When embedding models meet: Procrustes bounds and applications (2025),
+    https://arxiv.org/abs/2510.13406
+ 6. Reimers, N., Gurevych, I.: Sentence-BERT: Sentence embeddings using Siamese
+    BERT-networks. In: Proceedings of the 2019 Conference on Empirical Methods
+    in Natural Language Processing and the 9th International Joint Conference on
+    Natural Language Processing (EMNLP-IJCNLP). pp. 3982–3992 (2019). https:
+    //doi.org/10.18653/v1/D19-1410
+ 7. Ricci, S., Biondi, N., Pernici, F.: Spherical interpolation for backward-compatible
+    multimodal representations (2026), https://arxiv.org/abs/2609.39836
+ 8. Schönemann, P.H.: A generalized solution of the orthogonal procrustes problem.
+    Psychometrika 31(1), 1–10 (1966). https://doi.org/10.1007/bf02289451
+16      Anonymous Author(s)
+
+ 9. Shen, Y., Xiong, Y., Xia, W., Soatto, S.: Towards backward-compatible represen-
+    tation learning. In: Proceedings of the IEEE/CVF Conference on Computer Vision
+    and Pattern Recognition (CVPR) (2020)
+10. Thakur, N., Reimers, N., Rücklé, A., Srivastava, A., Gurevych, I.: Beir: A hetero-
+    geneous benchmark for zero-shot evaluation of information retrieval models. In:
+    Proceedings of the Neural Information Processing Systems Track on Datasets and
+    Benchmarks. vol. 1 (2021)
+11. Vejendla, H.: Drift-adapter: A practical approach to near zero-downtime embed-
+    ding model upgrades in vector databases. In: Proceedings of the 2025 Conference
+    on Empirical Methods in Natural Language Processing. pp. 15938–15949 (2025).
+    https://doi.org/10.18653/v1/2025.emnlp-main.805
+12. Voorhees, E., Alam, T., Bedrick, S., Demner-Fushman, D., Hersh, W.R., Lo,
+    K., Roberts, K., Soboroff, I., Wang, L.L.: Trec-covid: constructing a pandemic
+    information retrieval test collection. ACM SIGIR Forum 54(1), 1–12 (2020).
+    https://doi.org/10.1145/3451964.3451965
+13. Wang, L., Yang, N., Huang, X., Jiao, B., Yang, L., Jiang, D., Majumder, R.,
+    Wei, F.: Text embeddings by weakly-supervised contrastive pre-training (2024),
+    https://arxiv.org/abs/2212.03533
+14. Wang, W., Wei, F., Dong, L., Bao, H., Yang, N., Zhou, M.: Minilm: Deep self-
+    attention distillation for task-agnostic compression of pre-trained transformers. In:
+    Advances in Neural Information Processing Systems. vol. 33, pp. 5776–5788 (2020)
+15. Yang, B., Cao, Y.: Generalizable and composable multi-model embedding trans-
+    lation. In: Proceedings of the 43rd International Conference on Machine Learn-
+    ing. vol. 306, pp. 144275–144302 (2026), https://proceedings.mlr.press/v306/
+    yang26e.html
+16. Yang, B., Cao, Y., Ren, Y.: Integrating vector databases across embedding models.
+    Proceedings of the ACM on Management of Data 3(6), 1–28 (2025). https://doi.
+    org/10.1145/3769803
+17. Yoon, J., Arik, S.O.: Embedding-converter: A unified framework for cross-model
+    embedding transformation. In: Proceedings of the 63rd Annual Meeting of the
+    Association for Computational Linguistics (Volume 1: Long Papers). pp. 25464–
+    25482 (2025). https://doi.org/10.18653/v1/2025.acl-long.1237
+18. Zeta Alpha: NanoBEIR. Hugging Face dataset collection (2024), https://
+    huggingface.co/collections/zeta-alpha-ai/nanobeir, accessed 1 November
+    2026
+

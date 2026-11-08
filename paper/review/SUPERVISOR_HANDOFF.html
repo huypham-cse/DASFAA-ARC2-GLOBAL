@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARC2-Global - supervisor manuscript, 2 November 2026</title>
+
+<meta name="generator" content="ARIS render-html (dashboard, v1)">
+<meta name="aris:source-path" content="paper\review\SUPERVISOR_HANDOFF.md">
+<meta name="aris:source-sha256" content="b5522266a66b9ea420b30a08ee728d2de9785be5ded986d1f161a39c3c847a56">
+<meta name="aris:generated-at" content="2026-11-01 19:13 UTC">
+
+<!-- offline mode: MathJax + highlight.js skipped; math and code blocks render as plain text -->
+
+<style>
+:root {
+  --bg: #fdfcf7;
+  --bg-soft: #f4f1ea;
+  --bg-card: #ffffff;
+  --bg-code: #f8f5ec;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #6b6b6b;
+  --primary: #1a4a8c;
+  --primary-soft: #2d6cb8;
+  --accent: #b8390e;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --info-bg: #dbeafe;
+  --good-bg: #d1fae5;
+  --good: #065f46;
+  --bad-bg: #fee2e2;
+  --bad: #991b1b;
+  --border: #d6d0c0;
+  --border-soft: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Serif Pro", "Source Serif 4", "Crimson Pro", "Georgia", "Songti SC", "STSong", serif;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 32px 48px;
+}
+
+header.hero {
+  border-bottom: 3px double var(--primary);
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+}
+header.hero .eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+header.hero h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.hero .subtitle {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+  font-style: italic;
+}
+header.hero .byline {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+header.hero .byline strong { color: var(--ink); font-weight: 600; }
+header.hero .meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 12px;
+}
+header.hero .meta span strong { color: var(--ink-soft); }
+header.hero .meta code {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 16px 0 28px;
+}
+.grid.metrics { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+.card .card-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.card .card-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  letter-spacing: -0.01em;
+}
+.card .card-sub {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 6px;
+}
+.card.accent .card-value { color: var(--accent); }
+.card.good .card-value { color: var(--good); }
+.card.warn .card-value { color: var(--warn); }
+.card.bad .card-value { color: var(--bad); }
+
+h2 {
+  font-size: 20px;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 700;
+}
+h3 { font-size: 16px; margin: 22px 0 8px; color: var(--primary); font-weight: 600; }
+h4 { font-size: 14px; margin: 16px 0 6px; color: var(--ink); font-weight: 600; }
+
+p { margin: 8px 0; }
+ul, ol { padding-left: 20px; margin: 8px 0; }
+ul li, ol li { margin: 3px 0; }
+ul li::marker { color: var(--primary); }
+
+strong { color: var(--accent); font-weight: 600; }
+em { color: var(--ink-soft); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+code:not(.hljs) {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.86em;
+  background: var(--bg-code);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  color: var(--accent);
+}
+
+pre {
+  background: #fafaf6;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+pre code, pre code.hljs {
+  background: transparent !important;
+  display: block;
+  padding: 12px 16px !important;
+  font-size: 12.5px;
+  line-height: 1.5;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  color: var(--ink);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+thead { background: var(--primary); color: white; }
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 12px; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--bg-soft); }
+
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: "JetBrains Mono", "SF Mono", monospace;
+  letter-spacing: 0.02em;
+}
+.badge-good { background: var(--good-bg); color: var(--good); }
+.badge-warn { background: var(--warn-bg); color: var(--warn); }
+.badge-bad { background: var(--bad-bg); color: var(--bad); }
+.badge-info { background: var(--info-bg); color: var(--primary); }
+
+.callout {
+  margin: 14px 0;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 14px;
+}
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.callout-info { background: var(--info-bg); border-left-color: var(--primary); }
+.callout-info .callout-title { color: var(--primary); }
+.callout-warn { background: var(--warn-bg); border-left-color: var(--warn); }
+.callout-warn .callout-title { color: var(--warn); }
+.callout-good { background: var(--good-bg); border-left-color: var(--good); }
+.callout-good .callout-title { color: var(--good); }
+.callout-bad { background: var(--bad-bg); border-left-color: var(--bad); }
+.callout-bad .callout-title { color: var(--bad); }
+
+details {
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 9px 13px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--primary);
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸ ";
+  margin-right: 4px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { border-bottom: 1px solid var(--border-soft); }
+details > :not(summary) { padding: 8px 13px; }
+
+footer.aris-footer {
+  margin-top: 48px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+footer.aris-footer a { color: var(--ink-muted); border-bottom: 1px dotted var(--border); }
+
+@media (max-width: 600px) {
+  .shell { padding: 20px 16px; }
+  header.hero h1 { font-size: 22px; }
+  .card .card-value { font-size: 24px; }
+}
+@media print {
+  .shell { padding: 0; }
+  body { background: white; }
+  .card { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<header class="hero">
+  
+  <h1>ARC2-Global - supervisor manuscript, 2 November 2026</h1>
+  
+  
+  <div class="meta">
+    <span><strong>Source:</strong> <code>paper\review\SUPERVISOR_HANDOFF.md</code></span>
+    <span><strong>SHA256:</strong> <code>b5522266a66b</code></span>
+    <span><strong>Rendered:</strong> 2026-11-01 19:13 UTC</span>
+    
+  </div>
+</header>
+
+<h1 id="arc2-global---supervisor-manuscript-2-november-2026">ARC2-Global - supervisor manuscript, 2 November 2026</h1>
+<p>Open <strong><a href="../ARC2_Global_DASFAA2027_final.pdf">the current PDF</a></strong>. The revised manuscript has <strong>16 standard LNCS pages</strong>, a <strong>159-word abstract</strong>, five result/algorithm tables and four vector figures. Its anonymous <a href="../ARC2_Global_DASFAA2027_source.zip">Overleaf/source ZIP</a> is 1.25 MiB and compiles without the large research dataset bundle. The <a href="https://dasfaa2027.github.io/CallforResearchTrack/list.htm">official DASFAA guidelines</a> were rechecked: 16 pages including references, abstract at most 200 words, double-blind LNCS.</p>
+<h2 id="the-paper-to-present">The paper to present</h2>
+<p><strong>Two tangent ridge corrections deliver strong mixed-gallery retrieval through one compact affine document adapter.</strong> The intended user needs native destination queries while documents are migrated gradually. The revision makes useful quality at limited document exposure the central practical result.</p>
+<table><thead><tr><th>Evidence</th><th>Message supported by existing measurements</th></tr></thead><tbody><tr><td>Broad development quality</td><td>Best macro nDCG among six methods, +0.0243 over Procrustes with family interval [0.0181,0.0308]. Every collection-level macro favors ARC2 over all five baselines.</td></tr><tr><td>Lower destination exposure</td><td>On all five E5 collections, ARC2 at 25% coverage exceeds Converter and ridge at 75%. The new table retains geometric alternatives, SimpleLinear and native references. This is a descriptive comparison of observed budgets.</td></tr><tr><td>Stronger second correction</td><td>+0.0069 over one step, positive in 22/24 condition means and all five seed-level macros; no added inference stage.</td></tr><tr><td>Prospective coverage</td><td>MiniLM ARC2 has the highest Recall@100 point mean among six adapters at each TREC budget. At 75%, nDCG is 0.5195 versus native Full-Y 0.5203; Recall is 0.0998 versus 0.1052.</td></tr><tr><td>Existing paid pairs</td><td>MiniLM FiQA improves from 0.3075 to 0.3671 at the same 50% paid coverage: +0.0596, family interval [0.0393,0.0806]. It beats four all-paid baselines; ridge is unresolved.</td></tr><tr><td>Compact deployment form</td><td>1.13 MiB of affine coefficients, 114.7 times fewer parameter bytes than the evaluated Converter, without neural mapper training.</td></tr></tbody></table>
+<p>The new cross-budget table is post-hoc descriptive, not a newly preregistered hypothesis or an equal-quality physical-cost estimate. The independent TREC study retains its original sealed methods/rankings and matched-budget inferential family. All baseline/native panels and E5 all-paid outcomes remain visible.</p>
+<h2 id="what-was-improved">What was improved</h2>
+<ul><li>Finding-first abstract and introduction; direct professional wording around the finite algorithm and practical operating points.</li><li>Complete new E5 budget table and a four-panel prospective figure covering both nDCG and Recall.</li><li>LaTeX serif typography, explicit panel labels, complete legends and native references; no invented intermediate points or uncertainty bands.</li><li>Grouped booktabs headers, restrained ARC2 shading, and best/second-best emphasis computed from unrounded means. Other methods keep their winning entries.</li><li>All-paid family markers and its previously underused improvement interval made visible.</li><li>Corrected directional-target wording, rounded-table scope, duplicate prose and exact dual/primal regime assignments.</li></ul>
+<p><a href="aciids_style_revision_20261101/POSITIVE_EVIDENCE.md">Positive-evidence inventory</a> records what was already reported, what was newly surfaced, and why historical local-residual or duplicate results do not become new Global evidence. <a href="aciids_style_revision_20261101/CONTRADICTIONS.md">Consistency review</a> gives the original actionable findings.</p>
+<h2 id="current-verification">Current verification</h2>
+<table><thead><tr><th>Check</th><th>Outcome</th></tr></thead><tbody><tr><td>Fresh final claim audit</td><td><strong>PASS</strong>, 218 claim records and 101 input hashes; all published values, rank emphasis and family markers reconcile. <a href="../PAPER_CLAIM_AUDIT.md">Report</a>.</td></tr><tr><td>Fresh presentation review</td><td><strong>READY</strong>, all 16 pages and detailed figures inspected; no mandatory defects. <a href="aciids_style_revision_20261101/PRESENTATION_REVIEW.md">Report</a>.</td></tr><tr><td>Existing numerical outputs</td><td>Six existing generated data artifacts retain every pre-revision value; TREC adds the saved Recall column. No scientific source or raw result changed.</td></tr><tr><td>Citation continuity</td><td>All 18 substantive citing contexts are unchanged after removing one uncited duplicate sentence; original per-entry primary-source assessments retained. This was not a new 18-reviewer citation round.</td></tr><tr><td>Document and source ZIP</td><td>PASS; no overfull boxes, unresolved references or known identifying strings. Isolated source-ZIP build reproduces the manuscript text.</td></tr></tbody></table>
+<p>All revision agents used <strong>gpt-6.1-sol/high</strong>. Reviews are same-family/provisional. The earlier 6/10 scoring rounds concern the previous snapshot; this revision receives no invented higher score or acceptance probability. Presentation readiness is not a conference decision.</p>
+<h2 id="remaining-author-actions">Remaining author actions</h2>
+<p>Supervisor approval and an anonymous public code/evidence link remain before submission. The source ZIP is the manuscript, while the unchanged R3 research release holds the larger code/results package. No H100 run, retuning, test-label opening, public upload or submission occurred during this revision.</p>
+
+<footer class="aris-footer">
+  Generated by <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/render-html/SKILL.md">ARIS <code>/render-html</code></a> ·
+  source <code>paper\review\SUPERVISOR_HANDOFF.md</code> ·
+  SHA256 <code>b5522266a66b</code> ·
+  generated at 2026-11-01 19:13 UTC.
+  Edit the source Markdown / JSON, then re-render.
+</footer>
+
+</div>
+</body>
+</html>

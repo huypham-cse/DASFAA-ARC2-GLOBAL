@@ -1,0 +1,10 @@
+{
+  "pid": 217056,
+  "code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+  "main": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027",
+  "mini": "/root/arc2_global_paper_20261025/b1g_import_mini_r1_20261027/mini",
+  "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_score_r1_20261027",
+  "log": "/root/arc2_global_paper_20261025/b1g_score_r1_20261027.log",
+  "launched_unix": 1793107852.932454,
+  "import_archive_sha256": "8b6af30c0033b04f0f99c2cac68298940e97d8af28cff92e27d0dfefcd6b9483"
+}

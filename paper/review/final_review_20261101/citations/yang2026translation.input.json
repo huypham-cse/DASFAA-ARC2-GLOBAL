@@ -1,0 +1,21 @@
+{
+  "key": "yang2026translation",
+  "bib_entry": "@inproceedings{yang2026translation,\n  author = {Yang, Beining and Cao, Yang},\n  title = {Generalizable and Composable Multi-Model Embedding Translation},\n  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},\n  volume = {306},\n  pages = {144275--144302},\n  year = {2026},\n  url = {https://proceedings.mlr.press/v306/yang26e.html},\n}",
+  "contexts": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 8,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ],
+  "primary_source_record": {
+    "key": "yang2026translation",
+    "source_file": "citation_sources/yang2026translation_verified.bib",
+    "metadata_url": "https://proceedings.mlr.press/v306/yang26e.html",
+    "verification": "publisher-export",
+    "sha256": "beeeab3aeabeeb515e7b93f9e5b50867fd3bd9c52b95f91dc589d236994bddc3",
+    "metadata_type": "inproceedings",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "B1P_SCORING_RECOVERY_SMOKE_PASS",
+  "completed_utc": "2026-10-27T03:19:54.497084+00:00",
+  "binding": {
+    "lock_sha256": "17e93a5da59fe29193bf385cb9b7a0b94381beea9fc70e32d4bfe8858eeb79d9",
+    "descriptor_sha256": "b3eb72da273310ca969ac174b039feb543f962b79ff0b505bc1b5a653054ca32",
+    "generation_code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+    "recovery_scorer_code_commit": "4062d96c353ac567fb90a6093cd8059d4647e252",
+    "ranking_seal_sha256": "1b993e1bf3fe0248f0a48e52cc371f232ceeba615f81672ec30b81048ba5be1d",
+    "original_metadata_sha256": "c6b386180a9445e0e40efaee1c8bd2a3d234edc1576c9611859a8b2d38b5be0f"
+  },
+  "wall_seconds": 0.3626770619302988,
+  "peak_process_rss_bytes": 56184832,
+  "dev_qrel_access_started": false,
+  "TREC_access": false,
+  "original_failure_preserved": true,
+  "artifact_sha256": {
+    "context_verified.json": "644dee9f679ccce0538509dea6d92069a8cb87670810a8519967274af8e09d1b",
+    "receipt_regression_check.json": "0ccee67f9f47daab71a3898c5957e8ceeef0a0b014a3ffbc371f7ac54e6442ab",
+    "started.json": "0dec2600f57a43137a6c78041734b1f5a3f21570cc3095f0529237bb0fe80cac",
+    "synthetic_scorer_checks.json": "23ebc6a58a25d40efd7fb935ebe656ac6c86a994282a4ea6fa2ea6077c4dd6bd"
+  },
+  "next_action": "STOP after B1-P report; no automatic next study"
+}

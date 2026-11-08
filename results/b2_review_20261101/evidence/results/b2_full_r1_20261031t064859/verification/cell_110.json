@@ -1,0 +1,10 @@
+{
+  "dataset": "TREC-COVID",
+  "pair": "e5_small_base",
+  "seed": 17,
+  "budget": "50pct",
+  "method": "embedding_converter_paper_spec",
+  "endpoint_sha256": "a19d094f2e76775bea2db0d42fec812518a48f8a0ae0656ec417ea913f361264",
+  "ranking_sha256": "2ae41c13a9cd21e6e307c1ba6d4711b5656d2ea118a7dbc8ddcf86897d757a65",
+  "all_top100_ids_and_order_equal": true
+}

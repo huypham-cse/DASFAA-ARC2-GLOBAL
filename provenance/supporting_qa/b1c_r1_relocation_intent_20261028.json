@@ -1,0 +1,9 @@
+{
+  "status": "OPERATOR_RELOCATED_BEFORE_FULL",
+  "time": 1793157817.0293317,
+  "original_transport": "47files MINI?MAIN, interrupted operator copy with partials retained",
+  "new_transport": "453files MAIN?MINI,1947593157bytes",
+  "reason": "MINI baseline numerical dependencies match; different runtime placement declared before full and before labels; retain MAIN successful smoke",
+  "scientific_full_runs_started": 0,
+  "new_qrel_access": 0
+}

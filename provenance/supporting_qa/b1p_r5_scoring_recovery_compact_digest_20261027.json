@@ -1,0 +1,10 @@
+{
+  "status": "SCORING_RECOVERY_EXPORT_READY",
+  "remote": "/root/arc2_global_paper_20261025/b1p_r5_scoring_recovery_compact_20261027.tar.gz",
+  "bytes": 185026,
+  "sha256": "2ba76fa2c559dc81962de393a7cec7c3ea8d86172ab586371efd9a5a36f4bcf8",
+  "original_generation_status": "FAILED_PRESERVED",
+  "recovery_status": "DEV_SCORED",
+  "ranking_cells": 124,
+  "completed_utc": "2026-10-27T03:21:56.295434+00:00"
+}

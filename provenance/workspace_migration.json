@@ -1,0 +1,85 @@
+{
+  "old_paper_archive": "D:\\DASFAA-2027-paper-before-arc2-global-20261025",
+  "old_paper_commit": "be3a3b300de382b4ed027ad96715922e31e4bbb9",
+  "reused_files": [
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\llncs.cls",
+      "package_path": "manuscript/llncs.cls",
+      "sha256": "e9894c92191fcd195eef3120a36d2f75b52030eadcbdc3ce1463179746526e6a",
+      "mode": "verbatim"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\splncs04.bst",
+      "package_path": "manuscript/splncs04.bst",
+      "sha256": "f36c3a17e5304a692706359aafa9de709395a085e579eb47c027095aeaa35174",
+      "mode": "verbatim"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\references.bib",
+      "package_path": "manuscript/references.bib",
+      "mode": "existing bibliography reused; verified ACL entry appended",
+      "archive_sha256": "63a6974ebaaeb1c5cf4bd8bee5ba05c3bd623abbfd4bf6737d73f12d65c91c10",
+      "package_sha256": "d3e75a6c691dbfd57a2bfab049943ba99568610454f472889796400c92f8bf6b"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\Makefile",
+      "package_path": "manuscript/Makefile",
+      "sha256": "1291a7665a968e16afdadf64cbde97e453be01b31c98d3cce5c0d123d7473cc5",
+      "mode": "verbatim"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\main.tex",
+      "sha256": "85c187b45e27921c6f746df9e89038c1d58a18408007cac2d5651b51561695c5",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\00-abstract.tex",
+      "sha256": "9de199e5036a4e21a57e519eb19e67fefda59106f38b3f85623117a29caa073a",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\01-introduction.tex",
+      "sha256": "a40b4c047babd8628b6e6651ebf5327d3647856b75fef5ba17e3ee5745dfb71d",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\02-related-work.tex",
+      "sha256": "14341b9507b4b25a59c705cfa2538199992220249e059df50fe47717d030f65f",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\03-method.tex",
+      "sha256": "d719fffe56f58cd83f9fd3691b26baccfa66c8321290287b548f96c09045a0fc",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\04-theory.tex",
+      "sha256": "c2b9ffec7af6aebb8286fab3c990ba466c7432d373e2f39e60ab03919b5e0f3a",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\05-experimental-setup.tex",
+      "sha256": "d5bbbe1e43faa694137e147a08e5c5cfd91f2b6754ee84cd15a02b19ca1b457c",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\06-results.tex",
+      "sha256": "74e01b96a0f2e4959fca65710d4434f5c49415e66b5c85c7419aac071b26314c",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\07-discussion.tex",
+      "sha256": "bb50aefb3e94562a92ad6e4b08da012df1c7a2641080554e1d3f1a50e428d393",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    },
+    {
+      "archive_path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025\\manuscript\\sections\\08-conclusion.tex",
+      "sha256": "80c4476687b4b6a9ac3743f3fb8626644dd17bc93955010717c955cfb64282d1",
+      "mode": "structure retained; content rewritten for actual method/evidence"
+    }
+  ],
+  "old_placeholder_tables_and_reviews_imported_as_evidence": false,
+  "historical_notes": "Literature notes remain in archive for reference; their claims need primary-source re-verification.",
+  "source_repository": "D:\\DASFAA-2027-MixIndex",
+  "source_commit": "1b873481e688acca7f6389fdc6590ec84b045a65"
+}

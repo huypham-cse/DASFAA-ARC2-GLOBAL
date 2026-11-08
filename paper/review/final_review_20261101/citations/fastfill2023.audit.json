@@ -1,0 +1,64 @@
+{
+  "key": "fastfill2023",
+  "existence": "VERIFIED",
+  "metadata": {
+    "authors": ["Florian Jaeckle", "Fartash Faghri", "Ali Farhadi", "Oncel Tuzel", "Hadi Pouransari"],
+    "title": "FastFill: Efficient Compatible Model Update",
+    "year": 2023,
+    "venue": "International Conference on Learning Representations",
+    "type": "inproceedings",
+    "doi": null,
+    "doi_status": "No conference DOI established from accessible primary sources; do not invent one.",
+    "arxiv_doi": "10.48550/arXiv.2303.04766",
+    "arxiv_id": "2303.04766",
+    "version": "arXiv v1, submitted 2023-03-08 18:03:51 UTC",
+    "pages": null,
+    "pages_status": "No proceedings page range supplied by the official repository; the arXiv PDF has 24 pages, which is document length rather than proceedings pagination.",
+    "matches_supplied_bib_entry": true
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/apple/ml-fct/main/README.md",
+      "verified_fact": "Live official authors' repository identifies FastFill as ICLR 2023 and provides matching author order, title, venue, year and inproceedings type in its citation block (lines 144-148).",
+      "access": "Live web open succeeded on 2026-11-01."
+    },
+    {
+      "url": "https://machinelearning.apple.com/research/fastfill",
+      "verified_fact": "Official Apple page confirms authors, title, March 2023 and ICLR; its abstract identifies feature alignment, partial backfilling and uncertainty estimation.",
+      "access": "Live web open succeeded on 2026-11-01."
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.04766",
+      "verified_fact": "Primary arXiv record confirms v1 submission date, author order, title, ICLR comment and arXiv-issued DOI.",
+      "access": "Live web open succeeded on 2026-11-01."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2303.04766",
+      "verified_fact": "Primary full text: introduction p. 2 explicitly describes initial deterioration under earlier losses plus random ordering (Figure 2a); pp. 5-6 describe predicted-uncertainty ordering and partial gallery replacement.",
+      "access": "Live web open succeeded on 2026-11-01; 24-page PDF."
+    },
+    {
+      "url": "https://openreview.net/forum?id=rnRiiHw8Vy",
+      "verified_fact": "No publication metadata inferred from this endpoint.",
+      "access": "Live request reached browser-verification challenge; inaccessible content was not used."
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 9,
+      "verdict": "SUPPORTS",
+      "reason": "Both clauses are supported. Visual alignment and uncertainty-ordered partial backfilling are explicit. The initial-decline claim is existential ('can'): p. 2 identifies FCT-Random in Figure 2a as a case where performance falls before improving. This does not assert that FastFill itself necessarily declines or that every replacement policy does.",
+      "checks": {
+        "visual_feature_alignment": "SUPPORTS",
+        "uncertainty_based_partial_backfilling": "SUPPORTS",
+        "initial_retrieval_decline_can_occur": "SUPPORTS"
+      }
+    }
+  ],
+  "verdict": "KEEP",
+  "fix": null,
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional"
+}

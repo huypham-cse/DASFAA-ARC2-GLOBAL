@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T15:15:36.932435+00:00",
+  "watcher_session": 72964,
+  "verified_files": 675,
+  "verified_bytes": 20485735823,
+  "complete": false,
+  "last_event": {
+    "status": "FILES_COPIED_VERIFIED",
+    "files": 675,
+    "bytes": 20485735823,
+    "utc": "20261030T151521_516700Z"
+  },
+  "scientific_run_untouched": true
+}

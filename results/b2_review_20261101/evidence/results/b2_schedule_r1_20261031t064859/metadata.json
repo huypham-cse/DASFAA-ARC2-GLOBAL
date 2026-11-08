@@ -1,0 +1,195 @@
+{
+  "status": "B2_SCORED_STOP_FOR_REVIEW",
+  "stage": "B2",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "paths": {
+    "schedule": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_schedule_r1_20261031t064859",
+    "assets": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_assets_r1_20261031t064859",
+    "encode_smoke": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_smoke_r1_20261031t064859",
+    "smoke": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859",
+    "encode_full": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859",
+    "full": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859"
+  },
+  "started_utc": "2026-10-31T06:49:00.199859+00:00",
+  "jobs": [
+    {
+      "stage": "acquire",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_inputs.py",
+        "--stage",
+        "acquire",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--code-commit",
+        "26feef1026bea610ec7f53d581c3c9064949d004",
+        "--out",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_assets_r1_20261031t064859"
+      ],
+      "started_utc": "2026-10-31T06:49:00.203352+00:00",
+      "pid": 252865,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T06:49:36.359798+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_assets_r1_20261031t064859/acquisition_manifest.json",
+      "receipt_sha256": "429ba825a3a13546806597a56a51fcc7b8033e9beb27ce17de9e19d11686bbbf"
+    },
+    {
+      "stage": "encode_smoke",
+      "argv": [
+        "/home/jovyan/arc2_b2_20261031/envs/encode/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_inputs.py",
+        "--stage",
+        "smoke",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--code-commit",
+        "26feef1026bea610ec7f53d581c3c9064949d004",
+        "--assets",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_assets_r1_20261031t064859",
+        "--out",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_smoke_r1_20261031t064859"
+      ],
+      "started_utc": "2026-10-31T06:49:36.362117+00:00",
+      "pid": 252972,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T06:49:53.525860+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_smoke_r1_20261031t064859/encoding_manifest.json",
+      "receipt_sha256": "ca408615e47bfd4604c62c8909d25da843a16e248c53de72952540daa112f4e6"
+    },
+    {
+      "stage": "smoke",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_stage.py",
+        "--stage",
+        "smoke",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--code-commit",
+        "26feef1026bea610ec7f53d581c3c9064949d004",
+        "--output",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859"
+      ],
+      "started_utc": "2026-10-31T06:49:53.551094+00:00",
+      "pid": 253064,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T06:52:40.657129+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/metadata.json",
+      "receipt_sha256": "1f628d914a76c37091f2591268cc5109e6a578cd78020b541309df43a6f09a5f"
+    },
+    {
+      "stage": "verify_smoke",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_verify.py",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--run",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859",
+        "--smoke"
+      ],
+      "started_utc": "2026-10-31T06:52:40.663143+00:00",
+      "pid": 253619,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T06:52:44.003917+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/verification/verification_seal.json",
+      "receipt_sha256": "47724f6bab3ebd646e900f3b48cb969ff2b6e10cdc008afe03df3235c85a2c4a"
+    },
+    {
+      "stage": "encode_full",
+      "argv": [
+        "/home/jovyan/arc2_b2_20261031/envs/encode/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_inputs.py",
+        "--stage",
+        "encode",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--code-commit",
+        "26feef1026bea610ec7f53d581c3c9064949d004",
+        "--assets",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_assets_r1_20261031t064859",
+        "--out",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859"
+      ],
+      "started_utc": "2026-10-31T06:52:44.005899+00:00",
+      "pid": 253787,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T07:28:48.361357+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/encoding_manifest.json",
+      "receipt_sha256": "cae8c9d42851b4df7bca0876771701b302326952283d42e427a916693758f616"
+    },
+    {
+      "stage": "full",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_stage.py",
+        "--stage",
+        "full",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--code-commit",
+        "26feef1026bea610ec7f53d581c3c9064949d004",
+        "--output",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859",
+        "--encoding",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859",
+        "--smoke",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859"
+      ],
+      "started_utc": "2026-10-31T07:28:48.362584+00:00",
+      "pid": 261763,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T19:56:10.556993+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/metadata.json",
+      "receipt_sha256": "8af0d4cc27dfa6caa5258182c2a1cd1c7a07bae7a228c995cae82d0b4bd2f554"
+    },
+    {
+      "stage": "verify",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_verify.py",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--run",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859"
+      ],
+      "started_utc": "2026-10-31T19:56:10.558884+00:00",
+      "pid": 408153,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T20:11:42.906494+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/verification/verification_seal.json",
+      "receipt_sha256": "78e67ab2aac47d0590db54ffd20170c30f8e7a5c96153bf17a1fee1e5322c968"
+    },
+    {
+      "stage": "score",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_score.py",
+        "--lock",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+        "--run",
+        "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859"
+      ],
+      "started_utc": "2026-10-31T20:11:42.910508+00:00",
+      "pid": 412887,
+      "returncode": 0,
+      "ended_utc": "2026-10-31T20:12:54.171509+00:00",
+      "receipt_path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/scoring/completed.json",
+      "receipt_sha256": "023c9a5b69dd0791b241e1c53ea353d7bdb248b3e69e7183b665332b402f3ffb"
+    }
+  ],
+  "manuscript_updates": false,
+  "next_scientific_phase_auto_launch": false,
+  "current_stage": "STOP",
+  "next_action": "Retrieve/verify results, figures and ARIS review; leave manuscript untouched; no systems",
+  "ended_utc": "2026-10-31T20:12:54.173995+00:00"
+}

@@ -1,0 +1,9 @@
+@misc{ricci2026sphericalinterpolationbackwardcompatiblemultimodal,
+      title={Spherical Interpolation for Backward-Compatible Multimodal Representations}, 
+      author={Simone Ricci and Niccolò Biondi and Federico Pernici},
+      year={2026},
+      eprint={2609.39836},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.39836}, 
+}

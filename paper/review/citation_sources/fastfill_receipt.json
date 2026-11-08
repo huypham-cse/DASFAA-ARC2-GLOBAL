@@ -1,0 +1,44 @@
+[
+  {
+    "file": "fastfill_arxiv_bib.txt",
+    "url": "https://arxiv.org/bibtex/2303.04766",
+    "status": 200,
+    "sha256": "45460ee5f536685cb1d85b13abeb335e23399a7a76cc682f087d415559506204",
+    "bytes": 365
+  },
+  {
+    "file": "fastfill_author_page.txt",
+    "url": "https://machinelearning.apple.com/research/fastfill",
+    "status": 200,
+    "sha256": "23ac60d3353c56200e1402c2af8a4922337aab70c13bbbcdfb6233260133b919",
+    "bytes": 26807
+  },
+  {
+    "file": "fastfill_official_readme.txt",
+    "url": "https://raw.githubusercontent.com/apple/ml-fct/main/README.md",
+    "status": 200,
+    "sha256": "5565d98d6ba60dd41e9d547d546a52302cd5a7f9ac2d51eaf554e21b8c6e8620",
+    "bytes": 8779
+  },
+  {
+    "file": "fastfill_openreview_api.txt",
+    "url": "https://api.openreview.net/notes?id=rnRiiHw8Vy",
+    "status": 403,
+    "sha256": "151f5d032066b268a2eeb7844d3fdaabf62fba5b0e489d4d7afe7152cc4a819d",
+    "bytes": 249
+  },
+  {
+    "file": "fastfill_openreview_api2.txt",
+    "url": "https://api2.openreview.net/notes?id=rnRiiHw8Vy",
+    "status": 403,
+    "sha256": "35f5b61960a2bd093c3d394ec74cbd940e7e577fea5815006de64edaab2c55e6",
+    "bytes": 271
+  },
+  {
+    "file": "fastfill_primary_pdf.txt",
+    "url": "https://openreview.net/pdf/8d20dc462785f41d1a42a73d5f251100169ec180.pdf",
+    "status": 403,
+    "sha256": "a2d811e0d24af89d9bd4b19cc9e8fbc474c67ef3827648550a6560eca2a5e332",
+    "bytes": 12692
+  }
+]

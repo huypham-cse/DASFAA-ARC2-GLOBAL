@@ -1,0 +1,312 @@
+{
+  "review_id": "DASFAA_REVIEW_R2_20261101",
+  "date": "2026-11-01",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "rubric_notice": "Internal senior-reviewer simulation only; not an official DASFAA rubric or acceptance probability.",
+  "holistic_score": 6,
+  "recommendation": "Weak accept",
+  "confidence": 4,
+  "confidence_scale": "1-5",
+  "score_scale": "1-10; 6 weak accept, 7 accept",
+  "dimension_scores": {
+    "novelty": {
+      "score": 5,
+      "rationale": "A specific, plausible refinement of established alignment/regression ingredients; the exact norm-scaled tangent ridge composition is distinct, while affine inference and partial backfill are established."
+    },
+    "technical": {
+      "score": 7,
+      "rationale": "The formulation, gradient, current-map prior, rectangular alignment and common-scale reasoning are correct; the finite method is empirical rather than a convergence theorem."
+    },
+    "experimental": {
+      "score": 7,
+      "rationale": "Strong matched development panel, mechanism controls, all-paid comparison and prospectively sealed test with paired multiplicity-aware intervals; independent benefit over the closest geometric baseline remains unestablished."
+    },
+    "practical": {
+      "score": 6,
+      "rationale": "Concrete destination-query/single-gallery operating scenario and very small adapter; the gains are encoder dependent and parameter storage is the measured structural efficiency quantity."
+    },
+    "clarity": {
+      "score": 8,
+      "rationale": "Coherent result-led narrative, precise equations, readable tables and four useful figures, with balanced complete comparisons."
+    },
+    "reproducibility": {
+      "score": 6,
+      "rationale": "Method, budgets, seeds, revisions, retrieval rules and statistical units are unusually clear; artifact access and some baseline configuration details are not discoverable from the paper itself."
+    },
+    "venuefit": {
+      "score": 8,
+      "rationale": "Relevant to vector data management, migration budgets and mixed-index quality; a representation/evaluation paper with practical database relevance rather than a serving-systems contribution."
+    }
+  },
+  "contribution": "Exactly two affine ridge fits to raw-norm-scaled negative cosine-gradient targets, initialized by centered rectangular Procrustes, yield one normalized affine document adapter for anchor-inclusive staged destination-space migration.",
+  "verdict": "Technically sound and useful incremental work with strong development evidence and a well-defined deployment representation. The independent collection confirms advantages over selected evaluated neural/regression configurations, not over Procrustes or LA2M. This bounded contribution clears a weak-accept threshold but lacks the novelty and closest-baseline confirmation for a confident accept.",
+  "strengths": [
+    "Exact compact algorithm and three correct central mathematical claims.",
+    "Matched five-baseline panel, same anchors and paid replacement rows, full native references, graded relevance retrieval and transparent multiplicity-aware query intervals.",
+    "Development gain over Procrustes of 0.0243 across the macro and 23/24 positive condition means; second-step gain of 0.0069.",
+    "Prospective E5 gains against evaluated Converter/ridge at every budget, plus informative encoder-dependent all-paid and mixed-gallery behavior.",
+    "Clean 15-page PDF with all four figures and negative/competitive outcomes retained."
+  ],
+  "limitations": [
+    "Independent TREC-COVID results have higher Procrustes point means in all six cells and unresolved Procrustes/LA2M adjusted intervals.",
+    "Novelty is incremental; the experiments do not isolate tangent targeting from a retained-current-map prior in the affine-ridge contrast.",
+    "Only two 384-to-768 migrations and one independent collection; three Nano development collections have 50 queries each.",
+    "HMoE is cited but untested; comparison is to declared configurations rather than every recent method or original-paper reproduction.",
+    "Parameter count supports storage and affine inference claims; no measured end-to-end encoding/serving efficiency result."
+  ],
+  "mathematical_checks": [
+    {
+      "claim": "Cosine gradient",
+      "verdict": "correct",
+      "reasoning": "For u=z/r and ||y||=1, D N(z)=(I-u^T u)/r. Thus grad_z[1-y N(z)^T]=-[y-(uy^T)u]/r and T=r[y-(uy^T)u]=-r^2 grad. This is a scaled negative gradient target, not the gradient itself."
+    },
+    {
+      "claim": "Current-map prior",
+      "verdict": "correct",
+      "reasoning": "Substituting Delta=C-B_t in ||Xtilde Delta-T||_F^2+lambda||Delta||_F^2 gives Eq. (8) exactly. The prior center is the current map at each update, not a fixed B0 or a zero-centered fit onto Y."
+    },
+    {
+      "claim": "Positive common-scale equivariance",
+      "verdict": "correct under the stated conditions",
+      "reasoning": "For c>0, z(cB)=cz, r(cB)=cr and u(cB)=u, so T(cB)=cT(B). The fixed linear ridge operator yields Delta(cB)=cDelta(B); induction gives scaled iterates and unchanged normalized predictions. It is not row-wise scale invariance or a finite-step improvement guarantee."
+    },
+    {
+      "claim": "Rectangular Procrustes and affine expansion",
+      "verdict": "correct for evaluated ds<=dt",
+      "reasoning": "Thin SVD of Yc^T Xc has U of shape dt x ds and V of shape ds x ds. W=UV^T has orthonormal columns; W^T maps source rows into destination coordinates. The bias mu_t-mu_s W^T gives the stated centered raw prediction."
+    },
+    {
+      "claim": "Ridge solve, storage and costs",
+      "verdict": "consistent",
+      "reasoning": "lambda>0 makes the dual/primal ridge systems positive definite; both are equivalent in exact arithmetic. 385*768=295680 float32 coefficients, 1182720 bytes, about 1.128 MiB; 33927168/295680 is about 114.7. The displayed complexity expressions are consistent."
+    },
+    {
+      "claim": "Tangent fitted corrections and descent",
+      "verdict": "appropriately bounded",
+      "reasoning": "The targets are tangent but shared ridge-fitted row corrections need not be. The manuscript correctly makes no monotone finite-step cosine/retrieval improvement claim."
+    }
+  ],
+  "visual_review": {
+    "pdf_pages": 15,
+    "all_pages_inspected": true,
+    "render_tool": "MiKTeX pdftoppm",
+    "render_dpi": 90,
+    "additional_detail_pages_150dpi": [
+      3,
+      11
+    ],
+    "figures": [
+      {
+        "number": 1,
+        "page": 3,
+        "assessment": "Readable and informative native-style mechanism with illustrative accounting and explicit toy-data caption; small pale labels can be strengthened."
+      },
+      {
+        "number": 2,
+        "page": 10,
+        "assessment": "Clear two-migration development curves with complete methods/native references; legend and markers distinguish methods."
+      },
+      {
+        "number": 3,
+        "page": 11,
+        "assessment": "Readable five-contrast interval plot including zero and negative controls; ridge scale compresses small effects somewhat but their labels remain clear."
+      },
+      {
+        "number": 4,
+        "page": 12,
+        "assessment": "Clear prospective curves with complete panel and native references; different vertical ranges are stated in caption."
+      }
+    ],
+    "layout_assessment": "No clipping, broken math, unreadable tables, missing figures, overlapping elements or anonymity defect observed. Some floats precede their section text, which is acceptable in the present readable layout."
+  },
+  "required_text_only_fixes": [
+    {
+      "rank": 1,
+      "severity": "major",
+      "location": "Sections 1, 2 and 3.3",
+      "issue": "The exact algorithmic novelty can be stated more sharply than 'directional refinement'.",
+      "action": "Add a compact interpretation after Eq. (8): each step fits norm-scaled cosine descent targets under an affine correction penalty centered on the current map; the new object is this finite two-step computation, not Procrustes, affine folding, or mixed galleries. Explain that two is the selected fixed procedure, with the measured incremental gain in Section 5.2, rather than a universally optimal iteration count.",
+      "requires_new_experiment": false
+    },
+    {
+      "rank": 2,
+      "severity": "major",
+      "location": "Section 2, first paragraph",
+      "issue": "The recent HMoE paper is cited but its relationship to the evaluated panel remains implicit.",
+      "action": "Add two sentences contrasting its localized/expert routing and mixing/OOD objective with the single global affine refinement here, and state that HMoE is contextual related work rather than an evaluated baseline. Keep the paper's existing 'five evaluated configurations' language. Do not imply a state-of-the-art comparison that was not run.",
+      "requires_new_experiment": false
+    },
+    {
+      "rank": 3,
+      "severity": "major",
+      "location": "End of Section 4 or a short artifact footnote",
+      "issue": "The paper says revisions and input hashes are pinned but does not tell a reader where those artifacts/configurations can be obtained.",
+      "action": "Add a concise anonymous artifact-availability statement pointing to the existing release if it is available for review, including the configuration/manifest entry point. Identify the baseline optimizer, learning rate, layer widths/loss weights, validation split and solver backend in that existing configuration rather than expanding the main paper into a protocol log. If unavailable, accurately state availability instead of suggesting the paper alone specifies these settings.",
+      "requires_new_experiment": false
+    },
+    {
+      "rank": 4,
+      "severity": "minor",
+      "location": "Section 5.4",
+      "issue": "'the two-pair comparison' can be read as two training pairs rather than two encoder migrations.",
+      "action": "Replace it with 'the two-migration comparison'.",
+      "requires_new_experiment": false
+    },
+    {
+      "rank": 5,
+      "severity": "minor",
+      "location": "Section 4 bootstrap paragraph",
+      "issue": "Pairing across repeated conditions is implied but not fully explicit.",
+      "action": "Add one sentence saying whether the same sampled query indices are reused across methods, budgets and migrations for each collection, matching the locked analysis. This makes the macro interval construction independently interpretable without changing the statistics.",
+      "requires_new_experiment": false
+    },
+    {
+      "rank": 6,
+      "severity": "minor",
+      "location": "Section 3.3 and Figure 1",
+      "issue": "Normalization notation is used before an explicit mathematical definition, and the smallest pale annotations in the mechanism are less legible than the rest of the paper.",
+      "action": "Define N(z)=z/||z|| for nonzero z at first use. If revising figure text, darken the pale annotations or shorten them; preserve the working example, accounting and all four figures.",
+      "requires_new_experiment": false
+    }
+  ],
+  "critical_fixes": [],
+  "optional_new_experiments": [
+    {
+      "priority": 1,
+      "proposal": "On a newly locked independent setting, compare the frozen procedure with the strongest geometric comparator and, where feasible, HMoE.",
+      "purpose": "Test incremental independent value over the closest geometric alternative and modern coverage.",
+      "required_for_current_writing_edits": false
+    },
+    {
+      "priority": 2,
+      "proposal": "A separately named/protocolled control retaining the same initialization and correction penalty but using a non-tangent target.",
+      "purpose": "Separate directional targeting from the current-map prior without changing the frozen method.",
+      "required_for_current_writing_edits": false
+    }
+  ],
+  "scope": {
+    "inputs_read": [
+      {
+        "path": "D:\\DASFAA-2027-paper\\AGENTS.md",
+        "bytes": 17606,
+        "sha256": "300cedb59f460fa7fec3472d1fbbfee87987c197d369addc3e854d18381e96ee"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\main.tex",
+        "bytes": 1078,
+        "sha256": "f8278687f7db8ce72b6142713f3c10d56b89ae29cb8032386baa84dae151b98f"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\abstract.tex",
+        "bytes": 1309,
+        "sha256": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\conclusion.tex",
+        "bytes": 614,
+        "sha256": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\discussion.tex",
+        "bytes": 2167,
+        "sha256": "834323c766a49b3b3874b660b9e6fdad3b660e8b5d93a5afeeae0c22fea01240"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\experimental-setup.tex",
+        "bytes": 5698,
+        "sha256": "c6dfc7e773e6f448118013e5f11ec35eed6f849f7fb475bb1d690b1e07220828"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\introduction.tex",
+        "bytes": 3978,
+        "sha256": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\method.tex",
+        "bytes": 10129,
+        "sha256": "c4babc62dd94e8c6e2ccd6b921ea9d82db762ddf73df5c6efe71a3f022ce0e37"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\related-work.tex",
+        "bytes": 4381,
+        "sha256": "bb47d22e21547ef1e96f4eb3634cda7039d2d6078082bae302d6507380a2b10f"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\sections\\results.tex",
+        "bytes": 6518,
+        "sha256": "a8d76c0bc6ffcd14af3d461baf406837e3cd34a371585cd1e9754c28a64bafd3"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\generated\\ablation.tex",
+        "bytes": 836,
+        "sha256": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\generated\\allpaid.tex",
+        "bytes": 1285,
+        "sha256": "8df4a96cb9a4e5c9bf7c2e501f0bcd3009c38183d874417d013b956fcec8a561"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\generated\\dev_macro.tex",
+        "bytes": 964,
+        "sha256": "163f3ff6de42e4d0e60f3014e04864b4c48ebd08766995134bde4c22f84e2878"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\generated\\trec_family.tex",
+        "bytes": 655,
+        "sha256": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\generated\\trec_means.tex",
+        "bytes": 1465,
+        "sha256": "2d6fe4761d377eb66da068072310dcfd893e67fdcbf43b4186160182b8fc0c19"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\references.bib",
+        "bytes": 6442,
+        "sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+      },
+      {
+        "path": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_reviewed.pdf",
+        "bytes": 812677,
+        "sha256": "de820e58315443262fda1bea48fea73206e5d8fc04c15b808c7c1bb3be4465ed"
+      }
+    ],
+    "excluded": "No paper/review files, past reviews/scores, raw scientific artifacts, code or experiment outputs were read. AGENTS.md was read for scope rules only; its embedded prior opinions/status claims were not used as evidence.",
+    "source_material": "main.tex; all 8 section .tex files; all 5 generated .tex files including the two not inserted into main.tex; references.bib; actual reviewed PDF.",
+    "no_mutations": "Manuscript, figures, bibliography, generated evidence and PDF unchanged. Only this review's Markdown/JSON outputs and temporary rendered PNGs were created.",
+    "no_agents_or_experiments": true,
+    "evidence_limit": "This is a paper review and mathematical consistency check, not an independent audit of raw results, leakage controls, implementation identity, hash provenance, or empirical significance reconstruction. Author-reported tables/intervals are evaluated as presented. Source-to-PDF build identity was not independently rebuilt.",
+    "citation_limit": "Selective primary-source positioning checks, not an exhaustive novelty search or full verification of all 18 references."
+  },
+  "external_primary_sources": [
+    {
+      "url": "https://aclanthology.org/2025.acl-long.1237/",
+      "used_for": "Bibliographic identity"
+    },
+    {
+      "url": "https://aclanthology.org/2025.acl-long.1237.pdf",
+      "used_for": "Document-side conversion, global/local losses and original retrieval-based validation"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "used_for": "HMoE contribution and OOD/mixing/chaining scope; full PDF fetch unsupported"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.39836",
+      "used_for": "Query-side spherical-interpolation positioning"
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.02348",
+      "used_for": "Unpaired linear pseudo-matching/refinement positioning"
+    }
+  ],
+  "external_fetch_limitations": [
+    "ACM DOI 10.1145/3769803 was inaccessible through web tool.",
+    "HMoE raw GitHub PDF content type was unsupported.",
+    "One attempted OpenReview FastFill URL was inaccessible and was not used as evidence."
+  ],
+  "external_claims_are_selective": true
+}
+

@@ -1,0 +1,14 @@
+{
+  "stage": "B1-P",
+  "started_utc": "2026-10-26T21:27:16.903828+00:00",
+  "status": "VALIDATING_BEFORE_SCORER_LABEL_ACCESS",
+  "lock_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/configs/b1p_lock.json",
+  "lock_sha256": "0224200454b0deb8f2176e509d8bd99da0f59c7ae7b12a2488ec6eadad7308ad",
+  "scorer_sha256": "9933bc0e6405921a0c2a106392b519adfcf7042c59442c34e6049e72346fd17f",
+  "scorer_code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+  "numpy": "2.4.6",
+  "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+  "exposure": "Previously inspected FiQA DEV; not independent confirmation",
+  "failures": []
+}

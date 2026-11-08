@@ -1,0 +1,10 @@
+# Preserve the exact bytes referenced by manuscript/source verification receipts.
+* -text
+# Preserve exact generated/reviewer/primary-source bytes and their SHA receipts.
+*.html whitespace=cr-at-eol,-blank-at-eol
+figures/*.svg whitespace=cr-at-eol,-blank-at-eol
+review/final_review_20261101/*.json whitespace=cr-at-eol,-blank-at-eof
+review/final_review_20261101/*.md whitespace=cr-at-eol,-blank-at-eof
+review/final_review_20261101/citations/*.md whitespace=cr-at-eol,-blank-at-eof
+review/final_review_20261101/citations/*.primary.txt whitespace=cr-at-eol,-blank-at-eol
+review/aciids_style_revision_20261101/claim_audit_work.py whitespace=cr-at-eol,-blank-at-eof

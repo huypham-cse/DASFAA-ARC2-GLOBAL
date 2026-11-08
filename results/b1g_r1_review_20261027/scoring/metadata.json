@@ -1,0 +1,51 @@
+{
+  "status": "B1G_DEV_SCORED",
+  "code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+  "lock_sha256": "ea12eb90173d9b1f9f93883f1efa157946c67a91169d3c6a57f35eef7c316c53",
+  "started_unix": 1793107853.2615879,
+  "failures": [],
+  "dev_qrel_access_started": true,
+  "new_fits": 0,
+  "new_physical_document_encodes": 0,
+  "artificial_time_or_memory_caps": null,
+  "runtime": {
+    "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+    "executable": "/root/arc2_p3h_20261020/venv/bin/python",
+    "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+    "hostname": "nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-bqjpp",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.5.1",
+    "environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4"
+    },
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+        "version": "0.3.31.188.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ]
+  },
+  "completed_sha256": "9b5de52e634bc59a722bc6de7dfedee52efcfbc8b3bf5b26e1f81fa517f41a0a",
+  "ended_unix": 1793107878.8659449,
+  "wall_seconds": 25.6049313955009,
+  "peak_process_tree_rss_bytes": 949882880
+}

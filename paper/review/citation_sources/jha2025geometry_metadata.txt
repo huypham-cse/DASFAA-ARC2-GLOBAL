@@ -1,0 +1,9 @@
+@misc{jha2026harnessinguniversalgeometryembeddings,
+      title={Harnessing the Universal Geometry of Embeddings}, 
+      author={Rishi Jha and Collin Zhang and Vitaly Shmatikov and John X. Morris},
+      year={2026},
+      eprint={2505.12540},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.12540}, 
+}

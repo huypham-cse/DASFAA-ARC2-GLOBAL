@@ -1,0 +1,13 @@
+{
+  "status": "TRANSFER_VERIFIED",
+  "source_host": "103.73.232.225",
+  "destination_host": "103.73.232.201",
+  "manifest_sha256": "f64584f096cc89d940880be8e11f7e19ab4640cca1cdf9a7e3fb71fbfa354384",
+  "source_exit": 0,
+  "destination_exit": 0,
+  "destination_output": "{\"status\": \"TRANSFER_VERIFIED\", \"files\": 453, \"bytes\": 1947593157, \"finished_unix\": 1793161524.4548469, \"manifest_sha256\": \"f64584f096cc89d940880be8e11f7e19ab4640cca1cdf9a7e3fb71fbfa354384\"}\n",
+  "source_error": "",
+  "destination_error": "",
+  "stream_bytes": 1948426240,
+  "elapsed_seconds": 3637.758598804474
+}

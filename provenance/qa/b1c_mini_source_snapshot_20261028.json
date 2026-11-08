@@ -1,0 +1,9 @@
+{
+  "status": "PASS_MINI_SNAPSHOT_BEFORE_SMOKE",
+  "origin_project_commit": "74c6a75f8574aaee01fe270aa3e174ef1783e2ce",
+  "deployment_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+  "sources_verified": 35,
+  "bundle": "D:\\ARC2-server-backup-20261028\\b1c_scientific_source_mini.bundle",
+  "bundle_sha256": "872497074d4e62f857d4a81aec6dd052c59bcfd19a7346dc0ffa1d8a5489c178",
+  "bundle_bytes": 398758
+}

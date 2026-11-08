@@ -1,0 +1,8 @@
+{
+  "status": "COMPACT_SMOKE_BUNDLE_READY",
+  "bytes": 80358,
+  "sha256": "a3520a84824f3487cc72540dd93017fcf4fac7a7b739d168aaba650e77081c98",
+  "remote": "/root/arc2_global_paper_20261025/b1p_r5_smoke_compact_20261026.tar.gz",
+  "manifested_files": 72,
+  "utc": "2026-10-26T13:58:25.055322+00:00"
+}

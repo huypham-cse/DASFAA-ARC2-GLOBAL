@@ -1,0 +1,21 @@
+{
+  "status": "EXITED",
+  "started_utc": "2026-10-30T07:03:17.604768+00:00",
+  "request_sha256": "e16cfc04b8f3f243abd4239eab1ad0f6fd546e79e09b6a541c95bd2ff8228b09",
+  "argv": [
+    "/network-volume/arc2_recovery_20261030/envs/gpu/bin/python",
+    "-u",
+    "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1p_neural_worker.py",
+    "--request",
+    "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/request.json"
+  ],
+  "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+  "pid": 11444,
+  "returncode": 0,
+  "signal_number": null,
+  "signal_name": null,
+  "ended_utc": "2026-10-30T07:03:24.014950+00:00",
+  "stdout_sha256": "a3acd5233331b726dbb20d77a27e0e7558b25e75b541506f7ab486393bc8f31b",
+  "stderr_sha256": "b5085fb55ffa3f50caaa93e8cec369a693da725768eb5f94eb812a9e9c6e7398",
+  "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n"
+}

@@ -1,0 +1,109 @@
+{
+  "checked_at_utc": "2026-11-01T14:24:57.146366+00:00",
+  "verification_kind": "deterministic parent QA, not independent semantic review",
+  "status": "PASS",
+  "pdf": "ARC2_Global_DASFAA2027_final.pdf",
+  "pages": 15,
+  "abstract_words": 155,
+  "citations": 18,
+  "bibliography_entries": 18,
+  "unresolved_citations_or_references": 0,
+  "overfull_hboxes": 0,
+  "known_identity_strings_in_pdf": [],
+  "anonymous_pdf_author": "Anonymous Author(s)",
+  "trec_positive_markers": 11,
+  "displayed_E5_Converter_delta_range": [
+    0.1999540966512042,
+    0.25723359077319435
+  ],
+  "coefficient_count": 295680,
+  "converter_parameter_count": 33927168,
+  "parameter_ratio": 114.74285714285715,
+  "coefficient_MiB": 1.1279296875,
+  "scientific_tracked_changes": [],
+  "paper_input_hashes": {
+    "figures/dev_ablation.pdf": "6bdc68841a3b1b5f4628ec03f1eb09cb84d0f38607ab3cf1e3713a3e5b474250",
+    "figures/dev_quality.pdf": "cf8ea9c266e5350e8aaee39c4ec0db66eb278da4613c5cb679f8895455776d63",
+    "figures/mechanism.pdf": "7a311bc8dd166bce96db914c5f94ad55a53fef32fc83953b2ba33ae6c2a49360",
+    "figures/mechanism.tex": "d1aa2957624bf0ed726303973d565286b5e31b3938d439278885662cfc0bdc60",
+    "figures/trec_quality.pdf": "03ccacf20279dedf50ffe6cadbfd1174e8dddba253c2ffbcb9f48c4ce84de5bc",
+    "generated/ablation.tex": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e",
+    "generated/allpaid.tex": "8df4a96cb9a4e5c9bf7c2e501f0bcd3009c38183d874417d013b956fcec8a561",
+    "generated/dev_macro.tex": "163f3ff6de42e4d0e60f3014e04864b4c48ebd08766995134bde4c22f84e2878",
+    "generated/trec_family.tex": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e",
+    "generated/trec_means.tex": "2d6fe4761d377eb66da068072310dcfd893e67fdcbf43b4186160182b8fc0c19",
+    "main.tex": "7585239d0d56d354eb6878ec43286e3c5d236aabf6400c92fc4f8f60c125028a",
+    "references.bib": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+    "sections/abstract.tex": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4",
+    "sections/conclusion.tex": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7",
+    "sections/discussion.tex": "1377ab22f162082ec6d781a3ae507a0136cb7cb29755b38eec64d45895cffe16",
+    "sections/experimental-setup.tex": "1bf27966f8891811c7e0c3054142b995b5396ec37aa4fc1ffd6435a968d45fb3",
+    "sections/introduction.tex": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f",
+    "sections/method.tex": "ceb05f7d9303ea5560b646fe9b25f81f7a6b772557fb7b747ae89190d98530fc",
+    "sections/related-work.tex": "c2908b8289c07214f10cf548acbd4436da970fdd0a487b62669b115ab492167b",
+    "sections/results.tex": "e186bd66a1d63dd5ac6c6516337589591aaac68a86cbd756933f785b58d40480"
+  },
+  "pdf_sha256": "dead152e05d6d76e8a92d05fe524fe4fdef28b170191fbae8869b3e01d3c1d9f",
+  "fresh_final_claim_audit": {
+    "current_snapshot": {
+      "report": "review/final_review_20261101/FINAL_POLISHED_AUDIT.json",
+      "verdict": "PASS",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional",
+      "manuscript_inputs_checked": 33,
+      "changed_manuscript_inputs": [],
+      "matches_current_manuscript": true
+    },
+    "history": [
+      {
+        "report": "review/final_review_20261101/RAW_AUDIT.json",
+        "verdict": "PASS",
+        "review_independence": "same-family",
+        "acceptance_status": "provisional",
+        "manuscript_inputs_checked": 24,
+        "changed_manuscript_inputs": [
+          "main.tex",
+          "sections/abstract.tex",
+          "sections/discussion.tex",
+          "sections/experimental-setup.tex",
+          "sections/method.tex",
+          "sections/related-work.tex",
+          "sections/results.tex",
+          "figures/mechanism.tex",
+          "figures/mechanism.png",
+          "figures/mechanism.pdf"
+        ],
+        "matches_current_manuscript": false
+      },
+      {
+        "report": "review/final_review_20261101/RAW_AUDIT_R2.json",
+        "verdict": "PASS",
+        "review_independence": "same-family",
+        "acceptance_status": "provisional",
+        "manuscript_inputs_checked": 29,
+        "changed_manuscript_inputs": [
+          "main.tex",
+          "sections/discussion.tex",
+          "sections/experimental-setup.tex",
+          "sections/method.tex",
+          "sections/related-work.tex",
+          "sections/results.tex",
+          "figures/mechanism.pdf",
+          "figures/mechanism.png",
+          "figures/mechanism.svg",
+          "figures/mechanism.tex"
+        ],
+        "matches_current_manuscript": false
+      },
+      {
+        "report": "review/final_review_20261101/FINAL_POLISHED_AUDIT.json",
+        "verdict": "PASS",
+        "review_independence": "same-family",
+        "acceptance_status": "provisional",
+        "manuscript_inputs_checked": 33,
+        "changed_manuscript_inputs": [],
+        "matches_current_manuscript": true
+      }
+    ]
+  }
+}

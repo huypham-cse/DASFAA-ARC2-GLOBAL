@@ -1,0 +1,22 @@
+{
+  "manuscript/Makefile": "1291a7665a968e16afdadf64cbde97e453be01b31c98d3cce5c0d123d7473cc5",
+  "manuscript/README.md": "1cc4249337ff9c361155e7e3004544514724a584916dcbd80d6696be8ba2784b",
+  "manuscript/generated/dev_interpretation.tex": "ec9fcd9232206e2844f512f5d90e0cb5295eda255fcddc1a2b7d1a156f9c0a8f",
+  "manuscript/generated/tab_fiqa.tex": "4bb758d62473c4f7636804b8479422e41425bfd1c88a00142c31fc8d1ce284f6",
+  "manuscript/generated/tab_recall.tex": "f2ad8caf3d8e3f0e443f39933698392dca785cbfe7703bdb4d1c4289466e708b",
+  "manuscript/generated/tab_references.tex": "cca2edba79b4971ab294dc9940b743b06dfc7e00278a13e9c8a639cdef16a269",
+  "manuscript/llncs.cls": "e9894c92191fcd195eef3120a36d2f75b52030eadcbdc3ce1463179746526e6a",
+  "manuscript/main.pdf": "8279568f86dc26d121bb5fd0fb059b74efa122708f373295b6d024f5558c6d10",
+  "manuscript/main.tex": "297ec60051f0e5340aa456da33d9108b6f3cb4126a3192a150d893b3653975b2",
+  "manuscript/references.bib": "d3e75a6c691dbfd57a2bfab049943ba99568610454f472889796400c92f8bf6b",
+  "manuscript/sections/00-abstract.tex": "7932d5081a88bad4bfbd622b1d6ac83129f7732c7c67a7ff71add693e51be46a",
+  "manuscript/sections/01-introduction.tex": "f8f81a1249dcced82d3047f80864faa39cf0ff7b4570741f8a1cf55a96f8aa3c",
+  "manuscript/sections/02-related-work.tex": "9b9841f369304b931fd88a101823c4e315b4895857f790d129f683136c5ed62b",
+  "manuscript/sections/03-method.tex": "6b8dadd8ab473097cae9a55630393f49dd7a3e23f0b367965b703a516ffc880d",
+  "manuscript/sections/04-theory.tex": "04e81ea48587946244662517a0a49ce08bfa94ed153dadf49f59ba922e6a3923",
+  "manuscript/sections/05-experimental-setup.tex": "a26ce6677ef38515d86426793df83333c3218b966fda3c177ddd61d76f6b1a43",
+  "manuscript/sections/06-results.tex": "b95000bf32feef5c2b62097d305661758f57c7f47b4f83665209d236d643c52c",
+  "manuscript/sections/07-discussion.tex": "12d795439676f8cb21cf100ded0b3c36472793265891a46989bd718fcfabe703",
+  "manuscript/sections/08-conclusion.tex": "2f891fac132578192337cac8f1fdba4c6d691df1b2f6d684a55e7325ffbcf7bb",
+  "manuscript/splncs04.bst": "f36c3a17e5304a692706359aafa9de709395a085e579eb47c027095aeaa35174"
+}

@@ -1,0 +1,424 @@
+{
+  "stage": "B1-P0 synthetic only",
+  "backend_id": "arc2_global_tangent2_primal_float64_r1",
+  "seeds": [
+    17,
+    29,
+    41,
+    53,
+    67
+  ],
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "source_sha256_canonical_lf": {
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1m_stage.py": "23026d944f4c94863a7d659ff5849b26dfb666b42a3004747c19b1878a9cef2c",
+    "ops/b1m_encode.py": "0cb7f97b4aadf742e533f45ca3d32a4fed48021cb7bbecb71eeda6db23826f7f",
+    "ops/b1m_score.py": "f41f869a29c6fec816699452aa70bad21c8f417c3ae1657c3da833acfc9c520c",
+    "ops/b1p0_worker.py": "2b2c3d79438e9cf8d26e24b145258bcca2a79b775088ce0ffa8946c524fe617d",
+    "ops/b1mp0_campaign.py": "7ff7b5e7b8f96518fc45eba929c462a75d0292393c4116f6c862c214fb88bd41",
+    "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+    "configs/baselines.json": "1bd95fc1dfdea6fd459c825f85c44aeb86d7c1a05cbdb56a5a15f8f9a9a3d4a3",
+    "protocols/B1M_B1P0_DEVELOPMENT_20261026.md": "6a78cbd26a9075e32b14985705577e3868f4a2f22fc6b9e71325e926596ee196"
+  },
+  "tolerances": {
+    "coefficient_maxabs": 1e-06,
+    "normalized_proxy_maxabs": 1e-06,
+    "float64_atol": 1e-09,
+    "float64_rtol": 1e-09,
+    "score_maxabs": 1e-06,
+    "unexplained_rank_discrepancies": 0
+  },
+  "stages": {
+    "smoke": [
+      {
+        "name": "random_24x40_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_40x24_n64_seed17",
+        "seed": 17,
+        "source_dim": 40,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x24_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "near_collinear_24x40_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "near_collinear"
+      },
+      {
+        "name": "degenerate_24x40_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "degenerate"
+      },
+      {
+        "name": "random_384x768_n1024_seed17",
+        "seed": 17,
+        "source_dim": 384,
+        "target_dim": 768,
+        "anchor_count": 1024,
+        "document_count": 1152,
+        "query_count": 8,
+        "fixture": "random"
+      }
+    ],
+    "full": [
+      {
+        "name": "random_24x40_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_40x24_n64_seed17",
+        "seed": 17,
+        "source_dim": 40,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x24_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "near_collinear_24x40_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "near_collinear"
+      },
+      {
+        "name": "degenerate_24x40_n64_seed17",
+        "seed": 17,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "degenerate"
+      },
+      {
+        "name": "random_384x768_n1024_seed17",
+        "seed": 17,
+        "source_dim": 384,
+        "target_dim": 768,
+        "anchor_count": 1024,
+        "document_count": 1152,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x40_n64_seed29",
+        "seed": 29,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_40x24_n64_seed29",
+        "seed": 29,
+        "source_dim": 40,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x24_n64_seed29",
+        "seed": 29,
+        "source_dim": 24,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "near_collinear_24x40_n64_seed29",
+        "seed": 29,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "near_collinear"
+      },
+      {
+        "name": "degenerate_24x40_n64_seed29",
+        "seed": 29,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "degenerate"
+      },
+      {
+        "name": "random_384x768_n1024_seed29",
+        "seed": 29,
+        "source_dim": 384,
+        "target_dim": 768,
+        "anchor_count": 1024,
+        "document_count": 1152,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x40_n64_seed41",
+        "seed": 41,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_40x24_n64_seed41",
+        "seed": 41,
+        "source_dim": 40,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x24_n64_seed41",
+        "seed": 41,
+        "source_dim": 24,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "near_collinear_24x40_n64_seed41",
+        "seed": 41,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "near_collinear"
+      },
+      {
+        "name": "degenerate_24x40_n64_seed41",
+        "seed": 41,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "degenerate"
+      },
+      {
+        "name": "random_384x768_n1024_seed41",
+        "seed": 41,
+        "source_dim": 384,
+        "target_dim": 768,
+        "anchor_count": 1024,
+        "document_count": 1152,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x40_n64_seed53",
+        "seed": 53,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_40x24_n64_seed53",
+        "seed": 53,
+        "source_dim": 40,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x24_n64_seed53",
+        "seed": 53,
+        "source_dim": 24,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "near_collinear_24x40_n64_seed53",
+        "seed": 53,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "near_collinear"
+      },
+      {
+        "name": "degenerate_24x40_n64_seed53",
+        "seed": 53,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "degenerate"
+      },
+      {
+        "name": "random_384x768_n1024_seed53",
+        "seed": 53,
+        "source_dim": 384,
+        "target_dim": 768,
+        "anchor_count": 1024,
+        "document_count": 1152,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x40_n64_seed67",
+        "seed": 67,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_40x24_n64_seed67",
+        "seed": 67,
+        "source_dim": 40,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_24x24_n64_seed67",
+        "seed": 67,
+        "source_dim": 24,
+        "target_dim": 24,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "near_collinear_24x40_n64_seed67",
+        "seed": 67,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "near_collinear"
+      },
+      {
+        "name": "degenerate_24x40_n64_seed67",
+        "seed": 67,
+        "source_dim": 24,
+        "target_dim": 40,
+        "anchor_count": 64,
+        "document_count": 192,
+        "query_count": 8,
+        "fixture": "degenerate"
+      },
+      {
+        "name": "random_384x768_n1024_seed67",
+        "seed": 67,
+        "source_dim": 384,
+        "target_dim": 768,
+        "anchor_count": 1024,
+        "document_count": 1152,
+        "query_count": 8,
+        "fixture": "random"
+      },
+      {
+        "name": "random_384x768_n2048_seed17",
+        "seed": 17,
+        "source_dim": 384,
+        "target_dim": 768,
+        "anchor_count": 2048,
+        "document_count": 2304,
+        "query_count": 8,
+        "fixture": "random"
+      }
+    ]
+  },
+  "artificial_caps": null
+}

@@ -1,0 +1,21 @@
+{
+  "status": "EXITED",
+  "started_utc": "2026-10-26T09:18:51.660634+00:00",
+  "request_sha256": "6c3a48e3a1d839712dc33242aaaaaa551912e383681e66009bef284636aa742a",
+  "argv": [
+    "/root/paper-P2/.venv/bin/python",
+    "-u",
+    "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/ops/b1p_neural_worker.py",
+    "--request",
+    "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/request.json"
+  ],
+  "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+  "pid": 16964,
+  "returncode": 1,
+  "signal_number": null,
+  "signal_name": null,
+  "ended_utc": "2026-10-26T09:19:31.352820+00:00",
+  "stdout_sha256": "5744ae38f224bf23a471c153d257b72b8b79799fa05a535738e39af7f3e5784e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n"
+}

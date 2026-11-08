@@ -1,0 +1,42 @@
+{
+  "schema": "b2_exact_endpoint_v1",
+  "kind": "mixed",
+  "files": {
+    "ids": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/inputs/ids.json",
+      "sha256": "72329f386e1971d35fca7c6084f2bbefe34dd0af33288bf98b96482a39069d48"
+    },
+    "query_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/vectors/e5_base_y_queries.npy",
+      "sha256": "9632ab0902243ce9bff191a1c258ccc469425fa2271558a4c6110f33947d0911"
+    },
+    "proxy_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/cpu/e5_small_base_seed29_la2m20_integration_script_adaptation/proxy_full.npy",
+      "sha256": "9901ccbb1935550f064a8f3b1252cebcfd88211c9b522f91441169075755059b"
+    },
+    "destination_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/vectors/e5_base_y_docs.npy",
+      "sha256": "2754fdbc5e7d5235da73e91fe5e5febcbcd3b7731b01e0112b9167bbc5f87144"
+    },
+    "paid_indices": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/inputs/paid_seed29_25pct.npy",
+      "sha256": "f70d71305b16d040b3517ce4fd46bf22cfe40f0c0becc5e3ed55a3b6f52abb98"
+    },
+    "anchor_indices": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/inputs/anchors_seed29.npy",
+      "sha256": "fd5a8cc65ad6f782c5a3cdc92542aec5962207da3559260f0320a7176d769c6e"
+    }
+  },
+  "shape": [
+    171332,
+    768
+  ],
+  "semantics": {
+    "dtype": "float32",
+    "score": "dot",
+    "k": 100,
+    "batch_rows": 16,
+    "tie_policy": "descending score then ascending document row index",
+    "exclude_identical_ids": true
+  }
+}

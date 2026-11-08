@@ -1,0 +1,16 @@
+{
+  "call_number": 1,
+  "purpose": "supervisor-release-readiness-review-with-targeted-round2",
+  "timestamp": "2026-11-01T02:25:36.137944+00:00",
+  "agent_id": "/root/release_readiness_review",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "model_route_note": "Explicit user override supplied by coordinating agent.",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "status": "ok",
+  "response_path": "001-release-review.response.md",
+  "verdict_path": "verdict.json",
+  "documents_modified_outside_own_trace": false
+}

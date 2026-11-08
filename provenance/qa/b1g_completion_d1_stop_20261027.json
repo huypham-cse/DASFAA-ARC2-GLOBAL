@@ -1,0 +1,37 @@
+{
+  "status": "B1G_COMPLETE_ARIS_D1_STOP",
+  "recorded_utc": "2026-10-27T13:46:04.467733+00:00",
+  "scientific_code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+  "scientific_sources_unchanged": true,
+  "raw_cases": 450,
+  "pure_galleries": 210,
+  "five_seed_conditions": 90,
+  "local_qa": "PASS",
+  "figure_qa": "PASS",
+  "aris_claim_supported": "partial",
+  "D1": {
+    "outcome": "GO-C1",
+    "qualification": "Narrow frozen fixed-supervision mechanism/quality question only; analytical recommendation for user review. No admission of practical fair-allpaid superiority or systems work.",
+    "reason": "Reproducible fixed-anchor quality gains survive; MiniLM allpaid gains against Procrustes/LA2M mean entire argument is not withheld-supervision artifact. Ridge unresolved and E5 losses remain explicit.",
+    "systems_admitted": false,
+    "independent_run_authorized_by_review": false,
+    "confirmation_only_globally_applicable": false,
+    "no_equivalence_claim": true,
+    "no_posthoc_margin_or_cost_advantage": true
+  },
+  "next_scientific_phase_launched": false,
+  "TREC_labels_opened": false,
+  "algorithm_changed": false,
+  "evidence_sha256": {
+    "configs/b1g_lock.json": "ea12eb90173d9b1f9f93883f1efa157946c67a91169d3c6a57f35eef7c316c53",
+    "configs/b1g_sources_main.json": "a51ad424641fc9b881085ad7512b73e3ae7de840e6d8d973b86c2dd10979d5aa",
+    "configs/b1g_sources_mini.json": "8d7fdbe8610db07d4a58d0a7a5bbd67bcd3c6c7f5ed369d139f9175e3998aff2",
+    "provenance/qa/b1g_completed_verification_r2_20261027.json": "cb84dc4358702695f3d3a0191e90270917ed9c5e4d81a9bdf3883d5222479217",
+    "provenance/qa/b1g_figure_visual_verification_20261027.json": "0866cdce4058771c4cd23f732bdc32a3ad530a2e5eccb1301888ed162016c037",
+    "CLAIMS_FROM_RESULTS.md": "63d0a541026fe6a76f719492d1619a7b09e4265562b3a89ac3a07e506e8d4608",
+    ".aris/traces/result-to-claim/2026-10-27_b1g/verdict.json": "eac2bf814459bba1f516d994701c858e024f1d8ee6519a6d17a3930588c1735d",
+    "REPORT.md": "5fc8776041281b1230a00c6e48a1505978d6a16a0a71f5de1a048c79429d5c30",
+    "findings.md": "b88d10d3df5f247113f97575b29cb7e5fc9dbfec3b686e1ee5154e4dd4a0d891"
+  },
+  "scope": "Finite B1-G+ARIS/D1 complete; STOP for user review under current plan"
+}

@@ -1,0 +1,17 @@
+{
+  "first_final_qrel_open_utc": "2026-10-31T20:12:17.410541+00:00",
+  "dataset": "TREC-COVID",
+  "ranking_seal_sha256": "08e82c19a2d1974edb094e520d0b1b6ac4e6138e3a717c5014d183669c7c25de",
+  "verification_seal_sha256": "78e67ab2aac47d0590db54ffd20170c30f8e7a5c96153bf17a1fee1e5322c968",
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "all_184_rankings_verified": true,
+  "expected_source": {
+    "format": "tsv",
+    "url": "https://huggingface.co/datasets/BeIR/trec-covid-qrels/resolve/532ac68ee6756ac22c9346eebf65bd3c6a042e10/test.tsv",
+    "revision": "532ac68ee6756ac22c9346eebf65bd3c6a042e10",
+    "bytes": 980831,
+    "git_blob_sha1": "9cb5167175d7cdbf9d85ea828c6a3da943fe7053"
+  },
+  "policy": "exactly once; failure preserved; no postlabel tuning"
+}

@@ -1,0 +1,601 @@
+{
+  "source_directory": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025",
+  "source_analysis_sha256": "a7b42a4b6a07bfe1389b785d57d7e5ef568653d501cc96b5d584592e9782fc2f",
+  "source_per_query_sha256": "8b41ae7fdba040234937e318315215c5557306a51937b37f8dfc5e89daa2e486",
+  "selected_source_method_ids": [
+    "procrustes_tangent2_global",
+    "procrustes_global",
+    "embedding_converter_paper_spec_anchor1024",
+    "full_x",
+    "full_y"
+  ],
+  "ranking_count": 64,
+  "source_cell_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    16,
+    17,
+    18,
+    19,
+    22,
+    23,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    44,
+    45,
+    46,
+    47,
+    50,
+    51,
+    58,
+    59,
+    60,
+    61,
+    64,
+    65,
+    72,
+    73,
+    74,
+    75,
+    78,
+    79,
+    86,
+    87,
+    88,
+    89,
+    92,
+    93,
+    100,
+    101,
+    102,
+    103,
+    106,
+    107,
+    114,
+    115,
+    116,
+    117,
+    120,
+    121,
+    128,
+    129,
+    130,
+    131,
+    134,
+    135,
+    142,
+    143
+  ],
+  "copied_files": [
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seedNone_0pct_full_x.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seedNone_0pct_full_x.npy",
+      "sha256": "80c1c87db4e43795e403859b6a90c6117639629c701003de16cd980637d57cc9",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seedNone_100pct_full_y.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seedNone_100pct_full_y.npy",
+      "sha256": "6e97d19a8da6e664ad47d67e3a9ee606db6a1e8fe9aaf20155200070b0946677",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seedNone_0pct_full_x.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seedNone_0pct_full_x.npy",
+      "sha256": "6d27051ebbd7226e3f59bca358fc3b2dcdf2ab7b226f87273aad4873d813d825",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seedNone_100pct_full_y.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seedNone_100pct_full_y.npy",
+      "sha256": "3c11866ff1b4d64ca581a54e36d4cd4d9672429ff9e50150cf5b5baf7dbbfff4",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed17_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_procrustes_global.npy",
+      "sha256": "d496787bc9864b89e626e33358b27c475b622879c8a63cc822da5fa447df8961",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed17_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_procrustes_global.npy",
+      "sha256": "b19a4f91097202cdf08354b5a26c0218668211cbc160bd6ad62dcb91f4373e4e",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed17_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_procrustes_tangent2_global.npy",
+      "sha256": "6c7113299ea166d14f12ab2d909dcc34936b67be6da0dad0addb215f48c5ff32",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed17_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_procrustes_tangent2_global.npy",
+      "sha256": "24fe07270c16d1ae862d7b50c6ce83c335966ab1cd3c97a8a853d4685be5497f",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "26f248bbfe5d0d1131d22644f5d0a2efcf922734534cebabaf429566d8266d5c",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "e8997733383e9acec6262e20fe9cf76873aef0f141064506449d35b25c3c018f",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed29_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_procrustes_global.npy",
+      "sha256": "d2d8cbc12637421952e2f02da0ed4a17f2c4ecee6f4944b091b1c848024ace26",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed29_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_procrustes_global.npy",
+      "sha256": "9f32f1501168c0efb54dc1789d3e85b10ef4fc7aaf8706fb0be60dd98c3d8f63",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed29_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_procrustes_tangent2_global.npy",
+      "sha256": "b42dd62a58d5726599af36538466ce618f6174dcaf4823efe1d3c48ca401df62",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed29_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_procrustes_tangent2_global.npy",
+      "sha256": "ef555f8cf3b29668b2c629d45d68aae0caaaecf6d6b76aaaffc19427112364dd",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "b238a1f01bbfbab1edebf846116542d3f652c7a210397042b4accb18ca14792a",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "19ed16df3b7bf8ed9df31d7a502fc2cc1614e4094664b553b15ffb9dae0f616a",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed41_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_procrustes_global.npy",
+      "sha256": "1e2b29a3666fd1f708ddea79657714b245d9a6a6241fba7d01b4b923bdcbe2ca",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed41_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_procrustes_global.npy",
+      "sha256": "7467ebc004d94bce24c1692b45177dde58873704b9dcd5d648e09d6a63228205",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed41_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_procrustes_tangent2_global.npy",
+      "sha256": "6761f3b916b59ce5f42489e163b3e0ae95628ac5f80ad4a89e194867c1d4bbf3",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed41_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_procrustes_tangent2_global.npy",
+      "sha256": "826b95383249609c16e6b93a0fc3e52d5bf33701c15b5c2bad4de5c1e367bd25",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "7958f5850ef0706f6b15c2507fc2ba51569b0ddcfa803e4339fb9625f573bc65",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "9e6b5da99262699123a78da8f5a55ad7d87383a934018f7721fee048a4117624",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed53_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_procrustes_global.npy",
+      "sha256": "37814a859d0d553d6ec6bc979ba679ec2178c361a8d876f4ee032f48509a0f04",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed53_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_procrustes_global.npy",
+      "sha256": "2e842eb36a3ef22c4d45848b490221465abbab230f83c22b2648485478cb3f98",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed53_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_procrustes_tangent2_global.npy",
+      "sha256": "477957060069255ee9fe8d5ddefbc2e7663965e2eee7676cda872b12627fd366",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed53_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_procrustes_tangent2_global.npy",
+      "sha256": "828d0610c97a76078cc810cca21ab87d5606fd09f1e24cbf2c11bfd6bf0fc883",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "a137055d616cf6378795fd91e495443e9b4334211750ebdf791083ad036e480b",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "7b84cdd726f0cbbccddbeacb0d0a4eb8fd1974a7023316fd6b3357b8fab5f222",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed67_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_procrustes_global.npy",
+      "sha256": "a90f9e52eac3e28c4179c12dc48df32ce8f242760608be78588624e30efc0940",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed67_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_procrustes_global.npy",
+      "sha256": "7eb12b3058ed0ca43a055d4ab2cad9b8b9faec123d2cc90d0b6dd9444e3353e4",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed67_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_procrustes_tangent2_global.npy",
+      "sha256": "58d189fb91b1b9645d19b41942e7526a06adb5e83b3981230bc6a0e48f0c15e5",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed67_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_procrustes_tangent2_global.npy",
+      "sha256": "9b44bd8ba1fa1c46b7f5be8534bd48e6147ab3db41583f21bee67d9df79f2eb5",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "a1db031ff94ad7218a54f76bc88a326c4b253769de017a697ad16d042243d35b",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\minilm_distilroberta_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "0a971d384e4c045fb54af84e81aba0d9173a3dcf3b0596f4791457d1765c0054",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed17_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed17_25pct_procrustes_global.npy",
+      "sha256": "249a981d3f0dd23b0e7765a857f44d93f5026c726e3059b313905be59f1100e8",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed17_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed17_50pct_procrustes_global.npy",
+      "sha256": "5eb7ac12ee5d6e6178a08163b279257b6df5f3417bca7cb406d171a1c70ce5da",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed17_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed17_25pct_procrustes_tangent2_global.npy",
+      "sha256": "cc4dfe41526fd9347d679c3165c6fe4888b1083a75181e9f204186f5d32cb329",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed17_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed17_50pct_procrustes_tangent2_global.npy",
+      "sha256": "d8c85add7c9ba2ab8bf3840135fdd184fee30031490f77fc822cf58aaa35fdde",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "0a169fc279816b55bfa918806e8fc562c8842ef4b3b8a533e780ea781425348f",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "efbfe60f99a1cc639e05a5f3fff8540601a6942be56c3baf928363b8af43b283",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed29_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed29_25pct_procrustes_global.npy",
+      "sha256": "de22a48e252c8e3f179ee378acb9d5d691c7429cb71f506b05a0640317b34e85",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed29_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed29_50pct_procrustes_global.npy",
+      "sha256": "deb0f8368fec9c0483158a6f40c4bb936243bf087b68748b835cd81deaf74314",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed29_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed29_25pct_procrustes_tangent2_global.npy",
+      "sha256": "da60307c877d996bca85c065f2cebe5c8529138d3b553b9372f13410675d2638",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed29_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed29_50pct_procrustes_tangent2_global.npy",
+      "sha256": "e33b0d21fc0f494206e39e4cd6f6c699a1fb064d98e332e6d2154edf92a42755",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "95f7670acda386102db80f0ab31818c2349f29afada84b6ef45fdeb9b57ece1e",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "81f31c0e44e54aa619631a1c5e6229af6dfb9ec898f93bdb409c9956c1ed46ff",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed41_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed41_25pct_procrustes_global.npy",
+      "sha256": "ec185771a7ae78b80709e76d5db3e26420312e759cffdf49b4214d7953e5ad96",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed41_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed41_50pct_procrustes_global.npy",
+      "sha256": "a1e1325cdb6591e70053d39301f0aa5875511e41e65319e771e91caa839830ff",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed41_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed41_25pct_procrustes_tangent2_global.npy",
+      "sha256": "3de4eab1d1c3e3f024d800899268af1a37a7dca42345b2d947e8527f436eedbf",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed41_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed41_50pct_procrustes_tangent2_global.npy",
+      "sha256": "b25fc55b3d2811ff9660cf0d0c068c1b047a91e630cfe56526755d1db3ba0501",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "3958e2ac62b6c2c1da82b295b174de2c5848e852cac1b05c69577697b3f7b643",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "f67db2e562a46cae5d8dd22df96f25c5d7d9fe8cf3543464805b9ba8970bd911",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed53_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed53_25pct_procrustes_global.npy",
+      "sha256": "60a5f97eb88fda15276404b2e45d31a661c83f67f79d48d3f1c2d537a50de993",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed53_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed53_50pct_procrustes_global.npy",
+      "sha256": "a66b5a67575b8b55fe61b007ec3c62ec3a703a16b5f6620e795e650dac2ce7f3",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed53_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed53_25pct_procrustes_tangent2_global.npy",
+      "sha256": "1bd5fc570a4cbb4e8502281e29fa0c05c7e2878ca8311f8e1fff2370f2e42121",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed53_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed53_50pct_procrustes_tangent2_global.npy",
+      "sha256": "413cc7290f5394a92c686f0cd4facbccf29d589984e361408759f1faf82f2648",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "641d6b3d59b005a6165b621b3fe86a67a42cfe793bb143af512df3ea3d277077",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "8b320e58a606617e5c2177a6ee0c613beb94b2fd7115cff3657aa216b219e63d",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed67_25pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed67_25pct_procrustes_global.npy",
+      "sha256": "92aeeba2fa8dd7d89f5f851bb438ce5176e61f007e88a2965e842427bd0aa2df",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed67_50pct_procrustes_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed67_50pct_procrustes_global.npy",
+      "sha256": "751422130385362bb59d1d2356cb981c155e6a94266af3daf27c0176ea1d539d",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed67_25pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed67_25pct_procrustes_tangent2_global.npy",
+      "sha256": "c6b27e133ec05dac07fea1c5cc5bb8915e06e5097ad09289cf0c58b1efa29df9",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed67_50pct_procrustes_tangent2_global.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed67_50pct_procrustes_tangent2_global.npy",
+      "sha256": "efb05a58597b652eabf42e5310c1a901a35e64eac77081c70e9d77a75cc099f1",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "ac660c1aae02abf97c39cb86e5e94b3493dd8367b6a25ecf92c6af0004b6bcec",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\rankings\\e5_small_base_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "package_path": "results/fiqa_development/rankings/e5_small_base_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy",
+      "sha256": "2a4af718173833dce677b8f980cb79a18833f4a0f996d7f62a9f3b2c57dac2be",
+      "bytes": 200128
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\ids.json",
+      "package_path": "results/fiqa_development/ids.json",
+      "sha256": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+      "bytes": 802190
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\backfill_order.npy",
+      "package_path": "results/fiqa_development/backfill_order.npy",
+      "sha256": "c5f77490ba57c14ea4d830e17ce67549e0d2c8b41c357a2098635da410e74931",
+      "bytes": 461232
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\anchors_seed_17.npy",
+      "package_path": "results/fiqa_development/selections/anchors_seed_17.npy",
+      "sha256": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742",
+      "bytes": 8320
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\anchors_seed_29.npy",
+      "package_path": "results/fiqa_development/selections/anchors_seed_29.npy",
+      "sha256": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+      "bytes": 8320
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\anchors_seed_41.npy",
+      "package_path": "results/fiqa_development/selections/anchors_seed_41.npy",
+      "sha256": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3",
+      "bytes": 8320
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\anchors_seed_53.npy",
+      "package_path": "results/fiqa_development/selections/anchors_seed_53.npy",
+      "sha256": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc",
+      "bytes": 8320
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\anchors_seed_67.npy",
+      "package_path": "results/fiqa_development/selections/anchors_seed_67.npy",
+      "sha256": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c",
+      "bytes": 8320
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed17_25pct.npy",
+      "package_path": "results/fiqa_development/selections/seed17_25pct.npy",
+      "sha256": "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155",
+      "bytes": 115400
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed17_50pct.npy",
+      "package_path": "results/fiqa_development/selections/seed17_50pct.npy",
+      "sha256": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+      "bytes": 230680
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed29_25pct.npy",
+      "package_path": "results/fiqa_development/selections/seed29_25pct.npy",
+      "sha256": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624",
+      "bytes": 115400
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed29_50pct.npy",
+      "package_path": "results/fiqa_development/selections/seed29_50pct.npy",
+      "sha256": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+      "bytes": 230680
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed41_25pct.npy",
+      "package_path": "results/fiqa_development/selections/seed41_25pct.npy",
+      "sha256": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8",
+      "bytes": 115400
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed41_50pct.npy",
+      "package_path": "results/fiqa_development/selections/seed41_50pct.npy",
+      "sha256": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+      "bytes": 230680
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed53_25pct.npy",
+      "package_path": "results/fiqa_development/selections/seed53_25pct.npy",
+      "sha256": "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94",
+      "bytes": 115400
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed53_50pct.npy",
+      "package_path": "results/fiqa_development/selections/seed53_50pct.npy",
+      "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+      "bytes": 230680
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed67_25pct.npy",
+      "package_path": "results/fiqa_development/selections/seed67_25pct.npy",
+      "sha256": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2",
+      "bytes": 115400
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\selections\\seed67_50pct.npy",
+      "package_path": "results/fiqa_development/selections/seed67_50pct.npy",
+      "sha256": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24",
+      "bytes": 230680
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\metadata.json",
+      "package_path": "provenance/source_run/metadata.json",
+      "sha256": "674b5be8d5c50feca43bd980e807169bb2e04da8d377948d3ac6c527a1134c3b",
+      "bytes": 73424
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\metadata_pre_qrels.json",
+      "package_path": "provenance/source_run/metadata_pre_qrels.json",
+      "sha256": "aa1fe50ca2265c474c0183d8f4c328e24a5cf7d8ab47de1b85a7a2ced0d1db04",
+      "bytes": 17659
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\ranking_seal.json",
+      "package_path": "provenance/source_run/ranking_seal.json",
+      "sha256": "12b3191106cd522d31f09643bee78c1b607ae42b2c041f794bd3edc8c2ff1eb0",
+      "bytes": 277419
+    },
+    {
+      "source_path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\p8_r10_h100_execution_20261025\\complete\\p8_r10_work_20261025\\artifact\\results\\p8_full_r10_20261025\\input_manifest.json",
+      "package_path": "provenance/source_run/input_manifest.json",
+      "sha256": "e22cf779ba9f280b7f97e93cb48cf0ef009c8cf70940aa9f34082f608e8f3ba6",
+      "bytes": 5719
+    }
+  ],
+  "derived_files": [
+    "results/fiqa_development/per_query.npy",
+    "results/fiqa_development/metric_index.json",
+    "results/fiqa_development/summary.json"
+  ],
+  "new_qrel_reads": 0,
+  "new_rankings": 0,
+  "new_scientific_runs": 0,
+  "source_run_context": "source metadata/seal retained verbatim; other method results remain in original repo",
+  "selection_after_development_scores": true
+}

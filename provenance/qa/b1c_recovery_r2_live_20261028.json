@@ -1,0 +1,62 @@
+{
+  "observed_utc": "2026-10-28T06:49:35.057080+00:00",
+  "smoke": {
+    "status": "RUNNING",
+    "stage": "smoke",
+    "code_commit": "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+    "started_utc": "2026-10-28T06:43:29.783147+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null
+  },
+  "full": null,
+  "schedule": {
+    "status": "RUNNING",
+    "code_commit": "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+    "started_unix": 1793169809.3765953,
+    "jobs": [
+      {
+        "stage": "smoke",
+        "argv": [
+          "/root/arc2_p3h_20261020/venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py",
+          "--stage",
+          "smoke",
+          "--output",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028",
+          "--code-commit",
+          "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+          "--lock",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json",
+          "--recovery",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+        ],
+        "started_unix": 1793169809.376895,
+        "pid": 79759
+      }
+    ],
+    "TREC_access": false,
+    "next_scientific_phase_auto_launch": false
+  },
+  "progress": null,
+  "refit_progress.jsonl": "{\"cuda_reserved_bytes\": 799014912, \"elapsed_seconds\": 169.96958688739687, \"global\": 0.374939888715744, \"gradient_nonzero\": true, \"gradient_norm\": 0.0025407655630260706, \"gradients_finite\": true, \"local\": 0.3763333857059479, \"loss\": 0.10608983039855957, \"observed_rss_bytes\": 1484713984, \"own_cuda_allocated_bytes\": 611719168, \"parameters_finite\": true, \"regression\": 0.0309625044465065, \"step\": 500}",
+  "resource_trace.jsonl": "{\"unix\": 1793170174.5504496, \"pid\": 79915, \"process_rss_bytes\": 1531891712, \"host_available_memory_bytes\": 2097269096448, \"host_cpu_percent\": 10.0, \"own_cuda_allocated_bytes\": 609943552, \"own_cuda_reserved_bytes\": 799014912, \"own_peak_cuda_allocated_bytes\": 729699328, \"own_peak_cuda_reserved_bytes\": 799014912}",
+  "processes": [
+    "  79915   79759 Rl+  34.7 1440100     05:39 /root/paper-P2/.venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1p_neural_worker.py --request /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028/neural/synthetic_embedding_converter_paper_spec/request.json",
+    "  79759   79758 Sl+   4.1 168624      06:06 /root/arc2_p3h_20261020/venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py --stage smoke --output /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028 --code-commit 67d7b16c28f7205d3873f6fe09df62eab722fdd4 --lock /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json --recovery /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json",
+    "  79758   79755 S+    0.0 23240       06:06 /root/arc2_p3h_20261020/venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_campaign.py --code-commit 67d7b16c28f7205d3873f6fe09df62eab722fdd4 --name mini_r2_20261028 --lock /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json --recovery /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+  ],
+  "gpu": "Wed Oct 28 06:49:35 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.5     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          Off |   00000000:1C:00.0 Off |                   On |\n| N/A   38C    P0            120W /  700W |                  N/A   |     N/A      Default |\n|                                         |                        |              Enabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| MIG devices:                                                                            |\n+------------------+----------------------------------+-----------+-----------------------+\n| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|      Shared           |\n|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |\n|                  |                                  |        ECC|                       |\n|==================+==================================+===========+=======================|\n|  0    3   0   0  |           18131MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |\n|                  |                15MiB / 32767MiB  |           |                       |\n+------------------+----------------------------------+-----------+-----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A     77677      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78376      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78377      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78378      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78379      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     79915      C   /root/paper-P2/.venv/bin/python                 0MiB |\n|    0   N/A  N/A     80239      C   ...ber-cli-lab/lib/ollama/llama-server          0MiB |\n+-----------------------------------------------------------------------------------------+\n",
+  "first_operator_error": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_campaign.py\", line 69, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_campaign.py\", line 27, in main\n    out.mkdir(exist_ok=False)\n  File \"/root/arc2_global_paper_20261025/mini_bootstrap_20261026/python/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/pathlib.py\", line 1116, in mkdir\n    os.mkdir(self, mode)\nFileNotFoundError: [Errno 2] No such file or directory: '/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_schedule_mini_r2_20261028'\n",
+  "operator_retry": {
+    "reason": "Missing empty results parent in clean source snapshot; first launcher failed before creating any scientific directory",
+    "prior_attempt": "/root/arc2_global_paper_20261025/b1c_prepare_mini_r2_20261028",
+    "source_code_changed": false,
+    "algorithm_changed": false,
+    "timestamp_unix": 1793169809.277791
+  }
+}

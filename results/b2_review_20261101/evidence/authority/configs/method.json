@@ -1,0 +1,20 @@
+{
+  "name": "ARC2-Global",
+  "revision": "arc2_global_tangent2_r1",
+  "initialization": "centered_rectangular_procrustes_raw_affine_expansion",
+  "ridge_lambda": 10.0,
+  "tangent_steps": 2,
+  "local_residual": false,
+  "neural_mapper_training": false,
+  "anchor_count": 1024,
+  "seeds": [17, 29, 41, 53, 67],
+  "selection_data": "inspected FiQA DEV",
+  "selection_after_scores": true,
+  "independent_confirmation_status": "not_run",
+  "budget_policy": "unique destination document encodings |A union S|, anchors included",
+  "future_partial_budgets": [0.25, 0.5, 0.75],
+  "full_Y_reference_budget": 1.0,
+  "execution_time_cap": null,
+  "execution_memory_cap": null,
+  "execution_status": "notify_user_before_H100_or_scientific_run"
+}

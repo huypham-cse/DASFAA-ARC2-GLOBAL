@@ -1,0 +1,35 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Document-side translation and mixed databases.}
+Embedding-Converter learns document-side conversion using regression together with global and local similarity losses~\cite{embeddingconverter}.
+Yang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\cite{la2m}.
+Their authors' repository also provides the SimpleLinear neural mapper used in our comparison~\cite{simplelinear}.
+More recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and residual regularization along target principal directions~\cite{yang2026translation}.
+Their localized expert structure addresses broader multi-model integration; our directional target uses the tangent plane at each anchor's current prediction, and both corrections collapse into one global affine map.
+HMoE provides related-work context; our evaluated panel comprises the five configurations specified in Sect.~\ref{sec:setup}.
+FastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\cite{fastfill2023}.
+Building on these migration settings, we study the two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.
+
+\paragraph{Compatibility and translation direction.}
+Backward-compatible representation learning trains a new encoder to remain usable with previously computed gallery features~\cite{shen2020backward}.
+Drift-Adapter instead fits a post-hoc map from new-model queries to an existing legacy index, comparing Procrustes, low-rank affine, and residual neural adapters~\cite{driftadapter}.
+Spherical interpolation refines Procrustes-aligned queries through SLERP between old and aligned new query directions~\cite{spherical2026}; ARC2 instead fits tangent ridge updates to document anchors.
+ARC2-Global shares the use of paired embeddings and frozen encoders, but maps legacy document vectors into the destination space.
+Its evaluation concerns mapped and native destination documents competing as re-encoding progresses.
+
+\paragraph{Geometric alignment and refinement.}
+Orthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\cite{schonemann1966procrustes}.
+Recent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\cite{maystre2025procrustes}.
+Unpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\cite{dar2025mini}.
+Thus, linear translation, Procrustes initialization, and refinement are all established ingredients.
+ARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.
+Both corrections are folded into one affine coefficient matrix, followed by row normalization at application time.
+This differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps.
+
+\paragraph{Retrieval evaluation.}
+BEIR emphasizes retrieval across heterogeneous tasks and domains~\cite{beir2021}, while NanoBEIR provides smaller collections suitable for development comparisons~\cite{nanobeir}.
+Sentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\cite{sbert2019,minilm2020,e52022}.
+Our evaluation targets judged retrieval quality in actual mixed galleries, separating that quantity from agreement with a destination ranking or approximate nearest-neighbor overlap.
+This distinction matters because accurately reconstructing individual vectors and preserving their internal neighborhoods do not directly measure the relevance of the final combined ranking.
+The experimental question is therefore whether the correction improves retrieval under a matched encoding budget, and in which encoder and gallery conditions that improvement persists.

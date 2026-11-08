@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+data/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+# Redundant transfer containers; unpacked B1-G evidence and hash receipts are versioned.
+/results/b1g_r1_review_20261027/transport/*_portable_*.tar.gz
+/provenance/qa/cloud_backup_20261030/local_transport_*.tar
+
+# Compact transfer container is redundant; unpacked evidence and hash receipt are versioned.
+/provenance/qa/b1c_r3_compact_review_20261031.tar.gz
+
+# Operator transfer pack is redundant; commit/source/hash receipt is versioned.
+/provenance/qa/b2_deploy_*.pack
+/provenance/qa/b2_deploy_*.bundle
+# Recovered byte-identical input vectors are cache, never source-control payload.
+.cache/
+
+*.npy
+*.bundle
+deliverables/*.zip

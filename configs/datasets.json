@@ -1,0 +1,16 @@
+{
+  "status": "proposed registry, not an executable scientific lock",
+  "retrieval": [
+    {"name":"NanoNQ","source":"zeta-alpha-ai/NanoNQ","docs":5035,"queries":50,"role":"development"},
+    {"name":"NanoHotpotQA","source":"zeta-alpha-ai/NanoHotpotQA","docs":5090,"queries":50,"role":"development"},
+    {"name":"NanoFEVER","source":"zeta-alpha-ai/NanoFEVER","docs":4996,"queries":50,"role":"development"},
+    {"name":"FiQA","source":"BeIR/fiqa","docs":57638,"queries":500,"role":"existing inspected DEV; not full test query split"},
+    {"name":"TREC-COVID","source":"BeIR/trec-covid","docs":171332,"queries":50,"role":"prospective independent; labels stay closed"}
+  ],
+  "systems":{"name":"MS MARCO Documents v1 subset","docs":100000,"traffic":"ORCAS","sampling":"freeze deterministic ID-based rule in future protocol before evaluation labels"},
+  "retrieval_total_docs":244091,
+  "total_corpus_entries":344091,
+  "ORCAS_additional_documents":0,
+  "AOL_IA_in_core_scope":false,
+  "revisions_and_download_hashes":"must be resolved and committed before scientific run; no data downloaded by packaging"
+}

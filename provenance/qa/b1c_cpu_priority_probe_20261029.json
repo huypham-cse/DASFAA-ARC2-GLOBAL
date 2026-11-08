@@ -1,0 +1,15 @@
+{
+  "observed_utc": "2026-10-29T12:26:10.351822+00:00",
+  "scope": "disposable child CPU priority capability test only; not a scientific run",
+  "returncode": 0,
+  "probe": {
+    "priority_request": "nice -5",
+    "status": "DENIED",
+    "errno": 13,
+    "error": "[Errno 13] Permission denied"
+  },
+  "stderr": "",
+  "live_worker_modified": false,
+  "other_jobs_modified": false,
+  "quota_modified": false
+}

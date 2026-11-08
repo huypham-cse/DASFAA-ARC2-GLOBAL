@@ -1,0 +1,10 @@
+{
+  "status": "DEV_LABEL_TRANSPORT_VERIFIED",
+  "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+  "bytes": 18327,
+  "intent_sha256": "29cc5b9b5494029c7331200852201421b954680ebe0020e84a255b43a7920cad",
+  "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+  "judgments_parsed": false,
+  "metrics_computed": false,
+  "verified_utc": "2026-10-26T09:16:55.856407+00:00"
+}

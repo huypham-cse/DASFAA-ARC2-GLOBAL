@@ -1,0 +1,13 @@
+{
+  "status": "FINITE_MINI_B1C_QUEUE_STARTED",
+  "queue_script_sha256": "f9df50155a1de03b48d55970224d1314364e64f65753acd7d5c5ca91d53bc818",
+  "session": "arc2_b1c_full_gate_mini_20261028",
+  "required_gates": [
+    "matching MINI smoke PASS",
+    "453file verified transport",
+    "567source hashes exact"
+  ],
+  "after_gates": "320new ranks -> separate DEV scoring736 -> STOP for final D1",
+  "TREC_access": false,
+  "time": 1793158014.7071657
+}

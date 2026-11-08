@@ -1,0 +1,26 @@
+{
+  "reviewer": "/root/b2_result_to_claim",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "model_selection": "Explicit user override as relayed in parent task.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "completed_utc": "2026-11-01T02:04:05.206626+00:00",
+  "total_agent_review_duration_seconds": null,
+  "duration_note": "No start timer was instrumented at agent launch; total duration is unavailable and is not estimated. The measured interval below begins at first explicit timestamp captured after initial skill/protocol/evidence reads.",
+  "first_explicit_timestamp_utc": "2026-11-01T02:01:22.405476+00:00",
+  "measured_remaining_review_interval_seconds": 162.80115,
+  "qa_final_receipt": "results/b2_review_20261101/qa_completed_20261101T020214554697Z.json",
+  "qa_sha256": "cdd654c401cd51efc3177fc8b6a40bbc60d346768417a9db2cd8699298110e42",
+  "source_summary_sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+  "response_sha256": "fa0260e4df761dd7c2ba2ca92ebdcc8df5a9471afb2b978a42da82c2b62119aa",
+  "owned_outputs": [
+    "001-claim-review.response.md",
+    "verdict.json",
+    "001-claim-review.meta.json"
+  ],
+  "manuscript_edits": false,
+  "scientific_runs_started": false,
+  "formal_integrity_audit_found": false,
+  "full_review_response_preserved_verbatim": true
+}

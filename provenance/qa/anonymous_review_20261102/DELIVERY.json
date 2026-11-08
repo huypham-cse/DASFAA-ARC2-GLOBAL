@@ -1,0 +1,118 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-11-02T09:31:24.981439+00:00",
+  "supervisor_packet": {
+    "file": "D:\\ARC2-Global_Supervisor_Review_20261102.zip",
+    "bytes": 114316478,
+    "sha256": "bb1a7f4c9f318254912db811fe41023cdb80a38a7b7a363872c7f6fb1a82b7dd",
+    "members": 7,
+    "all_members_verified": true
+  },
+  "anonymous_artifact": {
+    "file": "D:\\ARC2-Global_Anonymous_Artifact_20261102.zip",
+    "bytes": 113578318,
+    "sha256": "44c9c9e345e5b13546f70aac9f19dc9401731ada71965f4391fd98c3a88b4ada",
+    "members": 1744,
+    "all_members_verified": true
+  },
+  "overleaf": {
+    "file": "D:\\ARC2-Global_Overleaf_20261102_r2.zip",
+    "bytes": 1380295,
+    "sha256": "2c02d9d4cbe959eb6e591fa8ef7fee2624aa87f9f101a9db15e41a633167adc1",
+    "isolated_build_verified": true
+  },
+  "paper": {
+    "file": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_supervisor_20261102.pdf",
+    "sha256": "a6bff1fdc33169679dc45abce0c6d516ecbd96dbc63cd50770304089ecde4451"
+  },
+  "checks": {
+    "claim_audit": {
+      "verdict": "PASS",
+      "grouped_claims": 313,
+      "input_hashes_verified": 85,
+      "reviewer": "gpt-6.1-sol/high",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional"
+    },
+    "format": {
+      "pages": 16,
+      "abstract_words": 175,
+      "bibliography_entries": 19,
+      "overfull_hboxes": 0,
+      "unresolved_citations_or_references": 0,
+      "anonymous_pdf_author": "Anonymous Author(s)"
+    },
+    "source_zip": {
+      "status": "PASS",
+      "isolated_source_zip_build": true,
+      "text_identical_to_current_draft": true
+    },
+    "artifact": {
+      "status": "PASS",
+      "manifest_files": 1743,
+      "ranking_cells": 2460,
+      "unique_raw_ranking_arrays": 1623,
+      "ranking_family_counts": {
+        "development": 736,
+        "mechanism": 736,
+        "allpaid": 124,
+        "prospective": 184,
+        "matched_targets": 20,
+        "gallery": 660
+      },
+      "max_metric_arithmetic_error": 1.1102230246251565e-15,
+      "families": {
+        "development": {
+          "cells": 736,
+          "means_checked": 320
+        },
+        "mechanism": {
+          "cells": 736,
+          "means_checked": 320
+        },
+        "allpaid": {
+          "cells": 124,
+          "means_checked": 56
+        },
+        "prospective": {
+          "cells": 184,
+          "means_checked": 80
+        },
+        "matched_targets": {
+          "cells": 20,
+          "means_checked": 8,
+          "bootstrap_draws_recomputed": 20000
+        },
+        "gallery": {
+          "partial_cases": 450,
+          "five_seed_conditions": 90
+        }
+      },
+      "offline": true,
+      "qrels_opened": false,
+      "new_fit_or_vector_search": false,
+      "scope": "Frozen means, seed counts, gallery arithmetic, matched-control bootstrap and all packaged bytes; other original saved intervals are retained, not independently recomputed by this verifier."
+    },
+    "regeneration": {
+      "status": "PASS",
+      "tables_csv_checked": 16,
+      "mismatches": [],
+      "private_raw_sources_accessed": false
+    },
+    "mapper_cli": {
+      "status": "PASS",
+      "test": "synthetic CLI/package sanity only",
+      "shape": [
+        64,
+        16
+      ],
+      "scientific_claim_from_test": false
+    },
+    "new_scientific_run": false,
+    "external_send_or_public_upload": false,
+    "new_acceptance_score": null
+  },
+  "old_handoff_hashes_unchanged": true,
+  "no_send_or_upload": true,
+  "stop": "Await supervisor feedback; no further experiment authorized by packaging."
+}

@@ -1,0 +1,24 @@
+{
+  "dev": {
+    "conditions": 160,
+    "per_query_mean_max_error": 0.0
+  },
+  "allpaid": {
+    "conditions": 28,
+    "per_query_mean_max_error": 0.0
+  },
+  "trec": {
+    "conditions": 40,
+    "per_query_mean_max_error": 0.0
+  },
+  "trec_primary_counts": [
+    11,
+    19,
+    0
+  ],
+  "dev_ARC2_ndcg_below_native_references": {
+    "full_x": 24,
+    "full_y": 24
+  },
+  "no_new_experiment": "Only completed scoring JSON and saved per-query metric NPY read; qrels never read."
+}

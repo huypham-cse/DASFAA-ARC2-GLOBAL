@@ -1,0 +1,11 @@
+pair,baseline,positive,unresolved,negative,negative_point_means
+minilm_distilroberta,procrustes_global,0,3,0,3
+minilm_distilroberta,la2m20_integration_script_adaptation,0,3,0,2
+minilm_distilroberta,simplelinear_official_final50_mlp5,0,3,0,1
+minilm_distilroberta,ridge_affine_l10_bias_regularized,1,2,0,0
+minilm_distilroberta,embedding_converter_paper_spec,2,1,0,0
+e5_small_base,procrustes_global,0,3,0,3
+e5_small_base,la2m20_integration_script_adaptation,0,3,0,1
+e5_small_base,simplelinear_official_final50_mlp5,2,1,0,0
+e5_small_base,ridge_affine_l10_bias_regularized,3,0,0,0
+e5_small_base,embedding_converter_paper_spec,3,0,0,0

@@ -1,0 +1,237 @@
+{
+  "schema": "arc2-presentation-review-v1",
+  "created_utc": "2026-11-01T19:07:57.609503+00:00",
+  "reviewer": "gpt-6.1-sol, high reasoning; same-family/provisional",
+  "status": "READY",
+  "acceptance_score": null,
+  "scope": "Presentation, narrative/scientific coherence as presented, numerical consistency of prose/tables/figures, source-to-PDF visual QA. No new literature novelty search, experiment, tuning, qrel inspection, or raw-run integrity audit.",
+  "current_pdf": {
+    "path": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_final.pdf",
+    "sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+    "pages": 16
+  },
+  "initial_pdf_sha256": "44473eaa32e0dce707554eff3f76042abf043eb88aa7a3cf6cc7aa4f63bf0128",
+  "snapshot_update": {
+    "change": "Parent clarified float64 dual development fixed-anchor versus float64 primal all-paid/TREC fits, retaining reused dual all-paid fixed-anchor comparisons.",
+    "final_visually_reinspected_pages": [
+      8,
+      9
+    ],
+    "all_other_page_pixel_comparisons": "Identical to all-page initial render at 110 dpi. Final pages 1-7 and 10-16 match initial inspected page pixels exactly.",
+    "initial_render_prefix": "presentation_inspection/page-",
+    "final_render_prefix": "presentation_inspection/final-"
+  },
+  "actual_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "page_notes": {
+    "1": "Title, abstract, keywords and opening motivation: readable and coherent; no clipping.",
+    "2": "Contribution list is specific and scoped; related work begins cleanly.",
+    "3": "Illustrative mechanism figure and caption are consistent; budget and toy status are explicit.",
+    "4": "Related-work distinctions and method opening are coherent; normal LNCS pagination.",
+    "5": "Budget, rectangular initialization and affine expansion render correctly.",
+    "6": "Tangent target, cosine-gradient explanation, ridge updates and scale property are legible and qualified.",
+    "7": "Algorithm table, mixed gallery and computation/storage analysis are legible.",
+    "8": "Setup identifies development/held collection, exposure, backend allocation and baseline implementations clearly; final changed page visually rechecked.",
+    "9": "Training-policy continuation, retrieval/statistics and results opening render cleanly; final changed page visually rechecked.",
+    "10": "Table 2 and development curves agree; second/best marks preserve Procrustes Recall advantage and native reference context.",
+    "11": "Ablation intervals use one continuous scale and retain negative/uncertain controls; claims match plotted values.",
+    "12": "Prospective and budget tables retain strongest geometric competitors and native references; inferential markers are distinct from point ranking.",
+    "13": "All prospective nDCG/Recall curves and native references are visible; panel-specific scales are disclosed; descriptive budget qualification is adjacent.",
+    "14": "All-paid table marks supported positive and negative comparisons correctly; replacement-effect explanation and discussion are legible.",
+    "15": "Practical scope, Full-X alternative, conclusion and first references render cleanly.",
+    "16": "Remaining references are legible; no overflow or dangling unfinished content."
+  },
+  "style_reference": {
+    "path": "C:\\Users\\Gia Huy\\Downloads\\ACIIDS2027_paper__262 (6).pdf",
+    "sha256": "0e0f87bbaf7108083a437db525ee76cdd56e4858eb8f4fe8ee2bb3871e243c66",
+    "visual_pages_inspected": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "use": "Serif LNCS typography, minimal-rule tables, restrained multi-panel curves and evidence-led prose only; no reference content used as ARC2 evidence or instructions."
+  },
+  "independence_note": "No prior review or evidence-mining reports were opened. The mandatory workspace AGENTS.md header incidentally exposed historical score statements; they were excluded from this review. This remains a same-family provisional review, not an independent venue decision.",
+  "checks": {
+    "narrative": "PASS: compact directional adapter -> matched-supervision development result -> prospective E5 and MiniLM operating points -> post-hoc exposure table -> all-paid/mixed-gallery explanation.",
+    "contribution_and_novelty_as_presented": "PASS within scope: established Procrustes/refinement ingredients acknowledged; specific two-step tangent ridge computation and one-affine-map inference are distinguished without claiming a broad literature-first theorem.",
+    "claim_scope": "PASS: development selection disclosed, prospective gains attributed to specific evaluated baselines, geometric competitors retained, post-hoc exposure comparisons distinguished from matched-budget inference, storage distinguished from deployment savings.",
+    "ranking_emphasis": "PASS: best/second unrounded adapter conventions match generated values; native rows excluded; ARC2 color/shading identifies method rather than statistical superiority. Rounded MiniLM/75 prospective tie is explained in prose.",
+    "statistics_markers": "PASS: eleven positive prospective comparisons, unresolved geometric intervals, and negative all-paid E5 geometric comparisons remain visible. Auxiliary Recall carries no nDCG-family significance marks.",
+    "curves": "PASS: all six adapters and native references retained; three measured budgets only; no invented interval bands; ablation intervals continuous; prospective panel-specific y ranges explicit.",
+    "numeric_spot_checks": {
+      "e5_prospective_converter_gains": [
+        0.25723359077319424,
+        0.23138457517015265,
+        0.19995409665120434
+      ],
+      "six_prospective_procrustes_point_means_above_arc2": true,
+      "minilm_recall_highest_adapter_at_all_three_budgets": true,
+      "all_five_25pct_arc2_vs_75pct_ridge_converter_inequalities": true,
+      "minilm_allpaid_minus_fixed": 0.059641163164627864,
+      "coefficient_bytes": 1182720,
+      "coefficient_MiB": 1.1279296875
+    },
+    "layout": "PASS: all 16 actual PDF pages inspected; no clipped text, overlapping floats, unreadable numeric cells, broken legends, unintended blank pages or remote float placement requiring correction."
+  },
+  "required_fixes": [],
+  "optional_scientific_extensions": [],
+  "readiness_statement": "Ready to retain for this presentation revision. No manuscript changes or new experiments are required by this review. Publication-link or submission decisions remain outside this review.",
+  "input_hashes": [
+    {
+      "path": "paper/main.tex",
+      "sha256": "704d831a3f56001486627c701512c0a03b7dcaba6ee1c5939418898f25cbd747"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+    },
+    {
+      "path": "paper/ARC2_Global_DASFAA2027_final.pdf",
+      "sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc"
+    },
+    {
+      "path": "paper/sections/abstract.tex",
+      "sha256": "24a2314dcfb5090ba76b4cb7dfea95c8c941eacff94881e451edea6374d3043a"
+    },
+    {
+      "path": "paper/sections/conclusion.tex",
+      "sha256": "7f9bb6b3a071a3fa02338249c0b949dc1bf8b2d9863c4c23644a65e80def4caf"
+    },
+    {
+      "path": "paper/sections/discussion.tex",
+      "sha256": "4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71"
+    },
+    {
+      "path": "paper/sections/experimental-setup.tex",
+      "sha256": "4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215"
+    },
+    {
+      "path": "paper/sections/introduction.tex",
+      "sha256": "4785d051ea8266d7907b2ca55417a2ae6744c9ea01e9adb90ef0db1fd34a6f5f"
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "sha256": "2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b"
+    },
+    {
+      "path": "paper/sections/related-work.tex",
+      "sha256": "ff5a1ac26f3ca8eb9865f99fec92e3e5b185756c3d67fcae2b048f6654594f44"
+    },
+    {
+      "path": "paper/sections/results.tex",
+      "sha256": "9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d"
+    },
+    {
+      "path": "paper/generated/ablation.tex",
+      "sha256": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e"
+    },
+    {
+      "path": "paper/generated/allpaid.tex",
+      "sha256": "bd28688f51a306c9990c0174f1c3b88786eb266a5e76bafffc0217c851de4c13"
+    },
+    {
+      "path": "paper/generated/budget_leverage.tex",
+      "sha256": "dc8d45d6b72643735ae2135c8f970687b0eca5a9d8849de46988976a77e6719b"
+    },
+    {
+      "path": "paper/generated/dev_macro.tex",
+      "sha256": "58e7543a91a5bbfcce75969e6277967cc1978ec1fc6e96d5461c60d821b3ff27"
+    },
+    {
+      "path": "paper/generated/trec_family.tex",
+      "sha256": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e"
+    },
+    {
+      "path": "paper/generated/trec_means.tex",
+      "sha256": "354d8f8e46373015b3af96c5e66c3923777a5e88baef2f95be84728f99555dce"
+    },
+    {
+      "path": "paper/generated/trec_recall.tex",
+      "sha256": "92fbea88b6557670feb56192669e114184b0b77a0b20baa083bc74fbc7b5fbdd"
+    },
+    {
+      "path": "paper/generated/ablation_values.csv",
+      "sha256": "41ea9930e90b3c65a7c9550c21b7510ea28691c87c4c60345bbcff9048f30a06"
+    },
+    {
+      "path": "paper/generated/allpaid_values.csv",
+      "sha256": "4905a9b31887212f501ef9e6755da3c436ed5aac49415fd9c6cb9ad62b4003c5"
+    },
+    {
+      "path": "paper/generated/budget_leverage_values.csv",
+      "sha256": "e973457d4678afeb89d46e968fee289c2fa970aed98ab2bee7fbeff68436ce5a"
+    },
+    {
+      "path": "paper/generated/dev_complete_means.csv",
+      "sha256": "37c681e70ca0b4dbc4d28369a17e09d8ca5d0bacd0ba8ccecab59b0c71a186d7"
+    },
+    {
+      "path": "paper/generated/dev_quality_values.csv",
+      "sha256": "e51e7c0d3ba7fe213ef87bb6b2852af0c01b3faea54440c7b1a3fbbcb8a86026"
+    },
+    {
+      "path": "paper/generated/trec_complete_means.csv",
+      "sha256": "be2d8d69af7da39ee4ff969b2f5dce3d9ac18c561e5728742a0c1ae8a1237d62"
+    },
+    {
+      "path": "paper/generated/trec_family_counts.csv",
+      "sha256": "426ff2b2d8b3fed2a23f4cdc6b73a3cbb3904f5631b5996618ca18a43114c917"
+    },
+    {
+      "path": "paper/generated/trec_quality_values.csv",
+      "sha256": "b820ec4191a0b579127bebefdf3b3d2091be85148fce7068d2abe38d01555932"
+    },
+    {
+      "path": "paper/generated/numeric_claims.json",
+      "sha256": "28ff5ffea7a5360fd02976ab2c87efc3cb3502a6a2cf95af27c0bc1f34a68bd6"
+    },
+    {
+      "path": "paper/scripts/build_evidence.py",
+      "sha256": "8f81be962794f48c68b8cdef917cb34fb95aaf8e2e911515c547b2289e3d2a16"
+    },
+    {
+      "path": "paper/scripts/plot_publication.py",
+      "sha256": "0abd18e70c878f65aa751d64776c35cbe7ef7946ad210e26e520b1a4523bf9bb"
+    },
+    {
+      "path": "paper/figures/dev_ablation.pdf",
+      "sha256": "b65b01f47ce3434dd7c44f93824a439a03da571f426c6ebda19c5abd57728ed2"
+    },
+    {
+      "path": "paper/figures/dev_quality.pdf",
+      "sha256": "f02d5ba22535634e2ba2c51ace9611c438ba3e57de9ed543e05196c2f946436b"
+    },
+    {
+      "path": "paper/figures/mechanism.pdf",
+      "sha256": "7a311bc8dd166bce96db914c5f94ad55a53fef32fc83953b2ba33ae6c2a49360"
+    },
+    {
+      "path": "paper/figures/trec_quality.pdf",
+      "sha256": "f37926ea97e1b5d2d9ab1544889bc4cf9264b8323ecd4b5ec76258c656434679"
+    },
+    {
+      "path": "paper/figures/mechanism.tex",
+      "sha256": "d1aa2957624bf0ed726303973d565286b5e31b3938d439278885662cfc0bdc60"
+    }
+  ]
+}

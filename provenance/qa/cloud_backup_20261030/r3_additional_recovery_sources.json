@@ -1,0 +1,2407 @@
+{
+  "schema": "ARC2_B1C_R3_ADDITIONAL_QRELFREE_ACQUISITION_V1",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "Opaque restoration/acquisition preparation. No labels, fullY reconstruction or scientific numerical work. Commit the R3 asset-preflight protocol before deriving any arrays; commit the full R3 scientific protocol and pass matching smoke before any fitting/ranking/scoring.",
+  "proposed_campaign_identity": {
+    "historical_fiqa_fit_reuse": 2,
+    "new_fiqa_fits": 28,
+    "new_nano_fits": 90,
+    "active_existing_cells": 378,
+    "new_cells": 358,
+    "active_total_cells": 736,
+    "old_38_replaced_cells": "Retain immutably; exclude only from the new active comparison registry; original locked B1c remains incomplete."
+  },
+  "inputs": {
+    "main_inventory": "provenance/qa/cloud_backup_20261030/main_inventory.json",
+    "main_inventory_sha256": "4b349c4b86a693f58e18585595322ca525a3244d95f03e2e703acf57655d488c",
+    "main_cloud_listing": "provenance/qa/cloud_backup_20261030/main_archives_complete_public_listing.json",
+    "local_match_inventory": "provenance/qa/cloud_backup_20261030/local_source_matches.json",
+    "prior_b1g_slice_receipts": "results/b1g_r1_review_20261027/main/execution_intermediates.json",
+    "prior_b1g_slice_receipts_sha256": "e14f811f708f3f3ce66ab85e636dd820b51af745ebe57d38f5e29bf2e28c1449",
+    "upstream_lock": "configs/b1c_lock.json"
+  },
+  "local_sources": {
+    "verified_original_source_paths": 514,
+    "strategy": "Reuse exact local SHA256 matches recorded in local_source_matches.json; reverify actually referenced files during restoration/preflight. Additional cloud sources only are listed here."
+  },
+  "minimal_acquisition": {
+    "restore_files": 115,
+    "restore_bytes": 1759110167,
+    "scientific_original_source_files": 22,
+    "fiqa_75pct_slice_files": 10,
+    "upstream_python_files": 83,
+    "derived_25_50pct_slices": 20,
+    "archives": 11,
+    "archive_chunks": [
+      0,
+      6,
+      7,
+      9,
+      14,
+      15,
+      16,
+      19,
+      26,
+      28,
+      57
+    ],
+    "why_only_75pct_slices": "Historical same-seed25/50 paid sets are nested in75. Restore ten75 arrays; derive twenty smaller arrays by exact row-ID join and verify original historical file hashes before numerical work.",
+    "excluded_payloads": "No document text, encoder weights, qrels, environment trees or unrelated archive members are needed.",
+    "fullY_qualification": "Only genuine paid slices are recovered; this does not recover/create or establish byte identity of missing full E5 Y."
+  },
+  "archives": [
+    {
+      "host": "main",
+      "chunk": 0,
+      "expected_archive_name": "chunk_0000_17ec6224f17690b9.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1GtyN3X4qHsijkU858qLf5gMTDA4LGXzb",
+      "url": "https://drive.google.com/file/d/1GtyN3X4qHsijkU858qLf5gMTDA4LGXzb/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0000_17ec6224f17690b9.tar.gz.verified.json",
+      "receipt_drive_id": "1bE_gv8R6iQkdIsmOHa6YlMFEnsanNe-P",
+      "receipt_url": "https://drive.google.com/file/d/1bE_gv8R6iQkdIsmOHa6YlMFEnsanNe-P/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 6,
+      "expected_archive_name": "chunk_0006_950b9a1d43fa337a.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1dWZpO_8tg21nyiOAd1Bi1k1IP1zOVevu",
+      "url": "https://drive.google.com/file/d/1dWZpO_8tg21nyiOAd1Bi1k1IP1zOVevu/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0006_950b9a1d43fa337a.tar.gz.verified.json",
+      "receipt_drive_id": "1TN_f-9jxVLDzdga02HpyWwbzrLlhgaeB",
+      "receipt_url": "https://drive.google.com/file/d/1TN_f-9jxVLDzdga02HpyWwbzrLlhgaeB/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 7,
+      "expected_archive_name": "chunk_0007_778e95cafed3cb2d.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1nRU9s9uiWhmvVuZ8sxWiYOFbXsBRTafv",
+      "url": "https://drive.google.com/file/d/1nRU9s9uiWhmvVuZ8sxWiYOFbXsBRTafv/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0007_778e95cafed3cb2d.tar.gz.verified.json",
+      "receipt_drive_id": "1ke8mucBs6vxGxmhvYMgbp-TQSRbgPg1n",
+      "receipt_url": "https://drive.google.com/file/d/1ke8mucBs6vxGxmhvYMgbp-TQSRbgPg1n/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 9,
+      "expected_archive_name": "chunk_0009_c4e3104cdfe63be7.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1YBIVLG-Ww4Y-ARFZnL_Bvx3PfJ3xnHk_",
+      "url": "https://drive.google.com/file/d/1YBIVLG-Ww4Y-ARFZnL_Bvx3PfJ3xnHk_/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0009_c4e3104cdfe63be7.tar.gz.verified.json",
+      "receipt_drive_id": "16brnfi_Kam69JIE0Irmkl6UjFoyCBOMP",
+      "receipt_url": "https://drive.google.com/file/d/16brnfi_Kam69JIE0Irmkl6UjFoyCBOMP/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 14,
+      "expected_archive_name": "chunk_0014_e39681e66bd54e27.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1jeBMPsnIadvKgKRs617xNlZhXJfmybm4",
+      "url": "https://drive.google.com/file/d/1jeBMPsnIadvKgKRs617xNlZhXJfmybm4/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0014_e39681e66bd54e27.tar.gz.verified.json",
+      "receipt_drive_id": "1SbnXoEyfxMMOXXH8itMA1UBuPGba2Vjv",
+      "receipt_url": "https://drive.google.com/file/d/1SbnXoEyfxMMOXXH8itMA1UBuPGba2Vjv/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 15,
+      "expected_archive_name": "chunk_0015_d8c4f9b1033f5a7e.tar.gz",
+      "payload_listed": true,
+      "drive_id": "18yrkIbq8C0ETvikWzQRymvkvfoHOZpOk",
+      "url": "https://drive.google.com/file/d/18yrkIbq8C0ETvikWzQRymvkvfoHOZpOk/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0015_d8c4f9b1033f5a7e.tar.gz.verified.json",
+      "receipt_drive_id": "1UGz13qGBQYLJvpZQt3ljbyuqYi8woi6U",
+      "receipt_url": "https://drive.google.com/file/d/1UGz13qGBQYLJvpZQt3ljbyuqYi8woi6U/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 16,
+      "expected_archive_name": "chunk_0016_d794f1f93dd3cc7e.tar.gz",
+      "payload_listed": true,
+      "drive_id": "10qyN70AD1j0qWM0LCglynrnvZ7un_FxS",
+      "url": "https://drive.google.com/file/d/10qyN70AD1j0qWM0LCglynrnvZ7un_FxS/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0016_d794f1f93dd3cc7e.tar.gz.verified.json",
+      "receipt_drive_id": "1Mr5wnvX5ea1KhQzwe_-1bmRSFPAALFfr",
+      "receipt_url": "https://drive.google.com/file/d/1Mr5wnvX5ea1KhQzwe_-1bmRSFPAALFfr/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 19,
+      "expected_archive_name": "chunk_0019_6b9c63773edf24f4.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1IAe0JFMCPioF12u7GIR5UoyDGNhcsasd",
+      "url": "https://drive.google.com/file/d/1IAe0JFMCPioF12u7GIR5UoyDGNhcsasd/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0019_6b9c63773edf24f4.tar.gz.verified.json",
+      "receipt_drive_id": "1V3PRUb5DMalW0EG9rTNKldLpP_VFovck",
+      "receipt_url": "https://drive.google.com/file/d/1V3PRUb5DMalW0EG9rTNKldLpP_VFovck/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1zMQMKj2vtUo-cA3eGo3q-zqcnyCrKw6V",
+      "url": "https://drive.google.com/file/d/1zMQMKj2vtUo-cA3eGo3q-zqcnyCrKw6V/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0026_2e877f850e80af3e.tar.gz.verified.json",
+      "receipt_drive_id": "1kLgHsa_brTvW8SzvXS4TGFAp5U0FiKWj",
+      "receipt_url": "https://drive.google.com/file/d/1kLgHsa_brTvW8SzvXS4TGFAp5U0FiKWj/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 28,
+      "expected_archive_name": "chunk_0028_05d1365fd8ca32c3.tar.gz",
+      "payload_listed": true,
+      "drive_id": "1RbJ7PJXoSNYgFkyge7PJishdwjsJsP1t",
+      "url": "https://drive.google.com/file/d/1RbJ7PJXoSNYgFkyge7PJishdwjsJsP1t/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0028_05d1365fd8ca32c3.tar.gz.verified.json",
+      "receipt_drive_id": "1x4BpX5Oxuag13h_Y8hecgaQ3R2LcYHTT",
+      "receipt_url": "https://drive.google.com/file/d/1x4BpX5Oxuag13h_Y8hecgaQ3R2LcYHTT/view?usp=drive_web"
+    },
+    {
+      "host": "main",
+      "chunk": 57,
+      "expected_archive_name": "chunk_0057_ad5f46e0373ca56c.tar.gz",
+      "payload_listed": true,
+      "drive_id": "139QDkWw1iXg9kb0HW9U6U3EVCAUpeilY",
+      "url": "https://drive.google.com/file/d/139QDkWw1iXg9kb0HW9U6U3EVCAUpeilY/view?usp=drive_web",
+      "expected_receipt_name": "chunk_0057_ad5f46e0373ca56c.tar.gz.verified.json",
+      "receipt_drive_id": "1eg6GGBe1bqiad1BzvXehILS7JXrvF_nW",
+      "receipt_url": "https://drive.google.com/file/d/1eg6GGBe1bqiad1BzvXehILS7JXrvF_nW/view?usp=drive_web"
+    }
+  ],
+  "restore_files": [
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_queries.npy",
+      "expected_sha256": "6ccba0d17b2d2b9ac9a53235f7c5fe14e4f4fcd47a6c2e3860f88d62778c17a4",
+      "expected_bytes": 153728,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 0,
+      "expected_archive_name": "chunk_0000_17ec6224f17690b9.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_queries.npy",
+      "expected_sha256": "33e494415e670df2ee8b8463a1a65076103db799b02edd855dca22f4de370d4c",
+      "expected_bytes": 153728,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 0,
+      "expected_archive_name": "chunk_0000_17ec6224f17690b9.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_queries.npy",
+      "expected_sha256": "d569b66270e5fd9b246a875c5bb8f74a8239d13b79dbb03e549cd3b220c0b5f4",
+      "expected_bytes": 153728,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 0,
+      "expected_archive_name": "chunk_0000_17ec6224f17690b9.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_queries.npy",
+      "expected_sha256": "3f692fa25f82f61cae9f178b5b0e0164fbb5bc050d1419e36e3ae40cc074619a",
+      "expected_bytes": 153728,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 0,
+      "expected_archive_name": "chunk_0000_17ec6224f17690b9.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_queries.npy",
+      "expected_sha256": "99ee67911f7d7eaa63dad71850e61f7f98659ac6d24f0e18407961a89d1b2d74",
+      "expected_bytes": 153728,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 0,
+      "expected_archive_name": "chunk_0000_17ec6224f17690b9.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_queries.npy",
+      "expected_sha256": "35c0e3fa6444fc37e7becf28b7d590cb04267c5da2222337a864aeee666d021d",
+      "expected_bytes": 153728,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 0,
+      "expected_archive_name": "chunk_0000_17ec6224f17690b9.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_small_x_docs.npy",
+      "expected_sha256": "05590911e088b026e8489f7afb03b69cc937f9f4c0999411ea7f70ac39464255",
+      "expected_bytes": 7673984,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 6,
+      "expected_archive_name": "chunk_0006_950b9a1d43fa337a.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/minilm_x_docs.npy",
+      "expected_sha256": "1ec9e11882ea7138914d295241ce1a07f3be74dc359f1c6cde773694ecc4752c",
+      "expected_bytes": 7673984,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 6,
+      "expected_archive_name": "chunk_0006_950b9a1d43fa337a.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_small_x_docs.npy",
+      "expected_sha256": "fc8e4146062b1db19e54faae819c38f18061c05ac4cd7de23320ca0fc2e2b374",
+      "expected_bytes": 7818368,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 6,
+      "expected_archive_name": "chunk_0006_950b9a1d43fa337a.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/minilm_x_docs.npy",
+      "expected_sha256": "33872a10dea389aba01798828ba3556ba33007fafd93c4da844c99db158f1d9f",
+      "expected_bytes": 7818368,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 6,
+      "expected_archive_name": "chunk_0006_950b9a1d43fa337a.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_small_x_docs.npy",
+      "expected_sha256": "05420707665bb2b77eb05fd4fb59001c53bd8c2642e87a9fbc4c1da30a42aef1",
+      "expected_bytes": 7733888,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 6,
+      "expected_archive_name": "chunk_0006_950b9a1d43fa337a.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/minilm_x_docs.npy",
+      "expected_sha256": "4a807ce6ed5965bbcb77948f295e9bc3c371621a6ada6d9d3f65322dfbdea9a3",
+      "expected_bytes": 7733888,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 6,
+      "expected_archive_name": "chunk_0006_950b9a1d43fa337a.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+      "expected_sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+      "expected_bytes": 15347840,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 7,
+      "expected_archive_name": "chunk_0007_778e95cafed3cb2d.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+      "expected_sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+      "expected_bytes": 15347840,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 7,
+      "expected_archive_name": "chunk_0007_778e95cafed3cb2d.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+      "expected_sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+      "expected_bytes": 15636608,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 7,
+      "expected_archive_name": "chunk_0007_778e95cafed3cb2d.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+      "expected_sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+      "expected_bytes": 15636608,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 7,
+      "expected_archive_name": "chunk_0007_778e95cafed3cb2d.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+      "expected_sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+      "expected_bytes": 15467648,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 7,
+      "expected_archive_name": "chunk_0007_778e95cafed3cb2d.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+      "expected_sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+      "expected_bytes": 15467648,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 7,
+      "expected_archive_name": "chunk_0007_778e95cafed3cb2d.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/cpu/minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "e9bde162774055bb2b68a11a9147e49f268d2a93386acf166edf477b0d10efe8",
+      "expected_bytes": 23147367,
+      "required_for": "unchanged historical fixed1024 FiQA fit",
+      "host": "main",
+      "chunk": 9,
+      "expected_archive_name": "chunk_0009_c4e3104cdfe63be7.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/0491898f368dae89550bcd7229db904ae17263713d8fbb42c48972ff848e90e7.npy",
+      "expected_sha256": "2394ea8552efbe6ec371ac3f83b04e7f9fd50b18a3bcac829df1d08290e7e833",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 14,
+      "expected_archive_name": "chunk_0014_e39681e66bd54e27.tar.gz",
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/07f821b5981e257767c8f8f2cd308fd686530dfc751ebeea7e28ddf49e6b4e21.npy",
+      "expected_sha256": "c38dd96dc218db746a245be52b24a9bbff53006e2ceef382c20e59d4e69b12b5",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 14,
+      "expected_archive_name": "chunk_0014_e39681e66bd54e27.tar.gz",
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/2189934c5245b9cc7d1b77711f277722ad085810f7c75e5c6b75d7f2a203d432.npy",
+      "expected_sha256": "0ef5039ece44ac1f9c0e7ca4bf92236a132db3bb95dd4e48b0a075cfafebc0a5",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 14,
+      "expected_archive_name": "chunk_0014_e39681e66bd54e27.tar.gz",
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/9c8933906fb9ba533a591d245a07100252b4f785e748c702499c4e7eca3f439e.npy",
+      "expected_sha256": "ae4fd36b4e97da8e9219fbc49a6e72d068e7e349dac8ef791ae41ab5dfa09c0a",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 14,
+      "expected_archive_name": "chunk_0014_e39681e66bd54e27.tar.gz",
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c157bc6308e6143537318fde9b1870c7aef21c7655b1b3bcd35c9e78199c24b8.npy",
+      "expected_sha256": "c1422fcab32ed088c762ca23ad3fe00a7c917156ff31000bccf6012f8e0e1c8c",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 15,
+      "expected_archive_name": "chunk_0015_d8c4f9b1033f5a7e.tar.gz",
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c16c37bb35e4deff122bf6920827aa36f7427ee4fefebde9254bef00c46a24bc.npy",
+      "expected_sha256": "5682c82227cdd1d56c90026dd610a9243358b2fef50dd2ac6c7cb6c18e0e7488",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 15,
+      "expected_archive_name": "chunk_0015_d8c4f9b1033f5a7e.tar.gz",
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c26b88419eeb6bd5a1fc8786ef3ecfaa2ec28412297305dc15a2ea391203157c.npy",
+      "expected_sha256": "71c99021892300f6bd7d85ebde9d5d245573a1e6839f8210c07cd17161b953b5",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 15,
+      "expected_archive_name": "chunk_0015_d8c4f9b1033f5a7e.tar.gz",
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/cf1fc264a751d8c9390c286c555e53b203774ca663827fa9f4bdddf5955041fa.npy",
+      "expected_sha256": "2374918e785424d2f347c61e4dbde6ea5d995d5d254fdfdeece06efeb6d51123",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 15,
+      "expected_archive_name": "chunk_0015_d8c4f9b1033f5a7e.tar.gz",
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/d000f3ec11a0699394d140e7f3a197140c04f76adf758745a56e97aa7f11675c.npy",
+      "expected_sha256": "6b6ee0bce4c411b8397475b2ddcd90c29263c69c839911d4bdee1e9466080a5a",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 16,
+      "expected_archive_name": "chunk_0016_d794f1f93dd3cc7e.tar.gz",
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/efc82928295452c1246c96cbade567846b5083629b4f421cd591f6b4284e5c8a.npy",
+      "expected_sha256": "dda77b147555f52538942ae6d0c5ce07d256687731f88aef28af49112714257e",
+      "expected_bytes": 132796544,
+      "required_for": "FiQA genuine paid target rows; ordered anchor extraction and all three budget galleries",
+      "host": "main",
+      "chunk": 16,
+      "expected_archive_name": "chunk_0016_d794f1f93dd3cc7e.tar.gz",
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "75pct",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+        "bytes": 345952
+      },
+      "receipt_source": "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "9323d5c0c6783ce8b7a89a6d456497af602bdc5881bca3b43bb51727ed036759",
+      "expected_bytes": 177064064,
+      "required_for": "unchanged historical fixed1024 FiQA fit",
+      "host": "main",
+      "chunk": 19,
+      "expected_archive_name": "chunk_0019_6b9c63773edf24f4.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/reproduce-scripts/la2m/exp_la2m.py",
+      "expected_sha256": "37015108e855101f3855755b755836280d8bb073389b23455825980302b49c67",
+      "expected_bytes": 10861,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "reproduce-scripts/la2m/exp_la2m.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/__init__.py",
+      "expected_sha256": "56e48543ff1dad3277d8c6be8ffd5d99be67db129d63a04671be431aa8badd1d",
+      "expected_bytes": 2323,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/analysis/__init__.py",
+      "expected_sha256": "c682547c6d0307c11116d0918a37667d8def4d0e36ce0edab1768ae17833aa33",
+      "expected_bytes": 100,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/analysis/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/cli/__init__.py",
+      "expected_sha256": "e3767347592450100948939aee454f65149ba6b624ae394bfa8d2028921dcf6c",
+      "expected_bytes": 1948,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/cli/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/clustering/__init__.py",
+      "expected_sha256": "3a39eeab11c8d2762617b2566307eb616f37b79b93e10b1ec192150ad08cc53d",
+      "expected_bytes": 1350,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/clustering/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/clustering/base.py",
+      "expected_sha256": "9326ea04bc90954c429663c6951d7ac4ce0bedebdfb079b72f67172314d6ea9f",
+      "expected_bytes": 21438,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/clustering/base.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/clustering/manage.py",
+      "expected_sha256": "9bdae3b1734ca8aeaec68102d544cfc99f82a33a6a0eb8012d60f41cffc16678",
+      "expected_bytes": 7168,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/clustering/manage.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/clustering/strategies/__init__.py",
+      "expected_sha256": "df31ad7fe9ffd37da5561d9678ad68d56d8ea34a2560c0ec4eacd9df18c21a2c",
+      "expected_bytes": 447,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/clustering/strategies/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/clustering/strategies/kmeans.py",
+      "expected_sha256": "5166ec75031a8792658d74ff05c136c13cc16fe693820731192dfca61bc56815",
+      "expected_bytes": 9923,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/clustering/strategies/kmeans.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/clustering/strategies/la2m_cluster.py",
+      "expected_sha256": "591313b84827d3787c191d1f4fed441ffe8ef9e816748a9c771900690d8e488e",
+      "expected_bytes": 6207,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/clustering/strategies/la2m_cluster.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/clustering/utils.py",
+      "expected_sha256": "ede38e36942b410f43a47c82afa7d12ee9a718e56e893b009dfa63e672f75dd2",
+      "expected_bytes": 16303,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/clustering/utils.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/config/__init__.py",
+      "expected_sha256": "482de09e67f12e1715ce020a776150e9a9e391be207d46cce4b046218fa96396",
+      "expected_bytes": 1224,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/config/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/config/loader.py",
+      "expected_sha256": "cf39e73b4aa4576ac7131d7bec41992334f1c882bbf700e8f388572532bbd650",
+      "expected_bytes": 2458,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/config/loader.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/config/models.py",
+      "expected_sha256": "d26380ad82572336d15f76a0c646930df502d8ae374baa7a56c2783a5ddb7cc3",
+      "expected_bytes": 12732,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/config/models.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/config/settings.py",
+      "expected_sha256": "4b394c20a8eea3bb6ad558244139c367156ce2ff723a0312eb714a5a0cbcbd3b",
+      "expected_bytes": 1339,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/config/settings.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/core/__init__.py",
+      "expected_sha256": "daddbbe5cf021e8986867ae6996b3c155eb7f2bfb41ad4efb9b73186a3dae6e9",
+      "expected_bytes": 186,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/core/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/core/mapping.py",
+      "expected_sha256": "61cbf30d7239bd85f8bcc79b3819a3cae37c15834a7b9f7b92cc9f9e4b4b8a0b",
+      "expected_bytes": 9304,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/core/mapping.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/core/utils/__init__.py",
+      "expected_sha256": "67fed6217efac61cc5608a0b7560ea63ea79943abd108e5d0f936cf17cafbf97",
+      "expected_bytes": 393,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/core/utils/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/core/utils/creation.py",
+      "expected_sha256": "2f4c168a12dd149547d60d398697f5f4b2fac47051ab6037606dbce91bb643ec",
+      "expected_bytes": 460,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/core/utils/creation.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/core/utils/io.py",
+      "expected_sha256": "55e5cbbccf9fca7825a09cc6996efb567f00defddc4e085c1fc296acc4538757",
+      "expected_bytes": 804,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/core/utils/io.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/core/utils/metrics.py",
+      "expected_sha256": "a16526c120649b4c4d07c2405ec53db2325018eacce4942143e9138296ad8cae",
+      "expected_bytes": 683,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/core/utils/metrics.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/core/utils/validation.py",
+      "expected_sha256": "032c03c3a6ec63aa796a136cafd1e0b3021a163a97cfb9306b5ae81404b37875",
+      "expected_bytes": 364,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/core/utils/validation.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/dataset/__init__.py",
+      "expected_sha256": "53984e85e3d449a3799e9812e99b00e7b151448a7cf4f7c3b75399848467ebcf",
+      "expected_bytes": 1507,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/dataset/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/embedding/__init__.py",
+      "expected_sha256": "36dc67a6176b30dae788548f6868f2d8085e62fa4b6cfba265520702577952ec",
+      "expected_bytes": 2036,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/embedding/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/evaluation/__init__.py",
+      "expected_sha256": "70cae6e204e1e90369a70ed82d881581876afb393e803cf9c8cf9935544cde90",
+      "expected_bytes": 166,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/evaluation/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/evaluation/base.py",
+      "expected_sha256": "190abc4df377d3284220a20fba7348b6b9122b49baa173aefa45d90aecaceeba",
+      "expected_bytes": 15891,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/evaluation/base.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/evaluation/confidence.py",
+      "expected_sha256": "f2597b036b05381ecef4c2baf2cfc545043728452736b8d6e968b50a93623f3e",
+      "expected_bytes": 5702,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/evaluation/confidence.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/__init__.py",
+      "expected_sha256": "4a3de042f4325cf38cbb2e001c6ddf49585f5ba1e95d4d113b6f7f6a2fed593b",
+      "expected_bytes": 1318,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/common.py",
+      "expected_sha256": "4f21c8683a9e729b099e20d4b2ee343f9a4ac66b901311c55b3fd22db05c74a0",
+      "expected_bytes": 10374,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/common.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/contrastive_loss.py",
+      "expected_sha256": "6094d4e9383566a329ae065cbbd3c8b95fe8ab5044385f20aec08303532a2977",
+      "expected_bytes": 3986,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/contrastive_loss.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/distance.py",
+      "expected_sha256": "b3d2aad85f3084dd51d866c738d897148611853e7f64bf6fb9394763b79a2977",
+      "expected_bytes": 1346,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/distance.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/hierarchy_loss.py",
+      "expected_sha256": "56bf21dc046295fc2fe99a8de3032f04338a2d220444bed643cbd92eb81af364",
+      "expected_bytes": 11893,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/hierarchy_loss.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/lambda_rank_loss.py",
+      "expected_sha256": "20d4ac3833d79b14614a218e119a41033079982a54a2a37f8af68df46af44c73",
+      "expected_bytes": 2767,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/lambda_rank_loss.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/margin_rank.py",
+      "expected_sha256": "9ccda4a1d63eac66f7ed05b220e7ac9aea3099606bafdb28ac2362491d918af1",
+      "expected_bytes": 6314,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/margin_rank.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/ranking_losses.py",
+      "expected_sha256": "4e72f40da94cdf36cfd7e0ed2b7996e97762212203157e7dbd1b9a02ab226fb9",
+      "expected_bytes": 11524,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/ranking_losses.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/rcsls.py",
+      "expected_sha256": "6cec00cd004bba6abd602c984a10bd093e290e7d1b005587e5533814720d185b",
+      "expected_bytes": 1987,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/rcsls.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/spearman.py",
+      "expected_sha256": "b6da653cbf202508eb57cbbd7d858350ad5ae02fbe51f44713897cf282b9de37",
+      "expected_bytes": 1288,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/spearman.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/triplet.py",
+      "expected_sha256": "8aa58df7f2e3c617127240d0e0449c3986eb677b73fa7303fc03691e48edda11",
+      "expected_bytes": 5019,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/triplet.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/loss/util.py",
+      "expected_sha256": "e39b35a2d570bf3a4f26b8bf8b505a91a02976d7f82cb6b05082120272cc2790",
+      "expected_bytes": 944,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/loss/util.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/__init__.py",
+      "expected_sha256": "8e298c51db664493f47ea4d086ed393ba48830720c390e1ea0386ddb9971cf65",
+      "expected_bytes": 1273,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/cca/__init__.py",
+      "expected_sha256": "ed7949f8365ebdd629f5a8525f76e408f1339d55d78518f0233adaa17c31a173",
+      "expected_bytes": 130,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/cca/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/cca/strategy.py",
+      "expected_sha256": "de014609e949f4833998b51321d68c0f4c3d787b598ac2b7e8d505bb7d6ca8b8",
+      "expected_bytes": 6194,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/cca/strategy.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/gromov_wasserstein/__init__.py",
+      "expected_sha256": "3ea0ac50f7ec470c09bdd04f93f91678781ce5897aa1396984e225b4bdb067db",
+      "expected_bytes": 188,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/gromov_wasserstein/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/gromov_wasserstein/strategy.py",
+      "expected_sha256": "af3342d1713e8d8e97d4e0452330d6cd0551ff0ce5096a775ac36dbe2b17893f",
+      "expected_bytes": 17655,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/gromov_wasserstein/strategy.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/__init__.py",
+      "expected_sha256": "b943a524646c05918f0b4a00443f6be22ad640da40963573f2fac2e64cee0b62",
+      "expected_bytes": 5924,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/_array_loader.py",
+      "expected_sha256": "3ec19f6ef026741d3898a8d8320d11b541f62ccd0d71d4465d76487d08971cbe",
+      "expected_bytes": 7721,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/_array_loader.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/base_mapper.py",
+      "expected_sha256": "df9d4671eb7abd548e24f2312c9035fd3fd3474c680194d25c093719681ab4db",
+      "expected_bytes": 15599,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/base_mapper.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/core/__init__.py",
+      "expected_sha256": "8620c534e3e9b59d08150f4ac69433de4599ada159d3a8831371e7c530205a43",
+      "expected_bytes": 332,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/core/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/core/metrics.py",
+      "expected_sha256": "5713fbd048d94eefb803b3fa81f56cff24025d4b8108d2f128cfcad77c506fa7",
+      "expected_bytes": 236,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/core/metrics.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/core/mlp.py",
+      "expected_sha256": "8fc2a65e692efd4ae00aa9249c9e1ea18056a36a36f646c6d9b43ed597e84a30",
+      "expected_bytes": 46941,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/core/mlp.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/core/utils.py",
+      "expected_sha256": "de0bde59a158685501f64d080466906a1e20e2e8326b74092163580f8a674125",
+      "expected_bytes": 378,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/core/utils.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/expert_clusterer.py",
+      "expected_sha256": "b2ffae943e4abaaadf2936afb369e8e18633c5f2679fc804f2a3b29eff08ff58",
+      "expected_bytes": 14802,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/expert_clusterer.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/flat/__init__.py",
+      "expected_sha256": "7384a81c7d28c4a8833191a65a87c0745711921794c951a7655cb4cd644574a5",
+      "expected_bytes": 98,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/flat/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/flat/mapper.py",
+      "expected_sha256": "5c18dc761f6dc440a1d8d054584c0a992a226eae08769598d6f20cc47416e35c",
+      "expected_bytes": 12059,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/flat/mapper.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/gating_mechanism.py",
+      "expected_sha256": "63916b3d5a1d57d4c89041f7588e32d3560e6a6efec0185dda32c12c87cd518c",
+      "expected_bytes": 18012,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/gating_mechanism.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical/__init__.py",
+      "expected_sha256": "547aa60851d7d500b2c12b5be458ff15ceaa2cb8f65201d59a6f059208980e09",
+      "expected_bytes": 192,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical/clusterer.py",
+      "expected_sha256": "ba542f7cab60a62af672e8d1e13a547edbc4d63163c13a7f93ae04c5a7197117",
+      "expected_bytes": 723,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical/clusterer.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical/mapper.py",
+      "expected_sha256": "efa1b6ecb9b2ae0352bd895bdff464e8e4ed5c4736713217eef007012c768b29",
+      "expected_bytes": 24556,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical/mapper.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical_lora/__init__.py",
+      "expected_sha256": "ca344911fbbd9760985561c0a0906a98ceb0c5c840ce1b644c2b338e973dc4c0",
+      "expected_bytes": 711,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical_lora/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_config.py",
+      "expected_sha256": "9bd2d2575da6d150aecc1c727ad3c88c27f7f5c51a74d691bfcba815efda0329",
+      "expected_bytes": 385,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_config.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_expert.py",
+      "expected_sha256": "9e5c70d80950f978e026af707bbbec73eb8a08200356c7c0646f191023557d52",
+      "expected_bytes": 9449,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_expert.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_layer.py",
+      "expected_sha256": "c3f458423802aab91a4db2fa6a0b843dd5b4541a7b1a804a186859c0c9328ddd",
+      "expected_bytes": 1250,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_layer.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_trainer.py",
+      "expected_sha256": "4b0dfa22c15bbc6b239761117ce6de3e3ae573d54a1743ac3f3be7f0c6b72be9",
+      "expected_bytes": 8017,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_trainer.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/hierarchical_lora/mapper.py",
+      "expected_sha256": "1815ad833b8306f79da07b2dc4b331e1a0b581f97a96672e6ed1d156b6b60278",
+      "expected_bytes": 56181,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/hierarchical_lora/mapper.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/router.py",
+      "expected_sha256": "c0dc8d112ba9a28d3d32c46e0bad3a6112c809cde20d9d044f289cb6c3a3dfaa",
+      "expected_bytes": 2002,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/router.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/hmoe/tree_structure.py",
+      "expected_sha256": "c42947ead80ed7fe2edb911d765c7caa530ddb558783918a8c080ef7c9be0276",
+      "expected_bytes": 2907,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/hmoe/tree_structure.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/la2m/__init__.py",
+      "expected_sha256": "18bc1585e2fcd8928db5c0b3e53ac1217920b47cd91bb321e95ff818f36f0bc9",
+      "expected_bytes": 133,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/la2m/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/la2m/strategy.py",
+      "expected_sha256": "76ccfa8064b13446f05f9bba28c0414e2717e145d1ba50411d213c7fbc1bcb18",
+      "expected_bytes": 25514,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/la2m/strategy.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/linear/__init__.py",
+      "expected_sha256": "32ff248a1cafcef30252fb901d31a0b9fb4c5b2573a121dffb04535b93a8e5a5",
+      "expected_bytes": 162,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/linear/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/linear/strategy.py",
+      "expected_sha256": "dde5a6cee280d47d879518ca4f720946b56b29818c19d2f41a582b469c34f52c",
+      "expected_bytes": 16034,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/linear/strategy.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/manager.py",
+      "expected_sha256": "2ce5d7fe4bf37c387d3d5c7e728b6f6795339bf29e0a1f199c67e751de66bb48",
+      "expected_bytes": 24578,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/manager.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/nonlinear/__init__.py",
+      "expected_sha256": "a6ccec878a3f8532900b65fe01681002b4844e0a8f55a219fa17d161845fef8e",
+      "expected_bytes": 145,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/nonlinear/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/nonlinear/strategy.py",
+      "expected_sha256": "0785312ca70dd49e668090a2a004b6b9cac90c64d01331a944111b1e1fca6b1e",
+      "expected_bytes": 16941,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/nonlinear/strategy.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/procrustes/__init__.py",
+      "expected_sha256": "b65e25f4be600fee767a315d8841486517ad439f2f7af7a72ff089ee60061bce",
+      "expected_bytes": 228,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/procrustes/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/procrustes/strategy.py",
+      "expected_sha256": "0eb7d978ea2bbc19c84e7fd0a165ecd8290d1ea184a51bcc4b4368923c03a9bf",
+      "expected_bytes": 16362,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/procrustes/strategy.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/simple_linear/__init__.py",
+      "expected_sha256": "2ef7f2a35501474e298e7f9d1aae8f85edacd516b4ef4c78e04efa754b6733d6",
+      "expected_bytes": 198,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/simple_linear/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/simple_linear/strategy.py",
+      "expected_sha256": "9f22cb2c39baca27b660260c80df31da8ab6bb856160b660b5b3840c649ea821",
+      "expected_bytes": 9474,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/simple_linear/strategy.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/wrapper.py",
+      "expected_sha256": "cf277fcb5f53dbb9ca080f6691a80946941a8f3f968951f0a9b07ad39c12d8f3",
+      "expected_bytes": 5055,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/mapper/wrapper.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/pipeline/__init__.py",
+      "expected_sha256": "fba1964c77375b142c9d950b30680c858b572ac5d3178fc94918506dda3a4d78",
+      "expected_bytes": 90,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/pipeline/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/reference/__init__.py",
+      "expected_sha256": "21561e6812a749135c2b4cc5204df2bccf53a80dca6a0f28f2f1896e84065f19",
+      "expected_bytes": 393,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/reference/__init__.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/reference/base_split.py",
+      "expected_sha256": "34ea2bc6b543f3ddb5be91e201efa5af8cdc7a50c48db514ebd6da45b4e92a63",
+      "expected_bytes": 5259,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/reference/base_split.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/reference/la2m_split.py",
+      "expected_sha256": "b6da718a266664cc483cf3e84ddfe409e54be33368966c3e390c88adbfdca0b4",
+      "expected_bytes": 17063,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/reference/la2m_split.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/reference/manage.py",
+      "expected_sha256": "b1740b2cc6a1bdc37de28714668ae05983fb59933e186e14cbb80f778d974ef2",
+      "expected_bytes": 2411,
+      "required_for": "unchanged pinned upstream raw Python source",
+      "host": "main",
+      "chunk": 26,
+      "expected_archive_name": "chunk_0026_2e877f850e80af3e.tar.gz",
+      "upstream_relative_path": "src/embedding_translation/reference/manage.py",
+      "expected_hash_authority": "configs/b1c_lock.json:upstream_raw_sha256"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_queries.npy",
+      "expected_sha256": "78062f32f7f834aa04d8a0f82bc584d16a4672b393a0cb767269069709aca41c",
+      "expected_bytes": 1536128,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 28,
+      "expected_archive_name": "chunk_0028_05d1365fd8ca32c3.tar.gz"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy",
+      "expected_sha256": "6840bcf6eead122758d6f5eae3f8cf4149b7604485e405adbf4c536e45af1fbf",
+      "expected_bytes": 88532096,
+      "required_for": "unchanged frozen document/query embeddings for qrel-free fit and exact ranking",
+      "host": "main",
+      "chunk": 57,
+      "expected_archive_name": "chunk_0057_ad5f46e0373ca56c.tar.gz"
+    }
+  ],
+  "derived_slice_preflight": [
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/af975d39c5c40850850e59c3ad9b18223acdecc4b70a54584abfe5bc541e9a26.npy",
+      "expected_sha256": "dcb78c14941d9151e57fa2d119e7ed4aab8ae4d4c61ff155dc824e00d39b4b45",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 9,
+      "expected_archive_name": "chunk_0009_c4e3104cdfe63be7.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c26b88419eeb6bd5a1fc8786ef3ecfaa2ec28412297305dc15a2ea391203157c.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_25pct.npy",
+        "sha256": "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/3a65c89e12aafebc10607b9badc914a52fe12fb75ecbf9bdfcf7ebd32c26589b.npy",
+      "expected_sha256": "60f7dc958a7f18532e37e40586b9c0c1c27226b9611a845d0d47b091966ab96b",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 11,
+      "expected_archive_name": "chunk_0011_fe22b0d8c7fdd62c.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c26b88419eeb6bd5a1fc8786ef3ecfaa2ec28412297305dc15a2ea391203157c.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_50pct.npy",
+        "sha256": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/cc3a0b1e65630c952a4575fb091d36fd792d5895bd57a45e121cf41da7a76f4f.npy",
+      "expected_sha256": "44450700b77524b61151705a3f9e327917637478ce2a19608c91a9f290015eb0",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 10,
+      "expected_archive_name": "chunk_0010_fe5bc5ee1f17fb26.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/efc82928295452c1246c96cbade567846b5083629b4f421cd591f6b4284e5c8a.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_25pct.npy",
+        "sha256": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/49972975602536ec07b556f3f792208641aea3fd00fbddef09e08cea45b3f6ef.npy",
+      "expected_sha256": "1562d7fd61137a15d1d57020ef31ceca20ecfeaaf74445b62e669511ae3d3fc0",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 12,
+      "expected_archive_name": "chunk_0012_e99a6b97dbc65597.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/efc82928295452c1246c96cbade567846b5083629b4f421cd591f6b4284e5c8a.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_50pct.npy",
+        "sha256": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/fa81ab5fe9e32f4dd85ba1832c7af2e75231eaa83b667c328fb3ed4b8603e757.npy",
+      "expected_sha256": "72067d45c6b67bb36f45ab46b2b1f74a7c853fc1e49a962eda7d38b077e11131",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 10,
+      "expected_archive_name": "chunk_0010_fe5bc5ee1f17fb26.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/2189934c5245b9cc7d1b77711f277722ad085810f7c75e5c6b75d7f2a203d432.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_25pct.npy",
+        "sha256": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/366e1374a1a5eea5e4671c6168e5e8526c6d72baa25836b0308084b498f48ef5.npy",
+      "expected_sha256": "a079b60cc648ca10a3583b29ac497d540747785f406ccdb5f6fbe2959eb00dda",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 11,
+      "expected_archive_name": "chunk_0011_fe22b0d8c7fdd62c.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/2189934c5245b9cc7d1b77711f277722ad085810f7c75e5c6b75d7f2a203d432.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_50pct.npy",
+        "sha256": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/d9ba11d676ab6bb46b05b35fbb333e59d7c43a21df2662c3a7c47d40ffe0a220.npy",
+      "expected_sha256": "2d5d83362112143c3dbbda34ed3c764b9819df999f53234afec6dd1a9a6bfe83",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 10,
+      "expected_archive_name": "chunk_0010_fe5bc5ee1f17fb26.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c16c37bb35e4deff122bf6920827aa36f7427ee4fefebde9254bef00c46a24bc.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_25pct.npy",
+        "sha256": "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/001ebb347af26fbbd68448ab00150a9a3898e0ed6b3de0c3316772cfbe13bad6.npy",
+      "expected_sha256": "078adaf6bf3621d12224cc28616d4c1dc77ceb0b888fa8f674c9068d001cc539",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 11,
+      "expected_archive_name": "chunk_0011_fe22b0d8c7fdd62c.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c16c37bb35e4deff122bf6920827aa36f7427ee4fefebde9254bef00c46a24bc.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_50pct.npy",
+        "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/db04c2cdc0fe2ac80c23783c8035fd894abc2360b92660f2bd43f1221ee8dab1.npy",
+      "expected_sha256": "a9e3771a0c768433f788b2475c0d5ec9947284407a8e8d880691c5cca994d47c",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 10,
+      "expected_archive_name": "chunk_0010_fe5bc5ee1f17fb26.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/07f821b5981e257767c8f8f2cd308fd686530dfc751ebeea7e28ddf49e6b4e21.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_25pct.npy",
+        "sha256": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/61078e34e3cb31870c9e2a3ad61bfb55c1000becb048fdda41a156b42f79a4a0.npy",
+      "expected_sha256": "6810182414c6e409cf9cc31411866021770700a739c77ee6d7df35c8b1b4b9e0",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 12,
+      "expected_archive_name": "chunk_0012_e99a6b97dbc65597.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/07f821b5981e257767c8f8f2cd308fd686530dfc751ebeea7e28ddf49e6b4e21.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_50pct.npy",
+        "sha256": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/0c9cd08e353fe2ad99fdec8bfcf362ebd59d3a2a9ccd8390d8ec63f028d1b585.npy",
+      "expected_sha256": "f275495cb3a472b6196bdd744cfc6d497b68d976b7663a9fa9179dad6f9c2b91",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 11,
+      "expected_archive_name": "chunk_0011_fe22b0d8c7fdd62c.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c157bc6308e6143537318fde9b1870c7aef21c7655b1b3bcd35c9e78199c24b8.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_50pct.npy",
+        "sha256": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/049148c1161db6b55dfda115d1e8a2c5eecdc428a2d79edd0bc43d0535366cc8.npy",
+      "expected_sha256": "6fb3bfe6c049b53c15938949cd23b814b482298d014212b2635e4b8b14e89492",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 9,
+      "expected_archive_name": "chunk_0009_c4e3104cdfe63be7.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c157bc6308e6143537318fde9b1870c7aef21c7655b1b3bcd35c9e78199c24b8.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_25pct.npy",
+        "sha256": "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/bc2b567a6f3b816b7d5c23821b4715b5209c5df6141ccdcea823bf33186ffec6.npy",
+      "expected_sha256": "01ab634c1e2ed7445690388dd374b610261f8fcd9e96f2e7a1628a5aa17e7ca6",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 9,
+      "expected_archive_name": "chunk_0009_c4e3104cdfe63be7.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/d000f3ec11a0699394d140e7f3a197140c04f76adf758745a56e97aa7f11675c.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_25pct.npy",
+        "sha256": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/3bf8afdc3508e6ebf943b8d33cbc7820f128d1444fd6d982726ab40651fa7776.npy",
+      "expected_sha256": "eaede3db4d7d73e78d06786d7fb4b36c7195cedad0b88d80e927cfaba24cc4f2",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 12,
+      "expected_archive_name": "chunk_0012_e99a6b97dbc65597.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/d000f3ec11a0699394d140e7f3a197140c04f76adf758745a56e97aa7f11675c.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_50pct.npy",
+        "sha256": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/b3ad66eea7da052bca845337cc97e6cc2b0348dcacffe82ae72a2dd091c7428a.npy",
+      "expected_sha256": "61ba5675ca071641fb0f761e70b5b160c0eb0166a79298f69afbe77369dfb0dc",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 9,
+      "expected_archive_name": "chunk_0009_c4e3104cdfe63be7.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/9c8933906fb9ba533a591d245a07100252b4f785e748c702499c4e7eca3f439e.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_25pct.npy",
+        "sha256": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/38b06ed5316ecd9cf9d1c0a0fa3e780da17ceb5324b1886933c2a2ab388b5c0c.npy",
+      "expected_sha256": "a9b5abffbbc72b18c6be0a73891bfab595c015daf90b214ebb57db205a273f2c",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 11,
+      "expected_archive_name": "chunk_0011_fe22b0d8c7fdd62c.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/9c8933906fb9ba533a591d245a07100252b4f785e748c702499c4e7eca3f439e.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_50pct.npy",
+        "sha256": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/9d33fb6779b7e5a2decbcc7f7517a359d727cb1ff613fb05a75dd887a4535958.npy",
+      "expected_sha256": "dc336fb6d63f3953b7d7aeae6a4305518c05c33edfd20e59d1b74bb71fac2a37",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 9,
+      "expected_archive_name": "chunk_0009_c4e3104cdfe63be7.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/cf1fc264a751d8c9390c286c555e53b203774ca663827fa9f4bdddf5955041fa.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_25pct.npy",
+        "sha256": "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/51363f14b5922c1f97c21f100fce7c82cccb52d35d22894df548ba8cf9b05573.npy",
+      "expected_sha256": "0529f70756e3252a3bd8844206129cf31963ed8d30daeab72a051ae1ae110c17",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 12,
+      "expected_archive_name": "chunk_0012_e99a6b97dbc65597.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/cf1fc264a751d8c9390c286c555e53b203774ca663827fa9f4bdddf5955041fa.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_50pct.npy",
+        "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/cf10228e985711589f51619aec043f14e73f12f62ea66a1148a9099f6e23acb6.npy",
+      "expected_sha256": "e63a6263f4109f5ff7334cbc01461f8555558ad4acb8c31b4839122c99c3e7d0",
+      "expected_bytes": 44264576,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 10,
+      "expected_archive_name": "chunk_0010_fe5bc5ee1f17fb26.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/0491898f368dae89550bcd7229db904ae17263713d8fbb42c48972ff848e90e7.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_25pct.npy",
+        "sha256": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2",
+        "bytes": 115400
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19",
+        "bytes": 345952
+      },
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/c30102b1ed2a213d76642d33370278cf970f39c11aa723d79b52fa2832f3acb4.npy",
+      "expected_sha256": "d5581439e9639c27a49a311d2485118f5bb26e13f47a7ff03718a360775f9651",
+      "expected_bytes": 88532096,
+      "required_for": "Before fitting/ranking, derived ordered subset must match historical slice SHA256",
+      "host": "main",
+      "chunk": 12,
+      "expected_archive_name": "chunk_0012_e99a6b97dbc65597.tar.gz",
+      "acquire_original": false,
+      "derive_from_original_path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/0491898f368dae89550bcd7229db904ae17263713d8fbb42c48972ff848e90e7.npy",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "bytes": 177064064
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_50pct.npy",
+        "sha256": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24",
+        "bytes": 230680
+      },
+      "parent_source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19",
+        "bytes": 345952
+      },
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "recipe": "Join exact document row IDs from source_paid to parent_source_paid; require unique complete coverage; gather parent target rows in source_paid order; save float32 npy with historical np.save format; require expected SHA256 before fitting/ranking. Never assume prefix order."
+    }
+  ],
+  "excluded_unmatched_original_files": [
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed17/worker/proxy_full.npy",
+      "expected_sha256": "db65d915b2cc118439d7d12626feda5dac3269b0231eda34a4673ae4286c852e",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed29/worker/proxy_full.npy",
+      "expected_sha256": "5d15ab2c6b27fba65db765e2e0a421ba14aaa8d09767a8d4124a8b1e68d91ff6",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed41/worker/proxy_full.npy",
+      "expected_sha256": "500da41b51d42747980e2cd21bec9c1bb199a419c035d51653e29430b9f47294",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/minilm_distilroberta_seed53/worker/proxy_full.npy",
+      "expected_sha256": "40601d28c237c2f0ab585bea911efc41d04ad2922ad9661174ef6b6c08c1dcff",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed53/worker/proxy_full.npy",
+      "expected_sha256": "c2c6fcd466f69e040bccfc026223389766de4c0361e0189dc484efa9f0f3f079",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed67/worker/proxy_full.npy",
+      "expected_sha256": "32374b78adca33bcdee122ff1a4aa5f864c59c137caa9a6a79d00551a72d586c",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r9_work_20261025/artifact/results/p8_full_r9_20261025/converter/minilm_distilroberta_seed17/worker/proxy_full.npy",
+      "expected_sha256": "dd22fb8bd7b1f50ad8e26bb0c2ca693e537c483ec72a0d155b920792cfc34dc1",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r9_work_20261025/artifact/results/p8_full_r9_20261025/converter/minilm_distilroberta_seed29/worker/proxy_full.npy",
+      "expected_sha256": "89980f5040d38f7d102ba6e454ff4c5e80fc052d8f522fccfcf50e9d436d47c8",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/minilm_distilroberta_seed67/worker/proxy_full.npy",
+      "expected_sha256": "f5b7f9f656a558f717b8af779307de19e679f2bc3bba2350bb35ff7642444f80",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8_r9_work_20261025/artifact/results/p8_full_r9_20261025/converter/minilm_distilroberta_seed41/worker/proxy_full.npy",
+      "expected_sha256": "7a3cef68475b60544925b7a11a8c08d53f2a60282c8d8a57a952ebff2826a4a6",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "46f95d1545ba5dfe04799f89e91648d927172587f4fd33b30aa5206d9eb29541",
+      "expected_bytes": 23146308,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "9c6f227b970ae7492c5f7b1ad4b3f06f1f59b41ff85ae104356a532ca73a7214",
+      "expected_bytes": 23141702,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "0f62d194591c94d98fc939b741cb7904bcf0dab2ee5aa8be65cb5152770440ab",
+      "expected_bytes": 23141573,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "0244952f77d14fd452f705878d7ab26bf4c9ee6319c7483471075ae54c047059",
+      "expected_bytes": 23141380,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "032892ec4473c2d22a3f78896ef70b105a73df38fea92e6e3bb58e0bbe02960b",
+      "expected_bytes": 23141194,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "41919cf7d052de0da4fe9ce910cef9ff1ff568fe3aa3c7c6d3d08ddcb5916256",
+      "expected_bytes": 23141244,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "7e363fe013adef591ca28c67a7556051d9a5e3a3e0b1cf321d0c864f4bfe5c7d",
+      "expected_bytes": 23147076,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "b7c62bbccad8c11e75a1a8277f3412aefe7f554f2af3befcd632f83300303801",
+      "expected_bytes": 23147602,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "expected_sha256": "9ef98df93f0ce3320f30c969393cf0f7ae53307a96226b331e1c780d3819d6f3",
+      "expected_bytes": 23147117,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "8549fe1330cb6862e921df8e83bbd88929fe3345cfb764f7665f8d4fe7c510af",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "60f5b151ec5d55e896e4bae262441f28154c0cf819807164542bcf43d91af4f7",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "9a2611fa78411b08264726d81ec371948298780f15fa1179668a4236e870f5c2",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "092a46b3308063398ff482bf8d0e405c4e483d1ac0281249ff2bf98c63a262b9",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "776bbf6152ce8cd4b81db08da833dc1966161ed010b4f905583a491d2c41f9b1",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "52d88d2164677a9b549c15b1d71ff8ec17b7452bbf41c82168fe1f717b0fdf69",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "8075f5592708146df4f285a48db2f9bcd73a50b5cbb7b83ed754c37908c5a391",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "0a42d7857be690b5aeb6a554bdb592543d655ace032398a5df68dab114a328c9",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "expected_sha256": "718e795bbe9a472c006ecff4268edd4a195ec21c03f9439e8690b650943a20ec",
+      "expected_bytes": 177064064,
+      "reason": "Prospectively refit unavailable historical model; replace all three budget endpoints in new registry only"
+    },
+    {
+      "original_path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+      "expected_sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+      "expected_bytes": 177064064,
+      "reason": "Unavailable full E5 Y: replace acquisition dependency with genuine paid slices; never reconstruct fullY"
+    }
+  ],
+  "restore_rules": [
+    "Commit the asset-preflight protocol BEFORE deriving any25/50 arrays or anchor-target arrays. Restore/hash-check bytes only until that commit exists.",
+    "Verify downloaded whole archive against original verified receipt and embedded manifest before accepting any whitelisted member.",
+    "Extract only listed original paths; validate expected SHA256 and byte count.",
+    "Retain original absolute paths and historical receipt fields as provenance. Never relabel arrays as fresh encodings or new model fits.",
+    "Verify source-paid ID hashes, dtype, shape, unit rows and overlap consistency. Ordered anchors must be contained and extracted in exact declared order.",
+    "Derived25/50 slices must match exact historical file hashes; preserve and STOP on missing rows, mismatches or unknown serialization.",
+    "Two reused FiQA fits require unchanged historical50% ordered-top100 parity under committed preflight. Twenty-eight new FiQA fits are prospectively fresh fits, never recovered historical fits.",
+    "This manifest authorizes no numerical launch. Asset preflight requires its protocol commit; fitting/ranking/scoring require the committed full R3 scientific protocol and matching smoke."
+  ]
+}

@@ -1,0 +1,5229 @@
+{
+  "status": "COMPLETE_READ_ONLY_AUDIT",
+  "scope": "Completed quality/mechanism/all-paid/mixed diagnostics/backend correctness; no new science, thresholds or intervals",
+  "raw_sources": [
+    {
+      "campaign": "M",
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+      "release_present": true,
+      "release_identical": true
+    },
+    {
+      "campaign": "P",
+      "path": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7",
+      "release_present": true,
+      "release_identical": true
+    },
+    {
+      "campaign": "G",
+      "path": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f",
+      "release_present": true,
+      "release_identical": true
+    },
+    {
+      "campaign": "B1c",
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5",
+      "release_present": true,
+      "release_identical": true
+    },
+    {
+      "campaign": "B2",
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+      "release_present": true,
+      "release_identical": true
+    }
+  ],
+  "arithmetic_verification": {
+    "method": "Recomputed every saved mean from per_query.npy and cell index; five-seed means as original grouping; no qrels opened and no intervals recomputed",
+    "campaigns": {
+      "M": {
+        "mean_metric_values": 320,
+        "max_abs_error": 0.0
+      },
+      "P": {
+        "mean_metric_values": 56,
+        "max_abs_error": 0.0
+      },
+      "B1c": {
+        "mean_metric_values": 320,
+        "max_abs_error": 0.0
+      },
+      "B2": {
+        "mean_metric_values": 80,
+        "max_abs_error": 0.0
+      }
+    },
+    "total_mean_metric_values": 776
+  },
+  "logical_cell_counts": {
+    "B1c": 736,
+    "M": 736,
+    "P": 124,
+    "B2": 184,
+    "M_intersection_B1c": 376,
+    "P_intersection_B1c": 64,
+    "unique_union": 1340,
+    "union_partial": 1320,
+    "union_native_references": 20,
+    "definition": [
+      "dataset",
+      "encoder_pair",
+      "method",
+      "budget",
+      "fit_regime",
+      "seed"
+    ],
+    "warning": "Logical identities collapse historical replacement attempts; do not erase 38 displaced cells or treat1340 as number of physical new runs/fit jobs."
+  },
+  "mechanism_overall_macro_raw": [
+    {
+      "scope": "overall",
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "strata": 24,
+      "aggregation": "equal weight over 24 dataset/pair/budget strata; within dataset equal queries; five-seed average",
+      "ndcg10": {
+        "delta": 0.024325109040435233,
+        "ci95": [
+          0.0195818675697136,
+          0.029318485952316592
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.024325109040435233,
+          "seed_std": 0.004726550116148564,
+          "seed_range": [
+            0.017365688970446512,
+            0.030638076764707856
+          ],
+          "seeds": 5
+        },
+        "ci99_bonferroni_family95": [
+          0.01801533254696277,
+          0.03102132243820168
+        ],
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": -0.000238590391090391,
+        "ci95": [
+          -0.004978872294372295,
+          0.004305764181420427
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.00023859039109039158,
+          "seed_std": 0.004016304746537508,
+          "seed_range": [
+            -0.004881097374847375,
+            0.00566152921152921
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "scope": "overall",
+      "left": "arc2_global_tangent2_r1",
+      "right": "tangent1_l10",
+      "strata": 24,
+      "aggregation": "equal weight over 24 dataset/pair/budget strata; within dataset equal queries; five-seed average",
+      "ndcg10": {
+        "delta": 0.006923862939737235,
+        "ci95": [
+          0.004584432900988409,
+          0.009226028099450147
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.006923862939737235,
+          "seed_std": 0.0020084533271641346,
+          "seed_range": [
+            0.003827292446927387,
+            0.009036945683211683
+          ],
+          "seeds": 5
+        },
+        "ci99_bonferroni_family95": [
+          0.003809388309482942,
+          0.009959126205904258
+        ],
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": -0.0012588394475894476,
+        "ci95": [
+          -0.0036198694765882263,
+          0.0006479673671236164
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.0012588394475894478,
+          "seed_std": 0.001774075749788361,
+          "seed_range": [
+            -0.0031884860509860512,
+            0.0005221331908831909
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "scope": "overall",
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "strata": 24,
+      "aggregation": "equal weight over 24 dataset/pair/budget strata; within dataset equal queries; five-seed average",
+      "ndcg10": {
+        "delta": 0.09565304927282199,
+        "ci95": [
+          0.08032542616520105,
+          0.11153533924165686
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.09565304927282199,
+          "seed_std": 0.004068923683907757,
+          "seed_range": [
+            0.090691014279143,
+            0.10139112119859749
+          ],
+          "seeds": 5
+        },
+        "ci99_bonferroni_family95": [
+          0.07535298921225946,
+          0.11663127039230592
+        ],
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.12173441692566693,
+        "ci95": [
+          0.10320250863488364,
+          0.14160457221019723
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.12173441692566693,
+          "seed_std": 0.007350569193086659,
+          "seed_range": [
+            0.11133607480482482,
+            0.13055859927109928
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "scope": "overall",
+      "left": "tangent2_l1",
+      "right": "arc2_global_tangent2_r1",
+      "strata": 24,
+      "aggregation": "equal weight over 24 dataset/pair/budget strata; within dataset equal queries; five-seed average",
+      "ndcg10": {
+        "delta": 0.0031974956912717346,
+        "ci95": [
+          -0.0007402431692805767,
+          0.007157619090496026
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": 0.0031974956912717337,
+          "seed_std": 0.0014261530566855027,
+          "seed_range": [
+            0.0014511899112586958,
+            0.005359535138351684
+          ],
+          "seeds": 5
+        },
+        "ci99_bonferroni_family95": [
+          -0.0018903844098364442,
+          0.00830403326634241
+        ],
+        "family_interval_interpretation": "unresolved"
+      },
+      "recall100": {
+        "delta": -0.003975886752136753,
+        "ci95": [
+          -0.0072552353098290605,
+          -0.0008203766915954417
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.003975886752136752,
+          "seed_std": 0.0024534465406445658,
+          "seed_range": [
+            -0.00680780932030932,
+            -7.693787693787708e-05
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "scope": "overall",
+      "left": "tangent2_l100",
+      "right": "arc2_global_tangent2_r1",
+      "strata": 24,
+      "aggregation": "equal weight over 24 dataset/pair/budget strata; within dataset equal queries; five-seed average",
+      "ndcg10": {
+        "delta": -0.00925533869678723,
+        "ci95": [
+          -0.012286411062820052,
+          -0.006335315068491882
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.00925533869678723,
+          "seed_std": 0.0032250020729826744,
+          "seed_range": [
+            -0.014885255917325473,
+            -0.006946294267227517
+          ],
+          "seeds": 5
+        },
+        "ci99_bonferroni_family95": [
+          -0.01321398029023485,
+          -0.005510245768211927
+        ],
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.0006819990657490659,
+        "ci95": [
+          -0.0028140216531154037,
+          0.0013613815582565571
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.0006819990657490658,
+          "seed_std": 0.0027017364864950814,
+          "seed_range": [
+            -0.0031550086487586487,
+            0.0023943362193362197
+          ],
+          "seeds": 5
+        }
+      }
+    }
+  ],
+  "all_paid_means_raw": [
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "procrustes_global",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.28582824088854003,
+        "seed_std": 0.0040242781990007005,
+        "seed_range": [
+          0.2818624073005776,
+          0.2925196694367573
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.7062091375948645,
+        "delta_from_full_y": -0.11890772990615245
+      },
+      "recall100": {
+        "mean": 0.6687918004218006,
+        "seed_std": 0.005208185970666839,
+        "seed_range": [
+          0.6642914973914976,
+          0.6766994338994339
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9501338166151927,
+        "delta_from_full_y": -0.03510041847041834
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "arc2_global_tangent2_r1",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.3075048582716371,
+        "seed_std": 0.0060170412259434635,
+        "seed_range": [
+          0.30091263858686196,
+          0.3171884442762732
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.7597665650222695,
+        "delta_from_full_y": -0.09723111252305539
+      },
+      "recall100": {
+        "mean": 0.6765693384393384,
+        "seed_std": 0.0017410447192911882,
+        "seed_range": [
+          0.6746748307248307,
+          0.6790622544122544
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9611831474769232,
+        "delta_from_full_y": -0.02732288045288056
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "la2m20_integration_script_adaptation",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.2376740142398725,
+        "seed_std": 0.003023951966231805,
+        "seed_range": [
+          0.23385176885644032,
+          0.24217813707977232
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.5872322486513948,
+        "delta_from_full_y": -0.16706195655481998
+      },
+      "recall100": {
+        "mean": 0.4655179331779332,
+        "seed_std": 0.0069498985672226295,
+        "seed_range": [
+          0.45476865356865365,
+          0.4726482628482629
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.6613483153863561,
+        "delta_from_full_y": -0.23837428571428576
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "simplelinear_official_final50_mlp5",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.2359531204225403,
+        "seed_std": 0.0025596075272601403,
+        "seed_range": [
+          0.23385577205543323,
+          0.24023620309840724
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.5829803562041945,
+        "delta_from_full_y": -0.16878285037215218
+      },
+      "recall100": {
+        "mean": 0.4325114252414252,
+        "seed_std": 0.0021902484807144068,
+        "seed_range": [
+          0.42979325674325675,
+          0.43459710289710296
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.614456892167538,
+        "delta_from_full_y": -0.27138079365079376
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "ridge_affine_l10_bias_regularized",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.28904545781234714,
+        "seed_std": 0.005862274137717635,
+        "seed_range": [
+          0.28176814454056853,
+          0.29817067813674836
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.7141580651821262,
+        "delta_from_full_y": -0.11569051298234534
+      },
+      "recall100": {
+        "mean": 0.6373765623265621,
+        "seed_std": 0.0017932801293405445,
+        "seed_range": [
+          0.6344430125430123,
+          0.6393414973914971
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9055030659802736,
+        "delta_from_full_y": -0.06651565656565683
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "embedding_converter_paper_spec",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.24963647764120794,
+        "seed_std": 0.0036549951709085094,
+        "seed_range": [
+          0.24733776158100698,
+          0.2560652278733313
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.6167884637262431,
+        "delta_from_full_y": -0.15509949315348454
+      },
+      "recall100": {
+        "mean": 0.5429543900543903,
+        "seed_std": 0.010933544509593428,
+        "seed_range": [
+          0.5311742091242092,
+          0.5576469086469087
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.7713601251465578,
+        "delta_from_full_y": -0.1609378288378287
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "procrustes_global",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.3333864741159597,
+        "seed_std": 0.001104006842178363,
+        "seed_range": [
+          0.33185963460737283,
+          0.334941820997219
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.82371347785412,
+        "delta_from_full_y": -0.0713494966787328
+      },
+      "recall100": {
+        "mean": 0.6904948307248308,
+        "seed_std": 0.0020251337404395674,
+        "seed_range": [
+          0.689058164058164,
+          0.6939581640581641
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9809667051179043,
+        "delta_from_full_y": -0.013397388167388224
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "arc2_global_tangent2_r1",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.36714602143626496,
+        "seed_std": 0.0008532151701681881,
+        "seed_range": [
+          0.3660662051912531,
+          0.3684578323803609
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.907124762633229,
+        "delta_from_full_y": -0.03758994935842752
+      },
+      "recall100": {
+        "mean": 0.6922001554001553,
+        "seed_std": 0.0004884145297125968,
+        "seed_range": [
+          0.6918763458763458,
+          0.6930509490509488
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9833894122164548,
+        "delta_from_full_y": -0.011692063492063642
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "la2m20_integration_script_adaptation",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.3389234669245038,
+        "seed_std": 0.0026576101038833636,
+        "seed_range": [
+          0.3344679075390639,
+          0.34110880716424574
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.8373939836852976,
+        "delta_from_full_y": -0.06581250387018867
+      },
+      "recall100": {
+        "mean": 0.695005148185148,
+        "seed_std": 0.003006769175004308,
+        "seed_range": [
+          0.6922049894549894,
+          0.6995748307248307
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9873743870601989,
+        "delta_from_full_y": -0.008887070707070954
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "simplelinear_official_final50_mlp5",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.3323162470088491,
+        "seed_std": 0.002087696538524992,
+        "seed_range": [
+          0.330303091986737,
+          0.3346850208718144
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.8210692179307699,
+        "delta_from_full_y": -0.07241972378584338
+      },
+      "recall100": {
+        "mean": 0.6777889244089242,
+        "seed_std": 0.001712297327442935,
+        "seed_range": [
+          0.6759661005661004,
+          0.6797471028971027
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9629157791737264,
+        "delta_from_full_y": -0.026103294483294737
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "ridge_affine_l10_bias_regularized",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.36726327671078884,
+        "seed_std": 0.0011952010838972326,
+        "seed_range": [
+          0.3660168086567489,
+          0.36899369391616943
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9074144706972138,
+        "delta_from_full_y": -0.037472694083903635
+      },
+      "recall100": {
+        "mean": 0.6800430125430126,
+        "seed_std": 0.00042328083664002224,
+        "seed_range": [
+          0.6795763458763459,
+          0.6804930125430125
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9661180991789622,
+        "delta_from_full_y": -0.023849206349206398
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "embedding_converter_paper_spec",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.32576143937636975,
+        "seed_std": 0.003958035829306105,
+        "seed_range": [
+          0.32228238587625024,
+          0.33012805522488287
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.8048739496436219,
+        "delta_from_full_y": -0.07897453141832272
+      },
+      "recall100": {
+        "mean": 0.6632694838494837,
+        "seed_std": 0.003970613751789556,
+        "seed_range": [
+          0.6582630480630479,
+          0.6690090076590075
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9422884158221452,
+        "delta_from_full_y": -0.04062273504273528
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "full_x",
+      "regime": "reference",
+      "budget": "full",
+      "ndcg10": {
+        "mean": 0.38996146433493817,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      },
+      "recall100": {
+        "mean": 0.7001835830835832,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "minilm_distilroberta",
+      "method": "full_y",
+      "regime": "reference",
+      "budget": "full",
+      "ndcg10": {
+        "mean": 0.4047359707946925,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      },
+      "recall100": {
+        "mean": 0.703892218892219,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "procrustes_global",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.31003589203103826,
+        "seed_std": 0.0025418665006137534,
+        "seed_range": [
+          0.30617966822721376,
+          0.31304658330855417
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.7967360016674165,
+        "delta_from_full_y": -0.07909663289841423
+      },
+      "recall100": {
+        "mean": 0.6374290809190808,
+        "seed_std": 0.006658151962821442,
+        "seed_range": [
+          0.6308674936174936,
+          0.6469668220668217
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9147990163319527,
+        "delta_from_full_y": -0.059367777777777686
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "arc2_global_tangent2_r1",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.3116352075358866,
+        "seed_std": 0.0033730526403901854,
+        "seed_range": [
+          0.30666886495031787,
+          0.3141667923698917
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.8008459523972823,
+        "delta_from_full_y": -0.07749731739356591
+      },
+      "recall100": {
+        "mean": 0.6209245754245754,
+        "seed_std": 0.008031681490397846,
+        "seed_range": [
+          0.6128747585747584,
+          0.6306764679764676
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.8911127650400453,
+        "delta_from_full_y": -0.07587228327228313
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "la2m20_integration_script_adaptation",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.22999031724981683,
+        "seed_std": 0.0032966492359557107,
+        "seed_range": [
+          0.2262999395418282,
+          0.234612654941793
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.5910333948351214,
+        "delta_from_full_y": -0.15914220767963566
+      },
+      "recall100": {
+        "mean": 0.45060435564435564,
+        "seed_std": 0.014096534917658159,
+        "seed_range": [
+          0.4353281773781774,
+          0.4720517926517926
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.6466796599615429,
+        "delta_from_full_y": -0.24619250305250284
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "simplelinear_official_final50_mlp5",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.1941674316269752,
+        "seed_std": 0.003686905943149769,
+        "seed_range": [
+          0.191816429893957,
+          0.20054135981341265
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.4989750770953331,
+        "delta_from_full_y": -0.1949650933024773
+      },
+      "recall100": {
+        "mean": 0.2601557031857032,
+        "seed_std": 0.005129770421141352,
+        "seed_range": [
+          0.2544580086580087,
+          0.2669430014430015
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.3733594661609747,
+        "delta_from_full_y": -0.4366411555111553
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "ridge_affine_l10_bias_regularized",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.14792156930525965,
+        "seed_std": 0.004371236756280435,
+        "seed_range": [
+          0.14312308778893726,
+          0.15419362972706913
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.38013159997889406,
+        "delta_from_full_y": -0.24121095562419284
+      },
+      "recall100": {
+        "mean": 0.3052699888999889,
+        "seed_std": 0.0067300106770744085,
+        "seed_range": [
+          0.2941749805749806,
+          0.3104892662892663
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.43810471458051825,
+        "delta_from_full_y": -0.39152686979686957
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "embedding_converter_paper_spec",
+      "regime": "fixed1024",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.1396653650449041,
+        "seed_std": 0.005300252719735977,
+        "seed_range": [
+          0.13395780661172066,
+          0.14690017300840932
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.35891465271432815,
+        "delta_from_full_y": -0.2494671598845484
+      },
+      "recall100": {
+        "mean": 0.3358126406926408,
+        "seed_std": 0.015430676342313054,
+        "seed_range": [
+          0.3138187534687534,
+          0.357099827949828
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.4819376501218357,
+        "delta_from_full_y": -0.3609842180042177
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "procrustes_global",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.33620246107664287,
+        "seed_std": 0.0010016325858809164,
+        "seed_range": [
+          0.33454094083995023,
+          0.3371798593499167
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.8639793374701702,
+        "delta_from_full_y": -0.05293006385280963
+      },
+      "recall100": {
+        "mean": 0.653388922188922,
+        "seed_std": 0.0018893513506166807,
+        "seed_range": [
+          0.6517841602841601,
+          0.6566198745698744
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9377035990243734,
+        "delta_from_full_y": -0.043407936507936506
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "arc2_global_tangent2_r1",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.29186698206096195,
+        "seed_std": 0.0011892458073125207,
+        "seed_range": [
+          0.29060998983803665,
+          0.29354008514584023
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.750045198904604,
+        "delta_from_full_y": -0.09726554286849054
+      },
+      "recall100": {
+        "mean": 0.5594899234099235,
+        "seed_std": 0.0014070347947297767,
+        "seed_range": [
+          0.5571710345210347,
+          0.5608377011877014
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.8029455305758341,
+        "delta_from_full_y": -0.13730693528693494
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "la2m20_integration_script_adaptation",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.3293413014310004,
+        "seed_std": 0.004652237535130902,
+        "seed_range": [
+          0.32563480582043747,
+          0.33702792554607863
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.846347401802787,
+        "delta_from_full_y": -0.05979122349845212
+      },
+      "recall100": {
+        "mean": 0.6473306193806192,
+        "seed_std": 0.002887414755017567,
+        "seed_range": [
+          0.6430397158397158,
+          0.6506911810411807
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.9290090954073036,
+        "delta_from_full_y": -0.04946623931623928
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "simplelinear_official_final50_mlp5",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.16794940738858383,
+        "seed_std": 0.004714366917688017,
+        "seed_range": [
+          0.161262591864953,
+          0.1745085241928275
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.43159951078114606,
+        "delta_from_full_y": -0.22118311754086867
+      },
+      "recall100": {
+        "mean": 0.3617845476745477,
+        "seed_std": 0.00874528358324197,
+        "seed_range": [
+          0.35145684870684885,
+          0.3745337828837829
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.519210933802361,
+        "delta_from_full_y": -0.33501231102231077
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "ridge_affine_l10_bias_regularized",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.2270145751549427,
+        "seed_std": 0.0020700279685085133,
+        "seed_range": [
+          0.22448977281467847,
+          0.22947807965855566
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.583386277454189,
+        "delta_from_full_y": -0.1621179497745098
+      },
+      "recall100": {
+        "mean": 0.42451112110112116,
+        "seed_std": 0.0019649568838922197,
+        "seed_range": [
+          0.4229511211011212,
+          0.42770112110112113
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.6092322544264005,
+        "delta_from_full_y": -0.2722857375957373
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "embedding_converter_paper_spec",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "ndcg10": {
+        "mean": 0.2625194643556271,
+        "seed_std": 0.005972295944122733,
+        "seed_range": [
+          0.2565755946538005,
+          0.2722135846005301
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.6746274020739346,
+        "delta_from_full_y": -0.12661306057382538
+      },
+      "recall100": {
+        "mean": 0.5789074192474193,
+        "seed_std": 0.0037742532334491814,
+        "seed_range": [
+          0.5745861860361858,
+          0.5824741591741591
+        ],
+        "seeds": 5,
+        "descriptive": true,
+        "full_y_retention": 0.830812326464969,
+        "delta_from_full_y": -0.11788943944943919
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "full_x",
+      "regime": "reference",
+      "budget": "full",
+      "ndcg10": {
+        "mean": 0.3464782895762744,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      },
+      "recall100": {
+        "mean": 0.6453320235320233,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "full_y",
+      "regime": "reference",
+      "budget": "full",
+      "ndcg10": {
+        "mean": 0.3891325249294525,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      },
+      "recall100": {
+        "mean": 0.6967968586968585,
+        "seed_std": null,
+        "seed_range": null,
+        "seeds": 1,
+        "descriptive": true
+      }
+    }
+  ],
+  "all_paid_all32_contrasts_raw": [
+    {
+      "id": "minilm_distilroberta__within_method__procrustes_global",
+      "kind": "within_method",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "procrustes_global",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "procrustes_global",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.04755823322741981,
+        "ci95": [
+          0.03728690250327297,
+          0.05845578024921821
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.0475582332274198,
+          "seed_std": 0.0033641907521773733,
+          "seed_range": [
+            0.04242215156046191,
+            0.051602880917325296
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.031519052374591704,
+          0.06501270561336588
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.021703030303030304,
+        "ci95": [
+          0.00974163347763348,
+          0.03440971645021645
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.021703030303030304,
+          "seed_std": 0.0065497005647531786,
+          "seed_range": [
+            0.012758730158730162,
+            0.029666666666666664
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__within_method__arc2_global_tangent2_r1",
+      "kind": "within_method",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.05964116316462802,
+        "ci95": [
+          0.04745037841766362,
+          0.07261138137489603
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.05964116316462802,
+          "seed_std": 0.005426155358215546,
+          "seed_range": [
+            0.051269388104087925,
+            0.06609533941830437
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.03934110686868015,
+          0.08060437708604837
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.015630816960816963,
+        "ci95": [
+          0.002192888528138526,
+          0.029358513930513908
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.01563081696081696,
+          "seed_std": 0.002015481024298758,
+          "seed_range": [
+            0.01281409146409146,
+            0.017645959595959597
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__within_method__la2m20_integration_script_adaptation",
+      "kind": "within_method",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.10124945268463131,
+        "ci95": [
+          0.0818071820670705,
+          0.12160712476456993
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.10124945268463122,
+          "seed_std": 0.001881606535468895,
+          "seed_range": [
+            0.09893067008447344,
+            0.10341312608025627
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.07164544497337885,
+          0.13539736812395492
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.229487215007215,
+        "ci95": [
+          0.1984856056998557,
+          0.26104978643578647
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.229487215007215,
+          "seed_std": 0.00536341105477085,
+          "seed_range": [
+            0.22370935175935178,
+            0.23800617715617714
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__within_method__simplelinear_official_final50_mlp5",
+      "kind": "within_method",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.0963631265863091,
+        "ci95": [
+          0.07700622917827572,
+          0.1163588096787122
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.09636312658630906,
+          "seed_std": 0.0024160466170358515,
+          "seed_range": [
+            0.09401440539683266,
+            0.09961210187039246
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.06574511336444609,
+          0.13031579453633346
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.24527749916749914,
+        "ci95": [
+          0.21014140295815298,
+          0.2803422098734598
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.24527749916749925,
+          "seed_std": 0.003541079479075368,
+          "seed_range": [
+            0.24147827727827725,
+            0.24905677655677672
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__within_method__ridge_affine_l10_bias_regularized",
+      "kind": "within_method",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.07821781889844204,
+        "ci95": [
+          0.063639660390611,
+          0.09337003494338257
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.07821781889844207,
+          "seed_std": 0.005408846361110083,
+          "seed_range": [
+            0.07082301577942152,
+            0.08609527026876884
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.05477736252857537,
+          0.10288307719154521
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.04266645021645022,
+        "ci95": [
+          0.025388433621933625,
+          0.06105731349206347
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.042666450216450214,
+          "seed_std": 0.0017649379192877736,
+          "seed_range": [
+            0.04048484848484847,
+            0.04538333333333333
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__within_method__embedding_converter_paper_spec",
+      "kind": "within_method",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.0761249617351618,
+        "ci95": [
+          0.06124778311585377,
+          0.09193142291002193
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.07612496173516183,
+          "seed_std": 0.006340614228281635,
+          "seed_range": [
+            0.06656213656558523,
+            0.08279029364387586
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.053431517567604205,
+          0.10214969752867181
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.12031509379509381,
+        "ci95": [
+          0.1028287269119769,
+          0.1384042514430014
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.12031509379509382,
+          "seed_std": 0.011199023239535963,
+          "seed_range": [
+            0.10688583638583639,
+            0.1319538461538462
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__procrustes_global",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "procrustes_global",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.03375954732030533,
+        "ci95": [
+          0.0241099466663953,
+          0.04404567583409277
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.033759547320305325,
+          "seed_std": 0.0003138837740250079,
+          "seed_range": [
+            0.03351601138314186,
+            0.03420657058388042
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.018645329403840227,
+          0.05040795355988812
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.0017053246753246736,
+        "ci95": [
+          -0.012078228715728716,
+          0.015719799783549773
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": 0.0017053246753246753,
+          "seed_std": 0.0019984335324254093,
+          "seed_range": [
+            -0.0018595959595959597,
+            0.0028181818181818186
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.028222554511761314,
+        "ci95": [
+          0.016899637136538557,
+          0.039790813518619524
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.028222554511761318,
+          "seed_std": 0.001999628639381227,
+          "seed_range": [
+            0.02656841005855596,
+            0.03159829765218961
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.010129417979752293,
+          0.04729686135338356
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": -0.0028049927849927857,
+        "ci95": [
+          -0.018304926046176048,
+          0.012420124458874457
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.002804992784992786,
+          "seed_std": 0.002600053442480383,
+          "seed_range": [
+            -0.006523881673881674,
+            -0.00010642135642135986
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.034829774427415756,
+        "ci95": [
+          0.027452523846899942,
+          0.042640186257219305
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.03482977442741575,
+          "seed_std": 0.0018402935714970671,
+          "seed_range": [
+            0.03274086161728058,
+            0.03677170936320519
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.023544184937148122,
+          0.04719119478704116
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.014411230991230994,
+        "ci95": [
+          0.00568281793206793,
+          0.0235316153013653
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.014411230991230992,
+          "seed_std": 0.001505839703673455,
+          "seed_range": [
+            0.012351465201465201,
+            0.015910245310245312
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.00011725527452398765,
+        "ci95": [
+          -0.004625659202632946,
+          0.00413554117820924
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.0001172552745239876,
+          "seed_std": 0.0006113664305195812,
+          "seed_range": [
+            -0.0008554368041709251,
+            0.0007362642612591348
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.00754001759934293,
+          0.006532341944925181
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "unresolved"
+      },
+      "recall100": {
+        "delta": 0.012157142857142858,
+        "ci95": [
+          0.0028317063492063503,
+          0.022804880952380945
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.012157142857142856,
+          "seed_std": 0.000357076713451736,
+          "seed_range": [
+            0.011605555555555556,
+            0.012557936507936508
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__embedding_converter_paper_spec",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.041384582059895376,
+        "ci95": [
+          0.02991963829911289,
+          0.053459940575635176
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.04138458205989536,
+          "seed_std": 0.004103460911488156,
+          "seed_range": [
+            0.03687992278028356,
+            0.045830467941444415
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.02361352378412802,
+          0.06096949393433256
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.02893067155067155,
+        "ci95": [
+          0.015501477106227107,
+          0.04306585805860806
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.028930671550671548,
+          "seed_std": 0.003896274219795284,
+          "seed_range": [
+            0.023089560439560435,
+            0.03383552003552004
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__procrustes_global",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "procrustes_global",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.02588161584432268,
+        "ci95": [
+          -0.03417003916559222,
+          -0.01801580386428984
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.025881615844322685,
+          "seed_std": 0.005376441007349862,
+          "seed_range": [
+            -0.03255264963104094,
+            -0.01775337672094605
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.03980693975125909,
+          -0.013428284825739776
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.013925492285492285,
+        "ci95": [
+          -0.02471724236874237,
+          -0.00387150865800866
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.013925492285492285,
+          "seed_std": 0.0035437527293490016,
+          "seed_range": [
+            -0.019283333333333336,
+            -0.009995909645909646
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.0314186086528667,
+        "ci95": [
+          -0.042012576023148736,
+          -0.021343247247171016
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.031418608652866685,
+          "seed_std": 0.005557038034077977,
+          "seed_range": [
+            -0.03768872467442178,
+            -0.023920362887972738
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.048611616293263764,
+          -0.015633681782311927
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.01843580974580974,
+        "ci95": [
+          -0.031151668109668112,
+          -0.006471952963703002
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.018435809745809745,
+          "seed_std": 0.003755715656462756,
+          "seed_range": [
+            -0.024169841269841272,
+            -0.01371257631257631
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.024811388737212257,
+        "ci95": [
+          -0.03372933890101637,
+          -0.0162610225585409
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.024811388737212267,
+          "seed_std": 0.005772186425378572,
+          "seed_range": [
+            -0.03335447780102385,
+            -0.01749657659554149
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.03905427748357963,
+          -0.01125245236317356
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.0012195859695859693,
+        "ci95": [
+          -0.013927211399711398,
+          0.011343444222444219
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.0012195859695859701,
+          "seed_std": 0.003018532397912526,
+          "seed_range": [
+            -0.005072272172272172,
+            0.0013113053613053624
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.05975841843915199,
+        "ci95": [
+          -0.0732611341251776,
+          -0.04688267477535806
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.05975841843915203,
+          "seed_std": 0.005522419921201973,
+          "seed_range": [
+            -0.06695077622247533,
+            -0.05180524963989667
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.08258263920537419,
+          -0.03854644831580933
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.0034736741036741044,
+        "ci95": [
+          -0.01930641228216228,
+          0.012448405982905978
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.0034736741036741044,
+          "seed_std": 0.001802424115134331,
+          "seed_range": [
+            -0.005151515151515157,
+            -0.0007640914640914644
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__embedding_converter_paper_spec",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "minilm_distilroberta",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.01825658110473264,
+        "ci95": [
+          -0.029725319923615153,
+          -0.007355581073365403
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.01825658110473264,
+          "seed_std": 0.008720804143743958,
+          "seed_range": [
+            -0.029215416638020856,
+            -0.005438920162643485
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.036885129550449265,
+          -0.0010228000757110728
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": 0.01329985458985459,
+        "ci95": [
+          -0.0013440501443001446,
+          0.028125041847041846
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": 0.013299854589854587,
+          "seed_std": 0.0038005579372999646,
+          "seed_range": [
+            0.008477849927849928,
+            0.017647691197691193
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__within_method__procrustes_global",
+      "kind": "within_method",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "procrustes_global",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "procrustes_global",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.026166569045604653,
+        "ci95": [
+          0.015887924596992536,
+          0.03687198027558654
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.026166569045604653,
+          "seed_std": 0.0028845704184281714,
+          "seed_range": [
+            0.023459147079647746,
+            0.031000191122702855
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.009889144519871704,
+          0.04433239068858806
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.01595984126984127,
+        "ci95": [
+          0.004076876984126986,
+          0.028075480158730154
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.01595984126984127,
+          "seed_std": 0.005454996320473513,
+          "seed_range": [
+            0.009653052503052501,
+            0.02170238095238095
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__within_method__arc2_global_tangent2_r1",
+      "kind": "within_method",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.019768225474924635,
+        "ci95": [
+          -0.04220860561973594,
+          0.002119824562517512
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.019768225474924635,
+          "seed_std": 0.0033232662040852097,
+          "seed_range": [
+            -0.023552154355393862,
+            -0.015668827243269116
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.056329874306672884,
+          0.016636927373489714
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "unresolved"
+      },
+      "recall100": {
+        "delta": -0.06143465201465201,
+        "ci95": [
+          -0.08320324206349206,
+          -0.04010777777777783
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.061434652014652015,
+          "seed_std": 0.006942240467336826,
+          "seed_range": [
+            -0.06983876678876678,
+            -0.053425946275946275
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__within_method__la2m20_integration_script_adaptation",
+      "kind": "within_method",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.09935098418118357,
+        "ci95": [
+          0.074312816152294,
+          0.12541197408002167
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.09935098418118361,
+          "seed_std": 0.006856444498273121,
+          "seed_range": [
+            0.09345042287369278,
+            0.11072798600425045
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.0591827837656197,
+          0.14081569850732556
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.19672626373626373,
+        "ci95": [
+          0.16608131532356535,
+          0.22809773992673985
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.19672626373626373,
+          "seed_std": 0.012676835251002867,
+          "seed_range": [
+            0.17594494394494387,
+            0.20771153846153845
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__within_method__simplelinear_official_final50_mlp5",
+      "kind": "within_method",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.026218024238391563,
+        "ci95": [
+          -0.05235215208975665,
+          -0.0005534596528941315
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.026218024238391573,
+          "seed_std": 0.005177387834592949,
+          "seed_range": [
+            -0.03183472854377413,
+            -0.019657356102212812
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.06749798710029015,
+          0.013473519311257499
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "unresolved"
+      },
+      "recall100": {
+        "delta": 0.10162884448884449,
+        "ci95": [
+          0.06302743792318792,
+          0.14078851692751687
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.10162884448884454,
+          "seed_std": 0.01135696417373831,
+          "seed_range": [
+            0.09182277167277171,
+            0.12007577422577431
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__within_method__ridge_affine_l10_bias_regularized",
+      "kind": "within_method",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.07909300584968317,
+        "ci95": [
+          0.056282543155599205,
+          0.10170423266951976
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.07909300584968318,
+          "seed_std": 0.004423186126248094,
+          "seed_range": [
+            0.07502699540125254,
+            0.08527710234098598
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.043499568065045555,
+          0.11702576028151837
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.11924113220113222,
+        "ci95": [
+          0.09643627181152181,
+          0.14288552666777668
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.1192411322011322,
+          "seed_std": 0.006851831971056559,
+          "seed_range": [
+            0.1133785214785215,
+            0.1308261405261405
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__within_method__embedding_converter_paper_spec",
+      "kind": "within_method",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "fixed1024"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.12285409931072318,
+        "ci95": [
+          0.10616858349330832,
+          0.14058924750770382
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.12285409931072315,
+          "seed_std": 0.008942889914353937,
+          "seed_range": [
+            0.11319915460378618,
+            0.13726151913439008
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.09706777797129676,
+          0.15316051617766924
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.24309477855477857,
+        "ci95": [
+          0.2170528377178377,
+          0.2696573645798646
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.2430947785547785,
+          "seed_std": 0.013381593265827095,
+          "seed_range": [
+            0.22537433122433118,
+            0.26122897102897097
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__procrustes_global",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "procrustes_global",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.0443354790156809,
+        "ci95": [
+          -0.06640692702701478,
+          -0.022976456944481204
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.0443354790156809,
+          "seed_std": 0.001794250006322547,
+          "seed_range": [
+            -0.04617982164286784,
+            -0.041987726968042004
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.07969591141306612,
+          -0.00927207701618083
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.0938989987789988,
+        "ci95": [
+          -0.11695531257631257,
+          -0.07132316941391942
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.0938989987789988,
+          "seed_std": 0.001917971589043215,
+          "seed_range": [
+            -0.09582979242979243,
+            -0.09146312576312575
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.03747431937003851,
+        "ci95": [
+          -0.05857298400789254,
+          -0.016824419351755816
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.037474319370038506,
+          "seed_std": 0.003989077040232158,
+          "seed_range": [
+            -0.04348784040023846,
+            -0.033081591948529526
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.07058268018538005,
+          -0.003758372247374875
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.08784069597069598,
+        "ci95": [
+          -0.11127083882783882,
+          -0.06530539194139194
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.08784069597069596,
+          "seed_std": 0.0018527978035319107,
+          "seed_range": [
+            -0.08985347985347983,
+            -0.08586868131868132
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.12391757467237823,
+        "ci95": [
+          0.10435375246023457,
+          0.14408195310550403
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.12391757467237816,
+          "seed_std": 0.0053952941696258075,
+          "seed_range": [
+            0.11610146564520915,
+            0.13129062200695518
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.09382137946545674,
+          0.15672368372932174
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.19770537573537575,
+        "ci95": [
+          0.17253625524475524,
+          0.22385200885225887
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.1977053757353757,
+          "seed_std": 0.008790832390729834,
+          "seed_range": [
+            0.18513725163725162,
+            0.20886418581418578
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.0648524069060192,
+        "ci95": [
+          0.05060874356271226,
+          0.07977392875429595
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.06485240690601925,
+          "seed_std": 0.0022855490388646944,
+          "seed_range": [
+            0.061131910179480976,
+            0.06651026489237026
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.043521312095724345,
+          0.0893493930084069
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.1349788023088023,
+        "ci95": [
+          0.11016337373737374,
+          0.16089447474747473
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.1349788023088023,
+          "seed_std": 0.002242317474025691,
+          "seed_range": [
+            0.1321699134199134,
+            0.13736991341991342
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__embedding_converter_paper_spec",
+      "kind": "arc2_allpaid_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "allpaid28819"
+      },
+      "right": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.029347517705334787,
+        "ci95": [
+          0.0017862511963257896,
+          0.05698722425278101
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.029347517705334787,
+          "seed_std": 0.005449732474162901,
+          "seed_range": [
+            0.021326500545310264,
+            0.035977619218107645
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.015572921137816255,
+          0.07476185576148772
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "unresolved"
+      },
+      "recall100": {
+        "delta": -0.019417495837495836,
+        "ci95": [
+          -0.04931632228882228,
+          0.010748592185592118
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "mapping_seed_variability": {
+          "mean": -0.019417495837495836,
+          "seed_std": 0.0036769381125022382,
+          "seed_range": [
+            -0.023025346875346884,
+            -0.013748484848484843
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__procrustes_global",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "procrustes_global",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.02456725354075626,
+        "ci95": [
+          -0.03305806428498829,
+          -0.01652398522381794
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.024567253540756263,
+          "seed_std": 0.0034955266459934394,
+          "seed_range": [
+            -0.0305109943995987,
+            -0.02234358619477125
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.03860940902563068,
+          -0.012263144604211443
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.032464346764346765,
+        "ci95": [
+          -0.044156007020757025,
+          -0.02148170390720391
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.032464346764346765,
+          "seed_std": 0.007408901883712413,
+          "seed_range": [
+            -0.04031178266178267,
+            -0.02471587301587301
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "la2m20_integration_script_adaptation",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": -0.017706093895113878,
+        "ci95": [
+          -0.027658665468203357,
+          -0.007980362772655413
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.017706093895113875,
+          "seed_std": 0.005177064672283473,
+          "seed_range": [
+            -0.02337902573802414,
+            -0.011770663091227793
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          -0.034378188582843645,
+          -0.002177822261029999
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "below_zero"
+      },
+      "recall100": {
+        "delta": -0.02640604395604396,
+        "ci95": [
+          -0.03832000427350428,
+          -0.015057079975579996
+        ],
+        "descriptive": true,
+        "interval_interpretation": "below_zero",
+        "mapping_seed_variability": {
+          "mean": -0.026406043956043956,
+          "seed_std": 0.006780816156358752,
+          "seed_range": [
+            -0.03512197802197802,
+            -0.01913650793650794
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "simplelinear_official_final50_mlp5",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.14368580014730287,
+        "ci95": [
+          0.12328733601509201,
+          0.16504532232048863
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.14368580014730284,
+          "seed_std": 0.0039352754897138895,
+          "seed_range": [
+            0.13947804875191896,
+            0.14832068491517528
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.11257062133255318,
+          0.17847889967897027
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.2591400277500278,
+        "ci95": [
+          0.2312463246753247,
+          0.287408365051615
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.25914002775002765,
+          "seed_std": 0.013300068778147767,
+          "seed_range": [
+            0.24631557886557875,
+            0.27561143856143855
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "ridge_affine_l10_bias_regularized",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.08462063238094385,
+        "ci95": [
+          0.058418681263727935,
+          0.11169473339064569
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.08462063238094389,
+          "seed_std": 0.0029850203676145297,
+          "seed_range": [
+            0.08118308665020506,
+            0.08821715684261805
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.04215631938374129,
+          0.13064670210114704
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.19641345432345433,
+        "ci95": [
+          0.16553855641580642,
+          0.22868346067821063
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.1964134543234543,
+          "seed_std": 0.007540934280179295,
+          "seed_range": [
+            0.1881528804528804,
+            0.2041171661671662
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__embedding_converter_paper_spec",
+      "kind": "arc2_fixed_vs_baseline_allpaid",
+      "pair": "e5_small_base",
+      "left": {
+        "method": "arc2_global_tangent2_r1",
+        "regime": "fixed1024"
+      },
+      "right": {
+        "method": "embedding_converter_paper_spec",
+        "regime": "allpaid28819"
+      },
+      "familywise": true,
+      "dataset": "FiQA",
+      "budget": "50pct",
+      "ndcg10": {
+        "delta": 0.049115743180259415,
+        "ci95": [
+          0.034713943808055314,
+          0.0642924896906786
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.04911574318025942,
+          "seed_std": 0.006085900750561324,
+          "seed_range": [
+            0.04195320776936184,
+            0.054062816581235115
+          ],
+          "seeds": 5
+        },
+        "ci_bonferroni_family95": [
+          0.026523201611770672,
+          0.07403675905535098
+        ],
+        "per_interval_confidence": 0.9984375,
+        "family_interval_interpretation": "above_zero"
+      },
+      "recall100": {
+        "delta": 0.04201715617715618,
+        "ci95": [
+          0.021449971472971473,
+          0.06310681093906091
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "mapping_seed_variability": {
+          "mean": 0.04201715617715617,
+          "seed_std": 0.009577494339752414,
+          "seed_range": [
+            0.03040059940059939,
+            0.05609028194028195
+          ],
+          "seeds": 5
+        }
+      }
+    }
+  ],
+  "all_paid_family_decisions": {
+    "above_zero": 19,
+    "unresolved": 4,
+    "below_zero": 9
+  },
+  "main_macro_raw": [
+    {
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "strata": 24,
+      "aggregation": "equal_dataset_pair_budget",
+      "ndcg10": {
+        "ci95": [
+          0.01955835392729735,
+          0.029207604573451666
+        ],
+        "descriptive": false,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.018132175212397208,
+          0.030791640313948616
+        ],
+        "per_interval_confidence": 0.99,
+        "family_interval_interpretation": "above_zero",
+        "delta": 0.024325109040435233,
+        "ci95_descriptive": true
+      },
+      "recall100": {
+        "ci95": [
+          -0.004943626172438673,
+          0.0043358499949124945
+        ],
+        "descriptive": true,
+        "interval_interpretation": "unresolved",
+        "delta": -0.0002385903910903914,
+        "ci95_descriptive": true
+      }
+    },
+    {
+      "left": "arc2_global_tangent2_r1",
+      "right": "la2m20_integration_script_adaptation",
+      "strata": 24,
+      "aggregation": "equal_dataset_pair_budget",
+      "ndcg10": {
+        "ci95": [
+          0.09042663100397504,
+          0.11823577560634102
+        ],
+        "descriptive": false,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.08607033208524335,
+          0.1229148044499058
+        ],
+        "per_interval_confidence": 0.99,
+        "family_interval_interpretation": "above_zero",
+        "delta": 0.10405495378120326,
+        "ci95_descriptive": true
+      },
+      "recall100": {
+        "ci95": [
+          0.07539386922799422,
+          0.10576027277005402
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.09002769651644651,
+        "ci95_descriptive": true
+      }
+    },
+    {
+      "left": "arc2_global_tangent2_r1",
+      "right": "simplelinear_official_final50_mlp5",
+      "strata": 24,
+      "aggregation": "equal_dataset_pair_budget",
+      "ndcg10": {
+        "ci95": [
+          0.15510792403194884,
+          0.18944839086844825
+        ],
+        "descriptive": false,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.1498621517850371,
+          0.19470300383538613
+        ],
+        "per_interval_confidence": 0.99,
+        "family_interval_interpretation": "above_zero",
+        "delta": 0.1720998649172223,
+        "ci95_descriptive": true
+      },
+      "recall100": {
+        "ci95": [
+          0.23653849444305697,
+          0.2694620780064843
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.25288220617345614,
+        "ci95_descriptive": true
+      }
+    },
+    {
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "strata": 24,
+      "aggregation": "equal_dataset_pair_budget",
+      "ndcg10": {
+        "ci95": [
+          0.08028494961525619,
+          0.11133148283369526
+        ],
+        "descriptive": false,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.07540472081021199,
+          0.11642668663044543
+        ],
+        "per_interval_confidence": 0.99,
+        "family_interval_interpretation": "above_zero",
+        "delta": 0.09565304927282199,
+        "ci95_descriptive": true
+      },
+      "recall100": {
+        "ci95": [
+          0.10321627080673959,
+          0.14137564900493027
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.12173441692566694,
+        "ci95_descriptive": true
+      }
+    },
+    {
+      "left": "arc2_global_tangent2_r1",
+      "right": "embedding_converter_paper_spec",
+      "strata": 24,
+      "aggregation": "equal_dataset_pair_budget",
+      "ndcg10": {
+        "ci95": [
+          0.1469872004230708,
+          0.17540768321767883
+        ],
+        "descriptive": false,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.14268641175964025,
+          0.17991558284155384
+        ],
+        "per_interval_confidence": 0.99,
+        "family_interval_interpretation": "above_zero",
+        "delta": 0.16116233419134046,
+        "ci95_descriptive": true
+      },
+      "recall100": {
+        "ci95": [
+          0.08736392448292449,
+          0.11691193026996152
+        ],
+        "descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.10175762987012989,
+        "ci95_descriptive": true
+      }
+    }
+  ],
+  "b2_all30_contrasts_raw": [
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "ndcg10": {
+        "ci95": [
+          -0.008897931972845404,
+          0.008348867812619924
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.014694745593972814,
+          0.013213525679703809
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -5.136066855163088e-05,
+        "mapping_seed_variability": {
+          "mean": -5.136066855163206e-05,
+          "seed_std": 0.006569645501032216,
+          "seed_range": [
+            -0.007653834706936636,
+            0.006407949902808627
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.0017318861225867031,
+          0.004548530715636133
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.0030623884103242833,
+        "mapping_seed_variability": {
+          "mean": 0.0030623884103242833,
+          "seed_std": 0.0014835781769170658,
+          "seed_range": [
+            0.0015808352938229229,
+            0.00514161482289067
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "la2m20_integration_script_adaptation",
+      "ndcg10": {
+        "ci95": [
+          -0.021048785539928398,
+          0.017325727776468278
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.03430576267376661,
+          0.02907870839908143
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.001504399489089405,
+        "mapping_seed_variability": {
+          "mean": -0.0015043994890894048,
+          "seed_std": 0.008448414286459425,
+          "seed_range": [
+            -0.011472009538534063,
+            0.00985904544414322
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.010313557917450516,
+          0.02295688240489392
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.016063114200866188,
+        "mapping_seed_variability": {
+          "mean": 0.01606311420086619,
+          "seed_std": 0.0014119143822258796,
+          "seed_range": [
+            0.014493104771707985,
+            0.017947795581752517
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "simplelinear_official_final50_mlp5",
+      "ndcg10": {
+        "ci95": [
+          -0.01981212806837932,
+          0.020438828724834258
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.03294484894780953,
+          0.032548466682588796
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.0008729167709579025,
+        "mapping_seed_variability": {
+          "mean": 0.000872916770957902,
+          "seed_std": 0.00914634113549307,
+          "seed_range": [
+            -0.008457582751036037,
+            0.01260926365266575
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.0194979692005054,
+          0.03585552065358726
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.027056179604857112,
+        "mapping_seed_variability": {
+          "mean": 0.027056179604857112,
+          "seed_std": 0.0014823238361680803,
+          "seed_range": [
+            0.02555442404978074,
+            0.029294168897663654
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "ndcg10": {
+        "ci95": [
+          0.0077263070727776875,
+          0.053447212911947255
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          -0.004477666541051713,
+          0.06832583936849443
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.02974281152164104,
+        "mapping_seed_variability": {
+          "mean": 0.029742811521641033,
+          "seed_std": 0.01551359971520787,
+          "seed_range": [
+            0.011552142036676913,
+            0.046051480958955865
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.015279661911551043,
+          0.02665436162349453
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.020729543952352904,
+        "mapping_seed_variability": {
+          "mean": 0.020729543952352908,
+          "seed_std": 0.0005757443708421616,
+          "seed_range": [
+            0.020164038682356274,
+            0.02148927385049623
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "embedding_converter_paper_spec",
+      "ndcg10": {
+        "ci95": [
+          0.01602919111597338,
+          0.061834019573090204
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.0006302196978609639,
+          0.07561331897623641
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.03953962459261952,
+        "mapping_seed_variability": {
+          "mean": 0.03953962459261952,
+          "seed_std": 0.014570539600558464,
+          "seed_range": [
+            0.018073145900205576,
+            0.0579837422361274
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.01892634197974538,
+          0.030733888795713243
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.024510378250813133,
+        "mapping_seed_variability": {
+          "mean": 0.02451037825081313,
+          "seed_std": 0.002433282862508117,
+          "seed_range": [
+            0.020838182367063994,
+            0.027688962272110273
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "ndcg10": {
+        "ci95": [
+          -0.01303601857199549,
+          0.0025780725765427344
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.018617590940593846,
+          0.00609852657610738
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.004666870465219521,
+        "mapping_seed_variability": {
+          "mean": -0.004666870465219522,
+          "seed_std": 0.0038364272193873775,
+          "seed_range": [
+            -0.008312645760645014,
+            0.00013776350198849206
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.0006734858739983598,
+          0.0029928393535734415
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.0018061803508952962,
+        "mapping_seed_variability": {
+          "mean": 0.001806180350895296,
+          "seed_std": 0.0004125471881380735,
+          "seed_range": [
+            0.0012247421466837403,
+            0.0023747548769569187
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "la2m20_integration_script_adaptation",
+      "ndcg10": {
+        "ci95": [
+          -0.018802869572418522,
+          0.002339662188475128
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.026682539889838944,
+          0.007137508111023871
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.007321002357654939,
+        "mapping_seed_variability": {
+          "mean": -0.007321002357654939,
+          "seed_std": 0.005605832786982525,
+          "seed_range": [
+            -0.013366168118746625,
+            -0.00010981177361371997
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.0038372006647568865,
+          0.010151408541435526
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.006868749418233001,
+        "mapping_seed_variability": {
+          "mean": 0.0068687494182330016,
+          "seed_std": 0.0008171520246203893,
+          "seed_range": [
+            0.005653559778895194,
+            0.007652722255459911
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "simplelinear_official_final50_mlp5",
+      "ndcg10": {
+        "ci95": [
+          -0.01926511550705755,
+          0.0021162649894025617
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.027397841906307695,
+          0.0069215980242743015
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.007635139697658929,
+        "mapping_seed_variability": {
+          "mean": -0.007635139697658928,
+          "seed_std": 0.005238399548914588,
+          "seed_range": [
+            -0.013241986525527029,
+            -0.0014608815408444092
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.007279478353659871,
+          0.014730156438018664
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.01081391950315675,
+        "mapping_seed_variability": {
+          "mean": 0.010813919503156752,
+          "seed_std": 0.0007616822868055133,
+          "seed_range": [
+            0.009911829625621068,
+            0.011846973823320932
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "ndcg10": {
+        "ci95": [
+          -0.0012150690627058993,
+          0.03130402976088213
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.01079865042649303,
+          0.04209814796750806
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.014517372599864117,
+        "mapping_seed_variability": {
+          "mean": 0.014517372599864114,
+          "seed_std": 0.007080510505067862,
+          "seed_range": [
+            0.003953076418872276,
+            0.022460706741972546
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.012461660903281553,
+          0.023118412320905737
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.017297092816599212,
+        "mapping_seed_variability": {
+          "mean": 0.017297092816599212,
+          "seed_std": 0.0012510668675192352,
+          "seed_range": [
+            0.01528515712469921,
+            0.0184820338895356
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "embedding_converter_paper_spec",
+      "ndcg10": {
+        "ci95": [
+          0.008781469132949566,
+          0.034433291218041166
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.0005178011321619429,
+          0.04263918301944054
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.02190799526854917,
+        "mapping_seed_variability": {
+          "mean": 0.02190799526854917,
+          "seed_std": 0.009387312636972163,
+          "seed_range": [
+            0.009047320998420186,
+            0.03380294329814099
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.014306264749082946,
+          0.02236517498383615
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.01811848401513737,
+        "mapping_seed_variability": {
+          "mean": 0.018118484015137368,
+          "seed_std": 0.0019307023476345044,
+          "seed_range": [
+            0.014693567647498122,
+            0.019276526794147292
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "ndcg10": {
+        "ci95": [
+          -0.002730433529615332,
+          0.0027274396289267916
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.0045045389961348515,
+          0.004383734800061371
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -2.3564924613148544e-05,
+        "mapping_seed_variability": {
+          "mean": -2.356492461314851e-05,
+          "seed_std": 0.0014531296622035,
+          "seed_range": [
+            -0.0007451294997511495,
+            0.002574773708946184
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          -0.00046319614730042097,
+          0.0012998664306243608
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "delta": 0.0004072762988128294,
+        "mapping_seed_variability": {
+          "mean": 0.00040727629881282933,
+          "seed_std": 0.00037495153915668603,
+          "seed_range": [
+            6.974221468815434e-05,
+            0.0010502724170155411
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "la2m20_integration_script_adaptation",
+      "ndcg10": {
+        "ci95": [
+          -0.0033398739437001715,
+          0.005561070397550633
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.006116292591115391,
+          0.008780612423464904
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.0009512792584207396,
+        "mapping_seed_variability": {
+          "mean": 0.0009512792584207393,
+          "seed_std": 0.0013291439887351158,
+          "seed_range": [
+            -0.0005383806743870467,
+            0.0023588280286374053
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.00029010836825989444,
+          0.002925937582336079
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.0015665004762979735,
+        "mapping_seed_variability": {
+          "mean": 0.0015665004762979735,
+          "seed_std": 0.0007856601079842362,
+          "seed_range": [
+            0.0005932170444035579,
+            0.0024014179651402263
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "simplelinear_official_final50_mlp5",
+      "ndcg10": {
+        "ci95": [
+          -0.004115568821184666,
+          0.00482728801060701
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.006827535661738342,
+          0.008018776860536694
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.00021085277260803745,
+        "mapping_seed_variability": {
+          "mean": 0.00021085277260803731,
+          "seed_std": 0.002234079820292548,
+          "seed_range": [
+            -0.0032798837104953383,
+            0.0023588280286374053
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.0015286969118449686,
+          0.004219587324435863
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.0028197635918072593,
+        "mapping_seed_variability": {
+          "mean": 0.0028197635918072598,
+          "seed_std": 0.0006861011597769623,
+          "seed_range": [
+            0.0019285367550232182,
+            0.003549064859448545
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "ndcg10": {
+        "ci95": [
+          0.0057660287106344,
+          0.03352194980989632
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.00043951281706854317,
+          0.04492339866433025
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.01829353426503278,
+        "mapping_seed_variability": {
+          "mean": 0.01829353426503278,
+          "seed_std": 0.0033177320251390266,
+          "seed_range": [
+            0.012894967595373874,
+            0.02200774739272937
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.010258870020963163,
+          0.01886331380462944
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.014198286297018428,
+        "mapping_seed_variability": {
+          "mean": 0.014198286297018428,
+          "seed_std": 0.0011189683811176781,
+          "seed_range": [
+            0.013005231463292221,
+            0.01596412812337024
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "embedding_converter_paper_spec",
+      "ndcg10": {
+        "ci95": [
+          0.0063848691319008085,
+          0.025959267609336457
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          -4.496385125866207e-05,
+          0.03208424943554028
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.016258281557834944,
+        "mapping_seed_variability": {
+          "mean": 0.016258281557834948,
+          "seed_std": 0.005765836245693905,
+          "seed_range": [
+            0.009696159208124992,
+            0.02411728867849922
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.00855640712197334,
+          0.0128819571242266
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.01063511743401053,
+        "mapping_seed_variability": {
+          "mean": 0.01063511743401053,
+          "seed_std": 0.0013954499968302462,
+          "seed_range": [
+            0.00863716621557993,
+            0.012459759591794612
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "ndcg10": {
+        "ci95": [
+          -0.014785871551854736,
+          0.008121417131254943
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.021620914986484444,
+          0.01432474395822758
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.0032404285712858832,
+        "mapping_seed_variability": {
+          "mean": -0.003240428571285882,
+          "seed_std": 0.00653091990813265,
+          "seed_range": [
+            -0.009525516568416395,
+            0.007618969260263473
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          -0.003291983341906236,
+          -0.0006798521068942913
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "below_zero",
+        "delta": -0.001991214481969909,
+        "mapping_seed_variability": {
+          "mean": -0.001991214481969909,
+          "seed_std": 0.0007230598396772868,
+          "seed_range": [
+            -0.0031002615651755726,
+            -0.0011367992598236064
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "la2m20_integration_script_adaptation",
+      "ndcg10": {
+        "ci95": [
+          0.010762103667414105,
+          0.07405028449793227
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          -0.006416733787802239,
+          0.09332456219941979
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.04221113712298237,
+        "mapping_seed_variability": {
+          "mean": 0.04221113712298236,
+          "seed_std": 0.008585324783238212,
+          "seed_range": [
+            0.032844814712854935,
+            0.054321818486396875
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.01988848816142017,
+          0.03546452973250359
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.027254255758681376,
+        "mapping_seed_variability": {
+          "mean": 0.027254255758681373,
+          "seed_std": 0.0023003132323099395,
+          "seed_range": [
+            0.02562393615704936,
+            0.031319629194182734
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "simplelinear_official_final50_mlp5",
+      "ndcg10": {
+        "ci95": [
+          0.08810924544530928,
+          0.17872469370819072
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.0633001667256504,
+          0.2051373777778217
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.13287299235509,
+        "mapping_seed_variability": {
+          "mean": 0.13287299235509004,
+          "seed_std": 0.02426187332826754,
+          "seed_range": [
+            0.10995907150287369,
+            0.17015237181914064
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.0463164747345437,
+          0.0683947120283425
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.0569362235169088,
+        "mapping_seed_variability": {
+          "mean": 0.056936223516908815,
+          "seed_std": 0.002441771099131634,
+          "seed_range": [
+            0.055198973647151685,
+            0.06108805827622799
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "ndcg10": {
+        "ci95": [
+          0.19448370843318658,
+          0.3355786012099962
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.15726462442241934,
+          0.37675795247986166
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.2641805555881269,
+        "mapping_seed_variability": {
+          "mean": 0.26418055558812686,
+          "seed_std": 0.018247413518584887,
+          "seed_range": [
+            0.23215001855896694,
+            0.2774649538554802
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.037455004766567004,
+          0.06252413701932173
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.04931555564783497,
+        "mapping_seed_variability": {
+          "mean": 0.049315555647834956,
+          "seed_std": 0.0018538722693124355,
+          "seed_range": [
+            0.04724657394836492,
+            0.05218704341111087
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "embedding_converter_paper_spec",
+      "ndcg10": {
+        "ci95": [
+          0.20634954315490223,
+          0.3084705371596377
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.17573076152800798,
+          0.33756850203860655
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.25723359077319435,
+        "mapping_seed_variability": {
+          "mean": 0.25723359077319435,
+          "seed_std": 0.024304549666813863,
+          "seed_range": [
+            0.2170697592382117,
+            0.2767858989374312
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.03448584750468477,
+          0.05524002316870595
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.04433176658637875,
+        "mapping_seed_variability": {
+          "mean": 0.04433176658637876,
+          "seed_std": 0.0020902260256626293,
+          "seed_range": [
+            0.0416278423134174,
+            0.046496346914421
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "ndcg10": {
+        "ci95": [
+          -0.030402643876448542,
+          -0.0034899389369013076
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "below_zero",
+        "ci_bonferroni_family95": [
+          -0.03982012404542802,
+          0.0022978122002522048
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.01632154204848677,
+        "mapping_seed_variability": {
+          "mean": -0.01632154204848677,
+          "seed_std": 0.01081330841984722,
+          "seed_range": [
+            -0.030000579208922518,
+            -0.0041710349683335805
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          -0.006442459861821125,
+          -0.003115103617580042
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "below_zero",
+        "delta": -0.004732990378067649,
+        "mapping_seed_variability": {
+          "mean": -0.0047329903780676495,
+          "seed_std": 0.0004589705167312452,
+          "seed_range": [
+            -0.005207674889463994,
+            -0.004084451791606407
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "la2m20_integration_script_adaptation",
+      "ndcg10": {
+        "ci95": [
+          -0.02260627663923284,
+          0.023426864864311128
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.03551296863593118,
+          0.03599603191311822
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.0005942541991765067,
+        "mapping_seed_variability": {
+          "mean": 0.0005942541991765056,
+          "seed_std": 0.00956581072818571,
+          "seed_range": [
+            -0.009831149399398253,
+            0.014100952091298379
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.006674894649868949,
+          0.014757746858894258
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.010500931735485363,
+        "mapping_seed_variability": {
+          "mean": 0.010500931735485363,
+          "seed_std": 0.0022451624773736057,
+          "seed_range": [
+            0.007398285402258795,
+            0.013655343380627604
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "simplelinear_official_final50_mlp5",
+      "ndcg10": {
+        "ci95": [
+          0.030926112975618442,
+          0.09444673212381152
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.01356012047442979,
+          0.11446072714102258
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.06172988619056692,
+        "mapping_seed_variability": {
+          "mean": 0.06172988619056691,
+          "seed_std": 0.008223402268116346,
+          "seed_range": [
+            0.05186608962165195,
+            0.07262913307996229
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.033102897943381185,
+          0.05164195218153546
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.0418685358275318,
+        "mapping_seed_variability": {
+          "mean": 0.041868535827531805,
+          "seed_std": 0.0030473850768744865,
+          "seed_range": [
+            0.03924372634937462,
+            0.04647331630810905
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "ndcg10": {
+        "ci95": [
+          0.19391784497654552,
+          0.33169655970604756
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.1579593697473118,
+          0.37285038597163384
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.2622674417365517,
+        "mapping_seed_variability": {
+          "mean": 0.2622674417365517,
+          "seed_std": 0.015815230160540514,
+          "seed_range": [
+            0.24662163111561766,
+            0.2811562050837643
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.04210409376652512,
+          0.06821623364594123
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.05462500629531585,
+        "mapping_seed_variability": {
+          "mean": 0.05462500629531587,
+          "seed_std": 0.0016427953106719563,
+          "seed_range": [
+            0.053378947690552785,
+            0.05738485064111453
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "embedding_converter_paper_spec",
+      "ndcg10": {
+        "ci95": [
+          0.18317239664563703,
+          0.279734807298328
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.15671745879653792,
+          0.3085072832020045
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.23138457517015265,
+        "mapping_seed_variability": {
+          "mean": 0.2313845751701527,
+          "seed_std": 0.029319497636933305,
+          "seed_range": [
+            0.20310654653105573,
+            0.26297645212259063
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.03441470177977414,
+          0.05291607014751779
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.04333047998217733,
+        "mapping_seed_variability": {
+          "mean": 0.04333047998217733,
+          "seed_std": 0.0021095809721779196,
+          "seed_range": [
+            0.040996547683230605,
+            0.04601966329780605
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "procrustes_global",
+      "ndcg10": {
+        "ci95": [
+          -0.019935508995769124,
+          -0.0010872236843641363
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "below_zero",
+        "ci_bonferroni_family95": [
+          -0.0260053875353406,
+          0.0036310901422503547
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.010011959658702082,
+        "mapping_seed_variability": {
+          "mean": -0.010011959658702083,
+          "seed_std": 0.0032029392554336626,
+          "seed_range": [
+            -0.01493043061800998,
+            -0.005989377733923444
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          -0.008763717298704368,
+          -0.0043236039811896925
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "below_zero",
+        "delta": -0.006389451456595755,
+        "mapping_seed_variability": {
+          "mean": -0.006389451456595754,
+          "seed_std": 0.0008672415007955731,
+          "seed_range": [
+            -0.0074786867984857385,
+            -0.00528440776931266
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "la2m20_integration_script_adaptation",
+      "ndcg10": {
+        "ci95": [
+          -0.025188462117695525,
+          0.006486716357784898
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "ci_bonferroni_family95": [
+          -0.03577940334852425,
+          0.01564579912460651
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": -0.008995301709012363,
+        "mapping_seed_variability": {
+          "mean": -0.008995301709012363,
+          "seed_std": 0.0047825706124184535,
+          "seed_range": [
+            -0.014641973385130808,
+            -0.0033372943075942684
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          -0.004529025597189853,
+          0.0004779319536214068
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "unresolved",
+        "delta": -0.0019247015522963718,
+        "mapping_seed_variability": {
+          "mean": -0.0019247015522963716,
+          "seed_std": 0.001726303638595524,
+          "seed_range": [
+            -0.004612990710603361,
+            2.9642038759532112e-05
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "simplelinear_official_final50_mlp5",
+      "ndcg10": {
+        "ci95": [
+          0.009156588790000255,
+          0.055187350502390466
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          -0.0038296168793180924,
+          0.07170478814697445
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "unresolved",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.0312881567567668,
+        "mapping_seed_variability": {
+          "mean": 0.0312881567567668,
+          "seed_std": 0.004982317458555774,
+          "seed_range": [
+            0.024306375822325768,
+            0.03751445671190732
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.022192421667498068,
+          0.039863125550484796
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.03038434874730718,
+        "mapping_seed_variability": {
+          "mean": 0.030384348747307176,
+          "seed_std": 0.004090510659675309,
+          "seed_range": [
+            0.026651063074333504,
+            0.03669504213015796
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "ridge_affine_l10_bias_regularized",
+      "ndcg10": {
+        "ci95": [
+          0.21202735906694956,
+          0.35286371601597094
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.17480022770218387,
+          0.3973296904795432
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.2819970458539894,
+        "mapping_seed_variability": {
+          "mean": 0.28199704585398944,
+          "seed_std": 0.010755688585236598,
+          "seed_range": [
+            0.27037681659710683,
+            0.2970409226016202
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.050156431884243784,
+          0.07662511407862126
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.06309677372406775,
+        "mapping_seed_variability": {
+          "mean": 0.06309677372406775,
+          "seed_std": 0.0012987083209388423,
+          "seed_range": [
+            0.06160477806729978,
+            0.06470355113118265
+          ],
+          "seeds": 5
+        }
+      }
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "left": "arc2_global_tangent2_r1",
+      "right": "embedding_converter_paper_spec",
+      "ndcg10": {
+        "ci95": [
+          0.1605438337886913,
+          0.23994650419380487
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "ci_bonferroni_family95": [
+          0.13925018639424472,
+          0.2642221645268023
+        ],
+        "per_interval_confidence": 0.9983333333333333,
+        "family_interval_interpretation": "above_zero",
+        "coverage": "approximate percentile bootstrap",
+        "delta": 0.1999540966512042,
+        "mapping_seed_variability": {
+          "mean": 0.1999540966512042,
+          "seed_std": 0.011405957200445908,
+          "seed_range": [
+            0.18577720274153758,
+            0.21729173903071675
+          ],
+          "seeds": 5
+        }
+      },
+      "recall100": {
+        "ci95": [
+          0.03301024446045775,
+          0.05059772272846178
+        ],
+        "ci95_descriptive": true,
+        "interval_interpretation": "above_zero",
+        "delta": 0.0414265581715504,
+        "mapping_seed_variability": {
+          "mean": 0.0414265581715504,
+          "seed_std": 0.0018130777960484793,
+          "seed_range": [
+            0.0384424018693696,
+            0.043378851507798466
+          ],
+          "seeds": 5
+        }
+      }
+    }
+  ],
+  "selected_mixed_diagnostic_rows_raw": [
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "arc2_global_tangent2_r1",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "seeds": [
+        17,
+        29,
+        41,
+        53,
+        67
+      ],
+      "metrics": {
+        "ndcg10": {
+          "before": {
+            "mean": 0.31490775036459107,
+            "std": 0.0009087763040778174,
+            "min": 0.3132027992239177,
+            "max": 0.31566385604631897,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "after": {
+            "mean": 0.29186698206096207,
+            "std": 0.0010636937868429494,
+            "min": 0.29060998983803676,
+            "max": 0.2935400851458403,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "delta_of_query_means": {
+            "mean": -0.023040768303629045,
+            "std": 0.0017566186233215187,
+            "min": -0.02492678658987266,
+            "max": -0.020649585352009475,
+            "positive": 0,
+            "zero": 0,
+            "negative": 5,
+            "observations": 5
+          }
+        },
+        "recall100": {
+          "before": {
+            "mean": 0.6541642457542457,
+            "std": 0.0007706851208863003,
+            "min": 0.6528375790875791,
+            "max": 0.6552375790875791,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "after": {
+            "mean": 0.5594899234099234,
+            "std": 0.0012584901790893236,
+            "min": 0.5571710345210344,
+            "max": 0.5608377011877013,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "delta_of_query_means": {
+            "mean": -0.09467432234432235,
+            "std": 0.0014615635125558401,
+            "min": -0.09723321123321123,
+            "max": -0.09316654456654457,
+            "positive": 0,
+            "zero": 0,
+            "negative": 5,
+            "observations": 5
+          }
+        }
+      },
+      "paired_signed_bias": {
+        "all": {
+          "mean": 0.040654267241386696,
+          "std": 6.658196126417377e-06,
+          "min": 0.04064402598957531,
+          "max": 0.04066109311720356,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "anchor": {
+          "mean": 0.03982585331094042,
+          "std": 0.002832630984180072,
+          "min": 0.03562770611047745,
+          "max": 0.04357083812024858,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "paid_nonanchor": {
+          "mean": 0.04174186702363513,
+          "std": 9.389219583949387e-05,
+          "min": 0.04158644107501369,
+          "max": 0.04185651207573806,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "unpaid": {
+          "mean": 0.03968433437639738,
+          "std": 6.543009918066104e-05,
+          "min": 0.039602632665999546,
+          "max": 0.039767387419376736,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        }
+      },
+      "paid_returned_share": {
+        "before": {
+          "top10": {
+            "mean": 0.49164,
+            "std": 0.0018172506706560965,
+            "min": 0.489,
+            "max": 0.49360000000000004,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "top100": {
+            "mean": 0.504624,
+            "std": 0.0004915933278636261,
+            "min": 0.5037999999999999,
+            "max": 0.50522,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        },
+        "after": {
+          "top10": {
+            "mean": 0.06472000000000001,
+            "std": 0.0004995998398718702,
+            "min": 0.06380000000000001,
+            "max": 0.06520000000000001,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "top100": {
+            "mean": 0.03698,
+            "std": 8.854377448471477e-05,
+            "min": 0.03686,
+            "max": 0.0371,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        }
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "procrustes_global",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "seeds": [
+        17,
+        29,
+        41,
+        53,
+        67
+      ],
+      "metrics": {
+        "ndcg10": {
+          "before": {
+            "mean": 0.28609600466531776,
+            "std": 0.00037458918887771977,
+            "min": 0.2857333238618803,
+            "max": 0.28670254705776677,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "after": {
+            "mean": 0.3362024610766429,
+            "std": 0.0008958874202034585,
+            "min": 0.33454094083995023,
+            "max": 0.3371798593499167,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "delta_of_query_means": {
+            "mean": 0.0501064564113252,
+            "std": 0.0008394812936150451,
+            "min": 0.048787939454424896,
+            "max": 0.05083479890778919,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        },
+        "recall100": {
+          "before": {
+            "mean": 0.6053967365967365,
+            "std": 0.000995266575122259,
+            "min": 0.60443006993007,
+            "max": 0.60718006993007,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "after": {
+            "mean": 0.6533889221889221,
+            "std": 0.001689887221344001,
+            "min": 0.6517841602841602,
+            "max": 0.6566198745698746,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "delta_of_query_means": {
+            "mean": 0.0479921855921856,
+            "std": 0.0021837977903449873,
+            "min": 0.045173137973137975,
+            "max": 0.05177313797313798,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        }
+      },
+      "paired_signed_bias": {
+        "all": {
+          "mean": 0.018229385337326674,
+          "std": 5.920771259442587e-06,
+          "min": 0.018221580038312823,
+          "max": 0.018237450571730734,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "anchor": {
+          "mean": 0.017860526285697887,
+          "std": 0.002516711437527245,
+          "min": 0.014338430762290955,
+          "max": 0.022156643585725264,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "paid_nonanchor": {
+          "mean": 0.019122449935535118,
+          "std": 9.23973288783252e-05,
+          "min": 0.01895705040673579,
+          "max": 0.0192109512867046,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "unpaid": {
+          "mean": 0.017429393047682516,
+          "std": 5.49125710295977e-05,
+          "min": 0.01736290627287368,
+          "max": 0.01750069238256862,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        }
+      },
+      "paid_returned_share": {
+        "before": {
+          "top10": {
+            "mean": 0.49748000000000003,
+            "std": 0.0016618062462272613,
+            "min": 0.49460000000000004,
+            "max": 0.4992,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "top100": {
+            "mean": 0.5046839999999999,
+            "std": 0.0003922040285361841,
+            "min": 0.50426,
+            "max": 0.5054000000000001,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        },
+        "after": {
+          "top10": {
+            "mean": 0.37072000000000005,
+            "std": 0.0011702991070662403,
+            "min": 0.36939999999999995,
+            "max": 0.3724,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "top100": {
+            "mean": 0.26402,
+            "std": 0.00030013330371685457,
+            "min": 0.26356,
+            "max": 0.26446,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        }
+      }
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "method": "ridge_affine_l10_bias_regularized",
+      "regime": "allpaid28819",
+      "budget": "50pct",
+      "seeds": [
+        17,
+        29,
+        41,
+        53,
+        67
+      ],
+      "metrics": {
+        "ndcg10": {
+          "before": {
+            "mean": 0.2705850075590403,
+            "std": 0.0006471702962570497,
+            "min": 0.2696860293406131,
+            "max": 0.27129921268369117,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "after": {
+            "mean": 0.22701457515494283,
+            "std": 0.001851489301164337,
+            "min": 0.22448977281467858,
+            "max": 0.22947807965855577,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "delta_of_query_means": {
+            "mean": -0.04357043240409747,
+            "std": 0.0020340120600450956,
+            "min": -0.046809439869012585,
+            "max": -0.041285839210689804,
+            "positive": 0,
+            "zero": 0,
+            "negative": 5,
+            "observations": 5
+          }
+        },
+        "recall100": {
+          "before": {
+            "mean": 0.602436467976468,
+            "std": 0.0008965117586140928,
+            "min": 0.6011098013098013,
+            "max": 0.6033598013098013,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "after": {
+            "mean": 0.4245111211011211,
+            "std": 0.001757510866095678,
+            "min": 0.4229511211011211,
+            "max": 0.4277011211011211,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "delta_of_query_means": {
+            "mean": -0.17792534687534686,
+            "std": 0.0015912259424732899,
+            "min": -0.17992534687534686,
+            "max": -0.1756586802086802,
+            "positive": 0,
+            "zero": 0,
+            "negative": 5,
+            "observations": 5
+          }
+        }
+      },
+      "paired_signed_bias": {
+        "all": {
+          "mean": 0.07198265994540416,
+          "std": 7.0219429438290615e-06,
+          "min": 0.07197036308469251,
+          "max": 0.07199127455358394,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "anchor": {
+          "mean": 0.0705361189312061,
+          "std": 0.004605651766471666,
+          "min": 0.06303855820496877,
+          "max": 0.07684703189796871,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "paid_nonanchor": {
+          "mean": 0.07326544996340653,
+          "std": 0.0001426582878821122,
+          "min": 0.07304305136499326,
+          "max": 0.07341694967907693,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        },
+        "unpaid": {
+          "mean": 0.07085020251913474,
+          "std": 8.752878859077853e-05,
+          "min": 0.07074650130163128,
+          "max": 0.07095789333109585,
+          "positive": 5,
+          "zero": 0,
+          "negative": 0,
+          "observations": 5
+        }
+      },
+      "paid_returned_share": {
+        "before": {
+          "top10": {
+            "mean": 0.47851999999999995,
+            "std": 0.0024806450773941953,
+            "min": 0.4744,
+            "max": 0.48160000000000003,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "top100": {
+            "mean": 0.495224,
+            "std": 0.0005499672717534818,
+            "min": 0.4945400000000001,
+            "max": 0.4961,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        },
+        "after": {
+          "top10": {
+            "mean": 0.01812,
+            "std": 0.0002712931993250109,
+            "min": 0.0178,
+            "max": 0.0184,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          },
+          "top100": {
+            "mean": 0.005528,
+            "std": 2.9933259094191563e-05,
+            "min": 0.0055,
+            "max": 0.00558,
+            "positive": 5,
+            "zero": 0,
+            "negative": 0,
+            "observations": 5
+          }
+        }
+      }
+    }
+  ],
+  "P0": {
+    "synthetic_fixtures": 31,
+    "synthetic_update_comparisons": 62,
+    "real_budget_comparisons": 120,
+    "real_fit_identities": 40,
+    "changed_ordered_top100_query_comparisons": 0,
+    "maximum_stored_coefficient_abs_difference": 7.275957614183426e-12,
+    "maximum_normalized_proxy_abs_difference": 3.725290298461914e-09
+  },
+  "findings": [
+    {
+      "id": "DEPTH-01",
+      "severity": "material_summary_underreporting",
+      "finding": "MiniLM all-paid ARC2 positive result absent from START_HERE and claim lock narrative: four matched family wins; ridge unresolved. Detailed P summary retains all results."
+    },
+    {
+      "id": "DEPTH-02",
+      "severity": "material_summary_underreporting",
+      "finding": "START_HERE does not quantify any mechanism ablation; CLAIM_LOCK gives only step2 effect. FullM five-contrast table/lambda sensitivity belongs in review evidence map."
+    },
+    {
+      "id": "DEPTH-03",
+      "severity": "material_limit_underreporting",
+      "finding": "Fixed1024 ARC2 loses to every all-paid baseline on MiniLM in five family-negative cross-regime comparisons; summary only states ridge unresolved for allpaid ARC2."
+    },
+    {
+      "id": "DEPTH-04",
+      "severity": "material_limit_underreporting",
+      "finding": "G reversal is mentioned but front summary gives no magnitude or frozen-fit counterfactual explanation; ARC2 E5 allpaid nDCG decreases0.023041 and Recall0.094674 after actual replacement."
+    },
+    {
+      "id": "DEPTH-05",
+      "severity": "navigation_and_provenance",
+      "finding": "B1a/B1b correctness results omitted as standalone release result folders. Add small provenance appendix if completeness is intended; do not count them as quality wins."
+    },
+    {
+      "id": "DEPTH-06",
+      "severity": "scope_guard",
+      "finding": "Historical ARC2/local8/P5/P8 results cannot be imported as ARC2-Global. Current Global has no local residual; only qualified globally identical rows may be reused."
+    }
+  ]
+}

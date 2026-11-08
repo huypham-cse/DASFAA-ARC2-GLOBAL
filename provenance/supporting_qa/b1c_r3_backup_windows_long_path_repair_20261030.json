@@ -1,0 +1,6 @@
+{
+  "observed": "Ordinary Windows path of264characters reproduces FileNotFoundError on this laptop; actual backup appends timestamped partial names to deep paths.",
+  "repair": "Use Windows extended-length prefix for local backup root; relative coverage paths and resolved-root safety retained; error tracebacks now preserved.",
+  "fixture": "PASS264+character write/read, legacy receipt parity, traversal/drive/UNC/root rejection",
+  "scientific_change": false
+}

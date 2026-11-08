@@ -1,0 +1,67 @@
+{
+  "current_round": 2,
+  "max_rounds": 2,
+  "status": "completed",
+  "phase": "supervisor_review",
+  "last_score": 6,
+  "score_history": [
+    {
+      "round": 1,
+      "score": 6,
+      "agent_id": "/root/dasfaa_score_20261101"
+    },
+    {
+      "round": 2,
+      "score": 6,
+      "agent_id": "/root/dasfaa_score_r2_20261101"
+    }
+  ],
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "timestamp": "2026-11-01T19:17:52.849339+00:00",
+  "score_notice": "Prior two scoring rounds remain historical; current snapshot separately scored on 2 November 2026, with same overall 6/10.",
+  "final_pdf": "ARC2_Global_DASFAA2027_final.pdf",
+  "final_pdf_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+  "final_audit": {
+    "report": "PAPER_CLAIM_AUDIT.json",
+    "verdict": "PASS",
+    "claim_records": 218,
+    "declared_hashes_verified": 101,
+    "unresolved_mismatches": 0,
+    "review_independence": "same-family",
+    "acceptance_status": "provisional"
+  },
+  "citation_audit": "18 original KEEP assessments retained; substantive contexts unchanged",
+  "source_zip_smoke": "PASS",
+  "render_fidelity": "PASS",
+  "remaining_checkpoint": [
+    "Supervisor feedback",
+    "Add published GCPA citation and equation-level positioning",
+    "Anonymous public code/evidence artifact before submission"
+  ],
+  "new_scientific_runs": false,
+  "client_revision_date": "2026-11-02",
+  "active_revision": "ACIIDS-reference evidence and design revision",
+  "presentation_review": "READY; no mandatory fixes",
+  "pages": 16,
+  "abstract_words": 159,
+  "latest_scoring": {
+    "date": "2026-11-02",
+    "report": "review/scoring_20261102/SCORECARD.md",
+    "overall_score": 6,
+    "recommendation": "weak accept",
+    "confidence_out_of_5": 4,
+    "novelty_skill_score": 6,
+    "novelty_verdict": "PROCEED",
+    "result_to_claim": "yes",
+    "empirical_support_score": 8,
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "review_independence": "same-family",
+    "acceptance_status": "provisional",
+    "exposure_disclosure": "See scorecard: support reviewer incidentally encountered previous opinions; paper grader avoided prior scores.",
+    "manuscript_changed": false
+  }
+}

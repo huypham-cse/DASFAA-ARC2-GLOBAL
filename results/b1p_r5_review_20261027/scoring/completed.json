@@ -1,0 +1,31 @@
+{
+  "status": "DEV_SCORED",
+  "completed_utc": "2026-10-27T03:20:39.571311+00:00",
+  "binding": {
+    "lock_sha256": "17e93a5da59fe29193bf385cb9b7a0b94381beea9fc70e32d4bfe8858eeb79d9",
+    "descriptor_sha256": "b3eb72da273310ca969ac174b039feb543f962b79ff0b505bc1b5a653054ca32",
+    "generation_code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+    "recovery_scorer_code_commit": "4062d96c353ac567fb90a6093cd8059d4647e252",
+    "ranking_seal_sha256": "1b993e1bf3fe0248f0a48e52cc371f232ceeba615f81672ec30b81048ba5be1d",
+    "original_metadata_sha256": "c6b386180a9445e0e40efaee1c8bd2a3d234edc1576c9611859a8b2d38b5be0f"
+  },
+  "wall_seconds": 4.9539827248081565,
+  "peak_process_rss_bytes": 174551040,
+  "dev_qrel_access_started": true,
+  "TREC_access": false,
+  "original_failure_preserved": true,
+  "artifact_sha256": {
+    "cell_index.json": "9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375",
+    "context_verified.json": "644dee9f679ccce0538509dea6d92069a8cb87670810a8519967274af8e09d1b",
+    "first_dev_qrel_open.json": "24a61c378e9b38e27f7f97d113362b109d198ba578c0f3899a85bb4c1f8051bd",
+    "per_query.npy": "551dc388059b6a530df550acbbd9a477de76cd0cc188ce54da0a1198be1434d1",
+    "qrel_access_FiQA.json": "52e88460ee296c1f6693ebaa7eda856a6cd03b3f6cc31965ca79cad14474c136",
+    "qrel_verified_FiQA.json": "3c1fd9b8cfaa8ee9a5f7aaf84ebb6e1bb25d514d94c13a967a03407faed3b8fe",
+    "receipt_regression_check.json": "0ccee67f9f47daab71a3898c5957e8ceeef0a0b014a3ffbc371f7ac54e6442ab",
+    "results_summary.json": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7",
+    "results_summary.md": "90e41e95a580697dc54fe45d97383b29d29e507dc053040a68ac77058542a0e5",
+    "started.json": "ddefcd31352efdd1f3db8fa03774e60ad33f182749d024e67fdcde4d9bf1d29c",
+    "synthetic_scorer_checks.json": "23ebc6a58a25d40efd7fb935ebe656ac6c86a994282a4ea6fa2ea6077c4dd6bd"
+  },
+  "next_action": "STOP after B1-P report; no automatic next study"
+}

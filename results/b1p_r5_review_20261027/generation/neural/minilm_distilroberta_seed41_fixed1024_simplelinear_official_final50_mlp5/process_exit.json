@@ -1,0 +1,21 @@
+{
+  "status": "EXITED",
+  "started_utc": "2026-10-26T18:32:47.882593+00:00",
+  "request_sha256": "868836819c6cfb62e072eaee7160052475a37ef7c2651dbcd0f53f9898259e3f",
+  "argv": [
+    "/root/paper-P2/.venv/bin/python",
+    "-u",
+    "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/ops/b1p_neural_worker.py",
+    "--request",
+    "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/request.json"
+  ],
+  "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+  "pid": 42568,
+  "returncode": 0,
+  "signal_number": null,
+  "signal_name": null,
+  "ended_utc": "2026-10-26T18:32:54.428991+00:00",
+  "stdout_sha256": "a3acd5233331b726dbb20d77a27e0e7558b25e75b541506f7ab486393bc8f31b",
+  "stderr_sha256": "9c1a80f94eae5ac51244f148a54cec87bc32a6146e765b88b3b788ede7fac937",
+  "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n"
+}

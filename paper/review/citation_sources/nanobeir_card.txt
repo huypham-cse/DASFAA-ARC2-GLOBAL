@@ -1,0 +1,65 @@
+---
+language:
+- en
+license: cc-by-4.0
+multilinguality:
+- monolingual
+source_datasets:
+- FiQA2018
+task_categories:
+- text-retrieval
+task_ids:
+- document-retrieval
+tags:
+- text-retrieval
+dataset_info:
+- config_name: corpus
+  features:
+  - name: _id
+    dtype: string
+  - name: text
+    dtype: string
+  splits:
+  - name: train
+    num_bytes: 4201493
+    num_examples: 4598
+  download_size: 2532554
+  dataset_size: 4201493
+- config_name: qrels
+  features:
+  - name: query-id
+    dtype: string
+  - name: corpus-id
+    dtype: string
+  splits:
+  - name: train
+    num_bytes: 2200
+    num_examples: 123
+  download_size: 2631
+  dataset_size: 2200
+- config_name: queries
+  features:
+  - name: _id
+    dtype: string
+  - name: text
+    dtype: string
+  splits:
+  - name: train
+    num_bytes: 3531
+    num_examples: 50
+  download_size: 4249
+  dataset_size: 3531
+configs:
+- config_name: corpus
+  data_files:
+  - split: train
+    path: corpus/train-*
+- config_name: qrels
+  data_files:
+  - split: train
+    path: qrels/train-*
+- config_name: queries
+  data_files:
+  - split: train
+    path: queries/train-*
+---

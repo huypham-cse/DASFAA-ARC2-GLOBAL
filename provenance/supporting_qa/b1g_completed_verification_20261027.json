@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_PRESERVED",
+  "error": "ValueError('Value differs: FiQA_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec_50pct/parity_receipt/source')",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\DASFAA-2027-paper\\tools\\verify_b1g_completed.py\", line 481, in main\n    result = verify(args)\n             ^^^^^^^^^^^^\n  File \"D:\\DASFAA-2027-paper\\tools\\verify_b1g_completed.py\", line 445, in verify\n    comparison.compare(parity_by_case[row['case_id']], row, row['case_id'] + '/parity_receipt')\n  File \"D:\\DASFAA-2027-paper\\tools\\verify_b1g_completed.py\", line 70, in compare\n    self.compare(actual[key], expected[key], where + '/' + str(key))\n  File \"D:\\DASFAA-2027-paper\\tools\\verify_b1g_completed.py\", line 82, in compare\n    require(actual == expected, 'Value differs: ' + where)\n  File \"D:\\DASFAA-2027-paper\\tools\\verify_b1g_completed.py\", line 50, in require\n    raise ValueError(message)\nValueError: Value differs: FiQA_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec_50pct/parity_receipt/source\n",
+  "local_qrel_reads": 0,
+  "remote_source_reads": 0,
+  "verifier_sha256": "c01cfe244e8dcd3e7e981ccc1973a18f6b4618dc6f9cf122f77e2359635a1348"
+}

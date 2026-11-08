@@ -1,0 +1,7 @@
+{
+  "returncode": 0,
+  "stdout": "{\"status\": \"PASS_SYNTHETIC_READER\", \"pyarrow\": \"25.0.1\", \"numpy\": \"2.4.6\", \"scipy\": \"1.17.1\", \"sklearn\": \"1.5.1\", \"real_qrels_opened\": false, \"columns\": [\"query-id\", \"corpus-id\"]}\n",
+  "stderr": "",
+  "time": 1793158478.7380633,
+  "qrel_scope": "only synthetic fixture, not real labels"
+}

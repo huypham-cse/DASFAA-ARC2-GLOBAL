@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-26T17:41:56.368143+07:00",
+  "seconds": 10.010030306875706,
+  "worker_pid": 18841,
+  "worker_main_cpu_seconds": 0.863654672,
+  "worker_main_runqueue_wait_seconds": 8.269198449,
+  "worker_main_timeslices": 170,
+  "other_pid": 2700,
+  "llama_cpu_core_equivalents": 3.472516958927087,
+  "scope": "read-only ten-second scheduler observation; no workload or priority changed"
+}

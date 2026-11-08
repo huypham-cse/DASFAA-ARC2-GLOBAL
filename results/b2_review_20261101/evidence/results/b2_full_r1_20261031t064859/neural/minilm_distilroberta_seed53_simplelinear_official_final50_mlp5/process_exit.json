@@ -1,0 +1,17 @@
+{
+  "status": "EXITED",
+  "argv": [
+    "/network-volume/arc2_recovery_20261030/envs/gpu/bin/python",
+    "-u",
+    "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b1p_neural_worker.py",
+    "--request",
+    "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed53_simplelinear_official_final50_mlp5/request.json"
+  ],
+  "started_utc": "2026-10-31T10:21:04.598404+00:00",
+  "pid": 299324,
+  "returncode": 0,
+  "signal_number": null,
+  "ended_utc": "2026-10-31T10:21:27.059012+00:00",
+  "stdout_sha256": "a3acd5233331b726dbb20d77a27e0e7558b25e75b541506f7ab486393bc8f31b",
+  "stderr_sha256": "418dd26af6d063c2b9b15e96dd058852a8d70e2800080a8d9b3eb148cb15ee86"
+}

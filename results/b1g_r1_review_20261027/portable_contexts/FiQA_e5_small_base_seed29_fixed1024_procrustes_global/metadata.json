@@ -1,0 +1,69 @@
+{
+  "status": "B1G_RANK_PASS",
+  "request_sha256": "3e17df305619f83016357f4febb5fc5001f1c876637cc22f8b4dacaec625647b",
+  "group_id": "FiQA_e5_small_base_seed29_fixed1024_procrustes_global",
+  "input_hashes": {
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy": "6840bcf6eead122758d6f5eae3f8cf4149b7604485e405adbf4c536e45af1fbf",
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_queries.npy": "78062f32f7f834aa04d8a0f82bc584d16a4672b393a0cb767269069709aca41c",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799.npy": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_FiQA_9edadfd39a8a05da.npy": "6a46319fe7b4732bd2cf05c16ce9872b9200d9816c8bbbeead543a1b934f5ee8",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/FiQA_e5_small_base_seed29/parameters.npz": "ae2ea5d85713415896f58d5f845a6d3f9356419fcc81b3555e29195f603319fd",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624.npy": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/cc3a0b1e65630c952a4575fb091d36fd792d5895bd57a45e121cf41da7a76f4f.npy": "44450700b77524b61151705a3f9e327917637478ce2a19608c91a9f290015eb0",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_procrustes_global_seed29_25pct.npy": "de22a48e252c8e3f179ee378acb9d5d691c7429cb71f506b05a0640317b34e85",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606.npy": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/49972975602536ec07b556f3f792208641aea3fd00fbddef09e08cea45b3f6ef.npy": "1562d7fd61137a15d1d57020ef31ceca20ecfeaaf74445b62e669511ae3d3fc0",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_procrustes_global_seed29_50pct.npy": "deb0f8368fec9c0483158a6f40c4bb936243bf087b68748b835cd81deaf74314",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92.npy": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/efc82928295452c1246c96cbade567846b5083629b4f421cd591f6b4284e5c8a.npy": "dda77b147555f52538942ae6d0c5ce07d256687731f88aef28af49112714257e",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_procrustes_global_seed29_75pct.npy": "5dbf12294c76123624bddb9eccd0ff81389d94a0a868b2c4e33e64d583e6f911"
+  },
+  "failures": [],
+  "new_physical_document_encodes": 0,
+  "new_fits": 0,
+  "qrels_read": false,
+  "artificial_time_or_memory_caps": null,
+  "pid": 4049676,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "started_unix": 1793082628.4584894,
+  "dataset": "FiQA",
+  "pair": "e5_small_base",
+  "seed": 29,
+  "regime": "fixed1024",
+  "method": "procrustes_global",
+  "documents": 57638,
+  "queries": 500,
+  "sample_documents": 512,
+  "proxy_semantics": "pristine prediction for every document, including anchors",
+  "score_arithmetic": "float32 query batch16 @ gallery.T; stable row-order ties; identical ID exclusion",
+  "cases": [
+    {
+      "case_id": "FiQA_e5_small_base_seed29_fixed1024_procrustes_global_25pct",
+      "status": "PASS",
+      "after_sha256": "6725853e73f33b1db0218c79bfed005f21af3bdf1b8e652f10b0e36247950c4c"
+    },
+    {
+      "case_id": "FiQA_e5_small_base_seed29_fixed1024_procrustes_global_50pct",
+      "status": "PASS",
+      "after_sha256": "8e2d406fda44be894f0c6ce782250571038369a0dcbf425a8857c7a3f67d41a9"
+    },
+    {
+      "case_id": "FiQA_e5_small_base_seed29_fixed1024_procrustes_global_75pct",
+      "status": "PASS",
+      "after_sha256": "5dbf12294c76123624bddb9eccd0ff81389d94a0a868b2c4e33e64d583e6f911"
+    }
+  ],
+  "artifacts": {
+    "before.npy": {
+      "sha256": "6df4581807ddef7129d0e0fd867cb9b7b07d68bef0fd63b81ad9bbcdad8e5623"
+    },
+    "sample_proxy.npy": {
+      "sha256": "54243c9e1d779d8e43d8e38cfd786517b5b3ceaa106851f15a70ee9d9246a9c2"
+    }
+  },
+  "wall_seconds": 12.148131225258112,
+  "peak_process_rss_bytes": 891289600,
+  "ended_unix": 1793082640.6070983
+}

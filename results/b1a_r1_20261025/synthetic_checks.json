@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "runtime": {
+    "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+    "executable": "/root/arc2_p3h_20261020/venv/bin/python",
+    "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+    "hostname": "nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-bqjpp",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4"
+    },
+    "upstream_revision": "5e62baf1544264847ce3d8feeabd1ded6499b064",
+    "upstream_raw_sha256": "37015108e855101f3855755b755836280d8bb073389b23455825980302b49c67"
+  },
+  "reference_parity": [
+    {
+      "old_dim": 24,
+      "new_dim": 24,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "exact_reference_parity": true
+    },
+    {
+      "old_dim": 24,
+      "new_dim": 40,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "exact_reference_parity": true
+    },
+    {
+      "old_dim": 40,
+      "new_dim": 24,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "exact_reference_parity": true
+    },
+    {
+      "old_dim": 384,
+      "new_dim": 768,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "exact_reference_parity": true
+    }
+  ],
+  "tie_and_exclusion_test": true
+}

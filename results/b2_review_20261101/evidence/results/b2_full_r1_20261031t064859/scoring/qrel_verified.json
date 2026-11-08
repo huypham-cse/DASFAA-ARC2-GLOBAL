@@ -1,0 +1,14 @@
+{
+  "sha256": "10669ab7d526cb04f52079139fd88c3d467a0776441b046567f540582798982b",
+  "bytes": 980831,
+  "git_blob_sha1": "9cb5167175d7cdbf9d85ea828c6a3da943fe7053",
+  "columns": [
+    "query-id",
+    "corpus-id",
+    "score"
+  ],
+  "evaluation_queries": 50,
+  "queries_without_positive_judgments": 0,
+  "positive_judgments_outside_corpus_retained_in_denominator": 0,
+  "qrel_queries_outside_evaluation_set": 0
+}

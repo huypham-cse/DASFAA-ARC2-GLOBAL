@@ -1,0 +1,28 @@
+{
+  "status": "PASS_SELECTED_ROOTS_BACKUP_COMPLETE",
+  "checked_unix": 1793154769.2437575,
+  "destination": "D:\\ARC2-server-backup-20261028",
+  "completion_sha256": "7a1f5841757cd09c77b4e323b8b74b101d7cf9ff5c27a50da7a30b3673193c59",
+  "checks": [
+    {
+      "host": "main",
+      "verified_archives": 105,
+      "entries": 53707,
+      "source_bytes": 50213936392,
+      "archive_bytes": 44295073133,
+      "inventory_sha256": "4b349c4b86a693f58e18585595322ca525a3244d95f03e2e703acf57655d488c"
+    },
+    {
+      "host": "mini",
+      "verified_archives": 72,
+      "entries": 23679,
+      "source_bytes": 34970898859,
+      "archive_bytes": 31695208921,
+      "inventory_sha256": "704661af86e9944fbf2e963ec93f4dbda7115553565a653abd2941ad2f7ca7cb"
+    }
+  ],
+  "verification": "Every archive was source/stream/member SHA256 verified during download. Closure checks all receipt statuses, existence/sizes, inventory entry/byte totals, and absence of partials/failures; no unnecessary full rehash.",
+  "excluded_root": "/root/p8-a-recompute-20261022",
+  "scientific_run_or_scoring": false,
+  "remote_deletion": false
+}

@@ -1,0 +1,410 @@
+{
+  "scope": "Literature evidence and scripts only; includes unsuccessful responses preserved with receipts.",
+  "files": [
+    {
+      "path": "arxiv_recent_search.txt",
+      "bytes": 14702,
+      "sha256": "23df590dee85bf25dc384931df87c169cd755fbc8381db524aa8b7d08ef1ca98"
+    },
+    {
+      "path": "beir_correct_bib.txt",
+      "bytes": 611,
+      "sha256": "88cbe79f8366e5ba980ee43c4e73b76c621e875f8e8a63669779932358676d24"
+    },
+    {
+      "path": "build_bibliography.py",
+      "bytes": 7725,
+      "sha256": "28b6bbde91f567e038738f153681b04f81784a136ea3e8c1313a876437b15972"
+    },
+    {
+      "path": "byun2026mkp_metadata.txt",
+      "bytes": 435,
+      "sha256": "712bc69220685279e5fb613bd045d7b7eb165ccd505b050df419c690f021baf1"
+    },
+    {
+      "path": "byun2026mkp_reading.txt",
+      "bytes": 857841,
+      "sha256": "d7139275186ea8bc60737abdd28130c6522b0ed26ee1db73a410ddbecdff66c5"
+    },
+    {
+      "path": "cao_author_publications.txt",
+      "bytes": 24886,
+      "sha256": "a03134ac1f5461792f4f126544cc9e270635b256d95f436c351594e44fcb56d3"
+    },
+    {
+      "path": "claim_search_0.txt",
+      "bytes": 35641,
+      "sha256": "7d9cafa94b573fc788378a1b0f75481bcbdde08910537afd6ecc3db39eff86b0"
+    },
+    {
+      "path": "claim_search_3.txt",
+      "bytes": 38686,
+      "sha256": "e8c210d45c46041fb30ec47f03a1f668ebb8b34f72225d48a8777b448df67a40"
+    },
+    {
+      "path": "claim_search_6.txt",
+      "bytes": 35598,
+      "sha256": "326ba4e935f9db20a7b479b51725109aea9e89b6a559731483b600db525afb21"
+    },
+    {
+      "path": "close_prior_receipt.json",
+      "bytes": 608,
+      "sha256": "713277e2b6f5cdbfa120f73f147bcfc5996bd5d123329eba28c057fc1eb8fd41"
+    },
+    {
+      "path": "dar2025mini_metadata.txt",
+      "bytes": 320,
+      "sha256": "d5cffbbafbb788fbcd1a4b26d320a6b17d3c70b2562494b23e0d7e27bc5856e1"
+    },
+    {
+      "path": "dar2025mini_reading.txt",
+      "bytes": 223370,
+      "sha256": "c3180f2ba41c1c93ec33283f4a14dfcd64f5c58828038da3f76e2b4e7f225b87"
+    },
+    {
+      "path": "dar_latest_reading.txt",
+      "bytes": 255882,
+      "sha256": "d6f537260b647c5224d95ba9df09cb1428bad40ae618cdb716722a890d163dc8"
+    },
+    {
+      "path": "e5_card.txt",
+      "bytes": 67791,
+      "sha256": "0d57eda4766cc7ac045f2bf7e700286ea5a8360bb9b57278f67f9b8ef60b0b24"
+    },
+    {
+      "path": "extra_receipt.json",
+      "bytes": 1099,
+      "sha256": "99916f55d2afe4f17e95723f5f1bcc9bd9d8c3d34ff92b7f563bd221158185a4"
+    },
+    {
+      "path": "fastfill_arxiv_bib.txt",
+      "bytes": 365,
+      "sha256": "45460ee5f536685cb1d85b13abeb335e23399a7a76cc682f087d415559506204"
+    },
+    {
+      "path": "fastfill_author_page.txt",
+      "bytes": 26807,
+      "sha256": "23ac60d3353c56200e1402c2af8a4922337aab70c13bbbcdfb6233260133b919"
+    },
+    {
+      "path": "fastfill_full_html.txt",
+      "bytes": 301989,
+      "sha256": "7ef79f5f6d712ebe3bf5ea7ee124d9a2f7307bc2513ce18901f3709c870ec961"
+    },
+    {
+      "path": "fastfill_official_readme.txt",
+      "bytes": 8779,
+      "sha256": "5565d98d6ba60dd41e9d547d546a52302cd5a7f9ac2d51eaf554e21b8c6e8620"
+    },
+    {
+      "path": "fastfill_openreview_api.txt",
+      "bytes": 249,
+      "sha256": "151f5d032066b268a2eeb7844d3fdaabf62fba5b0e489d4d7afe7152cc4a819d"
+    },
+    {
+      "path": "fastfill_openreview_api2.txt",
+      "bytes": 271,
+      "sha256": "35f5b61960a2bd093c3d394ec74cbd940e7e577fea5815006de64edaab2c55e6"
+    },
+    {
+      "path": "fastfill_primary_pdf.txt",
+      "bytes": 12692,
+      "sha256": "a2d811e0d24af89d9bd4b19cc9e8fbc474c67ef3827648550a6560eca2a5e332"
+    },
+    {
+      "path": "fastfill_receipt.json",
+      "bytes": 1462,
+      "sha256": "01f9000120dbefd830686344357847c23eb6b9abe798a9764816f97ef5774d19"
+    },
+    {
+      "path": "fastfill_verified.bib",
+      "bytes": 283,
+      "sha256": "61e3a1c30b19e18cdeca9467d4478b7bbf698660e7ef01c3e7691b295df7a039"
+    },
+    {
+      "path": "fetch_fastfill.py",
+      "bytes": 1429,
+      "sha256": "06173f9c24693c07e4a22cb006329703a03c94502066f76b88eb8076d343e05e"
+    },
+    {
+      "path": "fetch_more.py",
+      "bytes": 3257,
+      "sha256": "91e8aeff8435e5e8f344693b0e8c3caa4c91a389ab7ca7f81f5a5f0d9df03ba0"
+    },
+    {
+      "path": "fetch_more_receipt.json",
+      "bytes": 7321,
+      "sha256": "e33b256fd4b599e34627891186cc480260e59ef555bb94debfeb7456474cf36d"
+    },
+    {
+      "path": "fetch_receipt.json",
+      "bytes": 15764,
+      "sha256": "c514c33dd43264429cb85b9536189cc9c49d01de64a866fc0f9344cad09d87c7"
+    },
+    {
+      "path": "fetch_sources.py",
+      "bytes": 3755,
+      "sha256": "947b54f33043e3727cb788685991d937a6e9b3fc6f78331c5763cc86242e7987"
+    },
+    {
+      "path": "finalize_literature.py",
+      "bytes": 5535,
+      "sha256": "cc5a8807b18f608e97fdcbf8335cbd39d7782ac1aae3dbd976d66a28dfe877db"
+    },
+    {
+      "path": "gao2023vec2vec_metadata.txt",
+      "bytes": 336,
+      "sha256": "7d83861fc4afe7070be799dda90a0422110c3d37ad6ceca8d3b08b93dd9e0182"
+    },
+    {
+      "path": "gao2023vec2vec_reading.txt",
+      "bytes": 41652,
+      "sha256": "47c01f991d860f52d235c7d20787981f3c79e3b91b9ca661950ac2c87c624847"
+    },
+    {
+      "path": "jha2025geometry_conference_bib.txt",
+      "bytes": 620,
+      "sha256": "7baf9e4f88272054bad4779681e8f7bc28456c114a75716c28a718168a325aa8"
+    },
+    {
+      "path": "jha2025geometry_metadata.txt",
+      "bytes": 350,
+      "sha256": "a2daa13afe92be5e2897330a721ee1f0e3436c27c9b5dc915045fe62cd4086f8"
+    },
+    {
+      "path": "jha2025geometry_reading.txt",
+      "bytes": 483321,
+      "sha256": "8829a6e66404b026253f74b535aed6da39a91be66841b4e3455d4c227139db68"
+    },
+    {
+      "path": "la2m_author_manuscript_failed403.txt",
+      "bytes": 5622,
+      "sha256": "f92606848f6418e60982d7649d08462ee205662947a4ea8f6b9109a110393163"
+    },
+    {
+      "path": "la2m_author_pdf_attempt.txt",
+      "bytes": 5622,
+      "sha256": "bfdac7911bae7fb3489bf42eb861f9290401f6a50d5269c56c08810ddb7d5590"
+    },
+    {
+      "path": "la2m_crossref.txt",
+      "bytes": 24320,
+      "sha256": "853050c336f6620f4aae7c128dad6ea4ddb59916cae47b1ac8c6ce69bd023358"
+    },
+    {
+      "path": "la2m_doi_bib.txt",
+      "bytes": 393,
+      "sha256": "47446bf6ac3dda175984bced8ed32cb53dff9939f380ca6ba1ec357d64d9b3c4"
+    },
+    {
+      "path": "la2m_institutional_page.txt",
+      "bytes": 49840,
+      "sha256": "de335b414a39717ac2974e8aa8ac19dde4f6968143337213ae91dca6a65b8dd6"
+    },
+    {
+      "path": "la2m_pdf.txt",
+      "bytes": 5544,
+      "sha256": "62eb90d55e78b395f91cd9a7d415e45d37802b6e38fac1610b8b70ebb98115d0"
+    },
+    {
+      "path": "la2m_publisher.txt",
+      "bytes": 5532,
+      "sha256": "1a2d2ab90980ba31bc92d2e29d340f4c9602b404595270e6261915b4c7186f5a"
+    },
+    {
+      "path": "maystre2025procrustes_metadata.txt",
+      "bytes": 415,
+      "sha256": "746a129371eed2b31d033dc6aab3881bc5196f7d39377b06c752174444d4bb80"
+    },
+    {
+      "path": "maystre2025procrustes_reading.txt",
+      "bytes": 330204,
+      "sha256": "1e0155ee11d3b5588662db8710ba9db3afa74bc801c7b2f42220be5afc3da37e"
+    },
+    {
+      "path": "minilm_card.txt",
+      "bytes": 10502,
+      "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0"
+    },
+    {
+      "path": "nanobeir_api.txt",
+      "bytes": 2005,
+      "sha256": "818797a761376da3d5507fac6c7ef6e76676c6cb9326a3c91819972200ceb0a7"
+    },
+    {
+      "path": "nanobeir_card.txt",
+      "bytes": 1095,
+      "sha256": "7ec3f6ab480c4f7225d5a08cc78241b16585e2e415b9390fa463f82fb30fd27c"
+    },
+    {
+      "path": "nanobeir_collection.txt",
+      "bytes": 145710,
+      "sha256": "22f6263b9532762e584b4251481f5bd0759876ce0cbfcb507680ba1e2103e882"
+    },
+    {
+      "path": "official_code_la2m.txt",
+      "bytes": 10861,
+      "sha256": "37015108e855101f3855755b755836280d8bb073389b23455825980302b49c67"
+    },
+    {
+      "path": "official_code_readme.txt",
+      "bytes": 12371,
+      "sha256": "5fc828bfa341ff4b5988ff8d47efef3066530bacaf4d087f3a40e1a6cd31ee1b"
+    },
+    {
+      "path": "official_code_simplelinear.txt",
+      "bytes": 9474,
+      "sha256": "9f22cb2c39baca27b660260c80df31da8ab6bb856160b660b5b3840c649ea821"
+    },
+    {
+      "path": "official_code_tree.txt",
+      "bytes": 38958,
+      "sha256": "2c564c18ef7d72c0f45440982224526bdeac1aa074e8fd4b68d9231cd13484fb"
+    },
+    {
+      "path": "reimers2019sentencebert_metadata.txt",
+      "bytes": 728,
+      "sha256": "b4b321245f05884e33608c78b5db9498f3b0ece544640407aa919ca870465b66"
+    },
+    {
+      "path": "reimers2019sentencebert_reading.txt",
+      "bytes": 41681,
+      "sha256": "4a7f11fc1678e85bcffb3a15f1a0558c4a67050e3073f3bc1bdab00028fe9b45"
+    },
+    {
+      "path": "schonemann1966procrustes_metadata.txt",
+      "bytes": 353,
+      "sha256": "fef3c5b40f0f0593c6a073a4dce576b745ff5b0c5cf6efae998320d35d67bfd3"
+    },
+    {
+      "path": "schonemann1966procrustes_reading.txt",
+      "bytes": 1478,
+      "sha256": "a77f954cc8456f6cd880f30dc5543ebbd0d89ee188a8beb9de438c2d2f1f4f07"
+    },
+    {
+      "path": "search_initial.txt",
+      "bytes": 34531,
+      "sha256": "5226a8910fc1aa054a09e3d7a654a1a1b55c1463a8a44517dac34eb4ba28c220"
+    },
+    {
+      "path": "shen2020backward_metadata.txt",
+      "bytes": 4870,
+      "sha256": "90c71f50f18070d45a088705c23793864d91b7f8339b6f1e4cc1821d9b62b733"
+    },
+    {
+      "path": "simplelinear_source_verified.txt",
+      "bytes": 9474,
+      "sha256": "9f22cb2c39baca27b660260c80df31da8ab6bb856160b660b5b3840c649ea821"
+    },
+    {
+      "path": "spherical_bib.txt",
+      "bytes": 379,
+      "sha256": "103476f4cbd8a06de543f14e3e6b916e9be88ec07bcbfca4bc4947804e1cb57d"
+    },
+    {
+      "path": "spherical_full_html.txt",
+      "bytes": 1489423,
+      "sha256": "49bd717a3b87ef46de9019ca23b24eb89eae72a7a4504acfe2fc3bb832b0286d"
+    },
+    {
+      "path": "thakur2021beir_metadata.txt",
+      "bytes": 645,
+      "sha256": "2350c2cefd8f89377920ba4e84501557ad67ea21a94a3e94f28e97e574dc188f"
+    },
+    {
+      "path": "thakur2021beir_reading.txt",
+      "bytes": 43778,
+      "sha256": "da672217e839d27d110b446a5baf2a4d9cabcdf9a9f0bd1a4edfef0a3f708da6"
+    },
+    {
+      "path": "thakur2021beir_round2_page.txt",
+      "bytes": 9221,
+      "sha256": "e885b4e4fe6861b9baf68eda79ced93b2e9d71e34a814e049773d8ef9af36b44"
+    },
+    {
+      "path": "thakur2021beir_verified.bib",
+      "bytes": 611,
+      "sha256": "88cbe79f8366e5ba980ee43c4e73b76c621e875f8e8a63669779932358676d24"
+    },
+    {
+      "path": "treccovid_doi_bib.txt",
+      "bytes": 533,
+      "sha256": "ab91b30aaa3e8573062078ef5da8528a61de936eeb68e2fe153c61074a40ed40"
+    },
+    {
+      "path": "vejendla2025drift_metadata.txt",
+      "bytes": 713,
+      "sha256": "f79a16801aaa1ebc53bfe78ce79ec13797a33239333bbb50b25ce7cb14a4c243"
+    },
+    {
+      "path": "vejendla2025drift_reading.pdf",
+      "bytes": 915360,
+      "sha256": "5dacac7b8b3976f180999e0807a648d8b32d7836403a0248aefaacdb4e78d3e1"
+    },
+    {
+      "path": "vejendla2025drift_reading.txt",
+      "bytes": 46732,
+      "sha256": "1bac3f582ae2c770794a30485094c176b78ef63af0a31eb72ad34ee3e93eaef5"
+    },
+    {
+      "path": "wang2020minilm_metadata.txt",
+      "bytes": 604,
+      "sha256": "8cb35c8fda7619ca903261ab69c318b2f45838255ed099cbdc926f6c0e06e76c"
+    },
+    {
+      "path": "wang2020minilm_reading.txt",
+      "bytes": 10490,
+      "sha256": "b154fcb2f0cf219ed515f3e7d79b808674d9f90f5d092631a43d53fee14fd18d"
+    },
+    {
+      "path": "wang2022e5_metadata.txt",
+      "bytes": 427,
+      "sha256": "5ba0251e315129416bf6dce60060b0e803be308439e9af3f9c8aba29efd7db3d"
+    },
+    {
+      "path": "wang2022e5_reading.txt",
+      "bytes": 40705,
+      "sha256": "d9551109321dfc2dcaed280331d8c89a90a7dc377429ebc7fbf25429252484c0"
+    },
+    {
+      "path": "yang2026translation_metadata.txt",
+      "bytes": 9379,
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368"
+    },
+    {
+      "path": "yang2026translation_page.txt",
+      "bytes": 15879,
+      "sha256": "618c449798dcb483fc745f9487d5f2b933afd478dce104b5ee7d8a2e5faf5365"
+    },
+    {
+      "path": "yang2026translation_reading.pdf",
+      "bytes": 1698281,
+      "sha256": "38b35ae4755468e2619731e527d216792b936008e343c09e229c8e4f04856c05"
+    },
+    {
+      "path": "yang2026translation_reading.txt",
+      "bytes": 115026,
+      "sha256": "2a1ab9b78c32b161e235ff5b607bf5185704ddcb4871f5e0b2b59aceeaf03ab0"
+    },
+    {
+      "path": "yang2026translation_verified.bib",
+      "bytes": 1976,
+      "sha256": "beeeab3aeabeeb515e7b93f9e5b50867fd3bd9c52b95f91dc589d236994bddc3"
+    },
+    {
+      "path": "yoon2025converter_metadata.txt",
+      "bytes": 747,
+      "sha256": "bec93954fb9b935d3d70a68fd471fda239fe4c852bd8d84239fedbcf66fca144"
+    },
+    {
+      "path": "yoon2025converter_reading.pdf",
+      "bytes": 844334,
+      "sha256": "e85f66d5f3ad0a61bdc8fcef7bf96e2edcef412b6e7121fee6becdae11446d8a"
+    },
+    {
+      "path": "yoon2025converter_reading.txt",
+      "bytes": 64004,
+      "sha256": "b01171ea3e18955bab46e2cf18f2d894022b82764faa7b0fc5b6a6253aa85969"
+    }
+  ]
+}

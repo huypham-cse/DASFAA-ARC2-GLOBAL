@@ -1,0 +1,7 @@
+{
+  "status": "FAILED_PRESERVED",
+  "failed_utc": "2026-10-25T19:02:52.869633+00:00",
+  "error": "ValueError(\"Unknown/ambiguous explicit qrel columns: ['query-id', 'corpus-id']\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_4056612/ops/b1m_score.py\", line 397, in run_score\n    qrels, stats = load_qrels(dataset, spec[\"datasets\"][dataset], out, ids[dataset], \"first_dev_qrel_open.json\")\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_4056612/ops/b1m_score.py\", line 251, in load_qrels\n    qrels, columns = qrel_rows(path, source[\"format\"])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_4056612/ops/b1m_score.py\", line 220, in qrel_rows\n    raise ValueError(f\"Unknown/ambiguous explicit qrel columns: {columns}\")\nValueError: Unknown/ambiguous explicit qrel columns: ['query-id', 'corpus-id']\n",
+  "dev_qrel_access_started": true
+}

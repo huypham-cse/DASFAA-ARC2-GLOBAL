@@ -1,0 +1,10 @@
+{
+  "dataset": "synthetic",
+  "pair": "synthetic",
+  "seed": 17,
+  "budget": "25pct",
+  "method": "procrustes_global",
+  "endpoint_sha256": "b8046556cd06cac663bab6db1e0debf96df1eb94204490671932882088624609",
+  "ranking_sha256": "a202cb924fb296d8e07ae36d66a03fd5d8de39fd5d70fccf7b599c5a945d682e",
+  "all_top100_ids_and_order_equal": true
+}

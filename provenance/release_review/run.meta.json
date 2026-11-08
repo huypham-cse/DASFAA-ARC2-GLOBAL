@@ -1,0 +1,10 @@
+{
+  "skill": "research-review",
+  "run_id": "2026-11-01_supervisor_release",
+  "recorded_at": "2026-11-01T02:21:58.714573+00:00",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "user_authorized_scope": "Freeze claim and package supervisor review before manuscript writing; no new scientific runs."
+}

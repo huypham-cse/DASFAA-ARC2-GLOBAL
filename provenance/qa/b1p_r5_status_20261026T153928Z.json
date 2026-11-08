@@ -1,0 +1,46 @@
+{
+  "time_vn": "2026-10-26T22:39:28.263783+07:00",
+  "status": "RUNNING",
+  "failures": [],
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 51,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "ranking_files": 51,
+  "workers": [
+    {
+      "cell": "minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec",
+      "status": "RUNNING",
+      "selected_iteration": 48750,
+      "current": true,
+      "phases": {
+        "selection": {
+          "step": 50000,
+          "elapsed_seconds": 3904.8024449311197,
+          "recent_seconds_per_step": 0.15097801099158822,
+          "gradients_finite": true,
+          "parameters_finite": true
+        },
+        "refit": {
+          "step": 13000,
+          "elapsed_seconds": 2109.8977524405345,
+          "recent_seconds_per_step": 0.15639948835317047,
+          "gradients_finite": true,
+          "parameters_finite": true
+        }
+      },
+      "pid": 32678,
+      "exit_code": null,
+      "live_owned": true,
+      "state": "R",
+      "resource_age_s": 0.3896758556365967,
+      "own_cuda_reserved_GiB": 0.87109375
+    }
+  ]
+}

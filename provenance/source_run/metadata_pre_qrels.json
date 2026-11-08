@@ -1,0 +1,262 @@
+{
+  "all_rankings_frozen_before_dev_qrels": true,
+  "anchor_file_sha256": {
+    "17": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742",
+    "29": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+    "41": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3",
+    "53": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc",
+    "67": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c"
+  },
+  "budgets": [
+    [
+      0.25,
+      "25pct"
+    ],
+    [
+      0.5,
+      "50pct"
+    ]
+  ],
+  "claim_boundary": "FiQA engineering development only; no independent confirmation or deployment utility",
+  "cuda_own_reserved_cap_bytes": null,
+  "dev_qrels_opened": false,
+  "exact_ties": "descending score then original document row; identical-ID exclusion",
+  "execution_window_path": "/root/arc2_p3h_20261020/p8_campaign_r10_20261025/execution_window.json",
+  "execution_window_sha256": "76080faaa8b754e8b8b08ca2a3cf6e4d1272b0f50176e56901ad2a43249000f9",
+  "failures": [],
+  "fit_cap_seconds": null,
+  "forecast_time_admission_explicitly_overridden": true,
+  "full_destination_cache_access": "fullY reference, paired anchor slices, selected overwrite only",
+  "gpu_used": true,
+  "host_hour_ledger": {
+    "admitted": true,
+    "authorization": "P8_R10_USER_DIRECT_RUN_20261025",
+    "basis": "explicit user removal of time ceilings; not invoice or activeGPU time",
+    "envelope_start_unix": 1792511217,
+    "future_scientific_package_cap_hours": null,
+    "historical_calendar_elapsed_hours": 112.49466245889664,
+    "new_package_deadline_unix": null,
+    "new_package_start_unix": 1792896282,
+    "observed_unix": 1792916197.784852,
+    "remaining_this_package_seconds": null,
+    "superseded_calendar_cap_hours": 120,
+    "total_cap_hours": null
+  },
+  "input_manifest_path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/manifest.json",
+  "input_manifest_sha256": "e22cf779ba9f280b7f97e93cb48cf0ef009c8cf70940aa9f34082f608e8f3ba6",
+  "logical_budget_policy": "|A union S|; anchors included",
+  "memory_policy": "observe_only_r10",
+  "methods": [
+    "procrustes_global",
+    "procrustes_local8",
+    "procrustes_tangent2_global",
+    "procrustes_tangent2_local8",
+    "arc2_frozen_reference",
+    "arc2_residual_cv_r1",
+    "embedding_converter_paper_spec_anchor1024"
+  ],
+  "new_physical_document_encodes": 0,
+  "packages": {
+    "numpy": "2.4.6",
+    "psutil": "7.2.2",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0",
+    "torch": "2.4.0+cu121"
+  },
+  "pairs": [
+    "minilm_distilroberta",
+    "e5_small_base"
+  ],
+  "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+  "process_tree_rss_cap_bytes": null,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "ranking_count": 144,
+  "ranking_seal_sha256": "12b3191106cd522d31f09643bee78c1b607ae42b2c041f794bd3edc8c2ff1eb0",
+  "ranking_seal_unix": 1792932176.914752,
+  "seeds": [
+    17,
+    29,
+    41,
+    53,
+    67
+  ],
+  "source": {
+    "canonical_source_sha256": {
+      "artifact/ops/p8_process_guard.py": "8e0c9be7a29560c739cea754230c7712dd4ae74455fddfc80a45c19dc4b778eb",
+      "artifact/ops/p8_r5_campaign.py": "19df7f3a24dc9e52f68e95657e4ca6cda6886d056047d5f1d0c1a4e082ae2e4c",
+      "artifact/ops/p8_r6_resumption.py": "04622836c4cb1ccca90f4c80c54a708377f4cc0da3d396e2eb76d931af684779",
+      "artifact/ops/p8_r7_execution.py": "17c4445c0f1023389693fc939666ccf834b95f877114ceb01f75e5950ad55592",
+      "artifact/ops/p8_sigterm_trace.c": "3f6164db78a01779812abbc472854b0c61735af6fd48d6223d5ea217db66c6ed",
+      "artifact/protocols/p8-execution-guard-integration-20261023.md": "6b13030a90d2fea229cbfc43142ad3a061b7320bddb45b3f2b13241088edb3e2",
+      "artifact/protocols/p8-procrustes-mechanism-development-20261022.md": "7bfe3a719e75eb7bad5244e0cb58c1d9b115d42e925f7e5a076cbcbc3e2e2372",
+      "artifact/protocols/p8-r1-original-row-ties-20261022.md": "f5fd7f1ca7d55a35f92d8cdd7139ff33dc355ac92574f21bf50903fdd3731687",
+      "artifact/protocols/p8-r10-user-direct-execution-20261025.md": "718873845fae5a24224956dc2df8f0ecb3def56b647b4f9200bd61d35c934945",
+      "artifact/protocols/p8-r2-linux-upstream-bytes-20261022.md": "286ffcff967854cef224082c5680db26ed8637cc28fccb4a35f0191f0bdcd5dc",
+      "artifact/protocols/p8-r3-verified-haswell-runtime-resumption-20261022.md": "d8d7bde9ee2f285322a72452cefcfc805e408fda9be5cfec7417e13cbc82dbae",
+      "artifact/protocols/p8-r5-user-approved-24h-budget-20261023.md": "8e969e574549d6e56dc3a5a135bef552e22ac42b35782ff40605ea2f4a8b8b46",
+      "artifact/protocols/p8-r5r1-portable-test-harness-20261023.md": "d2d5e4e5f152e1f93183468519d27785b6f2f124fc708b0ff3df2d6eebed221a",
+      "artifact/protocols/p8-r7-approved-eight-hour-window-20261025.md": "209ea7d41cf926ea7b63daef7b964e332b169169e8546246c5d1b78f1c2baa59",
+      "artifact/protocols/p8-r7r1-trace-compile-repair-20261025.md": "05d5d107e123239289e54ff544a271caf1a14c4232e4c537a07d6ff3be50d7f6",
+      "artifact/protocols/p8-r7r2-user-bounded-full-despite-forecast-20261025.md": "d785f864caa690ad281102f9e9ead88cc1addfd55dacaa4feaabb6c7f90ca12b",
+      "artifact/protocols/p8-r8-user-approved-no-time-cap-20261025.md": "0c6d87c1b8c574e9a5a5f1a3692d24088af077e277263a16157eef150306de6e",
+      "artifact/protocols/p8-r8r1-portable-disk-sampling-20261025.md": "4005c72e70f8b2bd7412840e86471583b8fa133549e62c8c5e3e296869a6beaf",
+      "artifact/protocols/p8-r9-shared-memory-headroom-20261025.md": "8fb7bc81275037c4262c2862b7dfd089684376d5db8565bf56491d5525d4f286",
+      "artifact/src/mixindex_arc2/core.py": "34d51a0fde518d3c5d00ab425459a423502ce6f17e39a111ce6c9566006bf714",
+      "artifact/src/mixindex_arc2/current.py": "58d842079cc18917401cace9d5a55fb53a83bc1213b74bb97f59db1fc18eafbb",
+      "artifact/src/mixindex_arc2/e5_la2m_feasibility.py": "5903acf4828fac112314a60d857481c3c930640543a3084930bc169452497b57",
+      "artifact/src/mixindex_arc2/p2d_mathematica_score.py": "d09080902c486d9e9963497eecb21b17b2b40467375bad54467f4e29c5c9b8e9",
+      "artifact/src/mixindex_arc2/p4_a2m_local8_matched_run.py": "4b23091cfe6181fc0aad5343d8103b3848ca95273bf9bb5064d6df3edfbbf60b",
+      "artifact/src/mixindex_arc2/p4_dev_ablation_run.py": "8a544c08d6621e1cea6b75ffe7c3b2416263d08565ecc5147ba8e1ae6a20d72f",
+      "artifact/src/mixindex_arc2/p5_residual_calibration.py": "6074faf41e21d6f21af63a45c7bb0c6bee81f33e29c8520960e19d8ce14bfc57",
+      "artifact/src/mixindex_arc2/p8_development.py": "376ebfe3ee5bd4123b303d03c83bfd7c4844ffd9b6afe4f673f288ce91d275d2",
+      "artifact/src/mixindex_arc2/p8_learned_converter.py": "67d6eaa3e31d3f90df716b40ef28b31b4b3e5f82837d5e83c0ccfb638ce40491",
+      "artifact/src/mixindex_arc2/p8_procrustes_geometry.py": "141f1dfd0530cab5dd6d814e0a6639cb99dc6212ca4917c7df82e32608580327",
+      "artifact/src/mixindex_arc2/search.py": "c660d913cdad2c7ae27215197f0a864d9f972907d9313a79a1c9444fa8c8f15c",
+      "artifact/tests/test_p8_development.py": "2aee0a44661ef4b7790d99b941a7054a749204cf3c3b4126f6f9748eaa533b02",
+      "artifact/tests/test_p8_direct_execution.py": "eb5835cb87647fc5b39d22cf060668297ef783a3b02a6dcc163a88dacaffb194",
+      "artifact/tests/test_p8_learned_converter.py": "ae6fc3a6ec2202909c69fd23520ca40af280714850ae0d3de65c630dc4d3645d",
+      "artifact/tests/test_p8_process_guard.py": "aec8979d2870c34968ebb2287a5547ed05a51d4c139e6b2709d247c378599b00",
+      "artifact/tests/test_p8_procrustes_geometry.py": "554e54a47d3ca91497afbc375317702157fe9c1ecaa0c82fd6476aec0faced40",
+      "artifact/tests/test_p8_r5_campaign.py": "3228e6641322e3fdd30f092ca30cae8a1fd066b37bdcc5c5bc2372bee9153d41",
+      "artifact/tests/test_p8_r7_execution.py": "aaddfa1b4bff7486f825ee1d00a7a6eac92fbbdd4027b19ac8a6a9ad5eae493a",
+      "artifact/tests/test_p8_shared_memory.py": "d3cf7d34ae14daf59b50b36c6c4d1d4a72dc873ab3b2fccb9f22aad68920ad4a"
+    },
+    "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e",
+    "protocols": {
+      "artifact/protocols/p8-execution-guard-integration-20261023.md": {
+        "canonical_sha256": "6b13030a90d2fea229cbfc43142ad3a061b7320bddb45b3f2b13241088edb3e2",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-procrustes-mechanism-development-20261022.md": {
+        "canonical_sha256": "7bfe3a719e75eb7bad5244e0cb58c1d9b115d42e925f7e5a076cbcbc3e2e2372",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r1-original-row-ties-20261022.md": {
+        "canonical_sha256": "f5fd7f1ca7d55a35f92d8cdd7139ff33dc355ac92574f21bf50903fdd3731687",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r10-user-direct-execution-20261025.md": {
+        "canonical_sha256": "718873845fae5a24224956dc2df8f0ecb3def56b647b4f9200bd61d35c934945",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r2-linux-upstream-bytes-20261022.md": {
+        "canonical_sha256": "286ffcff967854cef224082c5680db26ed8637cc28fccb4a35f0191f0bdcd5dc",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r3-verified-haswell-runtime-resumption-20261022.md": {
+        "canonical_sha256": "d8d7bde9ee2f285322a72452cefcfc805e408fda9be5cfec7417e13cbc82dbae",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r5-user-approved-24h-budget-20261023.md": {
+        "canonical_sha256": "8e969e574549d6e56dc3a5a135bef552e22ac42b35782ff40605ea2f4a8b8b46",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r5r1-portable-test-harness-20261023.md": {
+        "canonical_sha256": "d2d5e4e5f152e1f93183468519d27785b6f2f124fc708b0ff3df2d6eebed221a",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r7-approved-eight-hour-window-20261025.md": {
+        "canonical_sha256": "209ea7d41cf926ea7b63daef7b964e332b169169e8546246c5d1b78f1c2baa59",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r7r1-trace-compile-repair-20261025.md": {
+        "canonical_sha256": "05d5d107e123239289e54ff544a271caf1a14c4232e4c537a07d6ff3be50d7f6",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r7r2-user-bounded-full-despite-forecast-20261025.md": {
+        "canonical_sha256": "d785f864caa690ad281102f9e9ead88cc1addfd55dacaa4feaabb6c7f90ca12b",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r8-user-approved-no-time-cap-20261025.md": {
+        "canonical_sha256": "0c6d87c1b8c574e9a5a5f1a3692d24088af077e277263a16157eef150306de6e",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      },
+      "artifact/protocols/p8-r9-shared-memory-headroom-20261025.md": {
+        "canonical_sha256": "8fb7bc81275037c4262c2862b7dfd089684376d5db8565bf56491d5525d4f286",
+        "pre_run_commit": "01bedf35996804b903b3c11173a77aad05b1409e"
+      }
+    },
+    "received_raw_source_sha256": {
+      "artifact/ops/p8_process_guard.py": "329ca4a46f0007743434099eabb097666384a1d048c0879f90d2e1c962961c8c",
+      "artifact/ops/p8_r5_campaign.py": "451530a8ddc5bcc059c3a48480e9e6ce0d19f7d86d07f18cfd8c98f1a432f425",
+      "artifact/ops/p8_r6_resumption.py": "cfa024bce7f187603a8608c0bc9601d9ae7c8c09e429fa8c207d4689fd6f34be",
+      "artifact/ops/p8_r7_execution.py": "c9bebed24950a7c33f2cc75cf556753ce799f410e3d6beb2e519371229bb69aa",
+      "artifact/ops/p8_sigterm_trace.c": "ad04d5cf96f484d1e13ac1c875ebe7ac500733be65e3602e6f5ccb0da4a418e9",
+      "artifact/protocols/p8-execution-guard-integration-20261023.md": "3a5b931537d800439ac47cfc224b2a1ae46a43c381d6a01800b7170d016322c6",
+      "artifact/protocols/p8-procrustes-mechanism-development-20261022.md": "75d85d775c1afcb817da9fb16ebce341aab4c2e70155c75bf8b5ab92370a13dc",
+      "artifact/protocols/p8-r1-original-row-ties-20261022.md": "6e96057de65e4cca899973eae921f96e0498eaff641bf5a8d69f816c1a61fab1",
+      "artifact/protocols/p8-r10-user-direct-execution-20261025.md": "7025fc2335177256c61846f4f52efa072e0de081a4e54a749b5336b06589e072",
+      "artifact/protocols/p8-r2-linux-upstream-bytes-20261022.md": "99b84f5e9536ad39850a7b4b2177cd8b2939da69a0af24b1fc54bb83e96e6477",
+      "artifact/protocols/p8-r3-verified-haswell-runtime-resumption-20261022.md": "4ab8d1510092e535e63e7b7d5444cd302c2bbedec4268392797a05720b5fcf83",
+      "artifact/protocols/p8-r5-user-approved-24h-budget-20261023.md": "0a75931c9139b60a46370397283efcdb04e47e6fb8e9319379add9cf2fd6fced",
+      "artifact/protocols/p8-r5r1-portable-test-harness-20261023.md": "05919f0168a745db6b4decce301dabe0bca33db785fa844e6217a28e87e15f00",
+      "artifact/protocols/p8-r7-approved-eight-hour-window-20261025.md": "8f8a3fdf48020cc02c7fdeeaf15ffaba82d7e60435436caef1a7cb8cbba3edd1",
+      "artifact/protocols/p8-r7r1-trace-compile-repair-20261025.md": "f8279cc34f1519a88eed4ff1d62df56547fb29999232ffead0b868e862aa9f94",
+      "artifact/protocols/p8-r7r2-user-bounded-full-despite-forecast-20261025.md": "15b9809d7c853e737bdd182a3fde570789a3dad4d87dbb9a96838307599a20c5",
+      "artifact/protocols/p8-r8-user-approved-no-time-cap-20261025.md": "5383184f57386c03ac12fc63c163eb8b5006bddb4e59da0940817b3c55ec3ec3",
+      "artifact/protocols/p8-r8r1-portable-disk-sampling-20261025.md": "d3a08df0c3b6f3efe313a3f88af0b12aeaefaa4b5c16f8f54a91cc1d8aeaddf5",
+      "artifact/protocols/p8-r9-shared-memory-headroom-20261025.md": "079d2d8ebb91936d4e72522a230678c5892d473993c21009bdda1250d67708d0",
+      "artifact/src/mixindex_arc2/core.py": "7ddc07b89f87b6363a97ba135ac19262e0000da0415ab9098a5422195f847778",
+      "artifact/src/mixindex_arc2/current.py": "96d105b06f04575011d1092f9aed00efd41d815bf99d631e142709deec38b4d6",
+      "artifact/src/mixindex_arc2/e5_la2m_feasibility.py": "7d1b4e0fcd63cba92fb395a73c26654037e8f5cfbe5cf332ea4981b8d74fd63d",
+      "artifact/src/mixindex_arc2/p2d_mathematica_score.py": "5c4faf2ebf52dfdb0c265857323c73235a8f1e643c5216e4b9ccc2fb35e87982",
+      "artifact/src/mixindex_arc2/p4_a2m_local8_matched_run.py": "1d377627931d5dedf1bb8dec87349aa021d5bbacd01074cc71b47dd326265595",
+      "artifact/src/mixindex_arc2/p4_dev_ablation_run.py": "3db5af22a9a41b18ca5bc46afbc2923ee3214d59561ce9b5dcfe07e6bd1f3e6b",
+      "artifact/src/mixindex_arc2/p5_residual_calibration.py": "7c17fa47b8d40726270d188e7457f28830ebe063a74c52124ba61e1185d18e47",
+      "artifact/src/mixindex_arc2/p8_development.py": "064ca6dc25b85eb462002e9635925dde166d350e1a084b1ad5ac3c2a5e1d2891",
+      "artifact/src/mixindex_arc2/p8_learned_converter.py": "3aa27eaa97aeaed89060a96cf6a135dc0eb6381c20fc178d69e4cd79e250ce5e",
+      "artifact/src/mixindex_arc2/p8_procrustes_geometry.py": "7fb17ce2dc76c5f2149ed145553ad3d0339bf947dcede9876017c9c50f7b33d3",
+      "artifact/src/mixindex_arc2/search.py": "da8001bdaec7c031342b5d226c73c558537c016ff33f76acd97d38de111aabb5",
+      "artifact/tests/test_p8_development.py": "bec340a6336069a8b5828e703cb08097481d62df7fe54e15df5d33ed2e24eb45",
+      "artifact/tests/test_p8_direct_execution.py": "14dd584525660bb97a59a83b96aacbca1dcefe4baa643f1f60ccc219269e7d76",
+      "artifact/tests/test_p8_learned_converter.py": "45ac46aca58211e00844763ac931c3fe5581336a5e7d6e1e8151f278647a06e0",
+      "artifact/tests/test_p8_process_guard.py": "0c7a0a848d66e632aab43d498a8aec8f7564066b4a4f00a8b277db42a26214c7",
+      "artifact/tests/test_p8_procrustes_geometry.py": "aa50310c05a045a144d8101fa59938e0820d662aa8dd7523c626627fa5638ab4",
+      "artifact/tests/test_p8_r5_campaign.py": "e6262d0c44c1d576b1ea0779469cc7d279008fb1e51fedfd4af5669b57a4e981",
+      "artifact/tests/test_p8_r7_execution.py": "57d2c2ee0862f0f702fedae1c401dea3e66739f028b91beea814b1db8431fda0",
+      "artifact/tests/test_p8_shared_memory.py": "7bcb4f9c69abfd60abc0d0452dda68e91e1a45225334aa7f6840871f11e29f42"
+    },
+    "source_lock_sha256": "4f8bef21dcac4b9122ffcecb59259048856ebeb180e5c2806d336a53dda5660d"
+  },
+  "stage": "full",
+  "started_unix": 1792916197.6297562,
+  "status": "RUNNING",
+  "test_qrels_opened": false,
+  "upstream_revision": "5e62baf1544264847ce3d8feeabd1ded6499b064",
+  "upstream_sha256": {
+    "reproduce-scripts/harness.py": "b1034ec22b0139f17baa73fdc4c6899ef300df0480d4b0c3ee3d2bd5c13117e8",
+    "reproduce-scripts/la2m/exp_la2m.py": "37015108e855101f3855755b755836280d8bb073389b23455825980302b49c67"
+  },
+  "upstream_source": "/root/arc2_p3h_20261020/upstream_clean",
+  "verified_numerical_runtime": {
+    "environment": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OPENBLAS_NUM_THREADS": "4"
+    },
+    "loaded_blas": [
+      {
+        "architecture": "Haswell",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "threading_layer": "pthreads",
+        "user_api": "blas",
+        "version": "0.3.30"
+      },
+      {
+        "architecture": "Haswell",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "threading_layer": "pthreads",
+        "user_api": "blas",
+        "version": "0.3.31.188.0"
+      }
+    ]
+  },
+  "wall_cap_seconds": null,
+  "worker_cap_seconds": null
+}

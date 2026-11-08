@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-30T09:04:45+00:00",
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "NanoNQ_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec",
+    "group_index": 96,
+    "groups_total": 120,
+    "rankings_complete": 286,
+    "rankings_total": 358
+  },
+  "full_status": "B1C_R3_RUNNING",
+  "worker_status": "RUNNING",
+  "worker_failures": [],
+  "output_realpath": "/home/jovyan/arc2_b1c_r3_outputs_20261030/b1c_r3_full_mini_r3b_20261030t0347",
+  "output_available_bytes": 610421354496,
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "git_dirty": "",
+  "lock_sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+  "current_selection": {
+    "step": 10250,
+    "elapsed_seconds": 117.77047526370734,
+    "gradients_finite": true,
+    "parameters_finite": true
+  },
+  "storage": {
+    "status": "OUTPUTS_RELOCATED_VERIFIED",
+    "files": 1741,
+    "bytes": 32917276618,
+    "controllers_resumed_utc": "2026-10-30T09:02:40.912104+00:00",
+    "original_source_stamps_unchanged": true,
+    "raw_snapshot_preserved": true
+  }
+}

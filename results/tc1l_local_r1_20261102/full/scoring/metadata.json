@@ -1,0 +1,15 @@
+{
+  "status": "DEV_SCORED",
+  "utc_start": "2026-11-02T01:26:43.481322+00:00",
+  "scope": "MiniLM-only local FiQA DEV; E5 pending",
+  "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "seal_sha256": "0b4a3809ace4b37df55357fd767ba6367fe6e1209070a1c44bc30be353315df9",
+  "runtime": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "utc_end": "2026-11-02T01:26:43.943203+00:00",
+  "elapsed_seconds": 0.4617296000069473
+}

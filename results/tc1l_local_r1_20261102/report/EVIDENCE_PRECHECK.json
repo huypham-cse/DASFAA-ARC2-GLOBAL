@@ -1,0 +1,105 @@
+{
+  "results": [
+    {
+      "id": "procrustes_ndcg10",
+      "value": "0.28582824088854003",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.28582824088854003' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "procrustes_recall100",
+      "value": "0.6687918004218004",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.6687918004218004' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "tangent2_ndcg10",
+      "value": "0.3075048582716371",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.3075048582716371' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "tangent2_recall100",
+      "value": "0.6765693384393384",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.6765693384393384' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "chordal2_ndcg10",
+      "value": "0.2935058031310443",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.2935058031310443' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "chordal2_recall100",
+      "value": "0.6740056099456099",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.6740056099456099' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "euclidean2_ndcg10",
+      "value": "0.2959154931179677",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.2959154931179677' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "euclidean2_recall100",
+      "value": "0.6739997513597513",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.6739997513597513' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "chordal2_delta_ndcg10",
+      "value": "0.013999055140592891",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.013999055140592891' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "chordal2_lower",
+      "value": "0.009703861642472786",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.009703861642472786' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "chordal2_upper",
+      "value": "0.018620502805854717",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.018620502805854717' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "euclidean2_delta_ndcg10",
+      "value": "0.011589365153669408",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.011589365153669408' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "euclidean2_lower",
+      "value": "0.007820844428750586",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.007820844428750586' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    },
+    {
+      "id": "euclidean2_upper",
+      "value": "0.015656396532695304",
+      "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+      "status": "verified",
+      "detail": "'0.015656396532695304' found in results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json"
+    }
+  ],
+  "summary": {
+    "verified": 14
+  }
+}

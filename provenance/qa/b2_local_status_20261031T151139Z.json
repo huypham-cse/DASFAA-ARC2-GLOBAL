@@ -1,0 +1,25 @@
+{
+  "checked_utc": "2026-10-31T15:12:20.911943+00:00",
+  "verified_files": 587,
+  "verified_bytes": 23721491411,
+  "last_events": [
+    {
+      "status": "BACKUP_ERROR",
+      "consecutive_errors": 1,
+      "error": "SSHException('SSH session not active')",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\DASFAA-2027-paper\\tools\\watch_b1c_r3_backups.py\", line 231, in main\n    current = inventory(client, previous); now = stamp(); skipped = 0\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\DASFAA-2027-paper\\tools\\watch_b1c_r3_backups.py\", line 148, in inventory\n    inp, out, err = client.exec_command(shlex.join(['python3', '-c', REMOTE, PROJECT, CAMPAIGN, RELOCATED_FULL]), timeout=600)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Gia Huy\\AppData\\Local\\Temp\\arc2_remote_deps\\paramiko\\client.py\", line 548, in exec_command\n    chan = self._transport.open_session(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Gia Huy\\AppData\\Local\\Temp\\arc2_remote_deps\\paramiko\\transport.py\", line 926, in open_session\n    return self.open_channel(\n           ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Gia Huy\\AppData\\Local\\Temp\\arc2_remote_deps\\paramiko\\transport.py\", line 1020, in open_channel\n    raise SSHException(\"SSH session not active\")\nparamiko.ssh_exception.SSHException: SSH session not active\n",
+      "utc": "20261031T150815_130084Z"
+    },
+    {
+      "status": "POLL_VERIFIED",
+      "groups": 35,
+      "files": 587,
+      "pending": 182,
+      "unstable": 182,
+      "utc": "20261031T151016_399601Z"
+    }
+  ],
+  "manuscript_files_checked": 20,
+  "manuscript_changed": [],
+  "backup_complete": false
+}

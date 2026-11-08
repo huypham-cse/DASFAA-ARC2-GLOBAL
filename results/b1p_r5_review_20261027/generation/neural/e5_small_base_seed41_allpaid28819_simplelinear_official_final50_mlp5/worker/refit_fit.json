@@ -1,0 +1,50 @@
+{
+  "official_metadata": {
+    "input_dim": 384,
+    "output_dim": 768,
+    "hidden_dim": 512,
+    "layer_num": 4,
+    "final_loss": 0.05545357055962086
+  },
+  "configuration": {
+    "learning_rate": 0.0001,
+    "num_epochs": 50,
+    "batch_size": 4028,
+    "gradient_clip": 1.0,
+    "weight_decay": 1e-05,
+    "scheduler_patience": 5,
+    "scheduler_factor": 0.5,
+    "early_stopping_patience": 10,
+    "min_delta": 1e-06,
+    "device": null,
+    "layer_num": 4,
+    "activation": "selu",
+    "dropout": 0.0,
+    "hidden_dim": 512,
+    "use_local_distill": false,
+    "local_k": 50,
+    "local_tau": 0.1,
+    "local_weight": 0.5,
+    "faiss_use_float32": true,
+    "knn_recompute_epochs": 0,
+    "global_weight": 0.5,
+    "cosine_weight": 0.5,
+    "mse_weight": 1.0,
+    "normalize_output": false,
+    "loss_kind": "mse_cos"
+  },
+  "health": {
+    "initial_loss": 0.5132333040237427,
+    "initial_gradient_norm": 0.947990894317627,
+    "initial_gradients_finite_nonzero": true,
+    "initial_state_sha256": "45c5361426199616f1f9e67eececce10ff3c5cc2254e96de0d69a0c51cebc8f0",
+    "final_state_sha256": "97a17f9fbc4d339e7c5f1982538ed7cd098f396b1a7a33058324921d3e0c3874",
+    "parameters_updated": true,
+    "parameters_finite": true,
+    "postfit_loss": 0.05568736046552658,
+    "gradient_norm": 0.22548134624958038,
+    "gradients_finite": true,
+    "late_zero_gradient_allowed": true
+  },
+  "fit_wall_seconds": 15.838955216109753
+}

@@ -1,0 +1,28 @@
+{
+  "status": "BACKUP_TRANSPORT_REPAIR_TESTED",
+  "scope": "Local read-only backup operator only; remote scientific process/code/lock untouched",
+  "observed_error": "SSHException: Key-exchange timed out waiting for key negotiation",
+  "installed_paramiko": "5.1.0",
+  "observed_default_rekey_bytes": 536870912,
+  "observed_checkpoint_bytes": 542887512,
+  "cause_qualification": "Timeout observed; precise server-side cause unproven. Avoid automatic rekey during bulk-file payloads.",
+  "repair": {
+    "range_bytes": 134217728,
+    "rotate_connection_after_payload_bytes": 402653184,
+    "network_channel_timeout_seconds": 300,
+    "metadata_inventory_timeout_seconds": 600,
+    "persist_inventory_and_verified_coverage": true,
+    "whole_file_sha256_required_before_publish": true,
+    "partial_files_preserved": true,
+    "credentials_memory_only": true
+  },
+  "validation": "PASS multirange assembly/connection rotation/tampered payload rejection; Python compilation PASS",
+  "operator_sha256": "d8f83d857a282d92e57862b2e034f2960504ee17eb3a0bc733405981a4e4c9a9",
+  "last_backup_verified_event": {
+    "utc": "2026-10-30T11:51:28Z",
+    "files": 400,
+    "bytes": 7978276548
+  },
+  "training_interrupted": false,
+  "scientific_resource_caps_added": false
+}

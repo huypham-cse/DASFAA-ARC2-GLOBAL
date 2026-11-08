@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "test": "synthetic CLI/package sanity only",
+  "shape": [
+    64,
+    16
+  ],
+  "scientific_claim_from_test": false
+}

@@ -1,0 +1,12 @@
+{
+  "path": "/root/paper-P2/.venv/lib/python3.11/site-packages/sentence_transformers/evaluation/NanoBEIREvaluator.py",
+  "reference_excerpt": [
+    "        corpus = load_dataset(dataset_path, \"corpus\", split=\"train\")\n        queries = load_dataset(dataset_path, \"queries\", split=\"train\")\n        qrels = load_dataset(dataset_path, \"qrels\", split=\"train\")\n        corpus_dict = {sample[\"_id\"]: sample[\"text\"] for sample in corpus if len(sample[\"text\"]) > 0}\n        queries_dict = {sample[\"_id\"]: sample[\"text\"] for sample in queries if len(sample[\"text\"]) > 0}\n        qrels_dict = {}",
+    "        corpus_dict = {sample[\"_id\"]: sample[\"text\"] for sample in corpus if len(sample[\"text\"]) > 0}\n        queries_dict = {sample[\"_id\"]: sample[\"text\"] for sample in queries if len(sample[\"text\"]) > 0}\n        qrels_dict = {}\n        for sample in qrels:\n            if sample[\"query-id\"] not in qrels_dict:\n                qrels_dict[sample[\"query-id\"]] = set()",
+    "        queries_dict = {sample[\"_id\"]: sample[\"text\"] for sample in queries if len(sample[\"text\"]) > 0}\n        qrels_dict = {}\n        for sample in qrels:\n            if sample[\"query-id\"] not in qrels_dict:\n                qrels_dict[sample[\"query-id\"]] = set()\n            qrels_dict[sample[\"query-id\"]].add(sample[\"corpus-id\"])",
+    "        qrels_dict = {}\n        for sample in qrels:\n            if sample[\"query-id\"] not in qrels_dict:\n                qrels_dict[sample[\"query-id\"]] = set()\n            qrels_dict[sample[\"query-id\"]].add(sample[\"corpus-id\"])\n",
+    "        for sample in qrels:\n            if sample[\"query-id\"] not in qrels_dict:\n                qrels_dict[sample[\"query-id\"]] = set()\n            qrels_dict[sample[\"query-id\"]].add(sample[\"corpus-id\"])\n\n        if self.query_prompts is not None:",
+    "            if sample[\"query-id\"] not in qrels_dict:\n                qrels_dict[sample[\"query-id\"]] = set()\n            qrels_dict[sample[\"query-id\"]].add(sample[\"corpus-id\"])\n\n        if self.query_prompts is not None:\n            ir_evaluator_kwargs[\"query_prompt\"] = self.query_prompts.get(dataset_name, None)",
+    "            queries=queries_dict,\n            corpus=corpus_dict,\n            relevant_docs=qrels_dict,\n            name=human_readable_name,\n            **ir_evaluator_kwargs,\n        )"
+  ]
+}

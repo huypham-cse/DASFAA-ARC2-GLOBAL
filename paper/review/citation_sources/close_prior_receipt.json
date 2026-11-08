@@ -1,0 +1,20 @@
+[
+  {
+    "file": "fastfill_full_html.txt",
+    "url": "https://arxiv.org/html/2303.04766v1",
+    "status": 200,
+    "sha256": "7ef79f5f6d712ebe3bf5ea7ee124d9a2f7307bc2513ce18901f3709c870ec961"
+  },
+  {
+    "file": "spherical_bib.txt",
+    "url": "https://arxiv.org/bibtex/2609.39836",
+    "status": 200,
+    "sha256": "103476f4cbd8a06de543f14e3e6b916e9be88ec07bcbfca4bc4947804e1cb57d"
+  },
+  {
+    "file": "spherical_full_html.txt",
+    "url": "https://arxiv.org/html/2609.39836v1",
+    "status": 200,
+    "sha256": "49bd717a3b87ef46de9019ca23b24eb89eae72a7a4504acfe2fc3bb832b0286d"
+  }
+]

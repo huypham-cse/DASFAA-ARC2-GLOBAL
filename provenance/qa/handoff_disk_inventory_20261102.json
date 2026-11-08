@@ -1,0 +1,143 @@
+{
+  "utc": "2026-11-02T08:25:41.167517+00:00",
+  "drive": "D:",
+  "disk": {
+    "total_bytes": 262142947328,
+    "used_bytes": 237336190976,
+    "free_bytes": 24806756352
+  },
+  "scope": "Read-only logical file sizes; no cloud completeness or deletion inferred from filenames.",
+  "directories": [
+    {
+      "path": "D:\\ARC2-B1c-R3-backup-20261030",
+      "logical_bytes": 135443612821,
+      "files": 3329,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\ARC2-B2-backup-20261031",
+      "logical_bytes": 59091614782,
+      "files": 1987,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\DASFAA-2027-MixIndex",
+      "logical_bytes": 4780905403,
+      "files": 11491,
+      "errors": [],
+      "reparse_skipped": [
+        "D:\\DASFAA-2027-MixIndex\\.aris\\tools",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\ablation-planner",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\experiment-plan",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\idea-creator",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\idea-discovery",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\kill-argument",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\novelty-check",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\paper-claim-audit",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\render-html",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\research-lit",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\research-refine",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\research-refine-pipeline",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\research-review",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\result-to-claim",
+        "D:\\DASFAA-2027-MixIndex\\.agents\\skills\\shared-references"
+      ]
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper",
+      "logical_bytes": 3708595478,
+      "files": 11578,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-before-arc2-global-20261025",
+      "logical_bytes": 2194853,
+      "files": 124,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release",
+      "logical_bytes": 777625112,
+      "files": 6396,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story",
+      "logical_bytes": 777578462,
+      "files": 6395,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\graph4paper",
+      "logical_bytes": 80376182,
+      "files": 104,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\mixindex-cargo",
+      "logical_bytes": 252309101,
+      "files": 4998,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\mixindex-diskann3-source",
+      "logical_bytes": 106205457,
+      "files": 1508,
+      "errors": [],
+      "reparse_skipped": []
+    },
+    {
+      "path": "D:\\tmp",
+      "logical_bytes": 0,
+      "files": 0,
+      "errors": [],
+      "reparse_skipped": []
+    }
+  ],
+  "root_project_files": [
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101-r2-complete.zip",
+      "bytes": 371845465
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101-r2-complete.zip.receipt.json",
+      "bytes": 441
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101-r2-complete.zip.sha256",
+      "bytes": 117
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story.zip",
+      "bytes": 372032202
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story.zip.receipt.json",
+      "bytes": 444
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story.zip.sha256",
+      "bytes": 120
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101.zip",
+      "bytes": 236649934
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101.zip.receipt.json",
+      "bytes": 429
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper-release-20261101.zip.sha256",
+      "bytes": 105
+    }
+  ]
+}

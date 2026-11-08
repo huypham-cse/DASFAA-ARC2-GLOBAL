@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-31T06:06:38.820803+00:00",
+  "root_report_macro_values": "exact_saved_summary_at_6decimals",
+  "root_report_readme_claim_links": "exist",
+  "render_output_hashes_verified": 17,
+  "svg_parse": 3,
+  "parent_visual_review": [
+    "quality_budget_pdf_preview",
+    "macro_and_condition_deltas_pdf_preview"
+  ],
+  "figure_agent_visual_review": {
+    "status": "PASS",
+    "reviewed_utc": "2026-10-31T06:03:00.270299+00:00",
+    "checks": [
+      "All three native PNG exports visually inspected",
+      "All three PDF exports rasterized with pdftoppm and visually inspected",
+      "All three SVG exports XML-parse successfully",
+      "Every mean/condition delta/condition interval in generated CSV exactly matches saved scorer",
+      "Native PNG DPI metadata is300",
+      "No clipped labels or overlaps; all six methods and native references visible; negative nDCG heatmap cell highlighted red"
+    ],
+    "reviewer": "report/figure agent; numeric evidence independently verified in input QA receipt"
+  },
+  "scientific_core_modified": false,
+  "TREC_access": false
+}

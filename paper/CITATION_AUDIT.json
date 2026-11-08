@@ -1,0 +1,208 @@
+{
+  "audit_skill": "citation-audit",
+  "verdict": "PASS",
+  "reason_code": "all_entries_keep",
+  "summary": "18 cited entries; 18 KEEP. Original reports and repaired-context rechecks are retained.",
+  "audited_input_hashes": {
+    "main.tex": "sha256:704d831a3f56001486627c701512c0a03b7dcaba6ee1c5939418898f25cbd747",
+    "references.bib": "sha256:c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+    "sections/abstract.tex": "sha256:24a2314dcfb5090ba76b4cb7dfea95c8c941eacff94881e451edea6374d3043a",
+    "sections/conclusion.tex": "sha256:7f9bb6b3a071a3fa02338249c0b949dc1bf8b2d9863c4c23644a65e80def4caf",
+    "sections/discussion.tex": "sha256:4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71",
+    "sections/experimental-setup.tex": "sha256:4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215",
+    "sections/introduction.tex": "sha256:4785d051ea8266d7907b2ca55417a2ae6744c9ea01e9adb90ef0db1fd34a6f5f",
+    "sections/method.tex": "sha256:2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b",
+    "sections/related-work.tex": "sha256:ff5a1ac26f3ca8eb9865f99fec92e3e5b185756c3d67fcae2b048f6654594f44",
+    "sections/results.tex": "sha256:9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d"
+  },
+  "trace_path": ".aris/traces/citation-audit/2026-11-01_full_review/",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-11-01T19:13:19.826575+00:00",
+  "aggregation_kind": "Parent aggregation of separately completed fresh single-entry reviews; not a new reviewer verdict.",
+  "details": {
+    "total_entries": 18,
+    "per_entry": [
+      {
+        "key": "beir2021",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/beir2021.audit.json",
+        "report_sha256": "039ed5d2f215e3aeb0809cbc04868de1fb24d61ec3bc61697d4f16c4c47c0eb9",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "dar2025mini",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/dar2025mini.audit.json",
+        "report_sha256": "b928b367a489f65dc43d4c4314683fb226d0d10e5516fd5ed3f17300fb9481e4",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "driftadapter",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/driftadapter.audit.json",
+        "report_sha256": "4bcef671fb6c13e5248e1c4033549d3e22aae03f09fd45244041cc613f17261c",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "e52022",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/e52022.audit.json",
+        "report_sha256": "f3993bfc453c160845a82f1240a8766b1d8d10e3d58c6e5877ecc6aaec43b74c",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "embeddingconverter",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/embeddingconverter.audit.json",
+        "report_sha256": "76bb1a389dccd268a327ca9235ac023e5718260db1d8434232626b04ee7b27af",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "fastfill2023",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/fastfill2023.audit.json",
+        "report_sha256": "800e8486a5cb8808725452d963b4e244dacf3f557646340d36f7e4ac877eaa6c",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "jha2025geometry",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/jha2025geometry.audit.json",
+        "report_sha256": "734b0dbe1ff489312af539a8bc12423909fe62a0f85c2e769db92781510277b4",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "la2m",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/la2m.audit.json",
+        "report_sha256": "72148484cc170e96ed1bb5f665a10ebde8a4fd36fc17f4f57ec3fa82de5424b8",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "maystre2025procrustes",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/maystre2025procrustes.audit.json",
+        "report_sha256": "3e56eacb8c1f786b65fcaf73591db928ca58358f238395eea95eb3886954fccd",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "minilm2020",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/minilm2020.current.audit.json",
+        "report_sha256": "931f7564d8de6f1e739d84c91135aa95309cc8264f808aaa6a0c29aae8b8ddcc",
+        "current_repair_rechecked": true,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "nanobeir",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/nanobeir.audit.json",
+        "report_sha256": "81781747fe225c56f2c8bceed0232b22a6575c2dff6526a0153e099186606335",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "sbert2019",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/sbert2019.current.audit.json",
+        "report_sha256": "73c4a58a1cdb5b7a1725ef4666d1b48c7b89941f54a658852776c2bc5cc2ed2b",
+        "current_repair_rechecked": true,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "schonemann1966procrustes",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/schonemann1966procrustes.audit.json",
+        "report_sha256": "de679b36ea0b6e2074a0bcd4d5b20a872414c586bbd48cb589ce6c11aa9e9449",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "shen2020backward",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/shen2020backward.audit.json",
+        "report_sha256": "4a5fe16ea05177d61f96a3ea9c9e81030e2140586e6e8faf11d75b5424e18bfb",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "simplelinear",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/simplelinear.audit.json",
+        "report_sha256": "7218f703a685ff8f0138e7e0d17957ad76cdb4f3a67faf2ac5adedafccd32e5b",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "spherical2026",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/spherical2026.audit.json",
+        "report_sha256": "0a4a770a628009455c4d9444479dd55ded40e1760ac51708d3d5615c1ad28565",
+        "current_repair_rechecked": false,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "treccovid2020",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/treccovid2020.current.audit.json",
+        "report_sha256": "3306384594d434f1b5f3b97680f3f4ca5d5f1f7d3e368a7cc8d4906480cc9c35",
+        "current_repair_rechecked": true,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      },
+      {
+        "key": "yang2026translation",
+        "verdict": "KEEP",
+        "report": "review/final_review_20261101/citations/yang2026translation.current.audit.json",
+        "report_sha256": "4dbca862f7dc9b9f5ad354af53cb7d2bf9db0da18327628cdf35f4e6ffc7bbfb",
+        "current_repair_rechecked": true,
+        "axis_failures": [],
+        "note": "See the original per-entry report for all primary-source lookups, context judgments, and access limitations."
+      }
+    ],
+    "counts": {
+      "KEEP": 18
+    },
+    "context_repairs": {
+      "minilm2020": "Architecture citation retained in related work; exact checkpoint is attributed to its pinned maintainer card.",
+      "sbert2019": "Family citation retained in related work; checkpoint-specific pinned cards added in setup.",
+      "treccovid2020": "Early-round collection citation placed at BEIR collection identity; study manifest supplies actual dimensions and study records supply seal chronology."
+    },
+    "scope": "Per-entry bibliographic and citing-context verification, with stated primary-source access limitations. Does not independently reproduce experiments.",
+    "current_revision_continuity": {
+      "report": "review/aciids_style_revision_20261101/CITATION_CONTINUITY.json",
+      "sha256": "a77af6c12aa7e9479cdb2c0682a3462b82b0e415649b0dab4908bc2a63b935f1",
+      "status": "PASS",
+      "scope": "Retains the existing primary-source judgments; unchanged substantive citing contexts were checked locally. This is not a new per-entry reviewer round."
+    }
+  }
+}

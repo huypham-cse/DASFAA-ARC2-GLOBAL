@@ -1,0 +1,29 @@
+[
+  {
+    "archive": "D:\\DASFAA-2027-paper-release-20261101-r2-complete.zip",
+    "bytes": 371845465,
+    "scientific_manifest_files": 6008,
+    "missing_from_R3": [],
+    "changed_from_R3": []
+  },
+  {
+    "archive": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story.zip",
+    "bytes": 372032202,
+    "scientific_manifest_files": 6015,
+    "missing_from_R3": [],
+    "changed_from_R3": []
+  },
+  {
+    "archive": "D:\\DASFAA-2027-paper-release-20261101.zip",
+    "bytes": 236649934,
+    "scientific_manifest_files": 4357,
+    "missing_from_R3": [],
+    "changed_from_R3": []
+  },
+  {
+    "folder": "D:\\DASFAA-2027-paper-release",
+    "scientific_manifest_files": 6015,
+    "missing_from_R3": [],
+    "changed_from_R3": []
+  }
+]

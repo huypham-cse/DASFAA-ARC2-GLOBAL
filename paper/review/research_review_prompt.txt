@@ -1,0 +1,24 @@
+User authorizes full DASFAA2027 manuscript, onlygpt-6.1-sol high. Fresh substantive ARIS research-review plus novelty-check. Workdir D:/DASFAA-2027-paper. Read AGENTS (paperwriting nowexplicitlyreleased;no scientificrun). Read complete paper/main.tex, sections/*.tex, generated/*.tex, figures/*.png, references.bib. Primary literature sources and actual fetchedcontents at paper/review/literature_sources.json and citation_sources/, read method source model.py/procrustes.py as needed. Do not treat author LITERATURE_NOVELTY opinion or earlierreview summaries as authority. Closest primary papers include actualLA2M DOI10.1145/3769803, HMoE ICML2026 https://proceedings.mlr.press/v306/yang26e.html (alreadymixing/translation), ConverterACL2025, DriftAdapterEMNLP2025, recentmini-vec2vec/Procrusteswork. Read relevantprimarycontents saved orweb toverify ratherthanmemory. Usermodeloverrides skilldefaults. Own ONLY paper/review/RESEARCH_REVIEW.md,.json and NOVELTY_VERDICT.md,.json. Parent handles traces. Act as a skeptical DASFAA reviewer, report concrete correct strengths and material rejection risks; no invented acceptance probability, no speculative experimentsbeyondcurrentclaim. Focus: centralnovelty/delta, nearestworkfairness, baselineimplementation qualifications, usefulness and why affine adapter, statisticalinterpretation, narrative/layout. Give actionable editlocations and fixes that can be done this turn. If newexperimentsoptional sayoptional. Do not rewritepaper orrunexperiments/noagents. Review is same-family/provisional; write those fields explicitly. For novelty produce3-5coreclaims nearestsource, verifiabletechnicaldelta, scorecalibrated5=clearneighborsdefensibledelta, verdictPROCEED/PROCEEDWITHCAUTION/ABANDON, confidenceandsources; notproofnovel.
+=== NOVELTY VERDICT LIMITS (these bound how you judge, never how widely you search) ===
+Search exhaustively; judge calibrated. Two failures waste months equally:
+passing an idea a published paper already contains, and killing a viable idea
+because the territory has neighbors.
+1. Proximity is information, not a verdict. Someone working nearby goes in the
+   report; it is not by itself a reason to reject.
+2. ABANDON has exactly one qualification: a specific published paper already
+   contains this result — name that paper. No named paper, no ABANDON.
+3. Crowded-but-deltaed is PROCEED: state the delta in one sentence a reviewer
+   could verify. Thin or contested delta is PROCEED WITH CAUTION — say what
+   would make it carry, not why it should die. CAUTION is not a safe middle:
+   if you cannot name the specific thing that makes the delta thin, the
+   verdict is PROCEED.
+4. Concurrent or competing work is not a veto. That is a race — report it and
+   let the user decide whether to run it.
+5. A direct attack on a central problem is legitimate novelty when nobody has
+   executed it well. "This area is hot" does not mean "this area is taken."
+6. This check is an early gate, never the last one — more triage, pilots, or
+   external review still stand between any idea and a paper, whatever order
+   this run uses. A wrongly passed idea dies cheaply at one of them; a wrongly
+   killed idea is never seen again. When torn between two verdicts, choose the
+   more permissive one.
+Say plainly when an idea clears the check. Do not manufacture overlap.

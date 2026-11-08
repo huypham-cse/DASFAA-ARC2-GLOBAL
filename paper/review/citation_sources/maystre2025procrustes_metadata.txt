@@ -1,0 +1,9 @@
+@misc{maystre2025embeddingmodelsmeetprocrustes,
+      title={When Embedding Models Meet: Procrustes Bounds and Applications}, 
+      author={Lucas Maystre and Alvaro Ortega Gonzalez and Charles Park and Rares Dolga and Tudor Berariu and Yu Zhao and Kamil Ciosek},
+      year={2025},
+      eprint={2510.13406},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2510.13406}, 
+}

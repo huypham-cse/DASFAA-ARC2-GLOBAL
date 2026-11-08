@@ -1,0 +1,3366 @@
+{
+  "excluded_prefix": "execution_paid_targets/",
+  "retention": "preserved in raw shard run; optional omission from compact scorer export",
+  "files": [
+    {
+      "path": "execution_paid_targets/af975d39c5c40850850e59c3ad9b18223acdecc4b70a54584abfe5bc541e9a26.npy",
+      "sha256": "dcb78c14941d9151e57fa2d119e7ed4aab8ae4d4c61ff155dc824e00d39b4b45",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_25pct.npy",
+        "sha256": "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        17,
+        "25pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/3a65c89e12aafebc10607b9badc914a52fe12fb75ecbf9bdfcf7ebd32c26589b.npy",
+      "sha256": "60f7dc958a7f18532e37e40586b9c0c1c27226b9611a845d0d47b091966ab96b",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_50pct.npy",
+        "sha256": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        17,
+        "50pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c26b88419eeb6bd5a1fc8786ef3ecfaa2ec28412297305dc15a2ea391203157c.npy",
+      "sha256": "71c99021892300f6bd7d85ebde9d5d245573a1e6839f8210c07cd17161b953b5",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        17,
+        "75pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/cc3a0b1e65630c952a4575fb091d36fd792d5895bd57a45e121cf41da7a76f4f.npy",
+      "sha256": "44450700b77524b61151705a3f9e327917637478ce2a19608c91a9f290015eb0",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_25pct.npy",
+        "sha256": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        29,
+        "25pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/49972975602536ec07b556f3f792208641aea3fd00fbddef09e08cea45b3f6ef.npy",
+      "sha256": "1562d7fd61137a15d1d57020ef31ceca20ecfeaaf74445b62e669511ae3d3fc0",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_50pct.npy",
+        "sha256": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        29,
+        "50pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/efc82928295452c1246c96cbade567846b5083629b4f421cd591f6b4284e5c8a.npy",
+      "sha256": "dda77b147555f52538942ae6d0c5ce07d256687731f88aef28af49112714257e",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        29,
+        "75pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/fa81ab5fe9e32f4dd85ba1832c7af2e75231eaa83b667c328fb3ed4b8603e757.npy",
+      "sha256": "72067d45c6b67bb36f45ab46b2b1f74a7c853fc1e49a962eda7d38b077e11131",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_25pct.npy",
+        "sha256": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        41,
+        "25pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/366e1374a1a5eea5e4671c6168e5e8526c6d72baa25836b0308084b498f48ef5.npy",
+      "sha256": "a079b60cc648ca10a3583b29ac497d540747785f406ccdb5f6fbe2959eb00dda",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_50pct.npy",
+        "sha256": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        41,
+        "50pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/2189934c5245b9cc7d1b77711f277722ad085810f7c75e5c6b75d7f2a203d432.npy",
+      "sha256": "0ef5039ece44ac1f9c0e7ca4bf92236a132db3bb95dd4e48b0a075cfafebc0a5",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        41,
+        "75pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d9ba11d676ab6bb46b05b35fbb333e59d7c43a21df2662c3a7c47d40ffe0a220.npy",
+      "sha256": "2d5d83362112143c3dbbda34ed3c764b9819df999f53234afec6dd1a9a6bfe83",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_25pct.npy",
+        "sha256": "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        53,
+        "25pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/001ebb347af26fbbd68448ab00150a9a3898e0ed6b3de0c3316772cfbe13bad6.npy",
+      "sha256": "078adaf6bf3621d12224cc28616d4c1dc77ceb0b888fa8f674c9068d001cc539",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_50pct.npy",
+        "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        53,
+        "50pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c16c37bb35e4deff122bf6920827aa36f7427ee4fefebde9254bef00c46a24bc.npy",
+      "sha256": "5682c82227cdd1d56c90026dd610a9243358b2fef50dd2ac6c7cb6c18e0e7488",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        53,
+        "75pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/db04c2cdc0fe2ac80c23783c8035fd894abc2360b92660f2bd43f1221ee8dab1.npy",
+      "sha256": "a9e3771a0c768433f788b2475c0d5ec9947284407a8e8d880691c5cca994d47c",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_25pct.npy",
+        "sha256": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        67,
+        "25pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/61078e34e3cb31870c9e2a3ad61bfb55c1000becb048fdda41a156b42f79a4a0.npy",
+      "sha256": "6810182414c6e409cf9cc31411866021770700a739c77ee6d7df35c8b1b4b9e0",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_50pct.npy",
+        "sha256": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        67,
+        "50pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/07f821b5981e257767c8f8f2cd308fd686530dfc751ebeea7e28ddf49e6b4e21.npy",
+      "sha256": "c38dd96dc218db746a245be52b24a9bbff53006e2ceef382c20e59d4e69b12b5",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy",
+        "sha256": "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19"
+      },
+      "cache_key": [
+        "FiQA",
+        "e5_small_base",
+        67,
+        "75pct",
+        "eb3a355a496972911987dd9e804785f3be9bda53dfda26234ebe8d5ab63cbae2",
+        "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/0c9cd08e353fe2ad99fdec8bfcf362ebd59d3a2a9ccd8390d8ec63f028d1b585.npy",
+      "sha256": "f275495cb3a472b6196bdd744cfc6d497b68d976b7663a9fa9179dad6f9c2b91",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_50pct.npy",
+        "sha256": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        17,
+        "50pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/049148c1161db6b55dfda115d1e8a2c5eecdc428a2d79edd0bc43d0535366cc8.npy",
+      "sha256": "6fb3bfe6c049b53c15938949cd23b814b482298d014212b2635e4b8b14e89492",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_25pct.npy",
+        "sha256": "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        17,
+        "25pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c157bc6308e6143537318fde9b1870c7aef21c7655b1b3bcd35c9e78199c24b8.npy",
+      "sha256": "c1422fcab32ed088c762ca23ad3fe00a7c917156ff31000bccf6012f8e0e1c8c",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed17_75pct.npy",
+        "sha256": "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        17,
+        "75pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "f5ef5230b077670e649e6cf20872c6ab1e663f1c7af9d55f7e125203e9562535"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/bc2b567a6f3b816b7d5c23821b4715b5209c5df6141ccdcea823bf33186ffec6.npy",
+      "sha256": "01ab634c1e2ed7445690388dd374b610261f8fcd9e96f2e7a1628a5aa17e7ca6",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_25pct.npy",
+        "sha256": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        29,
+        "25pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/3bf8afdc3508e6ebf943b8d33cbc7820f128d1444fd6d982726ab40651fa7776.npy",
+      "sha256": "eaede3db4d7d73e78d06786d7fb4b36c7195cedad0b88d80e927cfaba24cc4f2",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_50pct.npy",
+        "sha256": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        29,
+        "50pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d000f3ec11a0699394d140e7f3a197140c04f76adf758745a56e97aa7f11675c.npy",
+      "sha256": "6b6ee0bce4c411b8397475b2ddcd90c29263c69c839911d4bdee1e9466080a5a",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed29_75pct.npy",
+        "sha256": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        29,
+        "75pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/b3ad66eea7da052bca845337cc97e6cc2b0348dcacffe82ae72a2dd091c7428a.npy",
+      "sha256": "61ba5675ca071641fb0f761e70b5b160c0eb0166a79298f69afbe77369dfb0dc",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_25pct.npy",
+        "sha256": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        41,
+        "25pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/38b06ed5316ecd9cf9d1c0a0fa3e780da17ceb5324b1886933c2a2ab388b5c0c.npy",
+      "sha256": "a9b5abffbbc72b18c6be0a73891bfab595c015daf90b214ebb57db205a273f2c",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_50pct.npy",
+        "sha256": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        41,
+        "50pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/9c8933906fb9ba533a591d245a07100252b4f785e748c702499c4e7eca3f439e.npy",
+      "sha256": "ae4fd36b4e97da8e9219fbc49a6e72d068e7e349dac8ef791ae41ab5dfa09c0a",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed41_75pct.npy",
+        "sha256": "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        41,
+        "75pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "f41106d2080e05a5cdab9d4c0549ce50d4283330a64a345c1e8515d5134c3e18"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/9d33fb6779b7e5a2decbcc7f7517a359d727cb1ff613fb05a75dd887a4535958.npy",
+      "sha256": "dc336fb6d63f3953b7d7aeae6a4305518c05c33edfd20e59d1b74bb71fac2a37",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_25pct.npy",
+        "sha256": "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        53,
+        "25pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/51363f14b5922c1f97c21f100fce7c82cccb52d35d22894df548ba8cf9b05573.npy",
+      "sha256": "0529f70756e3252a3bd8844206129cf31963ed8d30daeab72a051ae1ae110c17",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_50pct.npy",
+        "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        53,
+        "50pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/cf1fc264a751d8c9390c286c555e53b203774ca663827fa9f4bdddf5955041fa.npy",
+      "sha256": "2374918e785424d2f347c61e4dbde6ea5d995d5d254fdfdeece06efeb6d51123",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed53_75pct.npy",
+        "sha256": "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        53,
+        "75pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "fa912ed1ef820df6dc3b45442d5f3aa1dcdb166b9be96f826ca1e771dc55d207"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/cf10228e985711589f51619aec043f14e73f12f62ea66a1148a9099f6e23acb6.npy",
+      "sha256": "e63a6263f4109f5ff7334cbc01461f8555558ad4acb8c31b4839122c99c3e7d0",
+      "shape": [
+        14409,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_25pct.npy",
+        "sha256": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        67,
+        "25pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c30102b1ed2a213d76642d33370278cf970f39c11aa723d79b52fa2832f3acb4.npy",
+      "sha256": "d5581439e9639c27a49a311d2485118f5bb26e13f47a7ff03718a360775f9651",
+      "shape": [
+        28819,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_50pct.npy",
+        "sha256": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        67,
+        "50pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/0491898f368dae89550bcd7229db904ae17263713d8fbb42c48972ff848e90e7.npy",
+      "sha256": "2394ea8552efbe6ec371ac3f83b04e7f9fd50b18a3bcac829df1d08290e7e833",
+      "shape": [
+        43228,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy",
+        "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/FiQA/paid_seed67_75pct.npy",
+        "sha256": "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19"
+      },
+      "cache_key": [
+        "FiQA",
+        "minilm_distilroberta",
+        67,
+        "75pct",
+        "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+        "1074d7943d3bf766cb4e4d186fc0ea7c7afea7b59c43032a1521f97229cffa19"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/2e540b2441890db3d8fb2a2c2d7220a63da0525e46b4062aea1a708e5b00c0c3.npy",
+      "sha256": "7c5272300ae5f7ecd142ef7744e6bb7655ccec8e430f5cf6b6aa73960f728b5c",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed17_25pct.npy",
+        "sha256": "2a339be676cc28064d51d1131d256abb41d791c904605fdceb20c585d6ba5db8"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        17,
+        "25pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "2a339be676cc28064d51d1131d256abb41d791c904605fdceb20c585d6ba5db8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/503348d4d51371479cbe9dec2b21f5f80faac6dc4b72fd5f2357b97f975eeb81.npy",
+      "sha256": "3a976a3ae3e19f7771d4cb4818564daf8aee749824ee5a8e5d3c881d0e5f6332",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed17_50pct.npy",
+        "sha256": "32778cc876c726c9dfb18d4a712abcaf129f521d61dcaddaa73902db13ac2981"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        17,
+        "50pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "32778cc876c726c9dfb18d4a712abcaf129f521d61dcaddaa73902db13ac2981"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/08c3d9cdd38ab6930e8862fd24004dac5518df9e1c0e57413b847d1c991bdb0c.npy",
+      "sha256": "56b47034f272cc03f0187b82f1eb2cef009f717088d87960dbd2441fa1f8b36f",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed17_75pct.npy",
+        "sha256": "f0dd44d1d9d6b66734cf34c29eaef2eca6b3130d5f86a654c49528815a3da531"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        17,
+        "75pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "f0dd44d1d9d6b66734cf34c29eaef2eca6b3130d5f86a654c49528815a3da531"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/5d04dc379593b6a90faeda2c36fe74c95b6c72ea7cb6f2d8322e011177800a23.npy",
+      "sha256": "92693173ee742e97174b8ea57da2b816748c4204a0e8b2d9bcf4803a9aa333af",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed29_25pct.npy",
+        "sha256": "47d63408f24afc28a9e292da16622747a5f385423e4c3c9a1b79532b92fb78e8"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        29,
+        "25pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "47d63408f24afc28a9e292da16622747a5f385423e4c3c9a1b79532b92fb78e8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/b65989dfecd88ea429ed33e1a71fa225b58ab7602bfadd011325f406bc6b09ec.npy",
+      "sha256": "37c38378508be2ccd1e1e7604fbf2880e79b91a8b1b83c03cb7d60fb824f27e7",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed29_50pct.npy",
+        "sha256": "12c001b471a63dd037675b8965f304a013a94cfbd7c98619e2be0a2c8e35ca94"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        29,
+        "50pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "12c001b471a63dd037675b8965f304a013a94cfbd7c98619e2be0a2c8e35ca94"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d55608cc02868c79753782c534dd91f6a557c0c3a3d2700740614fa2bd4f2737.npy",
+      "sha256": "87a7776bfa1902bd6491217c0f814541244ef4b9d05af02c5039d4cefc664db1",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed29_75pct.npy",
+        "sha256": "96dfbc84bef040d0770d6bc811e338f749ab59c5affb54cb326567b932f4703b"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        29,
+        "75pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "96dfbc84bef040d0770d6bc811e338f749ab59c5affb54cb326567b932f4703b"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/8abf47e06a98e27a7fbfa6c04227f7d35c9af19dc5310178385b7b3e5c80e31f.npy",
+      "sha256": "e499188d56add0e0183dfca8c31f0d3d1c0b0557c5efc51587f5690f1554ef8a",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed41_25pct.npy",
+        "sha256": "6a9940e63a9c2038d6c3b3fd85ddb2e38351187b06763c217536eca0e52d61a4"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        41,
+        "25pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "6a9940e63a9c2038d6c3b3fd85ddb2e38351187b06763c217536eca0e52d61a4"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/3dfcb180faf3a6812caad2d00d43b5734f2307b02829f9eb397747914f3e435c.npy",
+      "sha256": "ba42bd9435eec23e5878506d492fc47fb1ba791cdbdc067120967a6486b7287b",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed41_50pct.npy",
+        "sha256": "e78efc8a5b7ef529d351eb8c68918bd3ea814e3f0ca657edbcf19642f69374d8"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        41,
+        "50pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "e78efc8a5b7ef529d351eb8c68918bd3ea814e3f0ca657edbcf19642f69374d8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d55931bc8fcfcc6edeca38f833ed5b10e3a8829b7806436ec82f5123d76da8bb.npy",
+      "sha256": "b0d94ef18bb3c0e84079fc3b36a93fb9dd27803ffc5b98d371e1f4f74125ca79",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed41_75pct.npy",
+        "sha256": "57e1b24dd22feb9b8645e2f7056e3e91f4d6aebec3682d867899699cee3447d5"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        41,
+        "75pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "57e1b24dd22feb9b8645e2f7056e3e91f4d6aebec3682d867899699cee3447d5"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/71d3f8e5e1b20b8e3f756b8eb8eb587eb6466e32daf52b6e5780a3da47d572c7.npy",
+      "sha256": "4bbc1d566560ac6e1783eccd44f5fdf678cfa01c83dfd8c1c0f2eef16f515601",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed53_25pct.npy",
+        "sha256": "17810c0032d79b7ccc22b17a46be22965fdb08deb92db94e5297b2fc82b3d086"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        53,
+        "25pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "17810c0032d79b7ccc22b17a46be22965fdb08deb92db94e5297b2fc82b3d086"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/0151649f59b1266ef4ef27d2a5497e0084101294e419fdae7f0ba61190bc4a58.npy",
+      "sha256": "bc28a7ec67e87782cd140d98f805ee72b98a2fd672885d27762e5a1edcebe62f",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed53_50pct.npy",
+        "sha256": "b6c2db22d6f3fa42ab9dd483be5d3b6eed01750c9d852dfe9dc3e4b78c4d7d06"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        53,
+        "50pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "b6c2db22d6f3fa42ab9dd483be5d3b6eed01750c9d852dfe9dc3e4b78c4d7d06"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/7e74492036552f48dd11c9909749f1ab8f94046a9a938145be6a737bc993b959.npy",
+      "sha256": "1c9bc7547fe2058c8eb2f9f34f147825b9c9d50d19103f8eb9dd19b5b2e1b5c1",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed53_75pct.npy",
+        "sha256": "f336f9ee4016bf3af96fb128fe9739d79b481ab12d7c00272731cc3061045112"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        53,
+        "75pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "f336f9ee4016bf3af96fb128fe9739d79b481ab12d7c00272731cc3061045112"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/e50349f864333cfafb7f8c0a6feab31f08ffac04514b069f1a27585c280cf213.npy",
+      "sha256": "7b9017e424e1d39b34147fa67586242b070fbe966c0c9b03faf86114eca87204",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed67_25pct.npy",
+        "sha256": "da7e9c4ab1430eaf737824288b837db3e2fc485c6d29863bedb3f20e423fea39"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        67,
+        "25pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "da7e9c4ab1430eaf737824288b837db3e2fc485c6d29863bedb3f20e423fea39"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/6bbde1b07fca68b02ffe32845b228f7ebde88b847be46466fd7cb2aea4470b6a.npy",
+      "sha256": "b6121f6800e6b48c381b0712838c67a1da0c71a0eb63fc5347bca6b8c87abb62",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed67_50pct.npy",
+        "sha256": "6f4687ad7da921028a23513d7ce15d2897bebc1ad211da3f24e038f18b262ba9"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        67,
+        "50pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "6f4687ad7da921028a23513d7ce15d2897bebc1ad211da3f24e038f18b262ba9"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/9c2098ca0f2407f3259d12c3a3bd4bc2270c8c30806c13627e284f517428951d.npy",
+      "sha256": "718fd9d8e6427ce1cfe9745294293210ffaa80df8aa2d310a20dc899a29b8a60",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed67_75pct.npy",
+        "sha256": "a9d3b964efa548eb696b5ac2485e7b0ca3547bc01108e62ca5626a5da326f4f4"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "e5_small_base",
+        67,
+        "75pct",
+        "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+        "a9d3b964efa548eb696b5ac2485e7b0ca3547bc01108e62ca5626a5da326f4f4"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/88d9d79fd99b4e8a40b820a8cb6c8ccc710a7bc9b7c95712ae7b4be7b55355a8.npy",
+      "sha256": "7496cbac8bbd8cd72d6a73d412bafe7b8276ed0f45bf90a8a624ca8582a026e8",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed17_25pct.npy",
+        "sha256": "2a339be676cc28064d51d1131d256abb41d791c904605fdceb20c585d6ba5db8"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        17,
+        "25pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "2a339be676cc28064d51d1131d256abb41d791c904605fdceb20c585d6ba5db8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/7306030c2ee823ebb1214cb6df7abab6e937f9ce01ab9d4f0890724257af3483.npy",
+      "sha256": "efeb93b7292c6d04027be0eb9cfc367009395972bedc0357a9a611d589753654",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed17_50pct.npy",
+        "sha256": "32778cc876c726c9dfb18d4a712abcaf129f521d61dcaddaa73902db13ac2981"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        17,
+        "50pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "32778cc876c726c9dfb18d4a712abcaf129f521d61dcaddaa73902db13ac2981"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/81c9bd38ae7af3c3805b144e3730663648108046a214c0fd451370ac44e99272.npy",
+      "sha256": "da570254f93685270f95ac23e2b2d4a72b9a922192a24042305a1e172b4f2987",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed17_75pct.npy",
+        "sha256": "f0dd44d1d9d6b66734cf34c29eaef2eca6b3130d5f86a654c49528815a3da531"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        17,
+        "75pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "f0dd44d1d9d6b66734cf34c29eaef2eca6b3130d5f86a654c49528815a3da531"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/b37ebb7726cb2ba2fb4c89163ba2421272761b23481a65863a7e09c6ccd8af19.npy",
+      "sha256": "95b63b929c3c28032f3121aacdce7d1d8435309464b020241fc94328a111fd6e",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed29_25pct.npy",
+        "sha256": "47d63408f24afc28a9e292da16622747a5f385423e4c3c9a1b79532b92fb78e8"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        29,
+        "25pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "47d63408f24afc28a9e292da16622747a5f385423e4c3c9a1b79532b92fb78e8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/ea16db5f8ff531f61d8c4ab5ceebf9b7bbf3a4bbd4243ec28300dc753197503b.npy",
+      "sha256": "7fa01b975362ff9e062d4209815745c3e5c5c965531a56833529c2f1ebcd05ef",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed29_50pct.npy",
+        "sha256": "12c001b471a63dd037675b8965f304a013a94cfbd7c98619e2be0a2c8e35ca94"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        29,
+        "50pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "12c001b471a63dd037675b8965f304a013a94cfbd7c98619e2be0a2c8e35ca94"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/8f734d435020c0e02aff72602fdd6a5e92ea6a4fe87241e2e1662d3490be5c09.npy",
+      "sha256": "0f331d8b4dc33ec976cbd82a03dcbe70c95a81ece4b99b709398602d96bdee60",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed29_75pct.npy",
+        "sha256": "96dfbc84bef040d0770d6bc811e338f749ab59c5affb54cb326567b932f4703b"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        29,
+        "75pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "96dfbc84bef040d0770d6bc811e338f749ab59c5affb54cb326567b932f4703b"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/309e1993ad49ab6b6376a396e7af4eb7fffd39f2d2dc74843c9e7aef2938ab2c.npy",
+      "sha256": "2b00a99d4a470ff9bc7635c846be571dda40c72c5a4a1bbd6e0e86204cca4d2b",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed41_25pct.npy",
+        "sha256": "6a9940e63a9c2038d6c3b3fd85ddb2e38351187b06763c217536eca0e52d61a4"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        41,
+        "25pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "6a9940e63a9c2038d6c3b3fd85ddb2e38351187b06763c217536eca0e52d61a4"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/63351c574748d8231d2a36f5a089a23b0c263fe454f541810ecdec72d2f6153c.npy",
+      "sha256": "5f3db04b3e2cfc8a67c83c9e28767c5c5738edc14cc8bcd9f08dd32ff633e0bb",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed41_50pct.npy",
+        "sha256": "e78efc8a5b7ef529d351eb8c68918bd3ea814e3f0ca657edbcf19642f69374d8"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        41,
+        "50pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "e78efc8a5b7ef529d351eb8c68918bd3ea814e3f0ca657edbcf19642f69374d8"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/3095f4c67e2e70acb30afef4d6f9893b662c4300e650b7c353df5472effe7f3e.npy",
+      "sha256": "e2117bb5185312de04f3551a30db300f55e0310a9e46191a8880c28b1be785f6",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed41_75pct.npy",
+        "sha256": "57e1b24dd22feb9b8645e2f7056e3e91f4d6aebec3682d867899699cee3447d5"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        41,
+        "75pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "57e1b24dd22feb9b8645e2f7056e3e91f4d6aebec3682d867899699cee3447d5"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/09e2a81bebb3bb18dbf8b9c59c2c217fcea1e12ff20862058541b58a35cfb4e4.npy",
+      "sha256": "1e60d2031e57f0ac0cd299664532df433ecddd3478396ca32c2290d4a62494ed",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed53_25pct.npy",
+        "sha256": "17810c0032d79b7ccc22b17a46be22965fdb08deb92db94e5297b2fc82b3d086"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        53,
+        "25pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "17810c0032d79b7ccc22b17a46be22965fdb08deb92db94e5297b2fc82b3d086"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/69a2878a0184a453bd339870cabc18704e58d44f9e6db41b2767674cc726dab9.npy",
+      "sha256": "f851a0a8904e523bd074deac61c9cd3f7e4412cadd2b8c5bea23b24a819f0de3",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed53_50pct.npy",
+        "sha256": "b6c2db22d6f3fa42ab9dd483be5d3b6eed01750c9d852dfe9dc3e4b78c4d7d06"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        53,
+        "50pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "b6c2db22d6f3fa42ab9dd483be5d3b6eed01750c9d852dfe9dc3e4b78c4d7d06"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/af0c5c18666cd9995c14fec69fb036f8a4968647e16e291c313875f9b05d5c33.npy",
+      "sha256": "f11b1ef4d8cc8fb7f2d76a2fc2119a783bcbd331d610738207c2c34be3018a5d",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed53_75pct.npy",
+        "sha256": "f336f9ee4016bf3af96fb128fe9739d79b481ab12d7c00272731cc3061045112"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        53,
+        "75pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "f336f9ee4016bf3af96fb128fe9739d79b481ab12d7c00272731cc3061045112"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/970c3ff3b16b12611eb47848ea71c2e35b25d927a17543dbdb032b6b16e4fade.npy",
+      "sha256": "298ef714be67cededff2b3cdb2c53467a5fb7b1de4adbdab94c312000bd10261",
+      "shape": [
+        1249,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed67_25pct.npy",
+        "sha256": "da7e9c4ab1430eaf737824288b837db3e2fc485c6d29863bedb3f20e423fea39"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        67,
+        "25pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "da7e9c4ab1430eaf737824288b837db3e2fc485c6d29863bedb3f20e423fea39"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/63685109a53563db5329e72af0ff47d997e679a93e20457ef56680897c24af61.npy",
+      "sha256": "2f6046b74999e1b16686643abddbe68245c806239fee8bcb2ff73140dee00c70",
+      "shape": [
+        2498,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed67_50pct.npy",
+        "sha256": "6f4687ad7da921028a23513d7ce15d2897bebc1ad211da3f24e038f18b262ba9"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        67,
+        "50pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "6f4687ad7da921028a23513d7ce15d2897bebc1ad211da3f24e038f18b262ba9"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/915f72ca6a7040b13adb927d5791749baac5a386820e0aa97f36d0d4b970dd28.npy",
+      "sha256": "1ec0a23cea345dca86c55b505e629158bc1fe194689328cb73cb3f5fad0d9ac2",
+      "shape": [
+        3747,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoFEVER/paid_seed67_75pct.npy",
+        "sha256": "a9d3b964efa548eb696b5ac2485e7b0ca3547bc01108e62ca5626a5da326f4f4"
+      },
+      "cache_key": [
+        "NanoFEVER",
+        "minilm_distilroberta",
+        67,
+        "75pct",
+        "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+        "a9d3b964efa548eb696b5ac2485e7b0ca3547bc01108e62ca5626a5da326f4f4"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/0e10e9fd4eeae5b711c8494dd7529455ac6778369a6a61a3c60d05d3cf35b966.npy",
+      "sha256": "b95c581654244f53480a948ae39801b639530b1d8a8d5214267ae815e5baf6c9",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed17_25pct.npy",
+        "sha256": "9d8bc4b09f959a9a30749963589835414abf551d52e10410bb985521a5b5fe02"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        17,
+        "25pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "9d8bc4b09f959a9a30749963589835414abf551d52e10410bb985521a5b5fe02"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/43d654152b9680a59639a49131cfaa1b5ae046ba6269c5cdc545a26aa3b59137.npy",
+      "sha256": "22b65714d0801767375593fcf0cb1ae96caa171b3d131ccd0a75e92e4b67d93f",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed17_50pct.npy",
+        "sha256": "12e033b2ef2bc47cfd77a3539fa9091e5712b5fc5958f3b557fb2746f8f9543f"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        17,
+        "50pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "12e033b2ef2bc47cfd77a3539fa9091e5712b5fc5958f3b557fb2746f8f9543f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/eb56a2385e14b58b8d73c5b1ca4b139e82497e067f60d8ab91c6e02ee5809756.npy",
+      "sha256": "49769a04cbdcc231d45d2dada669576d0f2e429ded729e34b4e6c1e886b44486",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed17_75pct.npy",
+        "sha256": "be280cf56993cbe65c984a1adec3869ee6e7ba6e51e5f4439b6118741e79ce7a"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        17,
+        "75pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "be280cf56993cbe65c984a1adec3869ee6e7ba6e51e5f4439b6118741e79ce7a"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/7f9a60b15a4041541a2387e5d65670d209dd8585d5599fd3536a82de29c2f5a2.npy",
+      "sha256": "12acb47ae85e2e5aaf1727f6336f62abf823b4d829a7eae11b1a4c2729c845d3",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed29_25pct.npy",
+        "sha256": "b1a2388643327005d4bda86c81c2f4e38a666150ea617216f21da162fef0a113"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        29,
+        "25pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "b1a2388643327005d4bda86c81c2f4e38a666150ea617216f21da162fef0a113"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/6a48a7c019aa4a80e678ae220c38d3fafb6c2436efc98265a530d8d4ec3a2f97.npy",
+      "sha256": "f41416ff37675a4e4c133d9213ae4f4906599b07f40fddb7ac9316451780eb5d",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed29_50pct.npy",
+        "sha256": "2ec07747bd1721419d863b18c2acdc261be06c88246f73cd047c6589def90857"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        29,
+        "50pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "2ec07747bd1721419d863b18c2acdc261be06c88246f73cd047c6589def90857"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d1dc20f0050cdc4861827532aaf1567016db123931307451344c9a30f058a0e9.npy",
+      "sha256": "38b4a6f00b1ac46de56ae8f5d8be4d5ce201be1db443f2446bef4af9b15340ab",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed29_75pct.npy",
+        "sha256": "4802db2cefdca215934af465d86305255e0fcdd16a2533e362d17cd551706bf3"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        29,
+        "75pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "4802db2cefdca215934af465d86305255e0fcdd16a2533e362d17cd551706bf3"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d73af5ab9026dbf064ac825bd140d6f150d24bc6425491d71a88333fd56dc6ad.npy",
+      "sha256": "82b7e62668b100ce05b658346d3f9d4fc20b6fdb3dbdd4985a4f462a3a699b27",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed41_25pct.npy",
+        "sha256": "d4198d791c3a71d09dfa938a7129ccdbc72bc1a6d05207496c316f4cc212340f"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        41,
+        "25pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "d4198d791c3a71d09dfa938a7129ccdbc72bc1a6d05207496c316f4cc212340f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/5f6f42fd44a38307d769eed3ed989b4bb802a9621195a99b0c12a758d03e312f.npy",
+      "sha256": "fbf2cd7ce1f0933037bb32f10610fcd4f1b374205051a4872e7c0d0f5ce3e988",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed41_50pct.npy",
+        "sha256": "3731ee0f534d27540baae088ba11896291c7ce61644d97b4b5fbca276417449c"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        41,
+        "50pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "3731ee0f534d27540baae088ba11896291c7ce61644d97b4b5fbca276417449c"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/81509e7ed549264c227ddb754e8a1cf439741fab36e9dbe697bfa55992725e06.npy",
+      "sha256": "fe9d60abd04a1ddc24efd05fb956a8d07f8b151d3777f17fd09bfb8100ba1da9",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed41_75pct.npy",
+        "sha256": "f937b53b0937a344c935d96e4b28167cbbc4de7f6bcc5b390fcecfc4ab0d0cd2"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        41,
+        "75pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "f937b53b0937a344c935d96e4b28167cbbc4de7f6bcc5b390fcecfc4ab0d0cd2"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/a3e7327416adb7198506295fbaf90e65f12a9b9e652d677448729bdd8c498886.npy",
+      "sha256": "8945a444bab80ecb77d6de3d85c6539233d9d3b9132df8fcde450786af029b2f",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed53_25pct.npy",
+        "sha256": "92135482cadac8732bb37e5b386c9ceed677fa39ea2629e4cb4bb1c7ca6ea536"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        53,
+        "25pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "92135482cadac8732bb37e5b386c9ceed677fa39ea2629e4cb4bb1c7ca6ea536"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/428381a6d2f54cedb9c8f532238e5afbea158f912b3edca71eebd383ee412f56.npy",
+      "sha256": "5411ef2534d464663bfd4358f333851e5f41986d84336993d02028bbd85f3a66",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed53_50pct.npy",
+        "sha256": "15bbc390f1fe78499ba75171e1ade92f1646af173dceb0c49705bf0c1253b5b6"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        53,
+        "50pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "15bbc390f1fe78499ba75171e1ade92f1646af173dceb0c49705bf0c1253b5b6"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/23cf165b78d49a1c3e3b91c8ea661f0fb110327fc5e23bcd8a826f7c876001c2.npy",
+      "sha256": "4ffad4ef32673af398639c1b612195aa52ef959a6f7de68b0185782216334e47",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed53_75pct.npy",
+        "sha256": "2f3307d4ca26079a2e4a915afdd29fca46dd1055c52581a25edfa337b003cc76"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        53,
+        "75pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "2f3307d4ca26079a2e4a915afdd29fca46dd1055c52581a25edfa337b003cc76"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/6cb75f1b7bf22c059aa27e34075e1cebb2b6d9afd3b12953565fa083d8376700.npy",
+      "sha256": "eb66222a2a6b0265c2e952ffc6735000896a63e9fb71d90d55971e4025f4e70d",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed67_25pct.npy",
+        "sha256": "ff5d0f442d419a2bbd47fc9f0a5ee1e2a6cd9a108a8638433abb46469eb677ad"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        67,
+        "25pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "ff5d0f442d419a2bbd47fc9f0a5ee1e2a6cd9a108a8638433abb46469eb677ad"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/9a353e36c2baae0ec0d68274169370d54dfa24eeaa45d1189f0ba2330077a61f.npy",
+      "sha256": "d0a565905f6e4d04c9fc9230e7fbe5a539e738f804e54011a842bc54e32b38fa",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed67_50pct.npy",
+        "sha256": "a7ed625aa84e440247a7df934e665590bba2c73f7af0752cb67e977184bb0290"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        67,
+        "50pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "a7ed625aa84e440247a7df934e665590bba2c73f7af0752cb67e977184bb0290"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/63fa5ab431be363520b7e6c5571c22899e45effb06aacae3d86c27cfb811a355.npy",
+      "sha256": "43c0cfd88cbfc30f065ea95555d3b7820e3149c8c0fd98032ee815b2ccc1b536",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed67_75pct.npy",
+        "sha256": "7a8d074a01ca702ff743c33e6f16e62cd0eef97f6892c74213106e48a7384c71"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "e5_small_base",
+        67,
+        "75pct",
+        "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+        "7a8d074a01ca702ff743c33e6f16e62cd0eef97f6892c74213106e48a7384c71"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/b4c71270d2ce4990e5385f00c87bc9e833dcaf000a091d33d41b8e4e3f2d6cac.npy",
+      "sha256": "a8846217db3d0db3597f0987f1188cd513c9f4ac623bc1ab220ccbdfdb43c1f2",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed17_25pct.npy",
+        "sha256": "9d8bc4b09f959a9a30749963589835414abf551d52e10410bb985521a5b5fe02"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        17,
+        "25pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "9d8bc4b09f959a9a30749963589835414abf551d52e10410bb985521a5b5fe02"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c09309f9309ab8e245090e322468be7b80cfaef46ac97d3d5e153a9c7ece7f10.npy",
+      "sha256": "d38e64d9eeaa777bd77afa7b0eb90402081f340502bb5cdc89ca2a73f4519ea3",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed17_50pct.npy",
+        "sha256": "12e033b2ef2bc47cfd77a3539fa9091e5712b5fc5958f3b557fb2746f8f9543f"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        17,
+        "50pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "12e033b2ef2bc47cfd77a3539fa9091e5712b5fc5958f3b557fb2746f8f9543f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/6a63e4f576947cf1796ab6f6190dba39b07de1c6f8786fe8fdb7c8ebd28bcf46.npy",
+      "sha256": "632fd64a34f2e5636f102e94943afcb974e8c81d6d42a2a329aac4be1aef09e8",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed17_75pct.npy",
+        "sha256": "be280cf56993cbe65c984a1adec3869ee6e7ba6e51e5f4439b6118741e79ce7a"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        17,
+        "75pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "be280cf56993cbe65c984a1adec3869ee6e7ba6e51e5f4439b6118741e79ce7a"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/e940ee49c6e9b5d446ba1555754155300b80b0432e7c689bbc27286f7ccf4574.npy",
+      "sha256": "b8b8b058d3bedcbc4fe1b5335e111ab949a9911cfd1f37a31db591e778c1f424",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed29_25pct.npy",
+        "sha256": "b1a2388643327005d4bda86c81c2f4e38a666150ea617216f21da162fef0a113"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        29,
+        "25pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "b1a2388643327005d4bda86c81c2f4e38a666150ea617216f21da162fef0a113"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/b2463e9ad3ae7d8481b118313b16db1d7ffcaaac6aa009c17a107e586985cce5.npy",
+      "sha256": "69c332f6b363422776acd7040e5b062f4d417703252c6390af6e4bafeaeb4261",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed29_50pct.npy",
+        "sha256": "2ec07747bd1721419d863b18c2acdc261be06c88246f73cd047c6589def90857"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        29,
+        "50pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "2ec07747bd1721419d863b18c2acdc261be06c88246f73cd047c6589def90857"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/ffde521175e3006d82eb6849de129e35df5eea7f22318377448fa4f789a4bb96.npy",
+      "sha256": "9e3231ee0bc11d19ecc8574a5d1a2351f592760dafebaad4338a8dcae6b44e26",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed29_75pct.npy",
+        "sha256": "4802db2cefdca215934af465d86305255e0fcdd16a2533e362d17cd551706bf3"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        29,
+        "75pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "4802db2cefdca215934af465d86305255e0fcdd16a2533e362d17cd551706bf3"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/6cb7ccf0c26ff69e8fc2a83ecdcbe24719c56b5f4de39c6b95fa6ccd4b6e9939.npy",
+      "sha256": "7397310953131187896fcb2c8b9d294245dd8b70e9c5df4bdfd279a425224082",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed41_25pct.npy",
+        "sha256": "d4198d791c3a71d09dfa938a7129ccdbc72bc1a6d05207496c316f4cc212340f"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        41,
+        "25pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "d4198d791c3a71d09dfa938a7129ccdbc72bc1a6d05207496c316f4cc212340f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c49060e057870de88ccda390aab9b3cc4279b5750ac278bbb25482ef0ae1e8ef.npy",
+      "sha256": "40ffa10bb5e0c7d406ff11ea238366bcb1d748282d20617a7f86fef84346c84c",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed41_50pct.npy",
+        "sha256": "3731ee0f534d27540baae088ba11896291c7ce61644d97b4b5fbca276417449c"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        41,
+        "50pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "3731ee0f534d27540baae088ba11896291c7ce61644d97b4b5fbca276417449c"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/f4f54ceaf875e05a2594306ed01c6399d87d3d8b0918f7863493ad3c5c78f37c.npy",
+      "sha256": "738bb5f959f15eb79c211ec3071ca94901434ba2397b9c8d53e5693d082a8635",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed41_75pct.npy",
+        "sha256": "f937b53b0937a344c935d96e4b28167cbbc4de7f6bcc5b390fcecfc4ab0d0cd2"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        41,
+        "75pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "f937b53b0937a344c935d96e4b28167cbbc4de7f6bcc5b390fcecfc4ab0d0cd2"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/e00ecf1ec76fcd6e3ad14422602922f23b01722661b106fcae27a206a4bee597.npy",
+      "sha256": "0b70ab9f93341fa7efbdcdf43c89de7c58fa0b43ef3d4d5266643b090d470f16",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed53_25pct.npy",
+        "sha256": "92135482cadac8732bb37e5b386c9ceed677fa39ea2629e4cb4bb1c7ca6ea536"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        53,
+        "25pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "92135482cadac8732bb37e5b386c9ceed677fa39ea2629e4cb4bb1c7ca6ea536"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d1da6cc09ce3f755d8651252c7d3d62106f784151d3f7a90a3fff106d7975ab2.npy",
+      "sha256": "ad13e31102b80f90de5a93c4ee1a9420e4d5d46266133f63d563c3d8b8f1cb16",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed53_50pct.npy",
+        "sha256": "15bbc390f1fe78499ba75171e1ade92f1646af173dceb0c49705bf0c1253b5b6"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        53,
+        "50pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "15bbc390f1fe78499ba75171e1ade92f1646af173dceb0c49705bf0c1253b5b6"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/de2e94219f552c24eef55fb7a4551bd71ede3a8fd0a9a6f71c78602ff2a50bfd.npy",
+      "sha256": "5dce205724d87ed7c722a37f63ccbef3786c2247bb8a818248eec412b7af9ab3",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed53_75pct.npy",
+        "sha256": "2f3307d4ca26079a2e4a915afdd29fca46dd1055c52581a25edfa337b003cc76"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        53,
+        "75pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "2f3307d4ca26079a2e4a915afdd29fca46dd1055c52581a25edfa337b003cc76"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/35caeafcca9273ed9d2bf2919673035b43bcdb38f177e0caa7a48a52a745b24e.npy",
+      "sha256": "f96cfbfc7ccbacb2338b22840b2421294d92759598689893d436af1d08ae7f16",
+      "shape": [
+        1272,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed67_25pct.npy",
+        "sha256": "ff5d0f442d419a2bbd47fc9f0a5ee1e2a6cd9a108a8638433abb46469eb677ad"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        67,
+        "25pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "ff5d0f442d419a2bbd47fc9f0a5ee1e2a6cd9a108a8638433abb46469eb677ad"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/a424b5f9767fc3cf0776ecf1d2c322f157caa78293d41e69b2099f3f8dcfbd0b.npy",
+      "sha256": "2b830f8ce605ff7c74426a2f6421085fb88a9620aa122f1050c98fae05623d83",
+      "shape": [
+        2545,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed67_50pct.npy",
+        "sha256": "a7ed625aa84e440247a7df934e665590bba2c73f7af0752cb67e977184bb0290"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        67,
+        "50pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "a7ed625aa84e440247a7df934e665590bba2c73f7af0752cb67e977184bb0290"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/8eb1d817c18c059b9e3f53638982dddbf6d2fef47de0d9478a07eebd8279c37f.npy",
+      "sha256": "f30e581960fac9b45b6c691bbf4ad9dc18ccb3daed91f44a931c6201357c54d6",
+      "shape": [
+        3817,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoHotpotQA/paid_seed67_75pct.npy",
+        "sha256": "7a8d074a01ca702ff743c33e6f16e62cd0eef97f6892c74213106e48a7384c71"
+      },
+      "cache_key": [
+        "NanoHotpotQA",
+        "minilm_distilroberta",
+        67,
+        "75pct",
+        "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+        "7a8d074a01ca702ff743c33e6f16e62cd0eef97f6892c74213106e48a7384c71"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/9b1c4fa89b5f1e79a80375e549ef750809ca6c9bb29e5ef37df9d0c81502ef2d.npy",
+      "sha256": "60b7d759ea56b590675a667da4c8e670b45dbdde3d475f08971290c7787ec875",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed17_25pct.npy",
+        "sha256": "ed8cfec49dd27be667386aeea4d5cb424c69bfddc09830786802b681a8d885b3"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        17,
+        "25pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "ed8cfec49dd27be667386aeea4d5cb424c69bfddc09830786802b681a8d885b3"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/1f4836df6c852eaaddc93b7e90bc4af88ece3bdf4b60e586869f10d3bc139406.npy",
+      "sha256": "3adf067272841df5fdabb1df2f76559d28ec51e685de76860b1054a7b850a89d",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed17_50pct.npy",
+        "sha256": "aadafec4210edc4704df0b4fbbc513e6863dbd36c11e36f2e61fe23586ca1b47"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        17,
+        "50pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "aadafec4210edc4704df0b4fbbc513e6863dbd36c11e36f2e61fe23586ca1b47"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/4caf7a830db9cf4269e5b0270270d044ae1ca467191f517d87beff5549fc221b.npy",
+      "sha256": "b701534d38105d4d60e5b22a5bd16c8892a8d1a03b14a6d287771a94487d76d5",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed17_75pct.npy",
+        "sha256": "8df432c0f20040b91353a9e5277d49d9f5d1f78238605ed7091b8cb746d40891"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        17,
+        "75pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "8df432c0f20040b91353a9e5277d49d9f5d1f78238605ed7091b8cb746d40891"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/ae7d85c436956e5e882db4ce44354a1a9fd957c6f78c30a84cd8f34a949aae80.npy",
+      "sha256": "9aa61c1dfa031cc2eb072bbfe70f9b20ee73a5afe806f57d8584a3353516c84a",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed29_25pct.npy",
+        "sha256": "6656b1d2ff9d878d5e04fa67113d159d9076ef8b9e1b51888c99f4bc971ec29f"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        29,
+        "25pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "6656b1d2ff9d878d5e04fa67113d159d9076ef8b9e1b51888c99f4bc971ec29f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c9f782196a65d620da99a250e355fe45c7ca282113f87730ac6ed9588f08ad2a.npy",
+      "sha256": "3f83abd90e5a6b30081ce93cdefb10931bccf00eb0d5b079aedb69ef58fa5621",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed29_50pct.npy",
+        "sha256": "84e2eb0ab2e27afd0a08eb432f53f5f4e9432d0a4cc146372215fe2cc498ea2f"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        29,
+        "50pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "84e2eb0ab2e27afd0a08eb432f53f5f4e9432d0a4cc146372215fe2cc498ea2f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/2aa319befee951b389e8e1ae31537abc7cbca0a540d4417eeb8d5db62960f888.npy",
+      "sha256": "2d18a419cd39803044e709d2a89f968eab47d5259f6c62d7a238a0a3ae84f449",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed29_75pct.npy",
+        "sha256": "7e517534f2db540422b3f6d04dad6da6167c486ef17c138505d874085ba276c4"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        29,
+        "75pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "7e517534f2db540422b3f6d04dad6da6167c486ef17c138505d874085ba276c4"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/e9f067e6f86f6fd5b0873c5fe576bf8e5cf4d65e65753744e73d070b2ee2d6a7.npy",
+      "sha256": "1ea68bce6391861cdd44e8a69c22036062d52a0eef87e5a8ddac0a4c279fc714",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed41_25pct.npy",
+        "sha256": "abdb0713a9396b9047fb7bafda5b78b634686b53805d2c477c1c490c60c53ab6"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        41,
+        "25pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "abdb0713a9396b9047fb7bafda5b78b634686b53805d2c477c1c490c60c53ab6"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/8a3254ff3df0f63e1f098ebd7a25e73932c89870da3ed46aaf88e9fd92a66565.npy",
+      "sha256": "64dddbc0b1b1f6570bc247c55a0364da62990503a6cdf691b0f93c3a55922a72",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed41_50pct.npy",
+        "sha256": "03d4239a5dd85a27e3776214cfe5a9f891b83a757f82f17b2a31034ef3eb90ad"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        41,
+        "50pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "03d4239a5dd85a27e3776214cfe5a9f891b83a757f82f17b2a31034ef3eb90ad"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/ed9b2cbb047ee7c035d4360146f1f610e08acc55ab3b54ce0887e0cec0c1e073.npy",
+      "sha256": "6845fbd5cfce0d20ef7c9a4b7addab1aab694f1b911a46ce432cba9ff574b23d",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed41_75pct.npy",
+        "sha256": "f3c6d21d773b34827ba8cdb3c48e8e10fe69e837d7dcb9ceb8b0a17c4a0010cb"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        41,
+        "75pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "f3c6d21d773b34827ba8cdb3c48e8e10fe69e837d7dcb9ceb8b0a17c4a0010cb"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/b9e07abfd009d3613b1ba0cefdc3307662958b2e77fa3362a60d70aa2692e8c1.npy",
+      "sha256": "5c15c4e3e99923c63ac1a181e3cf83b6d8a1fe3d0101dd4d7310b33ba56b80e5",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed53_25pct.npy",
+        "sha256": "94254f66f02ff75effda78a834e22190bbbf49d430fdb77b078c1ace6d213a28"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        53,
+        "25pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "94254f66f02ff75effda78a834e22190bbbf49d430fdb77b078c1ace6d213a28"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/a6c6bf767484a8471f53c78cfd9a85fec66cae59a853361cea19aba6490f5ef0.npy",
+      "sha256": "480b870a57f4efdef0f746343a65f4fe79e2c3f33194f0b633a2c56bfa3bab64",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed53_50pct.npy",
+        "sha256": "0a34b833fbdbccb334f29f9b0baf9eed181e28b21ade396f71d3ba8c997476bf"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        53,
+        "50pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "0a34b833fbdbccb334f29f9b0baf9eed181e28b21ade396f71d3ba8c997476bf"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/307af5a4d4a14296fad0e90393f66cf23c81cc2e3d7efe9fdae870e8f28fae05.npy",
+      "sha256": "0cc3fc9d0b3dac21d0e5cf5bcd36f060d4f073aedac05733842417f470fa70fd",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed53_75pct.npy",
+        "sha256": "6df79111efb4047005ec793b2433f0a995b3ae3dd2d57e9429feff0120366ae2"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        53,
+        "75pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "6df79111efb4047005ec793b2433f0a995b3ae3dd2d57e9429feff0120366ae2"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d6795949a51c841b15bf33dd880d63ab720c730454fa1d9ebe72bc4c060403da.npy",
+      "sha256": "05f629baf868790145cc601807b6d4c1655da3ec538b1dd57060b98c7617faea",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed67_25pct.npy",
+        "sha256": "d7514cb4a5ab6001e09ecbcd58dc78076fe954da424f45b3e18ed6c8583c5637"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        67,
+        "25pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "d7514cb4a5ab6001e09ecbcd58dc78076fe954da424f45b3e18ed6c8583c5637"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/4ad17d317c4bf3c2782fc43f846a8421268cede1f3ab45ecab562a54b132d714.npy",
+      "sha256": "1a6eb20e3d8d62c02744c3de6c243f83820d1bfada3bfefb460158848f99f991",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed67_50pct.npy",
+        "sha256": "eccc20dd4dfd9a80096c6f7c75f4f9c90a0e62d433b77259c3d565f0e47158c9"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        67,
+        "50pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "eccc20dd4dfd9a80096c6f7c75f4f9c90a0e62d433b77259c3d565f0e47158c9"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/c6a34f51589e771fa4091dc90d7671bbe30c25550d7f63f7502ec1cd6255722a.npy",
+      "sha256": "c9d43371f5c9a6909b4e960640403232609106e93019ed5419913ff5087f901d",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy",
+        "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed67_75pct.npy",
+        "sha256": "9b6908226c9d131ea6da1ca4cb3cefc990a68eebdd7f95c3ab0d296260d49732"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "e5_small_base",
+        67,
+        "75pct",
+        "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+        "9b6908226c9d131ea6da1ca4cb3cefc990a68eebdd7f95c3ab0d296260d49732"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/1a69c57bf32c86c228990cf3a7972dc59271104e30af046c58139b8de95cb64d.npy",
+      "sha256": "ca33773f2c4de514f297c2d675eadcac351118f1f71af7c857cc6c01550d7f8f",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed17_25pct.npy",
+        "sha256": "ed8cfec49dd27be667386aeea4d5cb424c69bfddc09830786802b681a8d885b3"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        17,
+        "25pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "ed8cfec49dd27be667386aeea4d5cb424c69bfddc09830786802b681a8d885b3"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/295bbbb57d81e2bae6e7de94edf5a5a26dbb06f14a5e6345336a47109d7a950d.npy",
+      "sha256": "fe52df6931f28e10e34b1a809221b5945da682e3d6ebafe2e2c744f0e7fe7b3b",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed17_50pct.npy",
+        "sha256": "aadafec4210edc4704df0b4fbbc513e6863dbd36c11e36f2e61fe23586ca1b47"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        17,
+        "50pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "aadafec4210edc4704df0b4fbbc513e6863dbd36c11e36f2e61fe23586ca1b47"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/d43e4d1eeec53cf5fe942562ac5f17bad04784d75925d941d299672d697901ea.npy",
+      "sha256": "be0d9b41d25016ab52a4b9b80a6bce20117cfbb2aaf748d71a027776dd3ee937",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed17_75pct.npy",
+        "sha256": "8df432c0f20040b91353a9e5277d49d9f5d1f78238605ed7091b8cb746d40891"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        17,
+        "75pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "8df432c0f20040b91353a9e5277d49d9f5d1f78238605ed7091b8cb746d40891"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/4bd7261f489600fe4bc37210f0e48cf252f2fd033ce9b9ededfb3e72472f3a92.npy",
+      "sha256": "b4953152d4092f473566148a6ac085fac09938d4d5c078d3a43c8161cb931829",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed29_25pct.npy",
+        "sha256": "6656b1d2ff9d878d5e04fa67113d159d9076ef8b9e1b51888c99f4bc971ec29f"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        29,
+        "25pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "6656b1d2ff9d878d5e04fa67113d159d9076ef8b9e1b51888c99f4bc971ec29f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/583dc663d3c67de68090c758d4e33de739b6c09972c8d2304ea2b9a32e0b4b97.npy",
+      "sha256": "9f73e3e96fb93ad31199e1fe9bf582412a5158932e0fb1df26e3a16f91e13183",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed29_50pct.npy",
+        "sha256": "84e2eb0ab2e27afd0a08eb432f53f5f4e9432d0a4cc146372215fe2cc498ea2f"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        29,
+        "50pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "84e2eb0ab2e27afd0a08eb432f53f5f4e9432d0a4cc146372215fe2cc498ea2f"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/1032e1d618c6f598e3142d1566b21731908952b8804b4a0dee48e996ec7d7ce6.npy",
+      "sha256": "084a941de64ab2fa4d68e461f83a1c45cb6a90d980bdd85a2f697144a1e4115e",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed29_75pct.npy",
+        "sha256": "7e517534f2db540422b3f6d04dad6da6167c486ef17c138505d874085ba276c4"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        29,
+        "75pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "7e517534f2db540422b3f6d04dad6da6167c486ef17c138505d874085ba276c4"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/322c35402bdbf1aea6c898c743b41ab18f78d54404cd5f227cc34f5b5d898587.npy",
+      "sha256": "ece20a3ac2b2f7b42a999314756ef49be5a68c4077bf7b47da95d4147d46b266",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed41_25pct.npy",
+        "sha256": "abdb0713a9396b9047fb7bafda5b78b634686b53805d2c477c1c490c60c53ab6"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        41,
+        "25pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "abdb0713a9396b9047fb7bafda5b78b634686b53805d2c477c1c490c60c53ab6"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/7fe3b660e44001d1e7bf1a415b811420b008dc8c49a6ba6639ce26adfc3dd532.npy",
+      "sha256": "f76d051d85516befe97c46314d5cabb0177883cc673c5c3d47dd01914e30ff49",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed41_50pct.npy",
+        "sha256": "03d4239a5dd85a27e3776214cfe5a9f891b83a757f82f17b2a31034ef3eb90ad"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        41,
+        "50pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "03d4239a5dd85a27e3776214cfe5a9f891b83a757f82f17b2a31034ef3eb90ad"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/b00fe0ee1e1af49b450cf10d08d7348e5dd207224faf7dc70c77da5325f5a8bc.npy",
+      "sha256": "12d34a6f1324465b30264fbef2af470496bfd3ddb27ffbeacd4dc0eaf1c13e4c",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed41_75pct.npy",
+        "sha256": "f3c6d21d773b34827ba8cdb3c48e8e10fe69e837d7dcb9ceb8b0a17c4a0010cb"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        41,
+        "75pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "f3c6d21d773b34827ba8cdb3c48e8e10fe69e837d7dcb9ceb8b0a17c4a0010cb"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/ed60c47b8fc3689b9943d4ad1ca1c9da5b82ac212cc915cf908cf2a91cf5782b.npy",
+      "sha256": "bb1100d88686873327da5e77d14c810663280e0ca3b8a86518637ad70774cc13",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed53_25pct.npy",
+        "sha256": "94254f66f02ff75effda78a834e22190bbbf49d430fdb77b078c1ace6d213a28"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        53,
+        "25pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "94254f66f02ff75effda78a834e22190bbbf49d430fdb77b078c1ace6d213a28"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/3aa0a9f71c810a58e0a5f76060b9b5a654db2c10666f2fb34a13aeb8d583376b.npy",
+      "sha256": "238d98eb47e7a7dd39889c6f984435658a4fbbe07ca9d3c29d63c76f7b957a58",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed53_50pct.npy",
+        "sha256": "0a34b833fbdbccb334f29f9b0baf9eed181e28b21ade396f71d3ba8c997476bf"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        53,
+        "50pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "0a34b833fbdbccb334f29f9b0baf9eed181e28b21ade396f71d3ba8c997476bf"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/30883707d60c9fb290cdc6895a2eeeeb8aec76eb2c68a3c3c47f30a90aba2a28.npy",
+      "sha256": "2dfdc160d9e71e807d185e61ab27015ca7c5b46c5744ee52d0d219b8ada78d29",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed53_75pct.npy",
+        "sha256": "6df79111efb4047005ec793b2433f0a995b3ae3dd2d57e9429feff0120366ae2"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        53,
+        "75pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "6df79111efb4047005ec793b2433f0a995b3ae3dd2d57e9429feff0120366ae2"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/ad3de30144e2ff761b0b912cbc800f11a0028da963efa113135620c7161b8bfd.npy",
+      "sha256": "42e3a8148b3c3ece008ce090407d424479ff073cdd6fb347c6f7ec79086a12ee",
+      "shape": [
+        1258,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed67_25pct.npy",
+        "sha256": "d7514cb4a5ab6001e09ecbcd58dc78076fe954da424f45b3e18ed6c8583c5637"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        67,
+        "25pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "d7514cb4a5ab6001e09ecbcd58dc78076fe954da424f45b3e18ed6c8583c5637"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/f1f722d8955a30e04872e0cb497cfe21ae2e0d31b8822534838569e810571923.npy",
+      "sha256": "0d921dccd15626b1268e1e0e5a29fa83b7d858295a93af433263a64e7d02c152",
+      "shape": [
+        2517,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed67_50pct.npy",
+        "sha256": "eccc20dd4dfd9a80096c6f7c75f4f9c90a0e62d433b77259c3d565f0e47158c9"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        67,
+        "50pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "eccc20dd4dfd9a80096c6f7c75f4f9c90a0e62d433b77259c3d565f0e47158c9"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    },
+    {
+      "path": "execution_paid_targets/beb4e1556285746c79fd43253a5d54f30406d9557c5af58a07157e8fd7be7dde.npy",
+      "sha256": "2d19d28660b2e096fe5bda576d5cb519164db2f1fc3f19eeb5818a4fca08ac19",
+      "shape": [
+        3776,
+        768
+      ],
+      "dtype": "float32",
+      "source_full_target": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd"
+      },
+      "source_paid": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/inputs/NanoNQ/paid_seed67_75pct.npy",
+        "sha256": "9b6908226c9d131ea6da1ca4cb3cefc990a68eebdd7f95c3ab0d296260d49732"
+      },
+      "cache_key": [
+        "NanoNQ",
+        "minilm_distilroberta",
+        67,
+        "75pct",
+        "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+        "9b6908226c9d131ea6da1ca4cb3cefc990a68eebdd7f95c3ab0d296260d49732"
+      ],
+      "retained_in_remote_raw_run": true,
+      "portable": false,
+      "scope": "execution-only genuine paid target slices"
+    }
+  ]
+}

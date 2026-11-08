@@ -1,0 +1,81 @@
+{
+  "utc": "2026-10-31T01:09:51.573143+00:00",
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "NanoFEVER_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec",
+    "group_index": 115,
+    "groups_total": 120,
+    "rankings_complete": 343,
+    "rankings_total": 358
+  },
+  "run_metadata": {
+    "status": "B1C_R3_RUNNING",
+    "stage": "full",
+    "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+    "restored_root": "/network-volume/arc2_recovery_20261030/restored",
+    "started_utc": "2026-10-30T03:47:30.526928+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null
+  },
+  "schedule_status": "RUNNING",
+  "free_bytes": 585896083456,
+  "worker": {
+    "path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoFEVER_NanoFEVER_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec/worker",
+    "status": "RUNNING",
+    "failures": [],
+    "selection_progress.jsonl": {
+      "cuda_reserved_bytes": 809500672,
+      "elapsed_seconds": 840.5967994825915,
+      "global": 0.006399394944310188,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.0029813696164637804,
+      "gradients_finite": true,
+      "local": 0.005772486329078674,
+      "loss": 0.0026521352119743824,
+      "observed_rss_bytes": 1555501056,
+      "own_cuda_allocated_bytes": 617617920,
+      "parameters_finite": true,
+      "regression": 0.0014349471312016249,
+      "step": 20250,
+      "validation_mae": 0.016526971012353897
+    }
+  },
+  "gpu_lines": [
+    "|  0    3   0   0  |            9066MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |",
+    "|                  |                13MiB / 32767MiB  |           |                       |",
+    "|    0   N/A  N/A    183458      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    184412      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    184413      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    184414      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    184415      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    197122      C   ...covery_20261030/envs/gpu/bin/python          0MiB |"
+  ],
+  "owned_processes": [
+    "   2777       1 Ss      21:23:19  0.0 21424 /network-volume/arc2_recovery_20261030/envs/cpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_campaign.py --code-commit 61f73171b1869a186648aadd88f1b6f81a61376b --name mini_r3b_20261030t0347 --restored-root /network-volume/arc2_recovery_20261030/restored --lock /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+    "   2997    2777 Sl      21:22:22  2.1 243588 /network-volume/arc2_recovery_20261030/envs/cpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_stage.py --stage full --output /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347 --code-commit 61f73171b1869a186648aadd88f1b6f81a61376b --smoke /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347 --lock /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json --restored-root /network-volume/arc2_recovery_20261030/restored",
+    " 197122    2997 Rl         14:07 76.8 1516836 /network-volume/arc2_recovery_20261030/envs/gpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1p_neural_worker.py --request /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoFEVER_NanoFEVER_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec/request.json"
+  ],
+  "scoring_completed.json": null,
+  "scoring_failure.json": null,
+  "recent_completed_converters": [
+    {
+      "group": "NanoFEVER_NanoFEVER_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec",
+      "wall_seconds": 5205.5106247337535,
+      "ended_utc": "2026-10-30T23:08:14.083651+00:00"
+    },
+    {
+      "group": "NanoFEVER_NanoFEVER_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+      "wall_seconds": 2302.5223067970946,
+      "ended_utc": "2026-10-30T23:46:39.799317+00:00"
+    },
+    {
+      "group": "NanoFEVER_NanoFEVER_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec",
+      "wall_seconds": 4137.998991158791,
+      "ended_utc": "2026-10-31T00:55:41.987181+00:00"
+    }
+  ]
+}

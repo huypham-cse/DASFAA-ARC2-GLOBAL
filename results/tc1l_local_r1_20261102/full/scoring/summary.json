@@ -1,0 +1,69 @@
+{
+  "status": "DEV_SCORED",
+  "scope": "MiniLM-only local FiQA DEV; E5 pending",
+  "means": [
+    {
+      "pair": "minilm_distilroberta",
+      "method": "procrustes",
+      "ndcg10": 0.28582824088854003,
+      "recall100": 0.6687918004218004,
+      "ndcg10_seed_std": 0.004024278199000656
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "method": "tangent2",
+      "ndcg10": 0.3075048582716371,
+      "recall100": 0.6765693384393384,
+      "ndcg10_seed_std": 0.006017041225943394
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "method": "chordal2",
+      "ndcg10": 0.2935058031310443,
+      "recall100": 0.6740056099456099,
+      "ndcg10_seed_std": 0.0059306542573607
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "method": "euclidean2",
+      "ndcg10": 0.2959154931179677,
+      "recall100": 0.6739997513597513,
+      "ndcg10_seed_std": 0.0060823441819060796
+    }
+  ],
+  "primary_contrasts": [
+    {
+      "pair": "minilm_distilroberta",
+      "left": "tangent2",
+      "right": "chordal2",
+      "delta_ndcg10": 0.013999055140592891,
+      "lower": 0.009703861642472786,
+      "upper": 0.018620502805854717,
+      "verdict": "positive"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "left": "tangent2",
+      "right": "euclidean2",
+      "delta_ndcg10": 0.011589365153669408,
+      "lower": 0.007820844428750586,
+      "upper": 0.015656396532695304,
+      "verdict": "positive"
+    }
+  ],
+  "bootstrap": {
+    "draws": 20000,
+    "seed": 20261102,
+    "unit": "query after five-seed averaging",
+    "family_size": 4,
+    "observed_contrasts": 2,
+    "pending_E5_contrasts": 2,
+    "individual_coverage": 0.9875,
+    "approx_original_family_coverage": 0.95,
+    "quantile_method": "linear",
+    "query_indices_sha256_le_int64": "d18a5bb239f4672c36b37c15105218b8c4694b75e21f3e5f349849bcfef9a132"
+  },
+  "independent_test_claim": false,
+  "physical_cost_claim": false,
+  "original_two_pair_campaign_complete": false
+}

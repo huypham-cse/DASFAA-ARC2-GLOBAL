@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "embedding_converter",
+  "regime": "anchors",
+  "seed": 29,
+  "lockpath": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+  "output": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec/worker",
+  "paired_source": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec/FiQA_paired_source.npy",
+  "paired_target": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec/FiQA_paired_target.npy",
+  "full_source": "/network-volume/arc2_recovery_20261030/restored/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "input_sha256": {
+    "paired_source": "86910badc48f49013818d4078577cbe9fc71826aaa86f4a036bcd9ba034e6396",
+    "paired_target": "927348ce94758a3a5ee6202ffdd4e2684ddd91c259d0828f894460b77832e4ca",
+    "full_source": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782"
+  }
+}

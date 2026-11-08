@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "graded_ndcg": 0.7002755876478819,
+  "full_qrel_denominator_recall": 0.6666666666666666,
+  "zero_and_unjudged_queries": "zero",
+  "serialized_order": "unchanged"
+}

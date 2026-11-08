@@ -1,0 +1,10 @@
+{
+  "stage": "NEURAL_FIT",
+  "cells": 0,
+  "total": 124,
+  "pair": "synthetic",
+  "seed": 17,
+  "regime": "allpaid28819",
+  "method": "embedding_converter_paper_spec",
+  "worker": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_smoke_mini_r5_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+}

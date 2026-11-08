@@ -1,0 +1,20 @@
+{
+  "authority_pre_run_commit": "d8233eed1987697d974b7dccf899c6efcf65cbc8",
+  "deployment_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "bundle_sha256": "05b3cba10c3a9df8a5640637a3bb5a2c20cc8ad441d3664a0b88dc828663a1bb",
+  "bundle_bytes": 558699,
+  "copied_paths": [
+    "ops",
+    "src",
+    "configs",
+    "protocols",
+    "tools",
+    ".gitattributes",
+    ".gitignore",
+    "results/b1g_r1_review_20261027/main/execution_intermediates.json"
+  ],
+  "locked_source_files_verified": 54,
+  "lock_sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+  "local_snapshot_checkout": "C:\\Users\\GIAHUY~1\\AppData\\Local\\Temp\\arc2_b1c_r3_deploy_axbugagt\\checkout",
+  "new_scientific_run_started": false
+}

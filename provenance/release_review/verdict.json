@@ -1,0 +1,43 @@
+{
+  "reviewed_utc": "2026-11-01T02:25:36.137944+00:00",
+  "release_status": "READY_FOR_SUPERVISOR_REVIEW",
+  "scope": "Self-contained offline evidence review, saved-ranking/statistical reproduction, synthetic method smoke and saved-result figure rebuilding.",
+  "claim_supported": "partial",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "formal_paper_claim_audit": false,
+  "new_scientific_experiments_performed": false,
+  "blocking_findings_unresolved": 0,
+  "resolved_findings": [
+    "Default output collision in documented commands",
+    "Derived checksum-sidecar population guard and stale FAIL receipt guidance"
+  ],
+  "independent_family": {
+    "positive": 11,
+    "unresolved": 19,
+    "negative": 0
+  },
+  "baseline_positive_counts": {
+    "Procrustes": 0,
+    "LA2M20": 0,
+    "SimpleLinear": 2,
+    "affine_ridge": 4,
+    "Converter": 5
+  },
+  "verified_source_pins": {
+    "B1c": 54,
+    "B2": 61
+  },
+  "reviewed_manifest_sha256": "0bd058b91732be6ce013d1756ce6895b760705b69a5a65e5cee24ee4295198f7",
+  "reviewed_manifest_files": 4394,
+  "reviewed_manifest_bytes": 509805207,
+  "full_numerical_receipt": "checks/portable_verification_full_20261101T022349350884Z.json",
+  "limitations": [
+    "Same-family semantic review is provisional; formal manuscript audit not performed.",
+    "B1G sampled-vector regeneration is partial because replay inputs are omitted.",
+    "New H100 runtime is explicitly not verified as a turnkey launcher.",
+    "Source receipts attest recorded chronology; this is not an independent audit of every possible label access.",
+    "No strongest-baseline, equivalence, novelty-priority, venue-probability, physical-cost, ANN/SLO or real-traffic claim established."
+  ],
+  "final_packaging_action": "Add review documents, refresh inventory and run planned final hash-only verification; no scientific bytes change."
+}

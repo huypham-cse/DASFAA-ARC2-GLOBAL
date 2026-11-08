@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "overleaf": {
+    "isolated_compile": true,
+    "pages": 16,
+    "text_and_page_geometry_identical": true,
+    "overfull_or_undefined_reference_errors": false,
+    "table_fragment_compile": true,
+    "private_text_markers": []
+  },
+  "development": {
+    "all_member_hashes": {
+      "status": "PASS",
+      "files_verified": 7110,
+      "scope": "Delivered byte hashes; not a new scientific run"
+    },
+    "all_R3_manifested_files_preserved": 6258,
+    "isolated_relocation_draft_smoke": true,
+    "original_locks_unchanged": true
+  },
+  "new_model_fits": 0,
+  "new_rankings": 0,
+  "new_scientific_scoring": 0,
+  "paper_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc"
+}

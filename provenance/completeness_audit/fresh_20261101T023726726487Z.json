@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-11-01T02:37:27.178124+00:00",
+  "scope": "Synthetic software smoke only; no real dataset, qrels, final-test fit or research result.",
+  "method_revision": "arc2_global_tangent2_r1",
+  "entrypoint": "arc2_global.model.fit_arc2_global",
+  "backend_id": null,
+  "backend_identity": "Default model._tangent2 dual anchor-Gram Cholesky; float64 solve and float32 stored updates.",
+  "backend_note": "The default GlobalModel exposes no canonical backend_id. This smoke does not exercise or relabel B2's declared primal backend.",
+  "device": "CPU; NumPy/SciPy only",
+  "seed": 17,
+  "documents": 256,
+  "anchors": 128,
+  "source_dim": 16,
+  "target_dim": 24,
+  "unique_destination_documents": 192,
+  "lambda": 10.0,
+  "tangent_steps": 2,
+  "elapsed_seconds": 0.012733200012007728,
+  "python": "3.12.10",
+  "entrypoint_sha256": "b36da0764f653cd49280d26a7137dc284b914977cb0e22b825eedb451af9cebd",
+  "output_selection": "unique UTC timestamp default",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "checks": {
+    "frozen_lambda10_and_exactly_two_tangent_steps": true,
+    "finite_float32_unit_proxy_rows": true,
+    "finite_float32_unit_mixed_rows": true,
+    "all_paid_rows_exactly_overwritten": true,
+    "all_unpaid_rows_equal_saved_proxy": true,
+    "all_anchors_counted_in_paid_union": true,
+    "one_vector_per_unique_document_id_in_original_order": true,
+    "fit_receives_only_128_paired_anchors": true
+  },
+  "source_sha256": {
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf"
+  }
+}

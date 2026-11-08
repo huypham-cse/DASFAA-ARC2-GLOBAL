@@ -1,0 +1,23 @@
+{
+  "ARC2_Global_DASFAA2027_final.pdf": "dead152e05d6d76e8a92d05fe524fe4fdef28b170191fbae8869b3e01d3c1d9f",
+  "main.tex": "7585239d0d56d354eb6878ec43286e3c5d236aabf6400c92fc4f8f60c125028a",
+  "PAPER_CLAIM_AUDIT.json": "67404f0d6fc190fb80a90d7f60b69be7999e3818ca85bc26809dc28db2c35e3c",
+  "PAPER_CLAIM_AUDIT.md": "4e3bf4ba4305cb092622c996961f74480208491a0461bed809784e4fd0319ddb",
+  "review/FINAL_QA.json": "c8c4c6f81bedc7da8b9fd594e2c087838679429470cb78d8499cfd390950992c",
+  "review/SUPERVISOR_HANDOFF.md": "319db38fd143fb7d10b9d4652d670a96091f0acacf450462e77fcb4e2008d55a",
+  "review/build_receipt.json": "e0d5508e33181151c5736f9a8c8ca1e7248f1fa6df331e95deb30687b5725037",
+  "scripts/build_evidence.py": "ad60cae15f38471f4d7d280776034a78c9cef9f738725ee9e4649001246e9dce",
+  "sections/abstract.tex": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4",
+  "sections/conclusion.tex": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7",
+  "sections/discussion.tex": "1377ab22f162082ec6d781a3ae507a0136cb7cb29755b38eec64d45895cffe16",
+  "sections/experimental-setup.tex": "1bf27966f8891811c7e0c3054142b995b5396ec37aa4fc1ffd6435a968d45fb3",
+  "sections/introduction.tex": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f",
+  "sections/method.tex": "ceb05f7d9303ea5560b646fe9b25f81f7a6b772557fb7b747ae89190d98530fc",
+  "sections/related-work.tex": "c2908b8289c07214f10cf548acbd4436da970fdd0a487b62669b115ab492167b",
+  "sections/results.tex": "e186bd66a1d63dd5ac6c6516337589591aaac68a86cbd756933f785b58d40480",
+  "generated/ablation.tex": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e",
+  "generated/allpaid.tex": "8df4a96cb9a4e5c9bf7c2e501f0bcd3009c38183d874417d013b956fcec8a561",
+  "generated/dev_macro.tex": "163f3ff6de42e4d0e60f3014e04864b4c48ebd08766995134bde4c22f84e2878",
+  "generated/trec_family.tex": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e",
+  "generated/trec_means.tex": "2d6fe4761d377eb66da068072310dcfd893e67fdcbf43b4186160182b8fc0c19"
+}

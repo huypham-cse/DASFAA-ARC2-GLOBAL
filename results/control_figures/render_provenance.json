@@ -1,0 +1,166 @@
+{
+  "status": "RENDERED_PENDING_VISUAL_QA",
+  "scope": "Saved JSON means/deltas/intervals only; no qrels, fitting, scoring, bootstrap or new CI",
+  "inputs": [
+    {
+      "study": "M",
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded"
+    },
+    {
+      "study": "M",
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/completed.json",
+      "sha256": "beeda707e9efd553c985f6f546e29217b7c56caa97fe401cc3010201c6a03f3f"
+    },
+    {
+      "study": "P",
+      "path": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7"
+    },
+    {
+      "study": "P",
+      "path": "results/b1p_r5_review_20261027/scoring/completed.json",
+      "sha256": "ae8a39f6ee2bedf6a326ac185d9900b9cfb55ce273ebc76f9ab4fc2e11724827"
+    },
+    {
+      "study": "G",
+      "path": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f"
+    },
+    {
+      "study": "G",
+      "path": "results/b1g_r1_review_20261027/scoring/completed.json",
+      "sha256": "9b5de52e634bc59a722bc6de7dfedee52efcfbc8b3bf5b26e1f81fa517f41a0a"
+    }
+  ],
+  "script_sha256": "72f3466263726dc87d5bb9be163b09f3b283f6f9c298167de7395a76d87c94b9",
+  "python": "3.12.10",
+  "style": {
+    "matplotlib": "3.11.2",
+    "font_family": [
+      "Arial",
+      "DejaVu Sans"
+    ],
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "dpi": 300,
+    "colors": {
+      "arc2_global_tangent2_r1": "#0F4D92",
+      "procrustes_global": "#B64342",
+      "la2m20_integration_script_adaptation": "#5B9B59",
+      "simplelinear_official_final50_mlp5": "#9A4D8E",
+      "ridge_affine_l10_bias_regularized": "#42949E",
+      "embedding_converter_paper_spec": "#A17C25"
+    },
+    "style": "existing ARC2 release / figures4papers house style"
+  },
+  "figures": {
+    "M": {
+      "plotted_rows": 5,
+      "artifacts": [
+        {
+          "path": "b1m_mechanism_controls.pdf",
+          "sha256": "0c4e59c007e99e5278141d28b43c2ae51235073b123697771a9d11f94c87a7e6"
+        },
+        {
+          "path": "b1m_mechanism_controls.svg",
+          "sha256": "911ffea59ce7fe5de295bcea57ca4d6f6b534b15dd326b6bce053448ceac9cc1"
+        },
+        {
+          "path": "b1m_mechanism_controls.png",
+          "sha256": "ad9b42b2407d2627cb2f4db9217ef74320d325f9dceb38d5c6466da9bcf48065"
+        }
+      ]
+    },
+    "P": {
+      "plotted_rows": 20,
+      "artifacts": [
+        {
+          "path": "b1p_allpaid_controls.pdf",
+          "sha256": "a40da068608f3a09633bb451cd52712ac5d158f2674e8e468cb0e79a36237be5"
+        },
+        {
+          "path": "b1p_allpaid_controls.svg",
+          "sha256": "5589330de87cc7c2ec6c9cd38933970ea7470ae93d1774db698fd0c2913f3ef7"
+        },
+        {
+          "path": "b1p_allpaid_controls.png",
+          "sha256": "cb0312b82b2bd2c06109888fc8a5387c9b81dba76cb5d09b0dfb72f61b61b153"
+        }
+      ]
+    },
+    "G": {
+      "plotted_rows": 12,
+      "artifacts": [
+        {
+          "path": "b1g_proxy_mixed_controls.pdf",
+          "sha256": "02fd29429a469fda7ddbec4b7572f7decd409040557e79950657e9dabf7714c9"
+        },
+        {
+          "path": "b1g_proxy_mixed_controls.svg",
+          "sha256": "9088211ae34126ce7e22987bed658e06cdbf555670b0ea486b448e1305601479"
+        },
+        {
+          "path": "b1g_proxy_mixed_controls.png",
+          "sha256": "4533345599cb2c68c978ab1a4e4042fd99cfbb33199fd3eeb8d6c87f31d7535b"
+        }
+      ]
+    }
+  },
+  "format_checks": {
+    "M": {
+      "png_size": [
+        2903,
+        1369
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    "P": {
+      "png_size": [
+        3550,
+        2482
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    "G": {
+      "png_size": [
+        3587,
+        2482
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  },
+  "intervals": {
+    "M": "saved99% intervals; five-comparison family, approximate95% coverage",
+    "P": "saved99.84375% intervals; original32-comparison family, approximate95% coverage",
+    "G": "descriptive five-seed before/after means; no intervals"
+  },
+  "subset": "G: full predeclared FiQA50 allpaid scope, all six methods/both pairs; all90 conditions exported",
+  "rendered_utc": "2026-11-01T02:39:37.890441+00:00",
+  "csv_artifacts": [
+    {
+      "path": "b1g_all90_conditions.csv",
+      "sha256": "9232fa5b0e854638401532e2ac23fb44a623ea1e54b5364ad1118a1a32b37d4a"
+    },
+    {
+      "path": "b1g_proxy_mixed_controls.csv",
+      "sha256": "d5daa9036487a6d16d25ef581bb7dc5a3f8bb26e5a814f15e06fd73f5050fa3e"
+    },
+    {
+      "path": "b1m_mechanism_controls.csv",
+      "sha256": "0923b4d7d0a478172978b6744a855f925e35023fce76c693c945e04a84f7658f"
+    },
+    {
+      "path": "b1p_allpaid_controls.csv",
+      "sha256": "e8862760dad5f7d7f29344b3290acc377dcfaccc06989005b9243a051489073b"
+    }
+  ]
+}

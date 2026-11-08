@@ -1,0 +1,10 @@
+{
+  "code_commit": "f1457b8ee9f51d14330f04a14ec0f75d040b08c2",
+  "checkout": "/root/arc2_global_paper_20261025/code_f1457b8_r1",
+  "tmux": "arc2global_b1p_r1_20261026",
+  "smoke": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_smoke_r1_20261026",
+  "full": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026",
+  "launched_unix": 1792977840.413797,
+  "next_item_auto_launch": false,
+  "deployment_repair": "nested shared Git alternates exceeded depth; new checkout objects materialized, fsck passed; no historical repo changed"
+}

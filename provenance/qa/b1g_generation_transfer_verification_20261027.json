@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Qrel-free portable generation seals/population only, before completed scoring",
+  "galleries": 210,
+  "cases": 450,
+  "files_verified": 4039,
+  "shard_seals": {
+    "main": "37a2e0ff7ee8af4395d5a325434262e3e3ecd719e760427b6a39ed1a6160bcee",
+    "mini": "7ac44def85ed51a412d2e9b847d01b767b800497a99bc8d16437fe9ebd6db4e2"
+  },
+  "qrel_reads": 0
+}

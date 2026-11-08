@@ -1,0 +1,37 @@
+{
+  "status": "SELECTED_ROOTS_BACKUP_VERIFIED",
+  "hosts": [
+    {
+      "status": "SELECTED_ROOTS_BACKUP_VERIFIED",
+      "host": "main",
+      "roots": [
+        "/root/arc2_global_paper_20261025",
+        "/root/arc2_p3h_20261020"
+      ],
+      "chunks_complete": 105,
+      "chunks_total": 105,
+      "verified_source_bytes": 50213936392,
+      "completed_unix": 1793154654.5546381,
+      "not_in_scope": [
+        "/root/p8-a-recompute-20261022"
+      ],
+      "labels": "Opaque byte preservation only; no label interpretation or scientific scoring"
+    },
+    {
+      "status": "SELECTED_ROOTS_BACKUP_VERIFIED",
+      "host": "mini",
+      "roots": [
+        "/root/arc2_global_paper_20261025",
+        "/root/arc2_p3h_20261020"
+      ],
+      "chunks_complete": 72,
+      "chunks_total": 72,
+      "verified_source_bytes": 34970898859,
+      "completed_unix": 1793153836.4621577,
+      "not_in_scope": [
+        "/root/p8-a-recompute-20261022"
+      ],
+      "labels": "Opaque byte preservation only; no label interpretation or scientific scoring"
+    }
+  ]
+}

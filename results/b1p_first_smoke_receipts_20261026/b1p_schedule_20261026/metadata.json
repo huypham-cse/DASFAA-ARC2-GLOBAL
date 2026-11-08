@@ -1,0 +1,24 @@
+{
+  "status": "FAILED_PRESERVED",
+  "code_commit": "1eaac90965c78ddb595f6ad5b5bd2bc3ffb2eef2",
+  "jobs": [
+    {
+      "stage": "smoke",
+      "argv": [
+        "/root/arc2_p3h_20261020/venv/bin/python",
+        "-u",
+        "/root/arc2_global_paper_20261025/code_1eaac90/ops/b1p_stage.py",
+        "--stage",
+        "smoke",
+        "--output",
+        "/root/arc2_global_paper_20261025/code_1eaac90/results/b1p_smoke_20261026",
+        "--code-commit",
+        "1eaac90965c78ddb595f6ad5b5bd2bc3ffb2eef2"
+      ],
+      "started_unix": 1792977500.8057868,
+      "exit_code": 1,
+      "ended_unix": 1792977513.4328737
+    }
+  ],
+  "next_item_auto_launch": false
+}

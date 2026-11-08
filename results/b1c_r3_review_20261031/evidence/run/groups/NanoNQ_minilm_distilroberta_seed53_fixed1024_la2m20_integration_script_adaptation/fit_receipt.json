@@ -1,0 +1,25 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "la2m20_integration_script_adaptation",
+  "fit_pairs": 1024,
+  "fit_seconds": 0.9499492682516575,
+  "mapping_seconds": 0.046001954935491085,
+  "phases": {},
+  "parameters_sha256": "c0081d09996ebd3aac79e5801ff529b36083e7656e54a73bd0f567564f6dc593",
+  "backend_id": null,
+  "new_physical_document_encodes": 0,
+  "new_fit": true,
+  "group_id": "NanoNQ_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation",
+  "dataset": "NanoNQ",
+  "pair": "minilm_distilroberta",
+  "seed": 53,
+  "regime": "fixed1024",
+  "paired_target_path": "groups/NanoNQ_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/NanoNQ_anchor_targets.npy",
+  "paired_target_sha256": "e257eeaff0d10361c8329f8e4fa727ef57fc07808892c1f38bb4730004a4dc92",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "50pct",
+    "75pct"
+  ]
+}

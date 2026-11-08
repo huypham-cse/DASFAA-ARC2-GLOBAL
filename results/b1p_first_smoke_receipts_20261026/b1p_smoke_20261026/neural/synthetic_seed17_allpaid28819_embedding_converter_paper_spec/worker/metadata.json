@@ -1,0 +1,134 @@
+{
+  "status": "FAILED_PRESERVED",
+  "method": "embedding_converter",
+  "regime": "all_paid",
+  "mode": "smoke",
+  "seed": 17,
+  "failures": [
+    "AssertionError('\\nArrays are not equal\\n\\nMismatched elements: 6 / 959 (0.626%)\\nMax absolute difference among violations: 2\\nMax relative difference among violations: 1.\\n ACTUAL: array([[  1,   2, 104,   6,  59, 132,  98],\\n       [  0,   2, 104,   6,  59, 132,  98],\\n       [  0,   1, 104,   6,  59, 132,  98],...\\n DESIRED: array([[  1,   2, 104,   6,  59, 132,  98],\\n       [  0,   2, 104,   6,  59, 132,  98],\\n       [  0,   1, 104,   6,  59, 132,  98],...')"
+  ],
+  "started_utc": "2026-10-26T01:18:30.911213+00:00",
+  "request_sha256": "00bad39343406f171f514fad3fec2b677e04edb26c34652c88352aad5270ec91",
+  "new_qrel_reads": 0,
+  "unpaid_target_reads": 0,
+  "artificial_time_or_memory_caps": null,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "executable": "/root/paper-P2/.venv/bin/python",
+  "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+  "host": "nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-bqjpp",
+  "lock_sha256": "295f273e230f7e8ec288501aeb527c0a39e11deb51ff977d40e7062a579de8fe",
+  "code_commit": "1eaac90965c78ddb595f6ad5b5bd2bc3ffb2eef2",
+  "source_sha256_canonical_lf": {
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/embedding_converter.py": "3a9397fb1f7c16c9211f7c47f3f26fb73189cdc47ad89f8d3f6e7df4ea7aabb0",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "ops/b1p_stage.py": "76523d3b24f6d78b52b3935fb4ea9d96a368bf865664de0dd2baa6721ecd8aa6",
+    "ops/b1p_campaign.py": "d89c0086c5484b85751a7420defe9db0c6bb2c9f8fa3f9c2895be6ddc8c337b3",
+    "ops/b1p_neural_worker.py": "624442b7c7911fc010ceb7920f6cce193fbd33440352c3b835b306d74a2d907f",
+    "ops/b1p_score.py": "0d0561aa1a8072d2c98a26aeb8a43db477bb02f0270ca20a62bb94a3614f2790",
+    "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+    "configs/baselines.json": "1bd95fc1dfdea6fd459c825f85c44aeb86d7c1a05cbdb56a5a15f8f9a9a3d4a3",
+    "protocols/B1P_ALL_PAID_FIQA_20261026.md": "27e6f52a46ccf2fd53b409805192b64e7a35adced1e42b0c79a6cb9b3397fbbb"
+  },
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "modules": {
+    "numpy": {
+      "version": "2.2.6",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/numpy/__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/scipy/__init__.py"
+    },
+    "torch": {
+      "version": "2.6.0+cu124",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/torch/__init__.py"
+    },
+    "sklearn": {
+      "version": "1.6.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/sklearn/__init__.py"
+    },
+    "pydantic": {
+      "version": "2.14.1",
+      "file": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/pydantic/__init__.py"
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "file": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/faiss/__init__.py"
+    },
+    "loguru": {
+      "version": "0.7.3",
+      "file": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/loguru/__init__.py"
+    },
+    "tqdm": {
+      "version": "4.70.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/tqdm/__init__.py"
+    }
+  },
+  "cuda_runtime": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "numpy_build": "{'Compilers': {'c': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.1.0', 'commands': 'cython'}, 'c++': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}, 'build': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}}, 'Build Dependencies': {'blas': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}, 'lapack': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}}, 'Python Information': {'path': '/tmp/build-env-nx8g0bo7/bin/python', 'version': '3.11'}, 'SIMD Extensions': {'baseline': ['SSE', 'SSE2', 'SSE3'], 'found': ['SSSE3', 'SSE41', 'POPCNT', 'SSE42', 'AVX', 'F16C', 'FMA3', 'AVX2', 'AVX512F', 'AVX512CD', 'AVX512_SKX', 'AVX512_CLX', 'AVX512_CNL', 'AVX512_ICL'], 'not found': ['AVX512_KNL', 'AVX512_KNM']}}",
+  "inputs": {
+    "paired_source": {
+      "path": "/root/arc2_global_paper_20261025/code_1eaac90/results/b1p_smoke_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "sha256": "6f860d6ca676431859d42311a7087e5a807d3d380616a48e0cd5b6dc7d5b23ab",
+      "shape": [
+        128,
+        384
+      ],
+      "dtype": "float32"
+    },
+    "paired_target": {
+      "path": "/root/arc2_global_paper_20261025/code_1eaac90/results/b1p_smoke_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "sha256": "e83ae9c38a0a85a586ed38e913f9f4ec96315e5b400feec8035eaa361c3ee41e",
+      "shape": [
+        128,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "full_source": {
+      "path": "/root/arc2_global_paper_20261025/code_1eaac90/results/b1p_smoke_20261026/synthetic_old.npy",
+      "sha256": "a6d8b30c88742f1d505f409eedd6c0fa9b9df8875910676ff6a33a3ac7ce8129",
+      "shape": [
+        256,
+        384
+      ],
+      "dtype": "float32"
+    }
+  },
+  "fit_pairs": 128,
+  "target_population": "supplied paired rows only; no unpaid target or qrels API",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_1eaac90/ops/b1p_neural_worker.py\", line 391, in main\n    fitted = fit_embedding_converter(x, y, request, lock, output, record)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_1eaac90/ops/b1p_neural_worker.py\", line 225, in fit_embedding_converter\n    record[\"neighbor_synthetic_parity\"] = converter.synthetic_neighbor_parity(request[\"seed\"])\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_1eaac90/src/arc2_global/embedding_converter.py\", line 183, in synthetic_neighbor_parity\n    np.testing.assert_array_equal(actual, expected)\n  File \"/root/paper-P2/.venv/lib/python3.11/site-packages/numpy/_utils/__init__.py\", line 86, in wrapper\n    return fun(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/root/paper-P2/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py\", line 1057, in assert_array_equal\n    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,\n  File \"/root/paper-P2/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py\", line 921, in assert_array_compare\n    raise AssertionError(msg)\nAssertionError: \nArrays are not equal\n\nMismatched elements: 6 / 959 (0.626%)\nMax absolute difference among violations: 2\nMax relative difference among violations: 1.\n ACTUAL: array([[  1,   2, 104,   6,  59, 132,  98],\n       [  0,   2, 104,   6,  59, 132,  98],\n       [  0,   1, 104,   6,  59, 132,  98],...\n DESIRED: array([[  1,   2, 104,   6,  59, 132,  98],\n       [  0,   2, 104,   6,  59, 132,  98],\n       [  0,   1, 104,   6,  59, 132,  98],...\n",
+  "wall_seconds": 1.8106998829171062,
+  "peak_process_rss_bytes": 581402624,
+  "resource_observation_errors": [],
+  "ended_utc": "2026-10-26T01:18:32.721913+00:00",
+  "artifacts": {
+    "lock_copy.json": {
+      "sha256": "295f273e230f7e8ec288501aeb527c0a39e11deb51ff977d40e7062a579de8fe",
+      "bytes": 43750
+    },
+    "request_copy.json": {
+      "sha256": "00bad39343406f171f514fad3fec2b677e04edb26c34652c88352aad5270ec91",
+      "bytes": 1166
+    },
+    "resource_trace.jsonl": {
+      "sha256": "f828cc82415dcd000c96b5f17550a5d3e130035f268cfee7d04165c825843635",
+      "bytes": 562
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "status": "B1G_RANK_PASS",
+  "request_sha256": "b7f5dca1e303eca28d2ddcbb19a9d0dbc73b01bd0de4bdc8a6d818be4eee5aae",
+  "group_id": "NanoNQ_minilm_distilroberta_seed29_fixed1024_procrustes_global",
+  "input_hashes": {
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/minilm_x_docs.npy": "4a807ce6ed5965bbcb77948f295e9bc3c371621a6ada6d9d3f65322dfbdea9a3",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_queries.npy": "99ee67911f7d7eaa63dad71850e61f7f98659ac6d24f0e18407961a89d1b2d74",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/907d2810eaec9e81dd03dee3d07fb86df27024cf6a6bb661f7e9c376bbeda0d6.json": "907d2810eaec9e81dd03dee3d07fb86df27024cf6a6bb661f7e9c376bbeda0d6",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/376f94091f33f274fb4f40d09c5ced3a190de769ac6d497331d871860f7e4826.npy": "376f94091f33f274fb4f40d09c5ced3a190de769ac6d497331d871860f7e4826",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_NanoNQ_c44b91262f6ae323.npy": "6022676267d743f9832192b8f705c8377725d054e2763de9ce9b1c430a2c67f0",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/NanoNQ_minilm_distilroberta_seed29/parameters.npz": "10db7039ad4c7d186cb2ef6534d8f3bd054d0308d9db601c1e6f4721fd7a0601",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/6656b1d2ff9d878d5e04fa67113d159d9076ef8b9e1b51888c99f4bc971ec29f.npy": "6656b1d2ff9d878d5e04fa67113d159d9076ef8b9e1b51888c99f4bc971ec29f",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/4bd7261f489600fe4bc37210f0e48cf252f2fd033ce9b9ededfb3e72472f3a92.npy": "b4953152d4092f473566148a6ac085fac09938d4d5c078d3a43c8161cb931829",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoNQ_minilm_distilroberta_procrustes_global_seed29_25pct.npy": "9a5455083ee1fd0ea4dd0e7d3016813749561c517f0cde3ada3a44f0d2841d20",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/84e2eb0ab2e27afd0a08eb432f53f5f4e9432d0a4cc146372215fe2cc498ea2f.npy": "84e2eb0ab2e27afd0a08eb432f53f5f4e9432d0a4cc146372215fe2cc498ea2f",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/583dc663d3c67de68090c758d4e33de739b6c09972c8d2304ea2b9a32e0b4b97.npy": "9f73e3e96fb93ad31199e1fe9bf582412a5158932e0fb1df26e3a16f91e13183",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoNQ_minilm_distilroberta_procrustes_global_seed29_50pct.npy": "b2a090e0ef95850de4e196908ed6cea486d899304dab19b32c55db854c5a16a7",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/7e517534f2db540422b3f6d04dad6da6167c486ef17c138505d874085ba276c4.npy": "7e517534f2db540422b3f6d04dad6da6167c486ef17c138505d874085ba276c4",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/1032e1d618c6f598e3142d1566b21731908952b8804b4a0dee48e996ec7d7ce6.npy": "084a941de64ab2fa4d68e461f83a1c45cb6a90d980bdd85a2f697144a1e4115e",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoNQ_minilm_distilroberta_procrustes_global_seed29_75pct.npy": "c207996c2284c3bb2d06976b7f6799fe3d6a8cd38d6da50001223a6c9fcd02c4"
+  },
+  "failures": [],
+  "new_physical_document_encodes": 0,
+  "new_fits": 0,
+  "qrels_read": false,
+  "artificial_time_or_memory_caps": null,
+  "pid": 4056123,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "started_unix": 1793083166.6880581,
+  "dataset": "NanoNQ",
+  "pair": "minilm_distilroberta",
+  "seed": 29,
+  "regime": "fixed1024",
+  "method": "procrustes_global",
+  "documents": 5035,
+  "queries": 50,
+  "sample_documents": 512,
+  "proxy_semantics": "pristine prediction for every document, including anchors",
+  "score_arithmetic": "float32 query batch16 @ gallery.T; stable row-order ties; identical ID exclusion",
+  "cases": [
+    {
+      "case_id": "NanoNQ_minilm_distilroberta_seed29_fixed1024_procrustes_global_25pct",
+      "status": "PASS",
+      "after_sha256": "9a5455083ee1fd0ea4dd0e7d3016813749561c517f0cde3ada3a44f0d2841d20"
+    },
+    {
+      "case_id": "NanoNQ_minilm_distilroberta_seed29_fixed1024_procrustes_global_50pct",
+      "status": "PASS",
+      "after_sha256": "b2a090e0ef95850de4e196908ed6cea486d899304dab19b32c55db854c5a16a7"
+    },
+    {
+      "case_id": "NanoNQ_minilm_distilroberta_seed29_fixed1024_procrustes_global_75pct",
+      "status": "PASS",
+      "after_sha256": "c207996c2284c3bb2d06976b7f6799fe3d6a8cd38d6da50001223a6c9fcd02c4"
+    }
+  ],
+  "artifacts": {
+    "before.npy": {
+      "sha256": "6b5a51d621d4ccd4dc55eb1e023a7a544d282c61a51d871dd35bd12988c3e486"
+    },
+    "sample_proxy.npy": {
+      "sha256": "44340c6219629379d211e0307724c9213779b5eb14a60089c514cd11d4f16bf9"
+    }
+  },
+  "wall_seconds": 0.3487675432115793,
+  "peak_process_rss_bytes": 559083520,
+  "ended_unix": 1793083167.0370843
+}

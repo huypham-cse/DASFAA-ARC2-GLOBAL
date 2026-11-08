@@ -1,0 +1,39 @@
+{
+  "observed_utc": "2026-10-29T13:13:12.901195+00:00",
+  "scope": "User-requested repeated SSH-port reachability checks only",
+  "results": [
+    {
+      "host": "103.73.232.201",
+      "port": 62161,
+      "status": "CONNECTED",
+      "banner": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.11",
+      "seconds": 0.375
+    },
+    {
+      "host": "103.73.232.225",
+      "port": 52194,
+      "status": "CONNECT_FAILED",
+      "error": "TimeoutError",
+      "detail": "timed out",
+      "seconds": 12.030999999988126
+    },
+    {
+      "host": "103.73.232.225",
+      "port": 52194,
+      "status": "CONNECT_FAILED",
+      "error": "TimeoutError",
+      "detail": "timed out",
+      "seconds": 12.01600000000326,
+      "attempt": 2
+    },
+    {
+      "host": "103.73.232.225",
+      "port": 52194,
+      "status": "CONNECT_FAILED",
+      "error": "TimeoutError",
+      "detail": "timed out",
+      "seconds": 12.0,
+      "attempt": 3
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "NanoFEVER",
+  "first_dev_qrel_open": "2026-10-25T19:06:42.378629+00:00",
+  "first_access_receipt": "first_dev_qrel_open.json",
+  "expected_source": {
+    "format": "parquet",
+    "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoFEVER/resolve/a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8/qrels/train-00000-of-00001.parquet",
+    "sha256": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+    "bytes": 2730,
+    "implicit_binary_grade": 1
+  },
+  "exposure": "DEV, not independent confirmation"
+}

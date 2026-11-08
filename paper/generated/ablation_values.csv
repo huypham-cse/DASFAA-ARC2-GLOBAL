@@ -1,0 +1,6 @@
+contrast,left,right,delta,low,high
+Two steps minus zero steps,arc2_global_tangent2_r1,procrustes_global,0.024325109040435233,0.01801533254696277,0.03102132243820168
+Two steps minus one step,arc2_global_tangent2_r1,tangent1_l10,0.006923862939737235,0.003809388309482942,0.009959126205904258
+ARC2 minus affine ridge,arc2_global_tangent2_r1,ridge_affine_l10_bias_regularized,0.09565304927282199,0.07535298921225946,0.11663127039230592
+$\lambda=1$ minus $\lambda=10$,tangent2_l1,arc2_global_tangent2_r1,0.0031974956912717346,-0.0018903844098364442,0.00830403326634241
+$\lambda=100$ minus $\lambda=10$,tangent2_l100,arc2_global_tangent2_r1,-0.00925533869678723,-0.01321398029023485,-0.005510245768211927

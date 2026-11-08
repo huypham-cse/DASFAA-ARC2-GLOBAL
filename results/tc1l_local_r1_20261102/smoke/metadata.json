@@ -1,0 +1,30 @@
+{
+  "status": "SMOKE_SEALED",
+  "utc_start": "2026-11-02T01:25:16.055737+00:00",
+  "stage": "smoke",
+  "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "host": "LAPTOP-MI9GIC53",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pid": 12504,
+  "scope": "TC1L MiniLM local development; E5 pending",
+  "qrels_opened": false,
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "blas": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 4,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\Gia Huy\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "rankings": 4,
+  "utc_end": "2026-11-02T01:25:30.738878+00:00",
+  "elapsed_seconds": 14.598100300005171,
+  "peak_rss_bytes": 530538496
+}

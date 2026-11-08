@@ -1,0 +1,69 @@
+{
+  "id": "TC1L_LOCAL_PRE_RUN_20261102",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "skill": "aris:ablation-planner",
+  "validation_scope": "same-family/provisional",
+  "verdict": "PASS_TO_COMMIT_AND_SYNTHETIC",
+  "reviewed_lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "earlier_reviewed_lock_sha256": "d5994be354d0cb47c1693fa0f4223d9b26ec45fe441e0e8449869479087fec44",
+  "scientific_stages_run": false,
+  "qrels_opened": false,
+  "code_or_manuscript_changed": false,
+  "source_pins_checked": 18,
+  "source_pins_matching": 18,
+  "scientific_pins_equal_parent": 11,
+  "input_byte_hashes_checked": 14,
+  "input_byte_hashes_matching": 14,
+  "actual_id_keys": ["doc_ids", "query_ids"],
+  "actual_unique_document_ids": 57638,
+  "actual_unique_query_ids": 500,
+  "python_ast_files_passed": 4,
+  "resolved_corrections": [
+    {
+      "id": "R1",
+      "file": "ops/tangent_control_local_run.py",
+      "line": 186,
+      "issue": "Prior-stage gates trust metadata status and lock hash without validating smoke seal/artifact integrity",
+      "resolution": "Campaign hashes successful stage metadata and smoke seal; runner validates receipts and all smoke artifact hashes before advancement",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "R2",
+      "file": "ops/tangent_control_local_score.py",
+      "line": 11,
+      "issue": "Scorer neither validates nor records actual runtime before labels; runner omits pinned Python/platform enforcement",
+      "resolution": "Runner and scorer enforce pinned Python platform NumPy SciPy; scorer retains actual runtime in metadata and checks before labels",
+      "status": "RESOLVED"
+    }
+  ],
+  "finite_design_checks": {
+    "frozen_math_unchanged": true,
+    "paid_only_target_numeric_access": true,
+    "fit_only_anchors": true,
+    "one_gallery_mmap_at_a_time": true,
+    "blockwise_diagnostics": true,
+    "original_512_affine_expression": true,
+    "original_q16_full_document_stable_sort": true,
+    "scratch_flush_close_containment": true,
+    "registered_family_size": 4,
+    "observed_contrasts": 2,
+    "E5_pending": true,
+    "individual_ci_coverage": 0.9875
+  },
+  "bootstrap_index_sha256_policy": "concatenated little-endian int64 query-index bytes",
+  "nominal95_intervals_required": false,
+  "optional_postanalysis_descriptives": [
+    "per-seed paired means SD range",
+    "exact query win tie loss counts"
+  ],
+  "remaining_execution_gates": [
+    "commit final protocol lock source review before synthetic",
+    "synthetic pass",
+    "qrel-free seed17 real smoke pass and degeneracy interpretation",
+    "20 fresh full rankings sealed before separate DEV scorer",
+    "independent metric/bootstrap verification and table/vector figure visual QA",
+    "ARIS interpretation and STOP before manuscript or method changes"
+  ],
+  "notes_markdown": "refine-logs/TC1L_LOCAL_PRE_RUN_20261102.md"
+}

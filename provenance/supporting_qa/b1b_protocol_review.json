@@ -1,0 +1,21 @@
+{
+  "skill": "aris:research-review",
+  "reviewer_agent": "/root/b1b_protocol_review",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "B1b external-adapter synthetic pre-run readiness, not claim audit",
+  "verdict": "PASS",
+  "source_review_findings": [
+    "Preserve official SimpleLinear nominal4/actual5 affine layers and fixed50 epochs; no invented validation/early stopping.",
+    "Use integration-script LA2M, not package PCA or local8.",
+    "Fit APIs accept paired rows only; normalize/overwrite in shared gallery.",
+    "Fixed20 is first non-global CLI grid choice, not published optimum."
+  ],
+  "final_review": "No blocking defect found in source locking, policies,25 LA2M/15 ridge/five CUDA cases, failures and STOP. Frozen ARC2 unchanged. Minor receipt correction: add CPU module file origins.",
+  "minor_receipt_fix_applied": "Actual CPU origins and CPU/GPU executable fields added; source lock refreshed.",
+  "scientific_result": false,
+  "new_qrel_reads": 0,
+  "final_followup": "PASS same-family/provisional: runtime origins/executables and48-document SimpleLinear paid gallery correctly tested; all11 source-lock hashes match. Ready to commit/run bounded B1b."
+}

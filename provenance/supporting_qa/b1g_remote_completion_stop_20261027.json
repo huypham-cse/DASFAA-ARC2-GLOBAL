@@ -1,0 +1,9 @@
+{
+  "status": "B1G_REMOTE_COMPLETE_STOP",
+  "checked_unix": 1793108262.8814838,
+  "active_owned_b1g_processes": [],
+  "main_metadata_status": "B1G_FULL_PASS",
+  "scoring_status": "B1G_DEV_SCORED",
+  "mini_import_seal_sha256": "7ac44def85ed51a412d2e9b847d01b767b800497a99bc8d16437fe9ebd6db4e2",
+  "next": "local QA, ARIS/D1 report only; no automatic breadth/TREC/systems"
+}

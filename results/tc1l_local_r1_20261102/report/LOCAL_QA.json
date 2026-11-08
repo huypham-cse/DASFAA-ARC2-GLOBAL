@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "rankings_verified": 20,
+  "per_query_values_verified": 20000,
+  "independent_metric_maxabs": 2.220446049250313e-16,
+  "mean_maxabs": 0.0,
+  "bootstrap_maxabs": 0.0,
+  "paper_unchanged": true,
+  "paper_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+  "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "seal_sha256": "0b4a3809ace4b37df55357fd767ba6367fe6e1209070a1c44bc30be353315df9",
+  "qrels_sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+}

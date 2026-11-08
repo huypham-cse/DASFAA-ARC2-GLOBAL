@@ -1,0 +1,8 @@
+{
+  "source_exit": 0,
+  "destination_exit": 0,
+  "destination_output": "{\"status\": \"TRANSFER_VERIFIED\", \"files\": 266, \"bytes\": 1367140884, \"finished_unix\": 1793005668.9523358, \"manifest_sha256\": \"2d742e268d3e65d90d835caf1e8973d2f5ef45bf493b6893dfdadccee1c89a4c\"}\n",
+  "stderr": "",
+  "elapsed_seconds": 27.39436411857605,
+  "temporary_private_key_removed": true
+}

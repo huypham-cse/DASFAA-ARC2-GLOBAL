@@ -1,0 +1,9 @@
+{"utc": "2026-11-02T01:25:16.252871+00:00", "rss_bytes": 39698432, "cpu_seconds": 0.265625, "host_available_bytes": 4300034048, "loadavg": null}
+{"utc": "2026-11-02T01:25:18.257190+00:00", "rss_bytes": 167116800, "cpu_seconds": 3.3125, "host_available_bytes": 4167548928, "loadavg": null}
+{"utc": "2026-11-02T01:25:20.266946+00:00", "rss_bytes": 524386304, "cpu_seconds": 6.25, "host_available_bytes": 3843141632, "loadavg": null}
+{"utc": "2026-11-02T01:25:22.268186+00:00", "rss_bytes": 425250816, "cpu_seconds": 9.296875, "host_available_bytes": 3930275840, "loadavg": null}
+{"utc": "2026-11-02T01:25:24.283179+00:00", "rss_bytes": 522047488, "cpu_seconds": 12.4375, "host_available_bytes": 3825532928, "loadavg": null}
+{"utc": "2026-11-02T01:25:26.294258+00:00", "rss_bytes": 523468800, "cpu_seconds": 15.5625, "host_available_bytes": 3776712704, "loadavg": null}
+{"utc": "2026-11-02T01:25:28.308113+00:00", "rss_bytes": 523481088, "cpu_seconds": 18.453125, "host_available_bytes": 3832545280, "loadavg": null}
+{"utc": "2026-11-02T01:25:30.321558+00:00", "rss_bytes": 530538496, "cpu_seconds": 21.671875, "host_available_bytes": 3858903040, "loadavg": null}
+{"utc": "2026-11-02T01:25:30.738878+00:00", "rss_bytes": 70860800, "cpu_seconds": 22.0625, "host_available_bytes": 4314820608, "loadavg": null}

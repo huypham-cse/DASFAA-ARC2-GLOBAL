@@ -1,0 +1,7 @@
+{
+  "host": "[103.73.232.240]:58319",
+  "key_type": "ssh-ed25519",
+  "sha256": "SHA256:TzxOr6w8i8G5YJoBHW/b3SKvlMR3buJPgFQt6XZcqLM",
+  "trust": "First-use pin for user-provided rental endpoint; no existing host key replaced",
+  "read_only_recovery_inspection": true
+}

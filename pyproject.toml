@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arc2-global"
+version = "0.1.0"
+description = "ARC2-Global: Procrustes initialization with two tangent ridge updates"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
+
+[project.optional-dependencies]
+qa = ["threadpoolctl>=3"]
+baselines = ["scikit-learn>=1.3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

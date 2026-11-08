@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "Continuity check against preserved pre-revision sections; only one deleted uncited panel-description sentence is normalized. This is not a new bibliography/primary-source review.",
+  "keys": 18,
+  "changed_contexts": [],
+  "removed_uncited_sentence": "Our comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup}).",
+  "before_hashes": {
+    "abstract.tex": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4",
+    "conclusion.tex": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7",
+    "discussion.tex": "1377ab22f162082ec6d781a3ae507a0136cb7cb29755b38eec64d45895cffe16",
+    "experimental-setup.tex": "1bf27966f8891811c7e0c3054142b995b5396ec37aa4fc1ffd6435a968d45fb3",
+    "introduction.tex": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f",
+    "method.tex": "ceb05f7d9303ea5560b646fe9b25f81f7a6b772557fb7b747ae89190d98530fc",
+    "related-work.tex": "c2908b8289c07214f10cf548acbd4436da970fdd0a487b62669b115ab492167b",
+    "results.tex": "e186bd66a1d63dd5ac6c6516337589591aaac68a86cbd756933f785b58d40480"
+  },
+  "current_hashes": {
+    "abstract.tex": "24a2314dcfb5090ba76b4cb7dfea95c8c941eacff94881e451edea6374d3043a",
+    "conclusion.tex": "7f9bb6b3a071a3fa02338249c0b949dc1bf8b2d9863c4c23644a65e80def4caf",
+    "discussion.tex": "4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71",
+    "experimental-setup.tex": "4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215",
+    "introduction.tex": "4785d051ea8266d7907b2ca55417a2ae6744c9ea01e9adb90ef0db1fd34a6f5f",
+    "method.tex": "2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b",
+    "related-work.tex": "ff5a1ac26f3ca8eb9865f99fec92e3e5b185756c3d67fcae2b048f6654594f44",
+    "results.tex": "9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d"
+  }
+}

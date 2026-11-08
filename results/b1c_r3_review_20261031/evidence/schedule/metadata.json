@@ -1,0 +1,83 @@
+{
+  "status": "B1C_R3_SCORED_STOP_FOR_D1",
+  "stage": "B1c-R3",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "lock_path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+  "lock_sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+  "restored_root": "/network-volume/arc2_recovery_20261030/restored",
+  "started_unix": 1793331993.300809,
+  "jobs": [
+    {
+      "stage": "smoke",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_stage.py",
+        "--stage",
+        "smoke",
+        "--output",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347",
+        "--code-commit",
+        "61f73171b1869a186648aadd88f1b6f81a61376b",
+        "--lock",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+        "--restored-root",
+        "/network-volume/arc2_recovery_20261030/restored"
+      ],
+      "started_unix": 1793331993.305209,
+      "pid": 2794,
+      "returncode": 0,
+      "ended_unix": 1793332050.041277,
+      "receipt_path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347/metadata.json",
+      "receipt_sha256": "325f195ce05b140f4e0714a8c3655f0de6560bae2c96ecb87e222ee6011ef3ec"
+    },
+    {
+      "stage": "full",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_stage.py",
+        "--stage",
+        "full",
+        "--output",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347",
+        "--code-commit",
+        "61f73171b1869a186648aadd88f1b6f81a61376b",
+        "--smoke",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347",
+        "--lock",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+        "--restored-root",
+        "/network-volume/arc2_recovery_20261030/restored"
+      ],
+      "started_unix": 1793332050.0560582,
+      "pid": 2997,
+      "returncode": 0,
+      "ended_unix": 1793425196.4110816,
+      "receipt_path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/metadata.json",
+      "receipt_sha256": "28409dbc690cfdcd1f9e018dfef091c2d2e89a0f6b3f7dde2b25b75241a3efd1"
+    },
+    {
+      "stage": "score",
+      "argv": [
+        "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+        "-u",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_score.py",
+        "--lock",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+        "--run",
+        "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347"
+      ],
+      "started_unix": 1793425196.4200373,
+      "pid": 238597,
+      "returncode": 0,
+      "ended_unix": 1793425515.2841725,
+      "receipt_path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/scoring/completed.json",
+      "receipt_sha256": "1b641652575437399f9621c0bf580f774419fa9b1d03a5c8be7ae908cd034591"
+    }
+  ],
+  "TREC_access": false,
+  "next_scientific_phase_auto_launch": false,
+  "ended_unix": 1793425515.2966766,
+  "next_action": "Retrieve/verify complete DEV results, report and ARIS final D1; STOP before B2"
+}

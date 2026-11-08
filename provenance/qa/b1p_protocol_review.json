@@ -1,0 +1,41 @@
+{
+  "skill": "aris:research-review",
+  "reviewer_agent": "/root/b1p_protocol_review",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "B1-P pre-run readiness only, no claim audit",
+  "rounds": [
+    {
+      "round": 1,
+      "decision": "80newcellsjustified; preserve converter selected-step refit and seededfloor1/8split; exactblockedneighbors beforefull"
+    },
+    {
+      "round": 2,
+      "source_review": "training/model/sampling/Adam match historical; stage timing and actual sklearn/BLAS identities required",
+      "resolved": true
+    },
+    {
+      "round": 3,
+      "verdict": "PASS for commit and smoke",
+      "locked_sources": 18,
+      "packaged_git_blob_hashes": 85,
+      "frozen_primary_unchanged": true,
+      "counterparts_and_allpaid_schema": "44reused+80new=124sealed",
+      "contrasts": 32,
+      "runtime_condition": "smoke must pass"
+    },
+    {
+      "round": 4,
+      "scope": "R1 after synthetic blocked-neighbor near-tie failure",
+      "verdict": "PASS for commit/repeat smoke",
+      "source_hashes_verified": 19,
+      "packaged_git_blobs_verified": 85,
+      "repair": "original fullfloat32 score GEMM; rowwise exact stable top-k",
+      "training_and_primary_unchanged": true
+    }
+  ],
+  "new_qrel_reads": 0,
+  "new_scientific_runs": 0
+}

@@ -1,0 +1,8 @@
+{
+  "status": "B1G_MINI_COMPLETE_STOP",
+  "checked_unix": 1793108764.647021,
+  "active_owned_b1g_processes": [],
+  "metadata_status": "B1G_FULL_PASS",
+  "execution_paid_targets_retained": true,
+  "next": "B1-G finished; no new experiment"
+}

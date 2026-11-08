@@ -1,0 +1,12 @@
+{
+  "built_at_utc": "2026-11-01T19:06:39.489302+00:00",
+  "pages": 16,
+  "page_limit": 16,
+  "within_page_limit": true,
+  "pdf_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+  "output": "ARC2_Global_DASFAA2027_final.pdf",
+  "engine": "pdflatex",
+  "anonymous_authors": true,
+  "build_directory": "build/latex_20261101T190636609897",
+  "review_status": "draft; see review artifacts for actual review status"
+}

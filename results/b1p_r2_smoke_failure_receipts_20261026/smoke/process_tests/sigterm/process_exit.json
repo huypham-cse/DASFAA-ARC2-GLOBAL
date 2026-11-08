@@ -1,0 +1,19 @@
+{
+  "status": "EXITED",
+  "started_utc": "2026-10-26T08:48:44.654160+00:00",
+  "request_sha256": null,
+  "argv": [
+    "/root/arc2_p3h_20261020/venv/bin/python",
+    "-c",
+    "import os,signal;os.kill(os.getpid(),signal.SIGTERM)"
+  ],
+  "cgroup_memory_events_before": "low 0\nhigh 0\nmax 2791521\noom 0\noom_kill 0\n",
+  "pid": 3254607,
+  "returncode": -15,
+  "signal_number": 15,
+  "signal_name": "SIGTERM",
+  "ended_utc": "2026-10-26T08:48:44.739512+00:00",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cgroup_memory_events_after": "low 0\nhigh 0\nmax 2791521\noom 0\noom_kill 0\n"
+}

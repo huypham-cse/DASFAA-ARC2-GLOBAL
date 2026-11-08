@@ -1,0 +1,21 @@
+{
+  "key": "schonemann1966procrustes",
+  "bib_entry": "@article{schonemann1966procrustes,\n  author = {Sch{\\\"o}nemann, Peter H.},\n  title = {A Generalized Solution of the Orthogonal Procrustes Problem},\n  journal = {Psychometrika},\n  volume = {31},\n  number = {1},\n  pages = {1--10},\n  year = {1966},\n  doi = {10.1007/bf02289451},\n}",
+  "contexts": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 21,
+      "text": "\\paragraph{Geometric alignment and refinement.}\nOrthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\\cite{schonemann1966procrustes}.\nRecent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\\cite{maystre2025procrustes}.\nUnpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\\cite{dar2025mini}.\nThus, linear translation, Procrustes initialization, and refinement are all established ingredients.\nARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.\nBoth corrections are folded into one affine coefficient matrix, followed by row normalization at application time.\nThis differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps."
+    }
+  ],
+  "primary_source_record": {
+    "key": "schonemann1966procrustes",
+    "source_file": "citation_sources/schonemann1966procrustes_metadata.txt",
+    "metadata_url": "https://doi.org/10.1007/BF02289451",
+    "verification": "publisher-export",
+    "sha256": "fef3c5b40f0f0593c6a073a4dce576b745ff5b0c5cf6efae998320d35d67bfd3",
+    "metadata_type": "article",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

@@ -1,0 +1,10 @@
+{
+  "stage": "NEURAL_FIT",
+  "cells": 0,
+  "total": 124,
+  "pair": "synthetic",
+  "seed": 17,
+  "regime": "allpaid28819",
+  "method": "simplelinear_official_final50_mlp5",
+  "worker": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker"
+}

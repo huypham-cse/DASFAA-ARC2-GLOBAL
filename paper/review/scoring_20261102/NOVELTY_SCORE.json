@@ -1,0 +1,311 @@
+{
+  "assessment_date": "2026-11-02",
+  "written_utc": "2026-11-01T19:34:57.850677+00:00",
+  "reviewer": {
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "delegation": false,
+    "status": "same-family provisional"
+  },
+  "score": 6,
+  "scale_max": 10,
+  "verdict": "PROCEED",
+  "clears_check": true,
+  "rubric_anchor": "5 = clear neighbors with defensible delta; 1-3 reserved for named published duplicate",
+  "technical_delta": "Exactly two recomputed raw-norm-scaled destination tangent targets are fitted by affine ridge around the current centered-Procrustes map and accumulated into one normalized document adapter for native destination queries and anchor-inclusive replacement.",
+  "rationale": "A concrete incremental composition and scoped empirical finding remain after removing established translation, cosine geometry, affine algebra and mixed-gallery ingredients. No inspected named publication contains the exact update; close GCPA conceptual overlap requires citation and narrower positioning, not abandonment.",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Two norm-scaled tangent ridge corrections to centered rectangular Procrustes with current-map prior",
+      "kind": "specific composition of established ingredients",
+      "assessment": "Main defensible method delta",
+      "closest": [
+        "gcpa",
+        "hmoe",
+        "robproc"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "One affine inference map plus normalization; native destination queries",
+      "kind": "known affine algebra / inference consequence",
+      "assessment": "Useful but not an independent fundamental novelty",
+      "closest": [
+        "a2m_la2m",
+        "converter",
+        "drift"
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "Anchor-inclusive paid document accounting and staged true-vector replacement",
+      "kind": "workflow setting and evaluation design",
+      "assessment": "Established migration setting; careful inclusive accounting",
+      "closest": [
+        "fastfill",
+        "slerp",
+        "hmoe"
+      ]
+    },
+    {
+      "id": "C4",
+      "claim": "Development second-step benefit, held E5 gains against evaluated Converter/ridge, descriptive quality-exposure points",
+      "kind": "empirical finding",
+      "assessment": "Potentially useful scoped contribution; no held superiority over Procrustes; raw results not re-audited here",
+      "closest": [
+        "procrustes_bounds",
+        "converter",
+        "hmoe"
+      ]
+    },
+    {
+      "id": "C5",
+      "claim": "Replacement effects differ by encoder; all-paid fitting helps MiniLM differently from E5",
+      "kind": "empirical instance of known hazard",
+      "assessment": "New scoped measurements, not first discovery of mixed-gallery degradation",
+      "closest": [
+        "fastfill",
+        "slerp"
+      ]
+    }
+  ],
+  "duplicate_demonstrated": false,
+  "named_duplicate": null,
+  "missing_citations": [
+    "gcpa"
+  ],
+  "strongest_rejection": "GCPA already corrects directional mismatch after Procrustes while retaining geometry; HMoE controls residual directions and FastFill handles proxy replacement. ARC2 may be seen as a narrow linear cosine-optimization composition with a development-selected step count and no held Procrustes win.",
+  "smallest_response": "Cite published GCPA and compare targets, coefficient prior, finite solves and inference explicitly; frame contribution as this computation plus scoped findings. Do not claim first angular refinement/mixed migration or superiority to unevaluated methods.",
+  "new_experiment_required_for_positioning_fix": false,
+  "blindness": {
+    "old_local_scores_read": false,
+    "old_local_review_opinions_read": false,
+    "operational_and_search_briefing_read": true,
+    "current_manuscript_narrative_read": true,
+    "incidental_external_exposure": "Search results included third-party summaries/review snippets (Pith/Moonlight/alphaXiv and aggregators) about adjacent papers; these were not used as technical evidence. Perfect blindness is not claimed."
+  },
+  "search": {
+    "cutoff": "2026-11-02",
+    "recent_window_start": "2026-05-02",
+    "parent_search_file": "LITERATURE_SEARCH.json",
+    "parent_queries": [
+      [
+        "\"embedding translation\" \"tangent\" ridge Procrustes",
+        "\"embedding alignment\" \"directional residual\" 2025 2026",
+        "\"cosine\" \"ridge\" \"Procrustes\" embedding refinement"
+      ],
+      [
+        "2026 embedding model migration document translation mixed index partial backfill anchors",
+        "\"embedding converter\" \"vector database\" model upgrade adapter 2025 2026",
+        "\"partial backfilling\" embedding compatible model update"
+      ],
+      [
+        "\"embedding translation\" \"principal\" \"experts\" 2026",
+        "\"Procrustes\" iterative angular correction embedding mapping 2025 2026",
+        "\"cosine\" affine residual mapping embedding interoperability 2026"
+      ]
+    ],
+    "additional_queries": [
+      "Integrating Vector Databases across Embedding Models arxiv",
+      "Generalizable and Composable Multi-Model Embedding Translation arxiv",
+      "RobProc Procrustes",
+      "embedding alignment tangent ridge correction Procrustes 2026 May June July August September October",
+      "Integrating Vector Databases pdf Yang Cao",
+      "cosine tangent ridge Procrustes alignment",
+      "embedding migration 2026 October",
+      "embedding alignment directional 2026 September",
+      "site:arxiv.org embedding migration 2026 after:2026-05-02 before:2026-11-03",
+      "site:arxiv.org Procrustes tangent alignment after:2026-05-02 before:2026-11-03",
+      "site:arxiv.org embedding translation after:2026-05-02 before:2026-11-03",
+      "Robust Procrustes Groenen 2005 algorithm",
+      "Multi-Way Representation Alignment ICML 2026",
+      "An Improved Majorization Algorithm for Robust Procrustes Analysis pdf",
+      "Integrating Vector Databases across Embedding Models site:ed.ac.uk",
+      "Vector Linking via Cross-Model Local Isometric Consistency",
+      "Metric Algebra Embedding-Independence in Vector Databases"
+    ],
+    "exhaustive_global_proof": false,
+    "limitations": [
+      "Finite targeted search, noisy results; not an enumeration of every 2025-2026 venue",
+      "No authenticated Scholar/Semantic Scholar database access",
+      "ACM and institutional A2M PDFs returned 403; LA2M technical check uses pinned author code",
+      "Metric Algebra full text and cutoff publication status unresolved",
+      "RobProc 2005 equation-level access incomplete",
+      "Some HTML requests timed out; HMoE/GCPA official PDFs inspected with in-memory download and pypdf",
+      "No experiments or raw-result audit performed"
+    ]
+  },
+  "sources": [
+    {
+      "id": "gcpa",
+      "title": "Multi-Way Representation Alignment",
+      "primary_url": "https://proceedings.mlr.press/v306/achara26a.html",
+      "full_text_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/achara26a/achara26a.pdf",
+      "latest_arxiv_url": "https://arxiv.org/html/2602.06205v2",
+      "version": "ICML 2026 final, PMLR 306:310-331; arXiv v2 2026-07-04",
+      "inspected": "Published PDF section 3.4 and Appendix D; arXiv v2 equations 5, 8, 10-14",
+      "published_pdf_sha256": "75a0e06fec9bb08754dd75cb33148a60cc91d5176f918383a8609e369f826012",
+      "status": "Full method verified in published PDF and latest arXiv v2",
+      "comparison": {
+        "target": "Multi-view consensus versus ARC2 fixed destination anchors",
+        "regularization": "Angular output trust hinge versus ARC2 current-coefficient ridge",
+        "parameterization": "Shared residual MLP versus ARC2 affine corrections",
+        "supervision": "Matched sample identities across M >= 3 spaces versus ARC2 paired documents",
+        "direction": "Into shared universe / optional back projection versus ARC2 old documents to destination",
+        "inference": "Nonlinear residual corrector versus ARC2 one affine map plus normalization"
+      },
+      "finding": "Missing close citation; not demonstrated duplication"
+    },
+    {
+      "id": "hmoe",
+      "title": "Generalizable and Composable Multi-Model Embedding Translation",
+      "primary_url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "full_text_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf",
+      "version": "ICML 2026 final, PMLR 306:144275-144302, 28 pages",
+      "inspected": "Sections 2.1, 3, 4.1-4.2; target-PCA directional residual penalties",
+      "status": "Official proceedings PDF downloaded in memory after web parser content-type failure",
+      "comparison": "Paired translation, SELU backbone and LoRA experts with hierarchical routing; target PCA residual channels differ from current-prediction tangent ridge targets"
+    },
+    {
+      "id": "converter",
+      "title": "Embedding-Converter: A Unified Framework for Cross-Model Embedding Transformation",
+      "primary_url": "https://aclanthology.org/2025.acl-long.1237/",
+      "full_text_url": "https://aclanthology.org/2025.acl-long.1237.pdf",
+      "version": "ACL 2025 final proceedings, 19 pages",
+      "inspected": "Sections 3.1-3.3, equations 1-4",
+      "status": "Full method inspected",
+      "comparison": "Paired document translation with regression and global/local similarity losses, chiefly SELU MLP; same broad direction and supervision, different finite correction computation"
+    },
+    {
+      "id": "a2m_la2m",
+      "title": "Integrating Vector Databases across Embedding Models",
+      "primary_url": "https://doi.org/10.1145/3769803",
+      "institutional_url": "https://www.research.ed.ac.uk/en/publications/integrating-vector-databases-across-embedding-models/",
+      "code_url": "https://github.com/DBgroup-Edinburgh/embedding-translation/blob/5e62baf1544264847ce3d8feeabd1ded6499b064/src/embedding_translation/mapper/la2m/strategy.py",
+      "version": "PACMMOD 3(6), 2025 / SIGMOD 2026; author code revision 5e62baf1544264847ce3d8feeabd1ded6499b064",
+      "inspected": "Institutional record; author code _fit, _transform, _apply_local_mapping",
+      "status": "Publisher and institutional PDF returned HTTP 403; final paper equations not fully audited",
+      "comparison": "Local Procrustes maps, cluster routing and global fallback; established geometric translation rather than ARC2 global tangent ridge correction"
+    },
+    {
+      "id": "drift",
+      "title": "Drift-Adapter: A Practical Approach to Near Zero-Downtime Embedding Model Upgrades in Vector Databases",
+      "primary_url": "https://aclanthology.org/2025.emnlp-main.805/",
+      "full_text_url": "https://aclanthology.org/2025.emnlp-main.805.pdf",
+      "version": "EMNLP 2025 final proceedings, 12 pages",
+      "inspected": "Section 3 parameterizations; section 4 training and Appendix A.2",
+      "status": "Full method inspected",
+      "comparison": "Paired query-to-legacy Procrustes/low-rank affine/residual adapters rather than document-to-destination finite tangent corrections"
+    },
+    {
+      "id": "fastfill",
+      "title": "FastFill: Efficient Compatible Model Update",
+      "primary_url": "https://arxiv.org/abs/2303.04766",
+      "full_text_url": "https://arxiv.org/pdf/2303.04766",
+      "version": "arXiv v1 2023-03-08 / ICLR 2023",
+      "inspected": "Sections 2, 4.1-4.2; equations 3-5",
+      "status": "Full method inspected using web PDF after direct Python certificate error",
+      "comparison": "Same proxy replacement setting; MLP feature alignment plus classifier-based cluster supervision and uncertainty ordering, different from paired-only tangent ridge"
+    },
+    {
+      "id": "mini",
+      "title": "mini-vec2vec: Scaling Universal Geometry Alignment with Linear Transformations",
+      "primary_url": "https://arxiv.org/abs/2510.02348",
+      "full_text_url": "https://arxiv.org/html/2510.02348v4",
+      "version": "Latest arXiv v4, 2026-02-17",
+      "inspected": "Sections 3.2-3.4, Refine-1 and Refine-2",
+      "status": "Latest arXiv version and method inspected",
+      "comparison": "Pseudo-pair matching/clustering and orthogonal refitting with smoothing; known-pair tangent regression is distinct"
+    },
+    {
+      "id": "procrustes_bounds",
+      "title": "When Embedding Models Meet: Procrustes Bounds and Applications",
+      "primary_url": "https://arxiv.org/abs/2510.13406",
+      "full_text_url": "https://arxiv.org/html/2510.13406v1",
+      "version": "Latest arXiv record v1, 2025-10-15",
+      "inspected": "Procrustes formulation; section 4.2 and Appendix B.2",
+      "status": "Latest arXiv version inspected; no later publisher version established",
+      "comparison": "Orthogonal interoperability and judged text retrieval established; ARC2 contributes unconstrained finite correction, not approximate-isometry bounds"
+    },
+    {
+      "id": "slerp",
+      "title": "Spherical Interpolation for Backward-Compatible Multimodal Representations",
+      "primary_url": "https://arxiv.org/abs/2609.39836",
+      "full_text_url": "https://arxiv.org/html/2609.39836v1",
+      "version": "Latest arXiv v1, 2026-09-30; record reports NeurIPS 2026 acceptance",
+      "inspected": "Section 3; Appendices C, O-P, including partial-gallery-backfill comparison",
+      "status": "Versioned HTML fetched after unversioned timeout",
+      "comparison": "Old and aligned-new query endpoint interpolation with both endpoint encodings; ARC2 learns a destination-document affine map"
+    },
+    {
+      "id": "robproc",
+      "title": "An improved majorization algorithm for Robust Procrustes analysis",
+      "primary_url": "https://doi.org/10.1007/3-540-27373-5_18",
+      "institutional_url": "https://pure.eur.nl/en/publications/an-improved-majorization-algorithm-for-robust-procrustes-analysis-3/",
+      "precursor_url": "https://repub.eur.nl/pub/1700",
+      "version": "Published chapter 2005; 2003 weighted-majorization precursor",
+      "inspected": "Primary institutional abstract; precursor landing page and full-text availability; SHELM search lead",
+      "status": "2005 equations not inspected; precursor PDF follow-up timed out",
+      "comparison": "Robust/outlier-controlled iterative Procrustes is established; insufficient access for a full equation-level identity claim"
+    },
+    {
+      "id": "vector_linking",
+      "title": "Vector Linking via Cross-Model Local Isometric Consistency",
+      "primary_url": "https://arxiv.org/abs/2605.31100",
+      "full_text_url": "https://arxiv.org/html/2605.31100v1",
+      "version": "Latest arXiv v1 2026-05-29; record reports ICML 2026 acceptance",
+      "inspected": "Problem formulation and geometric hashing / bootstrap overview; section 3-4 headings and method summary",
+      "status": "Primary full text opened; not an exhaustive paper audit",
+      "comparison": "Recovering unknown correspondences from anchor-distance hashes, an adjacent task rather than supervised tangent correction"
+    },
+    {
+      "id": "metric_algebra",
+      "title": "Metric Algebra: Embedding-Independence in Vector Databases",
+      "primary_url": "https://homepages.inf.ed.ac.uk/ycao/pub-topic.html",
+      "publisher_url": "https://doi.org/10.1145/3837117",
+      "version": "Author listing says SIGMOD 2027; cutoff-valid full-text version not established",
+      "inspected": "Primary author publication listing only",
+      "status": "ACM returned HTTP 403; unresolved lead, not technical evidence of overlap"
+    }
+  ],
+  "input_hashes_sha256": {
+    "paper/main.tex": "704d831a3f56001486627c701512c0a03b7dcaba6ee1c5939418898f25cbd747",
+    "paper/sections/abstract.tex": "24a2314dcfb5090ba76b4cb7dfea95c8c941eacff94881e451edea6374d3043a",
+    "paper/sections/conclusion.tex": "7f9bb6b3a071a3fa02338249c0b949dc1bf8b2d9863c4c23644a65e80def4caf",
+    "paper/sections/discussion.tex": "4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71",
+    "paper/sections/experimental-setup.tex": "4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215",
+    "paper/sections/introduction.tex": "4785d051ea8266d7907b2ca55417a2ae6744c9ea01e9adb90ef0db1fd34a6f5f",
+    "paper/sections/method.tex": "2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b",
+    "paper/sections/related-work.tex": "ff5a1ac26f3ca8eb9865f99fec92e3e5b185756c3d67fcae2b048f6654594f44",
+    "paper/sections/results.tex": "9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d",
+    "paper/references.bib": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+    "paper/ARC2_Global_DASFAA2027_final.pdf": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "paper/review/scoring_20261102/LITERATURE_SEARCH.json": "2110d68978bc42142a841a04a2360a8e9af8906fb4ca2af737103b72c899bf70",
+    "paper/review/scoring_20261102/REQUEST_NOVELTY.md": "cc593f34a49084461643d2d9ca743179be04519545ce2fc765ec81beadfe25ce"
+  },
+  "repository_head": "03186c3ed222414ed5e93529352125d46c4521bd",
+  "inputs_read": [
+    "paper/main.tex",
+    "paper/sections/*.tex",
+    "paper/references.bib",
+    "paper/ARC2_Global_DASFAA2027_final.pdf (16 pages)",
+    "src/arc2_global/model.py",
+    "src/arc2_global/numerics.py",
+    "src/arc2_global/solver_backend.py",
+    "paper/review/scoring_20261102/REQUEST_NOVELTY.md",
+    "paper/review/scoring_20261102/LITERATURE_SEARCH.json"
+  ],
+  "actions": {
+    "manuscript_changes": false,
+    "algorithm_changes": false,
+    "scientific_runs": false,
+    "reports_written": [
+      "NOVELTY_SCORE.md",
+      "NOVELTY_SCORE.json"
+    ]
+  }
+}

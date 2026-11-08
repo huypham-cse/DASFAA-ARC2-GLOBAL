@@ -1,0 +1,11 @@
+{
+  "commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "commit_time": "2026-10-31T13:45:08+07:00",
+  "lock_blob_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "protocol_path": "protocols/B2_TREC_COVID_CONFIRMATION_20261031.md",
+  "protocol_blob_sha256": "109847050cd77317eee118f459e8a6e696572eb8181d46e24b9dd0752d5827c2",
+  "pinned_protocol_sha256": "109847050cd77317eee118f459e8a6e696572eb8181d46e24b9dd0752d5827c2",
+  "first_smoke_start": "2026-10-31T06:49:54.676239+00:00",
+  "first_full_start": "2026-10-31T07:28:49.999057+00:00",
+  "operations": "git show -s --format=%cI COMMIT; git show COMMIT:configs/b2_lock.json; git show COMMIT:protocols/B2_TREC_COVID_CONFIRMATION_20261031.md; hashes only, no experiment executed"
+}

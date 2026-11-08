@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-29T12:37:41.790659+00:00",
+  "host": "103.73.232.225",
+  "port": 52194,
+  "ssh_status": "TCP connect TimeoutError before authentication",
+  "local_ssh_config_verified": {
+    "hostname": "103.73.232.225",
+    "port": 52194,
+    "user": "root"
+  },
+  "cpu_gpu_load": "unavailable because endpoint unreachable",
+  "scientific_jobs_started": false,
+  "no_inference_of_reset_or_deletion": true
+}

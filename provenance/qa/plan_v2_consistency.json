@@ -1,0 +1,22 @@
+{
+  "scope": "documentation consistency/arithmetic only; not scientific execution or independent audit",
+  "status": "PASS",
+  "checks": {
+    "main_partial": 900,
+    "main_references": 20,
+    "mechanism_extra": 360,
+    "all_paid_extra": 60,
+    "independent_contrasts": 30,
+    "dev_main": 736,
+    "independent_rankings": 184,
+    "gram_gib_at_28819_pairs": 6.187966175377369,
+    "main_total": 920,
+    "max_total": 1340,
+    "max_new": 1276,
+    "dev_total": 1156
+  },
+  "new_scientific_runs": 0,
+  "new_qrel_reads": 0,
+  "H100_accesses": 0,
+  "algorithm_changed": false
+}

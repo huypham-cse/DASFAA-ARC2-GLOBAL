@@ -1,0 +1,43 @@
+{
+  "status": "RELEASE_PRESENTATION_R3_COMPLETE",
+  "created_utc": "2026-11-01T03:25:51.160202+00:00",
+  "user_scope": "Rewrite the narrative/MD/claim inside release ZIP; foreground strongest supported positive results and concise contributions; manuscript unchanged.",
+  "archive": {
+    "status": "ARCHIVE_CONTENTS_VERIFIED",
+    "archive": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story.zip",
+    "bytes": 372032202,
+    "sha256": "46e511a935d2068e86c4c19532fe4ad7a0b5e00a36018452f78705bd889b7a3e",
+    "manifest_sha256": "4d3f2ef7113e9d9224297a7aa8dae3a6d6e3398cde7f32326847fb50d5bff60c",
+    "manifested_files_verified_inside_archive": 6258,
+    "archive_file_count": 6395,
+    "created_utc": "2026-11-01T03:24:21.214560+00:00"
+  },
+  "validation": {
+    "status": "PRESENTATION_VERIFIED_WITH_SCIENTIFIC_EVIDENCE_PRESERVED",
+    "release_revision": "supervisor-review-20261101-r3-paper-story",
+    "created_utc": "2026-11-01T03:23:42.616069+00:00",
+    "manifest_sha256": "4d3f2ef7113e9d9224297a7aa8dae3a6d6e3398cde7f32326847fb50d5bff60c",
+    "final_hashes_receipt": "checks/portable_verification_hashes_20261101T032308457055Z.json",
+    "presentation_claim_check": "checks/presentation_claims_20261101T031949158497Z.json",
+    "protected_scientific_files_unchanged": 6007,
+    "complete_R2_numerical_validation": "checks/packaging_attempts/FINAL_REVIEW_VALIDATION_r2.json",
+    "full_data_and_comparison_scope": "EVIDENCE_GUIDE.md",
+    "frozen_method": "arc2_global_tangent2_r1",
+    "manuscript_modified": false,
+    "new_scientific_experiment": false,
+    "new_external_semantic_verdict": false,
+    "note": "Editorial presentation only; quantitative highlights are bound to the original saved summaries and conditions. Existing complete comparison and review records remain available."
+  },
+  "changed_human_documents": [
+    "README.md",
+    "CLAIM_LOCK.md",
+    "RESEARCH_STORY.md",
+    "EVIDENCE_GUIDE.md",
+    "REPRODUCE.md",
+    "START_HERE.html"
+  ],
+  "scientific_files_verified_unchanged": 6007,
+  "previous_archives_preserved": true,
+  "numerical_framing": "Explicit DEV/prospective/allpaid/ablation conditions and saved family intervals; full comparisons linked through evidence guide. Parameter storage is a final-float32-map comparison, not total operational cost.",
+  "manuscript_files_unchanged": 20
+}

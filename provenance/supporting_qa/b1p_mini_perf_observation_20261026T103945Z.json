@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-10-26T17:39:41.550687+07:00",
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 51,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "pid": 18841,
+  "start": {
+    "cpu.max": "400000 100000\n",
+    "cpu.stat": "usage_usec 70230673208\nuser_usec 69709217016\nsystem_usec 521456191\nnr_periods 177727\nnr_throttled 174910\nthrottled_usec 544494503114\n",
+    "memory.current": "37000790016\n",
+    "memory.max": "64424509440\n",
+    "worker_cpu_ticks": 42278,
+    "monotonic": 7430481.810075087
+  },
+  "end": {
+    "cpu.max": "400000 100000\n",
+    "cpu.stat": "usage_usec 70270897264\nuser_usec 69749183585\nsystem_usec 521713679\nnr_periods 177828\nnr_throttled 175011\nthrottled_usec 544866516758\n",
+    "memory.current": "37000900608\n",
+    "memory.max": "64424509440\n",
+    "worker_cpu_ticks": 42383,
+    "monotonic": 7430491.900497379
+  },
+  "ticks_per_second": 100,
+  "worker_cpu_core_equivalents": 0.10405907400005471,
+  "selection_last": {
+    "cuda_reserved_bytes": 931135488,
+    "elapsed_seconds": 3283.498778730631,
+    "global": 0.0695406123995781,
+    "gradient_nonzero": true,
+    "gradient_norm": 0.0038663651794195175,
+    "gradients_finite": true,
+    "local": 0.08983875811100006,
+    "loss": 0.03816891089081764,
+    "observed_rss_bytes": 2126442496,
+    "own_cuda_allocated_bytes": 744842240,
+    "parameters_finite": true,
+    "regression": 0.022230975329875946,
+    "step": 18750,
+    "validation_mae": 0.02363342046737671
+  },
+  "selection_recent_seconds_per_update": 0.20004727860772983,
+  "process_table": "    PID    PPID COMMAND         %CPU   RSS\n   2700    1354 llama-server     370 9474072\n  18841   18702 python          12.5 2076616\n  22630    1995 python          12.1 108752\n  22608    1996 python          11.3 144940\n  22398   22395 python          10.6 103396\n  22401   22395 python          10.6 105832\n  22395   22338 python           0.8 132548\n   1354       1 ollama           0.5 38864\n   3412    2648 python3          0.3 59748\n   2648    2643 python3          0.2 82156\n  18702   17609 python           0.2 380236\n  22612   22568 python3          0.2 12160\n      1       0 sleep            0.0  1040\n     41       1 sshd             0.0  5456\n     43       1 sshd <defunct>   0.0     0\n     45       1 sshd <defunct>   0.0     0\n     48       1 bash <defunct>   0.0     0\n    366       1 sshd <defunct>   0.0     0\n    368       1 sshd <defunct>   0.0     0\n    788       1 bash <defunct>   0.0     0\n   1107       1 sshd <defunct>   0.0     0\n   1245       1 bash <defunct>   0.0     0\n   1353       1 bash <defunct>   0.0     0\n   1593       1 bash <defunct>   0.0     0\n   1735       1 bash <defunct>   0.0     0\n   1804       1 bash <defunct>   0.0     0\n   1850       1 bash             0.0  3196\n   1981    1850 python           0.0 167656\n   1995    1981 python           0.0 102896\n   1996    1981 python           0.0 102896\n   2513       1 bash <defunct>   0.0     0\n   2643       1 bash             0.0  3104\n   2644       1 python3          0.0 27940\n  12691       1 sshd <defunct>   0.0     0\n  15348       1 pytho <defunct>  0.0     0\n  15639       1 pytho <defunct>  0.0     0\n  16842       1 pytho <defunct>  0.0     0\n  17609       1 python           0.0 23384\n  19325       1 sshd <defunct>   0.0     0\n  19525       1 sshd <defunct>   0.0     0\n  22111      41 sshd             0.0  9744\n  22337       1 bash             0.0  1836\n  22338   22337 bash             0.0  3116\n  22397   22395 python           0.0 10772\n  22568      41 sshd             0.0  9800\n  22632  ",
+  "gpu_queries": {
+    "list": {
+      "returncode": 0,
+      "stdout": "GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-d4c3e79c-d772-80f8-27c9-1f2096171901)\n  MIG 2g.20gb     Device  0: (UUID: MIG-845e7614-1be1-5b0b-b712-bcd163b641f9)\n",
+      "stderr": ""
+    },
+    "util": {
+      "returncode": 0,
+      "stdout": "[N/A], [Insufficient Permissions], [Insufficient Permissions]\n",
+      "stderr": ""
+    },
+    "pmon": {
+      "returncode": 0,
+      "stdout": "# gpu         pid   type     sm    mem    enc    dec    jpg    ofa    command \n# Idx           #    C/G      %      %      %      %      %      %    name \n    0          -     -      -      -      -      -      -      -    -              \n",
+      "stderr": ""
+    }
+  }
+}

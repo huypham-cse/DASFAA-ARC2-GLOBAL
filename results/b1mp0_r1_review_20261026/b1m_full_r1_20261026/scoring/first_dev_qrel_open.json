@@ -1,0 +1,40 @@
+{
+  "first_dev_qrel_open": "2026-10-25T19:02:51.479261+00:00",
+  "ranking_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+  "lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+  "scorer_sha256": "f41f869a29c6fec816699452aa70bad21c8f417c3ae1657c3da833acfc9c520c",
+  "all_736_rankings_and_ids_verified": true,
+  "synthetic_checks": {
+    "status": "PASS",
+    "graded_ndcg": 0.7002755876478819,
+    "full_qrel_denominator_recall": 0.6666666666666666,
+    "zero_and_unjudged_queries": "zero",
+    "serialized_order": "unchanged"
+  },
+  "expected_qrel_sources": {
+    "NanoNQ": {
+      "format": "parquet",
+      "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoNQ/resolve/77540146379abf95df8326a3c5bb9eb21c7146c3/qrels/train-00000-of-00001.parquet",
+      "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+      "bytes": 2020
+    },
+    "NanoHotpotQA": {
+      "format": "parquet",
+      "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoHotpotQA/resolve/d79c0cdda980aba54842756770928035e1b61a51/qrels/train-00000-of-00001.parquet",
+      "sha256": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+      "bytes": 3424
+    },
+    "NanoFEVER": {
+      "format": "parquet",
+      "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoFEVER/resolve/a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8/qrels/train-00000-of-00001.parquet",
+      "sha256": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+      "bytes": 2730
+    },
+    "FiQA": {
+      "format": "tsv",
+      "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+    }
+  },
+  "exposure": "DEV only"
+}

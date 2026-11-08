@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Using Python 3.11.17 environment at: paper-P2/.venv\nResolved 7 packages in 1.19s\nPrepared 2 packages in 100ms\nInstalled 2 packages in 293ms\n + pydantic-settings==2.16.1\n + python-dotenv==1.2.4\n",
+  "scope": "missing official configuration import dependency; no method/source change"
+}

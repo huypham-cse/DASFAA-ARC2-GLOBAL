@@ -1,0 +1,51 @@
+{
+  "id": "TC1",
+  "status": "REMOTE_STATUS_UNCONFIRMED_SSH_TIMEOUT",
+  "utc_checked": "2026-11-02T01:08:40.240753+00:00",
+  "pre_run_commit": "07d0456cd276d6e34a60a85295d5126435bab93a",
+  "lock_sha256": "c48679786a8216e18fcdd61fe7cae366b7c9b0383c7a3da35293c1a10e78c30b",
+  "endpoint": {
+    "host": "103.73.232.201",
+    "port": 62161
+  },
+  "remote_project": "/network-volume/arc2_recovery_20261030/tangent_control_20261102/code_07d0456",
+  "remote_output": "/network-volume/arc2_recovery_20261030/tangent_control_20261102/tc1_r1_20261102",
+  "tmux_session": "arc2_tc1_20261102",
+  "last_observed": {
+    "campaign": "RUNNING",
+    "campaign_pid": 554726,
+    "synthetic": "SYNTHETIC_PASS",
+    "synthetic_elapsed_seconds": 7.968498168513179,
+    "smoke": "RUNNING",
+    "smoke_pid": 554743,
+    "smoke_started_utc": "2026-11-01T19:56:30.855982+00:00",
+    "full": "NOT_YET_OBSERVED",
+    "scoring": "NOT_YET_OBSERVED"
+  },
+  "launch_verified_payload_files": 24,
+  "cache_hashes_verified": 27,
+  "source_pins_verified": 17,
+  "later_observations": [
+    "Original SSH connection forcibly closed10054",
+    "Reconnect .201 timed out; TCP .201 and .225 timed out on repeat",
+    "Read-only .240 connection succeeds; separate host, no TC1/cache/project roots"
+  ],
+  "new_quality_results_available": false,
+  "experiment_failure_proven": false,
+  "job_termination_proven": false,
+  "duplicate_run_started": false,
+  "new_encoding_or_neural_training": false,
+  "paper_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+  "next_action": "Reconnect original .201 and read campaign/stage metadata, tmux/process identities and logs before any recovery or new launch. Never overwrite the unique run.",
+  "prepared_postrun_tool": "tools/report_tangent_control.py",
+  "local_feasibility": {
+    "RAM_total_GiB": 15.714714050292969,
+    "RAM_available_GiB_observed": 1.4872207641601562,
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "MiniLM_source_query_full_target_hashes_match": true,
+    "E5_complete_cache_established": false,
+    "local_scientific_run_started": false,
+    "needed": "Separate committed local protocol/runtime, memory-efficient sequential runner; only MiniLM input set established locally. Do not label it completion of both pairs."
+  }
+}

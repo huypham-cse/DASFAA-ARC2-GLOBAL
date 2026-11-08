@@ -1,0 +1,167 @@
+{
+  "status": "RESOLVED_FALSE_POSITIVES",
+  "reason": "Initial Windows-drive pattern also matched https URL suffixes. Pattern was corrected before finalization; final privacy scan passed. Original diagnostic matches retained below.",
+  "final_check": "build.json",
+  "initial_matches": [
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "line": 3,
+      "match": "s:/"
+    },
+    {
+      "file": "licenses/embedding-translation-Apache-2.0.txt",
+      "line": 3,
+      "match": "p:/"
+    },
+    {
+      "file": "licenses/embedding-translation-Apache-2.0.txt",
+      "line": 195,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 39,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 59,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 69,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 104,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 141,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 160,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 169,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/references.bib",
+      "line": 182,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/figures/dev_ablation.svg",
+      "line": 3,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_ablation.svg",
+      "line": 4,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_ablation.svg",
+      "line": 6,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_ablation.svg",
+      "line": 8,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_ablation.svg",
+      "line": 13,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/figures/dev_quality.svg",
+      "line": 3,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_quality.svg",
+      "line": 4,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_quality.svg",
+      "line": 6,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_quality.svg",
+      "line": 8,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/dev_quality.svg",
+      "line": 13,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/figures/mechanism.svg",
+      "line": 2,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/trec_quality.svg",
+      "line": 3,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/trec_quality.svg",
+      "line": 4,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/trec_quality.svg",
+      "line": 6,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/trec_quality.svg",
+      "line": 8,
+      "match": "p:/"
+    },
+    {
+      "file": "paper/figures/trec_quality.svg",
+      "line": 13,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 23,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 24,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 25,
+      "match": "s:/"
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 26,
+      "match": "s:/"
+    },
+    {
+      "file": "src/arc2_global/embedding_converter.py",
+      "line": 28,
+      "match": "s:/"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Reviewer did not complete a final semantic verdict. The account usage limit interrupted the agent after numerical auditing. Do not infer PASS/WARN from preliminary messages. Saved numeric checks are separate deterministic evidence.

@@ -1,0 +1,401 @@
+Post-Hoc Embedding Refinement with a Single Anchor Negative | Zenodo (https://zenodo.org/records/21540555)
+citeturn137search0 [wordlim: 200] Published: 3 months ago; Crawled: yesterday; Published July 24, 2026 | Version v1 ... Deployed retrieval systems increasingly serve text embeddings from ... This paper presents a post-hoc adaptation method, namely Feature-space Indexability by Embedding Refinement (FIBER), which trains a 4.2M-parameter residual adapter in seconds against one generic anchor negative, together with an admissibility test and a guarded deployment decision.
+Published July 24, 2026 | Version v1
+
+# Post-Hoc Embedding Refinement with a Single Anchor Negative
+
+### Authors/Creators
+
+  * Zhao, Dongfang^{1}
+
+[Button: Show affiliations ]
+
+  * 1. University of Washington
+
+## Description
+
+Deployed retrieval systems increasingly serve text embeddings from
+
+frozen language-model backbones that must be adapted to new domains with only a few hundred
+
+labeled query--document pairs, while remaining servable by standard, unmodified approximate nearest-neighbor (ANN) indexes. Existing supervised adapters import large-scale contrastive recipes, whose per-query negatives collapse the representation in this setting or require dataset-specific temperature tuning. Our central insight is that, with tiny supervision, negatives need not distinguish among queries to prevent collapse: a single fixed vector shared by all queries can provide the required counterforce. This paper presents a post-hoc adaptation method, namely Feature-space Indexability by Embedding Refinement (FIBER), which trains a 4.2M-parameter residual adapter in seconds against one generic anchor negative, together with an admissibility test and a guarded deployment decision. We prove a representation-level collapse barrier under any anchor, first-order geometry preservation for generic anchors in contrast to mean-aligned ones, and a persistent force from a fixed anchor that per-step resampling cancels in expectation. Experiments span six BEIR datasets,
+
+three embedding families, seven negative constructions, supervision
+
+from 25 to 600 labeled pairs, representation geometry, and two standard
+
+ANN families. FIBER delivers statistically
+
+significant held-out nDCG@10 gains of 6--59\% wherever the frozen
+
+embeddings leave measurable adaptation headroom; it retains at least
+
+86\% of frozen effective rank and improves recall@10 and served nDCG@10
+
+at fixed HNSW and IVF-Flat search budgets.
+
+## Files
+
+### 
+
+FIBER.pdf
+
+Preview
+
+### 
+
+Files (901.7 kB)
+
+Name  | Size  | 
+--- | --- | ---
+FIBER.pdf md5:d55b09e9e1281dc2a256e5b85d4e07c3  | 901.7 kB  | Preview Download
+--------------------------------------------------------------------------------
+Local Drift-Adapters · Jean Technologies (https://www.jeantechnologies.com/editorial/posts/local-drift-adapters)
+citeturn137search1 [wordlim: 200] Published: 9 months ago; Crawled: 3 weeks ago; Re-embedding a billion-document corpus to upgrade a model is prohibitively expensive. ... Paper ... Drift-Adapter [Vejendla 2025] offered a third path. ... On the hardest pair, K = 32 yields 2.6× the Recall@1 of the global affine baseline. ... Drift-Adapter: Embedding Migration without Re-embedding.
+
+# Local Drift-Adapters
+
+Re-embedding a billion-document corpus to upgrade a model is prohibitively expensive. A single global adapter fakes the upgrade for a fraction of the cost, but its uniform-drift assumption breaks on real corpora. Eight per-cluster adapters close 70% of the gap to oracle.
+
+Authors
+
+Jonathan Politzki
+
+Affiliations
+
+Jean Technologies
+
+Published
+
+February 2026
+
+Paper
+
+PDF
+
+Anyone running a production vector database faces the same dilemma every time a better embedding model comes out: re-embed the entire corpus at great cost, or stay on the older, weaker model. For an organization holding hundreds of millions of vectors, the re-embedding bill is high enough that the upgrade simply doesn't happen.
+
+Drift-Adapter [Vejendla 2025] offered a third path. Train a small linear map on a calibration set, apply it to every old embedding, get most of the new model's retrieval quality for orders of magnitude less compute. The catch is in the word every. A single global map assumes the transformation from old space to new space is the same everywhere: that scientific text and financial text and conversational text all drift in the same direction. --------------------------------------------------------------------------------
+vecski/research/Embedding translation feasibility study.md at main · looskis/vecski · GitHub (https://github.com/looskis/vecski/blob/main/research/Embedding%20translation%20feasibility%20study.md)
+citeturn137search2 [wordlim: 200] Crawled: 2 weeks ago; The table below collects every retrieval-metric result found for real text-embedding pairs. ... Drift-Adapter (EMNLP 2025)  | all-MiniLM-L6 → all-mpnet-base, 1M items  | New queries → old index  | Procrustes / low-rank affine r=64 / residual MLP, 20K pairs  | R@10 ratio to full re-embed: AG-News 0.974 / 0.983 / 0.992; DBpedia-14 0.968 / 0.979 / 0.990; Emotion 0.953 / 0.967 / 0.984; MRR 0.965 / 0.975 / 0.988 (AG-News) ... makltd123 (open source)  | paraphrase-MiniLM-L12 (384) → multilingual-e5-base (768), 1K Russian news docs  | Old docs → new space  | Ridge, Procrustes, MLP, kNN, relreps, listwise; 800 pairs  | overlap@5 with native ranking: old 0.494, ridge 0.585 (closes ~16–18% of gap); MRR 0.764 vs old model 0.787 on 2,200 docs ... Google's Embedding-Converter paper explicitly proposes that vendors ship converters alongside new models, yet no vendor does, and MongoDB/Voyage's docs state that "Voyage AI models aren't trained to preserve relevance across models," requiring re-embedding "even when dimensions and element types match" (MongoDB).
+## Query-side maps keep 99% of old recall; document-side converters close half the gap
+
+The empirical record for sentence-embedding models is thin but consistent, and the direction of translation is the variable that matters most. The table below collects every retrieval-metric result found for real text-embedding pairs.
+
+Study  | Pair  | Direction  | Method, pairs  | Result
+--- | --- | --- | --- | ---
+Drift-Adapter (EMNLP 2025)  | all-MiniLM-L6 → all-mpnet-base, 1M items  | New queries → old index  | Procrustes / low-rank affine r=64 / residual MLP, 20K pairs  | R@10 ratio to full re-embed: AG-News 0.974 / 0.983 / 0.992; DBpedia-14 0.968 / 0.979 / 0.990; Emotion 0.953 / 0.967 / 0.984; MRR 0.965 / 0.975 / 0.988 (AG-News)
+Drift-Adapter  | GloVe-300d → MPNet-768d  | Same  | Same + diagonal scaling  | 0.587 / 0.632 / 0.715 (misaligned 0.213)
+Drift-Adapter  | CLIP ViT-B → ViT-L/14, LAION 1M  | Same  | Same  | 0.942 / 0.961 / 0.978
+Embedding-Converter (ACL 2025)  | gecko003 → gecko004, 13 BEIR  | Old docs → new space, native new queries  | 4-layer MLP ~35M params, L1 + global + local losses, millions of passages  | nDCG@10 source 0.5067 / converted 0.5362 / target 0.5609 (54% of gap)
+--------------------------------------------------------------------------------
+Quick and Reliable Document Alignment via TF/IDF-weighted Cosine Distance - University of Edinburgh Research Explorer (https://www.research.ed.ac.uk/en/publications/quick-and-reliable-document-alignment-via-tfidf-weighted-cosine-d/)
+citeturn137search3 [wordlim: 200] Published: 10.2 years ago; Crawled: last month; We show that a very simple distance metric, namely Cosine distance of tf/idf weighted document vectors provides a quick and reliable way to align documents. ... Buck, C & Koehn, P 2016, Quick and Reliable Document Alignment via TF/IDF-weighted Cosine Distance. in Proceedings of the First Conference on Machine Translation, Volume 2: Shared Task Papers.
+
+# Quick and Reliable Document Alignment via TF/IDF-weighted Cosine Distance
+
+  * Christian Buck
+  * , Philipp Koehn
+
+  * Institute of Language, Cognition and Computation
+  * School of Informatics
+  * Language, Interaction, and Robotics
+
+Research output: Chapter in Book/Report/Conference proceeding › Conference contribution
+
+## Abstract
+
+This work describes our submission to the WMT16 Bilingual Document Alignment task. We show that a very simple distance metric, namely Cosine distance of tf/idf weighted document vectors provides a quick and reliable way to align documents. We compare many possible variants for constructing the document vectors. We also introduce a greedy algorithm that runs quicker and performs better in practice than the optimal solution to bipartite graph matching. Our approach shows competitive performance and can be improved even further through combination with URL based pair matching.
+
+Original language  | English
+Title of host publication  | Proceedings of the First Conference on Machine Translation, Volume 2: Shared Task Papers
+--------------------------------------------------------------------------------
+Embedding Adapters | Chroma (https://www.trychroma.com/research/embedding-adapters)
+citeturn137search4 [wordlim: 200] Published: 2.4 years ago; Crawled: 2 weeks ago; In this work we find that training an adapter applied to just the query embedding, from relatively few labeled query-document pairs (as few as 1,500), produces an improvement in retrieval accuracy over the pre-trained embedding model alone of up to 70%. ...       note = {Accessed on July 8, 2024} ... These embedded representations are learned through neural networks, optimized to capture the essential features and relationships within the data. ... The embedding model we use, all-MiniLM-L6-v2, is trained on English text and consequently performs relatively poorly on SpanishPassageRetrievalS2S, a Spanish language benchmark.
+
+Chroma Technical Report
+
+May 29, 2024
+
+# Embedding Adapters
+
+* * *
+
+Suvansh Sanjeev
+
+Anton Troynikov
+
+Retrieval accuracy is an important determinant of AI application performance. However, many approaches to improving retrieval accuracy require large labeled corpora, which are often not available to application developers. Additionally, many of these approaches require re-computing the entire set of embeddings.
+
+In this work we demonstrate that applying a linear transform, trained from relatively few labeled datapoints, to just the query embedding, produces a significant improvement in retrieval accuracy across many domains, including across languages.
+
+Image: Embedding AdaptersNormalized discounted cumulative gain (NDCG), CQADupstackEnglishRetrieval. A simple query-only linear adapter produces an up to 70% improvement.
+
+## —Table of Contents
+
+  * Introduction
+  * Related Work
+  * Method
+  * Results
+  * Discussion
+--------------------------------------------------------------------------------
+Beyond Adapter Retrieval: Latent Geometry-Preserving Composition via Sparse Task Projection | Proceedings of the AAAI Conference on Artificial Intelligence (https://ojs.aaai.org/index.php/AAAI/article/view/39400)
+citeturn137search5 [wordlim: 200] Published: 7 months ago; Crawled: 5 months ago; # Beyond Adapter Retrieval: Latent Geometry-Preserving Composition via Sparse Task Projection ... 2026-03-14
+
+## DOI:
+
+https://doi.org/10.1609/aaai.v40i27.39400
+
+## Abstract
+
+Recent advances in parameter-efficient transfer learning have demonstrated the utility of composing LoRA adapters from libraries of pretrained modules. However, most existing approaches rely on simple retrieval heuristics or uniform averaging, which overlook the latent structure of task relationships in representation space. We propose a new framework for adapter reuse that moves beyond retrieval, formulating adapter composition as a geometry-aware sparse reconstruction problem. Specifically, we represent each task by a latent prototype vector derived from the base model’s encoder and aim to approximate the target task prototype as a sparse linear combination of retrieved reference prototypes, under an L1-regularized optimization objective. The resulting combination weights are then used to blend the corresponding LoRA adapters, yielding a composite adapter tailored to the target task. This formulation not only preserves the local geometric structure of the task representation manifold, but also promotes interpretability and efficient reuse by selecting a minimal set of relevant adapters. We demonstrate the effectiveness of our approach across multiple domains—including medical image segmentation, medical report generation and image synthesis. Our results highlight the benefit of coupling retrieval with latent geometry-aware optimization for improved zero-shot generalization.
+
+## Downloads
+
+  * PDF
+  * Video/Poster/Slides
+
+## Published
+
+2026-03-14
+
+## How to Cite
+
+Jin, P., Shu, P., Song, S., Kim, S., Xiao, Q., Chen, C., … Li, Q. (2026). Beyond Adapter Retrieval: Latent Geometry-Preserving Composition via Sparse Task Projection. Proceedings of the AAAI Conference on Artificial Intelligence, 40(27), 22417–22425. https://doi.org/10.1609/aaai.v40i27.39400
+
+## Issue
+
+Vol. 40 No. 27: AAAI-26 Technical Tracks 27
+
+## Section
+
+AAAI Technical Track on Machine Learning IV--------------------------------------------------------------------------------
+Parameter-efficient transfer for CLIP-based text-to-person retrieval - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0923596526001219)
+citeturn137search6 [wordlim: 200] Published: 2 months ago; Crawled: last month; Date: September 2026 ... We design a dual-stream adapter for CLIP-based person retrieval. ... The early TBPR methods [3] relied mainly on global matching strategies, projecting image and text features into a shared embedding space through cross-modal matching losses.
+
+## Signal Processing: Image Communication
+
+Date: September 2026
+
+Article: 117598
+
+Volume: Volume 147
+
+View accessibility information
+
+## Published by: Elsevier
+
+Research article
+
+Get rights and content
+
+# Parameter-efficient transfer for CLIP-based text-to-person retrieval
+
+Author links open overlay panel Hai Min, Guanghui Zhan, Chunxiao Fan, Yang Zhao, Wei Jia
+
+10.1016/j.image.2026.117598
+
+## Highlights
+
+  * •
+
+We design a dual-stream adapter for CLIP-based person retrieval.
+
+  * •
+
+We propose a hybrid mask strategy to improve retrieval robustness.
+
+  * •
+
+Our method achieves excellent results on multiple person retrieval datasets.
+
+## Abstract
+
+Text-to-image person retrieval aims to find the most relevant pedestrian image from a gallery given a natural language description. Although pretrained models like CLIP offer strong cross-modal alignment, full fine-tuning is computationally expensive and susceptible to overfitting. We present a parameter-efficient framework that combines a lightweight adapter with hybrid masking-based regularization. --------------------------------------------------------------------------------
+Beyond Fine-Tuning: Procrustes Alignment of Multilingual Embeddings for Low-Resource Cross-Lingual Retrieval - LREC 2026 | LREC Proceedings (https://lrec.elra.info/lrec2026-ws-sigul-23)
+citeturn137search7 [wordlim: 200] Published: 6 months ago; Crawled: last month; LREC 2026 workshop
+
+# Beyond Fine-Tuning: Procrustes Alignment of Multilingual Embeddings for Low-Resource Cross-Lingual Retrieval ... We utilize SQuAD and UQA datasets to learn a rotation matrix from a small set of sentence pairs and evaluate its effect across five multilingual embedding models (MiniLM, DistilUSE, E5-Base, LaBSE, and E5-Large) and perform geometric alignment, cross-lingual retrieval, and question-answering tasks on these models. ... Paper ID
+We utilize SQuAD and UQA datasets to learn a rotation matrix from a small set of sentence pairs and evaluate its effect across five multilingual embedding models (MiniLM, DistilUSE, E5-Base, LaBSE, and E5-Large) and perform geometric alignment, cross-lingual retrieval, and question-answering tasks on these models. We find that cosine distances between parallel pairs decrease by up to 38.67%, and retrieval accuracy improves by 12.49% points in Recall@1. We also analyze that models with better pre-trained cross-lingual representations exhibit a saturation effect, showing minimal retrieval change even as geometric tightening increases. Our error analysis reveals that morphologically complex queries and colloquial expressions remain challenging, indicating representational limitations beyond the scope of a linear transformation. These findings demonstrate that a computationally inexpensive alignment step can meaningfully improve cross-lingual retrieval for low-resource languages, with implications for retrieval-augmented generation (RAG) in resource-constrained settings.
+
+## Resources
+
+PDF
+
+## Details
+
+Paper ID
+    lrec2026-ws-sigul-23
+
+Pages
+    pp. 233-241
+
+DOI
+    10.63317/3bfgv7a4e3xh
+
+BibKey
+    faheem-etal-2026-beyond
+
+Editors
+    Atul Kr. Ojha, Sakriani Sakti, Claudia Soria, Maite Melero, John P. McCrae, Constantine Lignos, Chao-Hong Liu, German Rigau Claramunt, Georg Rehm
+
+Publisher
+    European Language Resources Association (ELRA)
+
+ISSN
+    N/A
+
+ISBN
+    N/A
+
+Workshop
+    Proceedings of the SIGUL 2026 Joint Workshop with ELE, EURALI, and DCLRL "Towards Inclusivity and Equality: Language Resources and Technologies for Under-Resourced and Endangered Languages
+
+Location
+    Palma, Mallorca, Spain
+
+Date
+    11 - 16 May 2026
+
+## Authors
+
+  * AF
+
+Ali Faheem
+
+  * MH
+
+Muhammad Hammad
+
+  * FU
+
+Faizad Ullah
+
+  * AH
+
+Ahmed Hassan
+
+  * FR
+
+Fezan Rasool
+
+  * AK
+
+Asim Karim--------------------------------------------------------------------------------
+GitHub - giuliapietrangeli/CrossModal-Latent-Alignment: Cross-modal alignment framework mapping RoBERTa text embeddings to DINOv2 vision latent space using diverse adapter architectures, Orthogonal Procrustes initialization, and contrastive learning. · GitHub (https://github.com/giuliapietrangeli/CrossModal-Latent-Alignment)
+citeturn137search8 [wordlim: 200] Crawled: 3 days ago; # Cross-Modal Latent Alignment: Text-to-Vision Embedding Mapping ... The primary objective is to map 1024-dimensional text embeddings (RoBERTa) into a 1536-dimensional target vision latent space (DINOv2).
+
+The framework implements multiple adapter architectures and optimization strategies to ensure high-fidelity mapping and robust retrieval performance. ... A residual neural network utilizing a bottleneck design (ratio D_in/4) to learn non-linear mappings while preserving gradient flow through shortcut connections. ... A streamlined linear layer that leverages Orthogonal Procrustes Analysis for weight initialization.
+
+# Cross-Modal Latent Alignment: Text-to-Vision Embedding Mapping
+
+This repository provides a comprehensive pipeline for aligning disparate latent spaces in cross-modal retrieval tasks. The primary objective is to map 1024-dimensional text embeddings (RoBERTa) into a 1536-dimensional target vision latent space (DINOv2).
+
+The framework implements multiple adapter architectures and optimization strategies to ensure high-fidelity mapping and robust retrieval performance.
+
+## Technical Methodology
+
+The project explores three distinct neural architectures designed to handle the complexity of cross-modal translation:
+
+### 1. RMLPA (Residual Bottleneck Adapter)
+
+A residual neural network utilizing a bottleneck design (ratio D_in/4) to learn non-linear mappings while preserving gradient flow through shortcut connections.
+
+### 2. LatentMapper (Linear Projection)
+
+A streamlined linear layer that leverages Orthogonal Procrustes Analysis for weight initialization. By computing the optimal rotation between source and target distributions on the training set, this model achieves rapid convergence and high baseline accuracy.
+
+### 3. Stitcher (Parallel Path Adapter)
+
+A hybrid architecture that fuses the outputs of a direct linear projection and a deep, non-linear MLP path, allowing the model to capture both global alignment and local semantic nuances.
+
+## Optimization and Loss Functions
+
+Models are trained using state-of-the-art loss functions tailored for retrieval:
+
+  * Symmetric InfoNCE Loss: Implemented with a learnable temperature parameter to maximize mutual information between modalities.
+  * Triplet Margin Loss: Utilized with in-batch hard negative mining (margin m=0.2) to refine the decision boundaries in the embedding space.
+
+--------------------------------------------------------------------------------
+Under review as a conference paper at ICLR 2026 (https://openreview.net/pdf/24f8bddd67dab851c39483cc5e197a7cd1cceb19.pdf)
+citeturn137search12 [wordlim: 200] Published: 11 months ago; Under review as a conference paper at ICLR 2026 ... Figure 3: Two-dimensional representation of the text embedding models reflecting approximate Procrustes distances (left). ... Figure 4 heatmaps for retrieval performance (nDCG@10) on three tasks, each with a top row “No alignment” and a bottom row “Procrustes alignment.”
+Procrustes alignment  
+Corpus model \ Query model
+
+| corpus model \ query model | nomic | bge-small | Qwen3-0.6B | MiniLM | sentence-t5 | LaBSE | rubert-tiny2 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| nomic | 82 | 72 | 68 | 48 | 51 | 19 | 13 |
+| bge-small | 75 | 76 | 65 | 53 | 44 | 18 | 9 |
+| Qwen3-0.6B | 56 | 45 | 58 | 40 | 28 | 19 | 5 |
+| MiniLM | 55 | 50 | 49 | 47 | 17 | 17 | 2 |
+| sentence-t5 | 64 | 57 | 47 | 27 | 41 | 18 | 8 |
+| LaBSE | 54 | 45 | 54 | 32 | 36 | 16 | 10 |
+| rubert-tiny2 | 46 | 33 | 31 | 17 | 24 | 9 | 9 |
+
+Figure 4: Retrieval performance (nDCG@10) for all query-document model combinations. Top: raw embeddings. Bottom: query embeddings aligned with orthogonal Procrustes. Diagonal entries correspond to the baseline case where the same model is used for both queries and documents.
+
+queries with the second model, and evaluate retrieval performance in two settings, a) using raw query embeddings (no alignment), and b) aligning query embeddings with Q* before retrieval. Figure 4 reports nDCG@10 for all 49 model pairs on the three tasks. Note that models are arranged in decreasing order of baseline performance. Without alignment, cross-model retrieval fails almost completely. After alignment, retrieval becomes feasible across models, and in two of the three tasks, upgrading to a stronger query model can yield substantial performance gains. In particular, the lower triangles in Figure 4 (bottom) show that replacing a weak query encoder with a stronger one, while keeping document embeddings fixed, can sometimes dramatically improve retrieval performance.
+
+Does the orthogonality constraint help? We compare Procrustes alignment with an unconstrained linear alignment matrix A* that minimizes the Frobenius error without enforcing orthogonality. By construction, the unconstrained solution cannot perform worse in terms of alignment error, as
+
+--------------------------------------------------------------------------------
+A budget per document — scout. (https://scout.jonno.nz/p/2026-09-12/explainer-flexcomp)
+citeturn137search9 [wordlim: 200] Published: last month; Crawled: last month; The ablation that proves it is reading the document A router that assigns the same mix of budgets at random — same proportions, ignoring the input — loses about 5 F1 against the learned head. ... The per-budget cache figures are the paper's measurements at batch 96; the volume and document length are yours. ... "FlexComp: One Model for Every Ratio in Context Compression" — Kaiyan Zhao, Zhongtao Miao, Akiko Aizawa and Yoshimasa Tsuruoka (2026).
+
+# A budget.
+Per document.
+
+Soft context compression replaces a retrieved document with a handful of memory tokens the frozen model reads instead of the text. The ratio is fixed when the compressor is trained and then applied to everything, so a dense contract and a boilerplate FAQ get the same budget, and every ratio you want to serve is another model to train. Draw the budget at random per example during fine-tuning and one model works at any ratio; then let a two-layer head read the document and pick its budget in a single pass. At serving batch sizes that halves the context cache and adds 47% to decoding throughput for under 0.7 points of answer quality, at 158–236× average compression.
+
+Zhao, Miao, Aizawa & Tsuruoka · 2026 · three compressor families on a multi-dataset question-answering suite · budgets of 1, 10 and 34 memory tokens
+
+one fixed budget — chosen at training time and applied to every input alike a budget per document — sampled during training, then chosen input by input
+
+01 · One budget for everything
+--------------------------------------------------------------------------------
+GitHub - PotentiallyARobot/EmbeddingAdapters: Universal embedding-space translation library. Plug-and-play adapters that map one embedding model’s vector space into another — locally or via API — enabling cross-model retrieval, routing, and interoperability. · GitHub (https://github.com/PotentiallyARobot/EmbeddingAdapters)
+citeturn137search10 [wordlim: 200] Crawled: 2 weeks ago;   * Compare behavior and retrieval quality to “ground-truth” target embeddings on a subset of your data ... The `embedding_adapters.quality` module provides utilities to estimate when a given source embedding looks in-distribution vs out-of-distribution (OOD) for a particular adapter. ...     # 6) Raw per-text scores (handy for debugging / programmatic use)
+--------------------------------------------------------------------------------
+Drift-Adapter: A Practical Approach to Near Zero-Downtime Embedding Model Upgrades in Vector Databases (https://arxiv.org/abs/2509.23471)
+citeturn137academia13 [wordlim: 200] Published: 1.1 years ago; Date: Sat Sep 27 19:47:19 2025 ... We systematically evaluate three adapter parameterizations: Orthogonal Procrustes, Low-Rank Affine, and a compact Residual MLP, trained on a small sample of paired old and new embeddings. Experiments on MTEB text corpora and a CLIP image model upgrade (1M items) show that Drift-Adapter recovers 95-99% of the retrieval recall (Recall@10, MRR) of a full re-embedding, adding less than 10 microseconds of query latency.
+--------------------------------------------------------------------------------
+UA-JEPA: Uncertainty-aware joint-embedding predictive learning for remote sensing image retrieval - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S0167865526002825)
+citeturn137search11 [wordlim: 200] Crawled: last week; Date: October 2026 ... # UA-JEPA: Uncertainty-aware joint-embedding predictive learning for remote sensing image retrieval
+--------------------------------------------------------------------------------
+where \(t_i^{(A)}, t_j^{(B)}\) are topics \(i\) and \(j\) from approaches A and B, \(\mathrm{cos}_{\mathrm{TF-IDF}}\) is a cosine similarity between TF–IDF vectors of the textual profiles, \(\mathrm{cos}_{\mathrm{Embedding}}\) is a cosine similarity between embedding vectors of the textual profiles. The factor 1/2 indicates equal weighting of the two components. (https://rrpedagogy.ru/journal/download/3879)
+citeturn137search14 [wordlim: 200] Crawled: 1.1 years ago; The semantic component \(\cos(A,B)\) is the mean cosine similarity between the L2-normalized embeddings of documents in the intersection \(C_A \cap C_B\) and the centroid of topic B (defined as the normalized mean of its document embeddings). ... At the document level, we identified three categories of alignment: topics were considered stable if the STM, GPT, and embedding-based assignments all converged on the same GPT-space label for a document; partially aligned topics were those where STM agreed with exactly one other model (either GPT or embedding-based), but not both; and method-specific topics were those related to documents for which no alignment was observed across the methods.
+--------------------------------------------------------------------------------
+CHAPTER 3. BACKGROUND                                                                 7 (https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-84.pdf)
+citeturn137search15 [wordlim: 200] Published: 2.5 years ago; ### 3.3 Cosine Similarity and Common Uses of Embedding Models ... Thus, we often use cosine similarity, which is bounded between 0 and 1 regardless of the vector length [70]. ... To decide which documents to retrieve, we usually calculate the cosine similarity between the prompt and every document in our vector database, selecting the top-n documents with the highest similarity scores [25].
+--------------------------------------------------------------------------------
+Proceedings of the Workshop on DeTermIt! Evaluating Text Difficulty in a Multilingual Context @ LREC-COLING 2024 (https://aclanthology.org/2024.determit-1.pdf)
+citeturn137search16 [wordlim: 200] Published: 2.5 years ago; Table 1 contains the evaluation results for the document alignment algorithm from Thompson and Koehn (2020) [the second approach], and Table 2 contains the results of document comparison with just cosine similarity between averaged sentence vectors [the first approach]. ... That is why we decided only to try the candidate re-scoring method (Thompson and Koehn, 2020) on the results obtained with these embedding models. ... The second step relies on search paths found in the previous step to recover all valid alignments with more than one sentence on each side of the bilingual text (ibid.). Bertalign outperforms Vecalign on the English-Chinese bilingual alignment (Liu and Zhu, 2022) and also on German-Easy German monolingual alignment (Stodden et al., 2023).
+--------------------------------------------------------------------------------
+Master’s Programme in School of Engineering (https://aaltodoc.aalto.fi/server/api/core/bitstreams/2b0eca35-6d23-47c8-b686-fbb51502c8ed/content)
+citeturn137search17 [wordlim: 200] Published: 6 months ago; It captures context and long-range dependencies, enabling accurate
+modeling of user intent and document meaning. ... To quantify similarity in continuous vector space, cosine similarity (see Eq. 1) is used ... values forcosine similarity range from -1 to 1. ... [53] This captures the semantic alignment between ... makes it robust to variations in text length and feature intensity. ... of training data and domain has a huge impact on the embedding properties. ... embedding model captures patterns of word usage in its training corpus.
+--------------------------------------------------------------------------------
+Post-hoc Vocabulary Expansion for Embedding Models via (https://openreview.net/pdf?id=y3NzqQAdLL)
+citeturn137search18 [wordlim: 200] Published: 9 months ago; function that jointly preserves cosine similarity and ... Alignment ... embeddings using cosine similarity to label embed- ... normalized to form the final sentence embedding.
+--------------------------------------------------------------------------------
+Multi-modal Knowledge Preserving Adapter for Embedding Backward Compatibility (https://arxiv.org/abs/2609.16875)
+citeturn137academia19 [wordlim: 200] Published: last month; Title: Multi-modal Knowledge Preserving Adapter for Embedding Backward Compatibility ... Date: Tue Sep 15 09:06:00 2026 ... Experiments demonstrate that our method achieves strong backward compatibility across diverse multi-modal benchmarks (image, text, visual document, and video retrieval tasks) and model types.
+--------------------------------------------------------------------------------
+Beyond the Unit Hypersphere: Embedding Magnitude in Contrastive Learning (https://arxiv.org/abs/2602.09229)
+citeturn137academia20 [wordlim: 200] Published: 8 months ago; Cosine similarity is prevalent in contrastive learning, yet it makes an implicit assumption: embedding magnitude is noise. ... We conduct a systematic study through a $2 \times 2$ ablation that independently controls input-side and output-side normalization across text and vision models. ... First, in text retrieval, output (document) magnitude strongly correlates with relevance (Cohen's $d$ up to 1.80), yielding the largest gains on reasoning-intensive tasks. ... Third, magnitude learning benefits asymmetric tasks (text retrieval, RAG) but harms symmetric tasks (STS, text-image alignment).
+--------------------------------------------------------------------------------
+Vector space model (https://en.wikipedia.org/wiki/Vector_space_model)
+citeturn137search21 [wordlim: 200] Crawled: last week; Relevance rankings of documents in a keyword search can be calculated, using the assumptions of document similarities theory, by comparing the deviation of angles between each document vector and the original query vector where the query is represented as a vector with same dimension as the vectors that represent the other documents. ... Using the cosine the similarity between document d_{j} and query q can be calculated as:
+--------------------------------------------------------------------------------
+A Dual Embedding Space Model for Document Ranking (https://arxiv.org/abs/1602.01137)
+citeturn137academia22 [wordlim: 200] Published: 10.8 years ago; Title: A Dual Embedding Space Model for Document Ranking ... A fundamental goal of search engines is to identify, given a query, documents that have relevant text. ... During ranking we map the query words into the input space and the document words into the output space, and compute a query-document relevance score by aggregating the cosine similarities across all the query-document word pairs.
+--------------------------------------------------------------------------------
+Embedding (machine learning) (https://en.wikipedia.org/wiki/Embedding_%28machine_learning%29)
+citeturn137search23 [wordlim: 200] Crawled: last month; The resulting embeddings vary by type, including word embeddings for text (e.g., Word2Vec), image embeddings for visual data, and knowledge graph embeddings for knowledge graphs, each tailored to tasks like natural language processing, computer vision, or recommendation systems. ...  Cosine Similarity | Cosine of angle ${\displaystyle \theta }$ between vectors | ${\displaystyle {\frac {a\cdot b}{|a||b|}}}$ | ${\displaystyle {\frac {\sum a_{n}b_{n}}{\sqrt {\left(\sum a_{n}^{2}\right)\left(\sum b_{n}^{2}\right)}}}}$ | Positive Correlation 
+ Dot Product | Cosine similarity multiplied by the lengths of both vectors | ${\displaystyle a\cdot b}$ | ${\displaystyle \sum a_{n}b_{n}}$ | Positive Correlation ... * Word embedding
+--------------------------------------------------------------------------------
+Cosine similarity (https://en.wikipedia.org/wiki/Cosine_similarity)
+citeturn137search24 [wordlim: 200] Crawled: 4 weeks ago; In some contexts, the component values of the vectors cannot be negative, in which case the cosine similarity is bounded in ${\displaystyle [0,1]}$.
+
+For example, in information retrieval and text mining, each word is assigned a different coordinate and a document is represented by the vector of the numbers of occurrences of each word in the document. ... Cosine similarity can be seen as a method of normalizing document length during comparison. ... To repair the triangle inequality property while maintaining the same ordering, one can convert to angular distance θ = arccos(S_{C}(A, B)) or Euclidean distance ${\textstyle \operatorname {dist} (\mathbf {A} ,\mathbf {B} )={\sqrt {2(1-S_{C}(A,B))}}=2\sin(\theta /2)}$.
+

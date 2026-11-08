@@ -1,0 +1,138 @@
+{
+  "searched_utc": "2026-11-01 19:29:08 UTC",
+  "core_claims": [
+    "Norm-scaled tangent-target ridge corrections to centered Procrustes; retained-current-map prior; finite two steps",
+    "Document-side mixed-index migration from paired anchors, inclusive paid budgets and replacement by true vectors",
+    "One affine inference map and quality-versus-exposure behavior rather than neural mapper training"
+  ],
+  "queries": [
+    [
+      "\"embedding translation\" \"tangent\" ridge Procrustes",
+      "\"embedding alignment\" \"directional residual\" 2025 2026",
+      "\"cosine\" \"ridge\" \"Procrustes\" embedding refinement"
+    ],
+    [
+      "2026 embedding model migration document translation mixed index partial backfill anchors",
+      "\"embedding converter\" \"vector database\" model upgrade adapter 2025 2026",
+      "\"partial backfilling\" embedding compatible model update"
+    ],
+    [
+      "\"embedding translation\" \"principal\" \"experts\" 2026",
+      "\"Procrustes\" iterative angular correction embedding mapping 2025 2026",
+      "\"cosine\" affine residual mapping embedding interoperability 2026"
+    ]
+  ],
+  "candidate_links": [
+    {
+      "claim_group": 0,
+      "candidates": [
+        {
+          "title": "Foundation Models for History Compression in",
+          "url": "https://openreview.net/references/pdf?id=QrVpGLzKR"
+        },
+        {
+          "title": "Foundation Models for History Compression in",
+          "url": "https://openreview.net/pdf?id=KmxQ3v7nMmd"
+        },
+        {
+          "title": "Similarity of Neural Network Models: A Survey of Functional and Representational Measures | ACM Computing Surveys",
+          "url": "https://doi.org/10.1145/3728458"
+        },
+        {
+          "title": "Toward Semantic History Compression",
+          "url": "https://openreview.net/pdf?id=97C6klf5shp"
+        },
+        {
+          "title": "Published as a conference paper at ICLR 2025",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/9edf04e9b128ed5085189205fc94e21f-Paper-Conference.pdf"
+        },
+        {
+          "title": "Toward Semantic History Compression",
+          "url": "https://openreview.net/references/pdf?id=_j5glNGXhn"
+        },
+        {
+          "title": "The 2026 Conference on Empirical Methods in Natural Language Processing - ACL Anthology",
+          "url": "https://aclanthology.org/events/emnlp-2026/"
+        }
+      ]
+    },
+    {
+      "claim_group": 1,
+      "candidates": [
+        {
+          "title": "FastFill: Efficient Compatible Model Update",
+          "url": "https://arxiv.org/abs/2303.04766"
+        },
+        {
+          "title": "Published as a conference paper at ICLR 2023FASTFILL: EFFICIENT COMPATIBLE MODEL UPDATEAli Farhadi",
+          "url": "https://openreview.net/pdf/8d20dc462785f41d1a42a73d5f251100169ec180.pdf"
+        },
+        {
+          "title": "Published as a conference paper at ICLR 2023",
+          "url": "https://openreview.net/pdf?id=rnRiiHw8Vy"
+        },
+        {
+          "title": "<visual_element id=\"e1\">",
+          "url": "https://openreview.net/pdf/8df7ddb53970301d9b830b45cd985e20a89ccfe8.pdf"
+        },
+        {
+          "title": "Enhancing Document-level Translation of Large Language Model via Translation Mixed-instructions",
+          "url": "https://arxiv.org/abs/2401.08088"
+        }
+      ]
+    },
+    {
+      "claim_group": 2,
+      "candidates": [
+        {
+          "title": "When Embedding Models Meet: Procrustes Bounds and Applications",
+          "url": "https://arxiv.org/abs/2510.13406"
+        },
+        {
+          "title": "Lost in Embedding: Recovering Information Loss in Dense Retrieval - ACL Anthology",
+          "url": "https://aclanthology.org/2026.findings-emnlp.2307/"
+        },
+        {
+          "title": "Under review as a conference paper at ICLR 2026",
+          "url": "https://openreview.net/pdf?id=uma6lC4lq9"
+        },
+        {
+          "title": "Differentiable Optimization of Similarity Scores Between Models and Brains",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9edf04e9b128ed5085189205fc94e21f-Abstract-Conference.html"
+        },
+        {
+          "title": "Spherical Interpolation for Backward-Compatible Multimodal Representations",
+          "url": "https://arxiv.org/abs/2609.39836"
+        },
+        {
+          "title": "Multi-Way Representation Alignment",
+          "url": "https://arxiv.org/abs/2602.06205"
+        },
+        {
+          "title": "To appear at the ICLR 2026 Workshop on Representational Alignment (Re-Align)",
+          "url": "https://openreview.net/pdf?id=isg32b6K1h"
+        },
+        {
+          "title": "Published in Transactions on Machine Learning Research (February/2026)",
+          "url": "https://openreview.net/pdf/9d2cf370b837ed3fcf45e06f2399861e95d76439.pdf"
+        },
+        {
+          "title": "COSINE: Compressive Network Embedding on Large-scale Information Networks",
+          "url": "https://arxiv.org/abs/1812.08972"
+        }
+      ]
+    }
+  ],
+  "priority_primary_sources": [
+    "https://proceedings.mlr.press/v306/yang26e.html",
+    "https://aclanthology.org/2025.acl-long.1237/",
+    "https://aclanthology.org/2025.emnlp-main.805/",
+    "https://doi.org/10.1145/3769803",
+    "https://arxiv.org/abs/2602.06205",
+    "https://arxiv.org/abs/2609.39836",
+    "https://arxiv.org/abs/2303.04766",
+    "https://arxiv.org/abs/2510.02348",
+    "https://arxiv.org/abs/2510.13406"
+  ],
+  "scope": "Search candidate discovery, not prior-review judgments. Reviewer must verify mechanism from primary text; no claim of exhaustive global novelty."
+}

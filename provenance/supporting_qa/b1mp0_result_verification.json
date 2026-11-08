@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "local synchronized rankings, input hashes, per-query means/CI arithmetic and saved P0 receipts; no qrels read; not claim audit",
+  "rankings": 736,
+  "synthetic_P0_cases": 31,
+  "real_P0_budget_checks": 120,
+  "frozen_ARC2_unchanged": true,
+  "backend_ranking_identity": true,
+  "raw_coefficients_vectors_and_synthetic_arrays": "retained on H100 with full manifest; omitted from compact local review bundle",
+  "next": "STOP before B1-P/B1-G/TREC/systems pending next user instruction"
+}

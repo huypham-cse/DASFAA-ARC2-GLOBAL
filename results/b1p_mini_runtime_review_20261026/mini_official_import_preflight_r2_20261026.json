@@ -1,0 +1,8 @@
+{
+  "install_returncode": 0,
+  "install_stderr": "Using Python 3.11.17 environment at: paper-P2/.venv\nResolved 3 packages in 1.29s\nDownloading pot (31.4MiB)\n Downloaded pot\nPrepared 1 package in 4.30s\nInstalled 1 package in 499ms\n + pot==0.9.7.post1\n",
+  "returncode": 0,
+  "stdout": "OFFICIAL_IMPORT_AND_DEFAULTS_PASS\n",
+  "stderr": "",
+  "no_fit_no_labels": true
+}

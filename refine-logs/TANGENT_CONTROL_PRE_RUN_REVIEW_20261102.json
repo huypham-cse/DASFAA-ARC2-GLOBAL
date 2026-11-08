@@ -1,0 +1,74 @@
+{
+    "schema_version":  1,
+    "review_id":  "tangent_control_pre_run_review_20261102",
+    "date":  "2026-11-02",
+    "verdict":  "PASS_TO_COMMIT_AND_SMOKE",
+    "review_type":  "static source review; same-family provisional",
+    "must_fix_remaining":  [
+
+                           ],
+    "lock_sha256":  "c48679786a8216e18fcdd61fe7cae366b7c9b0383c7a3da35293c1a10e78c30b",
+    "all_17_source_pins_match":  true,
+    "reviewed_source_sha256":  {
+                                   "protocols/FIQA_MATCHED_RESIDUAL_CONTROLS_20261102.md":  "5057e1f4c2b9110503acaab721ef6270967bde774428027456e32dbfd17b744c",
+                                   "tools/build_tangent_control_lock.py":  "7063d735137ff77a4bc129b349e50339f8dbb2e7e942635202a2619c082a4282",
+                                   "ops/tangent_control_run.py":  "1bb3bd91d4a9d4bae9329f39cb0fab56ccd74e38d086457bd10c4fd72b4ca069",
+                                   "ops/tangent_control_score.py":  "b038970005c57446928efe59a3212aa7cf421b774b7e9dfedbc58496eb8a0aaa",
+                                   "ops/tangent_control_campaign.py":  "1dd8ce79a0a48f5501f947aac3c3dfdb59116af05350612dcb7f466067e69f04",
+                                   "ops/b1m_score.py":  "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+                                   "src/arc2_global/__init__.py":  "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+                                   "src/arc2_global/baseline_adapters.py":  "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+                                   "src/arc2_global/diagnostics.py":  "0905e7c4cab1b0263b661f2d29677890080811e56218fbfcf0c81d2c14a18d9d",
+                                   "src/arc2_global/embedding_converter.py":  "1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+                                   "src/arc2_global/mechanism_ablation.py":  "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+                                   "src/arc2_global/model.py":  "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+                                   "src/arc2_global/numerics.py":  "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+                                   "src/arc2_global/procrustes.py":  "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+                                   "src/arc2_global/residual_ablation.py":  "e4fd831580c52420d661b0e9792a720a2fa134e49122dc168076d7d0135f90f2",
+                                   "src/arc2_global/retrieval.py":  "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+                                   "src/arc2_global/solver_backend.py":  "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887"
+                               },
+    "runtime_tests_executed":  false,
+    "scientific_runs_executed":  false,
+    "qrels_read_or_hashed":  false,
+    "remote_caches_verified_by_this_reviewer":  false,
+    "manuscript_changed":  false,
+    "agents_spawned":  false,
+    "checks":  {
+                   "target_equations":  "PASS_BY_INSPECTION",
+                   "current_map_prior_lambda10_two_steps":  "PASS_BY_INSPECTION",
+                   "frozen_tangent_arithmetic":  "PASS_BY_INSPECTION_RUNTIME_BITWISE_ASSERTIONS_REQUIRED",
+                   "paid75_to_paid50_scope":  "PASS_BY_INSPECTION",
+                   "forty_fresh_rows_B0_descriptive":  "PASS_BY_INSPECTION",
+                   "scorer_prelabel_identity_completeness_hash_gates":  "PASS_BY_INSPECTION",
+                   "five_seed_average_before_paired_query_bootstrap":  "PASS_BY_INSPECTION",
+                   "K4_20000_bootstrap_Bonferroni_quantiles":  "PASS_BY_INSPECTION",
+                   "synthetic_coverage":  "PASS_BY_INSPECTION_NOT_RUN",
+                   "no_op_preservation":  "PASS_BY_INSPECTION",
+                   "unique_outputs_and_failures":  "PASS_BY_INSPECTION"
+               },
+    "resolved_findings":  [
+                              "locked IDs SHA/size/type/uniqueness gate",
+                              "40 distinct ranking paths",
+                              "complete lock-derived input registry gate",
+                              "seal full stage, metadata lock and50pct budget gates",
+                              "integer unique in-range anchor/paid indices and cache shape/dtype",
+                              "original IDs byte copy prevents reserialization SHA drift"
+                          ],
+    "required_next_gates":  [
+                                "commit precise protocol/source/lock and record deployment identity",
+                                "matching deterministic synthetic PASS",
+                                "matching both-pair seed17 real smoke PASS",
+                                "all40full rankings sealed",
+                                "separate DEV scorer prelabel gates",
+                                "local raw per-query means/bootstrap verification and bounded report",
+                                "ARIS interpretation then STOP before manuscript/method/new-study changes"
+                            ],
+    "nonblocking_notes":  [
+                              "matched norm means prediction-norm factor r, not equal target length",
+                              "saved per-query/bootstrap arrays support final descriptive reporting",
+                              "static review cannot establish bitwise runtime parity or cache/label correctness",
+                              "FiQA development findings do not establish independent or population superiority"
+                          ],
+    "linked_markdown":  "TANGENT_CONTROL_PRE_RUN_REVIEW_20261102.md"
+}

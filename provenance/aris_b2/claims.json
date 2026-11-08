@@ -1,0 +1,32 @@
+[
+  {
+    "id": "B2_complete",
+    "value": "184",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  },
+  {
+    "id": "B2_status",
+    "value": "FINAL_SCORED",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  },
+  {
+    "id": "B2_queries",
+    "value": "50",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  },
+  {
+    "id": "B2_bootstrap",
+    "value": "20000",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  },
+  {
+    "id": "B2_Proc_E5_50_delta",
+    "value": "-0.01632154204848677",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  },
+  {
+    "id": "B2_Ridge_E5_25_delta",
+    "value": "0.2641805555881269",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  }
+]

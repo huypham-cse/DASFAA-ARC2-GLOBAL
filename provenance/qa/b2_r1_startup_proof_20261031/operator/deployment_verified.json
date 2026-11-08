@@ -1,0 +1,151 @@
+{
+  "status": "DEPLOYMENT_VERIFIED",
+  "utc": "2026-10-31T06:48:42.598629+00:00",
+  "repo": "/home/jovyan/arc2_b2_20261031/code_26feef1",
+  "commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "source_pins": 61,
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "sparse_exact_commit": true,
+  "logs": [
+    {
+      "argv": [
+        "git",
+        "init",
+        "-q"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "core.autocrlf",
+        "false"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "core.sparseCheckout",
+        "true"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "index-pack",
+        "--stdin"
+      ],
+      "returncode": 0,
+      "stdout": "pack\teb83b1616b944fb594d2e97ee16c81865a831a5b\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "remote.pre_run.promisor",
+        "true"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "remote.pre_run.url",
+        "https://invalid.local/no-implicit-fetch"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "extensions.partialClone",
+        "pre_run"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "core.repositoryformatversion",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "update-ref",
+        "refs/heads/b2",
+        "26feef1026bea610ec7f53d581c3c9064949d004"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "symbolic-ref",
+        "HEAD",
+        "refs/heads/b2"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "read-tree",
+        "-mu",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "26feef1026bea610ec7f53d581c3c9064949d004\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=no"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

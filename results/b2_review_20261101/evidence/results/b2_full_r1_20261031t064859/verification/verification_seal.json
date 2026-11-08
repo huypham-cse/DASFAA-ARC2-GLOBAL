@@ -1,0 +1,1857 @@
+{
+  "status": "ENDPOINTS_INDEPENDENTLY_VERIFIED",
+  "completed_utc": "2026-10-31T20:11:42.810083+00:00",
+  "ranking_seal_sha256": "08e82c19a2d1974edb094e520d0b1b6ac4e6138e3a717c5014d183669c7c25de",
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "qrels_opened": false,
+  "verified_cells": [
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": null,
+      "budget": "full",
+      "method": "full_x",
+      "endpoint_sha256": "4190636270624112c1f637f8d9416f4c616b5bf0ec6cbeef16ac02bfd2de4d36",
+      "ranking_sha256": "4bb6ada1c5f663b126bf252e1a34afddebd23ae80d45cb72af0d7a24e62ecce9",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": null,
+      "budget": "full",
+      "method": "full_y",
+      "endpoint_sha256": "2fe36842bbbf3669436c685ecdeb6732fe97302244cceb3b8533f3322e6895ff",
+      "ranking_sha256": "bf1155d6d8777dfb8f607858266fa6b0d5b9796afd3c365ea7ea6eb8191696ca",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "6d21939be340c0a4b00d16085d97dea003973c4e482c32043b305f4a351ba412",
+      "ranking_sha256": "8b251aebdd8f3c01f2b26e5089e5eca730801af0a61f55fcd612023d7161afde",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "76c3b058819ec398d4343b1a86ba27b98d9966cdb0113bae0181302feb605daf",
+      "ranking_sha256": "eba990edecf5cb5eef3409aa2351df976e0cde7bf6d0f1d0cc12f01616a8eca7",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "fe0b4310994e79ea25e1d40897ce1fa77921253b286f9cc607da956aff8e3a23",
+      "ranking_sha256": "8e5dc9a15e0d640f546f3ce39b96fe4a850382bcb1da184df6047c13f9470c70",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "f15160e704f392a5b1e51d339506a94b922d61496d0834822efb98bae12edaa6",
+      "ranking_sha256": "5ad146f8f9d7e79aa402e7d2ad41dbc04eb16329c97f41199ae2472a69250690",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "6faa9c6dfecfea5676b172786ca55153d315ada7a927b80092d90c790a4d5527",
+      "ranking_sha256": "ea20eaadc0de15c6eed0aaaf463e43f8889731686e7540e86bbdaa0e5e4f11de",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "a10f7b36b8b99a848aa9cc898eeebcb3fe39b08f896b1841d3701649cb5811f8",
+      "ranking_sha256": "8d95a778771d36a9d7e7cbc6b1b19f43f24ffe90f6ec74de3e9334384154149d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "17c45455d478da5ae5d4f72c36d25c3d51583c1b1038b18999a443709131f243",
+      "ranking_sha256": "475d880377402d429fc1cc8b83356a371736dba8e7f04d7a9370a8f49f5b10c7",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "324a3fa328d76988a633efe1a27a6e1ee6c3f4d588e4539013210d51355c8a92",
+      "ranking_sha256": "99ed151a252400a845bb6336e75c102a07ccfa0caf591e78927253e75e0f4297",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "f2517d2bef1922ef82058ad8d95dd6d8c5dba86e88c249a45cae392a99ad7d02",
+      "ranking_sha256": "9e29d67ffd11b4bb4818d78e3e596beb2c2682b0dbf53dbf738e286d6df0e846",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "55cf00f83190a250d29bd0b98c90487e5bdf5780e556666f9b0b28ed67f2bc6b",
+      "ranking_sha256": "cbfb0bfcd25d92dacb24bc6022af8e4a82ae955bda160cd5eb6ad76795373b33",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "1426f17716ea5a3f3f68853bd567b34f33de5e5b8a2b6086e1fa7e7fed5c1772",
+      "ranking_sha256": "0bc268ec210705412ac0e97407238618880f9e6147d548dd882216491163e83c",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "2e6738602f612053644481ca9b3d475f7600b5f1bc1e2f2d61781254870bbe8b",
+      "ranking_sha256": "9dff6ed5aa51cf071a17ec814945b2e4b5fd7eb64b0341c7d6529c36f8ab9626",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "627fc9e44901c20b4f615b92ca7042abec4c3fc344fcd0e77f482d47d65ab60a",
+      "ranking_sha256": "b265083fa3ed43c91c0b42e6f5c7be83c1e564ad6de84e2205009e712b4b0457",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "eb0d293548a40f706b134d14749d7cba2d1ed0f851aa57096a28729f4b4fd609",
+      "ranking_sha256": "454013da98f6fad722aac2c634e937f4445718bc258737c1d3ff92d4b79545b2",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "ea255e080433cdfe30332af247994076373ee7c9cf297dd87741df8c1a013cad",
+      "ranking_sha256": "c82a99f711a3f96e8885c7308f5b3b488ebb93fe3c1ddad91ec70b15350d969b",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "8fc74acd2250335e18ec4ad23ffd9d4bb9c9bfb5d27c99d77f01bd639a0de98e",
+      "ranking_sha256": "c87346d7fc594ff2ad770f6b739f0aa550155a8ad681b11975d5822a7e580e57",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "f48cae590c13623ae2462ed92077364117aed818dadf1e27fcb874e7c8bedf0a",
+      "ranking_sha256": "6405b115e86889673c86a4ce4dfb32fade0596593aa04846658f1dca200ba419",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "663ae4424be49a9aa3caaa08000eda98ca186fe7ea979167233cf79cc4e3eb21",
+      "ranking_sha256": "c833861022d1cc2673ddc5a8ca3cc0ded4a1fbfa10afade73be596aaf2fc2162",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "857df8c1f7aa7265d8f6cad2fe569dd75bd7eb7ad74f643477fb79d88091c7cc",
+      "ranking_sha256": "d58c50e7d7ade036cc774bad186f72547ca32e12db4fc92e318087272dfcf9f2",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "9c195e4d9777522ce79e1fb3f7a65e1f268cfcbd9d959ac071b95c2832506668",
+      "ranking_sha256": "41fe456630c836d3b231c208724267ab907fe7897fab8a6ed0523da153cb951c",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "1947afb4cb8d551738a93481756698ad98cbd78a5c0b09595cc25af2c3cdee35",
+      "ranking_sha256": "2534f99abbd077ab64d866cead5bc15c8f90ca39ead008816c9c878b94423014",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "fcb21f32234899b938303262b68c3951eb8348cb5e920aea6776faab0d0950bc",
+      "ranking_sha256": "291e9821ad55bdc156cdc35ee1301daeb6d1ac95444cae0f774c91cca3033513",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "04f0c730280115e0e6cd5965bf70ddaefa0ce67aaccac14723fc4ee9581ff5cb",
+      "ranking_sha256": "5da7fa29f18449de387e6c5c32ad280ded99b5afdc0d99d83186fcfd53a73aa4",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "b7a481deca90e8723414c7981973b17655880293327ef21823b6b69df0a21461",
+      "ranking_sha256": "89b3a326c7d1f82a086ffbaca03b60429669bfa1dfb42236da71f8ac022fa412",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "186e90dd2fd22d16ccc8d2ded753eeddb4199efc1155fecc22c1d6ce7a421a64",
+      "ranking_sha256": "176a4154e596728eddbb421ea3fc0c3a11bbf20e2fb4b98cbe3f7f487170e69e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "17f4f2f173eb2a276ed8a7dcc1a45712e3e41f3a13493961b08cc90120f4c12b",
+      "ranking_sha256": "c549bdf5a80e86f5bf1325a959031d238bf13d0771ea5842d15540f4c9ff1c48",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "6c23a72b12c6a392492c40a892bd6ce18c481a5b69e21732c7bef2449b23076d",
+      "ranking_sha256": "f35639fb3dc9aa82de05bcef08c07bd92d6f2d106dc94c0cbff9326144a2df75",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "98845850201e368ed8fa3a9dd9ba539d8cbe9de96f9bf3aa3b51fc0da670bfc3",
+      "ranking_sha256": "019e6d697c625b28583d2ad8801d6e5f5c9019f1940390f7aa3a28fe2c36bd6a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "378aa2b630e054c29ff5058bfdab19a8afcbd3eb3136bef929f2712c4c4f6586",
+      "ranking_sha256": "803d0e9e80a9fcf1ca35106c153a0387ad35d2e76192379e7350134801e98e16",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "b25177600fabe9144d4d92d1eca3ee5f431416bb075c464dea6be65536d75e83",
+      "ranking_sha256": "7b97aee7ba4a099608956cef9c670b8244e6d8f1de01d0ae65b249aa4d771f67",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "27645c1ba100430b64488b823bc4417dfd566ae28af2b1a1f93e7335990cd9bd",
+      "ranking_sha256": "5d9dfa1a6a27ef086b94d8a9280f9a2523c95d0f893f65a85306be9771671ed9",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "6f8856b1cf08861c45cd9f6f94c3659f36f1e5061589fda913f47d97d0c33d15",
+      "ranking_sha256": "c85f2e54eeb045924f16dceab73e36ef9a371bfa6aaded3ea47012feecac7b69",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "73e8aaa375eb830b89de0b71fff51fddec0f58f2caecefd88a2b0b97bd7dd2bc",
+      "ranking_sha256": "fd1c6489fb1cb8754d90a68d7458aaa4113c6982c21e0f0005f3d2a68dfd9e8a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "bb80d574623f7156543f7a5da4ccb3f27a4f2a98552baa89ba9b0d52b82dde73",
+      "ranking_sha256": "2ae1fe858916ca93d1336c7c998fe7e68d6d8ad3b3e5c1312463138f8fb26af5",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "ce378b5d2b6b19b154516424c9a9b787e97f3ba4c08ff5deb02236d45d7abb2e",
+      "ranking_sha256": "eee51f657d7eb93634d0b8366234ac7a5b34dca7d61c1c42409d00126766aeca",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "fd2ca584e0716584a05f8d08bdc4dbbdb2c7584d5b052401202e4ee17c5eb209",
+      "ranking_sha256": "050d300e1c6293410786172eb22701a1f0a4066402543e4bacf2b5cde0e15136",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "dce0acc0a591a28a650c0215c6ce06e1b53751ea4551a2abbef379301b0e12ea",
+      "ranking_sha256": "a5a0225552548f7fc8dffab8e0eba10550e114edf189df6b83bdbf86ca7eb41c",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "ea707bf83e26d814df2ccf1af51995cb456a5a6b42046419fe0495acf2679c2a",
+      "ranking_sha256": "e3221e36696661841dfc17a9fe3fb0230bef6cb14f47ddc970b6142540a65f02",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "8d54a92083876b43af955eb47cff04eafa85c2a25d40eed4948fa66131f20401",
+      "ranking_sha256": "b05da3ee1898d097ab61a95b051a44f1610aeeba92d36d6b2bae89ec3fa84e8a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "be0794a26ef1af557ad743a35aa08d7e19e727d552ad0c2303807607b5c74139",
+      "ranking_sha256": "4864e35df610f0ac39c1577a815a9e6be162ca0599171333844edbf91797a7c5",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "781d6e1a8ae4dad1375f28d0a93dc99b6c972ccbab0e5819a1d374593160d58b",
+      "ranking_sha256": "60674bf70b632f3827c126ef4bfde9944b5c21ef1492c6c9ec44e05423cb7a33",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "ad07fc8e1481b96306f677876463e6d38ab0379668d226a009c2c2ab05da928f",
+      "ranking_sha256": "e1d744544a2ecdf8cbf1afca6795a2a7a163d015d6e1293499d49a94a3d9b368",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "d9f4145e89cd17ef1a18df21bfdfc3c649e930c48de2aab2059ab262d0deb59a",
+      "ranking_sha256": "ba9061f8144180babf86453d011b7eec922f407380b43ac9cff92743d5aa943d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "d143bb155cf93d0edd288dea29ed33b233655df954bb66a4f225917ced18d1dd",
+      "ranking_sha256": "5c8c87b63594a58b635af0ac04ac0c8cc7172e1752d8967b90c830d581deda5d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "6316a9ed5c9bba8f39531096e1d609883055f34354a6ee78230aed2d21fcc67d",
+      "ranking_sha256": "dad6a2d71dd9635d0aca86e21ac8ff174e9151be129624cdb1c711657794bdca",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "1efd9e3548807eff6b15e239bb27208b2dd5a8fc88a1aa558f0aa1bad223f91c",
+      "ranking_sha256": "d52dffde51efb03ad75c2f9c0d3be70237931bf91d9f577a1afc61171b9a4854",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "207288092bd404390b3a41796dd956e4c792fa8dadd487d959975ed73e4abe26",
+      "ranking_sha256": "442ca87a550d7c614c086ecaeb5c7025ae90f153f3e62c75dcefdcbc3d19d709",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "47b3d6e8d29211584aafd5e5d034e5091a6e05413aa65e6e4673c03f8660d14e",
+      "ranking_sha256": "82b5d6a1afb5b83f3f148843928ccc87c8b12e86f44c41c75cebeef01b66a354",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "4ac8e5f9755225609f5ea6dbf71ea77ef8d8898a492472ffebc39f9dbbc81997",
+      "ranking_sha256": "a3f8d5f066ae86e6c2390c38ba1c79b23db6708b80d35f362f7a4ef1ab185fbe",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "3d90d1d82adbb3970f2813f099a0475e64b2c13c0f82cfa392bd2ade41fba822",
+      "ranking_sha256": "e4b1f424ed5732251394598d9aeb5140d5cfcadb65ec331ff5fdb931376af40d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "ace9ad7b762ab5a953b3530cc6bf7b24f785701d47b1ce9e333836e2ab50c121",
+      "ranking_sha256": "cc026fbc2401eb47ff61cfb3b21fe3ef2d26ffa95b4547c4c52750799c255f98",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "7268168f8a6f3e98cce67a6648bac186ca89db3c0ec33e155cb04c33e69c4a00",
+      "ranking_sha256": "a47985d63b73127ad839f7126321395500920ad17b608a3f32ae42139878c4fb",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "16b285e6eadd5614286363a9e5d29903b41002c92b9d1f1ccb5a593439a93ac5",
+      "ranking_sha256": "580e2e91e9179a1a715ac0d2ca24a87ead85625e9a53b1c4c610da16c9fc9938",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "516fe6b51a33804a9247214613dfb11a71475a6e9ecc655ae714062e3817d67a",
+      "ranking_sha256": "8650ad5d55490303f27fd31c047e74caf7d9c81bb30bba8e54fc684c1ae214d6",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "dc79ed0a491cfbe39f98b7d87637ade351b78ca6af56827f40a8b3bff358ba89",
+      "ranking_sha256": "2a87f5432610f63f182ff9365d7a2c7c5d66e1f8a3a0a00153211025e3916647",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "64b1c299ea4a730ec14f78c0dc04efcf919d3ec66d498d3e29a7cb15e7662ff4",
+      "ranking_sha256": "940c5086ec519a6cf25d29a10259903ce968b654976afb7d7601153eda3652ee",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "67bd95ba7caf1c7f29eec1be08701daa9b39c7865ea213c9f58e995c23c0853f",
+      "ranking_sha256": "c9ccadf00e014b1e665865b62b2a8d4ed8ab737ac91095da82132fad96549dee",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "3b00fbf39efe79dde04a723b2af47e6cf63778eae852924d72e9c0e479dc1018",
+      "ranking_sha256": "4be0b92673b291020fac7ea3fecaee99714f6b9e409740436d6d57e1dee27232",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "ffdef3b5d3550cdd854a246af8f1960966567e9ca69752e1fddc142aede87a9f",
+      "ranking_sha256": "f8e2885ffb976fad5ffef7adb01cd57fd2e4c253bbb4785df82a1b93a18854d4",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "3e696d7ddf997a8f893a6bcad6f8cf1391feab08279bb12eca2c9ab2f5e85190",
+      "ranking_sha256": "5a7b02aa7e3218fba0d0f6b04b2a593032c6a8a4a7825f1edeba963f368146c3",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "ef2dc341e6aa7e970fd18e564454781d567217f74343421ee1d5005c5f8092ee",
+      "ranking_sha256": "6b03cef45b07d305b7b9e96d9b5f9a7771b4464d744d51807e2468d4994b9b93",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "ad3eb2dde94446e3c0ba3f4e69254f0196e938223be7f5149f02502097597a33",
+      "ranking_sha256": "4f4a99a0fd6873c1fd3400966fa5a2e631ba9326815dd63a04268299af515e09",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "9dec48132fcf7c93491c7479f78ee154094101203a7f09539e61e4be21cfb378",
+      "ranking_sha256": "0897e64102ca5b5abd76e2660c6b3fd200873aae6b31d6e87b7dd365e24715b9",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "0923631c1e392069914bafda9fb041dfd15c0e29423e1c2f4335162acb82588e",
+      "ranking_sha256": "f9895971a95db3cc3bb5757a76097eb12290f574b78c72cc3e37b50733af5ad5",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "e6b4fe996eb49710fc23df65a8715316cec62bc92b5dc004fc8244e4fc8294a5",
+      "ranking_sha256": "2e5c279b1d972b6890354759ccc01645d89364e008322f8d15a15831b1939049",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "1d1c1788e36bc40846df199e164ff2685936c0844fda89f2d33fddced57418d2",
+      "ranking_sha256": "cbccb46719a05e12fbfd4879a3fede8583f2096e2d8fe7160f47d42e02d3df93",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "6a995bf89db90f5bf608fddba7546aa92afdb7b8f00ac37375a831680c9f0365",
+      "ranking_sha256": "0aec9bfe90faec5dbed91e4bb7a828dde4b5243ce166000a3c531ec7a2b8ff34",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "0b9ab9edaff3c254ec92ad1d8c097c38ab0a571e5b14846c5206597c96ff7331",
+      "ranking_sha256": "e03c34bf5658b554a7b589487ab8f383b595e6536787fc2e29bdc5630b6c860a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "25c2bfe0dfb778a09cb5b40c1894517beaa9cb5a4996a757d96abca863882e58",
+      "ranking_sha256": "322066898c2cd347b825441bfb1e11aac7e2b6cb511c191ee93e23abc41bf256",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "c55f4773ddb21c040effef9ed55df383f18fdcb27f9c52c96db479637a8067f7",
+      "ranking_sha256": "194982f98af436f8499436f3504daa82708e84bc1b1bb650fb90818f44dbe7de",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "5d54947f8619702b5d7a5c4cb0bf7389a9e785814289e32be305a4455c5ea86e",
+      "ranking_sha256": "507fceb0921190f7bc8355686f9a1b4f29855eb0523fcfa7cb8cede1c1c30e66",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "a4dc5c9a537f07c255c15ddc6130af52ef7666ee02d5ee3c4c273f92b3f1b7cb",
+      "ranking_sha256": "d006c393a2fe0213cc02625f834f88e37c24ad9fdab96dd9ecdae1bd41a8c039",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "ba27a884905fc0afe3bfa09a1e1416ded143c2923a98eeb481d2edc5e789ec53",
+      "ranking_sha256": "fdbea331224dc825b7109de4a9896fee8353c744f54e30df88af76e61c8d4e5a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "7d374fb6a0b04e01efa176531c02844ad30ffc8adda1ec1bcfc7bb91a4218135",
+      "ranking_sha256": "d864b28d85ef8cc0a1262e7cdb950ea24dd5472eda2ad362ed085d2679d68b12",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "9b61cf3d3a63c1313f4cf10f48241ff60c012513ec36b119e473e305bdb8a8f2",
+      "ranking_sha256": "111cb1a81794e272abe380b6ee98f0b9013ae0f514a19dd9b8d180c5b6816197",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "617e2649023b4a36aa0ba7078a9504ad393cc5b9dbe2f53a8561fb6ffd507225",
+      "ranking_sha256": "6281250e9c2a442df426ae07104bb689bff58db89d66a4aa41aceb42931320ce",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "ccfc023ea861a5cd6c81eec7b6a5baa45f630d0de1047e9273cfe432c0d49936",
+      "ranking_sha256": "30946f0ba1cdbab3952239ea3737b841d8e340739f66c095898bfec0148780c0",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "fae9230cec417344d3a88b60d58e35d3034fa5c952dbdbd94b8a5bcc612f43c8",
+      "ranking_sha256": "dc54039088ac387df34130a8ae44dc2e458e8f495976b68d1df9a2852114880d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "6f0b9a79ee28c18ca0de0e775d1e25f40a75998a49ec44e482dbe454c924dd4e",
+      "ranking_sha256": "b741d833f2397570953a47841a3d39efc6ce793754336d569fe195f1705d88f9",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "e23c864620b51ef222b8bcdd9773d96bd039f1c5e952bae4d7a99ea77302b989",
+      "ranking_sha256": "25a48a5e926e234daf6328ba6a0c20d8b3ad2e8b3188e774b14c18b660ea2b94",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "a450cb83fb67b21adb812a96049a771d567db875d24204aa551fdf9a8eea2a06",
+      "ranking_sha256": "675f79e134438327890c908664a26749de9004eab3efbd876aa9a35262cf7527",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "65ac124d9f85fe9be559b7f8666bb728da97780d6dd51824f58218c47a390c52",
+      "ranking_sha256": "200c7f6e210f5fceeb9b15e5c4878bcad73078f6f37b4885fd96419f16f4d969",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "3779eac4732e4c1b45a621a137174d20794b99ab36d080ccd7b9489850e7e09c",
+      "ranking_sha256": "5dfea20d2da7b1e9e91970e50179da6c17aa8d2d26e896a81ec0d5db9e86e693",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "39a52d986eace3364bbca751d3883facc053ad232b87acdaf202d7913dc2b5d4",
+      "ranking_sha256": "b6730dff6906398586abe807097a93a99af2bfbca78cee60a809fc6030dfb7cf",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "fb8c81282305358a539eb7aa8eb7d6e96a47757fa63d7ed783ecf381e7a92574",
+      "ranking_sha256": "39117cf77bd5a3f17f286241bbf69b3654e1205e51c81f74c02ba40c2401418a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "1a046f02f8d7844791d90ace7182b334ec146e888d9d0c3f5ae542fe1d9c0d06",
+      "ranking_sha256": "46d92b0b1f8e4d004fd7ed168b90d95191a865fb64801478563a4e18fbb6c27b",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "667a3b0bb1b44effead57cb76c2a7e218a4cb655ef3d5865dfd6139b6c9b65d0",
+      "ranking_sha256": "71cfd448fa7e5a56c1266d5f05bb9b9de5b662d5c8c370ea94c3639ed82d03a5",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "a94bd4f9fdaf4c86fe5e578440081d525a088192fc2958fbdade761f137d7df9",
+      "ranking_sha256": "73fc294ef84beb9fda4199b6883cdd8d8a1961b9f60516526f1f3ff7ef357bec",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "1b778b8e294e7ccb61e8b48fde833687e81881b74f517a5c2a546a4bcc63a396",
+      "ranking_sha256": "0ae929fb3af8fc70a70e16ed4943ec522fde9fbe8fc4b3c3c65cdb26eb0af540",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "minilm_distilroberta",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "ed26e8dc354bbb9fb3bfbc5b613d11a0ce3e179d3e71f6f8c11770d144b8af7d",
+      "ranking_sha256": "2cc503d32ce10f0d8d620ddd3d175ddd41904a56515765c0334e8ec266cbdfbc",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": null,
+      "budget": "full",
+      "method": "full_x",
+      "endpoint_sha256": "88eb34f1afbf0b28ebe21997249c83de0b17d7b06aaa12da6aca50cfa11545fd",
+      "ranking_sha256": "4ea1fdaa8dc5dd0015591d52e7d949f1f9dc57d960ef1020636d0bbf6a7ce9d7",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": null,
+      "budget": "full",
+      "method": "full_y",
+      "endpoint_sha256": "9f224de5bbec92cbb5eec9acf0cba8ba9e5c93e932c553195c3a86e9ab621e40",
+      "ranking_sha256": "b88dec6522ae4fa529ad36fa8641ab485356df24db355f222b9c2da48c540779",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "32513a85aa4450113a4ac4a3866c8159db66d3e057c19ba8402da8fcc7f5cf33",
+      "ranking_sha256": "ce031cb8e4f43d76f382db3c7087c8c3a441393c765fb67ae48aac47b15d4e96",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "53a52a6b6698921e4a930aa2454699cd77764403a8a131ff44a6182ce819b9ac",
+      "ranking_sha256": "207b9d8461731da980df7581de38413eccf131c3f529c67665d23fe658f54c7b",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "36a286dbd5c9c9d6e046fbdb6c5ca135d820690897bb8c784f43e9f9fbccbf37",
+      "ranking_sha256": "64e6233793e6d5bba4e703c1eb7da6e6aa9b859429f68c8f8b5c306a4bd95c11",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "97b413a25bbce041988a13789ac0c7dc000d2a8b3c6434485c52dc4da56f741b",
+      "ranking_sha256": "0171271775c0a7257d49310d2a4f425d3b6d6b59cf397ffa07296b142342e645",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "c741083736ce77e5fda03c1a65b819506a3205a10f00017a432b918f3d67fcae",
+      "ranking_sha256": "3be40f3d40f2170d9a768769f3a8fcce82d7b70ea33123b12eebe7d44b83df0d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "475705a93551b8581a7ebb292bfccef618a2078ab9a68caa6b6daa6a46c73164",
+      "ranking_sha256": "b62669ee7f1a523e4154e7af03a8d3732fa723bd9e5464366bac2c5ba6a1604b",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "8339c7ae62d100dc6831684a28f2643f90096926b50b95ecab6d98ec985ef4d1",
+      "ranking_sha256": "4e2c1473c98d410cd456f1727ff2b54bdc64579bd1d7cd04f66cb0c83b2cc755",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "b9b00fda7396ff454dcd4a193ff399eb1a3fb71a7281ff20555335f736d9b633",
+      "ranking_sha256": "657ccd4baec29509c42c4543f34b4d5f3e0b0f2c716789718752cfc75453802d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "7096750c8f1dfa31f9a01feac73e0eaae9f89824b72e7dd7272fcd356b2f246a",
+      "ranking_sha256": "43c7fff3b5a56aef37c846488cbf5fe7d77b26576abec69eaad326e32f0f521a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "35ee7d5baabc599e7f67278a2994ef52f263fc9dd21cc8e2c6c5c96d08c6aaf4",
+      "ranking_sha256": "d4bcb01ca330f1f3a7481e601be1bc390b1dc82935b8bb5c34331edb730de6e9",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "93a93b164149e1c3dc6280910ac8a4490ee3b69d179be99779ff77a1ba3af4f6",
+      "ranking_sha256": "13e0586c65a87aa97582384b9d7c123426af2ffedd780dc8163802dd2cecff3e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "b1b5c635218de950f2c1b9944f0eb9fa8b9d8c3279b195ad0c2383530c2f6078",
+      "ranking_sha256": "23aa7b424c10cd0f88d0abc4b4857b8de1057f901f82fd87f3e4dcf54779f3ec",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "7e092f6cdccab97fbf162a2ee319f38c5f12b3d4829be25cbe3f6a39a2fe4693",
+      "ranking_sha256": "cd9cd0ce6c14fd7b67bf33cd286ae1d327ca513830ae45106e56c02cf2944c92",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "d67348f94fdf725d0559566089b64f2c4dcaf2fd06f434bd8f3edfa47ff1cf1f",
+      "ranking_sha256": "8defd3e84a0983ebf7fa06b783fca5e1bcf83feb88ccaa65cd552c2a02ebdf1d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "db919156b44a643b55ab71e59756149945cbea21a2bb93b21c5fb2d634824fca",
+      "ranking_sha256": "24733c2d9b1d6e9e2e7da8823ec70b0104e0c8c93efa102969f135de218e9655",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "555258940570b9e498e99fbc2d9a31e1008ce883630fac40ca284453da6e7c03",
+      "ranking_sha256": "3f4466a6c5b5fdbde4d7fbc634ac474061b2748050d7f60726299f047243f7d0",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "a19d094f2e76775bea2db0d42fec812518a48f8a0ae0656ec417ea913f361264",
+      "ranking_sha256": "2ae41c13a9cd21e6e307c1ba6d4711b5656d2ea118a7dbc8ddcf86897d757a65",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 17,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "ee2cd9b878b8c836c544461b4007b6c3344c2f4377a0f1f8eb6d168ddadb5e0f",
+      "ranking_sha256": "91ce40d400c21ce9405e95dc0b289a9127c9e71381ec2a515889a99772e6ddf6",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "069b45ff0d86041c8be0eccea823c3a3387081ce48d9e9c753be2e72db414942",
+      "ranking_sha256": "4689da046e60729589e1b61aef3842820e2244d3ee44fb574ebd31c026f3121c",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "a9210570b972b1e6f8089e7241f9da7a1189d2b4781596dd90f6b1fa2a1c3550",
+      "ranking_sha256": "217f8ebdb0a72ff1a1c7c3f337d95e18d9685a9eaa562f8597ba0723bb28ea5e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "3c1a732066a1c98e3f80ac14f6d01a42ee14903b40207e1c01bc9c653e81dbbf",
+      "ranking_sha256": "91c6c1921ea788a4b417d89262e4e20a710eda41554d92ffeb76b4486e6e4d90",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "86f7f1f1b0e873a835ae1a18760631f19356d872a5086d38a6727d9075d22116",
+      "ranking_sha256": "2512c689a0acadd233f9279924cf4311d7fab3ebb17c3322942f54529ba9bf8c",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "f6f0b6ecce8de556d3a7a9dcc2171ddf03e2beadecf63e35b7b088d39e0f6573",
+      "ranking_sha256": "94bedbb9d40effe6d3f06135c0eb96d5a86ff3ca73530999528d832e89a2c35e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "3e65f4a238626ca7d27cb9561eecd5e7a6bd44e5819f86a95b483b2d9194415c",
+      "ranking_sha256": "c4b3927753026af3b2b4cac0cf22c305c08e6c7527b92688ad1cc16328e3b275",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "581ffbb4d3038d2193e695ffb5951f1f35fbd74f809f37c2fe6655a47cee8552",
+      "ranking_sha256": "601817974118562be834285a6da4ec59784cc8bd0d61ce058b667badbfa30a8d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "b76507e452a2748a3f2b05203b42be4a29fc33564a256539af2c9ee8ab4b53cf",
+      "ranking_sha256": "c4203f0d61ac89ce62b54bd689d6e80894abc989526cead59d2e777e4269aba6",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "8fbc9e5a49e6abf74079e58665fb9892e27f17745827fdab81af1ab1f1b5b206",
+      "ranking_sha256": "756205c8de7cea30fe01aad5664d7f2e3157aba6d523480c515cc438ca8a112c",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "646656d1d38aa4a438301539a41d92fd518ff6820ac6ddb4d5278c3fd3d7293e",
+      "ranking_sha256": "c145c6b525ee01bc00780a5097c787d15334dfa8058d159f4dfd9facabf3581e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "7bedc43b46ca0b467c40846c4b14d66430a6ec373790207b69defc5e39d51486",
+      "ranking_sha256": "76298b0bbb190e55d980942ed0351cd77005ba17492ec82478ac47a07f2f8417",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "05107783fdbced35e4a8085037b5754e0182ad712cba122f9e01ff20214f4500",
+      "ranking_sha256": "fc5b9a3e0202b114bf9e01dd1884519b6a580ba256d4fb25c14a1dbb473b60c3",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "fb0547a075aa115b09bf7f2b87c572bb298daafa5f89b91b4d6c337c6d6389ab",
+      "ranking_sha256": "b1d5ac07287de9f9d93d07e90922db9f5deb4d5124d5a944535eba560c297867",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "9187dad2bede76fafbca7989a4b497b82d1438f5bd352cdc135cbb42e33743cd",
+      "ranking_sha256": "4d09b3be656e719714aa057cfeae5a59219650929fd3dc3023167da4643c6569",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "90582eb05f6b84d1c3c25c79f9ca7b836a2882deed22d2b2217e7ab8e198d054",
+      "ranking_sha256": "1a2dcd70853ce5cd9078a968ee7efda68751eff50aacc4c6e83a711625cfa490",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "9907c674764be56f4e85de386bca70f4354ecdf66e990a41bebf5f73b2ac42a8",
+      "ranking_sha256": "2138b82310b2e70ada0078ea139de790c24a0c0b5283fc9617b8aad9e0987e8e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "2e1cddbc88c85bf7a78025de82f8da51ca237643adeb6ecdbe69e9ca786c58d2",
+      "ranking_sha256": "646d98a75fc1bda7e12e9317143763614b5827fc064974ab963c465fe9f738c0",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 29,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "2e489fd6943858690f58f7185f734f53076f066492faf86c925ed05116523679",
+      "ranking_sha256": "3991ff36eb32104c7c4c313802a57902765b52c0fde4bba4618ae340092d78ae",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "9996cd61b1c0d41dbe78da45f1986b83d7921a16a4e7e27ad527becb2d511f9e",
+      "ranking_sha256": "aaca53895f453c89d81cc4e199ab85985a7090cc870f8e6d0ca942b7a648d7b2",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "070dfd9814be56f8017a54c6785b8a98614ca997b79b7af81546601157f23911",
+      "ranking_sha256": "62c4e519741ae2a951b0b695a6da46958abe9551439cd202dc320f3bfd1e2f51",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "b9d49f8cd6143bf2c0d83406be5f8009ff46bec250182ad966b1ce6f6c0a0a33",
+      "ranking_sha256": "fcd44f2ee424c198e2bc20cd098705c441beb27d4c43c73cf5c9146f2034f2a1",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "0ac26a0a437f296d7575667f2077443989fb5f136a36727c5f053b6ce8bbcad0",
+      "ranking_sha256": "161908104fee59b23ff9de2f11988c198703f6ac481aeb710c00ccb056d25109",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "a27319c6c38c82fd44d1a9039c4d3ad1f91d60df4b2987bd1ee1ddc6ddfc2365",
+      "ranking_sha256": "f2e49387516533581a63ca32dc80ddb5ff5c04529d5975f52ef87a76221a092f",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "af0a696ab3ede92068197a13d0502a8972825e5081132b6c67dfa023e2a2e8e1",
+      "ranking_sha256": "1b36829aa75bb85a3f2d9699fcb4029d6a78711844ccd72cd87c568185fed190",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "17bd6a72a16665db4a48699f58673d0baa249da337f7a35d5f73b370b6514982",
+      "ranking_sha256": "6cb145202917c6787a26b54fe2961f1ba989725e95aabbd09fa064d2ae9d01f1",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "1199afb9e56504fcdb0933f29c15b9e9b435d190c536323022c6483e324229da",
+      "ranking_sha256": "1ff4d5a60f6f21011cbc4c594d40e23698fe02d4f1b940822003a33a3bdff30f",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "6538e4ea06e0a4bdce59fb42fb51cc7219079d6c908e302fc7be51309714a2ad",
+      "ranking_sha256": "819af0c658678e8a1fd5f344d98e0d1f9e3e93119d433213e17fc7375a16f192",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "cf81cdf6a981d4f7e8f7da4688a4bf9e7cc59c9305cab0c08e32695bfe2ea10f",
+      "ranking_sha256": "342ef7279578b57853ae8ea219d90778850498e1d2a968bde76fa628a03d9697",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "8e44e0ae55bc7be8c41418b908c0365e47df2ed705ea8756be09e60ae58826d6",
+      "ranking_sha256": "f5b7ac70f80040cc072c39048af0245196d883f949f6ba25a42318f2d7225c81",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "efb6f42c7df51d8e368d9a65f724e84a372c885ff6294d6e3a0f13a89b7e04da",
+      "ranking_sha256": "e09bd403e9bbd48c259d419b2cbd7a8d93461259edc60f32ed376df1e2aa5faa",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "62d106a201b4f86812f7104b7ba15a37e00e068970e1c6e59ff55c975a7733f2",
+      "ranking_sha256": "679355fe716e3fb2f6570c29d48ac5dfb384c76a0752d1442c9f0b98cfa3320e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "8fecd2d03d0bda4dcea315656863cda48386e28d8b6b7653478c03d352d2e7db",
+      "ranking_sha256": "af1c2874acabf384fad3815f63594b108c692daef7b89246d4870bcde14ac57f",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "42c03cf91b171fe48399e5118bbfd9dc5e2e7ac601fda3950fec56764ca63adf",
+      "ranking_sha256": "f31a7383e0f6fe84ba6bc7769a9a51697004b85c8c983004c8ba51969bd2fbe3",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "a7bc73571582acae86cd099dceaf1a862267181dad93191f879145d6c0c6ba17",
+      "ranking_sha256": "9bc593006b39049fdb9dade08f256f56bd72f686a3caab141c1acf7d1dbbbd5a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "fe5dab7ce0a62cfcea8daf0d8f3313d9e65f2bb51062cb14741194d8cdccce0b",
+      "ranking_sha256": "cb6e5158261d4d8c00e19fdad0705a84f68a4365867570e2df24baaf65bc50d6",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 41,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "e8003f0d046728ee66cf8b6bb3217dc1e8c283cf9ab286f32238da6098600f19",
+      "ranking_sha256": "c8a4e8da83e40a9b32ad81fba28f367753cd1da2072005ea39256ac20e993e07",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "5367424cb9e4b34767d2df7ed82badb6f2e0f5bd280fc6f5a6671cd1c5406a15",
+      "ranking_sha256": "8ddced411c7157b07d4b7938b53dffdc3df2cd44a0a2e7d38498a4adbc0c529b",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "d23401d03fc19c0c30ff2aaa94cc20af6e924896845cdc0ab89e56b46d229eb0",
+      "ranking_sha256": "f3db15ece2432b48e06a5add5276ed9bc10af6cd87b794773132e1932378d5b7",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "25d59fcca2121e0f3142936b53a6ce9e8edc3f239981fde375f60e68805253b5",
+      "ranking_sha256": "d97589a648671496919aa37e1cab54f6dd471a4eda3f998d853f5e86ca38c07f",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "6d5de83193fca8b15d5aee87d41ce9fc28a6f1cfb1e3c3322e4bb7b06bbf61dd",
+      "ranking_sha256": "41425ddba776f6b6c69e84e6763c0a6ba2bec121e4a5084261e25d481c41e6eb",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "8002687de6b47ea55570a281751de8083232d773033242b52a521a853fb75623",
+      "ranking_sha256": "e97f6356f5f123d374cd19c3472289a772ad6119b2003afec487166260fa96e0",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "06c021d60a99332f51bc63c5de0e7afe741f38f7aafe980470a3fd683ac26b03",
+      "ranking_sha256": "b6b6df9e0bc2a9dde9b50e8456d68bd45305216a32f7541afb04d9147b09565e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "15644aebe4ad030bf94988434957c37a79393a459693d1670cd8510390d2c4c0",
+      "ranking_sha256": "2be048043b28c3a155fae3a10721e1aa6706628e9b4cfa903a5edae4cbb8ff75",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "2e336a6ebb13abad20923a2ecef0c239ec04ba1ded6ae7e96aff08ac7ae45edc",
+      "ranking_sha256": "4ec23af8e0aa695bd2dac9051241b1c2ecd912bfc6181b8b9d71ffc1792c649d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "8c83ea5c9101d25bc1d6ee2c753290c89954cc2f0e552184fb77fff8d25f6f4f",
+      "ranking_sha256": "ce477651b1fc9b13bddc2f2112e229c0a97f0a8da729096c364aff9e81d4666b",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "0b817c3f488feb4f34936d9f909b953b9bc71d29858435b7605d3c2b062608b4",
+      "ranking_sha256": "d35985ef7f34de0f8d0cd21cc4a44aa1073f98a7fafb4e641f6f6ef2359b690e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "d66d296fe6d53b5e0fe1837463f1eef22fea116b0b9408e67dd723ab65bb5882",
+      "ranking_sha256": "d933b58e20dc6c606b4224450eec383a85e8befbabb4a0d7b6360a7d9429e1bb",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "56adfa5869c90729c964e619aa906b41386a655bbd3d69a863280c3ebcc2a965",
+      "ranking_sha256": "f76b16a28cac1bf280b78561e53f77d92b03a1e2676ecaa5b18559113a12998e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "ae6956628f7e1d0afab691ee2c256cf0c7a2e738ba1b4e844ad8ff023a48a5c3",
+      "ranking_sha256": "3d8b6701397142d86ea7959f7613e442f69e1e5a3f296e5aab6d355f04b69fde",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "590914d2de5c6f3f1c2d20908050d203cf30e8ed8bce4658f54748f9f9cfe500",
+      "ranking_sha256": "008c6f16e410462e31458880562d696c108ec519273f33ff5ab7c90e269bd472",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "6568176178d436eb88fc2016312e129bd8a21ebb0eb55a2c974bd38cb354da8d",
+      "ranking_sha256": "698b3e74001d16b7ab65d47567368ae9c3577692504b7e176d99be2a02c04ca7",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "6bcd90b4fcf467652d03f8b42c6c2ee63685572198498a7638f70016537f6f83",
+      "ranking_sha256": "6e328e503fa9758ca4bf412aee4df471828706730396cb559991997cd6479b3c",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "25fa4ea1d7a471b2f1a019b1308b69ddda610d43cebd066391518e66bae6f8dd",
+      "ranking_sha256": "18c4c2643c79bc353d43728f579867186d143e70b2cb98aa96836396fc7e056f",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 53,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "ed9296ace99c1b5ac274b8e3376acddec24c882cdeb31d0b2a27201e29a5b5d8",
+      "ranking_sha256": "67a049af83e9ef566595de9fb545e22d92877629370dfee02e85f85f57040b30",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "4469a6e44ab378e34bb80a162666c1fd24e8123618915a8a0acae19103982ad7",
+      "ranking_sha256": "6cc88bacc35c10022e674fbe85a6fb3810b8b2088ebcd7b1637430345167d320",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "8b00a0c0b02092a3d6c712ea1948f06f040e2dd4ef786c0f9a83114aab7e933c",
+      "ranking_sha256": "8913428311e32c5b73bf1cd61e6b8b41e2c7547e55b1e2d561d3c0146643d6a9",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "procrustes_global",
+      "endpoint_sha256": "01511335676a1e942cb1e4ebbc3d8c3dcc439f6ad5fca04aa5b3d86d1825066d",
+      "ranking_sha256": "61eef267088789b4a501e2e3ce07ad67d8165e7dc1ba745cc5e1affa737cf400",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "6f0d00995f69fe70fecd8574aa83378b7cb88992f2cffb562b5d625bb2476eac",
+      "ranking_sha256": "b2b329f71f4ff8e1a633a02388f18b44035fc7a2fa9201e8c373bcf045180e59",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "d3443990845679f65a924cda96ffdf6ef9b658081dc0b993808010809142bdce",
+      "ranking_sha256": "e644383256f472633d0bfa0fa02a27bd08d9113fa8be40df6179150215517b63",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "ridge_affine_l10_bias_regularized",
+      "endpoint_sha256": "4b16e591182cb325e56dab29cf75a17ce1f5f47870d68e63dc91c288f82feef3",
+      "ranking_sha256": "72423a38a5e4fc702601fc33a5c3fda1ca1d62a6cf10bf5ff228573bfa66b4de",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "a194c472aa273a03c72921cf107c80dbc295f893769cf9e1b4f239b9903606c5",
+      "ranking_sha256": "642d49178b2db29a91ae9b2de06cbb2afb8f1a061c5d80639bae6f2e59f0e534",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "770374482bb8602b53b7efbb1fb3ad8755e07486f4c640c1d6c95e040ef5510b",
+      "ranking_sha256": "8546a7264ed909ab241788d570d18aa56105c597e93bef04f2df2338ad13220a",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "arc2_global_tangent2_r1",
+      "endpoint_sha256": "0e02bde6a547202816cc7bd48cc80ba7608aa74355f96f0d13c79ac6951b947d",
+      "ranking_sha256": "b730f8ccb88908227120dc4a68eeef68b013d13f8a7658e7a871e4aa54dc4f20",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "b590bcfb3fecdf224005efff34207915b6bc28a2e2bafe488110a4fe43df9656",
+      "ranking_sha256": "1d3d06083af7306ef418d99519825d6855a23a983ef02933ced635471fcbd27e",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "0b098ebe8558b0043517b13e33f488ccdb98e8967ab40e174b54fcaaa3bd8c05",
+      "ranking_sha256": "47ba1530834b4ba59c2db2941ce25bb32f46c11463bb47657beaa51b65634049",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "la2m20_integration_script_adaptation",
+      "endpoint_sha256": "dcb57701e14850949826a13c1ba7cd206a69f466c7023d3885dfeca0a5fc1c00",
+      "ranking_sha256": "4c30e03c35a34b758f29d4c8d19d6e0e7b51352683a16b4177a5a62265a5db01",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "4310a7bee64a5565b1f024069a4d5ac80e640f4834d1995a862d638124299a83",
+      "ranking_sha256": "bb9ed4e9735b7aeefbeace8b622fa1b9684bc3974e3418a13a744fbf2c41b327",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "ad7b48fe89907fc800c036a988e1cb1a134f367d47a8671b353ce11aaf4e5ddf",
+      "ranking_sha256": "77c70278bab769eb886c4ba94b2dfcfa09cf4f55e0e0efeaf1a43b2f3087b54d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "simplelinear_official_final50_mlp5",
+      "endpoint_sha256": "4d12a7fa21f9201737700b88c7bfc92749e8c7951c77ddfe07ff613f90890c14",
+      "ranking_sha256": "42b5ee9a715702aea18d224c51ad935c973a3d8eba2ae6190f505b7c13016afc",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "25pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "72b3296195b46e9ce239a1f53443d87e0bed8bce7db9096a89c9a99d6f158a18",
+      "ranking_sha256": "d2e75b76a2b735b9e66d1ff53af39282b92254ffbf600639ea2a4c2d5865368d",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "50pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "c8563a172986615d733ad9a8fbbd4ee1668305d56e32789287cef4682a893fa1",
+      "ranking_sha256": "4efb5f247d72dddc5ac56f976c31caa6de63cadc2f0ee1acce990d3fb9d3381b",
+      "all_top100_ids_and_order_equal": true
+    },
+    {
+      "dataset": "TREC-COVID",
+      "pair": "e5_small_base",
+      "seed": 67,
+      "budget": "75pct",
+      "method": "embedding_converter_paper_spec",
+      "endpoint_sha256": "5369a92b273cb3fc53c060463bfe53c7830de7c1e729ec2b753d175516aceb28",
+      "ranking_sha256": "6a5640c09b07c19431f0400cdda419d77f32ac334df6b44e7b4542dfd28b3807",
+      "all_top100_ids_and_order_equal": true
+    }
+  ],
+  "verification": "independent full float32 dot/lexsort; every ordered top100 ID equal",
+  "elapsed_seconds": 931.653073862195,
+  "resources": {
+    "peak_rss_bytes": 1699237888,
+    "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss"
+  },
+  "failures": []
+}

@@ -1,0 +1,14 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "arc2_global_tangent2_r1",
+  "fit_pairs": 1024,
+  "fit_seconds": 0.25613054540008307,
+  "mapping_seconds": 1.7316327905282378,
+  "phases": {
+    "procrustes_seconds": 0.10001042392104864,
+    "matrix_construction_factor_and_two_updates_seconds": 0.15404071751981974
+  },
+  "parameters_sha256": "72c55bc180b94f8a4de637c587fb0d970de700a5b392ccf578b1472dab5825f6",
+  "backend_id": "arc2_global_tangent2_primal_float64_r1",
+  "new_physical_document_encodes": 0
+}

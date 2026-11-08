@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-01T19:09:00.471357+00:00",
+  "pages": 16,
+  "isolated_source_zip_build": true,
+  "text_identical_to_current_draft": true,
+  "network_or_research_data_required": false,
+  "compiled_entrypoint": "main.tex",
+  "archive_sha256": "92cf5ea033d817eebd0ca2581fa8dd92f3e0175c293983c174b8a7e2f78f0cc1",
+  "pdf_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+  "build_directory": "build/zip_smoke_20261101T190900471357"
+}

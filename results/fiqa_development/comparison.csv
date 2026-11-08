@@ -1,0 +1,13 @@
+pair,budget,method,ndcg10,recall100
+minilm_distilroberta,25pct,ARC2-Global,0.2871194529755366,0.6650144988344993
+minilm_distilroberta,25pct,A2M / Procrustes adaptation,0.2569966977943672,0.6579920967920972
+minilm_distilroberta,25pct,Embedding-Converter adaptation,0.1697252893919016,0.4720836363636362
+minilm_distilroberta,50pct,ARC2-Global,0.307504858271637,0.6765693384393388
+minilm_distilroberta,50pct,A2M / Procrustes adaptation,0.2858282408885397,0.6687918004218008
+minilm_distilroberta,50pct,Embedding-Converter adaptation,0.249636477641208,0.5429543900543896
+e5_small_base,25pct,ARC2-Global,0.2731068422047003,0.599738104118104
+e5_small_base,25pct,A2M / Procrustes adaptation,0.2717780394485488,0.6027752691752691
+e5_small_base,25pct,Embedding-Converter adaptation,0.08828628362458313,0.2820660661560662
+e5_small_base,50pct,ARC2-Global,0.31163520753588614,0.6209245754245751
+e5_small_base,50pct,A2M / Procrustes adaptation,0.310035892031038,0.6374290809190811
+e5_small_base,50pct,Embedding-Converter adaptation,0.13966536504490407,0.33581264069264105

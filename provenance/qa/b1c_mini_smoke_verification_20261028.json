@@ -1,0 +1,16 @@
+{
+  "status": "PASS_MINI_SMOKE_AND_QUEUE_READY_PENDING_INPUTS",
+  "wall_seconds": 41.05701573006809,
+  "deployment_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+  "lock_sha256": "5210e2401958e1efb739cd69e9dd92b6b793a0c9856202f5b8ae2a9f89564159",
+  "converter_selection_smoke_seconds": 7.423144964501262,
+  "converter_refit_smoke_seconds": 6.508642652072012,
+  "rough_selection_only_30_workers_hours": 6.1859541370843845,
+  "rough_selection_plus_max_refit_30_workers_hours": 11.609823013811061,
+  "forecast_qualification": "Linear smoke projection only; actual1024anchor workers and load/refit/checkpoint overhead can differ. Not a cap or validated completion ETA. Update from first full worker.",
+  "input_transfer_files": 453,
+  "input_transfer_bytes": 1947593157,
+  "scientific_full_rankings_generated": 0,
+  "TREC_access": false,
+  "time": 1793158745.8218656
+}

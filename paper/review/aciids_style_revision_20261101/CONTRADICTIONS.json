@@ -1,0 +1,143 @@
+{
+  "review": "fresh manuscript consistency review",
+  "date": "2026-11-01",
+  "summary": "No high-severity or fatal numerical contradiction found. Six actionable issues: two medium and four low; C1 is the only potential claim-scope overstatement. The current contribution-led story is supported and needs precise presentation, not a new experiment or a longer limitations section.",
+  "issues": [
+    {
+      "id": "C1",
+      "severity": "medium",
+      "type": "claim-scope ambiguity",
+      "location": "paper/sections/introduction.tex:16 (contribution 1; PDF p. 2)",
+      "claim": "Two tangent-residual ridge updates improve normalized alignment",
+      "evidence": [
+        "paper/sections/method.tex, Eq. (5): the target is a norm-scaled negative cosine gradient.",
+        "paper/sections/method.tex, scale-equivariance paragraph: the finite fitted procedure does not guarantee finite-step cosine improvement.",
+        "src/arc2_global/model.py::_tangent2 fits projected row targets through one shared affine ridge map; its fitted row corrections need not be tangent.",
+        "The displayed results measure relevance-judged retrieval, not an independently reported normalized-alignment error reduction."
+      ],
+      "why_it_matters": "The contribution wording can be read as a mathematical improvement guarantee or as an additional measured endpoint, neither of which the paper establishes. The actual retrieval contribution is stronger and already supported.",
+      "minimal_fix": "Replace with: \"Two tangent-residual ridge updates target prediction direction and improve development retrieval while retaining a single compact document map and native destination queries.\" No new experiment or new qualification paragraph is needed."
+    },
+    {
+      "id": "C2",
+      "severity": "medium",
+      "type": "missing existing evidence",
+      "location": "paper/sections/experimental-setup.tex:69 and paper/sections/results.tex:53-87; paper/generated/trec_means.tex; PDF pp. 9, 11-12",
+      "claim": "Setup says \"We report\" both nDCG@10 and Recall@100, but the prospective results/table/figure display only nDCG.",
+      "evidence": [
+        "The development table includes R@100, whereas neither Table 3 nor Fig. 4 reports TREC-COVID recall.",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json already contains every recall mean and nominal descriptive interval.",
+        "At 75% TREC coverage, MiniLM ARC2 Recall@100 is 0.09983604059514704 and native Full-Y is 0.10521378018323918; E5 ARC2 is 0.09966692928143464 and native Full-Y is 0.11624395516879528.",
+        "The corresponding MiniLM nDCG operating point is 0.5195 versus 0.5203. Thus closeness at top-10 and recall at 100 are different empirical statements."
+      ],
+      "why_it_matters": "A compact addition makes the near-native operating point precise and fulfills the announced two-metric reporting without weakening the nDCG-led contribution. This is an evidence-presentation gap, not a false nDCG claim.",
+      "minimal_fix": "Add a descriptive Recall@100 panel/companion table generated from the existing TREC means (all six methods, both migrations, all budgets). If space prevents this, add the 75% ARC2/native recall values in one sentence and explicitly point to a complete companion table in the packaged evidence. Keep recall descriptive; do not reuse the nDCG family labels."
+    },
+    {
+      "id": "C3",
+      "severity": "low",
+      "type": "inferential presentation gap",
+      "location": "paper/sections/results.tex:91-103 and paper/generated/allpaid.tex:6-20; PDF pp. 12-13",
+      "claim": "The all-paid paragraph states family-supported wins/losses and an unresolved E5 change, while Table 4 shows only point means.",
+      "evidence": [
+        "results/b1p_r5_review_20261027/scoring/results_summary.json contains the locked 32-contrast family and agrees with all stated decisions.",
+        "MiniLM ARC2 all-paid minus fixed: +0.05964116316462802, family interval [0.03934110686868015, 0.08060437708604837].",
+        "MiniLM ARC2 all-paid minus Procrustes all-paid: +0.03375954732030533, family interval [0.018645329403840227, 0.05040795355988812].",
+        "E5 ARC2 all-paid minus fixed: -0.019768225474924635, family interval [-0.056329874306672884, 0.016636927373489714].",
+        "Table 3 already provides a useful significance-marker convention for the prospective family."
+      ],
+      "why_it_matters": "The strongest all-paid result is correct but less inspectable than the development and prospective claims. Readers must currently trust verbal interval decisions whose numeric evidence is absent.",
+      "minimal_fix": "Report MiniLM all-paid-minus-fixed as +0.0596 [0.0393, 0.0806], and add positive/negative/unresolved comparison markers to the all-paid baseline cells or a compact companion contrast table, using the existing 32-family intervals. Keep the current E5 negative/unresolved ordering visible; do not imply that Table 4 itself tests all possible comparisons."
+    },
+    {
+      "id": "C4",
+      "severity": "low",
+      "type": "implementation assignment ambiguity",
+      "location": "paper/sections/method.tex, Computation and Storage; paper/sections/experimental-setup.tex:41-42; Table 1; PDF pp. 7-8",
+      "claim": "Two solver backends are described but not explicitly assigned to the all-paid experiment.",
+      "evidence": [
+        "Table 1 factors the dual m-by-m Gram matrix. The cost subsection identifies an equivalent primal backend that supports larger paired sets.",
+        "ops/b1p_stage.py:13 and :62 call tangent2_primal for ARC2; cpu_fit records BACKEND_ID in metadata at :78.",
+        "src/arc2_global/solver_backend.py identifies arc2_global_tangent2_primal_float64_r1 and retains the same initialization, target, lambda, intercept regularization and final float32 storage.",
+        "results/b1p_r5_review_20261027/scoring/cell_index.json explicitly marks the ten fixed1024 ARC2 cells as reused from B1-M and records backend_id=arc2_global_tangent2_primal_float64_r1 in the allpaid ARC2 fit receipts; ops/b1m_stage.py:29 calls the frozen dual fit_arc2_global."
+      ],
+      "why_it_matters": "A reader could apply the Table 1 dual recipe to 28,819 paid pairs without realizing which implementation produced Table 4. This is a reproducibility omission, not evidence of a changed scientific method.",
+      "minimal_fix": "Add one sentence after the all-paid setup: \"All-paid ARC2 FiQA fits use the primal float64 backend described in Sect. 3.5, while fixed-anchor ARC2 comparisons reuse the locked dual-backend rankings; both implement the same frozen update rule.\""
+    },
+    {
+      "id": "C5",
+      "severity": "low",
+      "type": "caption scope and rounding ambiguity",
+      "location": "paper/generated/trec_means.tex:6,12-13; paper/sections/results.tex:83-85; PDF pp. 11-12",
+      "claim": "Caption says all unmarked cells have intervals crossing zero; prose says Procrustes has a higher mean in all six cells even though the 75% MiniLM table rounds both means to 0.5195.",
+      "evidence": [
+        "The unmarked ARC2 and native-reference rows are not baseline contrasts in the 30-family analysis, so no such family interval is assigned to them.",
+        "The raw ARC2-minus-Procrustes MiniLM/75% difference is -0.000023564924613148544, which disappears at the displayed four decimals.",
+        "All six raw Procrustes point differences are indeed negative, and all twelve Procrustes/LA2M family decisions are unresolved."
+      ],
+      "why_it_matters": "Both underlying findings are correct, but the literal caption over-scopes the intervals and the rounded table can appear to contradict the six-of-six sentence.",
+      "minimal_fix": "Change \"Unmarked cells\" to \"Unmarked baseline cells\". Change the prose to \"Before rounding, Procrustes has higher point means in all six cells\" or note that the MiniLM/75% difference is below 0.0001. No additional precision is needed elsewhere."
+    },
+    {
+      "id": "C6",
+      "severity": "low",
+      "type": "avoidable repetition",
+      "location": "paper/sections/related-work.tex:10 and :13; PDF p. 3",
+      "claim": "The first related-work paragraph repeats that the evaluated panel has five configurations and points to Sect. 4 twice.",
+      "evidence": [
+        "Line 10: \"HMoE provides related-work context; our evaluated panel comprises the five configurations specified in Sect. 4.\"",
+        "Line 13: \"Our comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect. 4).\"",
+        "The same paragraph already contains the substantive geometric distinction and migration setting."
+      ],
+      "why_it_matters": "The duplicated panel disclaimer interrupts the novelty narrative and consumes space that could display existing recall or all-paid uncertainty evidence.",
+      "minimal_fix": "Delete line 13; retain the HMoE scope sentence and the contribution-led comparison of tangent targets with localized experts. Optionally combine the retained scope clause with the setup reference."
+    }
+  ],
+  "strongest_contribution_sentences": [
+    "ARC2-Global fits two norm-scaled cosine-gradient corrections to a centered Procrustes initializer and folds them into one 1.13 MiB affine document adapter, preserving native destination queries without neural mapper training.",
+    "Across four development collections, two encoder migrations and three paid-document budgets, ARC2-Global achieves the highest macro nDCG@10 among six methods and improves on Procrustes by 0.0243, with family-adjusted interval [0.0181, 0.0308].",
+    "The second tangent correction adds 0.0069 macro development nDCG@10 beyond one correction, with family-adjusted interval [0.0038, 0.0100], while adding no inference stage.",
+    "On prospective TREC-COVID/E5, ARC2-Global improves nDCG@10 over the evaluated Converter by 0.2000-0.2572 and over affine ridge at every tested migration budget.",
+    "At the same 50% FiQA document budget, fitting all paid pairs raises MiniLM ARC2-Global nDCG@10 from 0.3075 to 0.3671, with an all-paid-minus-fixed gain of 0.0596 [0.0393, 0.0806], and supports gains over four of the five all-paid baselines."
+  ],
+  "verification": {
+    "pdf_pages": 15,
+    "pdf_sha256": "dead152e05d6d76e8a92d05fe524fe4fdef28b170191fbae8869b3e01d3c1d9f",
+    "per_query_checks": [
+      {
+        "source": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+        "cell_entries": 736,
+        "means": 160,
+        "max_absolute_mean_error": 0.0
+      },
+      {
+        "source": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+        "cell_entries": 124,
+        "means": 28,
+        "max_absolute_mean_error": 0.0
+      },
+      {
+        "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+        "cell_entries": 184,
+        "means": 40,
+        "max_absolute_mean_error": 0.0
+      }
+    ],
+    "supported_checks": [
+      "All five development macro nDCG family intervals are positive.",
+      "Procrustes point means: 23/24 positive development differences; 0/6 positive TREC differences.",
+      "Prospective primary family: 11 positive, 19 unresolved, 0 negative intervals.",
+      "All-paid significance decisions and mixed-gallery diagnostic values agree with saved scoring JSON.",
+      "Coefficient count, MiB units and Converter parameter-storage ratio agree with implemented dimensions/architecture.",
+      "Method equations, raw affine initialization, norm factor, regularized intercept, two updates, normalization and tie order agree with inspected code."
+    ],
+    "family_notes": "Different development-baseline and mechanism-ablation intervals for the same point contrast reflect separately locked bootstrap analyses/families, not inconsistent point estimates.",
+    "layout": "Final PDF read in full as extracted text and all 15 pages visually inspected via rendered contact sheet; no clipping or missing table/figure detected."
+  },
+  "scope_limits": [
+    "Read paper/main.tex, every included section, all five generated TeX tables (including the two currently not included), the mechanism source, the current final PDF, saved raw-scored summaries/per-query arrays, mapper/backends and relevant scoring code.",
+    "No manuscript edits, qrel files opened, experiments, encoding, fitting, retrieval reruns, retuning, scientific-source changes, publication actions or child agents.",
+    "No prior review artifact, reviewer score or opinion was used to derive findings. The mandatory workspace AGENTS.md contained a historical review-status summary; that summary was not treated as review evidence.",
+    "This is an internal consistency and existing-evidence review. It does not independently establish literature novelty, verify all external-paper descriptions, audit every acquired vector byte, reproduce encoders or certify deployment cost."
+  ]
+}

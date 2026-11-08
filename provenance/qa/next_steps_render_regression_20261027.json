@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "temporary_workspace": "C:\\Users\\GIAHUY~1\\AppData\\Local\\Temp\\arc2_next_steps_render_ggdi4n_3",
+  "legacy_behavior_dropped_sections": {
+    "B1P": true,
+    "B1G": true
+  },
+  "new_behavior_preserves_sections_exactly": true,
+  "refresh_idempotent": true,
+  "malformed_markers_fail_before_refresh": true,
+  "b1p_renderer_preserves_b1g": true,
+  "live_REPORT_unchanged": true,
+  "live_REPORT_sha256": "5fc8776041281b1230a00c6e48a1505978d6a16a0a71f5de1a048c79429d5c30",
+  "scientific_runs": 0,
+  "qrel_reads": 0,
+  "tested_source_sha256": {
+    "tools/render_results.py": "b999f46a758c2cf9581f87a85eaef241e15c71190d9c70831d49c26b7207ed39",
+    "tools/render_b1p_report.py": "51bc68696d96f2e59a0c8942d49a4cfd2409b1c7bec98bbced2e0052a6498b68"
+  }
+}

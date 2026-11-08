@@ -1,0 +1,1 @@
+ @article{Sch_nemann_1966, title={A Generalized Solution of the Orthogonal Procrustes Problem}, volume={31}, ISSN={1860-0980}, url={http://dx.doi.org/10.1007/BF02289451}, DOI={10.1007/bf02289451}, number={1}, journal={Psychometrika}, publisher={Cambridge University Press (CUP)}, author={Schönemann, Peter H.}, year={1966}, month=Mar, pages={1–10} }

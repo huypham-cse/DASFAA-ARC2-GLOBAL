@@ -1,0 +1,32 @@
+# TC1L MiniLM local: result-to-claim assessment
+
+Date: 2 November 2026. Reviewer route: gpt-6.1-sol/high, secondary Codex review. `review_independence: same-family`; `acceptance_status: provisional`.
+
+**Verdict: `claim_supported: yes`, confidence high for the exact bounded development claim. No additional experiment is required to support that claim.** This does not complete the original two-pair campaign or authorize a manuscript change, method switch, regrade, or new study.
+
+The supported claim is that, on FiQA development for MiniLM-L6 to DistilRoBERTa, ARC2 Tangent2 achieves higher mean nDCG@10 than the locked Chordal2 and EuclideanResidual2 controls under the same centered-Procrustes initialization, 1,024 fitted anchors, 50% inclusive paid exposure, lambda=10, two updates, and declared CPU arithmetic. The exposure is 28,819 unique destination documents including anchors, not 28,819 plus anchors.
+
+| Locked comparison | Mean nDCG@10 difference | Individual 98.75% percentile interval | Verdict |
+|---|---:|---:|---|
+| Tangent2 minus Chordal2 | +0.013999055140592891 | [+0.009703861642472786, +0.018620502805854717] | positive |
+| Tangent2 minus EuclideanResidual2 | +0.011589365153669408 | [+0.007820844428750586, +0.015656396532695304] | positive |
+
+Tangent2, Chordal2, EuclideanResidual2, and Procrustes have mean nDCG@10 0.3075048582716371, 0.2935058031310443, 0.2959154931179677, and 0.28582824088854003 respectively. B0 and Recall@100 remain descriptive. Both primary lower bounds exceed zero under the locked rule. Five paired seeds are averaged per query before the 20,000-draw query bootstrap with seed 20261102. The original K=4 family is retained; two E5 contrasts remain pending. The nominal approximate 95% original-family coverage must not be described as exact finite-sample coverage or adjusted for prior development selection.
+
+The chordal comparison supports a conditional mechanism interpretation. At a common state, with r=||Z||, u=Z/r and c=<u,Y>, the targets are T=r(Y-cu) and C=r(Y-u), so C-T=r(c-1)u is radial and projecting C onto the tangent space gives T. Initialization, anchor supervision, ridge solve, update count, inference, paid overwrite, and retrieval are held fixed. The comparison therefore tests removal of that radial target component within the specified evolving two-step ridge trajectories. After the first update the states and radii can differ, so this is not a comparison of identical second-step states. The locked name “norm-matched” means matching the prediction-norm scaling rule at a common state; it does not mean equal target norms or equal later-state radii. The Euclidean comparison establishes superiority over this ordinary residual control, but changes both radial content and prediction-norm scaling and cannot isolate projection on its own.
+
+Minimal positive wording supported by the evidence:
+
+> On FiQA development for MiniLM-L6 to DistilRoBERTa, the frozen two-step tangent refinement improves nDCG@10 over both the prediction-norm-scaled chordal control and ordinary Euclidean residual refinement under matched initialization, supervision, and arithmetic. The chordal comparison supports the benefit of removing the radial target component in this configuration.
+
+Evidence reviewed includes the local immutable amendment and JSON lock, inherited mathematical definitions, full ranking seal and metadata, scoring summary and cell index, saved per-query metrics and bootstrap draws, all five raw diagnostic files, synthetic receipt, local QA, and evidence precheck. All 42 sealed artifact hashes and all 20 ranking hashes matched in this review. The seal precedes separate scoring. The saved metric array has shape (20,500,2); independent reductions reproduced means and intervals to floating-point reduction accuracy. Recomputed draw indices matched SHA256 `d18a5bb239f4672c36b37c15105218b8c4694b75e21f3e5f349849bcfef9a132`; maximum deviation from saved bootstrap draws was 2.08e-17 with an algebraically equivalent reduction order. This is consistent with the separate local QA's exact bootstrap replay and metric maximum error 2.22e-16. The evidence precheck verifies 14 cited values' existence; it does not independently certify the semantic claim.
+
+Diagnostics show nonidentical unpaid proxies for both controls in all five seeds and a maximum recorded normal-equation relative residual of 5.29e-14. Each fixed seed has positive mean T-C and T-E differences. There are also 36 negative query-average differences for each comparison; the result is an average benefit, not uniform query improvement. No new labels were read and no experiments were run in this review.
+
+No material inconsistency was found in the reviewed numerical evidence or bounded interpretation. A campaign-specific `EXPERIMENT_AUDIT.json` is unavailable; local QA is PASS, but is not relabeled as that audit. The review remains provisional. Required workspace instructions exposed earlier paper-review opinions; these were not used to assign this claim verdict or a venue score.
+
+The evidence does not establish independent confirmation, E5 results, general superiority over other residual algorithms, isolation of initialization, global optimization or convergence, transfer across datasets/budgets/arithmetic, population-of-seeds uncertainty, practical-equivalence margins, physical encoding savings, deployment cost, latency, or SLO gains. The recovered cache is previously measured data, with zero physical encodings in this campaign. Windows TC1L is a distinct measurement, not a byte-for-byte Linux reproduction. Remote TC1 status remains unknown and is not superseded by a successful local result.
+
+There is no missing evidence for the exact bounded claim. E5 and independent confirmation are absent for broader claims and are not prerequisites retroactively imposed on this narrower one. `next_experiments_needed: []`. Route: record this development result and retain all limitations; **STOP at the existing protocol boundary**. No automatic ablation, scope expansion, manuscript edit, or regrade is recommended or authorized.
+
+Evidence paths: `protocols/TC1L_MINILM_LOCAL_20261102.md`; `protocols/FIQA_MATCHED_RESIDUAL_CONTROLS_20261102.md`; `configs/tc1l_minilm_local_20261102_lock.json`; this campaign's `full/{metadata.json,ranking_seal.json,minilm_distilroberta_seed*/diagnostics.json,scoring/{summary.json,metadata.json,cell_index.json,per_query.npy,bootstrap_draws.npy}}`; `synthetic/metadata.json`; `report/{SUMMARY.md,LOCAL_QA.json,EVIDENCE_PRECHECK.json}`.

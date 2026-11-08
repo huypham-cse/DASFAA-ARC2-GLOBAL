@@ -1,0 +1,64 @@
+{
+  "key": "maystre2025procrustes",
+  "audited_at": "2026-11-01",
+  "existence": "VERIFIED",
+  "metadata": {
+    "verdict": "MATCH",
+    "title": "When Embedding Models Meet: Procrustes Bounds and Applications",
+    "authors": ["Lucas Maystre", "Alvaro Ortega Gonzalez", "Charles Park", "Rares Dolga", "Tudor Berariu", "Yu Zhao", "Kamil Ciosek"],
+    "year": 2025,
+    "type": "arXiv preprint (@misc)",
+    "arxiv_id": "2510.13406",
+    "primary_class": "cs.LG",
+    "version": "v1",
+    "version_date": "2025-10-15",
+    "venue": "arXiv; later conference/proceedings status not verified",
+    "venue_limit": "OpenReview forum, PDF and public API access encountered verification challenges. No inference of acceptance or rejection is made."
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2510.13406",
+      "fact": "Live primary record verifies title, ordered authors, submission year, classification and sole listed version v1."
+    },
+    {
+      "url": "https://arxiv.org/bibtex/2510.13406",
+      "fact": "Live author-deposited repository export matches the supplied bibliographic fields; citation-key spelling is local."
+    },
+    {
+      "url": "https://arxiv.org/html/2510.13406v1#S3",
+      "fact": "Theorem 1: for X,Y in R^(D x N), ||X^T X - Y^T Y||_F <= epsilon implies min over Q in O_D of ||QX-Y||_F <= (2D)^(1/4) sqrt(epsilon)."
+    },
+    {
+      "url": "https://arxiv.org/html/2510.13406v1#S4.SS2",
+      "fact": "Section 4.2 tests seven text encoders across HotpotQA-HN, FEVER-HN and TREC-COVID; Procrustes enables cross-model retrieval, with stronger-query gains on two tasks."
+    },
+    {
+      "url": "https://lucas.maystre.ch/papers",
+      "fact": "First-author publication list presents this title and author list as a 2025 item linked to arXiv."
+    },
+    {
+      "url": "https://openreview.net/forum?id=DLEzSo1DIk",
+      "fact": "Live access returned a verification challenge; unavailable as evidence of publication status."
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 22,
+      "verdict": "SUPPORTS",
+      "reason": "Theorem 1 directly connects approximate pairwise-inner-product preservation to Procrustes error; Section 4.2 directly demonstrates retrieval-model interoperability. The sentence makes no unsupported numerical or universal-performance claim.",
+      "scope_limit": "The theorem concerns paired equal-dimensional matrices and orthogonal alignment; experiments zero-pad unequal dimensions. It supplies no direct guarantee for ARC2 tangent corrections."
+    }
+  ],
+  "action": "KEEP",
+  "fix_if_needed": null,
+  "confidence": {
+    "existence": "high",
+    "metadata_for_cited_arxiv_version": "high",
+    "contextual_support": "high",
+    "exhaustive_later_venue_status": "limited"
+  },
+  "review_status": "same-family/provisional",
+  "reviewer_model": "gpt-6.1-sol",
+  "independence": "Fresh citation-specific verification; no prior review consulted; not cross-family verification."
+}

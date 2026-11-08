@@ -1,0 +1,55 @@
+{
+  "id": "TC1L_LOCAL_REVIEW_20261102",
+  "stage": "preliminary_design_review",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "skill": "aris:ablation-planner",
+  "validation_scope": "same-family/provisional",
+  "disposition": "DESIGN_COHERENT_EXECUTION_GATED",
+  "local_code_protocol_lock_reviewed": false,
+  "experiments_performed": false,
+  "qrels_opened": false,
+  "manuscript_changed": false,
+  "matrix": {
+    "pair": "minilm_distilroberta",
+    "seeds": [17, 29, 41, 53, 67],
+    "methods": ["procrustes", "tangent2", "chordal2", "euclidean2"],
+    "full_rankings": 20,
+    "update_trajectories": 15,
+    "anchors": 1024,
+    "paid_unique_documents": 28819,
+    "documents": 57638,
+    "development_queries": 500,
+    "selection_reason": "input availability only",
+    "e5_status": "PENDING_NOT_COMPLETED"
+  },
+  "primary_inference": {
+    "registered_family_size": 4,
+    "observed_contrasts": ["MiniLM T2-C2", "MiniLM T2-E2"],
+    "individual_ci_coverage": 0.9875,
+    "percentile_quantiles": [0.00625, 0.99375],
+    "bootstrap_draws": 20000,
+    "rng_seed": 20261102,
+    "seed_average_before_query_resampling": true
+  },
+  "gates": [
+    "current input availability and original SHA256 verification",
+    "committed local immutable protocol lock and runner",
+    "static source/protocol/lock review",
+    "synthetic mmap/in-memory exact rank parity and frozen tangent bitwise path checks",
+    "qrel-free real MiniLM seed17 all-method smoke and degeneracy interpretation",
+    "20 fresh full rankings sealed before separate DEV scorer",
+    "STOP before manuscript or method changes"
+  ],
+  "key_pitfalls": [
+    "full-matrix _vectors and unpaid gallery diagnostics allocate hidden temporaries",
+    "document-block matmul or alternate affine expression changes numeric path",
+    "full-target numeric validation exceeds paid50 logical exposure",
+    "Windows writable mmap must flush before hash and close before file operations",
+    "local runtime path parity does not establish historical Linux byte parity",
+    "old40-ranking reporter needs explicit incomplete-family local support",
+    "past cache hashes do not prove current files still exist"
+  ],
+  "remote_tc1_status": "UNKNOWN_PRESERVED",
+  "notes_markdown": "refine-logs/TC1L_LOCAL_REVIEW_20261102.md"
+}

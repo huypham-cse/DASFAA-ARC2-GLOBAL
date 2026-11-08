@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "56b39f93e9bd45c859d2197fe4aaafd9f686494357e4146d9c86b75f6c7b56d0",
+  "bytes": 63374726,
+  "server_source": "/root/arc2_global_paper_20261025/b1b_results_20261026.tar.gz",
+  "source_commit": "180db50f4d2985f2ddc30557fb55c513b8856143",
+  "local_result": "D:\\DASFAA-2027-paper\\results\\b1b_20261026",
+  "members": 52,
+  "checksum_source": "server-generated receipt downloaded via authenticated SSH; no terminal transcription"
+}

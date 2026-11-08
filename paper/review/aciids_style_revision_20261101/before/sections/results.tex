@@ -1,0 +1,118 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Broad Retrieval Gains with a Compact Adapter}
+\input{generated/dev_macro}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{dev_quality.pdf}
+  \caption{Development quality versus anchor-inclusive paid-document coverage.
+  Each point equally averages the four collection means after averaging five
+  mapping seeds. Native references use the same collection weighting.
+  Curves are descriptive; no pooled uncertainty band is implied.}
+  \label{fig:dev-quality}
+\end{figure}
+
+\method{} delivers the highest macro \ndcg{} among all six evaluated
+methods at matched fitting exposure (Table~\ref{tab:dev}). Against the
+closest comparator, Procrustes, the gain is $0.024325$, with family interval
+$[0.018132,0.030792]$. The gain appears in both migrations: the descriptive
+pair-wise macro differences are $0.025733$ for MiniLM and $0.022917$ for E5.
+Across individual conditions, ARC2 has higher nDCG point means in 23 of 24
+comparisons with Procrustes and all 24 comparisons with each other baseline.
+The breadth of the point gains complements the family-adjusted macro
+comparison. Figure~\ref{fig:dev-quality} shows the complete budget curves.
+
+The advantage is concentrated in the top-ranked results: macro Recall is
+$0.8659$, versus Procrustes' $0.8661$, with a descriptive difference interval
+$[-0.004944,0.004336]$. The exception to the 23-of-24 nDCG point gains is
+FiQA/E5 at 75\% ($-0.003583$). Native Full-X and Full-Y remain visible as
+full-corpus reference operating points.
+
+\subsection{The Second Correction Adds Measurable Value}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{dev_ablation.pdf}
+  \caption{Development mechanism controls. Dots are equal-condition macro
+  nDCG differences; bars are the saved 99\% intervals of the separate
+  five-contrast family. The final two rows vary the penalty while retaining
+  two steps.}
+  \label{fig:ablation}
+\end{figure}
+
+The second update provides a measurable benefit: two versus one step improves
+macro nDCG by $0.006924$, with family interval $[0.003809,0.009959]$.
+The gain over affine ridge is $0.095653$ for the complete initialized
+refinement procedure in this supervision regime (Fig.~\ref{fig:ablation});
+this contrast evaluates tangent targeting and the retained alignment prior
+together. The penalty controls measure sensitivity around the fixed
+setting. Changing $\lambda$ from 10 to 1
+gives $+0.003197$, with an interval crossing zero; changing it to 100 gives
+$-0.009255$, with a wholly negative interval. We retain the frozen setting.
+
+\subsection{Prospective Gains Transfer to TREC-COVID}
+\input{generated/trec_means}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{trec_quality.pdf}
+  \caption{Prospective TREC-COVID quality at fixed 1,024-anchor supervision.
+  All six methods and native references are shown; points average the five
+  mapping seeds. The two panels use different vertical ranges.}
+  \label{fig:trec-quality}
+\end{figure}
+
+The held collection confirms a substantial E5 advantage over the evaluated
+Converter and affine ridge at \textbf{all three migration budgets}.
+At 25\% destination coverage, the gain over Converter is $0.257234$, with
+family interval $[0.175731,0.337569]$. At 50\%, ARC2 reaches $0.5904$ nDCG,
+versus $0.3590$ for Converter and $0.3281$ for ridge (Table~\ref{tab:trec}).
+Across both migrations, family-adjusted improvements occur in five of six
+Converter comparisons, four ridge comparisons and two SimpleLinear
+comparisons: \textbf{11 improvements in the 30-contrast family}.
+Table~\ref{tab:trec} marks every supported pairwise improvement and retains
+all six methods at all three budgets.
+Figure~\ref{fig:trec-quality} shows how the gains change with coverage.
+
+The MiniLM migration supplies a useful partial-coverage operating point:
+at 75\% coverage, \method\ reaches $0.5195$ nDCG against native Full-Y's
+$0.5203$. These point estimates illustrate proximity to destination-model
+quality while one quarter of the gallery still uses proxies. The
+predeclared inferential family compares adapters; it does not establish
+equivalence to native Full-Y.
+
+The strongest geometric alternatives remain competitive: Procrustes has
+higher point means in all six cells, while the Procrustes and LA2M family
+intervals cross zero. Thus the prospective advantage is specific to the
+evaluated Converter, ridge and SimpleLinear configurations. The native
+references in Table~\ref{tab:trec} retain the quality context for cutover.
+
+\subsection{Using Paid Pairs Strengthens MiniLM Adaptation}
+\input{generated/allpaid}
+More fitting supervision produces a strong MiniLM operating point without
+increasing the paid-document set. With all paid FiQA pairs, ARC2 reaches
+$0.367146$ nDCG and exceeds
+Procrustes, LA2M, SimpleLinear, and Converter in the locked family comparisons;
+ridge remains unresolved. E5 shows a different ordering: ARC2 trails
+Procrustes and LA2M, exceeds SimpleLinear and ridge, and is unresolved
+against Converter. Table~\ref{tab:allpaid} retains both migrations and all
+methods. Fixed-anchor MiniLM ARC2 trails each all-paid baseline in the
+locked cross-regime nDCG comparisons. Increasing ARC2's fitting exposure raises MiniLM nDCG from
+$0.307505$ to $0.367146$; E5 changes from $0.311635$ to $0.291867$, with
+that nDCG interval unresolved. All-paid fitting retains $\lambda=10$ in
+the summed objective, so it evaluates the fixed procedure at larger
+supervision rather than isolating data quantity at a fixed effective penalty.
+The result identifies when the paid pairs
+can improve adaptation, while the two-migration comparison captures the change
+in method ordering.
+
+\paragraph{A practical insight: validate the mixed gallery.}
+Holding each fitted mapper fixed, we compare proxy-only and mixed
+galleries under the same document replacement sets.
+For all-paid E5 ARC2 on FiQA, nDCG decreases from $0.314908$ to $0.291867$;
+Recall decreases from $0.654164$ to $0.559490$. The paid-document share of
+top-10 results falls from $0.491640$ to $0.064720$ despite 50\% paid coverage.
+For MiniLM ARC2, nDCG instead rises from $0.350951$ to $0.367146$.
+These opposite replacement effects make mixed-gallery relevance the
+decision metric for partial migration. Good proxy-only quality is
+insufficient to select a cutover point; the documents must be ranked
+together in the intended gallery.

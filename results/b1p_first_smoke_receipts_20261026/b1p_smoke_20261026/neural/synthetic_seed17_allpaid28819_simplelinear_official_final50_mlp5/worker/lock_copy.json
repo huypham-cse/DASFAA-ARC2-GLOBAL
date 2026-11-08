@@ -1,0 +1,762 @@
+{
+  "seeds": [
+    17,
+    29,
+    41,
+    53,
+    67
+  ],
+  "cpu_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "cpu_python": "/root/arc2_p3h_20261020/venv/bin/python",
+  "gpu_python": "/root/paper-P2/.venv/bin/python",
+  "fiqa": {
+    "manifest_path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/manifest.json",
+    "manifest_sha256": "e22cf779ba9f280b7f97e93cb48cf0ef009c8cf70940aa9f34082f608e8f3ba6"
+  },
+  "stage": "B1-P only",
+  "model_revision": "arc2_global_tangent2_r1",
+  "cpu_environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "cpu_sklearn_version": "1.5.1",
+  "gpu_versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "torch": "2.6.0+cu124",
+    "sklearn": "1.6.1",
+    "pydantic": "2.14.1",
+    "faiss": "1.15.1",
+    "loguru": "0.7.3",
+    "tqdm": "4.70.1"
+  },
+  "upstream": "/root/arc2_p3h_20261020/upstream_clean",
+  "upstream_raw_sha256": {
+    "src/embedding_translation/__init__.py": "56e48543ff1dad3277d8c6be8ffd5d99be67db129d63a04671be431aa8badd1d",
+    "src/embedding_translation/analysis/__init__.py": "c682547c6d0307c11116d0918a37667d8def4d0e36ce0edab1768ae17833aa33",
+    "src/embedding_translation/cli/__init__.py": "e3767347592450100948939aee454f65149ba6b624ae394bfa8d2028921dcf6c",
+    "src/embedding_translation/clustering/__init__.py": "3a39eeab11c8d2762617b2566307eb616f37b79b93e10b1ec192150ad08cc53d",
+    "src/embedding_translation/clustering/base.py": "9326ea04bc90954c429663c6951d7ac4ce0bedebdfb079b72f67172314d6ea9f",
+    "src/embedding_translation/clustering/manage.py": "9bdae3b1734ca8aeaec68102d544cfc99f82a33a6a0eb8012d60f41cffc16678",
+    "src/embedding_translation/clustering/strategies/__init__.py": "df31ad7fe9ffd37da5561d9678ad68d56d8ea34a2560c0ec4eacd9df18c21a2c",
+    "src/embedding_translation/clustering/strategies/kmeans.py": "5166ec75031a8792658d74ff05c136c13cc16fe693820731192dfca61bc56815",
+    "src/embedding_translation/clustering/strategies/la2m_cluster.py": "591313b84827d3787c191d1f4fed441ffe8ef9e816748a9c771900690d8e488e",
+    "src/embedding_translation/clustering/utils.py": "ede38e36942b410f43a47c82afa7d12ee9a718e56e893b009dfa63e672f75dd2",
+    "src/embedding_translation/config/__init__.py": "482de09e67f12e1715ce020a776150e9a9e391be207d46cce4b046218fa96396",
+    "src/embedding_translation/config/loader.py": "cf39e73b4aa4576ac7131d7bec41992334f1c882bbf700e8f388572532bbd650",
+    "src/embedding_translation/config/models.py": "d26380ad82572336d15f76a0c646930df502d8ae374baa7a56c2783a5ddb7cc3",
+    "src/embedding_translation/config/settings.py": "4b394c20a8eea3bb6ad558244139c367156ce2ff723a0312eb714a5a0cbcbd3b",
+    "src/embedding_translation/core/__init__.py": "daddbbe5cf021e8986867ae6996b3c155eb7f2bfb41ad4efb9b73186a3dae6e9",
+    "src/embedding_translation/core/mapping.py": "61cbf30d7239bd85f8bcc79b3819a3cae37c15834a7b9f7b92cc9f9e4b4b8a0b",
+    "src/embedding_translation/core/utils/__init__.py": "67fed6217efac61cc5608a0b7560ea63ea79943abd108e5d0f936cf17cafbf97",
+    "src/embedding_translation/core/utils/creation.py": "2f4c168a12dd149547d60d398697f5f4b2fac47051ab6037606dbce91bb643ec",
+    "src/embedding_translation/core/utils/io.py": "55e5cbbccf9fca7825a09cc6996efb567f00defddc4e085c1fc296acc4538757",
+    "src/embedding_translation/core/utils/metrics.py": "a16526c120649b4c4d07c2405ec53db2325018eacce4942143e9138296ad8cae",
+    "src/embedding_translation/core/utils/validation.py": "032c03c3a6ec63aa796a136cafd1e0b3021a163a97cfb9306b5ae81404b37875",
+    "src/embedding_translation/dataset/__init__.py": "53984e85e3d449a3799e9812e99b00e7b151448a7cf4f7c3b75399848467ebcf",
+    "src/embedding_translation/embedding/__init__.py": "36dc67a6176b30dae788548f6868f2d8085e62fa4b6cfba265520702577952ec",
+    "src/embedding_translation/evaluation/__init__.py": "70cae6e204e1e90369a70ed82d881581876afb393e803cf9c8cf9935544cde90",
+    "src/embedding_translation/evaluation/base.py": "190abc4df377d3284220a20fba7348b6b9122b49baa173aefa45d90aecaceeba",
+    "src/embedding_translation/evaluation/confidence.py": "f2597b036b05381ecef4c2baf2cfc545043728452736b8d6e968b50a93623f3e",
+    "src/embedding_translation/loss/__init__.py": "4a3de042f4325cf38cbb2e001c6ddf49585f5ba1e95d4d113b6f7f6a2fed593b",
+    "src/embedding_translation/loss/common.py": "4f21c8683a9e729b099e20d4b2ee343f9a4ac66b901311c55b3fd22db05c74a0",
+    "src/embedding_translation/loss/contrastive_loss.py": "6094d4e9383566a329ae065cbbd3c8b95fe8ab5044385f20aec08303532a2977",
+    "src/embedding_translation/loss/distance.py": "b3d2aad85f3084dd51d866c738d897148611853e7f64bf6fb9394763b79a2977",
+    "src/embedding_translation/loss/hierarchy_loss.py": "56bf21dc046295fc2fe99a8de3032f04338a2d220444bed643cbd92eb81af364",
+    "src/embedding_translation/loss/lambda_rank_loss.py": "20d4ac3833d79b14614a218e119a41033079982a54a2a37f8af68df46af44c73",
+    "src/embedding_translation/loss/margin_rank.py": "9ccda4a1d63eac66f7ed05b220e7ac9aea3099606bafdb28ac2362491d918af1",
+    "src/embedding_translation/loss/ranking_losses.py": "4e72f40da94cdf36cfd7e0ed2b7996e97762212203157e7dbd1b9a02ab226fb9",
+    "src/embedding_translation/loss/rcsls.py": "6cec00cd004bba6abd602c984a10bd093e290e7d1b005587e5533814720d185b",
+    "src/embedding_translation/loss/spearman.py": "b6da653cbf202508eb57cbbd7d858350ad5ae02fbe51f44713897cf282b9de37",
+    "src/embedding_translation/loss/triplet.py": "8aa58df7f2e3c617127240d0e0449c3986eb677b73fa7303fc03691e48edda11",
+    "src/embedding_translation/loss/util.py": "e39b35a2d570bf3a4f26b8bf8b505a91a02976d7f82cb6b05082120272cc2790",
+    "src/embedding_translation/mapper/__init__.py": "8e298c51db664493f47ea4d086ed393ba48830720c390e1ea0386ddb9971cf65",
+    "src/embedding_translation/mapper/cca/__init__.py": "ed7949f8365ebdd629f5a8525f76e408f1339d55d78518f0233adaa17c31a173",
+    "src/embedding_translation/mapper/cca/strategy.py": "de014609e949f4833998b51321d68c0f4c3d787b598ac2b7e8d505bb7d6ca8b8",
+    "src/embedding_translation/mapper/gromov_wasserstein/__init__.py": "3ea0ac50f7ec470c09bdd04f93f91678781ce5897aa1396984e225b4bdb067db",
+    "src/embedding_translation/mapper/gromov_wasserstein/strategy.py": "af3342d1713e8d8e97d4e0452330d6cd0551ff0ce5096a775ac36dbe2b17893f",
+    "src/embedding_translation/mapper/hmoe/__init__.py": "b943a524646c05918f0b4a00443f6be22ad640da40963573f2fac2e64cee0b62",
+    "src/embedding_translation/mapper/hmoe/_array_loader.py": "3ec19f6ef026741d3898a8d8320d11b541f62ccd0d71d4465d76487d08971cbe",
+    "src/embedding_translation/mapper/hmoe/base_mapper.py": "df9d4671eb7abd548e24f2312c9035fd3fd3474c680194d25c093719681ab4db",
+    "src/embedding_translation/mapper/hmoe/core/__init__.py": "8620c534e3e9b59d08150f4ac69433de4599ada159d3a8831371e7c530205a43",
+    "src/embedding_translation/mapper/hmoe/core/metrics.py": "5713fbd048d94eefb803b3fa81f56cff24025d4b8108d2f128cfcad77c506fa7",
+    "src/embedding_translation/mapper/hmoe/core/mlp.py": "8fc2a65e692efd4ae00aa9249c9e1ea18056a36a36f646c6d9b43ed597e84a30",
+    "src/embedding_translation/mapper/hmoe/core/utils.py": "de0bde59a158685501f64d080466906a1e20e2e8326b74092163580f8a674125",
+    "src/embedding_translation/mapper/hmoe/expert_clusterer.py": "b2ffae943e4abaaadf2936afb369e8e18633c5f2679fc804f2a3b29eff08ff58",
+    "src/embedding_translation/mapper/hmoe/flat/__init__.py": "7384a81c7d28c4a8833191a65a87c0745711921794c951a7655cb4cd644574a5",
+    "src/embedding_translation/mapper/hmoe/flat/mapper.py": "5c18dc761f6dc440a1d8d054584c0a992a226eae08769598d6f20cc47416e35c",
+    "src/embedding_translation/mapper/hmoe/gating_mechanism.py": "63916b3d5a1d57d4c89041f7588e32d3560e6a6efec0185dda32c12c87cd518c",
+    "src/embedding_translation/mapper/hmoe/hierarchical/__init__.py": "547aa60851d7d500b2c12b5be458ff15ceaa2cb8f65201d59a6f059208980e09",
+    "src/embedding_translation/mapper/hmoe/hierarchical/clusterer.py": "ba542f7cab60a62af672e8d1e13a547edbc4d63163c13a7f93ae04c5a7197117",
+    "src/embedding_translation/mapper/hmoe/hierarchical/mapper.py": "efa1b6ecb9b2ae0352bd895bdff464e8e4ed5c4736713217eef007012c768b29",
+    "src/embedding_translation/mapper/hmoe/hierarchical_lora/__init__.py": "ca344911fbbd9760985561c0a0906a98ceb0c5c840ce1b644c2b338e973dc4c0",
+    "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_config.py": "9bd2d2575da6d150aecc1c727ad3c88c27f7f5c51a74d691bfcba815efda0329",
+    "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_expert.py": "9e5c70d80950f978e026af707bbbec73eb8a08200356c7c0646f191023557d52",
+    "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_layer.py": "c3f458423802aab91a4db2fa6a0b843dd5b4541a7b1a804a186859c0c9328ddd",
+    "src/embedding_translation/mapper/hmoe/hierarchical_lora/lora_trainer.py": "4b0dfa22c15bbc6b239761117ce6de3e3ae573d54a1743ac3f3be7f0c6b72be9",
+    "src/embedding_translation/mapper/hmoe/hierarchical_lora/mapper.py": "1815ad833b8306f79da07b2dc4b331e1a0b581f97a96672e6ed1d156b6b60278",
+    "src/embedding_translation/mapper/hmoe/router.py": "c0dc8d112ba9a28d3d32c46e0bad3a6112c809cde20d9d044f289cb6c3a3dfaa",
+    "src/embedding_translation/mapper/hmoe/tree_structure.py": "c42947ead80ed7fe2edb911d765c7caa530ddb558783918a8c080ef7c9be0276",
+    "src/embedding_translation/mapper/la2m/__init__.py": "18bc1585e2fcd8928db5c0b3e53ac1217920b47cd91bb321e95ff818f36f0bc9",
+    "src/embedding_translation/mapper/la2m/strategy.py": "76ccfa8064b13446f05f9bba28c0414e2717e145d1ba50411d213c7fbc1bcb18",
+    "src/embedding_translation/mapper/linear/__init__.py": "32ff248a1cafcef30252fb901d31a0b9fb4c5b2573a121dffb04535b93a8e5a5",
+    "src/embedding_translation/mapper/linear/strategy.py": "dde5a6cee280d47d879518ca4f720946b56b29818c19d2f41a582b469c34f52c",
+    "src/embedding_translation/mapper/manager.py": "2ce5d7fe4bf37c387d3d5c7e728b6f6795339bf29e0a1f199c67e751de66bb48",
+    "src/embedding_translation/mapper/nonlinear/__init__.py": "a6ccec878a3f8532900b65fe01681002b4844e0a8f55a219fa17d161845fef8e",
+    "src/embedding_translation/mapper/nonlinear/strategy.py": "0785312ca70dd49e668090a2a004b6b9cac90c64d01331a944111b1e1fca6b1e",
+    "src/embedding_translation/mapper/procrustes/__init__.py": "b65e25f4be600fee767a315d8841486517ad439f2f7af7a72ff089ee60061bce",
+    "src/embedding_translation/mapper/procrustes/strategy.py": "0eb7d978ea2bbc19c84e7fd0a165ecd8290d1ea184a51bcc4b4368923c03a9bf",
+    "src/embedding_translation/mapper/simple_linear/__init__.py": "2ef7f2a35501474e298e7f9d1aae8f85edacd516b4ef4c78e04efa754b6733d6",
+    "src/embedding_translation/mapper/simple_linear/strategy.py": "9f22cb2c39baca27b660260c80df31da8ab6bb856160b660b5b3840c649ea821",
+    "src/embedding_translation/mapper/wrapper.py": "cf277fcb5f53dbb9ca080f6691a80946941a8f3f968951f0a9b07ad39c12d8f3",
+    "src/embedding_translation/pipeline/__init__.py": "fba1964c77375b142c9d950b30680c858b572ac5d3178fc94918506dda3a4d78",
+    "src/embedding_translation/reference/__init__.py": "21561e6812a749135c2b4cc5204df2bccf53a80dca6a0f28f2f1896e84065f19",
+    "src/embedding_translation/reference/base_split.py": "34ea2bc6b543f3ddb5be91e201efa5af8cdc7a50c48db514ebd6da45b4e92a63",
+    "src/embedding_translation/reference/la2m_split.py": "b6da718a266664cc483cf3e84ddfe409e54be33368966c3e390c88adbfdca0b4",
+    "src/embedding_translation/reference/manage.py": "b1740b2cc6a1bdc37de28714668ae05983fb59933e186e14cbb80f778d974ef2",
+    "reproduce-scripts/la2m/exp_la2m.py": "37015108e855101f3855755b755836280d8bb073389b23455825980302b49c67"
+  },
+  "simplelinear_defaults": {
+    "learning_rate": 0.0001,
+    "num_epochs": 50,
+    "batch_size": 4028,
+    "gradient_clip": 1.0,
+    "weight_decay": 1e-05,
+    "scheduler_patience": 5,
+    "scheduler_factor": 0.5,
+    "early_stopping_patience": 10,
+    "min_delta": 1e-06,
+    "device": null,
+    "layer_num": 4,
+    "activation": "selu",
+    "dropout": 0.0,
+    "hidden_dim": 512,
+    "use_local_distill": false,
+    "local_k": 50,
+    "local_tau": 0.1,
+    "local_weight": 0.5,
+    "faiss_use_float32": true,
+    "knn_recompute_epochs": 0,
+    "global_weight": 0.5,
+    "cosine_weight": 0.5,
+    "mse_weight": 1.0,
+    "normalize_output": false,
+    "loss_kind": "mse_cos"
+  },
+  "dependency_fallbacks": [
+    "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages",
+    "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages"
+  ],
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "converter_config": {
+    "hidden_multiplier": 5,
+    "iterations": 50000,
+    "batch_size": 64,
+    "local_k": 100,
+    "local_samples_per_center": 1,
+    "alpha": 0.1,
+    "beta": 0.1,
+    "learning_rate": 0.001,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "report_every": 250,
+    "transform_batch_size": 256,
+    "threads": 4,
+    "device": "cuda"
+  },
+  "smoke_converter_iterations": 500,
+  "neighbor_block_rows": 256,
+  "b1m_run": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026",
+  "b1m_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+  "b1m_scoring_completed_sha256": "beeda707e9efd553c985f6f546e29217b7c56caa97fe401cc3010201c6a03f3f",
+  "artificial_time_memory_caps": null,
+  "next_stage_requires_user_instruction": true,
+  "new_physical_document_encodes": 0,
+  "scoring": {
+    "datasets": {
+      "FiQA": {
+        "format": "tsv",
+        "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+      }
+    },
+    "bootstrap_draws": 20000,
+    "bootstrap_seed": 20261026,
+    "contrasts": [
+      {
+        "id": "minilm_distilroberta__within_method__procrustes_global",
+        "kind": "within_method",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "procrustes_global",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "procrustes_global",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__within_method__arc2_global_tangent2_r1",
+        "kind": "within_method",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__within_method__la2m20_integration_script_adaptation",
+        "kind": "within_method",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__within_method__simplelinear_official_final50_mlp5",
+        "kind": "within_method",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__within_method__ridge_affine_l10_bias_regularized",
+        "kind": "within_method",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__within_method__embedding_converter_paper_spec",
+        "kind": "within_method",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__procrustes_global",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "procrustes_global",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__embedding_converter_paper_spec",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__procrustes_global",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "procrustes_global",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__embedding_converter_paper_spec",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__within_method__procrustes_global",
+        "kind": "within_method",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "procrustes_global",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "procrustes_global",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__within_method__arc2_global_tangent2_r1",
+        "kind": "within_method",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__within_method__la2m20_integration_script_adaptation",
+        "kind": "within_method",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__within_method__simplelinear_official_final50_mlp5",
+        "kind": "within_method",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__within_method__ridge_affine_l10_bias_regularized",
+        "kind": "within_method",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__within_method__embedding_converter_paper_spec",
+        "kind": "within_method",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "fixed1024"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__procrustes_global",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "procrustes_global",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__embedding_converter_paper_spec",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__procrustes_global",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "procrustes_global",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__la2m20_integration_script_adaptation",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "la2m20_integration_script_adaptation",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__simplelinear_official_final50_mlp5",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "simplelinear_official_final50_mlp5",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__ridge_affine_l10_bias_regularized",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "ridge_affine_l10_bias_regularized",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      },
+      {
+        "id": "e5_small_base__arc2_fixed_vs_baseline_allpaid__embedding_converter_paper_spec",
+        "kind": "arc2_fixed_vs_baseline_allpaid",
+        "pair": "e5_small_base",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "fixed1024"
+        },
+        "right": {
+          "method": "embedding_converter_paper_spec",
+          "regime": "allpaid28819"
+        },
+        "familywise": true
+      }
+    ],
+    "familywise": {
+      "metric": "ndcg10",
+      "contrasts": 32,
+      "family_confidence": 0.95,
+      "per_interval_confidence": 0.9984375,
+      "method": "bonferroni_percentile"
+    }
+  },
+  "packaged_file_sha256": {
+    "results/fiqa_development/backfill_order.npy": "c5f77490ba57c14ea4d830e17ce67549e0d2c8b41c357a2098635da410e74931",
+    "results/fiqa_development/comparison.csv": "f38d3bd4f5ac2fb26ad189917d9162d5f8d4bd312996ad83755a95a05eed5358",
+    "results/fiqa_development/ids.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "results/fiqa_development/metric_index.json": "51656ed091ed041417b97afccdbe802e5d5e9d76ade7b03385f906602766ee1f",
+    "results/fiqa_development/per_query.npy": "209cef30e1e8bbca17a052bdc75fac9bb24817e75de3e0684c42da90f10102d2",
+    "results/fiqa_development/summary.json": "4c275a6ee89588afc7d60dd50d15f9ceea5d19ff2e0320ac22f6e4b2407903db",
+    "results/fiqa_development/rankings/e5_small_base_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy": "0a169fc279816b55bfa918806e8fc562c8842ef4b3b8a533e780ea781425348f",
+    "results/fiqa_development/rankings/e5_small_base_seed17_25pct_procrustes_global.npy": "249a981d3f0dd23b0e7765a857f44d93f5026c726e3059b313905be59f1100e8",
+    "results/fiqa_development/rankings/e5_small_base_seed17_25pct_procrustes_tangent2_global.npy": "cc4dfe41526fd9347d679c3165c6fe4888b1083a75181e9f204186f5d32cb329",
+    "results/fiqa_development/rankings/e5_small_base_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy": "efbfe60f99a1cc639e05a5f3fff8540601a6942be56c3baf928363b8af43b283",
+    "results/fiqa_development/rankings/e5_small_base_seed17_50pct_procrustes_global.npy": "5eb7ac12ee5d6e6178a08163b279257b6df5f3417bca7cb406d171a1c70ce5da",
+    "results/fiqa_development/rankings/e5_small_base_seed17_50pct_procrustes_tangent2_global.npy": "d8c85add7c9ba2ab8bf3840135fdd184fee30031490f77fc822cf58aaa35fdde",
+    "results/fiqa_development/rankings/e5_small_base_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy": "95f7670acda386102db80f0ab31818c2349f29afada84b6ef45fdeb9b57ece1e",
+    "results/fiqa_development/rankings/e5_small_base_seed29_25pct_procrustes_global.npy": "de22a48e252c8e3f179ee378acb9d5d691c7429cb71f506b05a0640317b34e85",
+    "results/fiqa_development/rankings/e5_small_base_seed29_25pct_procrustes_tangent2_global.npy": "da60307c877d996bca85c065f2cebe5c8529138d3b553b9372f13410675d2638",
+    "results/fiqa_development/rankings/e5_small_base_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy": "81f31c0e44e54aa619631a1c5e6229af6dfb9ec898f93bdb409c9956c1ed46ff",
+    "results/fiqa_development/rankings/e5_small_base_seed29_50pct_procrustes_global.npy": "deb0f8368fec9c0483158a6f40c4bb936243bf087b68748b835cd81deaf74314",
+    "results/fiqa_development/rankings/e5_small_base_seed29_50pct_procrustes_tangent2_global.npy": "e33b0d21fc0f494206e39e4cd6f6c699a1fb064d98e332e6d2154edf92a42755",
+    "results/fiqa_development/rankings/e5_small_base_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy": "3958e2ac62b6c2c1da82b295b174de2c5848e852cac1b05c69577697b3f7b643",
+    "results/fiqa_development/rankings/e5_small_base_seed41_25pct_procrustes_global.npy": "ec185771a7ae78b80709e76d5db3e26420312e759cffdf49b4214d7953e5ad96",
+    "results/fiqa_development/rankings/e5_small_base_seed41_25pct_procrustes_tangent2_global.npy": "3de4eab1d1c3e3f024d800899268af1a37a7dca42345b2d947e8527f436eedbf",
+    "results/fiqa_development/rankings/e5_small_base_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy": "f67db2e562a46cae5d8dd22df96f25c5d7d9fe8cf3543464805b9ba8970bd911",
+    "results/fiqa_development/rankings/e5_small_base_seed41_50pct_procrustes_global.npy": "a1e1325cdb6591e70053d39301f0aa5875511e41e65319e771e91caa839830ff",
+    "results/fiqa_development/rankings/e5_small_base_seed41_50pct_procrustes_tangent2_global.npy": "b25fc55b3d2811ff9660cf0d0c068c1b047a91e630cfe56526755d1db3ba0501",
+    "results/fiqa_development/rankings/e5_small_base_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy": "641d6b3d59b005a6165b621b3fe86a67a42cfe793bb143af512df3ea3d277077",
+    "results/fiqa_development/rankings/e5_small_base_seed53_25pct_procrustes_global.npy": "60a5f97eb88fda15276404b2e45d31a661c83f67f79d48d3f1c2d537a50de993",
+    "results/fiqa_development/rankings/e5_small_base_seed53_25pct_procrustes_tangent2_global.npy": "1bd5fc570a4cbb4e8502281e29fa0c05c7e2878ca8311f8e1fff2370f2e42121",
+    "results/fiqa_development/rankings/e5_small_base_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy": "8b320e58a606617e5c2177a6ee0c613beb94b2fd7115cff3657aa216b219e63d",
+    "results/fiqa_development/rankings/e5_small_base_seed53_50pct_procrustes_global.npy": "a66b5a67575b8b55fe61b007ec3c62ec3a703a16b5f6620e795e650dac2ce7f3",
+    "results/fiqa_development/rankings/e5_small_base_seed53_50pct_procrustes_tangent2_global.npy": "413cc7290f5394a92c686f0cd4facbccf29d589984e361408759f1faf82f2648",
+    "results/fiqa_development/rankings/e5_small_base_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy": "ac660c1aae02abf97c39cb86e5e94b3493dd8367b6a25ecf92c6af0004b6bcec",
+    "results/fiqa_development/rankings/e5_small_base_seed67_25pct_procrustes_global.npy": "92aeeba2fa8dd7d89f5f851bb438ce5176e61f007e88a2965e842427bd0aa2df",
+    "results/fiqa_development/rankings/e5_small_base_seed67_25pct_procrustes_tangent2_global.npy": "c6b27e133ec05dac07fea1c5cc5bb8915e06e5097ad09289cf0c58b1efa29df9",
+    "results/fiqa_development/rankings/e5_small_base_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy": "2a4af718173833dce677b8f980cb79a18833f4a0f996d7f62a9f3b2c57dac2be",
+    "results/fiqa_development/rankings/e5_small_base_seed67_50pct_procrustes_global.npy": "751422130385362bb59d1d2356cb981c155e6a94266af3daf27c0176ea1d539d",
+    "results/fiqa_development/rankings/e5_small_base_seed67_50pct_procrustes_tangent2_global.npy": "efb05a58597b652eabf42e5310c1a901a35e64eac77081c70e9d77a75cc099f1",
+    "results/fiqa_development/rankings/e5_small_base_seedNone_0pct_full_x.npy": "6d27051ebbd7226e3f59bca358fc3b2dcdf2ab7b226f87273aad4873d813d825",
+    "results/fiqa_development/rankings/e5_small_base_seedNone_100pct_full_y.npy": "3c11866ff1b4d64ca581a54e36d4cd4d9672429ff9e50150cf5b5baf7dbbfff4",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy": "26f248bbfe5d0d1131d22644f5d0a2efcf922734534cebabaf429566d8266d5c",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_procrustes_global.npy": "d496787bc9864b89e626e33358b27c475b622879c8a63cc822da5fa447df8961",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_procrustes_tangent2_global.npy": "6c7113299ea166d14f12ab2d909dcc34936b67be6da0dad0addb215f48c5ff32",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy": "e8997733383e9acec6262e20fe9cf76873aef0f141064506449d35b25c3c018f",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_procrustes_global.npy": "b19a4f91097202cdf08354b5a26c0218668211cbc160bd6ad62dcb91f4373e4e",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_procrustes_tangent2_global.npy": "24fe07270c16d1ae862d7b50c6ce83c335966ab1cd3c97a8a853d4685be5497f",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy": "b238a1f01bbfbab1edebf846116542d3f652c7a210397042b4accb18ca14792a",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_procrustes_global.npy": "d2d8cbc12637421952e2f02da0ed4a17f2c4ecee6f4944b091b1c848024ace26",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_procrustes_tangent2_global.npy": "b42dd62a58d5726599af36538466ce618f6174dcaf4823efe1d3c48ca401df62",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy": "19ed16df3b7bf8ed9df31d7a502fc2cc1614e4094664b553b15ffb9dae0f616a",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_procrustes_global.npy": "9f32f1501168c0efb54dc1789d3e85b10ef4fc7aaf8706fb0be60dd98c3d8f63",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_procrustes_tangent2_global.npy": "ef555f8cf3b29668b2c629d45d68aae0caaaecf6d6b76aaaffc19427112364dd",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy": "7958f5850ef0706f6b15c2507fc2ba51569b0ddcfa803e4339fb9625f573bc65",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_procrustes_global.npy": "1e2b29a3666fd1f708ddea79657714b245d9a6a6241fba7d01b4b923bdcbe2ca",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_procrustes_tangent2_global.npy": "6761f3b916b59ce5f42489e163b3e0ae95628ac5f80ad4a89e194867c1d4bbf3",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy": "9e6b5da99262699123a78da8f5a55ad7d87383a934018f7721fee048a4117624",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_procrustes_global.npy": "7467ebc004d94bce24c1692b45177dde58873704b9dcd5d648e09d6a63228205",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_procrustes_tangent2_global.npy": "826b95383249609c16e6b93a0fc3e52d5bf33701c15b5c2bad4de5c1e367bd25",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy": "a137055d616cf6378795fd91e495443e9b4334211750ebdf791083ad036e480b",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_procrustes_global.npy": "37814a859d0d553d6ec6bc979ba679ec2178c361a8d876f4ee032f48509a0f04",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_procrustes_tangent2_global.npy": "477957060069255ee9fe8d5ddefbc2e7663965e2eee7676cda872b12627fd366",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy": "7b84cdd726f0cbbccddbeacb0d0a4eb8fd1974a7023316fd6b3357b8fab5f222",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_procrustes_global.npy": "2e842eb36a3ef22c4d45848b490221465abbab230f83c22b2648485478cb3f98",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_procrustes_tangent2_global.npy": "828d0610c97a76078cc810cca21ab87d5606fd09f1e24cbf2c11bfd6bf0fc883",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy": "a1db031ff94ad7218a54f76bc88a326c4b253769de017a697ad16d042243d35b",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_procrustes_global.npy": "a90f9e52eac3e28c4179c12dc48df32ce8f242760608be78588624e30efc0940",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_procrustes_tangent2_global.npy": "58d189fb91b1b9645d19b41942e7526a06adb5e83b3981230bc6a0e48f0c15e5",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy": "0a971d384e4c045fb54af84e81aba0d9173a3dcf3b0596f4791457d1765c0054",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_procrustes_global.npy": "7eb12b3058ed0ca43a055d4ab2cad9b8b9faec123d2cc90d0b6dd9444e3353e4",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_procrustes_tangent2_global.npy": "9b44bd8ba1fa1c46b7f5be8534bd48e6147ab3db41583f21bee67d9df79f2eb5",
+    "results/fiqa_development/rankings/minilm_distilroberta_seedNone_0pct_full_x.npy": "80c1c87db4e43795e403859b6a90c6117639629c701003de16cd980637d57cc9",
+    "results/fiqa_development/rankings/minilm_distilroberta_seedNone_100pct_full_y.npy": "6e97d19a8da6e664ad47d67e3a9ee606db6a1e8fe9aaf20155200070b0946677",
+    "results/fiqa_development/selections/anchors_seed_17.npy": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742",
+    "results/fiqa_development/selections/anchors_seed_29.npy": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+    "results/fiqa_development/selections/anchors_seed_41.npy": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3",
+    "results/fiqa_development/selections/anchors_seed_53.npy": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc",
+    "results/fiqa_development/selections/anchors_seed_67.npy": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c",
+    "results/fiqa_development/selections/seed17_25pct.npy": "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155",
+    "results/fiqa_development/selections/seed17_50pct.npy": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+    "results/fiqa_development/selections/seed29_25pct.npy": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624",
+    "results/fiqa_development/selections/seed29_50pct.npy": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+    "results/fiqa_development/selections/seed41_25pct.npy": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8",
+    "results/fiqa_development/selections/seed41_50pct.npy": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+    "results/fiqa_development/selections/seed53_25pct.npy": "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94",
+    "results/fiqa_development/selections/seed53_50pct.npy": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+    "results/fiqa_development/selections/seed67_25pct.npy": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2",
+    "results/fiqa_development/selections/seed67_50pct.npy": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24"
+  },
+  "source_sha256_canonical_lf": {
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/embedding_converter.py": "3a9397fb1f7c16c9211f7c47f3f26fb73189cdc47ad89f8d3f6e7df4ea7aabb0",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "ops/b1p_stage.py": "76523d3b24f6d78b52b3935fb4ea9d96a368bf865664de0dd2baa6721ecd8aa6",
+    "ops/b1p_campaign.py": "d89c0086c5484b85751a7420defe9db0c6bb2c9f8fa3f9c2895be6ddc8c337b3",
+    "ops/b1p_neural_worker.py": "624442b7c7911fc010ceb7920f6cce193fbd33440352c3b835b306d74a2d907f",
+    "ops/b1p_score.py": "0d0561aa1a8072d2c98a26aeb8a43db477bb02f0270ca20a62bb94a3614f2790",
+    "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+    "configs/baselines.json": "1bd95fc1dfdea6fd459c825f85c44aeb86d7c1a05cbdb56a5a15f8f9a9a3d4a3",
+    "protocols/B1P_ALL_PAID_FIQA_20261026.md": "27e6f52a46ccf2fd53b409805192b64e7a35adced1e42b0c79a6cb9b3397fbbb"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "embedding_converter",
+  "regime": "anchors",
+  "seed": 53,
+  "lockpath": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+  "output": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/worker",
+  "paired_source": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/NanoNQ_paired_source.npy",
+  "paired_target": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/NanoNQ_paired_target.npy",
+  "full_source": "/network-volume/arc2_recovery_20261030/restored/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/minilm_x_docs.npy",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "input_sha256": {
+    "paired_source": "684a2c4daff00afe8526976002e3be8d32026be2f65b8e5ab1cb9f6f89cbf77c",
+    "paired_target": "e257eeaff0d10361c8329f8e4fa727ef57fc07808892c1f38bb4730004a4dc92",
+    "full_source": "4a807ce6ed5965bbcb77948f295e9bc3c371621a6ada6d9d3f65322dfbdea9a3"
+  }
+}

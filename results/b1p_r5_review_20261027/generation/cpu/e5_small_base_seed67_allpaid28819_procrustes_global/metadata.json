@@ -1,0 +1,13 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "procrustes_global",
+  "fit_pairs": 28819,
+  "fit_seconds": 0.1650667255744338,
+  "mapping_seconds": 0.29180933628231287,
+  "phases": {
+    "procrustes_seconds": 0.129676409997046
+  },
+  "parameters_sha256": "a773a11eaddc99bd154e94bcb3ed688bd91055b521dcb967504a0987e60eaadb",
+  "backend_id": null,
+  "new_physical_document_encodes": 0
+}

@@ -1,0 +1,233 @@
+{
+  "shared_procrustes_seconds": 0.06300840000039898,
+  "shared_dual_factor_seconds": 0.018467899993993342,
+  "trajectories": {
+    "tangent2": {
+      "update_trajectory_seconds": 0.11633580000489019,
+      "steps": [
+        {
+          "step": 1,
+          "seconds": 0.04651210000156425,
+          "radius_quantiles": [
+            0.9715323133397451,
+            0.9948085140593417,
+            1.001922233002525,
+            1.0108080579963732,
+            1.0442276154905767
+          ],
+          "cosine_quantiles": [
+            0.6558625369360741,
+            0.7732385635032377,
+            0.7973875423592867,
+            0.8190886665099261,
+            0.8937708216926177
+          ],
+          "target_norm": 19.463954878899063,
+          "radial_energy": 1.3690156343253498e-29,
+          "tangent_energy": 378.8455395278185,
+          "xt_target_norm": 68.82029575499179,
+          "update_norm": 1.1261676619190768,
+          "coefficient_norm": 19.469674025112585,
+          "normal_equation_relative_residual": 1.0818082936728683e-14
+        },
+        {
+          "step": 2,
+          "seconds": 0.0453947999922093,
+          "radius_quantiles": [
+            0.9691361079634209,
+            1.0183678065569322,
+            1.0365783068663663,
+            1.056232288849937,
+            1.1434488428828298
+          ],
+          "cosine_quantiles": [
+            0.6770629275846511,
+            0.7936202218983273,
+            0.8163288855339332,
+            0.836758708241873,
+            0.9064750123050164
+          ],
+          "target_norm": 19.259665170420927,
+          "radial_energy": 1.8922759831090697e-29,
+          "tangent_energy": 370.9347024767249,
+          "xt_target_norm": 24.219838276502685,
+          "update_norm": 0.9193748413972516,
+          "coefficient_norm": 19.408731466895265,
+          "normal_equation_relative_residual": 3.409441330175936e-14
+        }
+      ]
+    },
+    "chordal2": {
+      "update_trajectory_seconds": 0.11167059998842888,
+      "steps": [
+        {
+          "step": 1,
+          "seconds": 0.042989300010958686,
+          "radius_quantiles": [
+            0.9715323133397451,
+            0.9948085140593417,
+            1.001922233002525,
+            1.0108080579963732,
+            1.0442276154905767
+          ],
+          "cosine_quantiles": [
+            0.6558625369360741,
+            0.7732385635032377,
+            0.7973875423592867,
+            0.8190886665099261,
+            0.8937708216926177
+          ],
+          "target_norm": 20.58257903375097,
+          "radial_energy": 44.797020152786445,
+          "tangent_energy": 378.8455395278185,
+          "xt_target_norm": 22.78971687170166,
+          "update_norm": 1.4728372798802751,
+          "coefficient_norm": 18.888407869319153,
+          "normal_equation_relative_residual": 3.431283629178842e-14
+        },
+        {
+          "step": 2,
+          "seconds": 0.044539099995745346,
+          "radius_quantiles": [
+            0.8938297617418038,
+            0.9291827108783527,
+            0.9409830051111421,
+            0.9546661885063159,
+            1.0331091284545881
+          ],
+          "cosine_quantiles": [
+            0.6762396046256574,
+            0.7907590850563353,
+            0.8136875826540603,
+            0.8338437654803693,
+            0.9030743531127996
+          ],
+          "target_norm": 18.547711028548605,
+          "radial_energy": 33.456702640634454,
+          "tangent_energy": 310.5608817579091,
+          "xt_target_norm": 24.75778433253083,
+          "update_norm": 1.1624133201533926,
+          "coefficient_norm": 18.30307180886119,
+          "normal_equation_relative_residual": 3.051643841556989e-14
+        }
+      ]
+    },
+    "euclidean2": {
+      "update_trajectory_seconds": 0.11300660000415519,
+      "steps": [
+        {
+          "step": 1,
+          "seconds": 0.04317280001123436,
+          "radius_quantiles": [
+            0.9715323133397451,
+            0.9948085140593417,
+            1.001922233002525,
+            1.0108080579963732,
+            1.0442276154905767
+          ],
+          "cosine_quantiles": [
+            0.6558625369360741,
+            0.7732385635032377,
+            0.7973875423592867,
+            0.8190886665099261,
+            0.8937708216926177
+          ],
+          "target_norm": 20.558504760630576,
+          "radial_energy": 45.83036733432016,
+          "tangent_energy": 376.8217506585502,
+          "xt_target_norm": 22.673164319693576,
+          "update_norm": 1.4753349153547854,
+          "coefficient_norm": 18.88321856038013,
+          "normal_equation_relative_residual": 3.5324613714049664e-14
+        },
+        {
+          "step": 2,
+          "seconds": 0.045561399980215356,
+          "radius_quantiles": [
+            0.896428542024128,
+            0.9291730931499287,
+            0.9396007083325818,
+            0.9524199928212064,
+            1.0225521506342614
+          ],
+          "cosine_quantiles": [
+            0.6769555987904581,
+            0.7906921030020913,
+            0.8136319967293256,
+            0.833447652632971,
+            0.9027816185512008
+          ],
+          "target_norm": 19.20536856523534,
+          "radial_energy": 18.491800668203332,
+          "tangent_energy": 350.3543810583263,
+          "xt_target_norm": 14.753349153547854,
+          "update_norm": 1.0855536149104554,
+          "coefficient_norm": 18.42006450638632,
+          "normal_equation_relative_residual": 4.868832954835726e-14
+        }
+      ]
+    }
+  },
+  "unpaid": {
+    "unpaid_cosine_to_B0_quantiles": {
+      "tangent2": [
+        0.9789755125895234,
+        0.9885608603035485,
+        0.9899592475332079,
+        0.9910719408543021,
+        0.9943950978984717
+      ],
+      "chordal2": [
+        0.9826430046530155,
+        0.9912158228430421,
+        0.992150992558237,
+        0.9929948043699642,
+        0.9962955968954736
+      ],
+      "euclidean2": [
+        0.9824372552754396,
+        0.9909163202033648,
+        0.9918972154202208,
+        0.9927692112329671,
+        0.9960087379534938
+      ]
+    },
+    "unpaid_maxabs_to_B0": {
+      "tangent2": 0.032330334186553955,
+      "chordal2": 0.0283455029129982,
+      "euclidean2": 0.02845245972275734
+    },
+    "unpaid_maxabs_to_tangent": {
+      "procrustes": 0.032330334186553955,
+      "chordal2": 0.022545062005519867,
+      "euclidean2": 0.01912401057779789
+    }
+  },
+  "physical_encodings_this_run": 0,
+  "logical_paid_documents": 28819,
+  "fit_pairs": 1024,
+  "methods": {
+    "procrustes": {
+      "map_seconds_including_mmap_flush": 0.610614799981704,
+      "search_seconds": 2.30373809998855,
+      "changed_top10_queries_vs_tangent": 349,
+      "changed_top100_queries_vs_tangent": 500
+    },
+    "tangent2": {
+      "map_seconds_including_mmap_flush": 0.6142269000119995,
+      "search_seconds": 2.315215899987379
+    },
+    "chordal2": {
+      "map_seconds_including_mmap_flush": 0.6466582000139169,
+      "search_seconds": 2.3332524999859743,
+      "changed_top10_queries_vs_tangent": 336,
+      "changed_top100_queries_vs_tangent": 500
+    },
+    "euclidean2": {
+      "map_seconds_including_mmap_flush": 0.64151290000882,
+      "search_seconds": 2.287230699992506,
+      "changed_top10_queries_vs_tangent": 328,
+      "changed_top100_queries_vs_tangent": 500
+    }
+  }
+}

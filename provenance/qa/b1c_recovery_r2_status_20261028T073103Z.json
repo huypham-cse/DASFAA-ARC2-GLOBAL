@@ -1,0 +1,87 @@
+{
+  "observed_utc": "2026-10-28T07:30:46.361050+00:00",
+  "metadata": {
+    "status": "RUNNING",
+    "stage": "full",
+    "code_commit": "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+    "started_utc": "2026-10-28T06:50:59.853338+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null
+  },
+  "progress": {
+    "stage": "GROUP_START",
+    "group": "NanoHotpotQA_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "group_index": 62,
+    "groups_total": 120,
+    "rankings_complete": 146,
+    "rankings_total": 320
+  },
+  "schedule": {
+    "status": "RUNNING",
+    "code_commit": "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+    "started_unix": 1793169809.3765953,
+    "jobs": [
+      {
+        "stage": "smoke",
+        "argv": [
+          "/root/arc2_p3h_20261020/venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py",
+          "--stage",
+          "smoke",
+          "--output",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028",
+          "--code-commit",
+          "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+          "--lock",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json",
+          "--recovery",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+        ],
+        "started_unix": 1793169809.376895,
+        "pid": 79759,
+        "returncode": 0,
+        "ended_unix": 1793170252.1589112
+      },
+      {
+        "stage": "full",
+        "argv": [
+          "/root/arc2_p3h_20261020/venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py",
+          "--stage",
+          "full",
+          "--output",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028",
+          "--code-commit",
+          "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+          "--smoke",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028",
+          "--lock",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json",
+          "--recovery",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+        ],
+        "started_unix": 1793170252.1593666,
+        "pid": 80905
+      }
+    ],
+    "TREC_access": false,
+    "next_scientific_phase_auto_launch": false
+  },
+  "score": null,
+  "score_failure": null,
+  "cells_count": 146,
+  "processes": [
+    "  80239   58090 Rl    354 18902584    44:52 /workspace/cyber-cli-lab/lib/ollama/llama-server --model /workspace/cyber-cli-lab/models/blobs/sha256-9fddd9b57b678ca9f9f7b07b02c6f7107bc0f8b307e2383a68cf7a513e6ae0f5 --port 45829 --host 127.0.0.1 --no-webui --offline -c 16384 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on -b 512 -ub 512 --context-shift --keep 4",
+    "  77677   77661 Sl   15.6 1163644  01:05:10 /root/miniforge3/envs/privpetal/bin/python /root/sandboxdp/artifact/third_party/runners/privpetal_edge.py /root/sandboxdp/artifact/results/E4/tau/thrombosis/eps1/16/seed0/work/Laboratory-Patient/job.json",
+    "  80905   79758 Rl+   7.8 221948      39:54 /root/arc2_p3h_20261020/venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py --stage full --output /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028 --code-commit 67d7b16c28f7205d3873f6fe09df62eab722fdd4 --smoke /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028 --lock /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json --recovery /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json",
+    "  79758   79755 S+    0.0 23240       47:17 /root/arc2_p3h_20261020/venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_campaign.py --code-commit 67d7b16c28f7205d3873f6fe09df62eab722fdd4 --name mini_r2_20261028 --lock /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json --recovery /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+  ],
+  "gpu": "Wed Oct 28 07:30:46 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.5     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          Off |   00000000:1C:00.0 Off |                   On |\n| N/A   37C    P0            119W /  700W |                  N/A   |     N/A      Default |\n|                                         |                        |              Enabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| MIG devices:                                                                            |\n+------------------+----------------------------------+-----------+-----------------------+\n| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|      Shared           |\n|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |\n|                  |                                  |        ECC|                       |\n|==================+==================================+===========+=======================|\n|  0    3   0   0  |           17296MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |\n|                  |                13MiB / 32767MiB  |           |                       |\n+------------------+----------------------------------+-----------+-----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A     77677      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78376      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78377      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78378      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78379      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     80239      C   ...ber-cli-lab/lib/ollama/llama-server          0MiB |\n+-----------------------------------------------------------------------------------------+\n",
+  "stage_error_tail": ""
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-27T03:25:42.996527+00:00",
+  "scope": "Local computational consistency verification; not independent label validation or a formal paper claim audit",
+  "bundle": "D:\\DASFAA-2027-paper\\results\\b1p_r5_review_20261027",
+  "binding": {
+    "lock_sha256": "17e93a5da59fe29193bf385cb9b7a0b94381beea9fc70e32d4bfe8858eeb79d9",
+    "descriptor_sha256": "b3eb72da273310ca969ac174b039feb543f962b79ff0b505bc1b5a653054ca32",
+    "generation_code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+    "recovery_scorer_code_commit": "4062d96c353ac567fb90a6093cd8059d4647e252",
+    "ranking_seal_sha256": "1b993e1bf3fe0248f0a48e52cc371f232ceeba615f81672ec30b81048ba5be1d",
+    "original_metadata_sha256": "c6b386180a9445e0e40efaee1c8bd2a3d234edc1576c9611859a8b2d38b5be0f"
+  },
+  "generation_compact_files_verified": 524,
+  "generation_full_inventory_files": 759,
+  "scorer_smoke_manifest_files_verified": 15,
+  "ranking_cells": 124,
+  "per_query_shape": [
+    124,
+    500,
+    2
+  ],
+  "means_verified": 28,
+  "ordered_contrasts_verified": 32,
+  "nominal95_intervals_verified": 64,
+  "bonferroni_intervals_verified": 32,
+  "numeric_values_compared": 34960,
+  "largest_absolute_discrepancy": 2.220446049250313e-16,
+  "tolerance": 1e-12,
+  "bootstrap_indices_sha256": "06f1b7712fe8eb020eb247239ec6bca26b0a124ef9e9b6ede1e957a065fb25c8",
+  "historical_ranking_sha_matched_metric_cells": 34,
+  "original_failure_preserved": true,
+  "original_parse_started": false,
+  "TREC_access": false,
+  "local_qrel_reads": 0,
+  "new_fitting": false,
+  "numpy_version": "2.5.3",
+  "verifier_sha256": "af998108f75d426227ec1d90c0ef551385c1161df152fe92b449f1a35810fa42",
+  "wall_seconds": 5.8742103000040515
+}

@@ -1,0 +1,10 @@
+{
+  "dataset": "synthetic",
+  "pair": "synthetic",
+  "seed": 17,
+  "budget": "75pct",
+  "method": "la2m20_integration_script_adaptation",
+  "endpoint_sha256": "3102519fb4f1960842793518b689e05c86626f675edd1581f0f6fb93114a5de4",
+  "ranking_sha256": "bd918a2815171db28ec308d5f2836ec59045442bf6c5ad58f35aca3298cecf5b",
+  "all_top100_ids_and_order_equal": true
+}

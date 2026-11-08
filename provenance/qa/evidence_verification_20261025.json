@@ -1,0 +1,16 @@
+{
+  "scope": "copy/hash/arithmetic verification; not independent claim audit",
+  "new_qrel_reads": 0,
+  "original_per_query_subset_exact": true,
+  "status": "PASS",
+  "copied_files": 85,
+  "rankings": 64,
+  "metric_shape": [
+    64,
+    500,
+    2
+  ],
+  "summary_rows": 12,
+  "original_prelabel_seal_verified": true,
+  "anchor_budget_checks_passed": true
+}

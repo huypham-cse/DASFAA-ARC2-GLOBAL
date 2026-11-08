@@ -1,0 +1,539 @@
+{
+  "status": "CPU_BASELINES_PASS",
+  "la2m": [
+    {
+      "seed": 17,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 17,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 17,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 17,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 17,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "clusters": 20,
+      "local_maps": 20,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "clusters": 20,
+      "local_maps": 20,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "clusters": 20,
+      "local_maps": 20,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "clusters": 20,
+      "local_maps": 20,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 1,
+      "local_maps": 1,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "clusters": 4,
+      "local_maps": 4,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "clusters": 20,
+      "local_maps": 20,
+      "max_raw_delta": 0.0,
+      "nonanchor_target_invariance": true,
+      "paired_only_fit": true,
+      "paid_overwrite_and_unpaid_identity": true
+    }
+  ],
+  "ridge": [
+    {
+      "seed": 17,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 17,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 17,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 29,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 41,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 53,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        24,
+        40
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        40,
+        24
+      ],
+      "fit_pairs": 64,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    },
+    {
+      "seed": 67,
+      "dims": [
+        384,
+        768
+      ],
+      "fit_pairs": 1024,
+      "coefficient_max_delta": 0.0,
+      "lambda": 10,
+      "bias_regularized": true,
+      "nonorthogonal": true
+    }
+  ],
+  "singleton_global_fallback": true,
+  "invalid_gallery_rejections": 3
+}

@@ -1,0 +1,41 @@
+{
+  "stage": "B1-P CPU scoring recovery only",
+  "descriptor_path": "provenance/qa/b1p_scoring_recovery_source_20261027.json",
+  "descriptor_sha256": "b3eb72da273310ca969ac174b039feb543f962b79ff0b505bc1b5a653054ca32",
+  "source_descriptor": {
+    "status": "124_RANKINGS_SEALED_ORIGINAL_SCORER_FAILED_BEFORE_PARSE",
+    "observed_utc": "2026-10-27T03:10:12.331498+00:00",
+    "source_root": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5",
+    "run": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026",
+    "source_code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+    "source_lock_path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/configs/b1p_lock.json",
+    "source_lock_sha256": "0224200454b0deb8f2176e509d8bd99da0f59c7ae7b12a2488ec6eadad7308ad",
+    "ranking_seal_sha256": "1b993e1bf3fe0248f0a48e52cc371f232ceeba615f81672ec30b81048ba5be1d",
+    "metadata_sha256": "c6b386180a9445e0e40efaee1c8bd2a3d234edc1576c9611859a8b2d38b5be0f",
+    "original_scoring_files_sha256": {
+      "scoring/started.json": "da66fdf3c1dcb727756f832cbee8b59c21420ff88f94e18ab32cb2151d03357f",
+      "scoring/failure.json": "2dd3ae5e231212c8c89964b04677ac601ec55ca70885366bd2fc5c3437c85eaa",
+      "scorer.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scorer.stderr.log": "636ca45eaaab40aa9c6d42faf2ca128c38e703a98c954cde24f8019eb565f4be"
+    },
+    "original_qrel_parse_started": false,
+    "ranking_count": 124,
+    "cause": "Original scorer writes exclusive started.json twice when dev_label_transport is present; FileExistsError before source/seal validation or TSV parse",
+    "raw_status_remains": "FAILED_PRESERVED",
+    "TREC_access": false
+  },
+  "cpu_environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "cpu_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "cpu_sklearn_version": "1.5.1",
+  "recovery_source_sha256_canonical_lf": {
+    "ops/b1p_score_recovery.py": "24ba40b2a6eeba8f6616fee4d49b740ffaa3dcca3d943d8b7adc96f8ad8969c4",
+    "protocols/B1P_SCORING_RECOVERY_20261027.md": "c4e75056eaf6a4483f55bc819dd0491d53cb13df65861a464585cf257e8bf911"
+  }
+}

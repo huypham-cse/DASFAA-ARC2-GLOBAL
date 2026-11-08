@@ -1,0 +1,25 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "la2m20_integration_script_adaptation",
+  "fit_pairs": 1024,
+  "fit_seconds": 1.6264042584225535,
+  "mapping_seconds": 1.3958204183727503,
+  "phases": {},
+  "parameters_sha256": "aec9133d314954fc21a5393e81a6e2e53a921bb4d69977c9c7f74abfa2335f5b",
+  "backend_id": null,
+  "new_physical_document_encodes": 0,
+  "new_fit": true,
+  "group_id": "FiQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation",
+  "dataset": "FiQA",
+  "pair": "e5_small_base",
+  "seed": 53,
+  "regime": "fixed1024",
+  "paired_target_path": "groups/FiQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/FiQA_anchor_targets.npy",
+  "paired_target_sha256": "8d8d3aae8e339d50fcd27e19cf8abd3c5645a88b0db251433c6d0d2dc47b5162",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "50pct",
+    "75pct"
+  ]
+}

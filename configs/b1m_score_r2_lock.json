@@ -1,0 +1,392 @@
+{
+  "models": {
+    "distilroberta_y": {
+      "id": "sentence-transformers/all-distilroberta-v1",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/distilroberta_y",
+      "revision": "842eaed40bee4d61673a81c92d5689a8fed7a09f",
+      "dimension": 768,
+      "file_sha256": {
+        "1_Pooling/config.json": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56",
+        "config.json": "6f9efb40bd192274dd2e6f43c326cd4571cbefe647f4a274e83073be4f13f928",
+        "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "data_config.json": "2ba682c372ee7ac37d519df39571ec0543f55ae31273844be05f8a5acdf92e2a",
+        "merges.txt": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862",
+        "model.safetensors": "3c739fad12f3f12428a677cfcc73391a5860a8bad0ff7a971fd67e6065201fc2",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+        "special_tokens_map.json": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+        "tokenizer.json": "7a6751507c44ab383cc8ba8ab97cd857d35025ff1b29162b1690cc5e0c6030e9",
+        "tokenizer_config.json": "5066b57002ab15418f3472aa53a8b083878f84050e8153ba62b9d40e10651a4c",
+        "vocab.json": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e"
+      },
+      "document_prefix": "",
+      "query_prefix": ""
+    },
+    "e5_base_y": {
+      "id": "intfloat/e5-base-v2",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/e5_base_y",
+      "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+      "dimension": 768,
+      "file_sha256": {
+        "1_Pooling/config.json": "f586ab6c734af7b8d14d898bfa7faa886f23b46f86dd1730514309893af13d75",
+        "config.json": "01cc39aa39538a8179aa131c8a16adc03b506c92009f091502e4eb0c702f5f78",
+        "model.safetensors": "d0d559c47d5f71b1d280b13b62a2657f3e3bc70c0786f9ab91a36545e6a8f693",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "ae83fa6ca0333117ff12606020af925d648667ef70d92ff7f27d781ba0ca4544",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "document_prefix": "passage: ",
+      "query_prefix": "query: "
+    },
+    "e5_small_x": {
+      "id": "intfloat/e5-small-v2",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/e5_small_x",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "dimension": 384,
+      "file_sha256": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "5dfb0363cd0243be179c03bcaafd1542d0fbb95e8cbcf575fff3e229342adc2f",
+        "model.safetensors": "45bfa60070649aae2244fbc9d508537779b93b6f353c17b0f95ceccb1c5116c1",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "ae83fa6ca0333117ff12606020af925d648667ef70d92ff7f27d781ba0ca4544",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "document_prefix": "passage: ",
+      "query_prefix": "query: "
+    },
+    "minilm_x": {
+      "id": "sentence-transformers/all-MiniLM-L6-v2",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/minilm_x",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "dimension": 384,
+      "file_sha256": {
+        "1_Pooling/config.json": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+        "config.json": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+        "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "data_config.json": "32edcb108fc2516b920734a862ae0692bcae1c5d45d5f8d972cb0d53434a4c54",
+        "model.safetensors": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+        "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "tokenizer.json": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "tokenizer_config.json": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "document_prefix": "",
+      "query_prefix": ""
+    }
+  },
+  "cpu_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "gpu_versions": {
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "4.1.0",
+    "transformers": "4.51.3"
+  },
+  "cpu_python": "/root/arc2_p3h_20261020/venv/bin/python",
+  "gpu_python": "/root/paper-P2/.venv/bin/python",
+  "fiqa": {
+    "manifest_path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/manifest.json",
+    "manifest_sha256": "e22cf779ba9f280b7f97e93cb48cf0ef009c8cf70940aa9f34082f608e8f3ba6"
+  },
+  "seeds": [
+    17,
+    29,
+    41,
+    53,
+    67
+  ],
+  "stage": "B1-M scoring format repair only; no fits or new rankings",
+  "model_revision": "arc2_global_tangent2_r1",
+  "cpu_environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "b1a_run": "/root/arc2_global_paper_20261025/code_f977483/results/b1a_r1_20261025",
+  "b1a_metadata_sha256": "683ff2c45bca41cfca98f138a61caadb8ec49cf41653789c98fcd2081d10e65a",
+  "nano_datasets": [
+    "NanoNQ",
+    "NanoHotpotQA",
+    "NanoFEVER"
+  ],
+  "nano_input_revisions": {
+    "NanoNQ": {
+      "repo": "zeta-alpha-ai/NanoNQ",
+      "revision": "77540146379abf95df8326a3c5bb9eb21c7146c3",
+      "expected_docs": 5035,
+      "expected_queries": 50,
+      "files": [
+        {
+          "rfilename": "corpus/train-00000-of-00001.parquet",
+          "blobId": "54ce8461ac23e7191b6a72ba645aaab88e4c3e71",
+          "size": 1776094,
+          "lfs": {
+            "sha256": "0a23818bfb7f8eeb0aa3c6db6dcd629122adeb1db9ee74a7344b0b17405d06f5",
+            "size": 1776094,
+            "pointerSize": 132
+          }
+        },
+        {
+          "rfilename": "queries/train-00000-of-00001.parquet",
+          "blobId": "d5685e59d3a9a1df7e0e80e9dc283e256f8fbe59",
+          "size": 3658,
+          "lfs": {
+            "sha256": "fbcbcff5d8a537e68075a891b565c1891b51c0bcbac4556ed97ff48aa8cebc5b",
+            "size": 3658,
+            "pointerSize": 129
+          }
+        }
+      ],
+      "qrels_requested_or_read": false
+    },
+    "NanoHotpotQA": {
+      "repo": "zeta-alpha-ai/NanoHotpotQA",
+      "revision": "d79c0cdda980aba54842756770928035e1b61a51",
+      "expected_docs": 5090,
+      "expected_queries": 50,
+      "files": [
+        {
+          "rfilename": "corpus/train-00000-of-00001.parquet",
+          "blobId": "88e895c36eedcfdbadfd0c42d0a5ebead06d8af3",
+          "size": 1247690,
+          "lfs": {
+            "sha256": "ba6b24a43534da33144886762af4984dadcd54c8969deeb3cf6689d9fd3174b9",
+            "size": 1247690,
+            "pointerSize": 132
+          }
+        },
+        {
+          "rfilename": "queries/train-00000-of-00001.parquet",
+          "blobId": "65be89fea06e4ab7daa7da5374021ce02a698894",
+          "size": 6431,
+          "lfs": {
+            "sha256": "6b65aa944e0d12f9e9996a78fe6f3348c06c169da42cc85d6d4004eff9811890",
+            "size": 6431,
+            "pointerSize": 129
+          }
+        }
+      ],
+      "qrels_requested_or_read": false
+    },
+    "NanoFEVER": {
+      "repo": "zeta-alpha-ai/NanoFEVER",
+      "revision": "a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8",
+      "expected_docs": 4996,
+      "expected_queries": 50,
+      "files": [
+        {
+          "rfilename": "corpus/train-00000-of-00001.parquet",
+          "blobId": "031c47684662f162d617a7921add10a3545d0751",
+          "size": 3930640,
+          "lfs": {
+            "sha256": "27030417f0df4af2f762bae0477215ea7c5df28ce4f2944df8847f57defd05ad",
+            "size": 3930640,
+            "pointerSize": 132
+          }
+        },
+        {
+          "rfilename": "queries/train-00000-of-00001.parquet",
+          "blobId": "ec21051da07b6a3eac66256b65feae6be577c1ee",
+          "size": 3881,
+          "lfs": {
+            "sha256": "f3741586cc44563a481b3d12891d46cf33266125cf91f6ddc2ff0d21c82bc9d5",
+            "size": 3881,
+            "pointerSize": 129
+          }
+        }
+      ],
+      "qrels_requested_or_read": false
+    }
+  },
+  "artificial_caps": null,
+  "next_stage_requires_user_confirmation": true,
+  "scoring": {
+    "datasets": {
+      "NanoNQ": {
+        "format": "parquet",
+        "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoNQ/resolve/77540146379abf95df8326a3c5bb9eb21c7146c3/qrels/train-00000-of-00001.parquet",
+        "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+        "bytes": 2020,
+        "implicit_binary_grade": 1
+      },
+      "NanoHotpotQA": {
+        "format": "parquet",
+        "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoHotpotQA/resolve/d79c0cdda980aba54842756770928035e1b61a51/qrels/train-00000-of-00001.parquet",
+        "sha256": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+        "bytes": 3424,
+        "implicit_binary_grade": 1
+      },
+      "NanoFEVER": {
+        "format": "parquet",
+        "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoFEVER/resolve/a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8/qrels/train-00000-of-00001.parquet",
+        "sha256": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+        "bytes": 2730,
+        "implicit_binary_grade": 1
+      },
+      "FiQA": {
+        "format": "tsv",
+        "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+      }
+    },
+    "bootstrap_draws": 20000,
+    "bootstrap_seed": 20261026,
+    "familywise": false,
+    "contrasts": [
+      [
+        "arc2_global_tangent2_r1",
+        "procrustes_global"
+      ],
+      [
+        "arc2_global_tangent2_r1",
+        "tangent1_l10"
+      ],
+      [
+        "arc2_global_tangent2_r1",
+        "ridge_affine_l10_bias_regularized"
+      ],
+      [
+        "tangent2_l1",
+        "arc2_global_tangent2_r1"
+      ],
+      [
+        "tangent2_l100",
+        "arc2_global_tangent2_r1"
+      ]
+    ],
+    "aggregate_familywise": {
+      "scope": "overall_equal_24_strata",
+      "contrasts": 5,
+      "family_confidence": 0.95,
+      "per_interval_confidence": 0.99,
+      "method": "bonferroni_percentile"
+    }
+  },
+  "packaged_file_sha256": {
+    "results/fiqa_development/backfill_order.npy": "c5f77490ba57c14ea4d830e17ce67549e0d2c8b41c357a2098635da410e74931",
+    "results/fiqa_development/comparison.csv": "f38d3bd4f5ac2fb26ad189917d9162d5f8d4bd312996ad83755a95a05eed5358",
+    "results/fiqa_development/ids.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "results/fiqa_development/metric_index.json": "51656ed091ed041417b97afccdbe802e5d5e9d76ade7b03385f906602766ee1f",
+    "results/fiqa_development/per_query.npy": "209cef30e1e8bbca17a052bdc75fac9bb24817e75de3e0684c42da90f10102d2",
+    "results/fiqa_development/summary.json": "4c275a6ee89588afc7d60dd50d15f9ceea5d19ff2e0320ac22f6e4b2407903db",
+    "results/fiqa_development/rankings/e5_small_base_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy": "0a169fc279816b55bfa918806e8fc562c8842ef4b3b8a533e780ea781425348f",
+    "results/fiqa_development/rankings/e5_small_base_seed17_25pct_procrustes_global.npy": "249a981d3f0dd23b0e7765a857f44d93f5026c726e3059b313905be59f1100e8",
+    "results/fiqa_development/rankings/e5_small_base_seed17_25pct_procrustes_tangent2_global.npy": "cc4dfe41526fd9347d679c3165c6fe4888b1083a75181e9f204186f5d32cb329",
+    "results/fiqa_development/rankings/e5_small_base_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy": "efbfe60f99a1cc639e05a5f3fff8540601a6942be56c3baf928363b8af43b283",
+    "results/fiqa_development/rankings/e5_small_base_seed17_50pct_procrustes_global.npy": "5eb7ac12ee5d6e6178a08163b279257b6df5f3417bca7cb406d171a1c70ce5da",
+    "results/fiqa_development/rankings/e5_small_base_seed17_50pct_procrustes_tangent2_global.npy": "d8c85add7c9ba2ab8bf3840135fdd184fee30031490f77fc822cf58aaa35fdde",
+    "results/fiqa_development/rankings/e5_small_base_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy": "95f7670acda386102db80f0ab31818c2349f29afada84b6ef45fdeb9b57ece1e",
+    "results/fiqa_development/rankings/e5_small_base_seed29_25pct_procrustes_global.npy": "de22a48e252c8e3f179ee378acb9d5d691c7429cb71f506b05a0640317b34e85",
+    "results/fiqa_development/rankings/e5_small_base_seed29_25pct_procrustes_tangent2_global.npy": "da60307c877d996bca85c065f2cebe5c8529138d3b553b9372f13410675d2638",
+    "results/fiqa_development/rankings/e5_small_base_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy": "81f31c0e44e54aa619631a1c5e6229af6dfb9ec898f93bdb409c9956c1ed46ff",
+    "results/fiqa_development/rankings/e5_small_base_seed29_50pct_procrustes_global.npy": "deb0f8368fec9c0483158a6f40c4bb936243bf087b68748b835cd81deaf74314",
+    "results/fiqa_development/rankings/e5_small_base_seed29_50pct_procrustes_tangent2_global.npy": "e33b0d21fc0f494206e39e4cd6f6c699a1fb064d98e332e6d2154edf92a42755",
+    "results/fiqa_development/rankings/e5_small_base_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy": "3958e2ac62b6c2c1da82b295b174de2c5848e852cac1b05c69577697b3f7b643",
+    "results/fiqa_development/rankings/e5_small_base_seed41_25pct_procrustes_global.npy": "ec185771a7ae78b80709e76d5db3e26420312e759cffdf49b4214d7953e5ad96",
+    "results/fiqa_development/rankings/e5_small_base_seed41_25pct_procrustes_tangent2_global.npy": "3de4eab1d1c3e3f024d800899268af1a37a7dca42345b2d947e8527f436eedbf",
+    "results/fiqa_development/rankings/e5_small_base_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy": "f67db2e562a46cae5d8dd22df96f25c5d7d9fe8cf3543464805b9ba8970bd911",
+    "results/fiqa_development/rankings/e5_small_base_seed41_50pct_procrustes_global.npy": "a1e1325cdb6591e70053d39301f0aa5875511e41e65319e771e91caa839830ff",
+    "results/fiqa_development/rankings/e5_small_base_seed41_50pct_procrustes_tangent2_global.npy": "b25fc55b3d2811ff9660cf0d0c068c1b047a91e630cfe56526755d1db3ba0501",
+    "results/fiqa_development/rankings/e5_small_base_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy": "641d6b3d59b005a6165b621b3fe86a67a42cfe793bb143af512df3ea3d277077",
+    "results/fiqa_development/rankings/e5_small_base_seed53_25pct_procrustes_global.npy": "60a5f97eb88fda15276404b2e45d31a661c83f67f79d48d3f1c2d537a50de993",
+    "results/fiqa_development/rankings/e5_small_base_seed53_25pct_procrustes_tangent2_global.npy": "1bd5fc570a4cbb4e8502281e29fa0c05c7e2878ca8311f8e1fff2370f2e42121",
+    "results/fiqa_development/rankings/e5_small_base_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy": "8b320e58a606617e5c2177a6ee0c613beb94b2fd7115cff3657aa216b219e63d",
+    "results/fiqa_development/rankings/e5_small_base_seed53_50pct_procrustes_global.npy": "a66b5a67575b8b55fe61b007ec3c62ec3a703a16b5f6620e795e650dac2ce7f3",
+    "results/fiqa_development/rankings/e5_small_base_seed53_50pct_procrustes_tangent2_global.npy": "413cc7290f5394a92c686f0cd4facbccf29d589984e361408759f1faf82f2648",
+    "results/fiqa_development/rankings/e5_small_base_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy": "ac660c1aae02abf97c39cb86e5e94b3493dd8367b6a25ecf92c6af0004b6bcec",
+    "results/fiqa_development/rankings/e5_small_base_seed67_25pct_procrustes_global.npy": "92aeeba2fa8dd7d89f5f851bb438ce5176e61f007e88a2965e842427bd0aa2df",
+    "results/fiqa_development/rankings/e5_small_base_seed67_25pct_procrustes_tangent2_global.npy": "c6b27e133ec05dac07fea1c5cc5bb8915e06e5097ad09289cf0c58b1efa29df9",
+    "results/fiqa_development/rankings/e5_small_base_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy": "2a4af718173833dce677b8f980cb79a18833f4a0f996d7f62a9f3b2c57dac2be",
+    "results/fiqa_development/rankings/e5_small_base_seed67_50pct_procrustes_global.npy": "751422130385362bb59d1d2356cb981c155e6a94266af3daf27c0176ea1d539d",
+    "results/fiqa_development/rankings/e5_small_base_seed67_50pct_procrustes_tangent2_global.npy": "efb05a58597b652eabf42e5310c1a901a35e64eac77081c70e9d77a75cc099f1",
+    "results/fiqa_development/rankings/e5_small_base_seedNone_0pct_full_x.npy": "6d27051ebbd7226e3f59bca358fc3b2dcdf2ab7b226f87273aad4873d813d825",
+    "results/fiqa_development/rankings/e5_small_base_seedNone_100pct_full_y.npy": "3c11866ff1b4d64ca581a54e36d4cd4d9672429ff9e50150cf5b5baf7dbbfff4",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_embedding_converter_paper_spec_anchor1024.npy": "26f248bbfe5d0d1131d22644f5d0a2efcf922734534cebabaf429566d8266d5c",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_procrustes_global.npy": "d496787bc9864b89e626e33358b27c475b622879c8a63cc822da5fa447df8961",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_25pct_procrustes_tangent2_global.npy": "6c7113299ea166d14f12ab2d909dcc34936b67be6da0dad0addb215f48c5ff32",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_embedding_converter_paper_spec_anchor1024.npy": "e8997733383e9acec6262e20fe9cf76873aef0f141064506449d35b25c3c018f",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_procrustes_global.npy": "b19a4f91097202cdf08354b5a26c0218668211cbc160bd6ad62dcb91f4373e4e",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed17_50pct_procrustes_tangent2_global.npy": "24fe07270c16d1ae862d7b50c6ce83c335966ab1cd3c97a8a853d4685be5497f",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_embedding_converter_paper_spec_anchor1024.npy": "b238a1f01bbfbab1edebf846116542d3f652c7a210397042b4accb18ca14792a",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_procrustes_global.npy": "d2d8cbc12637421952e2f02da0ed4a17f2c4ecee6f4944b091b1c848024ace26",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_25pct_procrustes_tangent2_global.npy": "b42dd62a58d5726599af36538466ce618f6174dcaf4823efe1d3c48ca401df62",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_embedding_converter_paper_spec_anchor1024.npy": "19ed16df3b7bf8ed9df31d7a502fc2cc1614e4094664b553b15ffb9dae0f616a",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_procrustes_global.npy": "9f32f1501168c0efb54dc1789d3e85b10ef4fc7aaf8706fb0be60dd98c3d8f63",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed29_50pct_procrustes_tangent2_global.npy": "ef555f8cf3b29668b2c629d45d68aae0caaaecf6d6b76aaaffc19427112364dd",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_embedding_converter_paper_spec_anchor1024.npy": "7958f5850ef0706f6b15c2507fc2ba51569b0ddcfa803e4339fb9625f573bc65",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_procrustes_global.npy": "1e2b29a3666fd1f708ddea79657714b245d9a6a6241fba7d01b4b923bdcbe2ca",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_25pct_procrustes_tangent2_global.npy": "6761f3b916b59ce5f42489e163b3e0ae95628ac5f80ad4a89e194867c1d4bbf3",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_embedding_converter_paper_spec_anchor1024.npy": "9e6b5da99262699123a78da8f5a55ad7d87383a934018f7721fee048a4117624",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_procrustes_global.npy": "7467ebc004d94bce24c1692b45177dde58873704b9dcd5d648e09d6a63228205",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed41_50pct_procrustes_tangent2_global.npy": "826b95383249609c16e6b93a0fc3e52d5bf33701c15b5c2bad4de5c1e367bd25",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_embedding_converter_paper_spec_anchor1024.npy": "a137055d616cf6378795fd91e495443e9b4334211750ebdf791083ad036e480b",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_procrustes_global.npy": "37814a859d0d553d6ec6bc979ba679ec2178c361a8d876f4ee032f48509a0f04",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_25pct_procrustes_tangent2_global.npy": "477957060069255ee9fe8d5ddefbc2e7663965e2eee7676cda872b12627fd366",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy": "7b84cdd726f0cbbccddbeacb0d0a4eb8fd1974a7023316fd6b3357b8fab5f222",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_procrustes_global.npy": "2e842eb36a3ef22c4d45848b490221465abbab230f83c22b2648485478cb3f98",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_procrustes_tangent2_global.npy": "828d0610c97a76078cc810cca21ab87d5606fd09f1e24cbf2c11bfd6bf0fc883",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_embedding_converter_paper_spec_anchor1024.npy": "a1db031ff94ad7218a54f76bc88a326c4b253769de017a697ad16d042243d35b",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_procrustes_global.npy": "a90f9e52eac3e28c4179c12dc48df32ce8f242760608be78588624e30efc0940",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_25pct_procrustes_tangent2_global.npy": "58d189fb91b1b9645d19b41942e7526a06adb5e83b3981230bc6a0e48f0c15e5",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_embedding_converter_paper_spec_anchor1024.npy": "0a971d384e4c045fb54af84e81aba0d9173a3dcf3b0596f4791457d1765c0054",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_procrustes_global.npy": "7eb12b3058ed0ca43a055d4ab2cad9b8b9faec123d2cc90d0b6dd9444e3353e4",
+    "results/fiqa_development/rankings/minilm_distilroberta_seed67_50pct_procrustes_tangent2_global.npy": "9b44bd8ba1fa1c46b7f5be8534bd48e6147ab3db41583f21bee67d9df79f2eb5",
+    "results/fiqa_development/rankings/minilm_distilroberta_seedNone_0pct_full_x.npy": "80c1c87db4e43795e403859b6a90c6117639629c701003de16cd980637d57cc9",
+    "results/fiqa_development/rankings/minilm_distilroberta_seedNone_100pct_full_y.npy": "6e97d19a8da6e664ad47d67e3a9ee606db6a1e8fe9aaf20155200070b0946677",
+    "results/fiqa_development/selections/anchors_seed_17.npy": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742",
+    "results/fiqa_development/selections/anchors_seed_29.npy": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+    "results/fiqa_development/selections/anchors_seed_41.npy": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3",
+    "results/fiqa_development/selections/anchors_seed_53.npy": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc",
+    "results/fiqa_development/selections/anchors_seed_67.npy": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c",
+    "results/fiqa_development/selections/seed17_25pct.npy": "2686a79e24aac8fb54f8e072f039f81c6e51117479e620f26dca24ddbdc69155",
+    "results/fiqa_development/selections/seed17_50pct.npy": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+    "results/fiqa_development/selections/seed29_25pct.npy": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624",
+    "results/fiqa_development/selections/seed29_50pct.npy": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+    "results/fiqa_development/selections/seed41_25pct.npy": "5496552a3332f6a37735e63a1748e72c2b964ed068c3e0a059b6371c84ae36c8",
+    "results/fiqa_development/selections/seed41_50pct.npy": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+    "results/fiqa_development/selections/seed53_25pct.npy": "a53bdf7910c61feeb72aa714f1183e5b9d7467691012b2d1aca31d4392046d94",
+    "results/fiqa_development/selections/seed53_50pct.npy": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+    "results/fiqa_development/selections/seed67_25pct.npy": "b94d437fd3d09147739ca30ebbb31ea6954c18e504150b69442956a4b94e78c2",
+    "results/fiqa_development/selections/seed67_50pct.npy": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24"
+  },
+  "source_sha256_canonical_lf": {
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1m_stage.py": "23026d944f4c94863a7d659ff5849b26dfb666b42a3004747c19b1878a9cef2c",
+    "ops/b1m_encode.py": "0cb7f97b4aadf742e533f45ca3d32a4fed48021cb7bbecb71eeda6db23826f7f",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "ops/b1p0_worker.py": "2b2c3d79438e9cf8d26e24b145258bcca2a79b775088ce0ffa8946c524fe617d",
+    "ops/b1mp0_campaign.py": "7ff7b5e7b8f96518fc45eba929c462a75d0292393c4116f6c862c214fb88bd41",
+    "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+    "configs/baselines.json": "1bd95fc1dfdea6fd459c825f85c44aeb86d7c1a05cbdb56a5a15f8f9a9a3d4a3",
+    "protocols/B1M_B1P0_DEVELOPMENT_20261026.md": "6a78cbd26a9075e32b14985705577e3868f4a2f22fc6b9e71325e926596ee196",
+    "protocols/B1M_B1P0_R1_GIT_INPUT_BYTES_20261026.md": "27a042dc7703af7cd9d0121d54c87d42a127b11f946555f730cafd6accf4f97f",
+    "protocols/B1M_R2_BINARY_QRELS_SCORER_20261026.md": "bd84e5e158a160a60c8cdc605e764d70ee3d7cabe403c6e463749c2435664746"
+  },
+  "amendment": "protocols/B1M_B1P0_R1_GIT_INPUT_BYTES_20261026.md",
+  "rescore_context": {
+    "original_lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+    "ranking_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+    "original_code_commit": "4056612dcccac74fdf84ccf67783ab87afd85c26",
+    "prior_failure_sha256": "9e787eeda5c99e562b672615303999f5b6c5f907a33f387ec6176a4da1070cfc",
+    "prior_failure_path": "scoring/failure.json",
+    "prior_first_access_sha256": "5f8843b7d5fe0e5919ba25699068bd5002ffc4fbad7c32223ed34335d9d10ed7"
+  }
+}

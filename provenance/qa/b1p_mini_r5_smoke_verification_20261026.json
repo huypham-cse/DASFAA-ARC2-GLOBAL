@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "six_methods": 6,
+  "dense_neighbor_checks": 38,
+  "exact_resume_cases": 2,
+  "synthetic_exit_cases": 2,
+  "TREC_access": false,
+  "verifier_qrel_reads": 0,
+  "scope": "compact receipt/hash/recovery verification; large weights/proxies remain remote; no full-quality claim"
+}

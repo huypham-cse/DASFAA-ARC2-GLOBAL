@@ -1,0 +1,72 @@
+{
+  "key": "minilm2020",
+  "audit_status": "same-family/provisional",
+  "reviewer": "gpt-6.1-sol, high reasoning; fresh single-entry review",
+  "checked_on": "2026-11-01",
+  "existence": {
+    "verdict": "VERIFIED",
+    "reason": "Live official NeurIPS proceedings landing page, publisher BibTeX export, and published PDF identify this paper."
+  },
+  "metadata": {
+    "verdict": "CORRECT",
+    "authors": ["Wenhui Wang", "Furu Wei", "Li Dong", "Hangbo Bao", "Nan Yang", "Ming Zhou"],
+    "title": "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers",
+    "year": 2020,
+    "venue": "Advances in Neural Information Processing Systems",
+    "volume": "33",
+    "pages": "5776--5788",
+    "version": "Published NeurIPS 2020 proceedings version; 13-page publisher PDF",
+    "publisher": "Curran Associates, Inc.",
+    "required_bib_changes": [],
+    "note": "Supplied authors, title, year, venue, volume, and pages match the live publisher export. Editor, publisher, and URL fields are optional additions."
+  },
+  "sources": [
+    {
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+      "type": "official publisher landing page",
+      "live_lookup": true,
+      "facts": ["Paper exists with the supplied author order and title in NeurIPS 2020, volume 33.", "The contribution is task-agnostic Transformer compression through deep self-attention distillation."]
+    },
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/3f5ee243547dee91fbd053c1c4a845aa-Bibtex.bib",
+      "type": "official publisher BibTeX",
+      "live_lookup": true,
+      "retrieval_note": "Web reader rejected application/x-bibtex; retrieved live using PowerShell Invoke-WebRequest and decoded UTF-8 content.",
+      "facts": ["Confirms authors, title, 2020, proceedings title, volume 33, pages 5776--5788, and Curran Associates publisher."]
+    },
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf",
+      "type": "official published paper",
+      "live_lookup": true,
+      "facts": ["Sections 1 and 3 describe the MiniLM model family and self-attention distribution/value-relation distillation.", "Table 3 includes a six-layer, 384-hidden-dimension MiniLM architecture.", "This paper does not document the later all-MiniLM-L6-v2 sentence-transformers checkpoint or this manuscript's migration experiments."]
+    },
+    {
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+      "type": "official checkpoint owner's model card",
+      "live_lookup": true,
+      "facts": ["The named checkpoint outputs 384-dimensional sentence/paragraph embeddings.", "Its Background and Training procedure sections identify nreimers/MiniLM-L6-H384-uncased as the pretrained model and describe subsequent contrastive sentence-pair fine-tuning.", "The exact sentence-embedding checkpoint must be distinguished from the 2020 MiniLM architecture/distillation paper."]
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 21,
+      "verdict": "WEAK",
+      "reason": "Appropriate MiniLM-family background, but insufficient provenance for exact all-MiniLM-L6-v2 checkpoint identity and its 384-dimensional sentence embeddings. The official checkpoint card supplies that evidence. The MiniLM paper also does not establish the destination checkpoint, E5 models, migration dimensions as a pair, local model revisions, input hashes, or encoding choices; those require their own sources or experiment records.",
+      "action": "FIX",
+      "fix": "Keep minilm2020 as the MiniLM-family citation and add the official all-MiniLM-L6-v2 model card beside that checkpoint, with the actual pinned revision from the experiment manifest. Do not invent a revision. Cite the destination checkpoint separately if its identity/dimensionality is intended to be externally sourced."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 31,
+      "verdict": "SUPPORTS",
+      "reason": "The wording explicitly concerns encoder families and training approaches. The paper introduces the MiniLM family and its distillation approach, so this is an appropriate family-level citation. No claim that the paper itself releases all-MiniLM-L6-v2 is made here.",
+      "action": "KEEP",
+      "fix": null
+    }
+  ],
+  "recommendation": "FIX",
+  "fix_if_needed": "Retain the correct minilm2020 bibliography entry and family-level related-work use. Supplement the experimental-setup checkpoint use with its official model card and actual pinned revision; no replacement of the MiniLM paper is needed.",
+  "confidence": "HIGH",
+  "limitations": "Same-family/provisional citation audit, not an independent cross-model review. Scoped to the supplied two contexts and this citation. No experiment records or exact revision pins were audited."
+}

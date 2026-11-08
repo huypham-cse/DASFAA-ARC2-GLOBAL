@@ -1,0 +1,48 @@
+{
+  "gate": {
+    "status": "B1C_CAMPAIGN_RUNNING",
+    "updated_unix": 1793161619.4363048,
+    "deployment_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+    "TREC_access": false,
+    "next_phase_auto_launch": false,
+    "pid": 62886,
+    "argv": [
+      "/root/arc2_p3h_20261020/venv/bin/python",
+      "-u",
+      "/root/arc2_global_paper_20261025/code_19f3f0e_b1c/ops/b1c_campaign.py",
+      "--code-commit",
+      "19f3f0e76255d76012a360477c28ecdea25eec70",
+      "--name",
+      "mini_r1_20261028",
+      "--smoke",
+      "/root/arc2_global_paper_20261025/code_19f3f0e_b1c/results/b1c_smoke_mini_r1_20261028"
+    ],
+    "smoke_status": "B1C_SMOKE_PASS",
+    "prepared_source_files": 567
+  },
+  "progress": {
+    "stage": "GROUP_START",
+    "group": "FiQA_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "group_index": 1,
+    "groups_total": 120,
+    "rankings_complete": 2,
+    "rankings_total": 320
+  },
+  "full_metadata": {
+    "status": "RUNNING",
+    "stage": "full",
+    "code_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+    "started_utc": "2026-10-28T04:27:00.353939+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null
+  },
+  "now": 1793161688.451265,
+  "preflight": {
+    "status": "PASS",
+    "files_verified": 567
+  }
+}

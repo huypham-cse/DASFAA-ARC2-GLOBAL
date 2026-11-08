@@ -1,0 +1,205 @@
+\section{\method: Angular Refinement for Mixed Galleries}
+\label{sec:method}
+
+\method\ converts legacy document vectors into destination-space proxies and
+combines them with true destination vectors. Two direction-focused corrections
+refine one global affine map.
+
+\subsection{Migration Setting and Budget}
+\label{sec:setting}
+
+Let a corpus contain $N$ documents with stored, unit-normalized source embeddings
+$x_i\in\mathbb{R}^{d_s}$, written as row vectors. The destination encoder produces
+unit vectors $y_i\in\mathbb{R}^{d_t}$, but obtaining every $y_i$ requires encoding
+the entire corpus again. We seek destination-space document representations
+using only a budgeted set of destination document vectors. The dimensions may
+differ; our evaluated encoder pairs map $d_s=384$ to $d_t=768$. Queries are encoded
+directly by the destination query encoder; the document map aligns with that
+existing destination query space.
+
+Let $A$ be the paired anchor set used for fitting and $S$ the set selected for
+document replacement. The unique destination-document budget is
+\begin{equation}
+ b=|A\cup S|,\qquad b=\lfloor\rho N\rfloor .
+ \label{eq:budget}
+\end{equation}
+Anchors consume this budget. Our selection starts with $A$ and fills the
+remaining slots from a fixed random document order, skipping duplicates, so
+$A\subseteq S$ and $|S|=b$. Larger budgets extend the same order and retain the
+same fitted anchors. The principal setting uses $m=|A|=1{,}024$ pairs; an
+all-paid-pairs comparison separately fits on every paid pair. Fit uses paired
+document vectors without queries or relevance labels. This separates the
+amount of fitting supervision from the number of true vectors in the gallery.
+The same map serves several replacement budgets; after full replacement,
+scores depend entirely on the destination encoder.
+
+\subsection{Centered Rectangular Initialization}
+\label{sec:initialization}
+
+A centered Procrustes map supplies a geometric starting point before angular
+refinement. Stack the source and destination anchors as
+$X_A\in\mathbb{R}^{m\times d_s}$ and
+$Y_A\in\mathbb{R}^{m\times d_t}$, with row means $\mu_s$ and $\mu_t$.
+Using a thin singular value decomposition, compute
+\begin{equation}
+ (Y_A-\mathbf{1}\mu_t)^\top(X_A-\mathbf{1}\mu_s)
+ =U\Sigma V^\top,\qquad W=UV^\top .
+ \label{eq:procrustes}
+\end{equation}
+Here $W\in\mathbb{R}^{d_t\times d_s}$ is rectangular and semiorthogonal.
+Centering permits translation; the rectangular map accommodates unequal
+dimensions. Its raw prediction is
+$(x-\mu_s)W^\top+\mu_t$.
+
+We expand this prediction into an affine coefficient matrix so that subsequent
+corrections can be accumulated without adding inference stages. With
+$p=d_s+1$ and $\widetilde{x}=[x,1]$, define
+\begin{equation}
+ B_0=\begin{bmatrix}W^\top\\ \mu_t-\mu_sW^\top\end{bmatrix}
+ \in\mathbb{R}^{p\times d_t},\qquad
+ \widetilde{x}B_0=(x-\mu_s)W^\top+\mu_t .
+ \label{eq:affine-init}
+\end{equation}
+This expansion preserves raw prediction norms, without row normalization
+or a fitted scale; those norms enter the correction targets.
+The raw affine expansion uses float64 coefficients computed from the
+float32 Procrustes means and matrix.
+
+\subsection{Two Tangent-Residual Ridge Corrections}
+\label{sec:tangent}
+
+Write $\mathcal N(z)=z/\|z\|_2$ for a nonzero vector $z$.
+Cosine retrieval depends on document direction, whereas a raw vector residual
+also contains a radial component. We therefore project each anchor target
+onto the tangent plane at its current predicted direction. Let
+$\widetilde{X}=[X_A,\mathbf{1}]$. At update $t\in\{0,1\}$, for anchor $j$ set
+\begin{align}
+ z_j^{(t)}&=\widetilde{x}_jB_t,&
+ r_j^{(t)}&=\|z_j^{(t)}\|_2,&
+ u_j^{(t)}&=z_j^{(t)}/r_j^{(t)},\nonumber\\
+ T_j^{(t)}&=r_j^{(t)}\left[y_j-
+ \bigl(u_j^{(t)}y_j^\top\bigr)u_j^{(t)}\right].
+ \label{eq:tangent-target}
+\end{align}
+The bracketed term is orthogonal to $u_j^{(t)}$. The norm factor converts this
+directional discrepancy into a target in raw prediction coordinates.
+
+The target has a direct cosine-loss interpretation. For a nonzero row
+prediction $z$ and unit destination anchor $y_j$, define
+$\ell_j(z)=1-y_j\mathcal N(z)^\top$. Differentiation gives
+\begin{equation}
+ \nabla_z\ell_j(z)=-\frac{y_j-(uy_j^\top)u}{\|z\|_2},
+ \qquad T_j^{(t)}=-(r_j^{(t)})^2\nabla_z\ell_j(z_j^{(t)}).
+ \label{eq:cosine-target}
+\end{equation}
+The target is a norm-scaled negative cosine gradient. Shared affine regression
+smooths targets across anchors, so fitted row corrections need not be tangent.
+
+One global ridge regression shares these correction targets across anchors.
+Stacking their rows into $T^{(t)}$, we solve
+\begin{align}
+ \Delta_t&=\mathop{\arg\min}_{\Delta\in\mathbb{R}^{p\times d_t}}
+ \|\widetilde{X}\Delta-T^{(t)}\|_F^2+\lambda\|\Delta\|_F^2,
+ \label{eq:ridge-objective}\\
+ &=\widetilde{X}^{\top}
+ (\widetilde{X}\widetilde{X}^{\top}+\lambda I_m)^{-1}T^{(t)},
+ \qquad B_{t+1}=B_t+\Delta_t .
+ \label{eq:tangent-update}
+\end{align}
+The penalty regularizes the correction, including its intercept. Equivalently,
+changing variables to the updated coefficient matrix yields
+\begin{equation}
+ B_{t+1}=\mathop{\arg\min}_C
+ \|\widetilde X C-(\widetilde X B_t+T^{(t)})\|_F^2
+ +\lambda\|C-B_t\|_F^2.
+ \label{eq:current-prior}
+\end{equation}
+This fit centers its correction penalty on the current affine map while
+matching norm-scaled cosine descent targets. Unlike direct
+zero-centered ridge onto $Y_A$, the update retains the existing alignment
+while fitting its directional correction. We fix $\lambda=10$ and perform
+exactly two updates, recomputing targets after the first; the development
+ablation in Sect.~\ref{sec:results} measures the second update's contribution.
+A Cholesky
+factorization is reused across updates. The refined map is unconstrained;
+fitting requires paired document vectors and linear solves, with no neural
+mapper training.
+
+The norm factor also gives positive global scale equivariance. In exact
+arithmetic with nonzero predictions, $T(cB)=cT(B)$ for a common $c>0$.
+Linearity of the ridge solve therefore scales each update by $c$; by
+induction both accumulated maps scale by $c$, leaving normalized inference
+unchanged. This property concerns a common coefficient scale, not arbitrary
+per-document changes or guaranteed finite-step cosine improvement.
+
+\begin{table}[t]
+\caption{\method\ fitting and gallery construction. All document vectors supplied
+to fitting or replacement are unit normalized.}
+\label{tab:algorithm}
+\centering
+\begin{minipage}{0.97\linewidth}
+\small
+\begin{tabular}{@{}r p{0.89\linewidth}@{}}
+\toprule
+1 & Form paired anchors $X_A,Y_A$ and augmented design
+    $\widetilde{X}=[X_A,\mathbf{1}]$.\\
+2 & Compute centered Procrustes and raw affine $B_0$
+    using Eqs.~\eqref{eq:procrustes}--\eqref{eq:affine-init}.\\
+3 & Factor $\widetilde{X}\widetilde{X}^{\top}+10I_m$ once.\\
+4 & For $t=0,1$: compute $T^{(t)}$ from Eq.~\eqref{eq:tangent-target},
+    solve Eq.~\eqref{eq:tangent-update}, and accumulate $B_{t+1}$.\\
+5 & Store $B_2$; map documents with
+    $\widehat{y}_i=\mathcal{N}([x_i,1]B_2)$.\\
+6 & Replace rows in $S$ by $y_i$; search with destination query vectors.\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\subsection{Affine Proxies and Mixed Retrieval}
+\label{sec:mixed-gallery}
+
+The two corrections collapse into the final coefficient matrix $B_2$.
+For each document, compute a proxy
+$\widehat{y}_i=\mathcal{N}([x_i,1]B_2)$ and construct
+\begin{equation}
+ g_i=\begin{cases}
+ y_i,&i\in S,\\
+ \widehat{y}_i,&i\notin S.
+ \end{cases}
+ \label{eq:mixed-gallery}
+\end{equation}
+Every anchor is replaced by its actual fitted destination vector. For a unit
+destination query $q$, rank documents by $qg_i^\top$. True and proxy vectors
+therefore compete in one score space. This competition makes mixed-gallery
+quality a distinct evaluation target: proxy approximation quality alone does
+not determine how replacement changes their relative scores. We use exact
+float32 inner products, sorting by descending score and then ascending document
+row index for ties; dataset-defined identical query/document IDs are excluded
+where specified. Table~\ref{tab:algorithm} summarizes the complete computation.
+
+\subsection{Computation and Storage}
+\label{sec:method-cost}
+
+The final mapper has $pd_t$ coefficients regardless of anchor count. For
+$384\!\rightarrow\!768$, this is $295{,}680$ float32 values, or $1{,}182{,}720$
+bytes ($1.13$\,MiB), including the intercept. This is coefficient storage;
+fitting objects, document galleries, and encoder weights are additional.
+Application requires one affine multiplication and normalization per document,
+with $O(Npd_t)$ arithmetic for a complete proxy gallery.
+
+Fitting cost depends on the solver backend. Beyond the cross-covariance and
+rectangular SVD, costing $O(md_sd_t)$ and
+$O(d_sd_t\min(d_s,d_t))$, respectively, the reference dual implementation forms an $m\times m$ Gram
+matrix in $O(m^2p)$ time, factors it in $O(m^3)$, and spends
+$O(m^2d_t+mpd_t)$ per correction. Its Gram storage is $O(m^2)$.
+A separately identified primal backend solves
+$(\widetilde{X}^{\top}\widetilde{X}+\lambda I_p)\Delta_t=
+\widetilde{X}^{\top}T^{(t)}$ instead, with $O(mp^2+p^3)$ construction and
+factorization and $O(p^2)$ Gram storage; it supports larger paired sets.
+Each primal correction costs $O(mpd_t+p^2d_t)$.
+The equations are equivalent in exact arithmetic, while floating-point
+rankings can differ near ties. Updates use float64 and the final coefficient
+is stored as float32. Finally, $|A\cup S|$ measures logical destination-vector
+exposure in cached-vector evaluations. It does not measure physical encoding
+work, deployment latency, or end-to-end migration savings.

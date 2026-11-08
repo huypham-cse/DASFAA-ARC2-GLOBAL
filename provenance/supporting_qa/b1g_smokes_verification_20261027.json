@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "shards": [
+    {
+      "shard": "main",
+      "status": "B1G_SMOKE_PASS",
+      "artifacts_verified": 106,
+      "wall_seconds": 3.8192862877622247,
+      "code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+      "launch": {
+        "pid": 4048961,
+        "shard": "main",
+        "code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+        "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027",
+        "smoke": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_smoke_main_r2_20261027",
+        "log": "/root/arc2_global_paper_20261025/b1g_full_main_r1_20261027.log",
+        "launched_unix": 1793082554.410623
+      }
+    },
+    {
+      "shard": "mini",
+      "status": "B1G_SMOKE_PASS",
+      "artifacts_verified": 106,
+      "wall_seconds": 4.364601120352745,
+      "code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+      "launch": {
+        "pid": 47910,
+        "shard": "mini",
+        "code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+        "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027",
+        "smoke": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_smoke_mini_r2_20261027",
+        "log": "/root/arc2_global_paper_20261025/b1g_full_mini_r1_20261027.log",
+        "launched_unix": 1793082554.4405494
+      }
+    }
+  ],
+  "scope": "smoke hashes/launch only; full result pending"
+}

@@ -1,0 +1,12 @@
+{
+  "stage": "B1-P scoring recovery",
+  "mode": "score",
+  "started_utc": "2026-10-27T03:20:34.617347+00:00",
+  "status": "VALIDATING_BEFORE_SCORER_PARSE_WITH_PRIOR_DEV_TRANSPORT",
+  "lock_path": "/root/arc2_global_paper_20261025/code_4062d96_score_recovery/configs/b1p_score_recovery_lock.json",
+  "lock_sha256": "17e93a5da59fe29193bf385cb9b7a0b94381beea9fc70e32d4bfe8858eeb79d9",
+  "scorer_sha256": "24ba40b2a6eeba8f6616fee4d49b740ffaa3dcca3d943d8b7adc96f8ad8969c4",
+  "recovery_scorer_code_commit": "4062d96c353ac567fb90a6093cd8059d4647e252",
+  "exposure": "Previously inspected FiQA DEV; not independent confirmation",
+  "TREC_access": false
+}

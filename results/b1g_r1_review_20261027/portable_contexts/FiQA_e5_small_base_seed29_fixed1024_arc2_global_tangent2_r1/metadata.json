@@ -1,0 +1,69 @@
+{
+  "status": "B1G_RANK_PASS",
+  "request_sha256": "8085f0dede6e57682cec3435b5d6ac60e463749a9bda9a1a87a5e9f1798b9717",
+  "group_id": "FiQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1",
+  "input_hashes": {
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy": "6840bcf6eead122758d6f5eae3f8cf4149b7604485e405adbf4c536e45af1fbf",
+    "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_queries.npy": "78062f32f7f834aa04d8a0f82bc584d16a4672b393a0cb767269069709aca41c",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799.npy": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_FiQA_9edadfd39a8a05da.npy": "6a46319fe7b4732bd2cf05c16ce9872b9200d9816c8bbbeead543a1b934f5ee8",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/FiQA_e5_small_base_seed29/parameters.npz": "ae2ea5d85713415896f58d5f845a6d3f9356419fcc81b3555e29195f603319fd",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624.npy": "0f3f0cf4be17427bde12669ae6a9a4b05298d44db34b332ee9358898b222f624",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/cc3a0b1e65630c952a4575fb091d36fd792d5895bd57a45e121cf41da7a76f4f.npy": "44450700b77524b61151705a3f9e327917637478ce2a19608c91a9f290015eb0",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_arc2_global_tangent2_r1_seed29_25pct.npy": "da60307c877d996bca85c065f2cebe5c8529138d3b553b9372f13410675d2638",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606.npy": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/49972975602536ec07b556f3f792208641aea3fd00fbddef09e08cea45b3f6ef.npy": "1562d7fd61137a15d1d57020ef31ceca20ecfeaaf74445b62e669511ae3d3fc0",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_arc2_global_tangent2_r1_seed29_50pct.npy": "e33b0d21fc0f494206e39e4cd6f6c699a1fb064d98e332e6d2154edf92a42755",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92.npy": "eaa49de14a87f4aa84acb0c63cec711e316c41f4b4f97a8e107e8a7960927b92",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/efc82928295452c1246c96cbade567846b5083629b4f421cd591f6b4284e5c8a.npy": "dda77b147555f52538942ae6d0c5ce07d256687731f88aef28af49112714257e",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/FiQA_e5_small_base_arc2_global_tangent2_r1_seed29_75pct.npy": "2007a8d22e53412a30a1dc8cc7d8057dbb8bb8884f541b8d702beb0271fa1ec1"
+  },
+  "failures": [],
+  "new_physical_document_encodes": 0,
+  "new_fits": 0,
+  "qrels_read": false,
+  "artificial_time_or_memory_caps": null,
+  "pid": 4049474,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "started_unix": 1793082608.246081,
+  "dataset": "FiQA",
+  "pair": "e5_small_base",
+  "seed": 29,
+  "regime": "fixed1024",
+  "method": "arc2_global_tangent2_r1",
+  "documents": 57638,
+  "queries": 500,
+  "sample_documents": 512,
+  "proxy_semantics": "pristine prediction for every document, including anchors",
+  "score_arithmetic": "float32 query batch16 @ gallery.T; stable row-order ties; identical ID exclusion",
+  "cases": [
+    {
+      "case_id": "FiQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1_25pct",
+      "status": "PASS",
+      "after_sha256": "589123a3fe018485182fddbefe2fb0a9ab2d2aaa677d0e2781f9d4e9d147e5dd"
+    },
+    {
+      "case_id": "FiQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1_50pct",
+      "status": "PASS",
+      "after_sha256": "db49b3b96c666c9516e2b5e08796ff1066f61c3b76f91c358a6900ffcbfea388"
+    },
+    {
+      "case_id": "FiQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1_75pct",
+      "status": "PASS",
+      "after_sha256": "2007a8d22e53412a30a1dc8cc7d8057dbb8bb8884f541b8d702beb0271fa1ec1"
+    }
+  ],
+  "artifacts": {
+    "before.npy": {
+      "sha256": "da7c58790cc08d17600bc1c7338453575eb8f3edb29c6c72a279d3753934725c"
+    },
+    "sample_proxy.npy": {
+      "sha256": "629b5f2860e33b575942f525bc2b969dc48820e81a5c41474fea05175f5193ec"
+    }
+  },
+  "wall_seconds": 12.638958618976176,
+  "peak_process_rss_bytes": 891260928,
+  "ended_unix": 1793082620.8855016
+}

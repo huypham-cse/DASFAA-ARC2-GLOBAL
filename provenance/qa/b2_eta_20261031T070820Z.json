@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-31T07:08:20.488989+00:00",
+  "status": "RUNNING",
+  "stage": "encode_full",
+  "encoding": {
+    "status": "RUNNING",
+    "doc_encodes": 269636,
+    "models": {
+      "distilroberta_y": {
+        "active": null,
+        "wall_seconds": 463.00094093289226
+      },
+      "e5_base_y": {
+        "active": {
+          "attempted_start": 98304,
+          "attempted_stop": 102400,
+          "completed_rows": 98304,
+          "role": "docs"
+        },
+        "wall_seconds": null
+      }
+    }
+  },
+  "final_labels_opened": false
+}

@@ -1,0 +1,158 @@
+{
+  "retrieved_utc": "2026-11-01T04:04:30.447805+00:00",
+  "sources": [
+    {
+      "id": "yang2026translation_page",
+      "url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "final_url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "status": 200,
+      "path": "yang2026translation_page.txt",
+      "sha256": "618c449798dcb483fc745f9487d5f2b933afd478dce104b5ee7d8a2e5faf5365",
+      "bytes": 15879
+    },
+    {
+      "id": "jha2025geometry_conference_bib",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/28820-/bibtex",
+      "final_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/4175dee33d6145cb8f0323703d138a53-Bibtex-Conference.bib",
+      "status": 200,
+      "path": "jha2025geometry_conference_bib.txt",
+      "sha256": "7baf9e4f88272054bad4779681e8f7bc28456c114a75716c28a718168a325aa8",
+      "bytes": 620
+    },
+    {
+      "id": "thakur2021beir_round2_page",
+      "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/65b9eea6e1cc6bb9f0cd2a47751a186f-Abstract-round2.html",
+      "final_url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/65b9eea6e1cc6bb9f0cd2a47751a186f-Abstract-round2.html",
+      "status": 200,
+      "path": "thakur2021beir_round2_page.txt",
+      "sha256": "e885b4e4fe6861b9baf68eda79ced93b2e9d71e34a814e049773d8ef9af36b44",
+      "bytes": 9221
+    },
+    {
+      "id": "la2m_doi_bib",
+      "url": "https://doi.org/10.1145/3769803",
+      "final_url": "https://api.crossref.org/v1/works/10.1145%2F3769803/transform",
+      "status": 200,
+      "path": "la2m_doi_bib.txt",
+      "sha256": "47446bf6ac3dda175984bced8ed32cb53dff9939f380ca6ba1ec357d64d9b3c4",
+      "bytes": 393
+    },
+    {
+      "id": "la2m_crossref",
+      "url": "https://api.crossref.org/works/10.1145/3769803",
+      "final_url": "https://api.crossref.org/works/10.1145/3769803",
+      "status": 200,
+      "path": "la2m_crossref.txt",
+      "sha256": "853050c336f6620f4aae7c128dad6ea4ddb59916cae47b1ac8c6ce69bd023358",
+      "bytes": 24320
+    },
+    {
+      "id": "la2m_publisher",
+      "url": "https://dl.acm.org/doi/10.1145/3769803",
+      "final_url": "https://dl.acm.org/doi/10.1145/3769803",
+      "status": 403,
+      "path": "la2m_publisher.txt",
+      "sha256": "1a2d2ab90980ba31bc92d2e29d340f4c9602b404595270e6261915b4c7186f5a",
+      "bytes": 5532
+    },
+    {
+      "id": "la2m_pdf",
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3769803",
+      "final_url": "https://dl.acm.org/doi/pdf/10.1145/3769803",
+      "status": 403,
+      "path": "la2m_pdf.txt",
+      "sha256": "62eb90d55e78b395f91cd9a7d415e45d37802b6e38fac1610b8b70ebb98115d0",
+      "bytes": 5544
+    },
+    {
+      "id": "treccovid_doi_bib",
+      "url": "https://doi.org/10.1145/3451964.3451965",
+      "final_url": "https://api.crossref.org/v1/works/10.1145%2F3451964.3451965/transform",
+      "status": 200,
+      "path": "treccovid_doi_bib.txt",
+      "sha256": "ab91b30aaa3e8573062078ef5da8528a61de936eeb68e2fe153c61074a40ed40",
+      "bytes": 533
+    },
+    {
+      "id": "nanobeir_card",
+      "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoFiQA2018/raw/main/README.md",
+      "final_url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoFiQA2018/raw/main/README.md",
+      "status": 200,
+      "path": "nanobeir_card.txt",
+      "sha256": "7ec3f6ab480c4f7225d5a08cc78241b16585e2e415b9390fa463f82fb30fd27c",
+      "bytes": 1095
+    },
+    {
+      "id": "nanobeir_api",
+      "url": "https://huggingface.co/api/datasets/zeta-alpha-ai/NanoFiQA2018",
+      "final_url": "https://huggingface.co/api/datasets/zeta-alpha-ai/NanoFiQA2018",
+      "status": 200,
+      "path": "nanobeir_api.txt",
+      "sha256": "818797a761376da3d5507fac6c7ef6e76676c6cb9326a3c91819972200ceb0a7",
+      "bytes": 2005
+    },
+    {
+      "id": "nanobeir_collection",
+      "url": "https://huggingface.co/collections/zeta-alpha-ai/nanobeir",
+      "final_url": "https://huggingface.co/collections/zeta-alpha-ai/nanobeir",
+      "status": 200,
+      "path": "nanobeir_collection.txt",
+      "sha256": "22f6263b9532762e584b4251481f5bd0759876ce0cbfcb507680ba1e2103e882",
+      "bytes": 145710
+    },
+    {
+      "id": "minilm_card",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/raw/main/README.md",
+      "final_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/raw/main/README.md",
+      "status": 200,
+      "path": "minilm_card.txt",
+      "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+      "bytes": 10502
+    },
+    {
+      "id": "e5_card",
+      "url": "https://huggingface.co/intfloat/e5-small-v2/raw/main/README.md",
+      "final_url": "https://huggingface.co/intfloat/e5-small-v2/raw/main/README.md",
+      "status": 200,
+      "path": "e5_card.txt",
+      "sha256": "0d57eda4766cc7ac045f2bf7e700286ea5a8360bb9b57278f67f9b8ef60b0b24",
+      "bytes": 67791
+    },
+    {
+      "id": "official_code_readme",
+      "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/README.md",
+      "final_url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/README.md",
+      "status": 200,
+      "path": "official_code_readme.txt",
+      "sha256": "5fc828bfa341ff4b5988ff8d47efef3066530bacaf4d087f3a40e1a6cd31ee1b",
+      "bytes": 12371
+    },
+    {
+      "id": "official_code_la2m",
+      "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/reproduce-scripts/la2m/exp_la2m.py",
+      "final_url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/reproduce-scripts/la2m/exp_la2m.py",
+      "status": 200,
+      "path": "official_code_la2m.txt",
+      "sha256": "37015108e855101f3855755b755836280d8bb073389b23455825980302b49c67",
+      "bytes": 10861
+    },
+    {
+      "id": "official_code_tree",
+      "url": "https://api.github.com/repos/DBgroup-Edinburgh/embedding-translation/git/trees/5e62baf1544264847ce3d8feeabd1ded6499b064?recursive=1",
+      "final_url": "https://api.github.com/repos/DBgroup-Edinburgh/embedding-translation/git/trees/5e62baf1544264847ce3d8feeabd1ded6499b064?recursive=1",
+      "status": 200,
+      "path": "official_code_tree.txt",
+      "sha256": "2c564c18ef7d72c0f45440982224526bdeac1aa074e8fd4b68d9231cd13484fb",
+      "bytes": 38958
+    },
+    {
+      "id": "arxiv_recent_search",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22embedding%20translation%22%20AND%20submittedDate%3A%5B202605010000%20TO%202611012359%5D&max_results=30&sortBy=submittedDate&sortOrder=descending",
+      "final_url": "https://export.arxiv.org/api/query?search_query=all%3A%22embedding%20translation%22%20AND%20submittedDate%3A%5B202605010000%20TO%202611012359%5D&max_results=30&sortBy=submittedDate&sortOrder=descending",
+      "status": 200,
+      "path": "arxiv_recent_search.txt",
+      "sha256": "23df590dee85bf25dc384931df87c169cd755fbc8381db524aa8b7d08ef1ca98",
+      "bytes": 14702
+    }
+  ]
+}

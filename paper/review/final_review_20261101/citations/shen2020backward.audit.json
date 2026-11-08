@@ -1,0 +1,80 @@
+{
+  "key": "shen2020backward",
+  "existence": {
+    "verdict": "VERIFIED",
+    "reason": "Live CVF paper PDF returned HTTP 200; publisher page is also indexed and matches the supplied entry. Crossref live DOI API returned the matching publisher-deposited record.",
+    "checked_on": "2026-11-01"
+  },
+  "metadata": {
+    "verdict": "CORRECT_AS_SUPPLIED",
+    "title": "Towards Backward-Compatible Representation Learning",
+    "authors": [
+      "Yantao Shen",
+      "Yuanjun Xiong",
+      "Wei Xia",
+      "Stefano Soatto"
+    ],
+    "year": 2020,
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "doi": "10.1109/CVPR42600.2020.00640",
+    "pages": {
+      "CVF_open_access": "6368-6377",
+      "Crossref_IEEE_deposit": "6367-6376",
+      "note": "Primary sources differ by one page. The supplied bibliography omits pages and DOI, so it contains no incorrect page range. Do not silently conflate the CVF and IEEE pagination."
+    },
+    "supplied_entry_errors": []
+  },
+  "sources": [
+    {
+      "url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html",
+      "type": "CVF publisher page",
+      "access": "Live web search returned publisher content; direct web open returned 403. Cached publisher HTML was additionally inspected.",
+      "facts": [
+        "Title, ordered authors, CVPR 2020, CVF pages 6368-6377.",
+        "Abstract describes learning new features compatible with previously computed old features, avoiding gallery backfill."
+      ]
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.pdf",
+      "type": "CVF primary full paper",
+      "access": "Live Python requests HTTP 200; parsed in memory with pypdf.",
+      "facts": [
+        "Section 2.1 (printed p. 6370) trains the new encoder while retaining already computed old gallery embeddings.",
+        "Section 2.2, Eq. (2) evaluates new-model query features against old-model gallery features.",
+        "Section 2.4, Eqs. (7)-(8), trains new model parameters with an influence loss using the fixed old classifier; Section 2.5 leaves old model parameters unchanged."
+      ]
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109/CVPR42600.2020.00640",
+      "type": "Live Crossref publisher-deposited DOI metadata",
+      "access": "PowerShell Invoke-RestMethod succeeded.",
+      "facts": [
+        "Matching title and ordered four authors.",
+        "Published June 2020 in 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).",
+        "DOI 10.1109/cvpr42600.2020.00640; deposited page range 6367-6376."
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 14,
+      "verdict": "SUPPORTS",
+      "claim": "Backward-compatible representation learning trains a new encoder to remain usable with previously computed gallery features.",
+      "reason": "This is exactly the BCT direction: optimize the new encoder so its query features can be searched against fixed, previously computed old gallery features. Sections 2.1-2.2 and Eq. (2) explicitly establish new-query/old-gallery evaluation; Section 2.4 explains training through the fixed old classifier. The cited sentence neither reverses the direction nor claims post-hoc mapping of old documents to a destination space."
+    }
+  ],
+  "action": "KEEP",
+  "fix_if_needed": null,
+  "optional_enrichment": {
+    "doi": "10.1109/CVPR42600.2020.00640",
+    "pages": "If adding pages, choose the edition explicitly: CVF 6368--6377 or IEEE/Crossref 6367--6376. Omission in the current entry is not a factual error."
+  },
+  "confidence": {
+    "overall": "high",
+    "existence": "high",
+    "metadata": "high; pagination discrepancy explicitly retained",
+    "context_support": "high"
+  },
+  "review_status": "same-family/provisional"
+}

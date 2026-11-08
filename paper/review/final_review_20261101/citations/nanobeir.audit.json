@@ -1,0 +1,75 @@
+{
+  "key": "nanobeir",
+  "audit_date": "2026-11-01",
+  "reviewer": "GPT-6.1-Sol",
+  "review_status": "same-family/provisional",
+  "existence": {
+    "verdict": "VERIFIED",
+    "type": "Hugging Face dataset collection",
+    "formal_paper_established": false
+  },
+  "metadata": {
+    "provider": "Zeta Alpha",
+    "provider_account": "zeta-alpha-ai",
+    "title": "NanoBEIR",
+    "display_title": "NanoBEIR 🍺",
+    "year": 2024,
+    "year_basis": "Live API createdAt timestamps for three constituent datasets in September 2024; exact collection-object creation date and formal publication date not established.",
+    "url": "https://huggingface.co/collections/zeta-alpha-ai/nanobeir",
+    "bib_entry_assessment": "Accurate resource citation; @misc and corporate author are appropriate."
+  },
+  "sources": [
+    {
+      "url": "https://huggingface.co/collections/zeta-alpha-ai/nanobeir",
+      "kind": "live primary provider collection",
+      "retrieval": "web open",
+      "facts": ["Collection title NanoBEIR with decorative beer emoji", "Smaller versions of BEIR datasets with 50 queries and up to 10000 documents each", "Lists NanoNQ, NanoHotpotQA, and NanoFEVER"]
+    },
+    {
+      "url": "https://huggingface.co/zeta-alpha-ai",
+      "kind": "live primary provider organization",
+      "retrieval": "web open",
+      "facts": ["Organization display name Zeta Alpha", "Maintains NanoBEIR collection"]
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/zeta-alpha-ai/NanoNQ",
+      "kind": "live primary dataset API",
+      "retrieval": "PowerShell Invoke-RestMethod live GET; web API open failed",
+      "facts": ["id=zeta-alpha-ai/NanoNQ", "author=zeta-alpha-ai", "createdAt=2024-09-10T09:44:18.000Z", "current sha=77540146379abf95df8326a3c5bb9eb21c7146c3"]
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/zeta-alpha-ai/NanoHotpotQA",
+      "kind": "live primary dataset API",
+      "retrieval": "PowerShell Invoke-RestMethod live GET; web API open failed",
+      "facts": ["id=zeta-alpha-ai/NanoHotpotQA", "author=zeta-alpha-ai", "createdAt=2024-09-10T09:43:58.000Z", "current sha=d79c0cdda980aba54842756770928035e1b61a51"]
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/zeta-alpha-ai/NanoFEVER",
+      "kind": "live primary dataset API",
+      "retrieval": "PowerShell Invoke-RestMethod live GET; web API open failed",
+      "facts": ["id=zeta-alpha-ai/NanoFEVER", "author=zeta-alpha-ai", "createdAt=2024-09-10T09:43:44.000Z", "current sha=a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8"]
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 13,
+      "verdict": "SUPPORTS",
+      "reason": "Supports provenance of the three named NanoBEIR subsets and their small-dataset character. Exact experiment counts, development choices, and experimental chronology require pinned local evidence and were not certified from live dataset row counts. The joint BEIR citation covers the separate FiQA provenance."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 30,
+      "verdict": "SUPPORTS",
+      "reason": "Provider explicitly describes reduced BEIR datasets. Suitability for development comparisons is a reasonable author inference from this scale, not an independently validated provider claim."
+    }
+  ],
+  "recommendation": "KEEP",
+  "fix": null,
+  "confidence": {
+    "overall": "high",
+    "existence_and_relevance": "high",
+    "resource_year": "medium-high"
+  },
+  "limits": ["Same-family/provisional audit; no independent cross-family corroboration", "Current API SHAs identify consulted resource state, not experiment-pinned revisions", "No formal paper or DOI inferred", "Exact authors' experimental counts not audited from current live data", "No prior reviews, experiments, or qrels consulted"]
+}

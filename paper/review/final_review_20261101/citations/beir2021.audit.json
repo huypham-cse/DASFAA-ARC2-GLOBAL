@@ -1,0 +1,74 @@
+{
+  "key": "beir2021",
+  "existence": {
+    "verdict": "VERIFIED",
+    "reason": "Live official NeurIPS publisher abstract, BibTeX export, and published paper identify the same BEIR work.",
+    "live_lookup_date": "2026-11-01"
+  },
+  "metadata": {
+    "verdict": "CORRECT",
+    "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+    "authors": [
+      "Nandan Thakur",
+      "Nils Reimers",
+      "Andreas Rücklé",
+      "Abhishek Srivastava",
+      "Iryna Gurevych"
+    ],
+    "year": 2021,
+    "venue": "Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks",
+    "volume": "1",
+    "version": "NeurIPS Datasets and Benchmarks 2021, round2; publisher hash 65b9eea6e1cc6bb9f0cd2a47751a186f",
+    "comparison": "All supplied bibliographic identity fields match the live publisher export. Its pages field is also empty. Omitted editors/URL do not change identity."
+  },
+  "sources": [
+    {
+      "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/65b9eea6e1cc6bb9f0cd2a47751a186f-Abstract-round2.html",
+      "type": "primary publisher landing page",
+      "facts": [
+        "Exact title and five authors in supplied order; proceedings volume 1, 2021, round2."
+      ]
+    },
+    {
+      "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/106-/bibtex",
+      "type": "primary publisher BibTeX; live HTTPS fetched and UTF-8 decoded with PowerShell",
+      "facts": [
+        "Export matches supplied author/title/booktitle/volume/year and empty pages; its paper URL carries the round2 hash above."
+      ]
+    },
+    {
+      "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Paper-round2.pdf",
+      "type": "primary published paper",
+      "facts": [
+        "Page 2 describes diverse tasks and domains. Page 4 Table 1 reports FiQA-2018 corpus 57,638 and development queries 500."
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/BeIR/fiqa/blob/main/README.md",
+      "type": "primary BEIR dataset card",
+      "facts": [
+        "Identifies FiQA as a BEIR question-answering dataset; corpus metadata reports 57,638 documents."
+      ]
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 13,
+      "verdict": "SUPPORTS",
+      "reason": "BEIR supports the FiQA provenance and its exact 57,638-document/500-development-query statistics (published Table 1). Nano collection sizes belong to the separately cited NanoBEIR entry. The authors' selection history, frozen protocol, model revisions, encoding settings, and unopened labels are local-study claims, not claims established by this citation."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 30,
+      "verdict": "SUPPORTS",
+      "reason": "The published introduction explicitly organizes BEIR across varied retrieval tasks and text domains. This directly supports the sentence's BEIR clause; the NanoBEIR and encoder clauses have separate citations."
+    }
+  ],
+  "recommendation": "KEEP",
+  "fix_if_needed": null,
+  "optional_improvement": "Add the official round2 landing-page URL to the bibliography for disambiguation; removing pages = {} is harmless cleanup.",
+  "confidence": "high",
+  "review_status": "same-family/provisional",
+  "independence": "Fresh single-entry citation audit from supplied input and live primary sources; no prior reviews, other agents/models, manuscript edits, experiments, or qrels used."
+}

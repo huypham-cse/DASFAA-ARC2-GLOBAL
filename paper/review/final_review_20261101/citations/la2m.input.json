@@ -1,0 +1,31 @@
+{
+  "key": "la2m",
+  "bib_entry": "@article{la2m,\n  author = {Yang, Beining and Cao, Yang and Ren, Yang},\n  title = {Integrating Vector Databases across Embedding Models},\n  journal = {Proceedings of the ACM on Management of Data},\n  volume = {3},\n  number = {6},\n  pages = {1--28},\n  year = {2025},\n  doi = {10.1145/3769803},\n}",
+  "contexts": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 44,
+      "text": "\\paragraph{Comparison methods.}\nWe retain the full five-baseline panel: centered rectangular Procrustes\n(an A2M adaptation); LA2M with 20 source-anchor clusters, local alignment\nfor clusters with at least two anchors and global fallback for singletons;\nSimpleLinear; affine ridge with $\\lambda=10$\nand a regularized bias; and Embedding-Converter~\\cite{la2m,simplelinear,embeddingconverter}.\nSimpleLinear uses pinned official code: despite its name, the locked\nconfiguration is a five-layer SELU MLP, trained for the final 50 epochs with\nbatch size 4,028 and the MSE plus cosine loss, without qrel-based stopping.\nConverter is a paper-specification adaptation with a 50,000-update\nselection run, batch size 64, and local neighborhood size 100. Paired-vector\nvalidation MAE selects the earliest minimum at 250-update checkpoints;\na fresh fit uses all fitting pairs for that selected length. Unlike the\noriginal retrieval-based validation, this adaptation uses paired-vector MAE\nto respect paired-document-only supervision. These are the\ndeclared implementations and training policies, rather than claims to\nreproduce every original-paper setting. \\method{} remains fixed at two\ntangent updates and $\\lambda=10$ throughout."
+    },
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "text": "Document-side conversion and query-side adaptation already provide routes across embedding spaces~\\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 6,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ],
+  "primary_source_record": {
+    "key": "la2m",
+    "source_file": "citation_sources/la2m_doi_bib.txt",
+    "metadata_url": "https://doi.org/10.1145/3769803",
+    "verification": "publisher-export",
+    "sha256": "47446bf6ac3dda175984bced8ed32cb53dff9939f380ca6ba1ec357d64d9b3c4",
+    "metadata_type": "article",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

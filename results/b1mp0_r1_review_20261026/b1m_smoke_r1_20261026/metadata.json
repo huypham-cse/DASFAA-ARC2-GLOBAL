@@ -1,0 +1,117 @@
+{
+  "status": "B1M_SMOKE_PASS",
+  "stage": "smoke",
+  "code_commit": "4056612dcccac74fdf84ccf67783ab87afd85c26",
+  "lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+  "started_utc": "2026-10-25T18:48:45.337345+00:00",
+  "failures": [],
+  "new_qrel_reads": 0,
+  "TREC_access": false,
+  "artificial_caps": null,
+  "runtime": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "executable": "/root/arc2_p3h_20261020/venv/bin/python",
+    "environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4"
+    },
+    "module_origins": {
+      "numpy": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy/__init__.py",
+      "scipy": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy/__init__.py"
+    },
+    "blas": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+        "version": "0.3.31.188.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ]
+  },
+  "synthetic": {
+    "status": "B1M_SYNTHETIC_SMOKE_PASS",
+    "configurations": {
+      "arc2_global_tangent2_r1": [
+        8,
+        100
+      ],
+      "tangent1_l10": [
+        8,
+        100
+      ],
+      "procrustes_global": [
+        8,
+        100
+      ],
+      "tangent2_l1": [
+        8,
+        100
+      ],
+      "tangent2_l100": [
+        8,
+        100
+      ],
+      "ridge_affine_l10_bias_regularized": [
+        8,
+        100
+      ]
+    },
+    "scorer_checks": {
+      "status": "PASS",
+      "graded_ndcg": 0.7002755876478819,
+      "full_qrel_denominator_recall": 0.6666666666666666,
+      "zero_and_unjudged_queries": "zero",
+      "serialized_order": "unchanged"
+    },
+    "phases": {
+      "frozen_fit_seconds": 0.05803729221224785,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.047112795524299145,
+        "gram_seconds": 8.03731381893158e-05,
+        "factor_seconds": 7.882248610258102e-05,
+        "tangent_target1_seconds": 0.0006416765972971916,
+        "solve_update1_seconds": 0.0017124554142355919,
+        "tangent_target2_seconds": 0.0005859881639480591,
+        "solve_update2_seconds": 0.0011976994574069977
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05057547893375158,
+        "gram_seconds": 7.576681673526764e-05,
+        "factor_seconds": 7.109809666872025e-05,
+        "tangent_target1_seconds": 0.0006219744682312012,
+        "solve_update1_seconds": 0.0015847422182559967,
+        "tangent_target2_seconds": 0.0005812980234622955,
+        "solve_update2_seconds": 0.0012122336775064468
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04792350064963102,
+        "gram_seconds": 7.563550025224686e-05,
+        "factor_seconds": 6.874371320009232e-05,
+        "tangent_target1_seconds": 0.0006341850385069847,
+        "solve_update1_seconds": 0.001680806279182434,
+        "tangent_target2_seconds": 0.000575898215174675,
+        "solve_update2_seconds": 0.0011586276814341545
+      },
+      "ridge_fit_seconds": 0.0045961178839206696
+    }
+  },
+  "ended_utc": "2026-10-25T18:48:46.456916+00:00",
+  "wall_seconds": 1.1201196564361453,
+  "peak_process_tree_rss_bytes": 100970496
+}

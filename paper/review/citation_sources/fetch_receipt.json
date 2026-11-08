@@ -1,0 +1,387 @@
+{
+  "retrieved_utc": "2026-11-01T04:02:58.550180+00:00",
+  "sources": [
+    {
+      "key": "vejendla2025drift",
+      "kind": "acl",
+      "bib_url": "https://aclanthology.org/2025.emnlp-main.805.bib",
+      "reading_url": "https://aclanthology.org/2025.emnlp-main.805.pdf",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://aclanthology.org/2025.emnlp-main.805.bib",
+          "final_url": "https://aclanthology.org/2025.emnlp-main.805.bib",
+          "status": 200,
+          "path": "vejendla2025drift_metadata.txt",
+          "sha256": "f79a16801aaa1ebc53bfe78ce79ec13797a33239333bbb50b25ce7cb14a4c243",
+          "bytes": 713,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://aclanthology.org/2025.emnlp-main.805.pdf",
+          "final_url": "https://aclanthology.org/2025.emnlp-main.805.pdf",
+          "status": 200,
+          "path": "vejendla2025drift_reading.pdf",
+          "sha256": "5dacac7b8b3976f180999e0807a648d8b32d7836403a0248aefaacdb4e78d3e1",
+          "bytes": 915360,
+          "content_type": "application/pdf"
+        }
+      ]
+    },
+    {
+      "key": "yoon2025converter",
+      "kind": "acl",
+      "bib_url": "https://aclanthology.org/2025.acl-long.1237.bib",
+      "reading_url": "https://aclanthology.org/2025.acl-long.1237.pdf",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://aclanthology.org/2025.acl-long.1237.bib",
+          "final_url": "https://aclanthology.org/2025.acl-long.1237.bib",
+          "status": 200,
+          "path": "yoon2025converter_metadata.txt",
+          "sha256": "bec93954fb9b935d3d70a68fd471fda239fe4c852bd8d84239fedbcf66fca144",
+          "bytes": 747,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://aclanthology.org/2025.acl-long.1237.pdf",
+          "final_url": "https://aclanthology.org/2025.acl-long.1237.pdf",
+          "status": 200,
+          "path": "yoon2025converter_reading.pdf",
+          "sha256": "e85f66d5f3ad0a61bdc8fcef7bf96e2edcef412b6e7121fee6becdae11446d8a",
+          "bytes": 844334,
+          "content_type": "application/pdf"
+        }
+      ]
+    },
+    {
+      "key": "yang2026translation",
+      "kind": "pmlr",
+      "bib_url": "https://proceedings.mlr.press/v306/yang26e.bib",
+      "reading_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://proceedings.mlr.press/v306/yang26e.bib",
+          "final_url": "https://proceedings.mlr.press/v306/yang26e.bib",
+          "status": 404,
+          "path": "yang2026translation_metadata.txt",
+          "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+          "bytes": 9379,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf",
+          "final_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf",
+          "status": 200,
+          "path": "yang2026translation_reading.pdf",
+          "sha256": "38b35ae4755468e2619731e527d216792b936008e343c09e229c8e4f04856c05",
+          "bytes": 1698281,
+          "content_type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "key": "jha2025geometry",
+      "kind": "arxiv",
+      "bib_url": "https://arxiv.org/bibtex/2505.12540",
+      "reading_url": "https://arxiv.org/html/2505.12540v4",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://arxiv.org/bibtex/2505.12540",
+          "final_url": "https://arxiv.org/bibtex/2505.12540",
+          "status": 200,
+          "path": "jha2025geometry_metadata.txt",
+          "sha256": "a2daa13afe92be5e2897330a721ee1f0e3436c27c9b5dc915045fe62cd4086f8",
+          "bytes": 350,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://arxiv.org/html/2505.12540v4",
+          "final_url": "https://arxiv.org/html/2505.12540v4",
+          "status": 200,
+          "path": "jha2025geometry_reading.txt",
+          "sha256": "8829a6e66404b026253f74b535aed6da39a91be66841b4e3455d4c227139db68",
+          "bytes": 483321,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "dar2025mini",
+      "kind": "arxiv",
+      "bib_url": "https://arxiv.org/bibtex/2510.02348",
+      "reading_url": "https://arxiv.org/html/2510.02348v2",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://arxiv.org/bibtex/2510.02348",
+          "final_url": "https://arxiv.org/bibtex/2510.02348",
+          "status": 200,
+          "path": "dar2025mini_metadata.txt",
+          "sha256": "d5cffbbafbb788fbcd1a4b26d320a6b17d3c70b2562494b23e0d7e27bc5856e1",
+          "bytes": 320,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://arxiv.org/html/2510.02348v2",
+          "final_url": "https://arxiv.org/html/2510.02348v2",
+          "status": 200,
+          "path": "dar2025mini_reading.txt",
+          "sha256": "c3180f2ba41c1c93ec33283f4a14dfcd64f5c58828038da3f76e2b4e7f225b87",
+          "bytes": 223370,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "maystre2025procrustes",
+      "kind": "arxiv",
+      "bib_url": "https://arxiv.org/bibtex/2510.13406",
+      "reading_url": "https://arxiv.org/html/2510.13406v1",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://arxiv.org/bibtex/2510.13406",
+          "final_url": "https://arxiv.org/bibtex/2510.13406",
+          "status": 200,
+          "path": "maystre2025procrustes_metadata.txt",
+          "sha256": "746a129371eed2b31d033dc6aab3881bc5196f7d39377b06c752174444d4bb80",
+          "bytes": 415,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://arxiv.org/html/2510.13406v1",
+          "final_url": "https://arxiv.org/html/2510.13406v1",
+          "status": 200,
+          "path": "maystre2025procrustes_reading.txt",
+          "sha256": "1e0155ee11d3b5588662db8710ba9db3afa74bc801c7b2f42220be5afc3da37e",
+          "bytes": 330204,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "byun2026mkp",
+      "kind": "arxiv",
+      "bib_url": "https://arxiv.org/bibtex/2609.16875",
+      "reading_url": "https://arxiv.org/html/2609.16875v1",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://arxiv.org/bibtex/2609.16875",
+          "final_url": "https://arxiv.org/bibtex/2609.16875",
+          "status": 200,
+          "path": "byun2026mkp_metadata.txt",
+          "sha256": "712bc69220685279e5fb613bd045d7b7eb165ccd505b050df419c690f021baf1",
+          "bytes": 435,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://arxiv.org/html/2609.16875v1",
+          "final_url": "https://arxiv.org/html/2609.16875v1",
+          "status": 200,
+          "path": "byun2026mkp_reading.txt",
+          "sha256": "d7139275186ea8bc60737abdd28130c6522b0ed26ee1db73a410ddbecdff66c5",
+          "bytes": 857841,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "gao2023vec2vec",
+      "kind": "arxiv",
+      "bib_url": "https://arxiv.org/bibtex/2306.12689",
+      "reading_url": "https://arxiv.org/abs/2306.12689",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://arxiv.org/bibtex/2306.12689",
+          "final_url": "https://arxiv.org/bibtex/2306.12689",
+          "status": 200,
+          "path": "gao2023vec2vec_metadata.txt",
+          "sha256": "7d83861fc4afe7070be799dda90a0422110c3d37ad6ceca8d3b08b93dd9e0182",
+          "bytes": 336,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://arxiv.org/abs/2306.12689",
+          "final_url": "https://arxiv.org/abs/2306.12689",
+          "status": 200,
+          "path": "gao2023vec2vec_reading.txt",
+          "sha256": "47c01f991d860f52d235c7d20787981f3c79e3b91b9ca661950ac2c87c624847",
+          "bytes": 41652,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "schonemann1966procrustes",
+      "kind": "doi",
+      "bib_url": "https://doi.org/10.1007/BF02289451",
+      "reading_url": "https://doi.org/10.1007/BF02289451",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://doi.org/10.1007/BF02289451",
+          "final_url": "https://api.crossref.org/v1/works/10.1007%2FBF02289451/transform",
+          "status": 200,
+          "path": "schonemann1966procrustes_metadata.txt",
+          "sha256": "fef3c5b40f0f0593c6a073a4dce576b745ff5b0c5cf6efae998320d35d67bfd3",
+          "bytes": 353,
+          "content_type": "application/x-bibtex"
+        },
+        {
+          "role": "reading",
+          "url": "https://doi.org/10.1007/BF02289451",
+          "final_url": "https://www.cambridge.org/core/product/identifier/S0033312300041211/type/journal_article",
+          "status": 429,
+          "path": "schonemann1966procrustes_reading.txt",
+          "sha256": "a77f954cc8456f6cd880f30dc5543ebbd0d89ee188a8beb9de438c2d2f1f4f07",
+          "bytes": 1478,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "shen2020backward",
+      "kind": "cvf",
+      "bib_url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html",
+      "reading_url": null,
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html",
+          "final_url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html",
+          "status": 200,
+          "path": "shen2020backward_metadata.txt",
+          "sha256": "90c71f50f18070d45a088705c23793864d91b7f8339b6f1e4cc1821d9b62b733",
+          "bytes": 4870,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "key": "thakur2021beir",
+      "kind": "neurips",
+      "bib_url": "https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Bibtex.bib",
+      "reading_url": "https://arxiv.org/abs/2104.08663",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Bibtex.bib",
+          "final_url": "https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Bibtex.bib",
+          "status": 200,
+          "path": "thakur2021beir_metadata.txt",
+          "sha256": "2350c2cefd8f89377920ba4e84501557ad67ea21a94a3e94f28e97e574dc188f",
+          "bytes": 645,
+          "content_type": "application/x-bibtex"
+        },
+        {
+          "role": "reading",
+          "url": "https://arxiv.org/abs/2104.08663",
+          "final_url": "https://arxiv.org/abs/2104.08663",
+          "status": 200,
+          "path": "thakur2021beir_reading.txt",
+          "sha256": "da672217e839d27d110b446a5baf2a4d9cabcdf9a9f0bd1a4edfef0a3f708da6",
+          "bytes": 43778,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "reimers2019sentencebert",
+      "kind": "acl",
+      "bib_url": "https://aclanthology.org/D19-1410.bib",
+      "reading_url": "https://aclanthology.org/D19-1410/",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://aclanthology.org/D19-1410.bib",
+          "final_url": "https://aclanthology.org/D19-1410.bib",
+          "status": 200,
+          "path": "reimers2019sentencebert_metadata.txt",
+          "sha256": "b4b321245f05884e33608c78b5db9498f3b0ece544640407aa919ca870465b66",
+          "bytes": 728,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://aclanthology.org/D19-1410/",
+          "final_url": "https://aclanthology.org/D19-1410/",
+          "status": 200,
+          "path": "reimers2019sentencebert_reading.txt",
+          "sha256": "4a7f11fc1678e85bcffb3a15f1a0558c4a67050e3073f3bc1bdab00028fe9b45",
+          "bytes": 41681,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "wang2020minilm",
+      "kind": "neurips",
+      "bib_url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/3f5ee243547dee91fbd053c1c4a845aa-Bibtex.bib",
+      "reading_url": "https://proceedings.neurips.cc/paper/2020/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/3f5ee243547dee91fbd053c1c4a845aa-Bibtex.bib",
+          "final_url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/3f5ee243547dee91fbd053c1c4a845aa-Bibtex.bib",
+          "status": 200,
+          "path": "wang2020minilm_metadata.txt",
+          "sha256": "8cb35c8fda7619ca903261ab69c318b2f45838255ed099cbdc926f6c0e06e76c",
+          "bytes": 604,
+          "content_type": "application/x-bibtex"
+        },
+        {
+          "role": "reading",
+          "url": "https://proceedings.neurips.cc/paper/2020/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+          "final_url": "https://proceedings.neurips.cc/paper/2020/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+          "status": 200,
+          "path": "wang2020minilm_reading.txt",
+          "sha256": "b154fcb2f0cf219ed515f3e7d79b808674d9f90f5d092631a43d53fee14fd18d",
+          "bytes": 10490,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "key": "wang2022e5",
+      "kind": "arxiv",
+      "bib_url": "https://arxiv.org/bibtex/2212.03533",
+      "reading_url": "https://arxiv.org/abs/2212.03533",
+      "responses": [
+        {
+          "role": "metadata",
+          "url": "https://arxiv.org/bibtex/2212.03533",
+          "final_url": "https://arxiv.org/bibtex/2212.03533",
+          "status": 200,
+          "path": "wang2022e5_metadata.txt",
+          "sha256": "5ba0251e315129416bf6dce60060b0e803be308439e9af3f9c8aba29efd7db3d",
+          "bytes": 427,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "role": "reading",
+          "url": "https://arxiv.org/abs/2212.03533",
+          "final_url": "https://arxiv.org/abs/2212.03533",
+          "status": 200,
+          "path": "wang2022e5_reading.txt",
+          "sha256": "d9551109321dfc2dcaed280331d8c89a90a7dc377429ebc7fbf25429252484c0",
+          "bytes": 40705,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}

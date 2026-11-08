@@ -1,0 +1,12 @@
+{
+  "started_utc": "2026-10-25T19:02:51.194721+00:00",
+  "status": "VALIDATING_WITH_LABELS_CLOSED",
+  "lock_path": "/root/arc2_global_paper_20261025/code_4056612/configs/b1m_lock.json",
+  "lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+  "scorer_sha256": "f41f869a29c6fec816699452aa70bad21c8f417c3ae1657c3da833acfc9c520c",
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+  "exposure": "DEV only; FiQA previously inspected",
+  "failures": []
+}

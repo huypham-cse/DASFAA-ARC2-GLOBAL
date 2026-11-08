@@ -1,0 +1,29 @@
+{
+  "scope": "owned qrel-free frozen checkpoint and provenance handoff to full H100",
+  "files": {
+    "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/original_selection_resume.pt": {
+      "bytes": 542868440,
+      "sha256": "3fd9244b2845426a1cd4c998cbbafa04a0c6d94e864364162c207d310966b8d3"
+    },
+    "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/source_request.json": {
+      "bytes": 1293,
+      "sha256": "125627957cf27f23aef145c0ea0b659c44e6db93d6d7a98c175c72e185841c01"
+    },
+    "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/source_worker_metadata.json": {
+      "bytes": 8286,
+      "sha256": "9f4ee017807385c7474e9da0e81b9ced9827da9d5b32377958187c3a6a415516"
+    },
+    "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/source_selection_progress.jsonl": {
+      "bytes": 41271,
+      "sha256": "1063591cb5b4ee2d0664a88d3fbfe46a3fa097231045bfa9fd8f3a02e36e9d48"
+    },
+    "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/source_run_metadata.json": {
+      "bytes": 2124,
+      "sha256": "de944b743c909fb11a7275e62551c5016934d81f482d929a1415f7ee621bef7d"
+    },
+    "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/freeze_receipt.json": {
+      "bytes": 888,
+      "sha256": "ac1092c7a9e328253ebec857c2a83cc02350f1a692c8b0209ca5b697c7735d89"
+    }
+  }
+}

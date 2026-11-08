@@ -1,0 +1,11 @@
+{
+  "scope": "local packaging verification, not historical scientific runtime",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "historical_scientific_versions": "provenance/source_run/metadata.json"
+}

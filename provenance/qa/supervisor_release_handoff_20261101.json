@@ -1,0 +1,50 @@
+{
+  "status": "SUPERVISOR_RELEASE_COMPLETE",
+  "recorded_utc": "2026-11-01T02:28:07.491355+00:00",
+  "release_root": "D:\\DASFAA-2027-paper-release",
+  "claim_revision": "supervisor-review-20261101-r1",
+  "packaging_code_commit": "2a261047287642c0506bb592d9df800b4e8a737c",
+  "archive": {
+    "status": "ARCHIVE_CONTENTS_VERIFIED",
+    "archive": "D:\\DASFAA-2027-paper-release-20261101.zip",
+    "bytes": 236649934,
+    "sha256": "6415479a2a50510c5f1f8868e3bf05e4918098e0d8ef0bd7f994a98e709b10d2",
+    "manifest_sha256": "6693f06b6cb9a471168e7ebf34d3fc07dfd644e9603029013b48bda50e003982",
+    "manifested_files_verified_inside_archive": 4400,
+    "archive_file_count": 4471,
+    "created_utc": "2026-11-01T02:27:39.660261+00:00"
+  },
+  "portable_verification": {
+    "status": "READY_FOR_SUPERVISOR_REVIEW",
+    "created_utc": "2026-11-01T02:27:15.085961+00:00",
+    "claim_revision": "supervisor-review-20261101-r1",
+    "final_manifest_sha256": "6693f06b6cb9a471168e7ebf34d3fc07dfd644e9603029013b48bda50e003982",
+    "final_hashes_receipt": "checks/portable_verification_hashes_20261101T022639046106Z.json",
+    "full_metrics_bootstrap_receipt": "checks/portable_verification_full_20261101T022349350884Z.json",
+    "full_metrics_receipt_note": "Full statistical QA preceded addition of review traces and packaging snapshot identity; both exact scientific summary hashes remain identical, and final all-file hash check passes. No scientific input/output changed.",
+    "synthetic_method_receipt": "checks/synthetic_method_smoke/20261101T022311970186Z.json",
+    "figure_rebuild_receipt": "checks/rebuilt_figures/20261101T022312454190Z/rebuild_receipt.json",
+    "six_rebuilt_png_byte_equal": [
+      "b1c_r3_macro_and_condition_deltas.png",
+      "b1c_r3_quality_budget.png",
+      "b1c_r3_recall_budget.png",
+      "b2_all30_primary_contrasts.png",
+      "b2_ndcg10_vs_budget.png",
+      "b2_recall100_vs_budget.png"
+    ],
+    "review_verdict": "provenance/release_review/verdict.json",
+    "claim_supported": "partial",
+    "review_independence": "same-family",
+    "acceptance_status": "provisional",
+    "manuscript_modified": false,
+    "full_H100_turnkey_reproduction_tested": false,
+    "original_backup_or_Git_required_for_portable_commands": false,
+    "measured_offline_full_check_seconds": 38.64181960001588,
+    "preserved_early_packaging_attempt": "checks/packaging_attempts/portable_verification_initial_FAIL.json"
+  },
+  "frozen_scientific_source_pins_unchanged": true,
+  "manuscript_files_unchanged": 20,
+  "new_scientific_runs": false,
+  "sent_to_external_recipient": false,
+  "scope": "Prepared local supervisor-review package only; no manuscript writing and no new H100 experiment."
+}

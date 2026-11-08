@@ -1,0 +1,35 @@
+{
+  "scope": "Read-only feasibility check for faster B1c continuation; no scientific or resource-policy change",
+  "client_date": "2026-10-29",
+  "mini_observed_utc": "2026-10-29T12:18:32.362031+00:00",
+  "mini": {
+    "host": "103.73.232.201",
+    "port": 62161,
+    "cpu_max": "400000 100000",
+    "cgroup_mount": "cgroup /sys/fs/cgroup cgroup2 ro,nosuid,nodev,noexec,relatime 0 0",
+    "rankings_complete": 242,
+    "current_refit_step": 42500,
+    "selected_iteration": 49750,
+    "status": "RUNNING"
+  },
+  "alternative_tcp_probes": [
+    {
+      "host": "103.73.232.225",
+      "port": 52194,
+      "timeout_seconds": 5,
+      "result": "TimeoutError",
+      "ssh_attempt": "also timed out after helper connection timeout"
+    },
+    {
+      "host": "103.73.232.240",
+      "port": 58319,
+      "timeout_seconds": 5,
+      "result": "TimeoutError"
+    }
+  ],
+  "completed_work_to_preserve": true,
+  "next_practical_action": "Administrator-provided CPU allocation/isolation or reachable alternative host; validate any relocation under a committed execution amendment and smoke",
+  "no_change_to_other_jobs": true,
+  "no_algorithm_or_baseline_budget_change": true,
+  "no_new_run_started": true
+}

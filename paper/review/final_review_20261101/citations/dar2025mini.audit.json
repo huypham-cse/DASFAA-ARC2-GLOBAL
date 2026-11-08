@@ -1,0 +1,45 @@
+{
+  "key": "dar2025mini",
+  "audit_date": "2026-11-01",
+  "review_status": "same-family/provisional",
+  "scope": "Fresh per-entry audit of the supplied bibliography and citation context; live primary sources only.",
+  "existence": {"verdict": "VERIFIED", "identifier": "arXiv:2510.02348"},
+  "metadata": {
+    "verdict": "MATCH",
+    "canonical_authors": ["Guy Dar"],
+    "canonical_title": "mini-vec2vec: Scaling Universal Geometry Alignment with Linear Transformations",
+    "canonical_type": "misc",
+    "venue": "arXiv preprint; no conference or journal venue verified",
+    "year": 2026,
+    "original_submission": {"version": "v1", "date": "2025-09-27", "year": 2025},
+    "latest_version": {"version": "v4", "date": "2026-02-17", "year": 2026},
+    "year_reason": "The live unversioned arXiv BibTeX exports 2026. The supplied year is correct for the latest version; the 2025 citation key is an internal identifier and need not change.",
+    "eprint": "2510.02348",
+    "archivePrefix": "arXiv",
+    "primaryClass": "cs.CL",
+    "url": "https://arxiv.org/abs/2510.02348",
+    "doi": "10.48550/arXiv.2510.02348"
+  },
+  "sources": [
+    {"url": "https://arxiv.org/abs/2510.02348", "kind": "live primary metadata", "facts": "Author, title, arXiv identifier, DOI and full version history."},
+    {"url": "https://arxiv.org/bibtex/2510.02348", "kind": "live primary BibTeX export", "facts": "Current export matches all supplied bibliographic fields, including year 2026 and misc type."},
+    {"url": "https://arxiv.org/abs/2510.02348v1", "kind": "live primary original version metadata", "facts": "Original submission is 27 September 2025, distinct from latest revision metadata."},
+    {"url": "https://arxiv.org/html/2510.02348v4", "kind": "live primary latest full text", "facts": "Sections 3.2–3.4 and Listings 1–2 verify pseudo-pairs, Procrustes fitting, iterative nearest-neighbor refinement, and clustering refinement."}
+  ],
+  "uses": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 23,
+      "claim": "mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements",
+      "verdict": "SUPPORTS",
+      "reason": "Latest v4 constructs pseudo-pairs from matched cluster-based relative representations, fits a Procrustes map, iterates nearest-neighbor matching with smoothed Procrustes updates, then performs one clustering-based refinement. The cited summary is supported; avoid implying that its clustering refinement is repeatedly iterated.",
+      "evidence": ["v4 sections 3.2–3.4", "v4 Listings 1–2"],
+      "source_url": "https://arxiv.org/html/2510.02348v4",
+      "precision_note": "Optional wording: 'pseudo-pair construction, Procrustes estimation, iterative matching refinement, and a clustering-based refinement.' This is a clarification, not a required correction."
+    }
+  ],
+  "recommendation": "KEEP",
+  "fix_if_needed": null,
+  "confidence": "HIGH",
+  "limitations": "Same-family provisional audit. No manuscript edits, experiments, other citation audits, prior reviews, or final-test data were inspected. No external venue claim is warranted by the checked primary record."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "B1B_COMPLETE",
+  "local_verification": "provenance/qa/b1b_result_verification.json",
+  "frozen_method_hashes_verified": {
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf"
+  },
+  "server_tmux_has_session_exit_observed": 1,
+  "automatic_next_stage": false,
+  "next": "STOP before B1-M pending user confirmation"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "review_kind": "executor visual QA",
+  "utc": "2026-11-02T09:32:08.412214+00:00",
+  "pdf_sha256": "a6bff1fdc33169679dc45abce0c6d516ecbd96dbc63cd50770304089ecde4451",
+  "pages_rendered_and_contact_sheet_inspected": 16,
+  "detail_pages_inspected": [
+    11,
+    12
+  ],
+  "figure3_full_intervals_and_distinct_axes": true,
+  "table_rank_highlights_preserved": true,
+  "clipping_or_overlap_found": false
+}

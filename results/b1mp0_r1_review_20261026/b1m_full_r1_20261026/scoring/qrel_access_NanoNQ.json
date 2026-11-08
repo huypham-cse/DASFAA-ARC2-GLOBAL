@@ -1,0 +1,12 @@
+{
+  "dataset": "NanoNQ",
+  "first_dev_qrel_open": "2026-10-25T19:02:51.479503+00:00",
+  "first_access_receipt": "first_dev_qrel_open.json",
+  "expected_source": {
+    "format": "parquet",
+    "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoNQ/resolve/77540146379abf95df8326a3c5bb9eb21c7146c3/qrels/train-00000-of-00001.parquet",
+    "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+    "bytes": 2020
+  },
+  "exposure": "DEV, not independent confirmation"
+}

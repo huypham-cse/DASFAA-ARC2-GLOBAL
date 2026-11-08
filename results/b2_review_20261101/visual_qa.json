@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-11-01T02:04:18.741540+00:00",
+  "scope": "Publication figure visual inspection and export integrity; computational correctness is covered by the independently completed QA receipt.",
+  "summary_sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+  "computational_qa": "qa_completed_20261101T020214554697Z.json",
+  "computational_qa_sha256": "cdd654c401cd51efc3177fc8b6a40bbc60d346768417a9db2cd8699298110e42",
+  "render_provenance_sha256": "1cf5febb941f9598d4faed3a777a567bfe92a8fbcae0ecca792bc6690b1732ca",
+  "inspection": "Viewed all three PDF-native pdftoppm previews and all three 300-dpi PNG exports with view_image; SVG XML parsed successfully. Final rerender changed report wording only; all inspected PNG/PDF-preview raster hashes remained identical.",
+  "checks": {
+    "titles_axes_ticks_legends_and_captions_readable": true,
+    "no_text_clipping_or_overlap": true,
+    "all_six_methods_and_four_native_references_present_in_each_metric_figure": true,
+    "all_30_primary_contrasts_visible": true,
+    "arc2_blue_0F4D92_consistent": true,
+    "primary_and_descriptive_uncertainty_scopes_explicit": true,
+    "negative_and_unresolved_outcomes_retained": true,
+    "pdf_vector_previews_generated": true,
+    "png_300dpi": true,
+    "svg_xml_valid": true
+  },
+  "row_counts": {
+    "all_contrasts.csv": 30,
+    "all_means.csv": 40,
+    "figure_ndcg10_values.csv": 40,
+    "figure_primary_contrasts.csv": 30,
+    "figure_recall100_values.csv": 40,
+    "negative_contrasts.csv": 10,
+    "primary_counts.csv": 18,
+    "seed_means.csv": 184
+  },
+  "figure_artifacts": {
+    "figures/b2_all30_primary_contrasts.pdf": {
+      "sha256": "8081cd518347ff329c9bbf908f43957154e3c3acf189b13b6bc087066c888b3a",
+      "bytes": 47861
+    },
+    "figures/b2_all30_primary_contrasts.png": {
+      "sha256": "8c3d920530de454beeddd5973d28eb1cf494280ab1a97cdb97988a3e7c8a7973",
+      "bytes": 315823
+    },
+    "figures/b2_all30_primary_contrasts.svg": {
+      "sha256": "6ea83c3280f7e90f6cd3a4be0c2c5f14768d0a5687bb4f805567bfa22a93bd90",
+      "bytes": 53262
+    },
+    "figures/b2_ndcg10_vs_budget.pdf": {
+      "sha256": "23af0d82ca6554c15285062d84a2a7feaee6e3320977c26b8407fa26e87a65ae",
+      "bytes": 50287
+    },
+    "figures/b2_ndcg10_vs_budget.png": {
+      "sha256": "3f6acdcb36cd8641803d81debe6cf11274d35082da6967a574a0279ce4da62d6",
+      "bytes": 295013
+    },
+    "figures/b2_ndcg10_vs_budget.svg": {
+      "sha256": "c3081b5312dda7dba42f5b365bcbb786062eae659150dd6a39dc7879c28553d0",
+      "bytes": 29562
+    },
+    "figures/b2_recall100_vs_budget.pdf": {
+      "sha256": "55852c3cb58844be6beeca11e61fdaeecd7463fd01fcfc24060f543b506301b7",
+      "bytes": 50248
+    },
+    "figures/b2_recall100_vs_budget.png": {
+      "sha256": "8e71b0f9f21089f08b4d80066c4c89d59d0ccd2c4f7a4dfc74da0d5608ef424f",
+      "bytes": 291755
+    },
+    "figures/b2_recall100_vs_budget.svg": {
+      "sha256": "fda2fda9a80f4fa7da367fe47b5d6c1d5a62e04e7befd67c58c8c3094b9c6377",
+      "bytes": 28948
+    },
+    "figures/previews/b2_all30_primary_contrasts_pdf.png": {
+      "sha256": "61dfec37d29927bb2e9e89a4a90219e41da69cc3f834276dca082d1359325738",
+      "bytes": 159470
+    },
+    "figures/previews/b2_ndcg10_vs_budget_pdf.png": {
+      "sha256": "893eca0bf83839e4270c7e97fb56c3626660ec376ac030f13e23013be817d92d",
+      "bytes": 128820
+    },
+    "figures/previews/b2_recall100_vs_budget_pdf.png": {
+      "sha256": "613d0d82615b6089e0287793b1f040c11c657fe7ef421c99fef120e9e175d800",
+      "bytes": 127277
+    }
+  },
+  "limitations": "Six-method curve overlaps reflect close means; exact values/seed variation/intervals are retained in tables. No manuscript changes or new scientific run."
+}

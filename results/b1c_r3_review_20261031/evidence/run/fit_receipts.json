@@ -1,0 +1,722 @@
+[
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "6046fec3528a2ff8b75f7c7b58d06097ac5140efb3844be2ec6aa9b62397e2a6",
+    "new_fit": false
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "46f9e87677e27ca8ed3c3b652c234622dea02bb61046dd5e87be16f162dbc68a",
+    "new_fit": false
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "cc3f05016862ff6cbbfffaeaec2451e619a6eebee648519cb472edd2a8ab8eeb",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "7622e8f494dfbedefc6a0930bbb6e75dd6b12b8026bce263612cf4e4e6e02173",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "48066f852490894020a2ccdb61620317a4aba2410529bd62b6c07b42ca74f448",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "bc0a322a78ba64360822bb473a7840f11f8d7dd052cd633dab4c54b3b14b1ae0",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "e93e419eae8625b7055671c3b144cd5732f848d4da35f0bb0e119f4babdf2c81",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "d9b5f8336d7f07476e1661f2551e33585120bcdb70c93622a948eacb7765d0db",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "dfdd15c4b5fa7f7950f572c379cc82443661e775f63843734f5a3397a1f8d88a",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "b3f0d4c244d9827d13da15f2bd079ed5a7fccd990855f86adf3ee43bba19c9fb",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "56797e8f71b5a305533d5966674b6d7ea729f488954785f23df94e23711ff66b",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "ac2045c0a8520957965ae7871f44975f58cf7bc899f1ffe127efa9c2f61849e4",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "285cc8d1fd7fdee0a4523f8445369e68338bc7c45dc72ce7dbd169f449622080",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "b02fc23b3e5298b0758ce78ce08a1f2119b27cc7d37e28d98cbe8ecafbced12e",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "8a73ae38f078e7f93418acdd1a5f1daa96b3bb112d144839838ebdbbe2a2d96d",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "b2286cfc22739546552f80dddd84ce1542377bc5297ec315a786eb745cc08a2e",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "54e33f93db89464f010cd895fb8417e24dbf9ba63fb22e1aa0d32053cb013a4c",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "a7e10e54ee6d04d2d771a36c07d3b251600fe9c9d5b5a30ae310eea3cb38812f",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "4ef2da6b763301e07c557312783faf0bcdb00e449cad473ad60af08e8e45985a",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "2d3937e584fe51c9b32b326446dda4171ee90308366b66a52d621304cd098458",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "2134ce1e58cec2801fbb366e74e576e7444aeec41ce73758289982afb187f5ac",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "2a814a7bd8235a5845b35e893493a97f704b56a6f9ac6217765a5d5345d6f941",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "51a1cc3d848ec1a642798a80a98c68faadcc0a9100b829da35cec571c9b06716",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "03489070d180a2a8c7caf16be7459685667ecdaf7dbbd32090c0dcd8b6fa9a55",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "da51d239355a88035126900c1904290f460e884ca5aeef4c1b451f31791e70cf",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "21fd4f1f408050a5149ecaa8cd5a5e3f101ffcced73d5f9faf3ade2c988848bc",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "029782c96562b10e000242bae560a312c2a815e0b3309cf8a8caded324eb99a6",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/FiQA_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "339abc5493b1117aeb719c268b2ea2ce9986144b38ba6fa49b318632b5d3ee14",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/FiQA_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "ce47233a6bb65e5dc1c3bbd363ba65132e705d3e9d44515d6ce0c7ce267d8e1d",
+    "new_fit": true
+  },
+  {
+    "group_id": "FiQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/FiQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "207c859372459147cbbc3dad6862db2db8d6d4c5fc7f4625505c4d24b0a1fcf1",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "d2eb5614a2555314d846b3863dcae5cf08ae2333a1fbdde1b80769f098cf780c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "d2463641fb2651ead307670a44ca5b0a8c0b76b66e5ca155fe2b49103a938e07",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "90f473c3c90b632a2e6241640e1a1f1e27991aa4b24457062c806cd9754d1640",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "44456ed7dac7377f72b8451eb2b0c01ec64ddd4cd267a85bb516eabcb77f8366",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "f73287be3a2decee9490adafdd15355eaf240fda50eeac379aec119cd09c0ec1",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "6a3e41a05b0d1abf417d2a8dd67c556da28dbc060ceef1d6348f9a79a9ec3ebe",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "8e96d7aa3a1537c2584d2a188920fbf15e3a337d3683340c9d23ee04707ed812",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "a029e6d5015bffe706886c4675ab556014e2763566a9ec70e016e3cf33fe6ffa",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "dc69cf50f34d883662b716fc81c3bb358ee5db5c30558437903d17a9058e2e12",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "64ec41850fd441d1a524afbaaa5055a50d128da46dc64e691a1197d23311ce0f",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "c03eeb7a8b2eeb90f159da9d88ced6d0187a6e837749c44e5d3f8de7aec6305c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "f4bf036489fa87f1277e5a0f6865ebd6069f5136536599906444263861496908",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "385d3e96869d324159f03447ad1ddeaa4d650566f19a6366928efb237ff23878",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "199fd71f2e8db750d80a6a286bf381ecef63e6fe4a83958ad74179f225c7bccb",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "010fd1574876ca4fec0b5fdf02e2e1952462971160d2b16a4b7e546d73c3f49d",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "39909df2727392cf621d685847cb4bf3864bef194ce93290659808bf7f257d8b",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "7b74798f2043064b935b81f7c9383dabe56e8c69ef871e8cf77d4fcae33e36e8",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "6d6d205ad312735e0b5872c928e2207e80c46f88d3459862d74abf7510019f00",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoNQ_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "2b359ec2d7c25f75241ece5cd0a0450078602a40c75787409982efc4f65c1b6c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoNQ_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "0940933a6e78916c465d27fb977c5efbcb1623fe2ac366879d35b0d571779d3c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "9b06a7cb45a0191c8b0dcc40f9c8d2bc4bf2f9045ef6f07944d0c0db7422ac9f",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "68b5900fcc5a8348838d427567ad196b2cb59699886f0a53afb34d8c07a32c50",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "a98ab6603a7a31dfcb39a1fa920832ef5e14443dcecaad453a3e8622df2bb239",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "b8e7f7f40a1aee8dfe0a95340013b044e2a64abffde1325cb27c53db6ab340cb",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "6c986850afa0b2d16bcca0c53cda8e6a7a602754d7691c8c88d0a8e13f695503",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "4a7ae4f3ef852ddf64e3d1957545c3585e9ca3a313ddcd9bea3aadaba1af37e1",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "627f767591c600d96fbd1b817c6941c26211d25fb41fb2bb4ada39c3a1e38aac",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "38f25751d57b09d54eb6cc3835d5380dbe400f803bc85743d83fab67a71c2f3f",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "9f2d0cff988b89aef03610a981dbcbefb6eaab8f2f7d4541f5ace684327b103e",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "21c9d16b26ec17087ad409de8968288c7be713313a19a784e858171e2bbf5e1c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "87f5b441d0109e687890b95f6077b2c7d2b16c521ca3ea490b93f530dff14552",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "e77e9173042984e21f0421e0d1b9ea0c6d2d2c2e7fa91d212d04fa3caa8b7cda",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "f1e9aa4ebe80db6ff7ea6633a03e44e07f82078fbfae4298edd379e18cc7745f",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "4cf8ecd0c1a60db346afd51ecc35fb7334d6a5a385eadd46bac3685e2e980ea9",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "03c2b1c4cb8c71cd0b1405358dd7834400dcb93f28ef39f5dc154d845778307c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "9d5c821c71118248408499a168050b666063b0cfaf4fad858676b099afa1f0e5",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "2fd42ad4640227fcdb7de02c173a9897929f5593edb12de69513eb99a9e615e0",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "8276b1941fee9c01a7ecd8373d60ff3d43c06af6aed797e9f4d1e31638cec482",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "f708252bdf2b04106922e0bb22c3cd5926a69016eabe9662f829c120c44e48cc",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "0eb7b7fd473c4c6130a72fa907597930cd05f802d1b1cd443e828a7068b7d5aa",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "743e700e66ef29e3307ab12c30c82780559e8649a824f7638c0aae1a30bcb2d0",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "b3c4d7d2e9ec22347221b183e5da386ecbe076958072930b7163379c613432ae",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "98dc750ec8d14a40148ea67bba459314622112bfe1362b8a3f5f1564d4d9184a",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "5d860fef4ba842467edc070ed0a9607f8943ca51a90a83d7d63ddeb312541cc0",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "d149068285a3f18f108df73baad82344f94283e154c0cd936a559634a7fb36aa",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "08de8fdc166baa828cc3ffe819d6b8e6cbf8a5e27fce17747836aafd9625ab2b",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "dc56e160a469c4a32d001e0720ad86d5a1de032e1d766309b90e74d6a3e70faa",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "37b1928e76cf820b80a81cedc4644287adfaddf7fc3fa4509b5ec195558c8fa1",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "a3f3106c86425cfad9dc6cb543cd3cba9d06550f19fbc995462814147c0e83a9",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "54de72dff08bd5e7c6d06e095741db2bb7c80b32c3e4867f554514ee645dd85c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "51f3a4026e5dde1674c0938a28dca41361d3789370259c6f80378feb0d067f37",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "6f1974ba73eb55298f1080d5dcd1e840e6b496b869bf2d41babeac89e3de76a5",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "71e0393b1e5d4439b5bbf0895d04169ed2afc1359528429d58e54a9e48bf5df4",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "f936ac2329bf6f728cd5f49a060e2ca290263299c319f491a6c4c49698bf4bf4",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "f3ec4a1131857d4d3ed8d2c5b66ce698575ab9c53850dc4615bf19208c68ab7a",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "3ebf3281735680eed9c676ec4966bc47c7dfd4bff511d7ea7db87628728dec60",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "4ad2ec817c2a4e7f28dd1a315b172287bc6119d36dd85f6b76f2b4c36196f82c",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "633c266b12f17ed9ef714897a3fb571001ba5358c1d7b34440d4e0c557432e86",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation",
+    "path": "groups/NanoFEVER_e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation/fit_receipt.json",
+    "sha256": "371500566e6b8bc0e4957df272ddcec4f1063dc7a751303af86a263603badc0a",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5",
+    "path": "groups/NanoFEVER_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/fit_receipt.json",
+    "sha256": "e730d8a37ee05c53b74632014480fd3f8ebf8ed48fdfbe5c41a7ac2afc1e0ecc",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "f1ba2d2788c603ccff43d005c47085a68c72ce61718f6b418a1f43e683843026",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "219f0b849d2792ff332dc919898deabbc82b2d04457e27f54df6943acee61e05",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "f7735d60918fa7d48e5c00a8bb3b40f9e33742e7391464620bc99516da504c2b",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "dad24bdb20a349fa0cf837390ef2c6785e08d069210b331b063137d49f4f1927",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "51702043debacb37969b33c33547408be66cc0d66c3310cbaa5317f497f14935",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "ec4d418aa44c0aec53fee5ef209045ab53c68cae3eebd0a5e8db9f38c261a4c9",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "97e038332d7eee213a4ef66b68538ba917af1155a51e785420af430d902cb43d",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "0989b06e937aa0ae51750e951e80920f797d0006a7e5ea7ead69e11f68db5801",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "34518a33a15c81edbef647044d0845ea73cf9643be5e2dd0a97fb7e1de0035c7",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoNQ_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoNQ_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "e2823880796e734cff0d5fcf7c0328110c15f4a27dfe162126904b933ce757e4",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "a574e12fc2dced503be8af51606a94fb8a1fbc537dc4cb014e4f25101f3b9335",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "86af561be40ff818148ce926b112ab493f6d802f3211778d4993b22a574c43a0",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "8f5acfb46f9e11281542a3357926241592db6c0fc53aad69b3b9bac4672588e1",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "725331a2811ea892b55764978166172e697fafedd3c0608e6d0a419d4bc96bd0",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "fa81b18a64a31837f5f8dc8ba0c36b572cc78966bf203f3bb72f2e22f5ae6dee",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "08bedbf942468dc624d6b026b435a99b72f4456a9c1b4da7ec0fcadd6a3a6f06",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "a3d7e2278d6b0f47356a16f780fa891c1cbbb94b683c510c8216e7959f59a45d",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "7925fbdd560d4068087c023fd911a691ce3043180faeb9862974b839962e17b4",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "95b75d56561acb20d4b5aab47dc6ca4984a888e1afdbfe8b0eb4d9e034ba5627",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoHotpotQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoHotpotQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "8133a85e699925ea30e8ca8b253e405ca516ed6f2b8cc76a5a7dd67959bac9c9",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "80ba6cb49c836057e6f80f1570c25e3317fe1ab9e4323cf81c68298ecf64d6ab",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "ab2a3a8d700ab27331b88d40518618ef60151e562b0a7ed7285ee6e4a6a6d737",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "1ac735bfd756f486cdb898a33377df32dd70611c02181f2d980fea3db0f75efd",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "0c1cde5be8aa8a821cab771c3b6d25395e022d8dd2806b54ef7324c49a9ccaf7",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "d2edd4cfd2a4a13176d07d8dd5c3ebb2969f6af2beb04bd022f87a26b364fbe9",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "dd3de1386b22747f6e62b9b0661437dee69cffda2c62d03fc5b1638ae01381de",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "0e999f7a1b3b35fa1faf5198aa2c43275d0ecdac638764daef018e5c641a072d",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "74b89165e59200d30df166be9cede7bede4f77e1a2655e28329afbc5f446d29a",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "27bc27b895259f54b4240a0f9f56a60a8fceeac2964c40613576b9e4f1a41f70",
+    "new_fit": true
+  },
+  {
+    "group_id": "NanoFEVER_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec",
+    "path": "groups/NanoFEVER_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec/fit_receipt.json",
+    "sha256": "cb418bf27d7e7f96fb18cbf18f98cb2650cd40414e504fbbc9d3ae91da62a851",
+    "new_fit": true
+  }
+]

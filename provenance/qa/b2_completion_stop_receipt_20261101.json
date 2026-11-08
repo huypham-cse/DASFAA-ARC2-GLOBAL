@@ -1,0 +1,46 @@
+{
+  "status": "B2_COMPLETE_STOP_FOR_USER_REVIEW",
+  "recorded_utc": "2026-11-01T02:05:07.515124+00:00",
+  "scientific_pre_run_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "ranking_count": 184,
+  "fit_group_count": 60,
+  "primary_family": {
+    "positive": 11,
+    "unresolved": 19,
+    "negative": 0
+  },
+  "computational_qa": "PASS",
+  "visual_qa": "PASS",
+  "aris_verdict": "partial",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "formal_integrity_audit": "not performed",
+  "full_backup": {
+    "files": 1330,
+    "bytes": 58977150839,
+    "pending": 0,
+    "unstable": 0
+  },
+  "all_61_scientific_source_pins_unchanged": true,
+  "manuscript_files_verified": 20,
+  "manuscript_changed": [],
+  "artifacts_sha256": {
+    "results/b2_review_20261101/qa_completed_20261101T020214554697Z.json": "cdd654c401cd51efc3177fc8b6a40bbc60d346768417a9db2cd8699298110e42",
+    "results/b2_review_20261101/visual_qa.json": "8373723c2106e0ca65bf0ed1cb11b18d2ea970d982536916025f95d3c897e695",
+    "results/b2_review_20261101/SUMMARY.md": "d588ee7a48a22c17641408083dd3e2bd8d46165fb902b13d1893c92870ac0baf",
+    "results/b2_review_20261101/render_provenance.json": "1cf5febb941f9598d4faed3a777a567bfe92a8fbcae0ecca792bc6690b1732ca",
+    ".aris/traces/result-to-claim/2026-11-01_b2/verdict.json": "7e382ad0e190b4427ba625ef03d546379b7415d40d8fdd7996e2ea36fdcb63d6",
+    ".aris/traces/result-to-claim/2026-11-01_b2/001-claim-review.response.md": "fa0260e4df761dd7c2ba2ca92ebdcc8df5a9471afb2b978a42da82c2b62119aa",
+    "provenance/qa/b2_terminal_backup_receipt_20261101.json": "7dd84b3a138658d4a8e42876bd50821f6202d3bfbae918e7095307af88e5f28e",
+    "REPORT.md": "a7bd651c1fafd0bea86091228067353e7cf512f7cad009df4810a1c78ba103a2",
+    "CLAIMS_FROM_RESULTS.md": "73f11018e3c393fe63fb848845d8de19c704556693a92179f295a72ad84b601e",
+    "findings.md": "2bd02658b652895f804dab61e1aeeb6f9589c4d56f2c826b76b1adc53862c0ae",
+    "README.md": "152b4e629ee435d1494ad313dfc90ae82c880753dfec96b819973e9be7fe0076",
+    "AGENTS.md": "652262008aefc2271f60210bfc57bbcb8b84da2c6c049a5083de6095d4d2e3a5",
+    "refine-logs/EXPERIMENT_PLAN.md": "cfe1dfdcc210581127ea68b7565edc088c247455eaff23b2f76f645c47c2272c",
+    "refine-logs/EXPERIMENT_TRACKER.md": "a700a554c60168bc52ca5c8e7b51766e67c743378348edf6db2abdc070562cc4"
+  },
+  "no_automatic_next_experiment": true,
+  "next_step": "User review; manuscript integration/audit only if subsequently authorized. No B3/B4, new datasets or retuning."
+}

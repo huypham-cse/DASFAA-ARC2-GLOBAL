@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-30T12:52:23+00:00",
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+    "group_index": 103,
+    "groups_total": 120,
+    "rankings_complete": 307,
+    "rankings_total": 358
+  },
+  "run_status": "B1C_R3_RUNNING",
+  "failures": [],
+  "disk_free_bytes": 601044017152,
+  "worker_status": "RUNNING",
+  "worker_failures": [],
+  "worker_started_utc": "2026-10-30T11:52:42.420739+00:00",
+  "selection_progress.jsonl": {
+    "step": 50000,
+    "elapsed_seconds": 2074.9553797123954,
+    "parameters_finite": true,
+    "gradients_finite": true
+  },
+  "refit_progress.jsonl": {
+    "step": 36500,
+    "elapsed_seconds": 1491.6518610427156,
+    "parameters_finite": true,
+    "gradients_finite": true
+  },
+  "last_three_converter_fits": [
+    {
+      "group": "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec",
+      "seconds": 1129.2452141838148,
+      "ended_utc": "2026-10-30T10:36:55.720083+00:00"
+    },
+    {
+      "group": "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec",
+      "seconds": 1144.3592618079856,
+      "ended_utc": "2026-10-30T10:56:01.999362+00:00"
+    },
+    {
+      "group": "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec",
+      "seconds": 3393.9461441840976,
+      "ended_utc": "2026-10-30T11:52:38.678974+00:00"
+    }
+  ],
+  "gpu_lines": [
+    "|  0    3   0   0  |            8286MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |",
+    "|    0   N/A  N/A     31040      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A     31811      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A     31812      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A     31813      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A     31814      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A     37719      C   ...covery_20261030/envs/gpu/bin/python          0MiB |"
+  ],
+  "scoring_started": false
+}

@@ -1,0 +1,60 @@
+{
+  "status": "COMPLETE_STOP_FOR_REVIEW",
+  "client_date": "2026-11-02",
+  "utc_recorded": "2026-11-02T01:31:36.213699+00:00",
+  "pre_run_commit": "66be60f",
+  "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "run": "results/tc1l_local_r1_20261102",
+  "full_rankings": 20,
+  "primary_contrasts": [
+    {
+      "pair": "minilm_distilroberta",
+      "left": "tangent2",
+      "right": "chordal2",
+      "delta_ndcg10": 0.013999055140592891,
+      "lower": 0.009703861642472786,
+      "upper": 0.018620502805854717,
+      "verdict": "positive"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "left": "tangent2",
+      "right": "euclidean2",
+      "delta_ndcg10": 0.011589365153669408,
+      "lower": 0.007820844428750586,
+      "upper": 0.015656396532695304,
+      "verdict": "positive"
+    }
+  ],
+  "metrics_QA": {
+    "status": "PASS",
+    "rankings_verified": 20,
+    "per_query_values_verified": 20000,
+    "independent_metric_maxabs": 2.220446049250313e-16,
+    "mean_maxabs": 0.0,
+    "bootstrap_maxabs": 0.0,
+    "paper_unchanged": true,
+    "paper_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+    "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+    "seal_sha256": "0b4a3809ace4b37df55357fd767ba6367fe6e1209070a1c44bc30be353315df9",
+    "qrels_sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+  },
+  "ARIS": {
+    "claim_supported": "yes",
+    "confidence": "high",
+    "review_independence": "same-family",
+    "acceptance_status": "provisional"
+  },
+  "stage_seconds": {
+    "synthetic": 3.3707243999815546,
+    "smoke": 14.598100300005171,
+    "full": 71.27952889999142
+  },
+  "full_peak_RSS_bytes": 539574272,
+  "E5_pending": true,
+  "original_remote_TC1_status": "unknown; no overwrite/relabel",
+  "paper_unchanged": true,
+  "algorithm_unchanged": true,
+  "regrade_performed": false,
+  "STOP": "Await user/supervisor feedback; no automatic manuscript, method, E5 or new study"
+}

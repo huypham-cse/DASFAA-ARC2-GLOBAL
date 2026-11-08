@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "metric_checks": {
+    "status": "PASS",
+    "graded_ndcg": 0.7002755876478819,
+    "full_qrel_denominator_recall": 0.6666666666666666,
+    "zero_and_unjudged_queries": "zero",
+    "serialized_order": "unchanged",
+    "implicit_binary_parser": {
+      "status": "PASS",
+      "ndcg10": 0.38685280723454163,
+      "recall100": 0.5,
+      "unlisted_pairs": 0,
+      "requires_explicit_parquet_opt_in": true
+    }
+  },
+  "matrix_missing_duplicate_checks": "PASS",
+  "shared_query_bootstrap_vs_direct_indices": "PASS",
+  "ranking_tamper_rejection": "PASS",
+  "generated_artifact_tamper_rejection": "PASS",
+  "r3_378_358_736_partition": "PASS",
+  "pre_label_exposure_gates": "PASS",
+  "historical38_provenance_guard": "PASS",
+  "real_labels_accessed": false
+}

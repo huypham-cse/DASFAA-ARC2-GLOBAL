@@ -1,0 +1,20 @@
+{
+  "status": "FINAL_SCORED",
+  "completed_utc": "2026-10-31T20:12:54.105512+00:00",
+  "artifact_sha256": {
+    "bootstrap_draws.npy": "6517eb44b5c1967d7f3c54f72329f60f707892c85a395cf56210f6e58715ddba",
+    "cell_index.json": "d814ca87e947638e826d8f46bacab4f0f3526150ada9552c5ca59ca4b1776410",
+    "per_query.npy": "ffae3f16c279f3968c430537694df82ea0e8ec7aaed58576125522c9fb1d24be",
+    "qrel_observed_hash.json": "25a1e2ec5ba33f59442de3f41bfa950e019405e160b8182c08908275dc6f1055",
+    "qrel_request_started.json": "2284e90350fef54842710d759ab443be936daed08806dbe01e375ff4e6e71c5b",
+    "qrel_verified.json": "cda2958855672b58030fd4f57a5af33a6b57b943012e2139e6a56c8198ad21c2",
+    "qrels_TREC-COVID.tsv": "10669ab7d526cb04f52079139fd88c3d467a0776441b046567f540582798982b",
+    "started.json": "b0fed013f2b6169b045c1e3ecccd68b01bc8283a7801bc6ef17da187d2e02cb0",
+    "summary.json": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+    "summary.md": "38a9d416a43d5b18da27515b2463dc0eed4319c7d96718abf0023943979805f4",
+    "synthetic_metric_checks.json": "23ebc6a58a25d40efd7fb935ebe656ac6c86a994282a4ea6fa2ea6077c4dd6bd"
+  },
+  "first_final_qrel_open_sha256": "01fcd0bc4b5f890eeb228eff8b1cd6cea8b15ee6afb6cc45e235b981be0421c2",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "next_action": "STOP for independent result-to-claim review; manuscript untouched; no systems"
+}

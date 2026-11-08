@@ -1,0 +1,17 @@
+{
+  "status": "FAILED_PRESERVED",
+  "stage": "smoke",
+  "code_commit": "5070bda3288e7f80b978898bb8710ba4107ca687",
+  "lock_sha256": "cee1acd1eda98a936f408b1a28002a5011c01e3c65403417b81e373ffad03f99",
+  "started_utc": "2026-10-25T18:47:16.328867+00:00",
+  "failures": [
+    "AssertionError('results/fiqa_development/metric_index.json')"
+  ],
+  "new_qrel_reads": 0,
+  "TREC_access": false,
+  "artificial_caps": null,
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_5070bda/ops/b1m_stage.py\", line 200, in main\n    for rel,digest in lock['packaged_file_sha256'].items():assert sha(ROOT/rel)==digest,rel\n                                                                  ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: results/fiqa_development/metric_index.json\n",
+  "ended_utc": "2026-10-25T18:47:17.402341+00:00",
+  "wall_seconds": 1.0738990493118763,
+  "peak_process_tree_rss_bytes": 63963136
+}

@@ -1,0 +1,10 @@
+{
+  "dataset": "TREC-COVID",
+  "pair": "minilm_distilroberta",
+  "seed": 67,
+  "budget": "75pct",
+  "method": "procrustes_global",
+  "endpoint_sha256": "9b61cf3d3a63c1313f4cf10f48241ff60c012513ec36b119e473e305bdb8a8f2",
+  "ranking_sha256": "111cb1a81794e272abe380b6ee98f0b9013ae0f514a19dd9b8d180c5b6816197",
+  "all_top100_ids_and_order_equal": true
+}

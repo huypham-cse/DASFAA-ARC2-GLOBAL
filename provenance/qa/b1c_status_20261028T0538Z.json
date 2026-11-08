@@ -1,0 +1,31 @@
+{
+  "observed_utc": "2026-10-28T05:37:53.360630+00:00",
+  "host": "103.73.232.201",
+  "metadata": {
+    "status": "RUNNING",
+    "stage": "full",
+    "code_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+    "started_utc": "2026-10-28T04:27:00.353939+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null
+  },
+  "progress": {
+    "stage": "GROUP_START",
+    "group": "NanoNQ_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation",
+    "group_index": 30,
+    "groups_total": 120,
+    "rankings_complete": 50,
+    "rankings_total": 320
+  },
+  "cells_type": "list",
+  "cells_count": 50,
+  "parity_type": "list",
+  "parity_count": 30,
+  "scoring_present": false,
+  "last_resource_trace": "{\"unix\": 1793165870.8519094, \"pid\": 62887, \"process_tree_rss_bytes\": 367403008, \"host_available_memory_bytes\": 2054948831232, \"shared_gpu\": \"GPU-d4c3e79c-d772-80f8-27c9-1f2096171901, [Insufficient Permissions], [N/A]\", \"gpu_query_exit\": 0}",
+  "gpu": "Wed Oct 28 05:37:53 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.5     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          Off |   00000000:1C:00.0 Off |                   On |\n| N/A   38C    P0            126W /  700W |                  N/A   |     N/A      Default |\n|                                         |                        |              Enabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| MIG devices:                                                                            |\n+------------------+----------------------------------+-----------+-----------------------+\n| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|      Shared           |\n|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |\n|                  |                                  |        ECC|                       |\n|==================+==================================+===========+=======================|\n|  0    3   0   0  |           19498MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |\n|                  |                 4MiB / 32767MiB  |           |                       |\n+------------------+----------------------------------+-----------+-----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A     59989      C   ...ber-cli-lab/lib/ollama/llama-server          0MiB |\n|    0   N/A  N/A     67777      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n+-----------------------------------------------------------------------------------------+\n"
+}

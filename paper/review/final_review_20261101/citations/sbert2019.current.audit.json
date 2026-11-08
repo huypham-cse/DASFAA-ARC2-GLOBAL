@@ -1,0 +1,126 @@
+{
+  "citation_key": "sbert2019",
+  "verdict": "KEEP",
+  "required_action": "None",
+  "reviewed_at_utc": "2026-11-01T14:08:34.078266+00:00",
+  "reviewer": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fresh_single_entry": true,
+    "delegation": false,
+    "prior_reviewer_opinions_consulted": false
+  },
+  "scope": "Current bibliography and all section citation occurrences; family-level support, not validation of experimental implementation or weights.",
+  "axes": {
+    "existence": {
+      "status": "PASS",
+      "finding": "Primary ACL record and published PDF confirm this is a real EMNLP-IJCNLP 2019 paper."
+    },
+    "metadata_accuracy": {
+      "status": "PASS",
+      "finding": "Authors/order, title, proceedings, pages 3982-3992, 2019 year, entry type and DOI all match ACL canonical BibTeX. Missing optional month/address/publisher/URL/editor fields are not factual errors."
+    },
+    "contextual_support": {
+      "status": "PASS",
+      "finding": "The sole current citation supplies Sentence-BERT family/training background. The primary paper describes sentence embeddings from BERT/RoBERTa using siamese/triplet training and similarity search. It does not document later all-MiniLM-L6-v2 or all-distilroberta-v1 checkpoints; current setup supplies separate pinned maintainer-card provenance."
+    }
+  },
+  "bibliography_entry": "@inproceedings{sbert2019,\r\n  author = \"Reimers, Nils and Gurevych, Iryna\",\r\n  title = \"Sentence-{BERT}: Sentence Embeddings using {S}iamese {BERT}-Networks\",\r\n  booktitle = \"Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing ({EMNLP}-{IJCNLP})\",\r\n  pages = \"3982--3992\",\r\n  year = \"2019\",\r\n  doi = \"10.18653/v1/D19-1410\",\r\n}",
+  "contexts": [
+    {
+      "path": "paper/sections/related-work.tex",
+      "line": 32,
+      "text": "Sentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}.",
+      "scope": "family-level background",
+      "verdict": "KEEP"
+    }
+  ],
+  "checkpoint_provenance_context": {
+    "path": "paper/sections/experimental-setup.tex",
+    "lines": "20-28",
+    "text": "We evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}.\\footnote{Pinned maintainer cards:\n\\href{https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md}{MiniLM},\n\\href{https://huggingface.co/sentence-transformers/all-distilroberta-v1/blob/842eaed40bee4d61673a81c92d5689a8fed7a09f/README.md}{DistilRoBERTa},\n\\href{https://huggingface.co/intfloat/e5-small-v2/blob/ffb93f3bd4047442299a41ebb6fa998a38507c52/README.md}{E5-small}, and\n\\href{https://huggingface.co/intfloat/e5-base-v2/blob/f52bf8ec8c7124536f0efb74aca902b2995e5bcd/README.md}{E5-base}.}\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes.",
+    "relationship": "Separate pinned maintainer-card footnote; sbert2019 is not cited here."
+  },
+  "sources": [
+    {
+      "url": "https://aclanthology.org/D19-1410/",
+      "kind": "primary publisher record",
+      "access": "Live web fetch succeeded on 2026-11-01. Metadata and abstract inspected."
+    },
+    {
+      "url": "https://aclanthology.org/D19-1410.bib",
+      "kind": "primary publisher BibTeX",
+      "access": "Live web fetch succeeded on 2026-11-01. Canonical export inspected."
+    },
+    {
+      "url": "https://aclanthology.org/D19-1410.pdf",
+      "kind": "primary published paper",
+      "access": "Live web fetch succeeded; 11-page PDF text inspected, especially abstract/introduction and section 3."
+    },
+    {
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md",
+      "kind": "pinned maintainer model card",
+      "access": "Live web fetch succeeded; identifies the named checkpoint and 384-dimensional outputs."
+    },
+    {
+      "url": "https://huggingface.co/sentence-transformers/all-distilroberta-v1/raw/842eaed40bee4d61673a81c92d5689a8fed7a09f/README.md",
+      "kind": "pinned maintainer model card",
+      "access": "Browser tool failed for blob and raw URLs. Direct Python urllib HTTPS GET succeeded with HTTP 200; README identifies the named checkpoint and 768-dimensional outputs.",
+      "sha256": "565f15ef1c8232cf21b91aa9125bd852f54f2f676c662324732ee3d4d3a43a8c"
+    }
+  ],
+  "access_limits": [
+    "The 2019 paper cannot establish provenance for later named checkpoints.",
+    "E5 model cards and experimental model files were not audited in this single-entry review.",
+    "No experiments, manuscript edits, old review reports, or third-party literature summaries were used."
+  ],
+  "final_inputs": [
+    {
+      "path": "paper/references.bib",
+      "sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+      "bytes": 6442
+    },
+    {
+      "path": "paper/sections/abstract.tex",
+      "sha256": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4",
+      "bytes": 1309
+    },
+    {
+      "path": "paper/sections/conclusion.tex",
+      "sha256": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7",
+      "bytes": 614
+    },
+    {
+      "path": "paper/sections/discussion.tex",
+      "sha256": "834323c766a49b3b3874b660b9e6fdad3b660e8b5d93a5afeeae0c22fea01240",
+      "bytes": 2167
+    },
+    {
+      "path": "paper/sections/experimental-setup.tex",
+      "sha256": "c6dfc7e773e6f448118013e5f11ec35eed6f849f7fb475bb1d690b1e07220828",
+      "bytes": 5698
+    },
+    {
+      "path": "paper/sections/introduction.tex",
+      "sha256": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f",
+      "bytes": 3978
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "sha256": "c4babc62dd94e8c6e2ccd6b921ea9d82db762ddf73df5c6efe71a3f022ce0e37",
+      "bytes": 10129
+    },
+    {
+      "path": "paper/sections/related-work.tex",
+      "sha256": "bb47d22e21547ef1e96f4eb3634cda7039d2d6078082bae302d6507380a2b10f",
+      "bytes": 4381
+    },
+    {
+      "path": "paper/sections/results.tex",
+      "sha256": "a8d76c0bc6ffcd14af3d461baf406837e3cd34a371585cd1e9754c28a64bafd3",
+      "bytes": 6518
+    }
+  ],
+  "concurrency_note": "Files re-read immediately before report creation; these hashes describe that final read. No relevant content changed across the initial and final reads.",
+  "scientific_or_manuscript_files_modified": false
+}

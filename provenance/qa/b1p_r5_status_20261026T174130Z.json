@@ -1,0 +1,55 @@
+{
+  "time_vn": "2026-10-27T00:41:30.159974+07:00",
+  "status": "RUNNING",
+  "failures": [],
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 59,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "ranking_files": 59,
+  "completed_neural_fits": [
+    {
+      "cell": "minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 11347.499832377769,
+      "selected_iteration": 48750
+    },
+    {
+      "cell": "minilm_distilroberta_seed29_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 225.30007178895175,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 61.59076723083854,
+      "selected_iteration": null
+    }
+  ],
+  "active_worker": {
+    "cell": "minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec",
+    "status": "RUNNING",
+    "selected_iteration": null,
+    "phases": {
+      "selection": {
+        "step": 7500,
+        "elapsed_seconds": 1294.086211817339,
+        "recent_seconds_per_step": 0.17519330503232777,
+        "gradients_finite": true,
+        "parameters_finite": true
+      }
+    },
+    "pid": 40576,
+    "exit_code": null,
+    "live_owned": true,
+    "resource_age_s": 0.10391092300415039,
+    "own_cuda_reserved_GiB": 0.8671875
+  }
+}

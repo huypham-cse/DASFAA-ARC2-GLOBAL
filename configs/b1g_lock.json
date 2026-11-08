@@ -1,0 +1,137 @@
+{
+  "stage": "B1-G diagnostics only",
+  "cpu_python": "/root/arc2_p3h_20261020/venv/bin/python",
+  "cpu_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "cpu_sklearn_version": "1.5.1",
+  "cpu_environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "registries": {
+    "main": {
+      "path": "configs/b1g_sources_main.json",
+      "sha256": "a51ad424641fc9b881085ad7512b73e3ae7de840e6d8d973b86c2dd10979d5aa",
+      "groups": 137,
+      "cases": 377
+    },
+    "mini": {
+      "path": "configs/b1g_sources_mini.json",
+      "sha256": "8d7fdbe8610db07d4a58d0a7a5bbd67bcd3c6c7f5ed369d139f9175e3998aff2",
+      "groups": 73,
+      "cases": 73
+    }
+  },
+  "sample": {
+    "size": 512,
+    "salt": "B1G_DOCUMENT_SAMPLE_20261027",
+    "algorithm": "hash_id"
+  },
+  "qrels": {
+    "NanoNQ": {
+      "format": "parquet",
+      "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+      "bytes": 2020,
+      "implicit_binary_grade": 1,
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoNQ.parquet"
+    },
+    "NanoHotpotQA": {
+      "format": "parquet",
+      "sha256": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+      "bytes": 3424,
+      "implicit_binary_grade": 1,
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoHotpotQA.parquet"
+    },
+    "NanoFEVER": {
+      "format": "parquet",
+      "sha256": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+      "bytes": 2730,
+      "implicit_binary_grade": 1,
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoFEVER.parquet"
+    },
+    "FiQA": {
+      "format": "tsv",
+      "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+    }
+  },
+  "historical_metrics": [
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/cell_index.json",
+        "sha256": "06c4fa7251355dc4d4c955b974e21c1013e30dab7814203f1db787bae4d9ceb3"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/per_query.npy",
+        "sha256": "a53be45fba376c9ed072bbf326bdb6450599d7ed9605e87b50ed0decd9ca96e2"
+      }
+    },
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/cell_index.json",
+        "sha256": "b0b710c3fc0074aabab239721db266dafbd5a51115e87fb0fd4827df186e4811"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/per_query.npy",
+        "sha256": "d0e714342e6b3d08564ab3d988bc73f8a529db5b610a32b8d55a8bb12cb56799"
+      }
+    },
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/cell_index.json",
+        "sha256": "31dea095fa0af0ea391de807d3a3ce7bc5a27b5e0d86e46bfa304b175428028a"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/per_query.npy",
+        "sha256": "9dc985097699befc5073e172d3609c73951086445138e065fa981645951b54eb"
+      }
+    },
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/FiQA/cell_index.json",
+        "sha256": "ff35ab9114296da0b9ce2349edaf915180b84413589042113133292f5cb12601"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/FiQA/per_query.npy",
+        "sha256": "4647bc64355eb1de7a5e94045993895078d350d9485a4fdba24c7205b8297a5c"
+      }
+    },
+    {
+      "cell_index": {
+        "path": "results/b1p_r5_review_20261027/scoring/cell_index.json",
+        "sha256": "9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375"
+      },
+      "per_query": {
+        "path": "results/b1p_r5_review_20261027/scoring/per_query.npy",
+        "sha256": "551dc388059b6a530df550acbbd9a477de76cd0cc188ce54da0a1198be1434d1"
+      }
+    }
+  ],
+  "source_sha256_canonical_lf": {
+    "ops/b1g_stage.py": "58b9986a5a485cdd1219fb0c686b1d134e4c5f8d065a207b85e4a01829a2fa77",
+    "ops/b1g_score.py": "a0137c1a5d0b477b177df3abe76cebeacac19e71d05a17363164d49db55e6519",
+    "ops/b1g_rank_worker.py": "0146b70f61fffacadd4744bd1155b19527b6f597aa0c7f210fd615570d128fac",
+    "ops/b1g_analyze_worker.py": "77c0314bc73a97069e5ece2d5fe4515277e6cf0a8ed029e215c4b89363db0d7b",
+    "src/arc2_global/diagnostics.py": "0905e7c4cab1b0263b661f2d29677890080811e56218fbfcf0c81d2c14a18d9d",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "protocols/B1G_MIXED_GALLERY_DIAGNOSTICS_20261027.md": "bf41596b57c718bf571833e5bf5388bd340170677a218897de162ffffe397fe4",
+    "tools/build_b1g_source_registry.py": "6bc4cd1937c4925da33454ea700c9bfd81589ac9ceb5144fe407db30ec25f7ea"
+  },
+  "expected_groups": 210,
+  "expected_cases": 450,
+  "statistical_scope": "Descriptive diagnostics only; no new CI/significance family or model selection",
+  "TREC_access": false,
+  "new_fits": 0,
+  "new_physical_document_encodes": 0,
+  "STOP": "after B1-G/ARIS interpretation and D1 analytical recommendation; no next scientific phase"
+}

@@ -1,0 +1,632 @@
+{
+  "claim_supported": "partial",
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "pending_external_review": true,
+  "integrity_status": "unavailable",
+  "computational_qa_status": "PASS",
+  "computational_qa_receipt": "results/b2_review_20261101/qa_completed_20261101T020214554697Z.json",
+  "suggested_claim_revision": "ARC2-Global is a compact forward document-space adapter that applies two closed-form tangent corrections to a centered Procrustes map. With 1,024 fitting pairs, it improves aggregate nDCG@10 across four inspected development collections. A prospective TREC-COVID test confirms gains in 11 of 30 declared comparisons against the specified ridge, SimpleLinear and Converter configurations, while its incremental nDCG advantage over Procrustes and LA2M remains unresolved.",
+  "what_results_support": [
+    "Compact frozen affine adapter plus normalization with two closed-form tangent corrections.",
+    "Positive fixed1024 DEV macro nDCG versus all five specified configurations.",
+    "B2 improvement in11 of30 declared primary comparisons, specifically Converter5/6, ridge4/6, SimpleLinear2/6.",
+    "A material transfer boundary: no confirmed Procrustes/LA2M incremental nDCG advantage and negative E5 Recall differences versus Procrustes."
+  ],
+  "what_results_dont_support": [
+    "Independent nDCG improvement over Procrustes or LA2M.",
+    "Equivalence, noninferiority, universal dominance or an optimal number of tangent steps.",
+    "Best use of all paid fitting pairs; original-paper reproduction claims.",
+    "A causal mixed-gallery calibration explanation or tested repair.",
+    "Physical-cost, isolated-hardware, SLO, real-traffic, ANN or native-reference superiority claims."
+  ],
+  "missing_evidence": [
+    "Broader claims would require independent incremental mechanism/geometric-baseline evidence, broader domains/encoders, independent all-paid comparison or deployment measurements; none is required for the narrowed descriptive claim.",
+    "No formal integrity audit and no cross-family semantic review."
+  ],
+  "next_experiments_needed": [],
+  "next_experiments_needed_note": "None to state the narrowed result. Further scientific work is optional and requires new user authorization and an immutable protocol. Do not treat partial as automatic authorization for supplementary runs.",
+  "routing_action": "Finish current B2 report/figures/claim notes, then STOP; manuscript unchanged; no automatic B3/B4.",
+  "primary_family_outcomes": {
+    "above_zero": 11,
+    "below_zero": 0,
+    "unresolved": 19
+  },
+  "primary_family_outcomes_by_baseline": {
+    "procrustes_global": {
+      "above_zero": 0,
+      "below_zero": 0,
+      "unresolved": 6
+    },
+    "la2m20_integration_script_adaptation": {
+      "above_zero": 0,
+      "below_zero": 0,
+      "unresolved": 6
+    },
+    "simplelinear_official_final50_mlp5": {
+      "above_zero": 2,
+      "below_zero": 0,
+      "unresolved": 4
+    },
+    "ridge_affine_l10_bias_regularized": {
+      "above_zero": 4,
+      "below_zero": 0,
+      "unresolved": 2
+    },
+    "embedding_converter_paper_spec": {
+      "above_zero": 5,
+      "below_zero": 0,
+      "unresolved": 1
+    }
+  },
+  "point_delta_counts": {
+    "positive": 20,
+    "negative": 10,
+    "zero": 0
+  },
+  "primary_contrasts": [
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "procrustes_global",
+      "delta_ndcg10": -5.136066855163088e-05,
+      "family_ci": [
+        -0.014694745593972814,
+        0.013213525679703809
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.0030623884103242833,
+      "recall100_nominal95_ci": [
+        0.0017318861225867031,
+        0.004548530715636133
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta_ndcg10": -0.001504399489089405,
+      "family_ci": [
+        -0.03430576267376661,
+        0.02907870839908143
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.016063114200866188,
+      "recall100_nominal95_ci": [
+        0.010313557917450516,
+        0.02295688240489392
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta_ndcg10": 0.0008729167709579025,
+      "family_ci": [
+        -0.03294484894780953,
+        0.032548466682588796
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.027056179604857112,
+      "recall100_nominal95_ci": [
+        0.0194979692005054,
+        0.03585552065358726
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta_ndcg10": 0.02974281152164104,
+      "family_ci": [
+        -0.004477666541051713,
+        0.06832583936849443
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.020729543952352904,
+      "recall100_nominal95_ci": [
+        0.015279661911551043,
+        0.02665436162349453
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta_ndcg10": 0.03953962459261952,
+      "family_ci": [
+        0.0006302196978609639,
+        0.07561331897623641
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.024510378250813133,
+      "recall100_nominal95_ci": [
+        0.01892634197974538,
+        0.030733888795713243
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "procrustes_global",
+      "delta_ndcg10": -0.004666870465219521,
+      "family_ci": [
+        -0.018617590940593846,
+        0.00609852657610738
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.0018061803508952962,
+      "recall100_nominal95_ci": [
+        0.0006734858739983598,
+        0.0029928393535734415
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta_ndcg10": -0.007321002357654939,
+      "family_ci": [
+        -0.026682539889838944,
+        0.007137508111023871
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.006868749418233001,
+      "recall100_nominal95_ci": [
+        0.0038372006647568865,
+        0.010151408541435526
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta_ndcg10": -0.007635139697658929,
+      "family_ci": [
+        -0.027397841906307695,
+        0.0069215980242743015
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.01081391950315675,
+      "recall100_nominal95_ci": [
+        0.007279478353659871,
+        0.014730156438018664
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta_ndcg10": 0.014517372599864117,
+      "family_ci": [
+        -0.01079865042649303,
+        0.04209814796750806
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.017297092816599212,
+      "recall100_nominal95_ci": [
+        0.012461660903281553,
+        0.023118412320905737
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta_ndcg10": 0.02190799526854917,
+      "family_ci": [
+        0.0005178011321619429,
+        0.04263918301944054
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.01811848401513737,
+      "recall100_nominal95_ci": [
+        0.014306264749082946,
+        0.02236517498383615
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "procrustes_global",
+      "delta_ndcg10": -2.3564924613148544e-05,
+      "family_ci": [
+        -0.0045045389961348515,
+        0.004383734800061371
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.0004072762988128294,
+      "recall100_nominal95_ci": [
+        -0.00046319614730042097,
+        0.0012998664306243608
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta_ndcg10": 0.0009512792584207396,
+      "family_ci": [
+        -0.006116292591115391,
+        0.008780612423464904
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.0015665004762979735,
+      "recall100_nominal95_ci": [
+        0.00029010836825989444,
+        0.002925937582336079
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta_ndcg10": 0.00021085277260803745,
+      "family_ci": [
+        -0.006827535661738342,
+        0.008018776860536694
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.0028197635918072593,
+      "recall100_nominal95_ci": [
+        0.0015286969118449686,
+        0.004219587324435863
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta_ndcg10": 0.01829353426503278,
+      "family_ci": [
+        0.00043951281706854317,
+        0.04492339866433025
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.014198286297018428,
+      "recall100_nominal95_ci": [
+        0.010258870020963163,
+        0.01886331380462944
+      ]
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta_ndcg10": 0.016258281557834944,
+      "family_ci": [
+        -4.496385125866207e-05,
+        0.03208424943554028
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.01063511743401053,
+      "recall100_nominal95_ci": [
+        0.00855640712197334,
+        0.0128819571242266
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "procrustes_global",
+      "delta_ndcg10": -0.0032404285712858832,
+      "family_ci": [
+        -0.021620914986484444,
+        0.01432474395822758
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": -0.001991214481969909,
+      "recall100_nominal95_ci": [
+        -0.003291983341906236,
+        -0.0006798521068942913
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta_ndcg10": 0.04221113712298237,
+      "family_ci": [
+        -0.006416733787802239,
+        0.09332456219941979
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.027254255758681376,
+      "recall100_nominal95_ci": [
+        0.01988848816142017,
+        0.03546452973250359
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta_ndcg10": 0.13287299235509,
+      "family_ci": [
+        0.0633001667256504,
+        0.2051373777778217
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.0569362235169088,
+      "recall100_nominal95_ci": [
+        0.0463164747345437,
+        0.0683947120283425
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta_ndcg10": 0.2641805555881269,
+      "family_ci": [
+        0.15726462442241934,
+        0.37675795247986166
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.04931555564783497,
+      "recall100_nominal95_ci": [
+        0.037455004766567004,
+        0.06252413701932173
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta_ndcg10": 0.25723359077319435,
+      "family_ci": [
+        0.17573076152800798,
+        0.33756850203860655
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.04433176658637875,
+      "recall100_nominal95_ci": [
+        0.03448584750468477,
+        0.05524002316870595
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "procrustes_global",
+      "delta_ndcg10": -0.01632154204848677,
+      "family_ci": [
+        -0.03982012404542802,
+        0.0022978122002522048
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": -0.004732990378067649,
+      "recall100_nominal95_ci": [
+        -0.006442459861821125,
+        -0.003115103617580042
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta_ndcg10": 0.0005942541991765067,
+      "family_ci": [
+        -0.03551296863593118,
+        0.03599603191311822
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.010500931735485363,
+      "recall100_nominal95_ci": [
+        0.006674894649868949,
+        0.014757746858894258
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta_ndcg10": 0.06172988619056692,
+      "family_ci": [
+        0.01356012047442979,
+        0.11446072714102258
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.0418685358275318,
+      "recall100_nominal95_ci": [
+        0.033102897943381185,
+        0.05164195218153546
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta_ndcg10": 0.2622674417365517,
+      "family_ci": [
+        0.1579593697473118,
+        0.37285038597163384
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.05462500629531585,
+      "recall100_nominal95_ci": [
+        0.04210409376652512,
+        0.06821623364594123
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta_ndcg10": 0.23138457517015265,
+      "family_ci": [
+        0.15671745879653792,
+        0.3085072832020045
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.04333047998217733,
+      "recall100_nominal95_ci": [
+        0.03441470177977414,
+        0.05291607014751779
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "procrustes_global",
+      "delta_ndcg10": -0.010011959658702082,
+      "family_ci": [
+        -0.0260053875353406,
+        0.0036310901422503547
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": -0.006389451456595755,
+      "recall100_nominal95_ci": [
+        -0.008763717298704368,
+        -0.0043236039811896925
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta_ndcg10": -0.008995301709012363,
+      "family_ci": [
+        -0.03577940334852425,
+        0.01564579912460651
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": -0.0019247015522963718,
+      "recall100_nominal95_ci": [
+        -0.004529025597189853,
+        0.0004779319536214068
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta_ndcg10": 0.0312881567567668,
+      "family_ci": [
+        -0.0038296168793180924,
+        0.07170478814697445
+      ],
+      "outcome": "unresolved",
+      "recall100_delta": 0.03038434874730718,
+      "recall100_nominal95_ci": [
+        0.022192421667498068,
+        0.039863125550484796
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta_ndcg10": 0.2819970458539894,
+      "family_ci": [
+        0.17480022770218387,
+        0.3973296904795432
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.06309677372406775,
+      "recall100_nominal95_ci": [
+        0.050156431884243784,
+        0.07662511407862126
+      ]
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta_ndcg10": 0.1999540966512042,
+      "family_ci": [
+        0.13925018639424472,
+        0.2642221645268023
+      ],
+      "outcome": "above_zero",
+      "recall100_delta": 0.0414265581715504,
+      "recall100_nominal95_ci": [
+        0.03301024446045775,
+        0.05059772272846178
+      ]
+    }
+  ],
+  "individual_claims": [
+    {
+      "id": "compact_frozen_adapter",
+      "claim_supported": "yes",
+      "claim": "A compact affine forward map with exactly two closed-form tangent corrections and no neural training.",
+      "reason": "Source implements a centered raw affine Procrustes expansion followed by two ridge-solved tangent updates; inference applies the final affine coefficient and row normalization. For 384-to-768 dimensions, 385*768 float32 coefficients require 1,182,720 bytes. This is coefficient storage, not total runtime memory or a unique advantage over ridge/Procrustes. Closed-form describes each correction, not a globally optimal angular solution."
+    },
+    {
+      "id": "fixed_anchor_dev_macro",
+      "claim_supported": "yes",
+      "claim": "Higher aggregate nDCG than all five declared baseline configurations over the locked inspected DEV matrix.",
+      "reason": "B1c five macro deltas are +0.024325, +0.104055, +0.172100, +0.095653 and +0.161162; all saved family intervals are positive. This remains inspected DEV, not independent validation or all-condition dominance."
+    },
+    {
+      "id": "independent_transfer_all_external",
+      "claim_supported": "partial",
+      "claim": "Independent TREC-COVID confirms an advantage over the declared external configurations.",
+      "reason": "11/30 family contrasts are positive, 19 unresolved, none family-negative. Gains occur versus Converter in 5/6 conditions, ridge in 4/6 and SimpleLinear in 2/6; none versus Procrustes or LA2M."
+    },
+    {
+      "id": "independent_procrustes_advantage",
+      "claim_supported": "no",
+      "claim": "The incremental nDCG benefit beyond Procrustes transfers independently.",
+      "reason": "All six B2 point deltas versus Procrustes are negative and all six family intervals cross zero. This demonstrates neither improvement, inferiority at the family criterion, noninferiority nor equivalence."
+    },
+    {
+      "id": "independent_la2m_advantage",
+      "claim_supported": "no",
+      "claim": "Independent nDCG superiority over LA2M.",
+      "reason": "All six family intervals cross zero, with both positive and negative point deltas."
+    },
+    {
+      "id": "two_step_mechanism",
+      "claim_supported": "partial",
+      "claim": "Two tangent corrections improve retrieval and are necessary or optimal.",
+      "reason": "DEV B1-M two-minus-one macro delta +0.006924 has family interval [+0.003809,+0.009959]; two-minus-Procrustes is +0.024325. This supports an average DEV contribution, not independent necessity or optimality. B2 contains no one-step arm, and does not confirm incremental improvement over Procrustes."
+    },
+    {
+      "id": "all_paid_dominance",
+      "claim_supported": "no",
+      "claim": "ARC2 is the best use of every already-paid fitting pair.",
+      "reason": "B1-P E5 all-paid loses nDCG to Procrustes (-0.044335, family interval [-0.079696,-0.009272]) and LA2M (-0.037474, [-0.070583,-0.003758]); MiniLM versus all-paid ridge is unresolved. MiniLM fixed-anchor also trails every all-paid baseline in the locked cross-regime comparisons."
+    },
+    {
+      "id": "mixed_gallery_causal_explanation",
+      "claim_supported": "partial",
+      "claim": "Mixed-gallery behavior is important and a score-calibration mechanism is established.",
+      "reason": "B1-G establishes that actual true-vector replacement can reverse pure-proxy ordering; all-paid FiQA/E5 ARC2 changes 0.314908 to 0.291867, versus Procrustes 0.286096 to 0.336202. It does not isolate a unique causal explanation or validate a calibration repair."
+    },
+    {
+      "id": "native_reference_superiority",
+      "claim_supported": "no",
+      "claim": "Partial ARC2 generally matches or beats keeping the incumbent or completing destination encoding.",
+      "reason": "All six B2 ARC2 nDCG point means are below Full-Y; four are below Full-X. E5 Full-X exceeds Full-Y, and all three E5 ARC2 points are below both. The two MiniLM point means above Full-X are descriptive comparisons outside the 30-contrast primary family."
+    },
+    {
+      "id": "uniform_recall_advantage",
+      "claim_supported": "no",
+      "claim": "Recall improves uniformly.",
+      "reason": "B2 has 25 positive, three negative and two unresolved nominal descriptive Recall intervals. All three E5-vs-Procrustes Recall differences are negative; DEV overall Recall versus Procrustes is unresolved."
+    },
+    {
+      "id": "systems_cost_traffic_ann",
+      "claim_supported": "no",
+      "claim": "Physical migration savings, faster isolated GPU execution, SLO/traffic benefits or ANN behavior.",
+      "reason": "B2 exact cache-based representation comparisons count logical unique destination exposure, not a physically measured partial-deployment cost. Shared-load receipts and endpoint replay establish neither serving performance nor cost savings. No ANN or real-traffic experiment is present."
+    },
+    {
+      "id": "recorded_prospective_sequence",
+      "claim_supported": "yes",
+      "claim": "The recorded B2 sequence completed and independently replayed every endpoint before first final-label opening.",
+      "reason": "Final QA verifies the locked 184-cell identities, 60 fit groups, pinned sources and ordered recorded events; all rankings sealed 19:56:09 UTC, replay seal completed 20:11:42 UTC, opening receipt 20:12:17 UTC. This is recorded provenance and computational QA, not a formal audit of every possible human access."
+    }
+  ],
+  "decision_rule": "Frozen: primary nDCG family interval strictly >0 supports improvement, strictly <0 worse, otherwise unresolved; Recall nominal95% descriptive. No new margin or threshold.",
+  "method_frozen": true,
+  "no_postlabel_retuning_or_selection_evidenced": "Recorded sequence and QA consistent; not a formal all-access integrity audit.",
+  "source_summary_sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+  "evidence_precheck": {
+    "verified": 6,
+    "semantic_support_implied": false
+  }
+}

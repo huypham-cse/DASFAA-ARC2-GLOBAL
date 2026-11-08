@@ -1,0 +1,17 @@
+{
+  "host": "103.73.232.201",
+  "port": 62161,
+  "code_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+  "checkout": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3",
+  "pid": 16842,
+  "launched_at": "2026-10-26T09:17:42.557208+00:00",
+  "launcher": "detached new session, stdio files; tmux not installed",
+  "log": "/root/arc2_global_paper_20261025/b1p_mini_r3_campaign_20261026.log",
+  "schedule": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_schedule_mini_r3_20261026",
+  "smoke": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3_20261026",
+  "full": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3_20261026",
+  "next_item_auto_launch": false,
+  "full_requires_smoke_PASS": true,
+  "no_time_or_resource_caps": true,
+  "prior_DEV_label_transport": "/root/arc2_global_paper_20261025/mini_dev_labels/transport_verified.json"
+}

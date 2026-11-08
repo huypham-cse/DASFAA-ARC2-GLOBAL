@@ -1,0 +1,175 @@
+{
+  "citation_key": "treccovid2020",
+  "audit_kind": "fresh single-entry primary-source citation audit",
+  "created_utc": "2026-11-01T14:09:31.514327+00:00",
+  "reviewer_model_requested": "gpt-6.1-sol",
+  "reviewer_reasoning_requested": "high",
+  "overall_decision": "KEEP",
+  "confidence": "high for citation identity, metadata and fit to current citation context",
+  "required_changes": [],
+  "axes": {
+    "existence": {
+      "status": "PASS",
+      "decision": "KEEP",
+      "finding": "The DOI resolves in publisher-deposited Crossref metadata and NIST provides the matching primary article PDF and publication record."
+    },
+    "bibliographic_accuracy": {
+      "status": "PASS",
+      "decision": "KEEP",
+      "finding": "Current author names/order, combined title/subtitle, journal, volume, issue, pages, year and DOI match the PDF and ACM-deposited Crossref metadata. Year 2020 is the issue/print year; 2021 is online publication, not a required correction."
+    },
+    "contextual_support": {
+      "status": "PASS_SCOPED",
+      "decision": "KEEP",
+      "finding": "The single cite occurrence identifies TREC-COVID on the BEIR release and co-cites beir2021. The early-round article supports collection origin/task, while BEIR supports the benchmark release. Exact input counts are explicitly attributed to the local input manifest and agree with BEIR metadata. The following study-specific seal/label chronology and later result claims are local assertions, not claims sourced to this external article; they require local evidence audit, outside this review."
+    }
+  },
+  "citation_occurrence_count": 1,
+  "exact_citation_context": {
+    "file": "paper/sections/experimental-setup.tex",
+    "start_line": 15,
+    "end_line": 19,
+    "text": "We subsequently fixed a separate confirmation on the BEIR release of\nTREC-COVID~\\cite{treccovid2020,beir2021}. Its input manifest contains all\n171,332 documents and 50 queries. For this study, labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test."
+  },
+  "all_trec_context_mentions": [
+    {
+      "file": "paper/sections/abstract.tex",
+      "line": 2,
+      "text": "Embedding-model upgrades require legacy document vectors to remain searchable while a new representation is introduced. We present \\method, a document adapter that fits two closed-form, norm-scaled negative cosine-gradient targets while retaining a centered Procrustes initialization. Both corrections collapse into one affine map, allowing native destination queries to search mapped and newly encoded documents together. Across four development collections, two encoder migrations and three destination-document budgets, \\method\\ improves macro \\ndcg\\ over all five evaluated baseline configurations. It exceeds Procrustes in 23 of 24 condition means, with a macro gain of 0.0243 and Bonferroni-adjusted interval [0.0181, 0.0308]. Ablations establish an additional 0.0069 development gain from the second correction. On prospective TREC-COVID/E5, gains over the evaluated Converter range from 0.2000 to 0.2572 across the three budgets. On MiniLM, 75\\% coverage gives 0.5195 nDCG versus native Full-Y's 0.5203. The final 384-to-768-dimensional adapter occupies 1.13\\,MiB, uses 114.7 times fewer parameter bytes than that Converter, and requires no neural mapper training.",
+      "citation_key_present": false
+    },
+    {
+      "file": "paper/sections/discussion.tex",
+      "line": 21,
+      "text": "gains complement the TREC-COVID/MiniLM operating point: $0.5195$ nDCG at",
+      "citation_key_present": false
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 16,
+      "text": "TREC-COVID~\\cite{treccovid2020,beir2021}. Its input manifest contains all",
+      "citation_key_present": true
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 17,
+      "text": "171,332 documents and 50 queries. For this study, labels remained",
+      "citation_key_present": false
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 37,
+      "text": "TREC-COVID, independent seeded streams sample anchors without replacement",
+      "citation_key_present": false
+    },
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "line": 79,
+      "text": "32-contrast family. TREC-COVID has 30 primary contrasts",
+      "citation_key_present": false
+    },
+    {
+      "file": "paper/sections/introduction.tex",
+      "line": 11,
+      "text": "On four development collections, the fixed 1,024-pair adapter improves macro \\ndcg\\ over five baseline configurations across two encoder migrations and 25\\%, 50\\% and 75\\% destination coverage. The Procrustes gain is 0.0243; the second correction contributes 0.0069 beyond one step. Matched all-paid fitting supplies an additional MiniLM operating point. A prospective TREC-COVID evaluation confirms gains over selected neural and regression configurations, including E5 improvements at every budget against Converter and ridge.",
+      "citation_key_present": false
+    },
+    {
+      "file": "paper/sections/results.tex",
+      "line": 53,
+      "text": "\\subsection{Prospective Gains Transfer to TREC-COVID}",
+      "citation_key_present": false
+    },
+    {
+      "file": "paper/sections/results.tex",
+      "line": 58,
+      "text": "  \\caption{Prospective TREC-COVID quality at fixed 1,024-anchor supervision.",
+      "citation_key_present": false
+    }
+  ],
+  "scope_boundaries": {
+    "early_round_article": "Does not establish final BEIR release statistics or this study execution chronology by itself. No such sole-source use occurs in the current setup.",
+    "local_manifest": "Not opened/recounted; external counts corroborate declared release size, not local input completeness.",
+    "local_chronology": "Not verified; no source protocol, ranking seal, endpoint receipt or label-opening logs audited.",
+    "local_results": "Not verified or recomputed; article is not used as authority for ARC2 results."
+  },
+  "primary_sources": [
+    {
+      "id": "NIST_PDF",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=930360",
+      "type": "primary author-hosted article PDF",
+      "access": "HTTP 200; 12-page PDF and extracted text inspected",
+      "bytes": 828325,
+      "sha256": "94c88b0594694ca01d9c40bce6644d806fbed13651fd4730f26f79972a7f4b5c",
+      "evidence": "Page 1: title, nine authors in bibliography order, journal footer; page 2: first-round-completed/second-round-started scope. Footer issue is June 2020."
+    },
+    {
+      "id": "NIST_RECORD",
+      "url": "https://www.nist.gov/publications/trec-covid-constructing-pandemic-information-retrieval-test-collection",
+      "type": "primary institutional publication record",
+      "access": "Live page read",
+      "evidence": "DOI, journal, volume 54, issue 1, online publication date 19 February 2021; record author display order differs from article byline, so PDF/Crossref govern byline order."
+    },
+    {
+      "id": "CROSSREF",
+      "url": "https://api.crossref.org/works/10.1145/3451964.3451965",
+      "type": "ACM-deposited DOI registration metadata",
+      "access": "HTTP 200 via Python urllib; web open failed",
+      "bytes": 5853,
+      "sha256": "52227037570c89fd8f8bee5c060dd2e233dff5829493961e70e61e58dfd865aa",
+      "evidence": {
+        "publisher": "Association for Computing Machinery (ACM)",
+        "title": "TREC-COVID",
+        "subtitle": "constructing a pandemic information retrieval test collection",
+        "container-title": "ACM SIGIR Forum",
+        "volume": "54",
+        "issue": "1",
+        "page": "1-12",
+        "published-print": "2020-06",
+        "published-online": "2021-02-19",
+        "author_order_matches": true
+      }
+    },
+    {
+      "id": "BEIR_PAPER",
+      "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Paper-round2.pdf",
+      "type": "primary published BEIR paper, current co-citation",
+      "access": "Live PDF read, Table 1 p.4 inspected",
+      "evidence": "Table 1 identifies TREC-COVID within BEIR, test queries 50 and corpus 171,332."
+    },
+    {
+      "id": "BEIR_CARD",
+      "url": "https://huggingface.co/datasets/BeIR/trec-covid/raw/main/README.md",
+      "type": "BEIR maintainer dataset card",
+      "access": "HTTP 200 via Python urllib; raw web open failed",
+      "bytes": 10424,
+      "sha256": "d169709df9bed0dfecc17ece6b67499f9fcce7340aa433ad5450ddd8ab9656cd",
+      "evidence": "Dataset metadata declares corpus num_examples 171332, queries num_examples 50; describes scientific article retrieval for COVID-19 within BEIR."
+    },
+    {
+      "id": "BEIR_REPOSITORY",
+      "url": "https://github.com/beir-cellar/beir",
+      "type": "BEIR maintainer repository",
+      "access": "Live repository README read",
+      "evidence": "Available Datasets table identifies trec-covid test split with 50 queries and 171K corpus, links NIST homepage and official BEIR distribution."
+    }
+  ],
+  "access_limits": [
+    "ACM landing page returned HTTP 403 via direct urllib; DOI web open also failed. Publisher metadata was obtained directly from Crossref and article content from NIST.",
+    "No actual qrels/relevance-label file downloaded or inspected. Public article/card documentation mentions judgments or includes schema examples; no data labels were accessed.",
+    "No experiments, scoring, manuscript edits, prior citation-review artifacts or delegation performed. Required workspace README/handoff read only for repository instructions; their review verdicts were not used as evidence.",
+    "This is a citation audit, not a local execution or numerical-claim audit."
+  ],
+  "final_input_sha256": {
+    "paper/references.bib": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+    "paper/sections/abstract.tex": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4",
+    "paper/sections/conclusion.tex": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7",
+    "paper/sections/discussion.tex": "834323c766a49b3b3874b660b9e6fdad3b660e8b5d93a5afeeae0c22fea01240",
+    "paper/sections/experimental-setup.tex": "c6dfc7e773e6f448118013e5f11ec35eed6f849f7fb475bb1d690b1e07220828",
+    "paper/sections/introduction.tex": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f",
+    "paper/sections/method.tex": "c4babc62dd94e8c6e2ccd6b921ea9d82db762ddf73df5c6efe71a3f022ce0e37",
+    "paper/sections/related-work.tex": "bb47d22e21547ef1e96f4eb3634cda7039d2d6078082bae302d6507380a2b10f",
+    "paper/sections/results.tex": "a8d76c0bc6ffcd14af3d461baf406837e3cd34a371585cd1e9754c28a64bafd3"
+  },
+  "citation_entry_sha256_utf8_lf": "e06635ce3f6bd28150987026ab1c7da0bae53a1c2387bdb629da85532260b3af"
+}

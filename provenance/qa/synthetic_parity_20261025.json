@@ -1,0 +1,72 @@
+{
+  "scope": "synthetic packaging verification only",
+  "new_qrel_reads": 0,
+  "new_benchmark_rankings": 0,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "pre_check_commit": "23f2f27a3d91961df84404fb186783f111b5e9c0",
+  "checks": [
+    {
+      "source_dim": 24,
+      "target_dim": 24,
+      "coefficient_proxy_mixed_exact": true,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "anchor_inclusive_selected": 40
+    },
+    {
+      "source_dim": 24,
+      "target_dim": 40,
+      "coefficient_proxy_mixed_exact": true,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "anchor_inclusive_selected": 40
+    },
+    {
+      "source_dim": 40,
+      "target_dim": 24,
+      "coefficient_proxy_mixed_exact": true,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "anchor_inclusive_selected": 40
+    },
+    {
+      "source_dim": 384,
+      "target_dim": 768,
+      "coefficient_proxy_mixed_exact": true,
+      "blocks": [
+        1,
+        13,
+        512
+      ],
+      "anchor_inclusive_selected": 40
+    },
+    {
+      "rejection": "budget_below_anchors",
+      "passed": true
+    },
+    {
+      "rejection": "missing_anchor",
+      "passed": true
+    },
+    {
+      "rejection": "changed_anchor",
+      "passed": true
+    },
+    {
+      "rejection": "invalid_block",
+      "passed": true
+    }
+  ],
+  "status": "PASS",
+  "wall_seconds": 0.23936380000668578
+}

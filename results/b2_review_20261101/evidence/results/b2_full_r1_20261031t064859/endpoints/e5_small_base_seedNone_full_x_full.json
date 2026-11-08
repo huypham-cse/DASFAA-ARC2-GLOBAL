@@ -1,0 +1,30 @@
+{
+  "schema": "b2_exact_endpoint_v1",
+  "kind": "native",
+  "files": {
+    "ids": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/inputs/ids.json",
+      "sha256": "72329f386e1971d35fca7c6084f2bbefe34dd0af33288bf98b96482a39069d48"
+    },
+    "query_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/vectors/e5_small_x_queries.npy",
+      "sha256": "b59d0bda952ff997c5ec000c2926e52e39518125abaf88bbaf8958bb31fd2ef5"
+    },
+    "native_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/vectors/e5_small_x_docs.npy",
+      "sha256": "34b93cec91d7880f1dc3563951021a174f79d6509fbf0c857403a7e93703e14e"
+    }
+  },
+  "shape": [
+    171332,
+    384
+  ],
+  "semantics": {
+    "dtype": "float32",
+    "score": "dot",
+    "k": 100,
+    "batch_rows": 16,
+    "tie_policy": "descending score then ascending document row index",
+    "exclude_identical_ids": true
+  }
+}

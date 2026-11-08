@@ -1,0 +1,16 @@
+[
+  {
+    "path": "results/fiqa_development/metric_index.json",
+    "working_sha256": "09ba68b3fbb3200d8439c92cc323f4d6b5ac02b5b90d32938662721ceab441c7",
+    "git_blob_sha256": "51656ed091ed041417b97afccdbe802e5d5e9d76ade7b03385f906602766ee1f",
+    "working_bytes": 132000,
+    "git_blob_bytes": 129238
+  },
+  {
+    "path": "results/fiqa_development/summary.json",
+    "working_sha256": "2bb972c8ff46fa71e0fb19f81ad0f9d745a8a3fbcde1f43ad80c722cb7b4bb9a",
+    "git_blob_sha256": "4c275a6ee89588afc7d60dd50d15f9ceea5d19ff2e0320ac22f6e4b2407903db",
+    "working_bytes": 6708,
+    "git_blob_bytes": 6474
+  }
+]

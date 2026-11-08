@@ -1,0 +1,69 @@
+{
+  "status": "B1G_RANK_PASS",
+  "request_sha256": "97441bde08670943da4d4a6f5063f171d6a534f5c1713d79c5b660eac8686d2c",
+  "group_id": "NanoHotpotQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized",
+  "input_hashes": {
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_small_x_docs.npy": "fc8e4146062b1db19e54faae819c38f18061c05ac4cd7de23320ca0fc2e2b374",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_queries.npy": "3f692fa25f82f61cae9f178b5b0e0164fbb5bc050d1419e36e3ae40cc074619a",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/27728b4305817d662eb6697b212c2a8958b0827aa92f45e5a5ebc4acd0dce0a5.json": "27728b4305817d662eb6697b212c2a8958b0827aa92f45e5a5ebc4acd0dce0a5",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/29a82d6f66e50a4d20447477730a9fa3aa57f3feb2e889a5297692012bb99f4f.npy": "29a82d6f66e50a4d20447477730a9fa3aa57f3feb2e889a5297692012bb99f4f",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_NanoHotpotQA_458d2dd0a83af0a4.npy": "f65d6f780744e649233decc0a07b4c4ae888369e832c8d219dc89bc19f268067",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/NanoHotpotQA_e5_small_base_seed67/parameters.npz": "8ca711760cd2bf55178543cd14d567030c2748038fef3f8d1ee7fc06c5e5d98d",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/ff5d0f442d419a2bbd47fc9f0a5ee1e2a6cd9a108a8638433abb46469eb677ad.npy": "ff5d0f442d419a2bbd47fc9f0a5ee1e2a6cd9a108a8638433abb46469eb677ad",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/6cb75f1b7bf22c059aa27e34075e1cebb2b6d9afd3b12953565fa083d8376700.npy": "eb66222a2a6b0265c2e952ffc6735000896a63e9fb71d90d55971e4025f4e70d",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_e5_small_base_ridge_affine_l10_bias_regularized_seed67_25pct.npy": "d948630b6ce25d7c16177aa609ee84451d5921b990ce26e1af45828b172374dd",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/a7ed625aa84e440247a7df934e665590bba2c73f7af0752cb67e977184bb0290.npy": "a7ed625aa84e440247a7df934e665590bba2c73f7af0752cb67e977184bb0290",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/9a353e36c2baae0ec0d68274169370d54dfa24eeaa45d1189f0ba2330077a61f.npy": "d0a565905f6e4d04c9fc9230e7fbe5a539e738f804e54011a842bc54e32b38fa",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_e5_small_base_ridge_affine_l10_bias_regularized_seed67_50pct.npy": "b248317bfd0e6f3d25f682fa55a643166d414f40ddad9332e6f2435cdcfe0cfe",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/7a8d074a01ca702ff743c33e6f16e62cd0eef97f6892c74213106e48a7384c71.npy": "7a8d074a01ca702ff743c33e6f16e62cd0eef97f6892c74213106e48a7384c71",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/63fa5ab431be363520b7e6c5571c22899e45effb06aacae3d86c27cfb811a355.npy": "43c0cfd88cbfc30f065ea95555d3b7820e3149c8c0fd98032ee815b2ccc1b536",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_e5_small_base_ridge_affine_l10_bias_regularized_seed67_75pct.npy": "37f19670a156a909f5e9b60f951241599cd62df7af85200780a23b2573c74125"
+  },
+  "failures": [],
+  "new_physical_document_encodes": 0,
+  "new_fits": 0,
+  "qrels_read": false,
+  "artificial_time_or_memory_caps": null,
+  "pid": 4055232,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "started_unix": 1793083134.046303,
+  "dataset": "NanoHotpotQA",
+  "pair": "e5_small_base",
+  "seed": 67,
+  "regime": "fixed1024",
+  "method": "ridge_affine_l10_bias_regularized",
+  "documents": 5090,
+  "queries": 50,
+  "sample_documents": 512,
+  "proxy_semantics": "pristine prediction for every document, including anchors",
+  "score_arithmetic": "float32 query batch16 @ gallery.T; stable row-order ties; identical ID exclusion",
+  "cases": [
+    {
+      "case_id": "NanoHotpotQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized_25pct",
+      "status": "PASS",
+      "after_sha256": "d948630b6ce25d7c16177aa609ee84451d5921b990ce26e1af45828b172374dd"
+    },
+    {
+      "case_id": "NanoHotpotQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized_50pct",
+      "status": "PASS",
+      "after_sha256": "b248317bfd0e6f3d25f682fa55a643166d414f40ddad9332e6f2435cdcfe0cfe"
+    },
+    {
+      "case_id": "NanoHotpotQA_e5_small_base_seed67_fixed1024_ridge_affine_l10_bias_regularized_75pct",
+      "status": "PASS",
+      "after_sha256": "37f19670a156a909f5e9b60f951241599cd62df7af85200780a23b2573c74125"
+    }
+  ],
+  "artifacts": {
+    "before.npy": {
+      "sha256": "314a0c39c67192406543c686a9751836c3fa8f6dd3ef3eb3003c115bec2a5633"
+    },
+    "sample_proxy.npy": {
+      "sha256": "9f44411a3944eaa19c5af4b8d57a08463d1516bea92ce90bda3d460eb242dfd0"
+    }
+  },
+  "wall_seconds": 0.33760520815849304,
+  "peak_process_rss_bytes": 559083520,
+  "ended_unix": 1793083134.3839986
+}

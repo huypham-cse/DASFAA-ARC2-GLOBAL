@@ -1,0 +1,290 @@
+{
+  "status": "FAILED_PRESERVED",
+  "stage": "full",
+  "code_commit": "4056612dcccac74fdf84ccf67783ab87afd85c26",
+  "lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+  "started_utc": "2026-10-25T18:48:51.314051+00:00",
+  "failures": [
+    "RuntimeError('DEV scoring failed; preserve sealed rankings and logs')"
+  ],
+  "new_qrel_reads": 0,
+  "TREC_access": false,
+  "artificial_caps": null,
+  "runtime": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "executable": "/root/arc2_p3h_20261020/venv/bin/python",
+    "environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4"
+    },
+    "module_origins": {
+      "numpy": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy/__init__.py",
+      "scipy": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy/__init__.py"
+    },
+    "blas": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+        "version": "0.3.31.188.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ]
+  },
+  "encoding": {
+    "status": "ENCODING_PASS",
+    "models": {
+      "distilroberta_y": {
+        "outputs": {
+          "NanoNQ_docs": {
+            "path": "vectors/NanoNQ/distilroberta_y_docs.npy",
+            "sha256": "c3bae727fec179aeb39231b6711a4dfa8c71b191be0bdb58e5f2866dcabbb5dd",
+            "shape": [
+              5035,
+              768
+            ]
+          },
+          "NanoNQ_queries": {
+            "path": "vectors/NanoNQ/distilroberta_y_queries.npy",
+            "sha256": "99ee67911f7d7eaa63dad71850e61f7f98659ac6d24f0e18407961a89d1b2d74",
+            "shape": [
+              50,
+              768
+            ]
+          },
+          "NanoHotpotQA_docs": {
+            "path": "vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+            "sha256": "a06e412f104b8115f0f8da9a111c6fc3c31f5fbfbe3784c4b15a305904c5e17d",
+            "shape": [
+              5090,
+              768
+            ]
+          },
+          "NanoHotpotQA_queries": {
+            "path": "vectors/NanoHotpotQA/distilroberta_y_queries.npy",
+            "sha256": "d569b66270e5fd9b246a875c5bb8f74a8239d13b79dbb03e549cd3b220c0b5f4",
+            "shape": [
+              50,
+              768
+            ]
+          },
+          "NanoFEVER_docs": {
+            "path": "vectors/NanoFEVER/distilroberta_y_docs.npy",
+            "sha256": "8f160fc2ae1e7832835fcf8bdd7a0d7600e8f1a4a22f2aa5f5b88cddeadeac39",
+            "shape": [
+              4996,
+              768
+            ]
+          },
+          "NanoFEVER_queries": {
+            "path": "vectors/NanoFEVER/distilroberta_y_queries.npy",
+            "sha256": "6ccba0d17b2d2b9ac9a53235f7c5fe14e4f4fcd47a6c2e3860f88d62778c17a4",
+            "shape": [
+              50,
+              768
+            ]
+          }
+        },
+        "wall_seconds": 15.845948155038059,
+        "own_peak_cuda_allocated_bytes": 517241856
+      },
+      "e5_base_y": {
+        "outputs": {
+          "NanoNQ_docs": {
+            "path": "vectors/NanoNQ/e5_base_y_docs.npy",
+            "sha256": "293daeeb7bb2b2ba96ed46160a0b563b2612c1975b929c7754d1b1edc1c17e0c",
+            "shape": [
+              5035,
+              768
+            ]
+          },
+          "NanoNQ_queries": {
+            "path": "vectors/NanoNQ/e5_base_y_queries.npy",
+            "sha256": "35c0e3fa6444fc37e7becf28b7d590cb04267c5da2222337a864aeee666d021d",
+            "shape": [
+              50,
+              768
+            ]
+          },
+          "NanoHotpotQA_docs": {
+            "path": "vectors/NanoHotpotQA/e5_base_y_docs.npy",
+            "sha256": "fb4c99ac53ae31e8d048363fbcc9b46272970f3be1d0077a7eeacf29ee1cd84c",
+            "shape": [
+              5090,
+              768
+            ]
+          },
+          "NanoHotpotQA_queries": {
+            "path": "vectors/NanoHotpotQA/e5_base_y_queries.npy",
+            "sha256": "3f692fa25f82f61cae9f178b5b0e0164fbb5bc050d1419e36e3ae40cc074619a",
+            "shape": [
+              50,
+              768
+            ]
+          },
+          "NanoFEVER_docs": {
+            "path": "vectors/NanoFEVER/e5_base_y_docs.npy",
+            "sha256": "f1c6c27bb95e9486027dd1383b8ddbd8985fd2c6c2e333535b785272b52678d8",
+            "shape": [
+              4996,
+              768
+            ]
+          },
+          "NanoFEVER_queries": {
+            "path": "vectors/NanoFEVER/e5_base_y_queries.npy",
+            "sha256": "33e494415e670df2ee8b8463a1a65076103db799b02edd855dca22f4de370d4c",
+            "shape": [
+              50,
+              768
+            ]
+          }
+        },
+        "wall_seconds": 25.90313973184675,
+        "own_peak_cuda_allocated_bytes": 626304512
+      },
+      "e5_small_x": {
+        "outputs": {
+          "NanoNQ_docs": {
+            "path": "vectors/NanoNQ/e5_small_x_docs.npy",
+            "sha256": "05420707665bb2b77eb05fd4fb59001c53bd8c2642e87a9fbc4c1da30a42aef1",
+            "shape": [
+              5035,
+              384
+            ]
+          },
+          "NanoNQ_queries": {
+            "path": "vectors/NanoNQ/e5_small_x_queries.npy",
+            "sha256": "72367d4e57bddb59222550453d11ca17f44ce3d10a006fd729d6fadae10ff04b",
+            "shape": [
+              50,
+              384
+            ]
+          },
+          "NanoHotpotQA_docs": {
+            "path": "vectors/NanoHotpotQA/e5_small_x_docs.npy",
+            "sha256": "fc8e4146062b1db19e54faae819c38f18061c05ac4cd7de23320ca0fc2e2b374",
+            "shape": [
+              5090,
+              384
+            ]
+          },
+          "NanoHotpotQA_queries": {
+            "path": "vectors/NanoHotpotQA/e5_small_x_queries.npy",
+            "sha256": "14fb1a75b99a8a4c5e2d5f0e73957f7001ac183001736bac1e0aa5d1db312d34",
+            "shape": [
+              50,
+              384
+            ]
+          },
+          "NanoFEVER_docs": {
+            "path": "vectors/NanoFEVER/e5_small_x_docs.npy",
+            "sha256": "05590911e088b026e8489f7afb03b69cc937f9f4c0999411ea7f70ac39464255",
+            "shape": [
+              4996,
+              384
+            ]
+          },
+          "NanoFEVER_queries": {
+            "path": "vectors/NanoFEVER/e5_small_x_queries.npy",
+            "sha256": "dd060b618f075961c01d0e6bb7f82706b59ba243c98b528a0007c72d6f9c0699",
+            "shape": [
+              50,
+              384
+            ]
+          }
+        },
+        "wall_seconds": 14.159488344565034,
+        "own_peak_cuda_allocated_bytes": 244843008
+      },
+      "minilm_x": {
+        "outputs": {
+          "NanoNQ_docs": {
+            "path": "vectors/NanoNQ/minilm_x_docs.npy",
+            "sha256": "4a807ce6ed5965bbcb77948f295e9bc3c371621a6ada6d9d3f65322dfbdea9a3",
+            "shape": [
+              5035,
+              384
+            ]
+          },
+          "NanoNQ_queries": {
+            "path": "vectors/NanoNQ/minilm_x_queries.npy",
+            "sha256": "b7d4c641f7ae553a24dec6629c8635f888c57c5e430194afbf028b421678ab2b",
+            "shape": [
+              50,
+              384
+            ]
+          },
+          "NanoHotpotQA_docs": {
+            "path": "vectors/NanoHotpotQA/minilm_x_docs.npy",
+            "sha256": "33872a10dea389aba01798828ba3556ba33007fafd93c4da844c99db158f1d9f",
+            "shape": [
+              5090,
+              384
+            ]
+          },
+          "NanoHotpotQA_queries": {
+            "path": "vectors/NanoHotpotQA/minilm_x_queries.npy",
+            "sha256": "eacadad1e03eb3c2c2a79df5d271345138b4ad0a89206a96dc1c3f93250377ff",
+            "shape": [
+              50,
+              384
+            ]
+          },
+          "NanoFEVER_docs": {
+            "path": "vectors/NanoFEVER/minilm_x_docs.npy",
+            "sha256": "1ec9e11882ea7138914d295241ce1a07f3be74dc359f1c6cde773694ecc4752c",
+            "shape": [
+              4996,
+              384
+            ]
+          },
+          "NanoFEVER_queries": {
+            "path": "vectors/NanoFEVER/minilm_x_queries.npy",
+            "sha256": "1b375bc1b4ad42d7f8acb6cf4e83b791ab6893a2c5f768a3ccfce8b3893417d7",
+            "shape": [
+              50,
+              384
+            ]
+          }
+        },
+        "wall_seconds": 10.344595424830914,
+        "own_peak_cuda_allocated_bytes": 203304448
+      }
+    },
+    "new_qrel_reads": 0,
+    "failures": [],
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.6.0+cu124",
+      "sentence_transformers": "4.1.0",
+      "transformers": "4.51.3"
+    },
+    "device": "NVIDIA H100 80GB HBM3",
+    "physical_document_encodes": 60484,
+    "physical_query_encodes": 600,
+    "wall_seconds": 69.48277854546905
+  },
+  "ranking_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+  "ranking_count": 736,
+  "p0_real_checks": 120,
+  "reused_rankings": 44,
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_4056612/ops/b1m_stage.py\", line 209, in main\n    run_full(lock,out,meta)\n  File \"/root/arc2_global_paper_20261025/code_4056612/ops/b1m_stage.py\", line 188, in run_full\n    if child.returncode:raise RuntimeError('DEV scoring failed; preserve sealed rankings and logs')\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: DEV scoring failed; preserve sealed rankings and logs\n",
+  "ended_utc": "2026-10-25T19:02:53.083598+00:00",
+  "wall_seconds": 841.769987036474,
+  "peak_process_tree_rss_bytes": 1971224576
+}

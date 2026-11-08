@@ -1,0 +1,291 @@
+{
+  "status": "B1P_NEURAL_FULL_PASS",
+  "method": "embedding_converter_paper_spec",
+  "regime": "fixed1024",
+  "mode": "full",
+  "seed": 53,
+  "failures": [],
+  "started_utc": "2026-10-30T04:46:45.458954+00:00",
+  "request_sha256": "423cf4feeebde4b9e6dbe5d76e4d743bb9767f0d456c4c3a13f72c5850a7ffca",
+  "new_qrel_reads": 0,
+  "unpaid_target_reads": 0,
+  "artificial_time_or_memory_caps": null,
+  "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+  "executable": "/network-volume/arc2_recovery_20261030/envs/gpu/bin/python",
+  "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+  "host": "nb-eac57496-67a5-4d45-9cf8-8504d68ddce6-5c9589b95f-mw6d5",
+  "lock_sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "source_sha256_canonical_lf": {
+    "configs/b1m_score_r2_lock.json": "b165de5ce8fccd2e13e11bb93bfe41160e8cd180dbd196fa4fd4c3b10b805b32",
+    "configs/baselines.json": "1bd95fc1dfdea6fd459c825f85c44aeb86d7c1a05cbdb56a5a15f8f9a9a3d4a3",
+    "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1c_campaign.py": "98984dae5a88bd8d1a16e323b2f321f969ec158967d41d699831ad267c6d16fc",
+    "ops/b1c_score.py": "0667c7d5cd6db2f63c06d7242e7b42b1c19a742a0685982bba824fbbced5420b",
+    "ops/b1c_stage.py": "7396db8090f12da54f7587e010bbeab8be2ae914258a942c062fbf6c772c53f8",
+    "ops/b1g_rank_worker.py": "0146b70f61fffacadd4744bd1155b19527b6f597aa0c7f210fd615570d128fac",
+    "ops/b1g_stage.py": "58b9986a5a485cdd1219fb0c686b1d134e4c5f8d065a207b85e4a01829a2fa77",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "ops/b1p_campaign.py": "d89c0086c5484b85751a7420defe9db0c6bb2c9f8fa3f9c2895be6ddc8c337b3",
+    "ops/b1p_checkpoint_handoff.py": "310960ef28f90b917e5acb14059b8205f9581913356c8fc057ea5afe0ed5ecbd",
+    "ops/b1p_handoff_verify.py": "a8bfb3a69249acad376265d4aae853b4e882773275ab7ecdbc573e61f4939a9a",
+    "ops/b1p_neural_worker.py": "d87efe737064d9019b2dc951ec0c593040aaa9fafe80bb73e2c75155e5f8d66e",
+    "ops/b1p_score.py": "9933bc0e6405921a0c2a106392b519adfcf7042c59442c34e6049e72346fd17f",
+    "ops/b1p_stage.py": "de056b8b106636da2e2ea9273c7eabc254a3df404ca50d7473e5af8d8eadcfbd",
+    "protocols/B1C_MAIN_MATRIX_COMPLETION_20261028.md": "ed0adb886ce30f45849eaacfaf7c99d7dc219b30e230b7f3c9c2fd01fefe3baa",
+    "protocols/B1P_ALL_PAID_FIQA_20261026.md": "27e6f52a46ccf2fd53b409805192b64e7a35adced1e42b0c79a6cb9b3397fbbb",
+    "protocols/B1P_R1_DENSE_REFERENCE_NEIGHBORS_20261026.md": "c27f4f50822142c5cb6a0a4a10e31ad5a01a7e846bd92c2e53c76d1d636ba62f",
+    "protocols/B1P_R2_RECOVERY_20261026.md": "8974181b6cc84b07b3b399e479648bb6d6f8e869f248288cce7671bb0b151c0b",
+    "protocols/B1P_R3_H100_MINI_DEPLOYMENT_20261026.md": "4673d47d92480c52e19965e38a2161faa710bb55965aef4277a01e009c90b5bf",
+    "protocols/B1P_R4_RETURN_TO_FULL_H100_20261026.md": "a437f29e2d6683e27022a77d4c4cb91c9ba2be8dd6ee0d1d793c7dae132045dd",
+    "protocols/B1P_R5_SAME_MINI_CHECKPOINT_RECOVERY_20261026.md": "aa52b054a582ad037747323b1db64ebdc36094fe80ef8da363fc09178d6c9bbf",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/diagnostics.py": "0905e7c4cab1b0263b661f2d29677890080811e56218fbfcf0c81d2c14a18d9d",
+    "src/arc2_global/embedding_converter.py": "1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "tools/build_b1c_registries.py": "7758b318ea895132d19eedfde12a4c429a55382bbb6810768c1b245e27670252",
+    "protocols/B1C_R1_H100_MINI_EXECUTION_20261028.md": "729443efacf0508086a97da3e045efb6496f1d4fe1d69997224e78005142f4d3",
+    "ops/b1c_recovery.py": "62b7db95f03a247361b16162ed2023b04ec525c83eadeb3272e194218bd114c4",
+    "protocols/B1C_R2_OOM_RECOVERY_20261028.md": "559873f15dff047d29b677c084f28622e814b44f07e9dea06422ba468174a000",
+    "tools/test_b1c_recovery.py": "044fae33e72cf2a66b9a4082a1b8a607fc138adaa17f1fdb5e462434b2596da6",
+    "protocols/B1C_R3_FILESYSTEM_RECOVERY_20261030.md": "197e60d787c4901c54391746390bb1c286d8b6afbdabb02469e5f59be0d80bb3",
+    "ops/b1c_r3_stage.py": "78f6aa595f8ceb35331c6caa633cac33a6944bea1ef33dc23de9e24278832cc9",
+    "ops/b1c_r3_score.py": "803fe091e4a5c442810850217a0a80b2302e8132c38649d3dcb0c728a90f10ef",
+    "ops/b1c_r3_campaign.py": "90e9288e2ab421eb7b8ec0b4304bfd5da8163eea60d57c1e19ad3e9d3815cde0",
+    "tools/build_b1c_r3_registries.py": "26409bc1e2446fcbb1f246a786fa0ed5e5ea98ba5dd6dbb30e30d0ef0c329494",
+    "tools/build_b1c_r3_lock.py": "ac7004509caf13bb54bafef0438e830f8cb86e0132259e9d124aed605c1939c3",
+    "tools/test_b1c_r3_stage.py": "3bec8c9d3fa1b3a3093cb67e7411bb58e435d205b45830ceedaec83e08285500",
+    "configs/b1c_lock.json": "5210e2401958e1efb739cd69e9dd92b6b793a0c9856202f5b8ae2a9f89564159",
+    "configs/b1c_existing.json": "1f4fe8e249f3ca2203f76c7e882cb24214ea5ac6d43721b9d62e713338b71d0d",
+    "configs/b1c_sources.json": "5659659b3453bdfb4edc70efe1e1d9ddc185e36be434e0b521dfa0f6978c2459",
+    "configs/b1c_recovery_r2_lock.json": "c032cfae85321c4d56b83e2c31e7ec4e32dd355f264fab5fe72240aff0ebcceb",
+    "configs/b1c_recovery_r2_manifest.json": "e9e06db2d6e9a910cf6dd00af066a9f83a02ed9be3a50c57a97088a3ede7f8da",
+    "configs/b1c_r3_sources.json": "876511967ee767a062a8d2ce66406a184dc42ce4f5ee70e6b3570aae08e8a5e5",
+    "configs/b1c_r3_existing.json": "7a131a80f965bb561f3d5228be05d970b182950907c456a65e7cdd84fb1e2395",
+    "configs/b1c_r3_acquisition.json": "71df6e6d9a1773010122f7cf9fdc16ad82c19374247eab4fb9901835fc0f9877",
+    "results/b1g_r1_review_20261027/main/execution_intermediates.json": "e14f811f708f3f3ce66ab85e636dd820b51af745ebe57d38f5e29bf2e28c1449"
+  },
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "modules": {
+    "numpy": {
+      "version": "2.2.6",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/numpy/__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/scipy/__init__.py"
+    },
+    "torch": {
+      "version": "2.6.0+cu124",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/torch/__init__.py"
+    },
+    "sklearn": {
+      "version": "1.6.1",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/sklearn/__init__.py"
+    },
+    "pydantic": {
+      "version": "2.14.1",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/pydantic/__init__.py"
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/faiss/__init__.py"
+    },
+    "loguru": {
+      "version": "0.7.3",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/loguru/__init__.py"
+    },
+    "tqdm": {
+      "version": "4.70.1",
+      "file": "/network-volume/arc2_recovery_20261030/envs/gpu/lib/python3.11/site-packages/tqdm/__init__.py"
+    }
+  },
+  "cuda_runtime": "12.4",
+  "device": "NVIDIA H100 80GB HBM3 MIG 2g.20gb",
+  "numpy_build": "{'Compilers': {'c': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.1.0', 'commands': 'cython'}, 'c++': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}, 'build': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}}, 'Build Dependencies': {'blas': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}, 'lapack': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}}, 'Python Information': {'path': '/tmp/build-env-nx8g0bo7/bin/python', 'version': '3.11'}, 'SIMD Extensions': {'baseline': ['SSE', 'SSE2', 'SSE3'], 'found': ['SSSE3', 'SSE41', 'POPCNT', 'SSE42', 'AVX', 'F16C', 'FMA3', 'AVX2', 'AVX512F', 'AVX512CD', 'AVX512_SKX', 'AVX512_CLX', 'AVX512_CNL', 'AVX512_ICL'], 'not found': ['AVX512_KNL', 'AVX512_KNM']}}",
+  "inputs": {
+    "paired_source": {
+      "path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/FiQA_paired_source.npy",
+      "sha256": "12809973ffc8e63d66e9b3ce57b84b65704db3519a7b9f30ab88b1c2d63a41da",
+      "shape": [
+        1024,
+        384
+      ],
+      "dtype": "float32"
+    },
+    "paired_target": {
+      "path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/FiQA_FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/FiQA_paired_target.npy",
+      "sha256": "16681cb00daf203f4aae419f0e6883a60a86c70052a2b7ff959bf04d98fce557",
+      "shape": [
+        1024,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "full_source": {
+      "path": "/network-volume/arc2_recovery_20261030/restored/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy",
+      "sha256": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782",
+      "shape": [
+        57638,
+        384
+      ],
+      "dtype": "float32"
+    }
+  },
+  "fit_pairs": 1024,
+  "target_population": "supplied paired rows only; no unpaid target or qrels API",
+  "train_count": 896,
+  "validation_count": 128,
+  "config": {
+    "hidden_multiplier": 5,
+    "iterations": 50000,
+    "batch_size": 64,
+    "local_k": 100,
+    "local_samples_per_center": 1,
+    "alpha": 0.1,
+    "beta": 0.1,
+    "learning_rate": 0.001,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "report_every": 250,
+    "transform_batch_size": 256,
+    "threads": 4,
+    "device": "cuda"
+  },
+  "validation_policy": "default_rng(seed+20261025); first floor(N/8) validation; rest training; earliest minimum MAE at 250-step checkpoints",
+  "refit_policy": "fresh model and Adam; same seed; selected_iteration updates; every supplied paired row",
+  "durable_resume_policy": "exact model+Adam+NumPy/Torch RNG; every5000 updates full/every250 smoke and final; identical paired inputs/configuration/runtime required",
+  "independent_paper_spec_adaptation": true,
+  "selection_health": {
+    "checkpoint_sha256": "5fb630abea594b155ec025b4137bb7e1602da6f251a2e177b794c1e89b4602da",
+    "state_sha256": "ee5e91595acfaf31ced51f03b612adbc7fe47862ae46bcbd702eb2cf13d3ff14",
+    "reported_checkpoints": 201,
+    "losses_finite": true,
+    "parameters_finite": true,
+    "all_step_losses_and_gradients_finite": true,
+    "initial_gradient_nonzero": true,
+    "parameters_updated": true,
+    "initial_state_sha256": "93db40a10357c96a8271f4d7b63914b10d9cbc8acc745ea81f7e38aad8302c70",
+    "final_state_sha256": "ee5e91595acfaf31ced51f03b612adbc7fe47862ae46bcbd702eb2cf13d3ff14",
+    "late_zero_gradient_allowed": true
+  },
+  "selected_iteration": 49000,
+  "selection_seconds": 561.2497421940789,
+  "refit_health": {
+    "checkpoint_sha256": "28af2847f952ddb4844939f0edf5ebf029cc1097fdc6af9034d8b9f9f6c9a39f",
+    "state_sha256": "9d66241132e30ebcd10b70490b1cdad5e73a18eddea64ef8c63c4fba3f50d19c",
+    "reported_checkpoints": 197,
+    "losses_finite": true,
+    "parameters_finite": true,
+    "all_step_losses_and_gradients_finite": true,
+    "initial_gradient_nonzero": true,
+    "parameters_updated": true,
+    "initial_state_sha256": "93db40a10357c96a8271f4d7b63914b10d9cbc8acc745ea81f7e38aad8302c70",
+    "final_state_sha256": "9d66241132e30ebcd10b70490b1cdad5e73a18eddea64ef8c63c4fba3f50d19c",
+    "late_zero_gradient_allowed": true
+  },
+  "refit_iterations": 49000,
+  "refit_seconds": 543.7281948355958,
+  "mapping_seconds": 2.2813155045732856,
+  "proxy_rows": 57638,
+  "transform_batch_size": 256,
+  "raw_proxy_semantics": "pre-final-normalization MLP output",
+  "own_peak_cuda_allocated_bytes": 735598080,
+  "own_peak_cuda_reserved_bytes": 809500672,
+  "wall_seconds": 1111.4475413700566,
+  "peak_process_rss_bytes": 1839767552,
+  "resource_observation_errors": [],
+  "ended_utc": "2026-10-30T05:05:16.906504+00:00",
+  "artifacts": {
+    "lock_copy.json": {
+      "sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+      "bytes": 32367
+    },
+    "proxy_full.npy": {
+      "sha256": "3d1d702388c897582b2188b8e24435059e9e894c53024b522ce57b7e34c9cd55",
+      "bytes": 177064064
+    },
+    "raw_proxy_full.npy": {
+      "sha256": "31137499a07352ded0b3f88bf2c7bfcc65dd43618ce6b2b29c9904c7e85e08e6",
+      "bytes": 177064064
+    },
+    "refit_checkpoint.pt": {
+      "sha256": "28af2847f952ddb4844939f0edf5ebf029cc1097fdc6af9034d8b9f9f6c9a39f",
+      "bytes": 135735872
+    },
+    "refit_fit.json": {
+      "sha256": "269fbe5856bf5f3084c0794c93c48b267e92d4c6e2848ba0dabea6dec944819c",
+      "bytes": 100798
+    },
+    "refit_progress.jsonl": {
+      "sha256": "fed0f34ad0c73b2bb97496fd8eb25f53717a98e43ab70f9df59637ed61a84c90",
+      "bytes": 80461
+    },
+    "refit_resume.pt": {
+      "sha256": "619620b8f2e01b878a4523b572aee3f81f3a2662714a0914e1f2da9583e84cb1",
+      "bytes": 407172720
+    },
+    "request_copy.json": {
+      "sha256": "423cf4feeebde4b9e6dbe5d76e4d743bb9767f0d456c4c3a13f72c5850a7ffca",
+      "bytes": 1417
+    },
+    "resource_trace.jsonl": {
+      "sha256": "6e0ccb1afe23abd56e196ac7c5e30ec33d88b5e18e77fee36cf871a9944d79a9",
+      "bytes": 343501
+    },
+    "selection_checkpoint.pt": {
+      "sha256": "5fb630abea594b155ec025b4137bb7e1602da6f251a2e177b794c1e89b4602da",
+      "bytes": 135738688
+    },
+    "selection_fit.json": {
+      "sha256": "3478667b7748d65ce0ca0778e2b67b58f15098f2c284869d29d3b259d2e0df66",
+      "bytes": 112086
+    },
+    "selection_progress.jsonl": {
+      "sha256": "5df09ebb99b0f9725af31e3b06d59c6e140c54960915dc4c9a9b520786f8da7c",
+      "bytes": 90052
+    },
+    "selection_resume.pt": {
+      "sha256": "54333fb262ebbfd4448913f50d1f4fd74041df24a6fce5ad910b438ad546f810",
+      "bytes": 542887512
+    },
+    "train_positions.npy": {
+      "sha256": "7e3acdd0a9eef95d2ca8007b95b4c4a6a3d199d4ffe1aebc88df42afd7c02ea9",
+      "bytes": 7296
+    },
+    "validation_positions.npy": {
+      "sha256": "be38d6755415711f70e324bc27e3ba9f78fb47e80a804d424ca04d94a9f1ab7e",
+      "bytes": 1152
+    }
+  },
+  "metadata_path": "neural/FiQA_FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/worker/metadata.json",
+  "metadata_sha256": "260233019125765ff22540692c962f06c1f6a80263aee6030a14050205e5fecf",
+  "request_path": "neural/FiQA_FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/request.json",
+  "new_fit": true,
+  "group_id": "FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+  "dataset": "FiQA",
+  "pair": "minilm_distilroberta",
+  "paired_target_path": "groups/FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/FiQA_anchor_targets.npy",
+  "paired_target_sha256": "16681cb00daf203f4aae419f0e6883a60a86c70052a2b7ff959bf04d98fce557",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "50pct",
+    "75pct"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-30T15:12:49.691518+00:00",
+  "scope": "Local backup operator only; no scientific code/run change",
+  "observed": "Old watcher absent; persisted Windows backslash paths rejected by its POSIX-only local path validator. Last coverage 659 files / 20424260876 bytes; errors preserved.",
+  "repair": "Accept validated Windows-relative receipt paths and write new receipt paths as POSIX. Reject Windows drive/root, UNC, traversal and resolved root escapes.",
+  "tests": {
+    "legacy_windows_receipt_parity": "PASS",
+    "unsafe_paths_rejected": 7
+  },
+  "state_policy": "Keep previous coverage, raw files, errors and partial files; resume same backup root."
+}

@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-01",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "route_reason": "Explicit user override of skill defaults",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scientific_runs_performed": false,
+  "raw_ranking_audit_claimed": false,
+  "input_snapshot": [
+    {
+      "path": "paper/main.tex",
+      "sha256": "2ac2e285c3f653fd5b265891bd5ceecf762d7c81151c0732e4c2a49d590b44bc"
+    },
+    {
+      "path": "paper/sections/abstract.tex",
+      "sha256": "cadd98fc58b9e2ca493a3d4b59cf0d8dd7ad675d9862a7a40c6a6461c3dd53f3"
+    },
+    {
+      "path": "paper/sections/conclusion.tex",
+      "sha256": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7"
+    },
+    {
+      "path": "paper/sections/discussion.tex",
+      "sha256": "cb647674ea2135709c600e1d0224b0db56d9c0e7159f0b62917d2068add5a38b"
+    },
+    {
+      "path": "paper/sections/experimental-setup.tex",
+      "sha256": "2c42fc27fa72302c92e1e3039c83d197df5992d21b0503e4f9c9828c628ba853"
+    },
+    {
+      "path": "paper/sections/introduction.tex",
+      "sha256": "02b2a70bd7214902598612cbcf5b711476f08338efe3e6c598fb9e9cc48b716b"
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "sha256": "dc765ff54a9094ea022de12be85d1f8164aa9604d4fbf428389f378a8f225298"
+    },
+    {
+      "path": "paper/sections/related-work.tex",
+      "sha256": "5b02daeb6adac0abee3e252416a9b4937eb114f12654439011eb49a7e3165072"
+    },
+    {
+      "path": "paper/sections/results.tex",
+      "sha256": "dd6be9bb455356c2405297c6e5fec56f44419b822772cc62ce249a498ccda100"
+    },
+    {
+      "path": "paper/generated/ablation.tex",
+      "sha256": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e"
+    },
+    {
+      "path": "paper/generated/allpaid.tex",
+      "sha256": "5e297b18a25848d7e14f77360aab0cf7c9bf2e9e45c6f0d22a46d463872fb1f9"
+    },
+    {
+      "path": "paper/generated/dev_macro.tex",
+      "sha256": "35afd1a103ed94b2779ce435a35fc2fbd4b02c70c088f0d1b76dd0d9d73f2b6a"
+    },
+    {
+      "path": "paper/generated/trec_family.tex",
+      "sha256": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e"
+    },
+    {
+      "path": "paper/generated/trec_means.tex",
+      "sha256": "51f82470e354d04ca074fc7567a03e60d6eacf079939301821f0d19e00f81ae5"
+    },
+    {
+      "path": "paper/figures/dev_ablation.png",
+      "sha256": "1d13f2f52483f5a83bf446d9ea87edf51a107a7e7ba6193b6f6299abbc8accd0"
+    },
+    {
+      "path": "paper/figures/dev_quality.png",
+      "sha256": "39deed9f146f945fdf735f8360d406d8e796efbcbfc73bd376741fd83bcf558d"
+    },
+    {
+      "path": "paper/figures/mechanism.png",
+      "sha256": "940a2e769354588cb2e270e59335ab39be6e86892d2b87651a9d6a3bed59392f"
+    },
+    {
+      "path": "paper/figures/trec_quality.png",
+      "sha256": "7da0fba10f4b24fb62f42309a2aa3b1fb79b56eed4c8bcc74a25d25de934a001"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "b6d82c196617c83f5b97713ce4a62fbc28df74426a982b296d77a9a87d2c6362"
+    },
+    {
+      "path": "src/arc2_global/model.py",
+      "sha256": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2"
+    },
+    {
+      "path": "src/arc2_global/procrustes.py",
+      "sha256": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64"
+    },
+    {
+      "path": "src/arc2_global/baseline_adapters.py",
+      "sha256": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d"
+    }
+  ],
+  "schema": "arc2_fresh_novelty_verdict_v1",
+  "verdict": "PROCEED",
+  "score_out_of_10": 5,
+  "score_anchor": "5 = clear neighbors with a defensible delta worth pursuing",
+  "confidence": "moderate",
+  "early_novelty_check_cleared": true,
+  "proof_of_novelty": false,
+  "named_exact_duplicate": null,
+  "delta": "Exactly two norm-scaled per-prediction tangent-residual ridge updates on fixed known document pairs, added to centered rectangular Procrustes and collapsed into one affine map.",
+  "core_claims": [
+    {
+      "id": "C1",
+      "claim": "Finite tangent ridge refinement",
+      "nearest": [
+        "Procrustes post-processing",
+        "mini-vec2vec",
+        "Spherical Interpolation for Backward-Compatible Multimodal Representations"
+      ],
+      "delta": "Fixed known correspondences and r[y-(u dot y)u] targets with two global ridge updates.",
+      "status": "defensible narrow algorithmic delta"
+    },
+    {
+      "id": "C2",
+      "claim": "One compact affine artifact",
+      "nearest": [
+        "Drift-Adapter",
+        "mini-vec2vec",
+        "Procrustes"
+      ],
+      "delta": "Specific tangent-correction construction folds into B2; compact maps themselves established.",
+      "status": "useful structural property, not independent novelty"
+    },
+    {
+      "id": "C3",
+      "claim": "Mixed native and mapped staged gallery",
+      "nearest": [
+        "LA2M",
+        "HMoE",
+        "FastFill"
+      ],
+      "delta": "Specific mapper evaluated under anchor-inclusive exposure and fixed paired supervision.",
+      "status": "established setting, experimental contribution only"
+    },
+    {
+      "id": "C4",
+      "claim": "Replacement quality reversal and extra-pair interaction",
+      "nearest": [
+        "FastFill",
+        "HMoE"
+      ],
+      "delta": "Specific frozen FiQA E5 reversal and contrasting MiniLM result, not first observation of harmful partial backfilling.",
+      "status": "configuration-specific empirical finding"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Integrating Vector Databases across Embedding Models",
+      "url": "https://doi.org/10.1145/3769803",
+      "read_scope": "institutional abstract, DOI metadata, pinned official code; full PDF inaccessible"
+    },
+    {
+      "title": "Generalizable and Composable Multi-Model Embedding Translation",
+      "url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "read_scope": "primary proceedings and saved primary PDF method/mixing contents"
+    },
+    {
+      "title": "Embedding-Converter",
+      "url": "https://aclanthology.org/2025.acl-long.1237/",
+      "read_scope": "primary paper methods and experiments"
+    },
+    {
+      "title": "Drift-Adapter",
+      "url": "https://aclanthology.org/2025.emnlp-main.805/",
+      "read_scope": "primary paper"
+    },
+    {
+      "title": "mini-vec2vec",
+      "url": "https://arxiv.org/html/2510.02348",
+      "read_scope": "latest v4 primary method"
+    },
+    {
+      "title": "When Embedding Models Meet",
+      "url": "https://arxiv.org/abs/2510.13406",
+      "read_scope": "primary theory and applications"
+    },
+    {
+      "title": "FastFill",
+      "url": "https://arxiv.org/html/2303.04766",
+      "read_scope": "primary HTML, especially 4.1 and 4.2"
+    },
+    {
+      "title": "Spherical Interpolation for Backward-Compatible Multimodal Representations",
+      "url": "https://arxiv.org/html/2609.39836",
+      "read_scope": "primary abstract, introduction and method description; September 2026 preprint"
+    }
+  ],
+  "report": "NOVELTY_VERDICT.md",
+  "limitations": [
+    "Broad primary-source search is not exhaustive proof",
+    "LA2M full-PDF access limit",
+    "Independent prospective superiority to Procrustes not established",
+    "No new scientific experiment performed"
+  ],
+  "followup_revision_review_performed": true,
+  "followup_revision_status": "FastFill and spherical-interpolation citations incorporated; exact update delta retained; verdict unchanged"
+}

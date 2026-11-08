@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "verdict": "REVIEW_UNAVAILABLE",
+  "audit_scope": "fresh zero-context supervisor-release r1 claim audit; not a manuscript audit",
+  "reason": "Reviewer hit account usage limit before a final structured semantic response. Numerical audit scripts and receipts were written before the interruption.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "deterministic_numeric_evidence": "fresh_control_families_20261101T023829500236Z.json",
+  "prior_completed_B2_semantic_verdict_unchanged": true,
+  "created_utc": "2026-11-01T02:53:26.962427+00:00"
+}

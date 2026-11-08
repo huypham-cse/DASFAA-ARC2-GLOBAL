@@ -1,0 +1,57 @@
+{
+  "status": "B2_SMOKE_PASS",
+  "stage": "smoke",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "started_utc": "2026-10-31T06:49:54.676239+00:00",
+  "failures": [],
+  "qrels_opened": false,
+  "ranking_process_qrel_reads": 0,
+  "artificial_time_memory_caps": null,
+  "new_physical_document_encodes": 0,
+  "physical_cost_claim": false,
+  "search": "exact only; no ANN measurement",
+  "runtime": {
+    "python": "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+    "blas": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libgomp",
+        "filepath": "/network-volume/arc2_recovery_20261030/envs/cpu/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/network-volume/arc2_recovery_20261030/envs/cpu/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/network-volume/arc2_recovery_20261030/envs/cpu/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+        "version": "0.3.31.188.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "cpu_environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4"
+    }
+  },
+  "ranking_count": 20,
+  "ranking_seal_sha256": "92377236dbe769f48fca964fd5d7c612af000e563b13fed2d93f0a1e2577e497",
+  "wall_seconds": 165.79715508874506,
+  "peak_process_tree_rss_bytes": 1772294144,
+  "ended_utc": "2026-10-31T06:52:40.472670+00:00"
+}

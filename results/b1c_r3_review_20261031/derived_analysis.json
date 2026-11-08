@@ -1,0 +1,510 @@
+{
+  "status": "DESCRIPTIVE_DERIVED_FROM_VERIFIED_SAVED_SCORES",
+  "sign_counts": [
+    {
+      "baseline": "procrustes_global",
+      "baseline_label": "A2M / Procrustes adaptation",
+      "conditions": 24,
+      "ndcg10": {
+        "higher": 23,
+        "lower": 1,
+        "tied": 0
+      },
+      "recall100": {
+        "higher": 11,
+        "lower": 12,
+        "tied": 1
+      }
+    },
+    {
+      "baseline": "la2m20_integration_script_adaptation",
+      "baseline_label": "LA2M20 adaptation",
+      "conditions": 24,
+      "ndcg10": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      },
+      "recall100": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      }
+    },
+    {
+      "baseline": "simplelinear_official_final50_mlp5",
+      "baseline_label": "SimpleLinear official code (5-layer MLP)",
+      "conditions": 24,
+      "ndcg10": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      },
+      "recall100": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      }
+    },
+    {
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "baseline_label": "Affine ridge, lambda10",
+      "conditions": 24,
+      "ndcg10": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      },
+      "recall100": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      }
+    },
+    {
+      "baseline": "embedding_converter_paper_spec",
+      "baseline_label": "Embedding-Converter adaptation",
+      "conditions": 24,
+      "ndcg10": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      },
+      "recall100": {
+        "higher": 24,
+        "lower": 0,
+        "tied": 0
+      }
+    }
+  ],
+  "pair_and_dataset_deltas": [
+    {
+      "axis": "pair",
+      "value": "minilm_distilroberta",
+      "baseline": "procrustes_global",
+      "conditions": 12,
+      "ndcg10_delta": 0.025732936236754725,
+      "recall100_delta": 0.0071770781995782,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "e5_small_base",
+      "baseline": "procrustes_global",
+      "conditions": 12,
+      "ndcg10_delta": 0.022917281844115747,
+      "recall100_delta": -0.007654258981758983,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoNQ",
+      "baseline": "procrustes_global",
+      "conditions": 6,
+      "ndcg10_delta": 0.02686357301564501,
+      "recall100_delta": 0.001333333333333333,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoHotpotQA",
+      "baseline": "procrustes_global",
+      "conditions": 6,
+      "ndcg10_delta": 0.03157172944935313,
+      "recall100_delta": -0.0006666666666666666,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoFEVER",
+      "baseline": "procrustes_global",
+      "conditions": 6,
+      "ndcg10_delta": 0.028952971294289438,
+      "recall100_delta": 0.0011111111111111115,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "FiQA",
+      "baseline": "procrustes_global",
+      "conditions": 6,
+      "ndcg10_delta": 0.00991216240245336,
+      "recall100_delta": -0.002732139342139342,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "minilm_distilroberta",
+      "baseline": "la2m20_integration_script_adaptation",
+      "conditions": 12,
+      "ndcg10_delta": 0.08434895051531283,
+      "recall100_delta": 0.09304309866059866,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "e5_small_base",
+      "baseline": "la2m20_integration_script_adaptation",
+      "conditions": 12,
+      "ndcg10_delta": 0.12376095704709367,
+      "recall100_delta": 0.08701229437229437,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoNQ",
+      "baseline": "la2m20_integration_script_adaptation",
+      "conditions": 6,
+      "ndcg10_delta": 0.10212743538287959,
+      "recall100_delta": 0.044333333333333336,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoHotpotQA",
+      "baseline": "la2m20_integration_script_adaptation",
+      "conditions": 6,
+      "ndcg10_delta": 0.1065314892797604,
+      "recall100_delta": 0.05633333333333334,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoFEVER",
+      "baseline": "la2m20_integration_script_adaptation",
+      "conditions": 6,
+      "ndcg10_delta": 0.1289283732771557,
+      "recall100_delta": 0.075,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "FiQA",
+      "baseline": "la2m20_integration_script_adaptation",
+      "conditions": 6,
+      "ndcg10_delta": 0.0786325171850173,
+      "recall100_delta": 0.18444411939911942,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "minilm_distilroberta",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "conditions": 12,
+      "ndcg10_delta": 0.12280024240349068,
+      "recall100_delta": 0.11011407351907353,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "e5_small_base",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "conditions": 12,
+      "ndcg10_delta": 0.22139948743095392,
+      "recall100_delta": 0.3956503388278388,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoNQ",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "conditions": 6,
+      "ndcg10_delta": 0.1974431683737677,
+      "recall100_delta": 0.24300000000000002,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoHotpotQA",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "conditions": 6,
+      "ndcg10_delta": 0.16533068114746538,
+      "recall100_delta": 0.252,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoFEVER",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "conditions": 6,
+      "ndcg10_delta": 0.22804095707937588,
+      "recall100_delta": 0.22755555555555554,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "FiQA",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "conditions": 6,
+      "ndcg10_delta": 0.09758465306828018,
+      "recall100_delta": 0.28897326913826915,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "minilm_distilroberta",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "conditions": 12,
+      "ndcg10_delta": 0.024283980899706514,
+      "recall100_delta": 0.04262329402079402,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "e5_small_base",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "conditions": 12,
+      "ndcg10_delta": 0.16702211764593747,
+      "recall100_delta": 0.20084553983053985,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoNQ",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "conditions": 6,
+      "ndcg10_delta": 0.0880052391279008,
+      "recall100_delta": 0.103,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoHotpotQA",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "conditions": 6,
+      "ndcg10_delta": 0.12456976316914388,
+      "recall100_delta": 0.13666666666666666,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoFEVER",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "conditions": 6,
+      "ndcg10_delta": 0.07849561805284347,
+      "recall100_delta": 0.06344444444444444,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "FiQA",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "conditions": 6,
+      "ndcg10_delta": 0.0915415767413998,
+      "recall100_delta": 0.18382655659155658,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "minilm_distilroberta",
+      "baseline": "embedding_converter_paper_spec",
+      "conditions": 12,
+      "ndcg10_delta": 0.08411278528438815,
+      "recall100_delta": 0.07350015743515743,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "pair",
+      "value": "e5_small_base",
+      "baseline": "embedding_converter_paper_spec",
+      "conditions": 12,
+      "ndcg10_delta": 0.23821188309829275,
+      "recall100_delta": 0.1300151023051023,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoNQ",
+      "baseline": "embedding_converter_paper_spec",
+      "conditions": 6,
+      "ndcg10_delta": 0.17044127631913,
+      "recall100_delta": 0.06333333333333334,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoHotpotQA",
+      "baseline": "embedding_converter_paper_spec",
+      "conditions": 6,
+      "ndcg10_delta": 0.20136830852993795,
+      "recall100_delta": 0.069,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "NanoFEVER",
+      "baseline": "embedding_converter_paper_spec",
+      "conditions": 6,
+      "ndcg10_delta": 0.15881835596585778,
+      "recall100_delta": 0.07211111111111111,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    },
+    {
+      "axis": "dataset",
+      "value": "FiQA",
+      "baseline": "embedding_converter_paper_spec",
+      "conditions": 6,
+      "ndcg10_delta": 0.11402139595043603,
+      "recall100_delta": 0.20258607503607504,
+      "interpretation": "descriptive equal-condition mean; no new interval or significance test"
+    }
+  ],
+  "arc2_vs_native_reference_sign_counts": {
+    "ndcg10": {
+      "full_x": {
+        "lower": 24
+      },
+      "full_y": {
+        "lower": 24
+      }
+    },
+    "recall100": {
+      "full_x": {
+        "higher": 8,
+        "lower": 16
+      },
+      "full_y": {
+        "lower": 23,
+        "higher": 1
+      }
+    }
+  },
+  "equal_24_condition_method_means": [
+    {
+      "method": "arc2_global_tangent2_r1",
+      "conditions": 24,
+      "ndcg10": 0.527477527300496,
+      "recall100": 0.8658612474562474
+    },
+    {
+      "method": "procrustes_global",
+      "conditions": 24,
+      "ndcg10": 0.5031524182600609,
+      "recall100": 0.8660998378473379
+    },
+    {
+      "method": "la2m20_integration_script_adaptation",
+      "conditions": 24,
+      "ndcg10": 0.42342257351929274,
+      "recall100": 0.7758335509398009
+    },
+    {
+      "method": "simplelinear_official_final50_mlp5",
+      "conditions": 24,
+      "ndcg10": 0.3553776623832738,
+      "recall100": 0.6129790412827912
+    },
+    {
+      "method": "ridge_affine_l10_bias_regularized",
+      "conditions": 24,
+      "ndcg10": 0.4318244780276741,
+      "recall100": 0.7441268305305805
+    },
+    {
+      "method": "embedding_converter_paper_spec",
+      "conditions": 24,
+      "ndcg10": 0.36631519310915556,
+      "recall100": 0.7641036175861177
+    }
+  ],
+  "negative_condition_comparisons_either_metric": [
+    {
+      "dataset": "NanoNQ",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.021886638498021808,
+      "recall100": -0.02
+    },
+    {
+      "dataset": "NanoNQ",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.03125764334245275,
+      "recall100": -0.012
+    },
+    {
+      "dataset": "NanoHotpotQA",
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.03980170463373388,
+      "recall100": -0.0020000000000000005
+    },
+    {
+      "dataset": "NanoHotpotQA",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.033251037839991074,
+      "recall100": -0.0020000000000000005
+    },
+    {
+      "dataset": "NanoHotpotQA",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.04231145242441234,
+      "recall100": -0.006000000000000001
+    },
+    {
+      "dataset": "NanoHotpotQA",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.026180480312757038,
+      "recall100": -0.0019999999999999996
+    },
+    {
+      "dataset": "NanoFEVER",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.040789607416696336,
+      "recall100": -0.005333333333333334
+    },
+    {
+      "dataset": "NanoFEVER",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.03874019803948496,
+      "recall100": -0.006666666666666667
+    },
+    {
+      "dataset": "NanoFEVER",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.022384678876240172,
+      "recall100": -0.0013333333333333324
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.0013288027561516944,
+      "recall100": -0.003037165057165056
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "right": "procrustes_global",
+      "ndcg10": 0.0015993155048483942,
+      "recall100": -0.016504505494505495
+    },
+    {
+      "dataset": "FiQA",
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "right": "procrustes_global",
+      "ndcg10": -0.00358268756650346,
+      "recall100": -0.0169761038961039
+    }
+  ],
+  "uncertainty": "All plotted intervals are copied from scorer; no new bootstrap, CI or p-value computed.",
+  "source_summary_sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5"
+}

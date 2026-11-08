@@ -1,0 +1,151 @@
+{
+  "name": "degenerate_24x40_n64_seed17",
+  "seed": 17,
+  "source_dim": 24,
+  "target_dim": 40,
+  "anchor_count": 64,
+  "document_count": 192,
+  "query_count": 8,
+  "fixture": "degenerate",
+  "status": "PASS",
+  "backend_id": "arc2_global_tangent2_primal_float64_r1",
+  "ridge_lambda": 10.0,
+  "tangent_steps": 2,
+  "steps": [
+    {
+      "step": 1,
+      "coefficient_maxabs": 0.0,
+      "float64_coefficient_maxabs": 7.146840492458159e-22,
+      "float64_allclose": true,
+      "raw_proxy_maxabs": 0.0,
+      "normalized_proxy_maxabs": 0.0,
+      "score_maxabs": 0.0,
+      "coefficient_byte_identical": true,
+      "normalized_proxy_byte_identical": true,
+      "ranking": [
+        {
+          "k": 10,
+          "batch_rows": 16,
+          "queries": 8,
+          "queries_with_difference": 0,
+          "queries_with_membership_difference": 0,
+          "ordered_agreement_fraction": 1.0,
+          "set_agreement_fraction": 1.0,
+          "score_maxabs": 0.0,
+          "score_maxabs_per_query": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inversion_count": 0,
+          "unexplained_inversion_count": 0,
+          "mismatches": [],
+          "score_arithmetic": "float32 query batch @ proxy.T",
+          "tie_rule": "score descending, integer document row ID ascending",
+          "exclude_identical_ids": false
+        },
+        {
+          "k": 100,
+          "batch_rows": 16,
+          "queries": 8,
+          "queries_with_difference": 0,
+          "queries_with_membership_difference": 0,
+          "ordered_agreement_fraction": 1.0,
+          "set_agreement_fraction": 1.0,
+          "score_maxabs": 0.0,
+          "score_maxabs_per_query": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inversion_count": 0,
+          "unexplained_inversion_count": 0,
+          "mismatches": [],
+          "score_arithmetic": "float32 query batch @ proxy.T",
+          "tie_rule": "score descending, integer document row ID ascending",
+          "exclude_identical_ids": false
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "coefficient_maxabs": 0.0,
+      "float64_coefficient_maxabs": 7.146840492458159e-22,
+      "float64_allclose": true,
+      "raw_proxy_maxabs": 0.0,
+      "normalized_proxy_maxabs": 0.0,
+      "score_maxabs": 0.0,
+      "coefficient_byte_identical": true,
+      "normalized_proxy_byte_identical": true,
+      "ranking": [
+        {
+          "k": 10,
+          "batch_rows": 16,
+          "queries": 8,
+          "queries_with_difference": 0,
+          "queries_with_membership_difference": 0,
+          "ordered_agreement_fraction": 1.0,
+          "set_agreement_fraction": 1.0,
+          "score_maxabs": 0.0,
+          "score_maxabs_per_query": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inversion_count": 0,
+          "unexplained_inversion_count": 0,
+          "mismatches": [],
+          "score_arithmetic": "float32 query batch @ proxy.T",
+          "tie_rule": "score descending, integer document row ID ascending",
+          "exclude_identical_ids": false
+        },
+        {
+          "k": 100,
+          "batch_rows": 16,
+          "queries": 8,
+          "queries_with_difference": 0,
+          "queries_with_membership_difference": 0,
+          "ordered_agreement_fraction": 1.0,
+          "set_agreement_fraction": 1.0,
+          "score_maxabs": 0.0,
+          "score_maxabs_per_query": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inversion_count": 0,
+          "unexplained_inversion_count": 0,
+          "mismatches": [],
+          "score_arithmetic": "float32 query batch @ proxy.T",
+          "tie_rule": "score descending, integer document row ID ascending",
+          "exclude_identical_ids": false
+        }
+      ]
+    }
+  ],
+  "dual_update_wall_seconds": 0.00025436747819185257,
+  "primal_update_wall_seconds": 0.00024399999529123306,
+  "primal_public_fit_wall_seconds": 0.0005788523703813553,
+  "public_primal_fit_verified": true,
+  "wall_seconds": 0.005953450687229633
+}

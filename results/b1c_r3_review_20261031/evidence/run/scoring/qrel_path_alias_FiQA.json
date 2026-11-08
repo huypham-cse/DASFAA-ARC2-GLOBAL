@@ -1,0 +1,11 @@
+{
+  "original_declaration": {
+    "format": "tsv",
+    "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+    "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+  },
+  "resolved_path": "/network-volume/arc2_recovery_20261030/restored/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+  "restored_root": "/network-volume/arc2_recovery_20261030/restored",
+  "sha256_unchanged": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+  "after_all_rankings_seal_and_first_open_receipt": true
+}

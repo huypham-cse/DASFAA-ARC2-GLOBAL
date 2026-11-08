@@ -1,0 +1,72 @@
+{
+  "key": "sbert2019",
+  "audit_date": "2026-11-01",
+  "review_status": "same-family/provisional",
+  "scope": "Fresh single-entry audit from supplied input and live primary sources; no earlier reviews, experiments, raw results, or qrels consulted.",
+  "existence": {
+    "verdict": "VERIFIED",
+    "reason": "ACL Anthology live landing page, publisher BibTeX export, and proceedings PDF identify the same paper."
+  },
+  "metadata": {
+    "verdict": "CORRECT",
+    "authors": ["Nils Reimers", "Iryna Gurevych"],
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    "year": 2019,
+    "venue": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    "pages": "3982–3992",
+    "doi": "10.18653/v1/D19-1410",
+    "version": "Published EMNLP-IJCNLP 2019 proceedings version, ACL Anthology D19-1410; not merely an arXiv preprint.",
+    "publisher": "Association for Computational Linguistics",
+    "comparison": "All supplied bibliographic fields match the publisher export. Omitted optional publisher, month, address, and URL fields do not make the entry incorrect."
+  },
+  "sources": [
+    {
+      "url": "https://aclanthology.org/D19-1410/",
+      "type": "live primary publisher metadata",
+      "facts": "Confirms paper identity, ordered authors, 2019 venue, pages, DOI, and publisher."
+    },
+    {
+      "url": "https://aclanthology.org/D19-1410.bib",
+      "type": "live primary publisher BibTeX export",
+      "facts": "Matches the supplied entry's author, title, booktitle, pages, year, and DOI fields."
+    },
+    {
+      "url": "https://aclanthology.org/D19-1410.pdf",
+      "type": "live primary proceedings full text",
+      "facts": "First page confirms publication identity. Introduction and Section 3 describe independent sentence vectors, BERT/RoBERTa pooling, and siamese/triplet training. Section 3.1 uses NLI fine-tuning; the paper is methodological background rather than documentation of the later named all-* checkpoints.",
+      "locations": "PDF pages 1–4; printed pages 3982–3985, especially Section 3 and Section 3.1."
+    },
+    {
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+      "type": "live primary maintainer model card",
+      "facts": "Documents this specific 384-dimensional checkpoint, MiniLM initialization, contrastive sentence-pair training, and model use. The card distinguishes its default 256-word-piece truncation from 128-token training length; it cannot verify the manuscript's actual run configuration or pinned revision."
+    },
+    {
+      "url": "https://huggingface.co/sentence-transformers/all-distilroberta-v1",
+      "type": "live primary maintainer model card",
+      "facts": "Documents this specific 768-dimensional checkpoint, distilroberta-base initialization, contrastive sentence-pair training, and default 128-word-piece truncation. Its live main-branch card is not proof of the manuscript's exact pinned revision."
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 21,
+      "verdict": "WEAK",
+      "reason": "SBERT is appropriate lineage/background for Sentence Transformers encoders, but the citation here follows exact all-MiniLM-L6-v2/all-distilroberta-v1 checkpoint identities and dimensional migrations. The 2019 paper does not document these named checkpoints or their later contrastive training recipes. The maintainer cards independently support 384 and 768 dimensions, so the checkpoint claim is not contradicted; its precise attribution is incomplete. Claimed revisions, hashes, normalization, and experimental 128-token cap require the authors' pinned run/config evidence, not this paper. E5 is outside this single-entry judgment.",
+      "action": "FIX",
+      "fix": "Keep sbert2019 for the family/method background, and add checkpoint-specific references or footnotes to the two maintainer model cards beside the MiniLM-to-distilroberta migration. Where reproducibility is specified, link the model-card/config revision corresponding to the already pinned experimental SHA; do not invent or substitute a revision from live main. Clarify that 128 tokens is this study's encoding cap if needed."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 31,
+      "verdict": "SUPPORTS",
+      "reason": "The sentence explicitly makes a generic encoder-family/training-approach attribution. SBERT's pooling and siamese/triplet training directly support the Sentence-BERT portion; it makes no specific checkpoint reproduction, mixed-gallery retrieval, or migration-performance claim.",
+      "action": "KEEP",
+      "fix": null
+    }
+  ],
+  "recommendation": "FIX",
+  "fix_if_needed": "Retain the correct SBERT bibliography entry and related-work use. Supplement the experimental-setup checkpoint citation with the two primary model-card references at the experiment's pinned revisions; no bibliographic metadata correction or replacement of SBERT is needed.",
+  "confidence": "HIGH for existence, metadata, and family-versus-checkpoint attribution; actual run settings/revisions were outside scope and remain unverified.",
+  "limitations": "Single same-family review, provisional rather than independent cross-family validation. Live maintainer cards verify published checkpoint descriptions, not experiment execution."
+}

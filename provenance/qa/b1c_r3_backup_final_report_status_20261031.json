@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-31T06:05:28.905195+00:00",
+  "files": 2484,
+  "bytes": 64478738712,
+  "inventory_files": 2484,
+  "state_mtime": "2026-10-31T06:05:24.990695+00:00",
+  "events": [
+    {
+      "status": "FILES_COPIED_VERIFIED",
+      "files": 2475,
+      "bytes": 64478369117,
+      "utc": "20261031T060518_728721Z"
+    },
+    {
+      "status": "POLL_VERIFIED",
+      "groups": 120,
+      "files": 2484,
+      "pending": 0,
+      "unstable": 0,
+      "utc": "20261031T060525_003694Z"
+    },
+    {
+      "status": "COMPLETE_CAMPAIGN_BACKED_UP",
+      "utc": "20261031T060525_003694Z"
+    }
+  ]
+}

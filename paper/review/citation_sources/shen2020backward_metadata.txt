@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CVPR 2020 Open Access Repository</title>
+<link rel="stylesheet" type="text/css" href="../../static/conf.css">
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<meta name="citation_title" content="Towards Backward-Compatible Representation Learning">
+<meta name="citation_author" content="Shen, Yantao">
+<meta name="citation_author" content="Xiong, Yuanjun">
+<meta name="citation_author" content="Xia, Wei">
+<meta name="citation_author" content="Soatto, Stefano">
+<meta name="citation_publication_date" content="2020">
+<meta name="citation_conference_title" content="Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition">
+<meta name="citation_firstpage" content="6368">
+<meta name="citation_lastpage" content="6377">
+<meta name="citation_pdf_url" content="http://openaccess.thecvf.com/content_CVPR_2020/papers/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.pdf">
+</head>
+<body>
+<div id="header">
+<div id="header_left">
+<a href="http://cvpr2020.thecvf.com"><img src="../../img/cvpr2020_logo.png" width="175" border="0" alt="CVPR 2020"></a>
+<a href="http://www.cv-foundation.org/"><img src="../../img/cropped-cvf-s.jpg" width="175" height="112" border="0" alt="CVF"></a>
+</div>
+<div id="header_right">
+<div id="header_title">
+<a href="http://cvpr2020.thecvf.com">CVPR 2020</a> <a href="/" class="a_monochrome">open access</a>
+</div>
+<div id="help" >
+These CVPR 2020 papers are the Open Access versions, provided by the <a href="http://www.cv-foundation.org/">Computer Vision Foundation.</a><br> Except for the watermark, they are identical to the accepted versions; the final published version of the proceedings is available on IEEE Xplore.</div>
+<div id="disclaimer" >
+This material is presented to ensure timely dissemination of scholarly and technical work.
+Copyright and all rights therein are retained by authors or by other copyright holders.
+All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright.<br><br>
+<form action="../../CVPR2020_search.py" method="post">
+<input type="text" name="query">
+<input type="submit" value="Search">
+</form>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+<div id="content">
+<dl>
+<dd>
+<div id="papertitle">
+Towards Backward-Compatible Representation Learning</div>
+<div id="authors">
+<br><b><i>Yantao Shen,  Yuanjun Xiong,  Wei Xia,  Stefano Soatto</i></b>; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020, pp. 6368-6377
+</div><font size="5">
+<br><b>Abstract</b>
+</font>
+<br><br><div id="abstract" >
+We propose a way to learn visual features that are compatible with previously computed ones even when they have different dimensions and are learned via different neural network architectures and loss functions. Compatible means that, if such features are used to compare images, then "new" features can be compared directly to "old" features, so they can be used interchangeably. This enables visual search systems to bypass computing new features for all previously seen images when updating the embedding models, a process known as backfilling. Backward compatibility is critical to quickly deploy new embedding models that leverage ever-growing large-scale training datasets and improvements in deep learning architectures and training methods. We propose a framework to train embedding models, called backward-compatible training (BCT), as a first step towards backward compatible representation learning. In experiments on learning embeddings for face recognition, models trained with BCT successfully achieve backward compatibility without sacrificing accuracy, thus enabling backfill-free model updates of visual embeddings.</div>
+<font size="5">
+<br><b>Related Material</b>
+</font>
+<br><br>
+[<a href="../../content_CVPR_2020/papers/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.pdf">pdf</a>]
+[<a href="../../content_CVPR_2020/supplemental/Shen_Towards_Backward-Compatible_Representation_CVPR_2020_supplemental.pdf">supp</a>]
+[<a href="http://arxiv.org/abs/2003.11942">arXiv</a>]
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+<div class="bibref">
+@InProceedings{Shen_2020_CVPR,<br>
+author = {Shen, Yantao and Xiong, Yuanjun and Xia, Wei and Soatto, Stefano},<br>
+title = {Towards Backward-Compatible Representation Learning},<br>
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>
+month = {June},<br>
+year = {2020}<br>
+}
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</body>
+</html>

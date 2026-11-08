@@ -1,0 +1,12 @@
+@inproceedings{NEURIPS2025_4175dee3,
+ author = {Jha, Rishi and Zhang, Collin and Shmatikov, Vitaly and Morris, John},
+ booktitle = {Advances in Neural Information Processing Systems},
+ doi = {10.52202/085713-1530},
+ editor = {D. Belgrave and C. Zhang and H. Lin and R. Pascanu and P. Koniusz and M. Ghassemi and N. Chen},
+ pages = {45963--45987},
+ publisher = {Curran Associates, Inc.},
+ title = {Harnessing the Universal Geometry of Embeddings},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2025/file/4175dee33d6145cb8f0323703d138a53-Paper-Conference.pdf},
+ volume = {38, Main Conference},
+ year = {2025}
+}

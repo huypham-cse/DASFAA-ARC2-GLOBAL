@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "1eb11d4a9f49a41a263fcb93e9a12e904da0ea8602564223f13a44c85fd78d57",
+  "verified_files": 111,
+  "copied_successful_cells": 7,
+  "retained_reference_or_imported_cells": 44,
+  "prior_failed_attempt": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026",
+  "failed_fit_policy": "restart converter seed17 from initialization; old attempt has no optimizer checkpoint"
+}

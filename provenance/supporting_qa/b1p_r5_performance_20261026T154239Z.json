@@ -1,0 +1,68 @@
+{
+  "time_vn": "2026-10-26T22:42:39.857626+07:00",
+  "status": "RUNNING",
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 51,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "selected_iteration": 48750,
+  "phases": {
+    "selection": {
+      "last_step": 50000,
+      "recent_seconds_per_step": 0.15097801099158822
+    },
+    "refit": {
+      "last_step": 14250,
+      "recent_seconds_per_step": 0.1422999376906082
+    }
+  },
+  "cpu_max": "400000 100000\n",
+  "cpu_stat_before": "usage_usec 142938093624\nuser_usec 142045594971\nsystem_usec 892498653\nnr_periods 359510\nnr_throttled 356660\nthrottled_usec 1110169791980\n",
+  "cpu_stat_after": "usage_usec 142978423941\nuser_usec 142085691122\nsystem_usec 892732819\nnr_periods 359611\nnr_throttled 356761\nthrottled_usec 1110456399342\n",
+  "sample_seconds": 10.08549830969423,
+  "worker_main_runtime_s": 1.181644982,
+  "worker_main_runqueue_wait_s": 7.984531593,
+  "top_cpu": [
+    {
+      "pid": 2700,
+      "comm": "llama-server",
+      "cpu_cores_used": 3.8391756967310324
+    },
+    {
+      "pid": 32678,
+      "comm": "python",
+      "cpu_cores_used": 0.13484708025708173
+    },
+    {
+      "pid": 1354,
+      "comm": "ollama",
+      "cpu_cores_used": 0.001983045297898261
+    },
+    {
+      "pid": 2648,
+      "comm": "python3",
+      "cpu_cores_used": 0.001983045297898261
+    },
+    {
+      "pid": 32523,
+      "comm": "python",
+      "cpu_cores_used": 0.0009915226489491304
+    },
+    {
+      "pid": 33220,
+      "comm": "node",
+      "cpu_cores_used": 0.0009915226489491304
+    }
+  ],
+  "memory_max": "64424509440\n",
+  "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+  "converter_workers_started": 1,
+  "converter_workers_passed": 0,
+  "failures": []
+}

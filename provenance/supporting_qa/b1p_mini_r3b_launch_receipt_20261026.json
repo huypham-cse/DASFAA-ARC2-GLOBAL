@@ -1,0 +1,18 @@
+{
+  "host": "103.73.232.201",
+  "port": 62161,
+  "code_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+  "runtime_repair_pre_run_commit": "dfafce1cb31d0bc8eb8b7ab692c6b0b7b1654bd4",
+  "runtime_protocol_sha256": "d7a4d26fa270513d1eed276910588c2300037ef5c10cdafcdbfceb48e6fec4f2",
+  "checkout": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3",
+  "pid": 17609,
+  "launched_at": "2026-10-26T09:27:13.457497+00:00",
+  "log": "/root/arc2_global_paper_20261025/b1p_mini_r3b_campaign_20261026.log",
+  "schedule": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_schedule_mini_r3b_20261026",
+  "smoke": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026",
+  "full": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026",
+  "full_only_after_smoke_PASS": true,
+  "next_item_auto_launch": false,
+  "no_time_or_resource_caps": true,
+  "first_Mini_failure_preserved": true
+}

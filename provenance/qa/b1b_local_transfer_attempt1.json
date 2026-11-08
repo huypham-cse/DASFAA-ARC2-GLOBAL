@@ -1,0 +1,11 @@
+{
+  "scope": "local transfer verification setup; no scientific run changed",
+  "status": "FAILED_LOCAL_ASSUMPTION_PRESERVED",
+  "cause": "SHA256 transcribed from line-wrapped terminal output contained a duplicated character (65 instead of64 hex characters)",
+  "incorrect_expected_sha256": "56b39f93e9bd45c8559d2197fe4aaafd9f686494357e4146d9c86b75f6c7b56d0",
+  "archive_bytes": 63374726,
+  "downstream_check": "artifact verifier then found no extracted metadata because the preceding hash assertion stopped extraction",
+  "repair": "download the server-generated checksum receipt as a file over authenticated SSH; compare exact bytes before extraction",
+  "scientific_outputs_modified": false,
+  "archive_extracted": false
+}

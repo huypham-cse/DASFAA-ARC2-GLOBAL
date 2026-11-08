@@ -1,0 +1,21 @@
+{
+  "key": "dar2025mini",
+  "bib_entry": "@misc{dar2025mini,\n  author = {Guy Dar},\n  title = {mini-vec2vec: Scaling Universal Geometry Alignment with Linear Transformations},\n  year = {2026},\n  eprint = {2510.02348},\n  archiveprefix = {arXiv},\n  primaryclass = {cs.CL},\n  url = {https://arxiv.org/abs/2510.02348},\n}",
+  "contexts": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 23,
+      "text": "\\paragraph{Geometric alignment and refinement.}\nOrthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\\cite{schonemann1966procrustes}.\nRecent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\\cite{maystre2025procrustes}.\nUnpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\\cite{dar2025mini}.\nThus, linear translation, Procrustes initialization, and refinement are all established ingredients.\nARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.\nBoth corrections are folded into one affine coefficient matrix, followed by row normalization at application time.\nThis differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps."
+    }
+  ],
+  "primary_source_record": {
+    "key": "dar2025mini",
+    "source_file": "citation_sources/dar2025mini_metadata.txt",
+    "metadata_url": "https://arxiv.org/bibtex/2510.02348",
+    "verification": "publisher-export",
+    "sha256": "d5cffbbafbb788fbcd1a4b26d320a6b17d3c70b2562494b23e0d7e27bc5856e1",
+    "metadata_type": "misc",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

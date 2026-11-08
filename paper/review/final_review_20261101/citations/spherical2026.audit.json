@@ -1,0 +1,49 @@
+{
+  "key": "spherical2026",
+  "checked_date": "2026-11-01",
+  "lookup": "live primary web lookup",
+  "existence": "verified",
+  "metadata": {
+    "status": "matches",
+    "title": "Spherical Interpolation for Backward-Compatible Multimodal Representations",
+    "authors": ["Simone Ricci", "Niccolò Biondi", "Federico Pernici"],
+    "year": 2026,
+    "type": "misc",
+    "identifier": "arXiv:2609.39836",
+    "primary_class": "cs.CV",
+    "version": "v1",
+    "submitted": "2026-09-30",
+    "venue": "arXiv record reports NeurIPS 2026 acceptance; proceedings publication not independently established",
+    "required_corrections": []
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/bibtex/2609.39836",
+      "verified_fact": "Title, author order and spelling, year, identifier, category, and arXiv bibliography type match."
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.39836",
+      "verified_fact": "Existence, v1 submission date, and author-reported conference acceptance."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.39836v1#S3",
+      "verified_fact": "Section 3, Eqs. (1)-(4): Procrustes maps new to old; SLERP moves old-query to aligned-new-query as alpha increases, against a fixed old gallery."
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 16,
+      "verdict": "SUPPORTS",
+      "reason": "The cited method combines the two query endpoints after alignment. It does not learn a tangent regression. The manuscript's ARC2 claim is outside this source's evidentiary scope.",
+      "evidence_location": "Section 3, Eqs. (1)-(4)",
+      "source_url": "https://arxiv.org/html/2609.39836v1#S3"
+    }
+  ],
+  "decision": "KEEP",
+  "fix_if_needed": null,
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "Only the supplied entry and its single supplied context; no prior reviews, cached source texts, subagents, experiments, or qrels used."
+}

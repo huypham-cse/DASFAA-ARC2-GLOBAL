@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-02T09:23:08.214683+00:00",
+  "anonymous_artifact": {
+    "file": "D:\\ARC2-Global_Anonymous_Artifact_20261102.zip",
+    "bytes": 113578318,
+    "sha256": "44c9c9e345e5b13546f70aac9f19dc9401731ada71965f4391fd98c3a88b4ada",
+    "members": 1744,
+    "all_members_verified": true
+  },
+  "overleaf": {
+    "file": "D:\\ARC2-Global_Overleaf_20261102_r2.zip",
+    "bytes": 1380295,
+    "sha256": "2c02d9d4cbe959eb6e591fa8ef7fee2624aa87f9f101a9db15e41a633167adc1",
+    "isolated_build_verified": true
+  },
+  "pdf": {
+    "file": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_supervisor_20261102.pdf",
+    "sha256": "a6bff1fdc33169679dc45abce0c6d516ecbd96dbc63cd50770304089ecde4451"
+  },
+  "no_external_send_or_upload": true,
+  "old_packages_preserved": true
+}

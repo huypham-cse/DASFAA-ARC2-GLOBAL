@@ -1,0 +1,42 @@
+{
+  "schema": "b2_exact_endpoint_v1",
+  "kind": "mixed",
+  "files": {
+    "ids": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/inputs/ids.json",
+      "sha256": "72329f386e1971d35fca7c6084f2bbefe34dd0af33288bf98b96482a39069d48"
+    },
+    "query_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/vectors/distilroberta_y_queries.npy",
+      "sha256": "b7440b4beecc71e9b881f87254fd1752ddceaff7a4b6bbdf11d25c6b3fb49d95"
+    },
+    "proxy_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed53_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "sha256": "2d3267a90c6d64909b0deb7b67e7f8b995257fc9df7462c2c77f42dcf897503a"
+    },
+    "destination_vectors": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/vectors/distilroberta_y_docs.npy",
+      "sha256": "7550c4532310bfb3f784f855228d55bf743aac5aec4dc0ade6a3cdfa5065e16d"
+    },
+    "paid_indices": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/inputs/paid_seed53_75pct.npy",
+      "sha256": "dd523683654321c374378c82da68932507f5f681f47c0e9ff5f42a1628196a05"
+    },
+    "anchor_indices": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/inputs/anchors_seed53.npy",
+      "sha256": "9f1f681f6b782ac03d87f323e99853bb8129bb7993b12572983ae705c0b09c96"
+    }
+  },
+  "shape": [
+    171332,
+    768
+  ],
+  "semantics": {
+    "dtype": "float32",
+    "score": "dot",
+    "k": 100,
+    "batch_rows": 16,
+    "tie_policy": "descending score then ascending document row index",
+    "exclude_identical_ids": true
+  }
+}

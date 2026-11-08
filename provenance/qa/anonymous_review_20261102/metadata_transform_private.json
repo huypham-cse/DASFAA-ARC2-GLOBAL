@@ -1,0 +1,205 @@
+[
+  {
+    "source": "results\\b1c_r3_review_20261031\\evidence\\run\\scoring\\summary.json",
+    "source_sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5",
+    "public": "evidence/development/summary.json",
+    "public_sha256": "2d17eba4bcd785e22285df99f5defb0e0b17c2764abaa49aff4e00702c184427",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1c_r3_review_20261031\\evidence\\run\\scoring\\cell_index.json",
+    "source_sha256": "c4d23f1730dbd10b3975590faf77ab0210869d19306c6adfe64785e3e7e515aa",
+    "public": "evidence/development/cell_index.json",
+    "public_sha256": "90469e6bcef73f6c0d8a3ff5acef9fee7a7c3a8753836589165554255aab72cf",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\scoring_r2_binary\\results_summary.json",
+    "source_sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+    "public": "evidence/mechanism/summary.json",
+    "public_sha256": "b01e2830cdc4178f8b951e606d3c79a9550f038527206873978f92e848d31a69",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\scoring_r2_binary\\FiQA\\cell_index.json",
+    "source_sha256": "ff35ab9114296da0b9ce2349edaf915180b84413589042113133292f5cb12601",
+    "public": "evidence/mechanism/FiQA/cell_index.json",
+    "public_sha256": "a52f1426a87a060fb23d262d4dd1fe89e3109c23885d7ed387aa3b5cf4b1f92c",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\scoring_r2_binary\\NanoFEVER\\cell_index.json",
+    "source_sha256": "31dea095fa0af0ea391de807d3a3ce7bc5a27b5e0d86e46bfa304b175428028a",
+    "public": "evidence/mechanism/NanoFEVER/cell_index.json",
+    "public_sha256": "49c179391fe38b5dff95f5b0fc5e3a24cc4c2146c97f70bd7b1b170a3de40f42",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\scoring_r2_binary\\NanoHotpotQA\\cell_index.json",
+    "source_sha256": "b0b710c3fc0074aabab239721db266dafbd5a51115e87fb0fd4827df186e4811",
+    "public": "evidence/mechanism/NanoHotpotQA/cell_index.json",
+    "public_sha256": "4d0f37ede05f8b4983be9e0c3a5331e9f8aae89b1a9086c75cd60307cb5506f0",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\scoring_r2_binary\\NanoNQ\\cell_index.json",
+    "source_sha256": "06c4fa7251355dc4d4c955b974e21c1013e30dab7814203f1db787bae4d9ceb3",
+    "public": "evidence/mechanism/NanoNQ/cell_index.json",
+    "public_sha256": "26e8172b8ea2abfa14967d9d873ce1eaeb0d492b072385074a51c4820eaad74c",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1p_r5_review_20261027\\scoring\\results_summary.json",
+    "source_sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7",
+    "public": "evidence/allpaid/summary.json",
+    "public_sha256": "bef6fa203e451485a338c93139cc349138e92d934e9c1964b87dfc35bf2b6d2b",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1p_r5_review_20261027\\scoring\\cell_index.json",
+    "source_sha256": "9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375",
+    "public": "evidence/allpaid/cell_index.json",
+    "public_sha256": "eacdc9491566a4032b3614131212ab4c0d33303fa95f8900e88d834518cb689b",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1g_r1_review_20261027\\scoring\\results_summary.json",
+    "source_sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f",
+    "public": "evidence/gallery/summary.json",
+    "public_sha256": "28b8eab1bcfdc3e1d31f67b8830c79a929a5097031f650ce415f2597d087c936",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1g_r1_review_20261027\\scoring\\FiQA\\cell_index.json",
+    "source_sha256": "f5f3eeaf535b982448908aa7c588e32d23fcc7e55824dafd02ef02eebfce3b7f",
+    "public": "evidence/gallery/FiQA/cell_index.json",
+    "public_sha256": "74cf1ea7f31b508124c439c82e1539e07ed197ab72a448d58acfc3f667ff8408",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1g_r1_review_20261027\\scoring\\NanoFEVER\\cell_index.json",
+    "source_sha256": "8cbd230c7030dfc7a05a17df57341f53e94b45359570b28012a3413e0fd0a5bf",
+    "public": "evidence/gallery/NanoFEVER/cell_index.json",
+    "public_sha256": "62f262f76a8ada2ab0fe3fda9a9d2edee42f7b1f6770a3492b7ece8ac7fa4c48",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1g_r1_review_20261027\\scoring\\NanoHotpotQA\\cell_index.json",
+    "source_sha256": "423360f5373bff946045f066af4fd94bc3d649d55f45c319b57222a53e6f50ec",
+    "public": "evidence/gallery/NanoHotpotQA/cell_index.json",
+    "public_sha256": "e285a6ed6ea14dbade504a67454bf85f6f822eb2c137f1ca3cadcbaf2313e08a",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b1g_r1_review_20261027\\scoring\\NanoNQ\\cell_index.json",
+    "source_sha256": "aea868caaa3847a76573e3249c8b763e8cdf5396264a9b12053e3daf213bd7f5",
+    "public": "evidence/gallery/NanoNQ/cell_index.json",
+    "public_sha256": "cc1ddfdbe2abfe014a1832d4631fbb3303b478afccc62cca4c2f736ea0ef2f27",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b2_review_20261101\\evidence\\results\\b2_full_r1_20261031t064859\\scoring\\summary.json",
+    "source_sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+    "public": "evidence/prospective/summary.json",
+    "public_sha256": "516425f3306f376434c458359e640b02b2ed4add3aa48aeaeee2e7a10e4d1605",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b2_review_20261101\\evidence\\results\\b2_full_r1_20261031t064859\\scoring\\cell_index.json",
+    "source_sha256": "d814ca87e947638e826d8f46bacab4f0f3526150ada9552c5ca59ca4b1776410",
+    "public": "evidence/prospective/cell_index.json",
+    "public_sha256": "552dcaa82477bf1ddca354f0f21e3771db1aa3eac0da52189273daf46b28b141",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\summary.json",
+    "source_sha256": "79d3f10ea259a74e9543c4912b4f597266c87057e5e456216eee541d1bf0de41",
+    "public": "evidence/matched_targets/summary.json",
+    "public_sha256": "79d3f10ea259a74e9543c4912b4f597266c87057e5e456216eee541d1bf0de41",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\tc1l_local_r1_20261102\\full\\scoring\\cell_index.json",
+    "source_sha256": "6888c2a279f3383b2704c4a3780d8a03d875bb8bd7ffe60b54a3ff5bcbbc6703",
+    "public": "evidence/matched_targets/cell_index.json",
+    "public_sha256": "6888c2a279f3383b2704c4a3780d8a03d875bb8bd7ffe60b54a3ff5bcbbc6703",
+    "metadata_derivative": true
+  },
+  {
+    "source": "configs\\b1c_r3_lock.json",
+    "source_sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+    "public": "configs/b1c_r3_lock.json",
+    "public_sha256": "1a90b45e36f6b7ad292a5646de1ce8a7c674036bd57dd5743dc6296cfa58364d",
+    "metadata_derivative": true
+  },
+  {
+    "source": "configs\\b2_lock.json",
+    "source_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+    "public": "configs/b2_lock.json",
+    "public_sha256": "f5472a23910166731d602006317d7f45debe0cb8ad13004353500e05289ab7e0",
+    "metadata_derivative": true
+  },
+  {
+    "source": "configs\\b1p_lock.json",
+    "source_sha256": "0224200454b0deb8f2176e509d8bd99da0f59c7ae7b12a2488ec6eadad7308ad",
+    "public": "configs/b1p_lock.json",
+    "public_sha256": "bed0fd7c895c39f1882e72d3ab1da8dedf65178c543a428c9a4524e00d10fdb0",
+    "metadata_derivative": true
+  },
+  {
+    "source": "configs\\tc1l_minilm_local_20261102_lock.json",
+    "source_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+    "public": "configs/tc1l_minilm_local_20261102_lock.json",
+    "public_sha256": "0b4207f1758975b48da45c123791526dce291a6d4466ba14b6a3a2b8d9cbe803",
+    "metadata_derivative": true
+  },
+  {
+    "source": "configs\\datasets.json",
+    "source_sha256": "c26318609b4959f2c07110c3e610de8f77befcad2c35d8de836d7821eb8a9b82",
+    "public": "configs/datasets.json",
+    "public_sha256": "0a69349e4af47855a2857ce0fdca7b7e54307eea4c34ef81a1aa1cede858b897",
+    "metadata_derivative": true
+  },
+  {
+    "source": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story\\DASFAA-2027-paper-release\\results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\inputs\\FiQA\\ids.json",
+    "source_sha256": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "public": "ids/FiQA.json",
+    "public_sha256": "03b9a3f6ac0af2d0376a4a265c163639a3d8fdb7085d02f8cd164df44997e352",
+    "metadata_derivative": true
+  },
+  {
+    "source": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story\\DASFAA-2027-paper-release\\results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\inputs\\NanoNQ\\ids.json",
+    "source_sha256": "907d2810eaec9e81dd03dee3d07fb86df27024cf6a6bb661f7e9c376bbeda0d6",
+    "public": "ids/NanoNQ.json",
+    "public_sha256": "eeaa589f19e9e0ad8adb3b025b969aa1a847fdb550950b3069cf5b619603bbd6",
+    "metadata_derivative": true
+  },
+  {
+    "source": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story\\DASFAA-2027-paper-release\\results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\inputs\\NanoHotpotQA\\ids.json",
+    "source_sha256": "27728b4305817d662eb6697b212c2a8958b0827aa92f45e5a5ebc4acd0dce0a5",
+    "public": "ids/NanoHotpotQA.json",
+    "public_sha256": "b60759f1cdf55167ea9c8645b97f9776e2bdd4003fdbb10ebeaf9507dbbe5e85",
+    "metadata_derivative": true
+  },
+  {
+    "source": "D:\\DASFAA-2027-paper-release-20261101-r3-paper-story\\DASFAA-2027-paper-release\\results\\b1mp0_r1_review_20261026\\b1m_full_r1_20261026\\inputs\\NanoFEVER\\ids.json",
+    "source_sha256": "1ac5a707750d824545739dec733dbe95046841e083da4a7674f522b1ff48aba2",
+    "public": "ids/NanoFEVER.json",
+    "public_sha256": "c79ab2fef3df7882fa6b4796bba0567fa8bc9dbe7c3638689508dc290ae4fc9b",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\b2_review_20261101\\evidence\\results\\b2_full_r1_20261031t064859\\inputs\\ids.json",
+    "source_sha256": "72329f386e1971d35fca7c6084f2bbefe34dd0af33288bf98b96482a39069d48",
+    "public": "ids/TREC-COVID.json",
+    "public_sha256": "b5396fb309e2e36a077687bf52c7cf6c6d746a629457138ba0916c820149d15b",
+    "metadata_derivative": true
+  },
+  {
+    "source": "results\\tc1l_local_r1_20261102\\full\\ids.json",
+    "source_sha256": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "public": "ids/FiQA_matched_targets.json",
+    "public_sha256": "03b9a3f6ac0af2d0376a4a265c163639a3d8fdb7085d02f8cd164df44997e352",
+    "metadata_derivative": true
+  }
+]

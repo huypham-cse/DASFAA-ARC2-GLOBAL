@@ -1,0 +1,25 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "la2m20_integration_script_adaptation",
+  "fit_pairs": 1024,
+  "fit_seconds": 1.0121400216594338,
+  "mapping_seconds": 0.04049407318234444,
+  "phases": {},
+  "parameters_sha256": "e85efb8ece1c9a333d30b35dd5953ed9e58f55aff1c6e966b508d41aa12909b8",
+  "backend_id": null,
+  "new_physical_document_encodes": 0,
+  "new_fit": true,
+  "group_id": "NanoFEVER_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation",
+  "dataset": "NanoFEVER",
+  "pair": "minilm_distilroberta",
+  "seed": 29,
+  "regime": "fixed1024",
+  "paired_target_path": "groups/NanoFEVER_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/NanoFEVER_anchor_targets.npy",
+  "paired_target_sha256": "84c965f231568ae850b785b8e73b713a5fe8479804c72dfa6c971ed7648cb9ca",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "50pct",
+    "75pct"
+  ]
+}

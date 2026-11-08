@@ -1,0 +1,64 @@
+{
+  "claim_revision": "supervisor-review-20261101-r2-completeness",
+  "purpose": "Freeze the interpretation of completed evidence before manuscript writing; not a new experiment protocol or method revision.",
+  "method": "arc2_global_tangent2_r1",
+  "algorithm": {
+    "initialization": "centered rectangular Procrustes affine map",
+    "ridge_lambda": 10,
+    "tangent_steps": 2,
+    "local_residual": false,
+    "neural_training_required": false,
+    "main_fit_pairs": 1024
+  },
+  "central_claim": "ARC2-Global is a compact forward document-space adapter that applies two closed-form tangent corrections to a centered Procrustes map. With 1,024 fitting pairs, it improves aggregate nDCG@10 across four inspected development collections. A prospective TREC-COVID test confirms gains in 11 of 30 declared comparisons against the specified ridge, SimpleLinear and Converter configurations, while its incremental nDCG advantage over Procrustes and LA2M remains unresolved.",
+  "independent_family": {
+    "positive": 11,
+    "unresolved": 19,
+    "negative": 0,
+    "positive_by_baseline": {
+      "Procrustes": 0,
+      "LA2M20": 0,
+      "SimpleLinear": 2,
+      "affine_ridge": 4,
+      "Converter": 5
+    },
+    "comparisons_per_baseline": 6,
+    "nDCG_Procrustes_point_differences_all_negative": true,
+    "no_equivalence_or_noninferiority_claim": true
+  },
+  "statistical_scope": "B2: all50queries, seeds17/29/41/53/67 averaged before20kshared query bootstrap, seed20261031,30Bonferroni contrasts. Approximate percentile family coverage95%; Recall95% nominal descriptive.",
+  "evidence_sources": {
+    "DEV": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+    "independent": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+    "all_paid": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+    "mechanism": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+    "mixed_diagnostics": "results/b1g_r1_review_20261027/scoring/results_summary.json"
+  },
+  "preserved_limits": [
+    "No independently confirmed nDCG advantage over Procrustes/LA2M.",
+    "All-paid E5 loses to Procrustes/LA2M; MiniLM versus ridge is unresolved.",
+    "Two-step necessity is DEV evidence; not an independent B2 ablation.",
+    "Mixed-vector replacement can reverse proxy-only ordering.",
+    "No measured physical migration cost, dollar saving, ANN/SLO or real-traffic benefit.",
+    "No novelty priority or venue acceptance probability established."
+  ],
+  "review_assurance": {
+    "claim_supported": "partial",
+    "review_independence": "same-family",
+    "acceptance_status": "provisional",
+    "formal_paper_integrity_audit": "not performed"
+  },
+  "manuscript_modified": false,
+  "further_experiments_authorized_by_package": false,
+  "complete_experiment_coverage": {
+    "main_DEV": 736,
+    "extra_mechanism": 360,
+    "extra_allpaid": 60,
+    "independent_B2": 184,
+    "unique_quality_cells": 1340,
+    "G_diagnostic_cases_separate": 450,
+    "original_FiQA_versions_retained": 64,
+    "B3_B4": "not run / conditional"
+  },
+  "fresh_release_semantic_audit": "REVIEW_UNAVAILABLE: account quota interrupted final reviewer verdict; deterministic numerical/inventory checks retained."
+}

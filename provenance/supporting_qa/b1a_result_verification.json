@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "artifact/hash/selection verification, not scientific claim audit",
+  "nano_collections": 3,
+  "nano_documents": 15121,
+  "fiqa_documents": 57638,
+  "development_documents_ready": 72759,
+  "paid_sets_verified": 60,
+  "new_anchor_order_arrays_verified": 30,
+  "fiqa_vector_files_verified_remotely": 8,
+  "reference_dimension_cases": 4,
+  "cuda_models": 4,
+  "toy_mixed_galleries": 2,
+  "new_qrel_reads": 0,
+  "benchmark_quality_scores_generated": false,
+  "next_action": "STOP - user confirmation required before B1b"
+}

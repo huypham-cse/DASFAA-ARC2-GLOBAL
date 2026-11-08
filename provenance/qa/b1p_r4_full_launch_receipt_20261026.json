@@ -1,0 +1,58 @@
+{
+  "status": "R4_FULL_LAUNCHED",
+  "utc": "2026-10-26T11:13:30.174494+00:00",
+  "host": "103.73.232.225",
+  "code_commit": "42731ebdaf79527a45ba6d2ae868385755dafbd2",
+  "argv": [
+    "/root/arc2_p3h_20261020/venv/bin/python",
+    "-u",
+    "/root/arc2_global_paper_20261025/code_42731eb_full_r4/ops/b1p_stage.py",
+    "--stage",
+    "full",
+    "--output",
+    "/root/arc2_global_paper_20261025/code_42731eb_full_r4/results/b1p_full_full_r4_20261026",
+    "--code-commit",
+    "42731ebdaf79527a45ba6d2ae868385755dafbd2",
+    "--smoke",
+    "/root/arc2_global_paper_20261025/code_42731eb_full_r4/results/b1p_smoke_full_r4_20261026"
+  ],
+  "smoke": "/root/arc2_global_paper_20261025/code_42731eb_full_r4/results/b1p_smoke_full_r4_20261026",
+  "target_load_verification": "/root/arc2_global_paper_20261025/b1p_r4_target_load_verification_20261026.json",
+  "source_stop_confirmed": "Mini .201 worker18841 and parent18702 exited; source FAILED_PRESERVED retained; separate stop receipt on source",
+  "resume_step": 20000,
+  "source_last_reported_step": 28000,
+  "discarded_reported_updates": 8000,
+  "active_shared_guard_config": {
+    "boot_id": "3eb5b1a9-109c-4f93-a24d-d76e3d332d59",
+    "control_root": "/root/gpu-memory-guard-20261025/sessions",
+    "deadline_monotonic": 8379443.261828038,
+    "excluded_roots": [
+      "/workspace/p2-vericache-20261024"
+    ],
+    "expires_utc": "2026-10-27T06:00:00+00:00",
+    "gpu_uuid": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec",
+    "host_id": "nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-bqjpp",
+    "interval_seconds": 1,
+    "protected_jobs": [
+      {
+        "exe": "/usr/bin/python3.10",
+        "root": "/root/p8-a-recompute-20261022/project"
+      },
+      {
+        "exe": "/root/miniforge3/envs/sandboxdp/bin/python3.11",
+        "root": "/root/paper-P2"
+      }
+    ],
+    "reservation_roots": [
+      "/root/p8-a-recompute-20261022/project"
+    ],
+    "running_free_gb": 5,
+    "started_utc": "2026-10-26T11:05:22.439487+00:00",
+    "startup_free_gb": 35
+  },
+  "guard_qualification": "New guard started11:05UTC after original expiry; no guard or other workload modified. Actual external interruption remains possible. No artificial time/memory cap added.",
+  "STOP": "After B1-P report only; no next study auto-launch",
+  "pid": 3337694,
+  "launched_utc": "2026-10-26T11:13:30.175083+00:00",
+  "lock_sha256": "7b455d50f94c3680bb79f2d1b1556edcab4dcb4381758eb28ecf981e7e2f813d"
+}

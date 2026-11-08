@@ -1,0 +1,112 @@
+{
+  "utc": "2026-10-31T06:55:05.099521+00:00",
+  "scope": "Startup and successful smoke proof; mutable schedule/encoding snapshots are observations only",
+  "files": {
+    "operator/b2_launch.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/b2_launch.json",
+      "sha256": "d59138dbf691e5afb1c67c6c72b14ff2fa603d8fbc66cce46ae6c903d4abcd06",
+      "bytes": 733
+    },
+    "operator/deployment_verified.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/deployment_verified.json",
+      "sha256": "3328cf76e8573465574868707fa18e0717bd1b92e25cc1d5bb5fa2eb66430ecc",
+      "bytes": 2752
+    },
+    "operator/bootstrap_launch.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/bootstrap_launch.json",
+      "sha256": "9e68326179c25bef096df0bb41f926ff20124f4092790eac8e7b4de54e08b7ab",
+      "bytes": 128
+    },
+    "runtime/venv.stdout.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/venv.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runtime/venv.stderr.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/venv.stderr.log",
+      "sha256": "160345d3923b3bf57b8d0909d1b625994552087d9d5ad7f118ac6e2244d3ab58",
+      "bytes": 249
+    },
+    "runtime/metadata.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/metadata.json",
+      "sha256": "2f6027c806024972130932ded19b22f942a60f10cea53dadd0744679a542eb54",
+      "bytes": 2740
+    },
+    "runtime/install.stdout.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/install.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runtime/install.stderr.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/install.stderr.log",
+      "sha256": "6bf86f4f6e1455aeb1c0573f55b296e44db4af8e83f37049be5ea28d54c45800",
+      "bytes": 634
+    },
+    "runtime/import_validation.stdout.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/import_validation.stdout.log",
+      "sha256": "c1ced8e07715cd89afde022931736f8482d29f9efecbd413626f0db0b578989b",
+      "bytes": 222
+    },
+    "runtime/import_validation.stderr.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/import_validation.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runtime/freeze.stdout.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/freeze.stdout.log",
+      "sha256": "f0c9677eab993963aca681cb2c3cd3b89c911dd5832d3fc098631fc80c0ec3d7",
+      "bytes": 262
+    },
+    "runtime/freeze.stderr.log": {
+      "path": "/home/jovyan/arc2_b2_20261031/encode_runtime_install/freeze.stderr.log",
+      "sha256": "b68e7c379566de15ce135b1c36251ac6dd85744b9072658b97e031e63861faa3",
+      "bytes": 79
+    },
+    "schedule/metadata.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_schedule_r1_20261031t064859/metadata.json",
+      "sha256": "f60283e166a004312d7df6fd41c69e0f6e364fc028e1bde6346a39798473657f",
+      "bytes": 5377
+    },
+    "assets/acquisition_manifest.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_assets_r1_20261031t064859/acquisition_manifest.json",
+      "sha256": "429ba825a3a13546806597a56a51fcc7b8033e9beb27ce17de9e19d11686bbbf",
+      "bytes": 15099
+    },
+    "encode_smoke/encoding_manifest.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_smoke_r1_20261031t064859/encoding_manifest.json",
+      "sha256": "ca408615e47bfd4604c62c8909d25da843a16e248c53de72952540daa112f4e6",
+      "bytes": 12988
+    },
+    "smoke/metadata.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/metadata.json",
+      "sha256": "1f628d914a76c37091f2591268cc5109e6a578cd78020b541309df43a6f09a5f",
+      "bytes": 2074
+    },
+    "smoke/ranking_seal.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/ranking_seal.json",
+      "sha256": "92377236dbe769f48fca964fd5d7c612af000e563b13fed2d93f0a1e2577e497",
+      "bytes": 210670
+    },
+    "smoke/verification/verification_seal.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/verification/verification_seal.json",
+      "sha256": "47724f6bab3ebd646e900f3b48cb969ff2b6e10cdc008afe03df3235c85a2c4a",
+      "bytes": 8438
+    },
+    "encode_full/encoding_manifest.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/encoding_manifest.json",
+      "sha256": "373065e0229c2c8865d68da71c979a011bd48a9120bf8e7a2b2f14539f03eefd",
+      "bytes": 8245
+    },
+    "smoke/neural/synthetic_seed17_simplelinear_official_final50_mlp5/worker/metadata.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/neural/synthetic_seed17_simplelinear_official_final50_mlp5/worker/metadata.json",
+      "sha256": "e79c83d419884200272fbe333ca88b80296810d4b963394b38f5ec75b0f0fe2a",
+      "bytes": 14814
+    },
+    "smoke/neural/synthetic_seed17_embedding_converter_paper_spec/worker/metadata.json": {
+      "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/neural/synthetic_seed17_embedding_converter_paper_spec/worker/metadata.json",
+      "sha256": "d72b96b4def8a6f06c05f2d83869fdacb9ba97ad6961986ec0ba988bb8f44656",
+      "bytes": 30562
+    }
+  },
+  "first_final_qrel_open_exists": false
+}

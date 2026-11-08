@@ -1,0 +1,49 @@
+{
+  "dev": {
+    "means_checked": 160,
+    "per_query_mean_max_error": 3.3306690738754696e-16,
+    "all5_family_interval_max_error": 8.326672684688674e-17
+  },
+  "trec": {
+    "means_checked": 40,
+    "per_query_mean_max_error": 1.6653345369377348e-16,
+    "all30_saved_draw_family_interval_max_error": 0
+  },
+  "paid": {
+    "means_checked": 28,
+    "per_query_mean_max_error": 2.7755575615628914e-16,
+    "all32_family_interval_max_error": 2.7755575615628914e-17
+  },
+  "mechanism": {
+    "all5_family_interval_max_error": 4.163336342344337e-17
+  },
+  "coefficient_storage": {
+    "float32_coefficients": 295680,
+    "bytes": 1182720,
+    "MiB": 1.1279296875
+  },
+  "sources": {
+    "dev": {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5"
+    },
+    "trec": {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7"
+    },
+    "mechanism": {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded"
+    },
+    "paid": {
+      "path": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7"
+    },
+    "gallery": {
+      "path": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f"
+    }
+  },
+  "status": "PASS",
+  "scope": "Read-only saved scoring arrays, contrasts and locked bootstrap resampling; no fit, retrieval, qrel access or scientific run."
+}

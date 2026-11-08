@@ -1,0 +1,35 @@
+{
+  "skill": "aris:research-review",
+  "reviewer_agent": "/root/b1m_p0_design_review",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "rounds": [
+    {
+      "round": 1,
+      "scope": "finite experimental design",
+      "decision": "six mechanism rows, paired DEV aggregation, separate backend and no allpaid; require coefficient64 and rankdrift checks"
+    },
+    {
+      "round": 2,
+      "scope": "implementation",
+      "finding": "retain allconfig params and both64 backend update states plusrelativeFrobenius",
+      "resolved": true
+    },
+    {
+      "round": 3,
+      "scope": "finalsource/lockandcampaigngate",
+      "verdict": "PASS",
+      "checked_sources": 17,
+      "checked_packaged_files": 85,
+      "smoke_full_fixtures": [
+        6,
+        31
+      ],
+      "frozen_source_unchanged": true
+    }
+  ],
+  "not_a_claim_audit": true,
+  "new_qrel_reads": 0
+}

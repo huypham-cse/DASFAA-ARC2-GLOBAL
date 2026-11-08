@@ -1,0 +1,68 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+results/** -text
+configs/b1p_lock.json -text
+configs/b1p_score_recovery_lock.json -text
+configs/b1g_lock.json -text
+configs/b1g_sources_main.json -text
+configs/b1g_sources_mini.json -text
+configs/b1c_lock.json -text
+configs/b1c_sources.json -text
+configs/b1c_existing.json -text
+configs/b1c_recovery_r2_lock.json -text
+configs/b1c_recovery_r2_manifest.json -text
+configs/b1c_r3*.json -text
+provenance/qa/b1c* -text
+provenance/qa/cloud_backup_20261030/*.json -text
+provenance/qa/server_*20261028.json -text
+provenance/qa/b1g* -text
+.aris/b1g* -text
+.aris/traces/result-to-claim/2026-10-27_b1g/** -text
+tools/verify_b1g_completed.py -text
+tools/render_b1g_report.py -text
+provenance/qa/b1p_scoring_recovery_source_20261027.json -text
+provenance/source_run/** -text
+manuscript/llncs.cls -text
+manuscript/splncs04.bst -text
+licenses/** -text
+*.npy binary
+*.pdf binary
+
+# Preserve exact new review response and generated verification-tool hashes.
+.aris/traces/result-to-claim/2026-10-31_b1c_r3/** -text
+tools/verify_b1c_r3_completed.py -text
+tools/render_b1c_r3_report.py -text
+
+configs/b2*.json -text
+.aris/traces/research-review/2026-10-31_b2_protocol/** -text
+
+provenance/qa/b2* -text
+provenance/qa/b2_r1_startup_proof_20261031/** -text
+.aris/traces/result-to-claim/2026-11-01_b2/** -text
+tools/export_b2_review_bundle.py -text
+tools/verify_b2_completed.py -text
+tools/render_b2_report.py -text
+tools/integrate_b2_report.py -text
+tools/build_review_release.py -text
+tools/write_review_release_docs.py -text
+tools/verify_review_release.py -text
+tools/rebuild_review_figures.py -text
+tools/smoke_review_method.py -text
+tools/verify_control_families.py -text
+tools/verify_experiment_inventory.py -text
+tools/render_release_controls.py -text
+tools/complete_review_release.py -text
+tools/reframe_release_story.py -text
+tools/verify_story_claims.py -text
+.aris/traces/research-review/2026-11-01_release_completeness/** -text
+.aris/traces/paper-claim-audit/2026-11-01_supervisor_release/** -text
+provenance/qa/supervisor_release* -text
+.aris/traces/research-review/2026-11-01_supervisor_release/** -text
+
+# Preserve exact local protocol-lock, recovery and reviewer receipt bytes.
+configs/tc1l*.json -text
+provenance/qa/tc1l* -text
+refine-logs/TC1L_*.json -text
+refine-logs/TC1L_*.md -text

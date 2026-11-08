@@ -1,0 +1,60 @@
+{
+  "status": "FAILED_PRESERVED",
+  "stage": "smoke",
+  "code_commit": "8afb4c1974879fa0e20ddd12681b73b7bc94cf2d",
+  "lock_sha256": "dedacfc7e46d1801f0ae2a7a1285de44ec2e2845ed6d15c30cb54ab035f18412",
+  "started_utc": "2026-10-26T08:48:43.238940+00:00",
+  "failures": [
+    "RuntimeError('Neural worker failed: returncode=-9, signal=SIGKILL, path=/root/arc2_global_paper_20261025/code_8afb4c1_r2/results/b1p_smoke_r2_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec')"
+  ],
+  "TREC_access": false,
+  "new_physical_document_encodes": 0,
+  "artificial_time_memory_caps": null,
+  "new_current_dev_qrel_sources_opened": 0,
+  "runtime": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.5.1",
+    "python": "/root/arc2_p3h_20261020/venv/bin/python",
+    "environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4"
+    },
+    "blas": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libgomp",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+        "version": "0.3.31.188.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "verified_openblas_architecture_threads": true
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_8afb4c1_r2/ops/b1p_stage.py\", line 248, in main\n    if a.stage=='smoke':meta.update(smoke_checks=smoke(lock,a.code_commit,out),status='B1P_SMOKE_PASS')\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_8afb4c1_r2/ops/b1p_stage.py\", line 106, in smoke\n    if method in [SIMPLE,CONVERTER]:proxy,meta=neural(lock,commit,out,'synthetic',17,'allpaid28819',method,oldpath,old,fit,target,'smoke')\n                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_8afb4c1_r2/ops/b1p_stage.py\", line 92, in neural\n    if code:raise RuntimeError(f'Neural worker failed: returncode={code}, signal={exit_record[\"signal_name\"]}, path={request_dir}')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Neural worker failed: returncode=-9, signal=SIGKILL, path=/root/arc2_global_paper_20261025/code_8afb4c1_r2/results/b1p_smoke_r2_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec\n",
+  "wall_seconds": 92.63574131391943,
+  "peak_process_tree_rss_bytes": 1759072256,
+  "ended_utc": "2026-10-26T08:50:15.848625+00:00"
+}

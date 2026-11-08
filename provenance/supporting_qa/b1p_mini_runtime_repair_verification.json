@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "failed receipt hashes and environment repair inventory; no numerical full-result claim",
+  "original_locked_GPU_versions_unchanged": 8,
+  "cpu_versions_unchanged": true,
+  "official_import_and_defaults": "PASS",
+  "added_runtime_dependencies": {
+    "pydantic-settings": "2.16.1",
+    "python-dotenv": "1.2.4",
+    "pot": "0.9.7.post1"
+  }
+}

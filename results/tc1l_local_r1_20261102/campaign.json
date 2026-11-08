@@ -1,0 +1,78 @@
+{
+  "status": "COMPLETE_STOP_FOR_REVIEW",
+  "utc_start": "2026-11-02T01:25:12.129259+00:00",
+  "pid": 30876,
+  "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "stages": [
+    {
+      "stage": "synthetic",
+      "utc_start": "2026-11-02T01:25:12.133259+00:00",
+      "argv": [
+        "C:\\Users\\Gia Huy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "D:\\DASFAA-2027-paper\\ops\\tangent_control_local_run.py",
+        "--lock",
+        "configs/tc1l_minilm_local_20261102_lock.json",
+        "--output",
+        "D:\\DASFAA-2027-paper\\results\\tc1l_local_r1_20261102\\synthetic",
+        "--stage",
+        "synthetic"
+      ],
+      "exit_code": 0,
+      "utc_end": "2026-11-02T01:25:15.906181+00:00"
+    },
+    {
+      "stage": "smoke",
+      "utc_start": "2026-11-02T01:25:15.925277+00:00",
+      "argv": [
+        "C:\\Users\\Gia Huy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "D:\\DASFAA-2027-paper\\ops\\tangent_control_local_run.py",
+        "--lock",
+        "configs/tc1l_minilm_local_20261102_lock.json",
+        "--output",
+        "D:\\DASFAA-2027-paper\\results\\tc1l_local_r1_20261102\\smoke",
+        "--stage",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "utc_end": "2026-11-02T01:25:30.798286+00:00"
+    },
+    {
+      "stage": "full",
+      "utc_start": "2026-11-02T01:25:30.829284+00:00",
+      "argv": [
+        "C:\\Users\\Gia Huy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "D:\\DASFAA-2027-paper\\ops\\tangent_control_local_run.py",
+        "--lock",
+        "configs/tc1l_minilm_local_20261102_lock.json",
+        "--output",
+        "D:\\DASFAA-2027-paper\\results\\tc1l_local_r1_20261102\\full",
+        "--stage",
+        "full"
+      ],
+      "exit_code": 0,
+      "utc_end": "2026-11-02T01:26:42.388252+00:00"
+    },
+    {
+      "stage": "score",
+      "utc_start": "2026-11-02T01:26:42.402252+00:00",
+      "argv": [
+        "C:\\Users\\Gia Huy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "D:\\DASFAA-2027-paper\\ops\\tangent_control_local_score.py",
+        "--lock",
+        "configs/tc1l_minilm_local_20261102_lock.json",
+        "--run",
+        "D:\\DASFAA-2027-paper\\results\\tc1l_local_r1_20261102\\full",
+        "--seal-sha256",
+        "0b4a3809ace4b37df55357fd767ba6367fe6e1209070a1c44bc30be353315df9"
+      ],
+      "exit_code": 0,
+      "utc_end": "2026-11-02T01:26:43.990401+00:00"
+    }
+  ],
+  "scope": "TC1L MiniLM-only Windows development; original remote status unknown",
+  "utc_end": "2026-11-02T01:26:43.990401+00:00"
+}

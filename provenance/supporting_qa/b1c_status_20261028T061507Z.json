@@ -1,0 +1,90 @@
+{
+  "observed_utc": "2026-10-28T06:15:05.653182+00:00",
+  "gate": {
+    "status": "FAILED_PRESERVED",
+    "updated_unix": 1793166946.0558307,
+    "deployment_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+    "TREC_access": false,
+    "next_phase_auto_launch": false,
+    "returncode": 1
+  },
+  "metadata": {
+    "status": "FAILED_PRESERVED",
+    "stage": "full",
+    "code_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+    "started_utc": "2026-10-28T04:27:00.353939+00:00",
+    "failures": [
+      "RuntimeError('Neural worker failed; preserve all artifacts: /root/arc2_global_paper_20261025/code_19f3f0e_b1c/results/b1c_full_mini_r1_20261028/neural/NanoNQ_NanoNQ_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5')"
+    ],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null,
+    "lock_sha256": "5210e2401958e1efb739cd69e9dd92b6b793a0c9856202f5b8ae2a9f89564159",
+    "runtime": {
+      "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+      "executable": "/root/arc2_p3h_20261020/venv/bin/python",
+      "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+      "hostname": "nb-eac57496-67a5-4d45-9cf8-8504d68ddce6-5c9589b95f-mw6d5",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "sklearn": "1.5.1",
+      "environment": {
+        "OPENBLAS_CORETYPE": "Haswell",
+        "OMP_NUM_THREADS": "4",
+        "OPENBLAS_NUM_THREADS": "4"
+      },
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+          "version": "0.3.30",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+          "version": "0.3.31.188.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    },
+    "registry_sha256": "5659659b3453bdfb4edc70efe1e1d9ddc185e36be434e0b521dfa0f6978c2459",
+    "existing_registry_sha256": "1f4fe8e249f3ca2203f76c7e882cb24214ea5ac6d43721b9d62e713338b71d0d",
+    "smoke": {
+      "path": "/root/arc2_global_paper_20261025/code_19f3f0e_b1c/results/b1c_smoke_mini_r1_20261028",
+      "metadata_sha256": "fc67259ee7244cc7c155fc99893dd3fa784c3683d132c942f5ef0245cca25b8f"
+    },
+    "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_19f3f0e_b1c/ops/b1c_stage.py\", line 477, in main\n    full(lock, args.code_commit, out, metadata, registry, inputs)\n  File \"/root/arc2_global_paper_20261025/code_19f3f0e_b1c/ops/b1c_stage.py\", line 361, in full\n    proxy, receipt = neural(lock, commit, out, dataset, gid, method, seed, oldpath, old, anchors, paired, 'full', group['old_docs']['sha256'])\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_19f3f0e_b1c/ops/b1c_stage.py\", line 220, in neural\n    raise RuntimeError('Neural worker failed; preserve all artifacts: ' + str(directory))\nRuntimeError: Neural worker failed; preserve all artifacts: /root/arc2_global_paper_20261025/code_19f3f0e_b1c/results/b1c_full_mini_r1_20261028/neural/NanoNQ_NanoNQ_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5\n",
+    "wall_seconds": 5320.998597573489,
+    "peak_process_tree_rss_bytes": 1858289664,
+    "ended_utc": "2026-10-28T05:55:41.352540+00:00"
+  },
+  "progress": {
+    "stage": "GROUP_START",
+    "group": "NanoNQ_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5",
+    "group_index": 45,
+    "groups_total": 120,
+    "rankings_complete": 95,
+    "rankings_total": 320
+  },
+  "score": null,
+  "score_failure": null,
+  "cells_count": 95,
+  "parity_count": 30,
+  "campaign_log_tail": "",
+  "processes": [
+    "  59989   58090  373 25219332 02:21:43 /workspace/cyber-cli-lab/lib/ollama/llama-server --model /workspace/cyber-cli-lab/models/blobs/sha256-9fddd9b57b678ca9f9f7b07b02c6f7107bc0f8b307e2383a68cf7a513e6ae0f5 --port 46201 --host 127.0.0.1 --no-webui --offline -c 16384 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on -b 512 -ub 512 --context-shift --keep 4",
+    "  67777   67734  9.6 1143444  01:28:52 /root/miniforge3/envs/privpetal/bin/python /root/sandboxdp/artifact/third_party/runners/privpetal_edge.py /root/sandboxdp/artifact/results/E4/tau/thrombosis/eps1/16/seed0/work/Laboratory-Patient/job.json"
+  ],
+  "gpu": "Wed Oct 28 06:15:06 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.5     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          Off |   00000000:1C:00.0 Off |                   On |\n| N/A   36C    P0            115W /  700W |                  N/A   |     N/A      Default |\n|                                         |                        |              Enabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| MIG devices:                                                                            |\n+------------------+----------------------------------+-----------+-----------------------+\n| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|      Shared           |\n|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |\n|                  |                                  |        ECC|                       |\n|==================+==================================+===========+=======================|\n|  0    3   0   0  |           19998MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |\n|                  |                 4MiB / 32767MiB  |           |                       |\n+------------------+----------------------------------+-----------+-----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A     59989      C   ...ber-cli-lab/lib/ollama/llama-server          0MiB |\n|    0   N/A  N/A     67777      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n+-----------------------------------------------------------------------------------------+\n"
+}

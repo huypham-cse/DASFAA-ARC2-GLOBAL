@@ -1,0 +1,2 @@
+{"unix": 1792977512.6689541, "pid": 3021872, "process_rss_bytes": 578105344, "host_available_memory_bytes": 2013232615424, "host_cpu_percent": 13.1, "own_cuda_allocated_bytes": 0, "own_cuda_reserved_bytes": 0, "own_peak_cuda_allocated_bytes": 0, "own_peak_cuda_reserved_bytes": 0}
+{"unix": 1792977512.7209034, "pid": 3021872, "process_rss_bytes": 581402624, "host_available_memory_bytes": 2013419073536, "host_cpu_percent": 11.6, "own_cuda_allocated_bytes": 0, "own_cuda_reserved_bytes": 0, "own_peak_cuda_allocated_bytes": 0, "own_peak_cuda_reserved_bytes": 0}

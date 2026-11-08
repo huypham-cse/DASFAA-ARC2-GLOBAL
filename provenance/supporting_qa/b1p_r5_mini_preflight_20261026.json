@@ -1,0 +1,9 @@
+{
+  "status": "R5_PREFLIGHT_NO_DUPLICATE_OWNED_RUN",
+  "utc": "2026-10-26T13:43:47.459392+00:00",
+  "owned_b1p_jobs": [],
+  "cpu_max": "400000 100000\n",
+  "memory_max": "64424509440\n",
+  "gpu_identity": "GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-d4c3e79c-d772-80f8-27c9-1f2096171901)\n  MIG 2g.20gb     Device  0: (UUID: MIG-845e7614-1be1-5b0b-b712-bcd163b641f9)\n",
+  "resource_thresholds": null
+}

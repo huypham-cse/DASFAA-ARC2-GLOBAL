@@ -1,0 +1,54 @@
+{
+  "group_id": "FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec",
+  "dataset": "FiQA",
+  "pair": "minilm_distilroberta",
+  "method": "embedding_converter_paper_spec",
+  "seed": 53,
+  "regime": "fixed1024",
+  "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/groups/FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec/rank",
+  "old_docs": {
+    "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy",
+    "sha256": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782"
+  },
+  "new_queries": {
+    "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/q16c_arc2_dev/q16c_encode_20261018T003211/dev_queries.npy",
+    "sha256": "826911a012bb37e0b117f0929517ee3c21345dc9f402cda71c47cf677a550375"
+  },
+  "ids": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33.json",
+    "sha256": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33"
+  },
+  "sample_positions": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_FiQA_9edadfd39a8a05da.npy",
+    "sha256": "6a46319fe7b4732bd2cf05c16ce9872b9200d9816c8bbbeead543a1b934f5ee8"
+  },
+  "anchors": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc.npy",
+    "sha256": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc"
+  },
+  "proxy": {
+    "kind": "saved_npy",
+    "file": {
+      "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/minilm_distilroberta_seed53/worker/proxy_full.npy",
+      "sha256": "40601d28c237c2f0ab585bea911efc41d04ad2922ad9661174ef6b6c08c1dcff"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec_50pct",
+      "budget": "50pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c.npy",
+        "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/51363f14b5922c1f97c21f100fce7c82cccb52d35d22894df548ba8cf9b05573.npy",
+        "sha256": "0529f70756e3252a3bd8844206129cf31963ed8d30daeab72a051ae1ae110c17"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_42731eb_full_r4/results/fiqa_development/rankings/minilm_distilroberta_seed53_50pct_embedding_converter_paper_spec_anchor1024.npy",
+        "sha256": "7b84cdd726f0cbbccddbeacb0d0a4eb8fd1974a7023316fd6b3357b8fab5f222"
+      }
+    }
+  ]
+}

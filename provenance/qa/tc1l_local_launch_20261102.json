@@ -1,0 +1,12 @@
+{
+  "utc_recorded": "2026-11-02T01:25:53.874629+00:00",
+  "client_date": "2026-11-02",
+  "pid": 30876,
+  "pre_run_commit": "66be60f71efcb24d218e96d2c41c4368b377c7ed",
+  "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "output": "results/tc1l_local_r1_20261102",
+  "status": "LAUNCHED",
+  "scope": "MiniLM-only local FiQA DEV, E5 pending",
+  "hidden_window": true,
+  "blas_threads": 4
+}

@@ -1,0 +1,149 @@
+{
+  "status": "R4_FULL_FAILED_GUARD_ATTRIBUTED",
+  "observed_utc": "2026-10-26T13:40:50.755914+00:00",
+  "metadata": {
+    "status": "FAILED_PRESERVED",
+    "stage": "full",
+    "code_commit": "42731ebdaf79527a45ba6d2ae868385755dafbd2",
+    "lock_sha256": "7b455d50f94c3680bb79f2d1b1556edcab4dcb4381758eb28ecf981e7e2f813d",
+    "started_utc": "2026-10-26T11:13:30.387733+00:00",
+    "failures": [
+      "RuntimeError('Neural worker failed: returncode=-9, signal=SIGKILL, path=/root/arc2_global_paper_20261025/code_42731eb_full_r4/results/b1p_full_full_r4_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec')"
+    ],
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null,
+    "new_current_dev_qrel_sources_opened": 0,
+    "transported_qrel_free_files_verified": 266,
+    "runtime": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "sklearn": "1.5.1",
+      "python": "/root/arc2_p3h_20261020/venv/bin/python",
+      "environment": {
+        "OPENBLAS_CORETYPE": "Haswell",
+        "OMP_NUM_THREADS": "4",
+        "OPENBLAS_NUM_THREADS": "4"
+      },
+      "blas": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+          "version": "0.3.31.188.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+          "version": "0.3.30",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libgomp",
+          "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        }
+      ],
+      "verified_openblas_architecture_threads": true
+    },
+    "recovered_successful_cells": 7,
+    "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_42731eb_full_r4/ops/b1p_stage.py\", line 268, in main\n    full(lock,a.code_commit,out,meta)\n  File \"/root/arc2_global_paper_20261025/code_42731eb_full_r4/ops/b1p_stage.py\", line 177, in full\n    if method in [SIMPLE,CONVERTER]:proxy,receipt=neural(lock,commit,out,pair,seed,regime,method,oldpath,old,fit,target,'full')\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_42731eb_full_r4/ops/b1p_stage.py\", line 97, in neural\n    if code:raise RuntimeError(f'Neural worker failed: returncode={code}, signal={exit_record[\"signal_name\"]}, path={request_dir}')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Neural worker failed: returncode=-9, signal=SIGKILL, path=/root/arc2_global_paper_20261025/code_42731eb_full_r4/results/b1p_full_full_r4_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec\n",
+    "wall_seconds": 16.36425576917827,
+    "peak_process_tree_rss_bytes": 4131471360,
+    "ended_utc": "2026-10-26T11:13:46.751479+00:00"
+  },
+  "worker_process_exit": {
+    "status": "EXITED",
+    "started_utc": "2026-10-26T11:13:34.151047+00:00",
+    "request_sha256": "8e7a00a1e37029deef879a2c37d534387f19f1ad862acce446dd090100681899",
+    "argv": [
+      "/root/paper-P2/.venv/bin/python",
+      "-u",
+      "/root/arc2_global_paper_20261025/code_42731eb_full_r4/ops/b1p_neural_worker.py",
+      "--request",
+      "/root/arc2_global_paper_20261025/code_42731eb_full_r4/results/b1p_full_full_r4_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/request.json"
+    ],
+    "cgroup_memory_events_before": "low 0\nhigh 0\nmax 2836615\noom 0\noom_kill 0\n",
+    "pid": 3337858,
+    "returncode": -9,
+    "signal_number": 9,
+    "signal_name": "SIGKILL",
+    "ended_utc": "2026-10-26T11:13:45.879213+00:00",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cgroup_memory_events_after": "low 0\nhigh 0\nmax 2838440\noom 0\noom_kill 0\n"
+  },
+  "guard_config": {
+    "boot_id": "3eb5b1a9-109c-4f93-a24d-d76e3d332d59",
+    "control_root": "/root/gpu-memory-guard-20261025/sessions",
+    "deadline_monotonic": 8379443.261828038,
+    "excluded_roots": [
+      "/workspace/p2-vericache-20261024"
+    ],
+    "expires_utc": "2026-10-27T06:00:00+00:00",
+    "gpu_uuid": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec",
+    "host_id": "nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-bqjpp",
+    "interval_seconds": 1,
+    "protected_jobs": [
+      {
+        "exe": "/usr/bin/python3.10",
+        "root": "/root/p8-a-recompute-20261022/project"
+      },
+      {
+        "exe": "/root/miniforge3/envs/sandboxdp/bin/python3.11",
+        "root": "/root/paper-P2"
+      }
+    ],
+    "reservation_roots": [
+      "/root/p8-a-recompute-20261022/project"
+    ],
+    "running_free_gb": 5,
+    "started_utc": "2026-10-26T11:05:22.439487+00:00",
+    "startup_free_gb": 35
+  },
+  "guard_events_matching_worker": [
+    {
+      "utc": "2026-10-26T11:13:45.438522+00:00",
+      "event": "decision",
+      "phase": "protected_job_running",
+      "target_free_bytes": 5000000000,
+      "free_bytes": 4987355136,
+      "protected_gpu_pids": [
+        3239537
+      ],
+      "protected_gpu_bytes": null,
+      "other_budget_bytes": null,
+      "pid_memory_available": false,
+      "action": "kill_one_then_remeasure",
+      "victim_pid": 3337858,
+      "status": "RUNNING",
+      "updated_utc": "2026-10-26T11:13:45.423573+00:00",
+      "expires_utc": "2026-10-27T06:00:00+00:00",
+      "guard_pid": 3333348
+    },
+    {
+      "utc": "2026-10-26T11:13:45.441803+00:00",
+      "event": "killed_over_budget_gpu_process",
+      "pid": 3337858,
+      "start_ticks": 831185741,
+      "cwd": "/root/arc2_global_paper_20261025/code_42731eb_full_r4",
+      "exe": "/root/miniforge3/envs/sandboxdp/bin/python3.11",
+      "gpu_bytes": null,
+      "free_bytes": 4987355136,
+      "target_free_bytes": 5000000000
+    }
+  ],
+  "selection_progress_file_exists": false,
+  "scope": "New guard reactivated after R4 readiness; own worker SIGKILL after16.36s; smoke and zero-update handoff passed; no reported resumed scientific step, no scoring, no guard/other-job changes. Source25k Mini checkpoint intact; restore there under committed R5 protocol."
+}

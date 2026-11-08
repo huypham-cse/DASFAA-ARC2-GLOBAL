@@ -1,0 +1,20 @@
+{
+  "status": "AUXILIARY_REPAIR_AND_IMPORT_PREFLIGHT_PASS",
+  "scope": "Operator-only dependency restoration; no numerical source/lock/algorithm/selection/scoring change",
+  "prior_failed_smoke": "b1c_r3_smoke_mini_20261030t0340",
+  "prior_deployment": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "lock_sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+  "missing_dependency": "yaml",
+  "restored_exact_historical_auxiliary_versions": {
+    "PyYAML": "6.0.3",
+    "pydantic-settings": "2.16.1",
+    "python-dotenv": "1.2.4",
+    "POT": "0.9.7.post1"
+  },
+  "installation_policy": "--no-deps to isolated GPU environment",
+  "official_import_and_defaults": "PASS",
+  "all_eight_core_gpu_versions": "PASS unchanged",
+  "next_action": "Fresh unique matching smoke, then unchanged finite full/DEV scoring only if smoke PASS",
+  "labels_parsed": false,
+  "scientific_rankings_generated": 0
+}

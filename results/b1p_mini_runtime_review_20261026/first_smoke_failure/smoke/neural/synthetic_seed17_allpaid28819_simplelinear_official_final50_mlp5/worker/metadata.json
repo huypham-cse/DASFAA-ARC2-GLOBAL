@@ -1,0 +1,137 @@
+{
+  "status": "FAILED_PRESERVED",
+  "method": "simplelinear",
+  "regime": "all_paid",
+  "mode": "smoke",
+  "seed": 17,
+  "failures": [
+    "ModuleNotFoundError(\"No module named 'pydantic_settings'\")"
+  ],
+  "started_utc": "2026-10-26T09:18:52.159763+00:00",
+  "request_sha256": "6c3a48e3a1d839712dc33242aaaaaa551912e383681e66009bef284636aa742a",
+  "new_qrel_reads": 0,
+  "unpaid_target_reads": 0,
+  "artificial_time_or_memory_caps": null,
+  "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+  "executable": "/root/paper-P2/.venv/bin/python",
+  "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+  "host": "nb-eac57496-67a5-4d45-9cf8-8504d68ddce6-5c9589b95f-mw6d5",
+  "lock_sha256": "b6300820b3caf0395911bd19155cd9a7e4cea39283ca1e6438bf42a3f0f0ac06",
+  "code_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+  "source_sha256_canonical_lf": {
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/embedding_converter.py": "1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "ops/b1p_stage.py": "c627422c385885d8a9aadeed64045ced863fefad3739267b53c39c80a6610419",
+    "ops/b1p_campaign.py": "d89c0086c5484b85751a7420defe9db0c6bb2c9f8fa3f9c2895be6ddc8c337b3",
+    "ops/b1p_neural_worker.py": "387beead319ce8f1941889b2ffb5543cad05d929a60e8f35d0435a9720029f3d",
+    "ops/b1p_score.py": "9933bc0e6405921a0c2a106392b519adfcf7042c59442c34e6049e72346fd17f",
+    "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+    "configs/baselines.json": "1bd95fc1dfdea6fd459c825f85c44aeb86d7c1a05cbdb56a5a15f8f9a9a3d4a3",
+    "protocols/B1P_ALL_PAID_FIQA_20261026.md": "27e6f52a46ccf2fd53b409805192b64e7a35adced1e42b0c79a6cb9b3397fbbb",
+    "protocols/B1P_R1_DENSE_REFERENCE_NEIGHBORS_20261026.md": "c27f4f50822142c5cb6a0a4a10e31ad5a01a7e846bd92c2e53c76d1d636ba62f",
+    "protocols/B1P_R2_RECOVERY_20261026.md": "8974181b6cc84b07b3b399e479648bb6d6f8e869f248288cce7671bb0b151c0b",
+    "protocols/B1P_R3_H100_MINI_DEPLOYMENT_20261026.md": "4673d47d92480c52e19965e38a2161faa710bb55965aef4277a01e009c90b5bf"
+  },
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "modules": {
+    "numpy": {
+      "version": "2.2.6",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/numpy/__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/scipy/__init__.py"
+    },
+    "torch": {
+      "version": "2.6.0+cu124",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/torch/__init__.py"
+    },
+    "sklearn": {
+      "version": "1.6.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/sklearn/__init__.py"
+    },
+    "pydantic": {
+      "version": "2.14.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/pydantic/__init__.py"
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/faiss/__init__.py"
+    },
+    "loguru": {
+      "version": "0.7.3",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/loguru/__init__.py"
+    },
+    "tqdm": {
+      "version": "4.70.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/tqdm/__init__.py"
+    }
+  },
+  "cuda_runtime": "12.4",
+  "device": "NVIDIA H100 80GB HBM3 MIG 2g.20gb",
+  "numpy_build": "{'Compilers': {'c': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.1.0', 'commands': 'cython'}, 'c++': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}, 'build': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}}, 'Build Dependencies': {'blas': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}, 'lapack': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}}, 'Python Information': {'path': '/tmp/build-env-nx8g0bo7/bin/python', 'version': '3.11'}, 'SIMD Extensions': {'baseline': ['SSE', 'SSE2', 'SSE3'], 'found': ['SSSE3', 'SSE41', 'POPCNT', 'SSE42', 'AVX', 'F16C', 'FMA3', 'AVX2', 'AVX512F', 'AVX512CD', 'AVX512_SKX', 'AVX512_CLX', 'AVX512_CNL', 'AVX512_ICL'], 'not found': ['AVX512_KNL', 'AVX512_KNM']}}",
+  "inputs": {
+    "paired_source": {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "sha256": "6f860d6ca676431859d42311a7087e5a807d3d380616a48e0cd5b6dc7d5b23ab",
+      "shape": [
+        128,
+        384
+      ],
+      "dtype": "float32"
+    },
+    "paired_target": {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "sha256": "e83ae9c38a0a85a586ed38e913f9f4ec96315e5b400feec8035eaa361c3ee41e",
+      "shape": [
+        128,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "full_source": {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3_20261026/synthetic_old.npy",
+      "sha256": "a6d8b30c88742f1d505f409eedd6c0fa9b9df8875910676ff6a33a3ac7ce8129",
+      "shape": [
+        256,
+        384
+      ],
+      "dtype": "float32"
+    }
+  },
+  "fit_pairs": 128,
+  "target_population": "supplied paired rows only; no unpaid target or qrels API",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/ops/b1p_neural_worker.py\", line 455, in main\n    fitted = fit_simplelinear(x, y, request, lock, output, record)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/ops/b1p_neural_worker.py\", line 323, in fit_simplelinear\n    _, _, _, _, Model = official_components(lock[\"upstream\"], lock[\"upstream_raw_sha256\"], lock[\"dependency_fallbacks\"])\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/src/arc2_global/baseline_adapters.py\", line 103, in official_components\n    from embedding_translation.config import MappingConfig,SimpleLinearMapperConfig\n  File \"/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/__init__.py\", line 13, in <module>\n    from .config import (\n  File \"/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/config/__init__.py\", line 30, in <module>\n    from .settings import Settings, get_settings\n  File \"/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/config/settings.py\", line 11, in <module>\n    from pydantic_settings import BaseSettings, SettingsConfigDict\nModuleNotFoundError: No module named 'pydantic_settings'\n",
+  "wall_seconds": 31.395626622252166,
+  "peak_process_rss_bytes": 549908480,
+  "resource_observation_errors": [],
+  "ended_utc": "2026-10-26T09:19:23.555391+00:00",
+  "artifacts": {
+    "lock_copy.json": {
+      "sha256": "b6300820b3caf0395911bd19155cd9a7e4cea39283ca1e6438bf42a3f0f0ac06",
+      "bytes": 45505
+    },
+    "request_copy.json": {
+      "sha256": "6c3a48e3a1d839712dc33242aaaaaa551912e383681e66009bef284636aa742a",
+      "bytes": 1243
+    },
+    "resource_trace.jsonl": {
+      "sha256": "da6ae3dfcbbe4b00178a74969c325072332a5c8b0d8123dcba21703c0aa0dc0f",
+      "bytes": 1672
+    }
+  }
+}

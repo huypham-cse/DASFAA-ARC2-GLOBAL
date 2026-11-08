@@ -1,0 +1,273 @@
+{
+  "locally_verified_source_paths": 514,
+  "unmatched_source_paths": 51,
+  "selected_archives": [
+    {
+      "host": "main",
+      "archive": "chunk_0007_778e95cafed3cb2d.tar.gz",
+      "listed": true,
+      "drive_id": "1nRU9s9uiWhmvVuZ8sxWiYOFbXsBRTafv",
+      "bytes": 92904192,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_docs.npy"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0006_950b9a1d43fa337a.tar.gz",
+      "listed": true,
+      "drive_id": "1dWZpO_8tg21nyiOAd1Bi1k1IP1zOVevu",
+      "bytes": 46452480,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_small_x_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/minilm_x_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_small_x_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/minilm_x_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_small_x_docs.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/minilm_x_docs.npy"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0000_17ec6224f17690b9.tar.gz",
+      "listed": true,
+      "drive_id": "1GtyN3X4qHsijkU858qLf5gMTDA4LGXzb",
+      "bytes": 922368,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_queries.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_queries.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_queries.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_queries.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/distilroberta_y_queries.npy",
+        "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/e5_base_y_queries.npy"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0019_6b9c63773edf24f4.tar.gz",
+      "listed": true,
+      "drive_id": "1IAe0JFMCPioF12u7GIR5UoyDGNhcsasd",
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0057_ad5f46e0373ca56c.tar.gz",
+      "listed": true,
+      "drive_id": "139QDkWw1iXg9kb0HW9U6U3EVCAUpeilY",
+      "bytes": 88532096,
+      "required_files": [
+        "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0009_c4e3104cdfe63be7.tar.gz",
+      "listed": true,
+      "drive_id": "1YBIVLG-Ww4Y-ARFZnL_Bvx3PfJ3xnHk_",
+      "bytes": 23147367,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/cpu/minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0028_05d1365fd8ca32c3.tar.gz",
+      "listed": true,
+      "drive_id": "1RbJ7PJXoSNYgFkyge7PJishdwjsJsP1t",
+      "bytes": 1536128,
+      "required_files": [
+        "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_queries.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0004_ba184f9e1a00bf0d.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 138853401,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/parameters.npz"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0095_280ec068a54bfc58.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 531192192,
+      "required_files": [
+        "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed17/worker/proxy_full.npy",
+        "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed29/worker/proxy_full.npy",
+        "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed41/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0096_89c7be647d4d5465.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 531192192,
+      "required_files": [
+        "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed53/worker/proxy_full.npy",
+        "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/e5_small_base_seed67/worker/proxy_full.npy",
+        "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/minilm_distilroberta_seed53/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0097_034378cc85d3f801.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 531192192,
+      "required_files": [
+        "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/minilm_distilroberta_seed67/worker/proxy_full.npy",
+        "/root/arc2_p3h_20261020/p8_r9_work_20261025/artifact/results/p8_full_r9_20261025/converter/minilm_distilroberta_seed17/worker/proxy_full.npy",
+        "/root/arc2_p3h_20261020/p8_r9_work_20261025/artifact/results/p8_full_r9_20261025/converter/minilm_distilroberta_seed29/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0005_b311b692e509ce0c.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 92589162,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+        "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/cpu/minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz"
+      ]
+    },
+    {
+      "host": "main",
+      "archive": "chunk_0098_6dfdca7612119fbb.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 354128128,
+      "required_files": [
+        "/root/arc2_p3h_20261020/p8_r9_work_20261025/artifact/results/p8_full_r9_20261025/converter/minilm_distilroberta_seed41/worker/proxy_full.npy",
+        "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_docs.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0023_3392f08d17ee7055.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0025_2c797d2b4c89baf9.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0027_bb6b49d97434c0b9.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0029_74dabd7ec2ff2e8b.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0031_61af0a301b361ad3.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0033_af6d465db07cea13.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0035_9274ad5d2970a139.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0037_6c50a88dacd0125f.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    },
+    {
+      "host": "mini",
+      "archive": "chunk_0039_cd6d0e6c65d07ec8.tar.gz",
+      "listed": false,
+      "drive_id": null,
+      "bytes": 177064064,
+      "required_files": [
+        "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy"
+      ]
+    }
+  ],
+  "missing_cloud_payloads": [
+    "mini/archives/chunk_0004_ba184f9e1a00bf0d.tar.gz",
+    "main/archives/chunk_0095_280ec068a54bfc58.tar.gz",
+    "main/archives/chunk_0096_89c7be647d4d5465.tar.gz",
+    "main/archives/chunk_0097_034378cc85d3f801.tar.gz",
+    "mini/archives/chunk_0005_b311b692e509ce0c.tar.gz",
+    "main/archives/chunk_0098_6dfdca7612119fbb.tar.gz",
+    "mini/archives/chunk_0023_3392f08d17ee7055.tar.gz",
+    "mini/archives/chunk_0025_2c797d2b4c89baf9.tar.gz",
+    "mini/archives/chunk_0027_bb6b49d97434c0b9.tar.gz",
+    "mini/archives/chunk_0029_74dabd7ec2ff2e8b.tar.gz",
+    "mini/archives/chunk_0031_61af0a301b361ad3.tar.gz",
+    "mini/archives/chunk_0033_af6d465db07cea13.tar.gz",
+    "mini/archives/chunk_0035_9274ad5d2970a139.tar.gz",
+    "mini/archives/chunk_0037_6c50a88dacd0125f.tar.gz",
+    "mini/archives/chunk_0039_cd6d0e6c65d07ec8.tar.gz"
+  ]
+}

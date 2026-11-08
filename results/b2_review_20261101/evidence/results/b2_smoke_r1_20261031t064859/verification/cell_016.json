@@ -1,0 +1,10 @@
+{
+  "dataset": "synthetic",
+  "pair": "synthetic",
+  "seed": 17,
+  "budget": "75pct",
+  "method": "simplelinear_official_final50_mlp5",
+  "endpoint_sha256": "ef57cb756d617587cc7290d5b858a0caf1ba3b2f22c65d36eb783b9d701a8d8e",
+  "ranking_sha256": "fa55247a030919139a70bbf63f0e8088a6cc666458ae94aa185df44a5a81c74a",
+  "all_top100_ids_and_order_equal": true
+}

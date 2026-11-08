@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "manifest_files": 1743,
+  "ranking_cells": 2460,
+  "unique_raw_ranking_arrays": 1623,
+  "ranking_family_counts": {
+    "development": 736,
+    "mechanism": 736,
+    "allpaid": 124,
+    "prospective": 184,
+    "matched_targets": 20,
+    "gallery": 660
+  },
+  "max_metric_arithmetic_error": 1.1102230246251565e-15,
+  "families": {
+    "development": {
+      "cells": 736,
+      "means_checked": 320
+    },
+    "mechanism": {
+      "cells": 736,
+      "means_checked": 320
+    },
+    "allpaid": {
+      "cells": 124,
+      "means_checked": 56
+    },
+    "prospective": {
+      "cells": 184,
+      "means_checked": 80
+    },
+    "matched_targets": {
+      "cells": 20,
+      "means_checked": 8,
+      "bootstrap_draws_recomputed": 20000
+    },
+    "gallery": {
+      "partial_cases": 450,
+      "five_seed_conditions": 90
+    }
+  },
+  "offline": true,
+  "qrels_opened": false,
+  "new_fit_or_vector_search": false,
+  "scope": "Frozen means, seed counts, gallery arithmetic, matched-control bootstrap and all packaged bytes; other original saved intervals are retained, not independently recomputed by this verifier."
+}

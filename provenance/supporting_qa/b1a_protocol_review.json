@@ -1,0 +1,27 @@
+{
+  "skill": "aris:research-review",
+  "scope": "B1a preparation/smoke pre-run readiness only; not paper claim audit",
+  "reviewer_agent": "/root/b1a_protocol_review",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "model_override_reason": "persisted explicit user preference for gpt-6.1 high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "rounds": [
+    {
+      "verdict": "FIX",
+      "findings": [
+        "Protocol e5-base revision had extra zero; lock was correct.",
+        "Nano anchor/order hashes were missing from receipt.",
+        "Actual CPU runtime/env fields needed recording and invocation assertions.",
+        "Mixed-gallery exact checks needed all three declared block sizes."
+      ]
+    },
+    {
+      "verdict": "PASS",
+      "raw_response": "PASS for bounded B1a readiness. Re-read revisions and verified every source hash in refreshed lock. All four findings resolved. No remaining blocking issue in paid-set identity, qrel/TREC isolation, reference parity, synthetic CUDA output handling, failure preservation or STOP boundary. Commit protocol, lock and implementation before execution. This covers B1a only; no scientific result or automatic B1b authorization."
+    }
+  ],
+  "new_scientific_runs_by_reviewer": 0,
+  "new_qrel_reads": 0
+}

@@ -1,0 +1,25 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "la2m20_integration_script_adaptation",
+  "fit_pairs": 1024,
+  "fit_seconds": 1.383468915708363,
+  "mapping_seconds": 0.04671326745301485,
+  "phases": {},
+  "parameters_sha256": "13c0fe49e10d8ca5cad931ac621166f1f5a524d12b8960a4ca7d87bc003480ea",
+  "backend_id": null,
+  "new_physical_document_encodes": 0,
+  "new_fit": true,
+  "group_id": "NanoNQ_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation",
+  "dataset": "NanoNQ",
+  "pair": "e5_small_base",
+  "seed": 17,
+  "regime": "fixed1024",
+  "paired_target_path": "groups/NanoNQ_e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/NanoNQ_anchor_targets.npy",
+  "paired_target_sha256": "3056ff19ab531f7d238e850fc4bee3b6e96454546a0520037afa8484cbf0535e",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "50pct",
+    "75pct"
+  ]
+}

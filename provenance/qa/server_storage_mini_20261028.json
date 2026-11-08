@@ -1,0 +1,898 @@
+{
+  "checked_utc": "2026-10-28T01:32:30.793107+00:00",
+  "scope": "File paths and stat sizes only; no qrel content or scientific evaluation; not a verified backup",
+  "roots": [
+    {
+      "root": "/root/arc2_global_paper_20261025",
+      "disk_usage_depth1": "138002432\t/root/arc2_global_paper_20261025/mini_bootstrap_20261026\n15958016\t/root/arc2_global_paper_20261025/code_4056612\n1207508992\t/root/arc2_global_paper_20261025/code_f1457b8_r1\n28672\t/root/arc2_global_paper_20261025/mini_dev_labels\n2311147520\t/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3\n542945280\t/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026\n542875648\t/root/arc2_global_paper_20261025/handoff_mini_r5_20261026\n27127169024\t/root/arc2_global_paper_20261025/code_7530c8e_mini_r5\n16384\t/root/arc2_global_paper_20261025/b1p_r5_smoke_compact_20261026\n163840\t/root/arc2_global_paper_20261025/b1p_r5_generation_compact_20261027\n311021568\t/root/arc2_global_paper_20261025/code_4062d96_score_recovery\n1639931904\t/root/arc2_global_paper_20261025/code_515b3d1_b1g\n34233262080\t/root/arc2_global_paper_20261025\n",
+      "errors": ""
+    },
+    {
+      "root": "/root/arc2_p3h_20261020",
+      "disk_usage_depth1": "244948992\t/root/arc2_p3h_20261020/venv\n535830528\t/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7\n2203648\t/root/arc2_p3h_20261020/upstream_clean\n20480\t/root/arc2_p3h_20261020/p8_r10_work_20261025\n783003648\t/root/arc2_p3h_20261020\n",
+      "errors": ""
+    }
+  ],
+  "large_project_files": [
+    {
+      "path": "/root/arc2_global_paper_20261025/arc2_b1p_3b56a1c_full.bundle",
+      "bytes": 91544223
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/b1p_r5_generation_compact_20261027.tar.gz",
+      "bytes": 19905816
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/arc2_b1g_515b3d1_20261027.bundle",
+      "bytes": 18042746
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/b1g_mini_portable_r1_20261027.tar.gz",
+      "bytes": 265380718
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/mini_bootstrap_20261026/uv/bin/uv",
+      "bytes": 37597160
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/mini_bootstrap_20261026/python/cpython-3.11.17-linux-x86_64-gnu/bin/python3.11",
+      "bytes": 21828008
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/mini_bootstrap_20261026/python/cpython-3.11.17-linux-x86_64-gnu/lib/libpython3.11.so.1.0",
+      "bytes": 21824976
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/cpu/minilm_distilroberta_seed17_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23125433
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/cpu/minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23147367
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy.arc2transfer-15639",
+      "bytes": 85983232
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/.git/objects/pack/pack-153d43e25d3c28f66053f382005dbf6823604c3c.pack",
+      "bytes": 91544160
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/.git/objects/pack/pack-153d43e25d3c28f66053f382005dbf6823604c3c.pack",
+      "bytes": 91544160
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3_20261026/cpu/la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23161191
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/cpu/la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23161191
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542856024
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135715072
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407144560
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135714880
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542871640
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/original_selection_resume.pt",
+      "bytes": 542868440
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/handoff_mini_r5_20261026/selection_resume.pt",
+      "bytes": 542871640
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/.git/objects/pack/pack-153d43e25d3c28f66053f382005dbf6823604c3c.pack",
+      "bytes": 91544160
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_smoke_mini_r5_20261026/cpu/la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23161191
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_smoke_mini_r5_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_smoke_mini_r5_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542856024
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_smoke_mini_r5_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135715072
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_smoke_mini_r5_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407144560
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_smoke_mini_r5_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135714880
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542888664
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135743488
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407172592
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135735744
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407173168
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736192
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407173296
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736320
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407173296
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736320
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407173168
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736192
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407172976
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407172976
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407172976
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887896
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135739072
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407172400
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135735680
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_simplelinear_official_final50_mlp5/worker/refit_checkpoint.pt",
+      "bytes": 16561758
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_simplelinear_official_final50_mlp5/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_simplelinear_official_final50_mlp5/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+      "bytes": 44266112
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+      "bytes": 542887512
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/worker/selection_checkpoint.pt",
+      "bytes": 135738688
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/worker/refit_resume.pt",
+      "bytes": 407173296
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/worker/refit_checkpoint.pt",
+      "bytes": 135736320
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/worker/raw_proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "bytes": 177064064
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23146308
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed29_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23125897
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed41_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23147076
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed41_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23126619
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed53_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23147602
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed53_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23126728
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed67_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23147117
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/minilm_distilroberta_seed67_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23126445
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23141702
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed17_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23118652
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed29_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23141573
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed29_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23119346
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed41_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23141380
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed41_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23119781
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23141194
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed53_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23118642
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed67_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23141244
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/cpu/e5_small_base_seed67_allpaid28819_la2m20_integration_script_adaptation/parameters.npz",
+      "bytes": 23117951
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_4062d96_score_recovery/.git/objects/pack/pack-153d43e25d3c28f66053f382005dbf6823604c3c.pack",
+      "bytes": 91544160
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/.git/objects/pack/pack-153d43e25d3c28f66053f382005dbf6823604c3c.pack",
+      "bytes": 91544160
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/.git/objects/pack/pack-d045185fbbc532e53ff9647c07b369425369c927.pack",
+      "bytes": 18171841
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/3a65c89e12aafebc10607b9badc914a52fe12fb75ecbf9bdfcf7ebd32c26589b.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/49972975602536ec07b556f3f792208641aea3fd00fbddef09e08cea45b3f6ef.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/366e1374a1a5eea5e4671c6168e5e8526c6d72baa25836b0308084b498f48ef5.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/001ebb347af26fbbd68448ab00150a9a3898e0ed6b3de0c3316772cfbe13bad6.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/61078e34e3cb31870c9e2a3ad61bfb55c1000becb048fdda41a156b42f79a4a0.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/0c9cd08e353fe2ad99fdec8bfcf362ebd59d3a2a9ccd8390d8ec63f028d1b585.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/3bf8afdc3508e6ebf943b8d33cbc7820f128d1444fd6d982726ab40651fa7776.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/38b06ed5316ecd9cf9d1c0a0fa3e780da17ceb5324b1886933c2a2ab388b5c0c.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/51363f14b5922c1f97c21f100fce7c82cccb52d35d22894df548ba8cf9b05573.npy",
+      "bytes": 88532096
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/c30102b1ed2a213d76642d33370278cf970f39c11aa723d79b52fa2832f3acb4.npy",
+      "bytes": 88532096
+    }
+  ]
+}

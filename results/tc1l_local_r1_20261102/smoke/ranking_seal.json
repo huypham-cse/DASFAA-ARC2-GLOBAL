@@ -1,0 +1,91 @@
+{
+  "utc": "2026-11-02T01:25:30.591792+00:00",
+  "stage": "smoke",
+  "lock_sha256": "82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+  "cells": [
+    {
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "method": "procrustes",
+      "budget": "50pct",
+      "ranking_path": "minilm_distilroberta_seed17/procrustes_rankings.npy",
+      "sha256": "ec0b3dfc0d8286b347be16c6ad4b083e6b75edaeb2135f5661b14c3f7359ec57",
+      "shape": [
+        500,
+        100
+      ],
+      "map_seconds": 0.5332815999863669,
+      "search_seconds": 2.3500460000068415
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "method": "tangent2",
+      "budget": "50pct",
+      "ranking_path": "minilm_distilroberta_seed17/tangent2_rankings.npy",
+      "sha256": "83d928c4da06981f173b541e3c7a5d6ce57380e58da8bf9174cc883b6d9ecd57",
+      "shape": [
+        500,
+        100
+      ],
+      "map_seconds": 0.4686552000057418,
+      "search_seconds": 2.293300999997882
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "method": "chordal2",
+      "budget": "50pct",
+      "ranking_path": "minilm_distilroberta_seed17/chordal2_rankings.npy",
+      "sha256": "e006af36c3e78b5db0dcfcb8b701ecf71f6393ad9bcc5416502e7e9cd32d568d",
+      "shape": [
+        500,
+        100
+      ],
+      "map_seconds": 0.48393180000130087,
+      "search_seconds": 2.330666599998949
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "seed": 17,
+      "method": "euclidean2",
+      "budget": "50pct",
+      "ranking_path": "minilm_distilroberta_seed17/euclidean2_rankings.npy",
+      "sha256": "6d0b2e6d3c569eb876bb4556ae2d398ee26742b6962d58e064c88e8c48047b7a",
+      "shape": [
+        500,
+        100
+      ],
+      "map_seconds": 0.48431739999796264,
+      "search_seconds": 2.295608299988089
+    }
+  ],
+  "input_hashes": {
+    "D:\\DASFAA-2027-paper\\.cache\\tc1l_minilm\\old_docs_1110a243fdf4.npy": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782",
+    "D:\\DASFAA-2027-paper\\.cache\\tc1l_minilm\\new_docs_842eaed40bee.npy": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+    "D:\\DASFAA-2027-MixIndex\\artifact\\results\\q16c_arc2_dev\\q16c_encode_20261018T003211\\dev_queries.npy": "826911a012bb37e0b117f0929517ee3c21345dc9f402cda71c47cf677a550375",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_17.npy": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_29.npy": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_41.npy": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_53.npy": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_67.npy": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed17_50pct.npy": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed29_50pct.npy": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed41_50pct.npy": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed53_50pct.npy": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed67_50pct.npy": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24",
+    "D:\\DASFAA-2027-paper\\results\\fiqa_development\\ids.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33"
+  },
+  "artifacts": {
+    "ids.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "verified_inputs.json": "3ef85a2343f857e2b8a62fa6e64f812c072578434e6bba3b9610f3de502f7434",
+    "minilm_distilroberta_seed17/anchors.npy": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742",
+    "minilm_distilroberta_seed17/chordal2_rankings.npy": "e006af36c3e78b5db0dcfcb8b701ecf71f6393ad9bcc5416502e7e9cd32d568d",
+    "minilm_distilroberta_seed17/diagnostics.json": "e0a561f0b7b63f7a22bad1408d6913e9badf89882209d39de6b2f42ef0c41be2",
+    "minilm_distilroberta_seed17/euclidean2_rankings.npy": "6d0b2e6d3c569eb876bb4556ae2d398ee26742b6962d58e064c88e8c48047b7a",
+    "minilm_distilroberta_seed17/paid50.npy": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+    "minilm_distilroberta_seed17/parameters.npz": "879a636c9093e173d6fe98a6d309bb7b6a94e4c69fbf805c50ff65a8bc9bc14a",
+    "minilm_distilroberta_seed17/procrustes_rankings.npy": "ec0b3dfc0d8286b347be16c6ad4b083e6b75edaeb2135f5661b14c3f7359ec57",
+    "minilm_distilroberta_seed17/tangent2_rankings.npy": "83d928c4da06981f173b541e3c7a5d6ce57380e58da8bf9174cc883b6d9ecd57"
+  }
+}

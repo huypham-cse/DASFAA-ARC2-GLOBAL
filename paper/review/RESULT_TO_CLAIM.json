@@ -1,0 +1,126 @@
+{
+  "claim_supported": "yes",
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "integrity_status": "unavailable",
+  "judgment_scope": "The bounded current manuscript claim; this does not relabel older broader campaign verdicts.",
+  "what_results_support": [
+    "Source matches frozen centered Procrustes plus two norm-scaled tangent ridge corrections, lambda10, regularized intercept, final affine map plus normalization.",
+    "Coefficient storage is 295680 float32 values, 1182720 bytes, 1.1279296875 MiB.",
+    "All5 B1c-R3 DEV macro nDCG family intervals positive; Procrustes delta0.024325109040435233, CI[0.018132175212397208,0.030791640313948616].",
+    "DEV second-step delta0.006923862939737235, familyCI[0.003809388309482942,0.009959126205904258].",
+    "Exactly11 positive B2 family contrasts,19 unresolved,0negative: Converter5/ridge4/SimpleLinear2; E5 Converter/ridge positive at all3 budgets.",
+    "All-paid MiniLM wins4 baseline families with ridge unresolved; E5 negatives against Procrustes/LA2M correctly retained.",
+    "Real paired E5 mixed-gallery deterioration and MiniLM improvement; cause left open."
+  ],
+  "what_results_dont_support": [
+    "Universal independent superiority or equivalence/noninferiority to alignment methods; all6 B2 Procrustes point differences negative and all Procrustes/LA2M intervals unresolved.",
+    "Independent necessity of the second step; optimal step count/lambda; uniformly helpful all-paid fitting or monotone replacement benefits.",
+    "Measured physical encoding, serving latency, SLO or monetary savings; exclusive compactness among affine mappers."
+  ],
+  "missing_evidence": {
+    "necessary_for_current_claim": [],
+    "already_qualified_scope_limits": [
+      "No independent one-versus-two ablation.",
+      "One prospectively held collection.",
+      "No physical deployment measurements."
+    ],
+    "important_numerical_errors_found": []
+  },
+  "suggested_claim_revision": {
+    "central_claim": "ARC2-Global adds two tangent-residual ridge corrections to a centered Procrustes initialization while retaining one compact affine adapter at inference. Under matched fixed-anchor supervision it improves development macro nDCG over the five evaluated baseline configurations; the second correction contributes on development data, and a prospective collection confirms selected gains with encoder-dependent transfer.",
+    "minor_editorial_changes": [
+      {
+        "file": "paper/sections/experimental-setup.tex",
+        "change": "Explicitly state selection of the frozen form after inspecting FiQA development scores.",
+        "severity": "minor provenance clarification"
+      },
+      {
+        "file": "paper/sections/results.tex",
+        "change": "Replace unrestricted-parameter-search interpretation with: The penalty controls probe sensitivity around the frozen setting.",
+        "severity": "minor interpretive overstatement"
+      }
+    ],
+    "no_method_or_science_change_required": true
+  },
+  "next_experiments_needed": {
+    "necessary_for_current_claim": [],
+    "optional_extensions": [
+      {
+        "claim": "Independent second-step necessity",
+        "experiment": "Prospectively lock one-versus-two comparison."
+      },
+      {
+        "claim": "Broader alignment superiority",
+        "experiment": "Additional prospectively locked collection/encoder evaluations."
+      },
+      {
+        "claim": "Physical migration savings",
+        "experiment": "Actual encoding/serving workflow measurements."
+      }
+    ],
+    "authorization": "No new run authorized; optional extensions are not current-paper gates."
+  },
+  "verification": {
+    "dev": {
+      "means_checked": 160,
+      "per_query_mean_max_error": 3.3306690738754696e-16,
+      "all5_family_interval_max_error": 8.326672684688674e-17
+    },
+    "trec": {
+      "means_checked": 40,
+      "per_query_mean_max_error": 1.6653345369377348e-16,
+      "all30_saved_draw_family_interval_max_error": 0
+    },
+    "paid": {
+      "means_checked": 28,
+      "per_query_mean_max_error": 2.7755575615628914e-16,
+      "all32_family_interval_max_error": 2.7755575615628914e-17
+    },
+    "mechanism": {
+      "all5_family_interval_max_error": 4.163336342344337e-17
+    },
+    "coefficient_storage": {
+      "float32_coefficients": 295680,
+      "bytes": 1182720,
+      "MiB": 1.1279296875
+    },
+    "sources": {
+      "dev": {
+        "path": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+        "sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5"
+      },
+      "trec": {
+        "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+        "sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7"
+      },
+      "mechanism": {
+        "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+        "sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded"
+      },
+      "paid": {
+        "path": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+        "sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7"
+      },
+      "gallery": {
+        "path": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+        "sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f"
+      }
+    },
+    "status": "PASS",
+    "scope": "Read-only saved scoring arrays, contrasts and locked bootstrap resampling; no fit, retrieval, qrel access or scientific run."
+  },
+  "evidence_precheck": {
+    "completed": "paper/review/RESULT_TO_CLAIM_EVIDENCE_PRECHECK_CONFIG.json",
+    "summary": {
+      "verified": 3
+    },
+    "primary_values": "Primary-source field/array checks and all stated family intervals verified in RESULT_TO_CLAIM_NUMERIC_CHECKS.json.",
+    "full_text_scan": "Stopped owned token-only scan because repeated large-JSON scans were slow; no verdict derived from incomplete scan."
+  },
+  "full_response": "paper/review/RESULT_TO_CLAIM.md",
+  "trace": ".aris/traces/result-to-claim/2026-11-01_paper_draft/001-claim-review.response.md",
+  "trace_response_sha256": "41e739c0f258d7313204312492aab82055b83016132967ff77aa46cf2ac37a3a",
+  "routing_action": "Proceed with finite manuscript writing/verification and two minor wording refinements; no new scientific experiment."
+}

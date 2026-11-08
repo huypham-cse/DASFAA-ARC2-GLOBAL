@@ -1,0 +1,9 @@
+@misc{dar2026minivec2vecscalinguniversalgeometry,
+      title={mini-vec2vec: Scaling Universal Geometry Alignment with Linear Transformations}, 
+      author={Guy Dar},
+      year={2026},
+      eprint={2510.02348},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2510.02348}, 
+}

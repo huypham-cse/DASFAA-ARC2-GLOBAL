@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "id": "frozen_steps",
+      "value": "2",
+      "source": "configs\\method.json",
+      "status": "verified",
+      "detail": "'2' found in configs\\method.json"
+    },
+    {
+      "id": "frozen_lambda",
+      "value": "10.0",
+      "source": "configs\\method.json",
+      "status": "verified",
+      "detail": "'10.0' found in configs\\method.json"
+    },
+    {
+      "id": "frozen_anchor_count",
+      "value": "1024",
+      "source": "configs\\method.json",
+      "status": "verified",
+      "detail": "'1024' found in configs\\method.json"
+    }
+  ],
+  "summary": {
+    "verified": 3
+  }
+}

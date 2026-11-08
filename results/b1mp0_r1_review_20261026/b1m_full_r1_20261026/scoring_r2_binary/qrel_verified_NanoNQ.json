@@ -1,0 +1,14 @@
+{
+  "dataset": "NanoNQ",
+  "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+  "bytes": 2020,
+  "columns": [
+    "query-id",
+    "corpus-id"
+  ],
+  "implicit_binary_grade": 1,
+  "evaluation_queries": 50,
+  "queries_without_positive_judgments": 0,
+  "positive_judgments_outside_corpus_retained_in_denominator": 0,
+  "qrel_queries_outside_evaluation_set": 0
+}

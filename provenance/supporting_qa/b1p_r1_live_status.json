@@ -1,0 +1,25 @@
+{
+  "observed_unix": 1792977979.176505,
+  "code_commit": "f1457b8ee9f51d14330f04a14ec0f75d040b08c2",
+  "smoke_status": "B1P_SMOKE_PASS",
+  "smoke_wall_seconds": 65.74835924152285,
+  "smoke_converter_selection_seconds": 26.650674515403807,
+  "smoke_converter_refit_seconds": 25.231156482361257,
+  "smoke_converter_refit_iterations": 500,
+  "full_status": "RUNNING",
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 51,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "completed_ranking_files": 51,
+  "full_qrel_access_started": false,
+  "tmux_alive": true,
+  "full_path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026",
+  "next_item_auto_launch": false
+}

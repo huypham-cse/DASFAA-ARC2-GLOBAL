@@ -1,0 +1,94 @@
+{
+  "status": "ENCODE_RUNTIME_READY",
+  "started_utc": "2026-10-31T06:36:54.195626+00:00",
+  "scope": "Infrastructure only; no encoder, dataset or qrels invocation",
+  "pins": [
+    "sentence-transformers==4.1.0",
+    "transformers==4.51.3",
+    "huggingface-hub==0.30.2",
+    "tokenizers==0.21.1",
+    "safetensors==0.5.3",
+    "requests==2.32.3",
+    "urllib3==2.4.0",
+    "certifi==2025.1.31",
+    "idna==3.10",
+    "charset-normalizer==3.4.1",
+    "packaging==25.0",
+    "regex==2024.11.6",
+    "Pillow==11.2.1",
+    "PyYAML==6.0.3"
+  ],
+  "commands": [
+    {
+      "name": "venv",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "uv",
+        "--no-config",
+        "venv",
+        "--python",
+        "/network-volume/arc2_recovery_20261030/envs/gpu/bin/python",
+        "/home/jovyan/arc2_b2_20261031/envs/encode"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "install",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "uv",
+        "--no-config",
+        "pip",
+        "install",
+        "--python",
+        "/home/jovyan/arc2_b2_20261031/envs/encode/bin/python",
+        "--index-url",
+        "https://pypi.org/simple",
+        "--no-deps",
+        "sentence-transformers==4.1.0",
+        "transformers==4.51.3",
+        "huggingface-hub==0.30.2",
+        "tokenizers==0.21.1",
+        "safetensors==0.5.3",
+        "requests==2.32.3",
+        "urllib3==2.4.0",
+        "certifi==2025.1.31",
+        "idna==3.10",
+        "charset-normalizer==3.4.1",
+        "packaging==25.0",
+        "regex==2024.11.6",
+        "Pillow==11.2.1",
+        "PyYAML==6.0.3"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "import_validation",
+      "argv": [
+        "/home/jovyan/arc2_b2_20261031/envs/encode/bin/python",
+        "-c",
+        "import json,importlib,sys,torch\nfrom sentence_transformers import SentenceTransformer\nimport transformers,numpy,pyarrow\nexpected={'numpy':'2.2.6','torch':'2.6.0+cu124','sentence_transformers':'4.1.0','transformers':'4.51.3'}\nseen={k:importlib.import_module(k).__version__ for k in expected}\nassert seen==expected,(seen,expected)\nprint(json.dumps({'versions':seen,'executable':sys.executable,'cuda':torch.cuda.is_available(),'pyarrow':pyarrow.__version__}))\n"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "freeze",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "uv",
+        "--no-config",
+        "pip",
+        "freeze",
+        "--python",
+        "/home/jovyan/arc2_b2_20261031/envs/encode/bin/python"
+      ],
+      "returncode": 0
+    }
+  ],
+  "baseline_runtime_mutated": false,
+  "python": "/home/jovyan/arc2_b2_20261031/envs/encode/bin/python",
+  "ended_utc": "2026-10-31T06:37:09.360055+00:00"
+}

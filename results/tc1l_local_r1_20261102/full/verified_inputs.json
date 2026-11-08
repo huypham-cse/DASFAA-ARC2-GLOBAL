@@ -1,0 +1,16 @@
+{
+  "D:\\DASFAA-2027-paper\\.cache\\tc1l_minilm\\old_docs_1110a243fdf4.npy": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782",
+  "D:\\DASFAA-2027-paper\\.cache\\tc1l_minilm\\new_docs_842eaed40bee.npy": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+  "D:\\DASFAA-2027-MixIndex\\artifact\\results\\q16c_arc2_dev\\q16c_encode_20261018T003211\\dev_queries.npy": "826911a012bb37e0b117f0929517ee3c21345dc9f402cda71c47cf677a550375",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_17.npy": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_29.npy": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_41.npy": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_53.npy": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\anchors_seed_67.npy": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed17_50pct.npy": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed29_50pct.npy": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed41_50pct.npy": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed53_50pct.npy": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\selections\\seed67_50pct.npy": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24",
+  "D:\\DASFAA-2027-paper\\results\\fiqa_development\\ids.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33"
+}

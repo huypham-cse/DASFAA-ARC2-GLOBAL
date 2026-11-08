@@ -1,0 +1,12 @@
+{
+  "gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 58734 MiB, 81559 MiB, 100 %\n",
+  "disk": {
+    "total": 7679228837888,
+    "used": 2880596041728,
+    "free": 4798632796160
+  },
+  "B1M_status": "FAILED_PRESERVED",
+  "B1M_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+  "R2_score_status": "DEV_SCORED",
+  "P0_status": "B1P0_FULL_PASS"
+}

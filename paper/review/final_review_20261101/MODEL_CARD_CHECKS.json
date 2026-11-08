@@ -1,0 +1,34 @@
+[
+  {
+    "model": "sentence-transformers/all-distilroberta-v1",
+    "revision": "842eaed40bee4d61673a81c92d5689a8fed7a09f",
+    "url": "https://huggingface.co/sentence-transformers/all-distilroberta-v1/resolve/842eaed40bee4d61673a81c92d5689a8fed7a09f/README.md",
+    "status": 200,
+    "bytes": 10132,
+    "sha256": "565f15ef1c8232cf21b91aa9125bd852f54f2f676c662324732ee3d4d3a43a8c"
+  },
+  {
+    "model": "intfloat/e5-base-v2",
+    "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+    "url": "https://huggingface.co/intfloat/e5-base-v2/resolve/f52bf8ec8c7124536f0efb74aca902b2995e5bcd/README.md",
+    "status": 200,
+    "bytes": 67561,
+    "sha256": "127d92b493963c5e7f74fcad5190546e19e404e5ff5b5c0c606dbcda57ca530e"
+  },
+  {
+    "model": "intfloat/e5-small-v2",
+    "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+    "url": "https://huggingface.co/intfloat/e5-small-v2/resolve/ffb93f3bd4047442299a41ebb6fa998a38507c52/README.md",
+    "status": 200,
+    "bytes": 67791,
+    "sha256": "0d57eda4766cc7ac045f2bf7e700286ea5a8360bb9b57278f67f9b8ef60b0b24"
+  },
+  {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md",
+    "status": 200,
+    "bytes": 10502,
+    "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "pre_run_commit": "07d0456cd276d6e34a60a85295d5126435bab93a",
+  "utc": "2026-11-01T19:55:35.323675+00:00",
+  "files": {
+    "configs/tangent_control_20261102_lock.json": "c48679786a8216e18fcdd61fe7cae366b7c9b0383c7a3da35293c1a10e78c30b",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "ops/tangent_control_campaign.py": "1dd8ce79a0a48f5501f947aac3c3dfdb59116af05350612dcb7f466067e69f04",
+    "ops/tangent_control_run.py": "1bb3bd91d4a9d4bae9329f39cb0fab56ccd74e38d086457bd10c4fd72b4ca069",
+    "ops/tangent_control_score.py": "b038970005c57446928efe59a3212aa7cf421b774b7e9dfedbc58496eb8a0aaa",
+    "protocols/FIQA_MATCHED_RESIDUAL_CONTROLS_20261102.md": "5057e1f4c2b9110503acaab721ef6270967bde774428027456e32dbfd17b744c",
+    "results/fiqa_development/ids.json": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33",
+    "results/fiqa_development/selections/seed17_50pct.npy": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372",
+    "results/fiqa_development/selections/seed29_50pct.npy": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606",
+    "results/fiqa_development/selections/seed41_50pct.npy": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a",
+    "results/fiqa_development/selections/seed53_50pct.npy": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c",
+    "results/fiqa_development/selections/seed67_50pct.npy": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/diagnostics.py": "0905e7c4cab1b0263b661f2d29677890080811e56218fbfcf0c81d2c14a18d9d",
+    "src/arc2_global/embedding_converter.py": "1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/residual_ablation.py": "e4fd831580c52420d661b0e9792a720a2fa134e49122dc168076d7d0135f90f2",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+    "tools/build_tangent_control_lock.py": "7063d735137ff77a4bc129b349e50339f8dbb2e7e942635202a2619c082a4282"
+  },
+  "lock_sha256": "c48679786a8216e18fcdd61fe7cae366b7c9b0383c7a3da35293c1a10e78c30b",
+  "remote_deployment": "/network-volume/arc2_recovery_20261030/tangent_control_20261102/code_07d0456",
+  "payload": "tmp\\tangent_control_07d0456.tar.gz",
+  "payload_sha256": "c07f053ba17cb8ce10ce74caad4c5ed48e40fbe33408f2090b0fd5dba65e7fdf",
+  "payload_bytes": 437070,
+  "launch": {
+    "status": "CAMPAIGN_LAUNCHED",
+    "session": "arc2_tc1_20261102",
+    "host": "103.73.232.201",
+    "remote_output": "/network-volume/arc2_recovery_20261030/tangent_control_20261102/tc1_r1_20261102",
+    "verified_payload_files": 24
+  }
+}

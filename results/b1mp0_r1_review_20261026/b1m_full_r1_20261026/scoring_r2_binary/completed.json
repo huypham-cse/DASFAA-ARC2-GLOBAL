@@ -1,0 +1,41 @@
+{
+  "status": "DEV_SCORED",
+  "completed_utc": "2026-10-25T19:06:52.248778+00:00",
+  "scorer_code_commit": "55a600f104ded05562d4212d7c07a1330701a4b0",
+  "rescore_context": {
+    "original_lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+    "ranking_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+    "original_code_commit": "4056612dcccac74fdf84ccf67783ab87afd85c26",
+    "prior_failure_sha256": "9e787eeda5c99e562b672615303999f5b6c5f907a33f387ec6176a4da1070cfc",
+    "prior_failure_path": "scoring/failure.json",
+    "prior_first_access_sha256": "5f8843b7d5fe0e5919ba25699068bd5002ffc4fbad7c32223ed34335d9d10ed7"
+  },
+  "summary_sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+  "markdown_sha256": "b74173d511f2046cde0a98558b081016b70729bc7aa5387ba7a94ee3a0484bc0",
+  "artifact_sha256": {
+    "FiQA/cell_index.json": "ff35ab9114296da0b9ce2349edaf915180b84413589042113133292f5cb12601",
+    "FiQA/per_query.npy": "4647bc64355eb1de7a5e94045993895078d350d9485a4fdba24c7205b8297a5c",
+    "NanoFEVER/cell_index.json": "31dea095fa0af0ea391de807d3a3ce7bc5a27b5e0d86e46bfa304b175428028a",
+    "NanoFEVER/per_query.npy": "9dc985097699befc5073e172d3609c73951086445138e065fa981645951b54eb",
+    "NanoHotpotQA/cell_index.json": "b0b710c3fc0074aabab239721db266dafbd5a51115e87fb0fd4827df186e4811",
+    "NanoHotpotQA/per_query.npy": "d0e714342e6b3d08564ab3d988bc73f8a529db5b610a32b8d55a8bb12cb56799",
+    "NanoNQ/cell_index.json": "06c4fa7251355dc4d4c955b974e21c1013e30dab7814203f1db787bae4d9ceb3",
+    "NanoNQ/per_query.npy": "a53be45fba376c9ed072bbf326bdb6450599d7ed9605e87b50ed0decd9ca96e2",
+    "first_dev_qrel_open.json": "3d27a548b4a1f7d82482ec594ac347093466ca7a0384c4df09fd2afec3c3d662",
+    "qrel_access_FiQA.json": "f8419716265e3e5acdc326c8af4eed6248d5ba26bf575bace6b1c6fcba09683a",
+    "qrel_access_NanoFEVER.json": "69e4906e3a406430c862059181926a919fec7d7d5ae5d27fa99fa216d57a1415",
+    "qrel_access_NanoHotpotQA.json": "9e739c021fdaec13d8869c5b365811965da68e2387f30957d3e6d765f0ed6ecd",
+    "qrel_access_NanoNQ.json": "14353f70d6fb3700291fedd5d5f6c224ccf5f817f4dd1a9b74dd763ed075e118",
+    "qrel_verified_FiQA.json": "a71ff2db89e67b3e82773e1424e293fb329210c72f04bbebe8ab47d0011d315a",
+    "qrel_verified_NanoFEVER.json": "f7ccad4b707a4bebdbc8d4fc86ad935363e904079398c7752fcf8b8f3c925539",
+    "qrel_verified_NanoHotpotQA.json": "99ab9b4ad2920f40a5b9c70fdaaf167e9047f11d8280d9587e382cb113d850a1",
+    "qrel_verified_NanoNQ.json": "8a17a3bcd04f4cd731e4d191c4956b3d589d6c1d1cf40fda7474b3242860fe7f",
+    "qrels_NanoFEVER.parquet": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+    "qrels_NanoHotpotQA.parquet": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+    "qrels_NanoNQ.parquet": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+    "results_summary.json": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+    "results_summary.md": "b74173d511f2046cde0a98558b081016b70729bc7aa5387ba7a94ee3a0484bc0",
+    "started.json": "00c36be1bf875479e92d2edf62b11387874b2c0f2dc319f9816a3025f98e035b",
+    "synthetic_scorer_checks.json": "23ebc6a58a25d40efd7fb935ebe656ac6c86a994282a4ea6fa2ea6077c4dd6bd"
+  }
+}

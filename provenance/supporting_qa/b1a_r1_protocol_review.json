@@ -1,0 +1,10 @@
+{
+  "scope": "bounded pre-run repair review, not scientific/claim audit",
+  "reviewer_agent": "/root/b1a_protocol_review",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "verdict": "PASS",
+  "raw_response": "PASS for bounded B1a-R1 repair. Verified historical Windows source converted to LF produces exactly new Linux hash37015108...2b49c67. Runner checks raw bytes, upstream revision and cleanliness, and passes selected lock to GPU worker. Old protocol/lock unchanged; model/data/seeds/numerical settings unchanged; revised source hashes match. Commit before retry in new checkout/output directory; retain first failure; STOP before B1b."
+}

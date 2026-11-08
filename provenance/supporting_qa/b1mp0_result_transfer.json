@@ -1,0 +1,11 @@
+{
+  "archive_sha256": "b68e9bbd3618c078105aabd67618e0c3371060a139cb4cde3d1809c045c9fcde",
+  "bytes": 37877961,
+  "included_files": 946,
+  "complete_raw_files": 2201,
+  "source_root": "/root/arc2_global_paper_20261025/code_4056612/results",
+  "archive": "/root/arc2_global_paper_20261025/b1mp0_r1_review_20261026.tar.gz",
+  "full_manifest_sha256": "0e165820292d7abc67fd80d95e10947a052e0d41116e61df56007e9fae0b5583",
+  "compact_subset": true,
+  "local_result": "D:\\DASFAA-2027-paper\\results\\b1mp0_r1_review_20261026"
+}

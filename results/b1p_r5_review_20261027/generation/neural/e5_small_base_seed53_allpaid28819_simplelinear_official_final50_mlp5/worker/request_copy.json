@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "simplelinear",
+  "regime": "all_paid",
+  "seed": 53,
+  "lockpath": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/configs/b1p_lock.json",
+  "output": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/worker",
+  "paired_source": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/paired_source.npy",
+  "paired_target": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5/paired_target.npy",
+  "full_source": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy",
+  "code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "input_sha256": {
+    "paired_source": "190afff3a80e6a399cc5665ed2252ccf73f1d37fc157d2dcc38bf150e2fa3ab4",
+    "paired_target": "078adaf6bf3621d12224cc28616d4c1dc77ceb0b888fa8f674c9068d001cc539",
+    "full_source": "6840bcf6eead122758d6f5eae3f8cf4149b7604485e405adbf4c536e45af1fbf"
+  }
+}

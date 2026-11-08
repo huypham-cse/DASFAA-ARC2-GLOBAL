@@ -1,0 +1,509 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-11-01T02:01:13.124526+00:00",
+  "scope": "Independent local computation from completed B2 saved qrels/rankings; no new scientific scoring invocation",
+  "backup_root": "D:\\ARC2-B2-backup-20261031",
+  "operator_state_sha256": "613ab3d6468d5bc9b552d29508fdbf7949efbdb65f4699bf8c5e04fbb8dbf6a9",
+  "remote_project": "/home/jovyan/arc2_b2_20261031/code_26feef1",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "lock_sha256_canonical_lf": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "source_canonical_lf_pins_verified": 61,
+  "pre_run_git_objects_verified": 62,
+  "ranking_seal_sha256": "08e82c19a2d1974edb094e520d0b1b6ac4e6138e3a717c5014d183669c7c25de",
+  "verification_seal_sha256": "78e67ab2aac47d0590db54ffd20170c30f8e7a5c96153bf17a1fee1e5322c968",
+  "summary_sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+  "timeline_utc": {
+    "rankings_sealed": "2026-10-31T19:56:09.382605+00:00",
+    "endpoints_verified": "2026-10-31T20:11:42.810083+00:00",
+    "scorer_started": "2026-10-31T20:11:43.668674+00:00",
+    "first_open_receipt": "2026-10-31T20:12:17.410541+00:00",
+    "network_request_started": "2026-10-31T20:12:17.410765+00:00",
+    "qrel_bytes_observed": "2026-10-31T20:12:18.094163+00:00",
+    "summary_completed": "2026-10-31T20:12:54.081736+00:00",
+    "scoring_sealed": "2026-10-31T20:12:54.105512+00:00"
+  },
+  "prescribed_unique_cells_verified": 184,
+  "rankings_independently_rescored": 184,
+  "fit_groups_verified": 60,
+  "fit_statuses": {
+    "CPU_FIT_PASS": 40,
+    "B1P_NEURAL_FULL_PASS": 20
+  },
+  "ordered_document_ids": 171332,
+  "ordered_query_ids": 50,
+  "qrel_rows": 66336,
+  "qrel_stats": {
+    "bytes": 980831,
+    "sha256": "10669ab7d526cb04f52079139fd88c3d467a0776441b046567f540582798982b",
+    "git_blob_sha1": "9cb5167175d7cdbf9d85ea828c6a3da943fe7053",
+    "columns": [
+      "query-id",
+      "corpus-id",
+      "score"
+    ],
+    "evaluation_queries": 50,
+    "queries_without_positive_judgments": 0,
+    "positive_judgments_outside_corpus_retained_in_denominator": 0,
+    "qrel_queries_outside_evaluation_set": 0
+  },
+  "per_query_metric_values_compared": 18400,
+  "largest_metric_absolute_discrepancy": 2.220446049250313e-16,
+  "means_verified": 40,
+  "primary_contrasts_verified": 30,
+  "nominal95_intervals_verified": 140,
+  "bonferroni_family95_intervals_verified": 30,
+  "summary_numeric_values_compared": 1106,
+  "largest_summary_absolute_discrepancy": 4.440892098500626e-16,
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 20261031,
+  "bootstrap_rng": "PCG64",
+  "bootstrap_query_indices_sha256": "18cc3ac6ca3c1682d83323766ad47e13572e1dd78dd618d0df797b9b7627a16a",
+  "bootstrap_values_compared": 2800000,
+  "largest_bootstrap_absolute_discrepancy": 7.771561172376096e-16,
+  "bootstrap_recomputation": "Independent direct indexed query-row averaging, shared indices; mapping seeds averaged first",
+  "primary_family_outcomes": {
+    "unresolved": 19,
+    "above_zero": 11
+  },
+  "primary_family_outcomes_by_pair": {
+    "minilm_distilroberta": {
+      "unresolved": 12,
+      "above_zero": 3
+    },
+    "e5_small_base": {
+      "unresolved": 7,
+      "above_zero": 8
+    }
+  },
+  "primary_effects": [
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "procrustes_global",
+      "delta": -5.1360668551632406e-05,
+      "family_ci": [
+        -0.01469474559397281,
+        0.013213525679703807
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta": -0.0015043994890894072,
+      "family_ci": [
+        -0.03430576267376661,
+        0.02907870839908142
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta": 0.0008729167709579022,
+      "family_ci": [
+        -0.03294484894780954,
+        0.03254846668258879
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta": 0.02974281152164104,
+      "family_ci": [
+        -0.004477666541051715,
+        0.06832583936849441
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "25pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta": 0.03953962459261952,
+      "family_ci": [
+        0.0006302196978609687,
+        0.07561331897623641
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "procrustes_global",
+      "delta": -0.004666870465219518,
+      "family_ci": [
+        -0.018617590940593842,
+        0.006098526576107384
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta": -0.007321002357654938,
+      "family_ci": [
+        -0.02668253988983894,
+        0.007137508111023873
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta": -0.007635139697658929,
+      "family_ci": [
+        -0.027397841906307684,
+        0.006921598024274304
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta": 0.014517372599864116,
+      "family_ci": [
+        -0.01079865042649303,
+        0.042098147967508055
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "50pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta": 0.02190799526854916,
+      "family_ci": [
+        0.0005178011321619412,
+        0.04263918301944054
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "procrustes_global",
+      "delta": -2.356492461314778e-05,
+      "family_ci": [
+        -0.004504538996134848,
+        0.004383734800061369
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta": 0.0009512792584207395,
+      "family_ci": [
+        -0.006116292591115391,
+        0.008780612423464906
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta": 0.00021085277260803788,
+      "family_ci": [
+        -0.0068275356617383395,
+        0.008018776860536694
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta": 0.018293534265032777,
+      "family_ci": [
+        0.00043951281706854084,
+        0.04492339866433025
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "minilm_distilroberta",
+      "budget": "75pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta": 0.016258281557834944,
+      "family_ci": [
+        -4.496385125866013e-05,
+        0.03208424943554027
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "procrustes_global",
+      "delta": -0.0032404285712858832,
+      "family_ci": [
+        -0.021620914986484448,
+        0.014324743958227587
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta": 0.04221113712298236,
+      "family_ci": [
+        -0.006416733787802236,
+        0.09332456219941979
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta": 0.13287299235509,
+      "family_ci": [
+        0.0633001667256504,
+        0.20513737777782168
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta": 0.26418055558812686,
+      "family_ci": [
+        0.15726462442241934,
+        0.37675795247986166
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "25pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta": 0.25723359077319435,
+      "family_ci": [
+        0.1757307615280079,
+        0.3375685020386065
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "procrustes_global",
+      "delta": -0.01632154204848677,
+      "family_ci": [
+        -0.039820124045428,
+        0.002297812200252202
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta": 0.0005942541991765015,
+      "family_ci": [
+        -0.035512968635931196,
+        0.03599603191311822
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta": 0.06172988619056691,
+      "family_ci": [
+        0.013560120474429779,
+        0.11446072714102257
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta": 0.2622674417365517,
+      "family_ci": [
+        0.1579593697473118,
+        0.372850385971634
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "50pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta": 0.23138457517015262,
+      "family_ci": [
+        0.15671745879653795,
+        0.3085072832020045
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "procrustes_global",
+      "delta": -0.010011959658702083,
+      "family_ci": [
+        -0.02600538753534059,
+        0.0036310901422503547
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "la2m20_integration_script_adaptation",
+      "delta": -0.008995301709012365,
+      "family_ci": [
+        -0.035779403348524245,
+        0.015645799124606508
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "simplelinear_official_final50_mlp5",
+      "delta": 0.03128815675676679,
+      "family_ci": [
+        -0.003829616879318095,
+        0.07170478814697444
+      ],
+      "outcome": "unresolved"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "ridge_affine_l10_bias_regularized",
+      "delta": 0.2819970458539894,
+      "family_ci": [
+        0.1748002277021839,
+        0.39732969047954325
+      ],
+      "outcome": "above_zero"
+    },
+    {
+      "pair": "e5_small_base",
+      "budget": "75pct",
+      "baseline": "embedding_converter_paper_spec",
+      "delta": 0.1999540966512042,
+      "family_ci": [
+        0.13925018639424477,
+        0.26422216452680225
+      ],
+      "outcome": "above_zero"
+    }
+  ],
+  "scorer_completed_artifact_hashes_verified": 11,
+  "backup_files_locally_rehashed": 819,
+  "backup_bytes_locally_rehashed": 385289448,
+  "large_files_transport_coverage_bindings": 94,
+  "large_bytes_transport_coverage_bindings": 36105110347,
+  "preserved_failure_paths": [],
+  "nonempty_stderr_evidence": [
+    {
+      "path": "results/b2_smoke_r1_20261031t064859/neural/synthetic_seed17_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "b03d5e4cec55c297974b5c7cd01b538e9c3d99173a6d6cf1a694f854c841692c",
+      "first_1200_characters": "2026-10-31 06:50:10.456 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 06:50:12.453 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.201143\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed17_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "7ab72b129161bc214d071e9678e793e0e36d9f2a0c4c7d12c71b9930a00eff97",
+      "first_1200_characters": "2026-10-31 07:30:29.421 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 07:30:33.161 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.249589\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed29_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "ade6ddc46428401dfda2b8b40286f0d8e7bcdc802ae352305dc7ccada856cb5c",
+      "first_1200_characters": "2026-10-31 08:51:32.419 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 08:51:35.413 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.254180\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed41_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "6b3db89e435eb600ecbefcf1ef64569576bca31f7b3c7908ce65b0e73ae31a96",
+      "first_1200_characters": "2026-10-31 09:39:22.712 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 09:39:24.945 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.252308\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed53_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "418dd26af6d063c2b9b15e96dd058852a8d70e2800080a8d9b3eb148cb15ee86",
+      "first_1200_characters": "2026-10-31 10:21:13.154 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 10:21:16.179 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.252964\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/e5_small_base_seed17_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "437c439b34fdbe9f7858b1b5346598647577e2fd4454e9ffeb6d6e8d9421f3aa",
+      "first_1200_characters": "2026-10-31 14:53:26.929 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 14:53:29.132 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.096426\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed67_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "c3d486c4c1e7f5943814161693975f34f8cca9be28cbd6f20adb0f50c2feeb6e",
+      "first_1200_characters": "2026-10-31 12:57:47.274 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 12:57:49.955 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.252364\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/e5_small_base_seed29_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "4e7ad2c5f875d74f5a036d564f9d61d600612796933d4436eba7a37ddc145145",
+      "first_1200_characters": "2026-10-31 15:53:21.190 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 15:53:23.588 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.096574\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/e5_small_base_seed41_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "0a76a03fecd814cf649a572d12d68ee842dcb7a15f9335c1d1a5d6eeb1347ee8",
+      "first_1200_characters": "2026-10-31 17:09:22.384 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 17:09:26.994 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.096548\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/e5_small_base_seed53_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "272ca1a264a16430368f2199eff2c9a457079f6949caca8a1dadd48d089c80aa",
+      "first_1200_characters": "2026-10-31 17:56:52.927 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 17:56:55.324 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.098347\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    },
+    {
+      "path": "results/b2_full_r1_20261031t064859/neural/e5_small_base_seed67_simplelinear_official_final50_mlp5/stderr.log",
+      "bytes": 896,
+      "sha256": "2c355c87503950a4de6d4a10cc1458a93ddaf104852f1738306607ca72f2c7b9",
+      "first_1200_characters": "2026-10-31 18:48:55.280 | INFO     | embedding_translation.core.mapping:__init__:42 - Initialized SimpleLinearMapper with device: cuda\n2026-10-31 18:48:58.871 | INFO     | embedding_translation.mapper.simple_linear.strategy:fit:230 - SimpleLinearMapper fit complete; final loss 0.097255\n/network-volume/arc2_recovery_20261030/upstream/embedding-translation/src/embedding_translation/mapper/simple_linear/strategy.py:241: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)\n  x = torch.from_numpy(chunk).float().to(self.device)\n"
+    }
+  ],
+  "local_saved_qrel_reads": 1,
+  "new_network_qrel_opening": false,
+  "new_fitting": false,
+  "new_search": false,
+  "limitations": [
+    "Large vectors/checkpoints are bound to terminal backup coverage hashes and sizes, not independently rehashed or regenerated in this local QA.",
+    "Exact retrieval was separately regenerated remotely before labels; local QA checks that seal and all cell bindings, without recomputing float32 scores/ties.",
+    "Timestamps and first-opening receipts establish recorded order, not an independent audit of every possible human/data access.",
+    "No universal win, native-reference superiority, independent two-step necessity, ANN, physical-cost, isolated hardware performance or systems claim follows."
+  ],
+  "tolerance": 1e-12,
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "numpy_version": "2.5.3",
+  "verifier_sha256": "e7a2d501cc6bc522bd0afd63a3f4dccfefc55bbebee93daf16799220108b7cf9",
+  "wall_seconds": 9.26469999999972,
+  "next_action": "STOP after B2 verified results, figures and ARIS review; manuscript untouched",
+  "compact_bundle": {
+    "path": "D:\\DASFAA-2027-paper\\results\\b2_review_20261101\\evidence",
+    "manifest_sha256": "d1286b01dafc91f2792413378e92e27bbf3b7815cfc6f9cf5e82801419450e59",
+    "files_verified": 1138,
+    "bytes_verified": 181895786,
+    "coverage_bound_files": 1076,
+    "authority_files": 62,
+    "omitted_large_artifacts_transport_bound": 254
+  }
+}

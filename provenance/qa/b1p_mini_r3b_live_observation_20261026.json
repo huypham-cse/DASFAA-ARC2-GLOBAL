@@ -1,0 +1,90 @@
+{
+  "checked_at": "2026-10-26T16:33:38.361851+07:00",
+  "host": "103.73.232.201",
+  "smoke_metadata": {
+    "status": "RUNNING",
+    "stage": "smoke",
+    "code_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+    "lock_sha256": "b6300820b3caf0395911bd19155cd9a7e4cea39283ca1e6438bf42a3f0f0ac06",
+    "started_utc": "2026-10-26T09:27:16.758662+00:00",
+    "failures": [],
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null,
+    "new_current_dev_qrel_sources_opened": 0
+  },
+  "full_metadata": null,
+  "workers": [
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/worker",
+      "metadata_status": "B1P_NEURAL_SMOKE_PASS",
+      "process": {
+        "status": "EXITED",
+        "started_utc": "2026-10-26T09:28:07.057391+00:00",
+        "request_sha256": "62c669591e120b165019b4d2fa46560f0d32c688d35655cba770e12082b1a0de",
+        "argv": [
+          "/root/paper-P2/.venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/ops/b1p_neural_worker.py",
+          "--request",
+          "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_simplelinear_official_final50_mlp5/request.json"
+        ],
+        "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+        "pid": 17686,
+        "returncode": 0,
+        "signal_number": null,
+        "signal_name": null,
+        "ended_utc": "2026-10-26T09:29:48.058925+00:00",
+        "stdout_sha256": "7cdee3c9e87a5ffcff1f614017108e358d2583cf63b9d337eb5418e288fd0534",
+        "stderr_sha256": "4c09ec55a04fcdd093625bdc759fd1f243ccf4642bf94ae4c433094ddb0987a9",
+        "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n"
+      },
+      "pid_exists": false,
+      "last_resource": {
+        "unix": 1793006976.852467,
+        "pid": 17686,
+        "process_rss_bytes": 1438203904,
+        "host_available_memory_bytes": 2088547950592,
+        "host_cpu_percent": 16.4,
+        "own_cuda_allocated_bytes": 83657728,
+        "own_cuda_reserved_bytes": 111149056,
+        "own_peak_cuda_allocated_bytes": 95968768,
+        "own_peak_cuda_reserved_bytes": 111149056
+      },
+      "resume_smoke_snapshots": []
+    },
+    {
+      "path": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/worker",
+      "metadata_status": "RUNNING",
+      "process": {
+        "status": "RUNNING",
+        "started_utc": "2026-10-26T09:29:48.258138+00:00",
+        "request_sha256": "98808cb31aea65547587f0c29c39fbe4ff4c40ce6d3d0f99dd000760fa8ddcae",
+        "argv": [
+          "/root/paper-P2/.venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/ops/b1p_neural_worker.py",
+          "--request",
+          "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_smoke_mini_r3b_20261026/neural/synthetic_seed17_allpaid28819_embedding_converter_paper_spec/request.json"
+        ],
+        "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+        "pid": 17832
+      },
+      "pid_exists": true,
+      "last_resource": {
+        "unix": 1793007218.2552295,
+        "pid": 17832,
+        "process_rss_bytes": 1373888512,
+        "host_available_memory_bytes": 2088660172800,
+        "host_cpu_percent": 16.3,
+        "own_cuda_allocated_bytes": 67177984,
+        "own_cuda_reserved_bytes": 69206016,
+        "own_peak_cuda_allocated_bytes": 68253696,
+        "own_peak_cuda_reserved_bytes": 69206016
+      },
+      "resume_smoke_snapshots": [
+        "selection_uninterrupted_resume.pt"
+      ]
+    }
+  ]
+}

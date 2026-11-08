@@ -1,0 +1,17 @@
+{
+  "audit_scope": "Five r1 release claim surfaces against raw quantitative evidence; no manuscript supplied.",
+  "tool": "spawn_agent",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "fork_turns": "none",
+  "reviewer": "/root/release_zero_context_audit",
+  "input_policy": "Read only START_HERE.html, CLAIM_LOCK.md/json, README.md, REPRODUCE.md as claims; raw JSON/CSV/TSV/NPY/config/protocol/source as evidence. No executor summaries, prior audits or conversation.",
+  "audited_input_hashes": {
+    "CLAIM_LOCK.json": "b79e3bb38445d8e67d82e4e829b309e82fd4e4bd6735b3155272047bcee4b4eb",
+    "CLAIM_LOCK.md": "7142006a2634607bcf658d0a160db39a5101461819ffff787fdb2ffa7acfc2b4",
+    "README.md": "be7195c3b923abc22da9e2c018c3a0c90f0fc792119780a79ce8e1deb407c70b",
+    "REPRODUCE.md": "38da8c359dd5684438b91db7cda650863771a3afb0e6fdc0306b45dd16ba16d5",
+    "START_HERE.html": "19709eb5f738e74a04a349e4697ec1b6b8c7e19bd2690218600e5a46c46fe77b"
+  },
+  "request_trace_note": "This record captures the actual input list and policy; original full prompt remains in session tool history. No completed reviewer verdict was returned."
+}

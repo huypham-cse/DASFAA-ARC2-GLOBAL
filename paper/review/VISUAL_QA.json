@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "reviewer": "parent visual inspection with fresh presentation-review corroboration",
+  "checked_at_utc": "2026-11-01T19:14:40.960608+00:00",
+  "pdf_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+  "pages_rendered": 16,
+  "all_page_contact_sheet_inspected": true,
+  "detail_pages_inspected": [
+    3,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "known_clipping_or_overlap": false,
+  "table_policy": "ARC2 tint; best/second computed from full-precision matched adapter means, native references separated; cross-budget table uses identity tint rather than rank emphasis.",
+  "figure_policy": "Complete method/native panels, true LaTeX serif, two DEV panels/four TREC panels, full continuous ablation intervals.",
+  "rendered_page_sha256": {
+    "aciids_final_page-01.png": "fc67a8dd61fd045c654c3dbf4104b872579768c7f2e5812746aff099f585abf3",
+    "aciids_final_page-02.png": "aadaabd332fe008aa0e60fe9d8ed9b297efe5a21cc502af77426a80d94e1838f",
+    "aciids_final_page-03.png": "1134d03344884e15977bcd03aa97feb8d7be0e0d4227d413b2eec0a637703412",
+    "aciids_final_page-04.png": "ee8bbe252bf9d8a81610b191ce7a280534487c872748811b33e3409deb212247",
+    "aciids_final_page-05.png": "5505b43b32d72223e1f507627da6d83396c71f012d8995b604c79eca459d8947",
+    "aciids_final_page-06.png": "4a9bbab4fb4802cadcfbdbcdc777e27254af76083eeeddbdc4dfb4342fafcdc6",
+    "aciids_final_page-07.png": "427678af7c1429453cd9848df0b1c5192d6e57172984de90094d848ba04b48df",
+    "aciids_final_page-08.png": "5debc06fe6311fd5d32a8efc4cc73f19fe72cf93d57f76ec4d2a398369900e4e",
+    "aciids_final_page-09.png": "70be961d1bc0082f5fcf7ee935df9fe471941215da103b630482119d5704a034",
+    "aciids_final_page-10.png": "3675321594ba420188c9968f229ecf1a1eeceb4b826b9133396f3c03d0904c87",
+    "aciids_final_page-11.png": "be68783bad955eddc83ef19acb7293ef7d53f142dd588a24ca310ca4706ccf5e",
+    "aciids_final_page-12.png": "813053e62a886d290879bf5dd50532262134626be4890f6da75606a48a083168",
+    "aciids_final_page-13.png": "7afd9c631d22208282c05bd096b8c6d2355ada73b123fdcda39cd3e1666994da",
+    "aciids_final_page-14.png": "7bf1b2efade86394d25900bd5ea43ab2fad73a15634652b91d219dbcdd5899b9",
+    "aciids_final_page-15.png": "576f63cada73d5da6b437112b1d647708f2d356639dc1840dd36c159a56fb004",
+    "aciids_final_page-16.png": "c7f1d42d0d72f794394fb4c032a91b18e590908375f977bc1dd7216b62d25882"
+  },
+  "scope": "Layout/legibility only; numerical audit is separate."
+}

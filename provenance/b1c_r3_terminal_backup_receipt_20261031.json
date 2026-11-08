@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-31T06:06:01.439150+00:00",
+  "status": "COMPLETE_CAMPAIGN_BACKED_UP",
+  "scope": "Current B1c-R3 full/smoke/schedule outputs only; not all historical projects or runtime/source caches",
+  "backup_root": "D:\\ARC2-B1c-R3-backup-20261030",
+  "terminal_coverage_path": "D:\\ARC2-B1c-R3-backup-20261030\\coverage_20261031T060505_897543Z.json",
+  "terminal_coverage_sha256": "6ac58eed1a2ea4db868ba776a94f61b60794efceda23ebf32c536dc38e519255",
+  "local_coverage_copy": "provenance/qa/b1c_r3_terminal_backup_coverage_20261031.json",
+  "files": 2484,
+  "bytes": 64478738712,
+  "groups": 120,
+  "pending": 0,
+  "campaign_status": "B1C_R3_SCORED_STOP_FOR_D1"
+}

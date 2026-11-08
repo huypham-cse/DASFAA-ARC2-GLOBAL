@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-30T03:48:26+00:00",
+  "b1c_r3_full_mini_r3b_20261030t0347": {
+    "status": "B1C_R3_RUNNING",
+    "failures": [],
+    "wall_seconds": null,
+    "ranking_count": null
+  },
+  "b1c_r3_schedule_mini_r3b_20261030t0347": {
+    "status": "RUNNING",
+    "failures": null,
+    "wall_seconds": null,
+    "ranking_count": null
+  },
+  "b1c_r3_smoke_mini_r3b_20261030t0347": {
+    "status": "B1C_R3_SMOKE_PASS",
+    "failures": [],
+    "wall_seconds": 56.04376174882054,
+    "ranking_count": null
+  },
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "FiQA_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec",
+    "group_index": 2,
+    "groups_total": 120,
+    "rankings_complete": 4,
+    "rankings_total": 358
+  },
+  "targets": {
+    "status": "PASS",
+    "before_any_fit": true,
+    "slices": 120
+  },
+  "synthetic_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_SMOKE_PASS",
+    "failures": [],
+    "wall_seconds": 31.713178704492748
+  },
+  "synthetic_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_SMOKE_PASS",
+    "failures": [],
+    "wall_seconds": 13.584340767934918
+  }
+}

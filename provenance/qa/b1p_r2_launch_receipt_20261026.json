@@ -1,0 +1,12 @@
+{
+  "code_commit": "8afb4c1974879fa0e20ddd12681b73b7bc94cf2d",
+  "checkout": "/root/arc2_global_paper_20261025/code_8afb4c1_r2",
+  "tmux": "arc2global_b1p_r2_20261026",
+  "smoke": "/root/arc2_global_paper_20261025/code_8afb4c1_r2/results/b1p_smoke_r2_20261026",
+  "full": "/root/arc2_global_paper_20261025/code_8afb4c1_r2/results/b1p_full_r2_20261026",
+  "started_at": "2026-10-26T08:48:42.450017+00:00",
+  "automatic_full_only_after_smoke_pass": true,
+  "next_item_auto_launch": false,
+  "old_run_unchanged": true,
+  "no_time_or_memory_caps": true
+}

@@ -1,0 +1,134 @@
+{
+  "citation_key": "yang2026translation",
+  "audit_type": "fresh_single_entry_current_inputs",
+  "audited_at_utc": "2026-11-01T14:13:03.335697+00:00",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "verdict": "KEEP",
+  "manuscript_wording_frozen": true,
+  "manuscript_edits": false,
+  "experiments": false,
+  "prior_opinions_read": false,
+  "inputs": [
+    {
+      "path": "paper/references.bib",
+      "sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+      "bytes": 6442,
+      "hash_scope": "complete file, original bytes"
+    },
+    {
+      "path": "paper/sections/related-work.tex",
+      "sha256": "c2908b8289c07214f10cf548acbd4436da970fdd0a487b62669b115ab492167b",
+      "bytes": 4575,
+      "hash_scope": "complete file, original bytes"
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "sha256": "ceb05f7d9303ea5560b646fe9b25f81f7a6b772557fb7b747ae89190d98530fc",
+      "bytes": 10346,
+      "hash_scope": "complete file, original bytes"
+    }
+  ],
+  "excerpts": [
+    {
+      "name": "current_bib_entry",
+      "sha256": "e6fd7586835840c8b1fedebf2205fbbc9a2a4628162065b771044233f5bdc725",
+      "hash_scope": "extracted UTF-8 text, original CRLF retained, no appended newline",
+      "text": "@inproceedings{yang2026translation,\r\n  author = {Yang, Beining and Cao, Yang},\r\n  title = {Generalizable and Composable Multi-Model Embedding Translation},\r\n  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},\r\n  volume = {306},\r\n  pages = {144275--144302},\r\n  year = {2026},\r\n  url = {https://proceedings.mlr.press/v306/yang26e.html},\r\n}"
+    },
+    {
+      "name": "current_citing_paragraph",
+      "sha256": "70070384d300ee314608c1de06c48e3c4fa1550149f5e06588c6952961e842c5",
+      "hash_scope": "extracted UTF-8 text, original CRLF retained, strip boundary whitespace",
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and residual regularization along target principal directions~\\cite{yang2026translation}.\nTheir localized expert structure addresses broader multi-model integration; our directional target uses the tangent plane at each anchor's current prediction, and both corrections collapse into one global affine map.\nHMoE provides related-work context; our evaluated panel comprises the five configurations specified in Sect.~\\ref{sec:setup}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    },
+    {
+      "name": "current_tangent_subsection",
+      "sha256": "6e9b8948d696b05ed4b66c34348014e860a195c3c548f6f3b5f37226ec10b010",
+      "hash_scope": "extracted UTF-8 text, original CRLF retained, strip boundary whitespace",
+      "text": "\\subsection{Two Tangent-Residual Ridge Corrections}\n\\label{sec:tangent}\n\nWrite $\\mathcal N(z)=z/\\|z\\|_2$ for a nonzero vector $z$.\nCosine retrieval depends on document direction, whereas a raw vector residual\nalso contains a radial component. We therefore project each anchor target\nonto the tangent plane at its current predicted direction. Let\n$\\widetilde{X}=[X_A,\\mathbf{1}]$. At update $t\\in\\{0,1\\}$, for anchor $j$ set\n\\begin{align}\n z_j^{(t)}&=\\widetilde{x}_jB_t,&\n r_j^{(t)}&=\\|z_j^{(t)}\\|_2,&\n u_j^{(t)}&=z_j^{(t)}/r_j^{(t)},\\nonumber\\\\\n T_j^{(t)}&=r_j^{(t)}\\left[y_j-\n \\bigl(u_j^{(t)}y_j^\\top\\bigr)u_j^{(t)}\\right].\n \\label{eq:tangent-target}\n\\end{align}\nThe bracketed term is orthogonal to $u_j^{(t)}$. The norm factor converts this\ndirectional discrepancy into a target in raw prediction coordinates.\n\nThe target has a direct cosine-loss interpretation. For a nonzero row\nprediction $z$ and unit destination anchor $y_j$, define\n$\\ell_j(z)=1-y_j\\mathcal N(z)^\\top$. Differentiation gives\n\\begin{equation}\n \\nabla_z\\ell_j(z)=-\\frac{y_j-(uy_j^\\top)u}{\\|z\\|_2},\n \\qquad T_j^{(t)}=-(r_j^{(t)})^2\\nabla_z\\ell_j(z_j^{(t)}).\n \\label{eq:cosine-target}\n\\end{equation}\nThus the target is a norm-scaled negative cosine gradient, expressed in\nraw prediction coordinates. The shared affine regression smooths these\ntargets across anchors; its fitted row corrections need not themselves\nbe tangent. Retrieval benefit is assessed for the finite fitted procedure.\n\nOne global ridge regression shares these correction targets across anchors.\nStacking their rows into $T^{(t)}$, we solve\n\\begin{align}\n \\Delta_t&=\\mathop{\\arg\\min}_{\\Delta\\in\\mathbb{R}^{p\\times d_t}}\n \\|\\widetilde{X}\\Delta-T^{(t)}\\|_F^2+\\lambda\\|\\Delta\\|_F^2,\n \\label{eq:ridge-objective}\\\\\n &=\\widetilde{X}^{\\top}\n (\\widetilde{X}\\widetilde{X}^{\\top}+\\lambda I_m)^{-1}T^{(t)},\n \\qquad B_{t+1}=B_t+\\Delta_t .\n \\label{eq:tangent-update}\n\\end{align}\nThe penalty regularizes the correction, including its intercept. Equivalently,\nchanging variables to the updated coefficient matrix yields\n\\begin{equation}\n B_{t+1}=\\mathop{\\arg\\min}_C\n \\|\\widetilde X C-(\\widetilde X B_t+T^{(t)})\\|_F^2\n +\\lambda\\|C-B_t\\|_F^2.\n \\label{eq:current-prior}\n\\end{equation}\nThis fit centers its correction penalty on the current affine map while\nmatching norm-scaled cosine descent targets. Unlike direct\nzero-centered ridge onto $Y_A$, the update retains the existing alignment\nwhile fitting its directional correction. We fix $\\lambda=10$ and perform\nexactly two updates, recomputing targets after the first; the development\nablation in Sect.~\\ref{sec:results} measures the second update's contribution.\nA Cholesky\nfactorization is reused across updates. The refined map is unconstrained;\nfitting requires paired document vectors and linear solves, with no neural\nmapper training.\n\nThe norm factor also gives positive global scale equivariance. In exact\narithmetic with nonzero predictions, $T(cB)=cT(B)$ for a common $c>0$.\nLinearity of the ridge solve therefore scales each update by $c$; by\ninduction both accumulated maps scale by $c$, leaving normalized inference\nunchanged. This property concerns a common coefficient scale, not arbitrary\nper-document changes or guaranteed finite-step cosine improvement.\n\n\\begin{table}[t]\n\\caption{\\method\\ fitting and gallery construction. All document vectors supplied\nto fitting or replacement are unit normalized.}\n\\label{tab:algorithm}\n\\centering\n\\begin{minipage}{0.97\\linewidth}\n\\small\n\\begin{tabular}{@{}r p{0.89\\linewidth}@{}}\n\\toprule\n1 & Form paired anchors $X_A,Y_A$ and augmented design\n    $\\widetilde{X}=[X_A,\\mathbf{1}]$.\\\\\n2 & Compute centered Procrustes and raw affine $B_0$\n    using Eqs.~\\eqref{eq:procrustes}--\\eqref{eq:affine-init}.\\\\\n3 & Factor $\\widetilde{X}\\widetilde{X}^{\\top}+10I_m$ once.\\\\\n4 & For $t=0,1$: compute $T^{(t)}$ from Eq.~\\eqref{eq:tangent-target},\n    solve Eq.~\\eqref{eq:tangent-update}, and accumulate $B_{t+1}$.\\\\\n5 & Store $B_2$; map documents with\n    $\\widehat{y}_i=\\mathcal{N}([x_i,1]B_2)$.\\\\\n6 & Replace rows in $S$ by $y_i$; search with destination query vectors.\\\\\n\\bottomrule\n\\end{tabular}\n\\end{minipage}\n\\end{table}"
+    }
+  ],
+  "axes": [
+    {
+      "axis": "bibliographic_accuracy",
+      "verdict": "KEEP",
+      "finding": "Current authors, title, ICML 43 booktitle, PMLR volume 306, pages 144275--144302, year 2026 and canonical URL match the live publisher record. Optional series/publisher fields are not required corrections.",
+      "primary_evidence": [
+        "https://proceedings.mlr.press/v306/yang26e.html"
+      ]
+    },
+    {
+      "axis": "claim_support",
+      "verdict": "KEEP",
+      "finding": "All technical attributions in the frozen citing paragraph are supported by the publisher abstract and author PDF; the per-anchor tangent comparison matches the current method equations.",
+      "primary_evidence": [
+        "https://proceedings.mlr.press/v306/yang26e.html",
+        "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf"
+      ]
+    },
+    {
+      "axis": "citation_use_and_scope",
+      "verdict": "KEEP",
+      "finding": "HMoE is relevant context for document embedding translation and geometric residual control. The text does not present an HMoE reproduction or performance comparison. The five-configuration panel is this study's metadata, not an assertion sourced to HMoE.",
+      "primary_evidence": [
+        "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf"
+      ],
+      "local_evidence": [
+        "paper/sections/related-work.tex",
+        "paper/sections/method.tex"
+      ]
+    }
+  ],
+  "technical_checks": [
+    {
+      "claim": "hierarchical mixture of experts and localized expert structure",
+      "verdict": "KEEP",
+      "evidence": "Section 3, PDF pp. 4--6: a binary source-space hierarchy selects local experts; node-specific LoRA adapts a shared neural translator."
+    },
+    {
+      "claim": "out-of-distribution translation, multi-model mixing and chaining",
+      "verdict": "KEEP",
+      "evidence": "Abstract and Sections 4--5: cross-dataset OOD, common-target mixing and composed multi-hop translation are explicit settings."
+    },
+    {
+      "claim": "residual regularization along target principal directions versus per-anchor tangent targets",
+      "verdict": "KEEP",
+      "evidence": "Sections 4.1--4.2, PDF pp. 6--7: target-training PCA supplies PC1/PC2; projection penalties shape mixing and chaining residuals. Current Eq. tangent-target instead projects each target onto the plane orthogonal to its own current prediction and scales by its norm. Both fitted ARC2 corrections accumulate into B2."
+    }
+  ],
+  "five_baseline_panel": {
+    "classification": "local study metadata",
+    "attributed_to_hmoe": false,
+    "external_paper_cannot_verify_local_panel": true,
+    "local_results_audit_performed": false
+  },
+  "sources": [
+    {
+      "url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "role": "live primary publisher metadata and abstract",
+      "access": "successful live web retrieval",
+      "accessed_date": "2026-11-01"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf",
+      "role": "author PDF linked by publisher",
+      "access": "successful direct HTTPS download; full PDF extracted for relevant method text",
+      "local_path": "paper/review/final_review_20261101/citations/yang2026translation.current.primary.pdf",
+      "bytes": 1698281,
+      "sha256": "38b35ae4755468e2619731e527d216792b936008e343c09e229c8e4f04856c05"
+    },
+    {
+      "url": "https://openreview.net/forum?id=qmfp2eqYD1",
+      "role": "publisher-linked secondary access route",
+      "access": "browser verification challenge; not used as evidence"
+    }
+  ],
+  "access_limitations": [
+    "Web PDF parser rejected application/octet-stream; direct HTTPS download succeeded.",
+    "Text extraction reported an XObject-invocation limit for some form content; the relevant Sections 3--4 and equations were present in extracted text. No visual or numerical reproduction claim is audited."
+  ],
+  "required_changes": [],
+  "proposed_wording": null,
+  "scope_limit": "Source and citation-use audit only; no novelty verdict, new experiments, baseline reproduction or local result verification."
+}

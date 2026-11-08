@@ -1,0 +1,86 @@
+{
+  "group_id": "NanoFEVER_minilm_distilroberta_seed53_fixed1024_ridge_affine_l10_bias_regularized",
+  "dataset": "NanoFEVER",
+  "pair": "minilm_distilroberta",
+  "method": "ridge_affine_l10_bias_regularized",
+  "seed": 53,
+  "regime": "fixed1024",
+  "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/groups/NanoFEVER_minilm_distilroberta_seed53_fixed1024_ridge_affine_l10_bias_regularized/rank",
+  "old_docs": {
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/minilm_x_docs.npy",
+    "sha256": "1ec9e11882ea7138914d295241ce1a07f3be74dc359f1c6cde773694ecc4752c"
+  },
+  "new_queries": {
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/distilroberta_y_queries.npy",
+    "sha256": "6ccba0d17b2d2b9ac9a53235f7c5fe14e4f4fcd47a6c2e3860f88d62778c17a4"
+  },
+  "ids": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/1ac5a707750d824545739dec733dbe95046841e083da4a7674f522b1ff48aba2.json",
+    "sha256": "1ac5a707750d824545739dec733dbe95046841e083da4a7674f522b1ff48aba2"
+  },
+  "sample_positions": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_NanoFEVER_28e06e293059a02d.npy",
+    "sha256": "3a554be31ea5a0e831781eeafc386268ea7fe5f45afbfa93bfa5e30d04663cdb"
+  },
+  "anchors": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/1102150adc0e97c216e035e26964ad3c8c38c76464351bce517406f1b90d9575.npy",
+    "sha256": "1102150adc0e97c216e035e26964ad3c8c38c76464351bce517406f1b90d9575"
+  },
+  "proxy": {
+    "kind": "b1m_parameters",
+    "file": {
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/NanoFEVER_minilm_distilroberta_seed53/parameters.npz",
+      "sha256": "e42a8b045a664fb5a50a5b2a960a489d0a21126de137c5dc2d7d1e5c16bbec8f"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "NanoFEVER_minilm_distilroberta_seed53_fixed1024_ridge_affine_l10_bias_regularized_25pct",
+      "budget": "25pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/17810c0032d79b7ccc22b17a46be22965fdb08deb92db94e5297b2fc82b3d086.npy",
+        "sha256": "17810c0032d79b7ccc22b17a46be22965fdb08deb92db94e5297b2fc82b3d086"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/09e2a81bebb3bb18dbf8b9c59c2c217fcea1e12ff20862058541b58a35cfb4e4.npy",
+        "sha256": "1e60d2031e57f0ac0cd299664532df433ecddd3478396ca32c2290d4a62494ed"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoFEVER_minilm_distilroberta_ridge_affine_l10_bias_regularized_seed53_25pct.npy",
+        "sha256": "ee06490148553507837b0dda3b895a2502af6c8ada5bb649cbca3b75bca38bfb"
+      }
+    },
+    {
+      "case_id": "NanoFEVER_minilm_distilroberta_seed53_fixed1024_ridge_affine_l10_bias_regularized_50pct",
+      "budget": "50pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/b6c2db22d6f3fa42ab9dd483be5d3b6eed01750c9d852dfe9dc3e4b78c4d7d06.npy",
+        "sha256": "b6c2db22d6f3fa42ab9dd483be5d3b6eed01750c9d852dfe9dc3e4b78c4d7d06"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/69a2878a0184a453bd339870cabc18704e58d44f9e6db41b2767674cc726dab9.npy",
+        "sha256": "f851a0a8904e523bd074deac61c9cd3f7e4412cadd2b8c5bea23b24a819f0de3"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoFEVER_minilm_distilroberta_ridge_affine_l10_bias_regularized_seed53_50pct.npy",
+        "sha256": "e3ca6f62243d70f7e1e5612bdb6996b918b9b1550321a001ec6424efada8031a"
+      }
+    },
+    {
+      "case_id": "NanoFEVER_minilm_distilroberta_seed53_fixed1024_ridge_affine_l10_bias_regularized_75pct",
+      "budget": "75pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/f336f9ee4016bf3af96fb128fe9739d79b481ab12d7c00272731cc3061045112.npy",
+        "sha256": "f336f9ee4016bf3af96fb128fe9739d79b481ab12d7c00272731cc3061045112"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/af0c5c18666cd9995c14fec69fb036f8a4968647e16e291c313875f9b05d5c33.npy",
+        "sha256": "f11b1ef4d8cc8fb7f2d76a2fc2119a783bcbd331d610738207c2c34be3018a5d"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoFEVER_minilm_distilroberta_ridge_affine_l10_bias_regularized_seed53_75pct.npy",
+        "sha256": "feeac880268887e4705f0aa56982585f3046e51495f6f55742ac5ff8b0a3b829"
+      }
+    }
+  ]
+}

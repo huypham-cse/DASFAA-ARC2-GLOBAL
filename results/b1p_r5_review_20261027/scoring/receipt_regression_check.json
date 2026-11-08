@@ -1,0 +1,6 @@
+{
+  "original_duplicate_exclusive_write": "FileExistsError reproduced",
+  "recovery_started_receipt": "final status written once",
+  "changed_original_metadata": "rejected against pinned SHA256",
+  "qrel_access": false
+}

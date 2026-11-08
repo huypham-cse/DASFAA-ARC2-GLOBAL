@@ -1,0 +1,15 @@
+{
+  "before_copy_utc": "2026-10-26T10:54:22.952760+00:00",
+  "after_copy_utc": "2026-10-26T10:54:37.351489+00:00",
+  "source_live_snapshot": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+  "frozen_copy": "/root/arc2_global_paper_20261025/handoff_full_h100_r4_20261026/original_selection_resume.pt",
+  "sha256": "3fd9244b2845426a1cd4c998cbbafa04a0c6d94e864364162c207d310966b8d3",
+  "bytes": 542868440,
+  "source_pid": 18841,
+  "source_campaign_pid": 17609,
+  "source_request_sha256": "125627957cf27f23aef145c0ea0b659c44e6db93d6d7a98c175c72e185841c01",
+  "latest_logged_step_at_freeze": 23000,
+  "snapshot_step": "read from frozen snapshot, not inferred from current log",
+  "source_run_untouched": true,
+  "source_still_running": true
+}

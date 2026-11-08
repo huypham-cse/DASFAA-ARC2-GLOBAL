@@ -1,0 +1,11 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "ridge_affine_l10_bias_regularized",
+  "fit_pairs": 28819,
+  "fit_seconds": 4.305598595179617,
+  "mapping_seconds": 4.298523780889809,
+  "phases": {},
+  "parameters_sha256": "26907c4791c133798260e87522c137989a00c5b880c727b639ca447aeeb663fa",
+  "backend_id": null,
+  "new_physical_document_encodes": 0
+}

@@ -1,0 +1,203 @@
+{
+  "status": "SIMPLELINEAR_OFFICIAL_CUDA_CHECKS_PASS",
+  "scope": "official-code synthetic adapter validation only",
+  "new_qrel_reads": 0,
+  "real_dataset_or_encoder_loaded": false,
+  "checks": [
+    {
+      "seed": 17,
+      "status": "PASS",
+      "fit_pairs": 32,
+      "dims": [
+        384,
+        768
+      ],
+      "actual_affine_layers": 5,
+      "activation": "SELU",
+      "epochs": 50,
+      "batch_size": 4028,
+      "initial_loss": 0.5243103504180908,
+      "final_eval_loss": 0.08784514665603638,
+      "gradient_norm": 0.06255080550909042,
+      "initial_state_sha256": "994e820a118b3eefedfb51ae249e08b64b3d91537932ef3da9d9f036a2c55374",
+      "final_state_sha256": "01750e5780ad6781574b5b59636c902a4417491e85e86590bf7270e94e2b6f7b",
+      "direct_state_sha256": "01750e5780ad6781574b5b59636c902a4417491e85e86590bf7270e94e2b6f7b",
+      "max_raw_prediction_delta": 0.0,
+      "paid_documents": 48,
+      "paid_only_overwrite_and_unpaid_identity": true,
+      "official_reported_last_epoch_loss": 0.0912603810429573,
+      "wall_seconds": 3.7289411425590515,
+      "own_peak_cuda_allocated_bytes": 117149696
+    },
+    {
+      "seed": 29,
+      "status": "PASS",
+      "fit_pairs": 32,
+      "dims": [
+        384,
+        768
+      ],
+      "actual_affine_layers": 5,
+      "activation": "SELU",
+      "epochs": 50,
+      "batch_size": 4028,
+      "initial_loss": 0.5328804850578308,
+      "final_eval_loss": 0.0915636271238327,
+      "gradient_norm": 0.063742496073246,
+      "initial_state_sha256": "0b1c164540f48b3c406bd984355ffd676b8660c5f8b16714553b36f174a94628",
+      "final_state_sha256": "07b3ee20fb78d8f657cc2cc47084a85e0182b6a885cc119437d9c49b012ac74c",
+      "direct_state_sha256": "07b3ee20fb78d8f657cc2cc47084a85e0182b6a885cc119437d9c49b012ac74c",
+      "max_raw_prediction_delta": 0.0,
+      "paid_documents": 48,
+      "paid_only_overwrite_and_unpaid_identity": true,
+      "official_reported_last_epoch_loss": 0.09507308155298233,
+      "wall_seconds": 1.9198672780767083,
+      "own_peak_cuda_allocated_bytes": 117149696
+    },
+    {
+      "seed": 41,
+      "status": "PASS",
+      "fit_pairs": 32,
+      "dims": [
+        384,
+        768
+      ],
+      "actual_affine_layers": 5,
+      "activation": "SELU",
+      "epochs": 50,
+      "batch_size": 4028,
+      "initial_loss": 0.5218630433082581,
+      "final_eval_loss": 0.08707993477582932,
+      "gradient_norm": 0.06304766982793808,
+      "initial_state_sha256": "45c5361426199616f1f9e67eececce10ff3c5cc2254e96de0d69a0c51cebc8f0",
+      "final_state_sha256": "516b5e52a3dc87bd84ec5d88a0be15be596a46b5e962b3c020f2e5d3723b3103",
+      "direct_state_sha256": "516b5e52a3dc87bd84ec5d88a0be15be596a46b5e962b3c020f2e5d3723b3103",
+      "max_raw_prediction_delta": 0.0,
+      "paid_documents": 48,
+      "paid_only_overwrite_and_unpaid_identity": true,
+      "official_reported_last_epoch_loss": 0.09050751477479935,
+      "wall_seconds": 1.9287792835384607,
+      "own_peak_cuda_allocated_bytes": 117149696
+    },
+    {
+      "seed": 53,
+      "status": "PASS",
+      "fit_pairs": 32,
+      "dims": [
+        384,
+        768
+      ],
+      "actual_affine_layers": 5,
+      "activation": "SELU",
+      "epochs": 50,
+      "batch_size": 4028,
+      "initial_loss": 0.5277805924415588,
+      "final_eval_loss": 0.09097651392221451,
+      "gradient_norm": 0.06355200707912445,
+      "initial_state_sha256": "a1f223cbd566c15c4175607f343dc735c49e7c741d4865c0694c1acbd17739b3",
+      "final_state_sha256": "09c1e5047bf64b61cd169f7ff21e55d199d861167edb6303e1d99f67c59f890a",
+      "direct_state_sha256": "09c1e5047bf64b61cd169f7ff21e55d199d861167edb6303e1d99f67c59f890a",
+      "max_raw_prediction_delta": 0.0,
+      "paid_documents": 48,
+      "paid_only_overwrite_and_unpaid_identity": true,
+      "official_reported_last_epoch_loss": 0.09447814524173737,
+      "wall_seconds": 1.9185551581904292,
+      "own_peak_cuda_allocated_bytes": 117149696
+    },
+    {
+      "seed": 67,
+      "status": "PASS",
+      "fit_pairs": 32,
+      "dims": [
+        384,
+        768
+      ],
+      "actual_affine_layers": 5,
+      "activation": "SELU",
+      "epochs": 50,
+      "batch_size": 4028,
+      "initial_loss": 0.5268234014511108,
+      "final_eval_loss": 0.08852556347846985,
+      "gradient_norm": 0.0631638690829277,
+      "initial_state_sha256": "e6d59f23c4c4000981fdb51e2f0525b74771a0af5759bbcd22b5d557b804ab5b",
+      "final_state_sha256": "cff69ceadf4fba7f66137d0094ea71c85b6eebaa5b2c40a82603762d63c51652",
+      "direct_state_sha256": "cff69ceadf4fba7f66137d0094ea71c85b6eebaa5b2c40a82603762d63c51652",
+      "max_raw_prediction_delta": 0.0,
+      "paid_documents": 48,
+      "paid_only_overwrite_and_unpaid_identity": true,
+      "official_reported_last_epoch_loss": 0.09199277311563492,
+      "wall_seconds": 1.8949470315128565,
+      "own_peak_cuda_allocated_bytes": 117149696
+    }
+  ],
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "executable": "/root/paper-P2/.venv/bin/python",
+  "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+  "failures": [],
+  "modules": {
+    "numpy": {
+      "version": "2.2.6",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/numpy/__init__.py"
+    },
+    "scipy": {
+      "version": "1.15.3",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/scipy/__init__.py"
+    },
+    "torch": {
+      "version": "2.6.0+cu124",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/torch/__init__.py"
+    },
+    "sklearn": {
+      "version": "1.6.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/sklearn/__init__.py"
+    },
+    "pydantic": {
+      "version": "2.14.1",
+      "file": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/pydantic/__init__.py"
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "file": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/faiss/__init__.py"
+    },
+    "loguru": {
+      "version": "0.7.3",
+      "file": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/loguru/__init__.py"
+    },
+    "tqdm": {
+      "version": "4.70.1",
+      "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/tqdm/__init__.py"
+    }
+  },
+  "cuda_runtime": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "official_mapper_file": "/root/arc2_p3h_20261020/upstream_clean/src/embedding_translation/mapper/simple_linear/strategy.py",
+  "configuration": {
+    "learning_rate": 0.0001,
+    "num_epochs": 50,
+    "batch_size": 4028,
+    "gradient_clip": 1.0,
+    "weight_decay": 1e-05,
+    "scheduler_patience": 5,
+    "scheduler_factor": 0.5,
+    "early_stopping_patience": 10,
+    "min_delta": 1e-06,
+    "device": null,
+    "layer_num": 4,
+    "activation": "selu",
+    "dropout": 0.0,
+    "hidden_dim": 512,
+    "use_local_distill": false,
+    "local_k": 50,
+    "local_tau": 0.1,
+    "local_weight": 0.5,
+    "faiss_use_float32": true,
+    "knn_recompute_epochs": 0,
+    "global_weight": 0.5,
+    "cosine_weight": 0.5,
+    "mse_weight": 1.0,
+    "normalize_output": false,
+    "loss_kind": "mse_cos"
+  },
+  "policy": "fixed final epoch on supplied pairs; no early stopping/checkpoint selection",
+  "wall_seconds": 14.649400560185313
+}

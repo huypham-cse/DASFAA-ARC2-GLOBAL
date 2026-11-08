@@ -1,0 +1,196 @@
+{
+    "schema_version":  1,
+    "design_id":  "tangent_control_design_20261102",
+    "status":  "PRE_RESULT_DESIGN_PENDING_EXECUTOR_REVIEW_AND_PROTOCOL_COMMIT",
+    "date":  "2026-11-02",
+    "review_scope":  "Internal same-family provisional scientific design; no scientific execution, qrels or manuscript changes",
+    "rationale":  "Existing zero-centered ridge comparison changes initialization/prior and target; matched controls separate these changes",
+    "methods":  [
+                    {
+                        "id":  "arc2_global_tangent2_r1",
+                        "label":  "Tangent2",
+                        "target":  "r*(y-c*u)",
+                        "role":  "frozen reference"
+                    },
+                    {
+                        "id":  "norm_scaled_chordal2_control_r1",
+                        "label":  "NormScaledChordal2",
+                        "target":  "r*(y-u)",
+                        "role":  "isolates radial inclusion at a common current map"
+                    },
+                    {
+                        "id":  "euclidean_residual2_control_r1",
+                        "label":  "EuclideanResidual2",
+                        "target":  "y-z",
+                        "role":  "ordinary coordinate residual retaining the same current-map prior"
+                    }
+                ],
+    "target_definitions":  {
+                               "X":  "[source_anchor,1]",
+                               "z":  "X*B",
+                               "r":  "row L2 norm(z)",
+                               "u":  "z/r",
+                               "y":  "unit destination anchor",
+                               "c":  "row dot(u,y)",
+                               "update":  "Delta=X.T*solve(X*X.T+10I,R); B_next=B+Delta",
+                               "objective":  "min_C ||XC-(XB+R)||_F^2+10||C-B||_F^2",
+                               "chordal_minus_tangent":  "r*(c-1)*u",
+                               "projected_chordal":  "P_u R_chordal = R_tangent",
+                               "projected_euclidean":  "P_u R_euclidean = R_tangent/r",
+                               "chordal_squared_norm":  "2*r^2*(1-c)",
+                               "tangent_squared_norm":  "r^2*(1-c^2)"
+                           },
+    "common_invariants":  {
+                              "initialization":  "identical raw centered rectangular Procrustes affine B0",
+                              "ridge_lambda":  10,
+                              "steps":  2,
+                              "intercept_penalized":  true,
+                              "recompute_target_on_own_current_map":  true,
+                              "no_between_step_normalization":  true,
+                              "update_dtype":  "float64",
+                              "exported_coefficient_dtype":  "float32",
+                              "inference":  "existing float32 augmented input affine product then row L2 normalization",
+                              "solver":  "existing dual Cholesky; no primary backend switch",
+                              "anchors":  1024,
+                              "paid_fraction":  0.5,
+                              "charge":  "|A union S|=|S|=floor(0.5N), A subset S",
+                              "anchor_and_paid_sets":  "reuse exact locked ordered FiQA selections",
+                              "inputs":  "same cached normalized vectors, prefixes, IDs/order, native destination queries and exclusions within pair/seed"
+                          },
+    "matrix":  {
+                   "dataset":  "FiQA development",
+                   "encoder_pairs":  [
+                                         "minilm_distilroberta",
+                                         "e5_small_base"
+                                     ],
+                   "seeds":  [
+                                 17,
+                                 29,
+                                 41,
+                                 53,
+                                 67
+                             ],
+                   "methods":  3,
+                   "final_rankings":  40,
+                   "method_trajectories":  30,
+                   "shared_initializations":  10,
+                   "shared_factorization_inputs":  10,
+                   "B0_and_one_step":  "B0 is fresh contextual fourth ranking row in same locked CPU environment; one-step snapshots diagnostic only",
+                   "prohibited_expansions":  [
+                                                 "new encoder/neural training",
+                                                 "method switch",
+                                                 "extra dataset",
+                                                 "lambda/step/anchor/budget sweep",
+                                                 "final-test qrel access"
+                                             ],
+                   "ranking_rows":  4,
+                   "cache_restriction":  "Retained paid75 target cache sliced by exact IDs/order to paid50 before fitting/target diagnostics; withheld25 excluded. Cache provenance is separate from logical exposure."
+               },
+    "hypothesis":  "Tangent2 has positive nDCG@10 paired differences against each control; all signs and unresolved outcomes admissible",
+    "primary_inference":  {
+                              "metric":  "nDCG@10",
+                              "paired_contrasts":  [
+                                                       "MiniLM:Tangent2-Chordal2",
+                                                       "MiniLM:Tangent2-Euclidean2",
+                                                       "E5:Tangent2-Chordal2",
+                                                       "E5:Tangent2-Euclidean2"
+                                                   ],
+                              "family_size":  4,
+                              "unit":  "query after averaging five mapping seeds per method",
+                              "bootstrap":  {
+                                                "draws":  20000,
+                                                "rng":  "numpy.default_rng/PCG64",
+                                                "seed":  20261102,
+                                                "paired_indices":  "same query draws jointly across methods and both pairs",
+                                                "quantile_method":  "linear",
+                                                "family_interval_level":  0.9875,
+                                                "family_quantiles":  [
+                                                                         0.00625,
+                                                                         0.99375
+                                                                     ],
+                                                "descriptive_interval_level":  0.95
+                                            },
+                              "decisions":  "Bonferroni percentile family interval above/below zero supports conditional positive/negative contrast; otherwise unresolved",
+                              "additional_p_tests":  false,
+                              "descriptive":  [
+                                                  "Recall@100",
+                                                  "equal-pair macro",
+                                                  "every seed paired mean, SD/range",
+                                                  "query win/tie/loss"
+                                              ],
+                              "scope":  "conditional query uncertainty only; does not account for selected development data, seed/encoder/dataset populations",
+                              "equivalence_margin":  null
+                          },
+    "retrieval":  {
+                      "method":  "exact float32 inner product",
+                      "output_topk":  100,
+                      "ties":  "descending exact score then ascending original document row index; no epsilon ties",
+                      "identical_id_exclusion":  "existing explicit rule",
+                      "metric_ties":  "exact equality of saved values",
+                      "ranking_seal_before_scorer":  true
+                  },
+    "smoke_checks":  [
+                         "independent B0/target/radial identities and frozen tangent parity",
+                         "normal equations and intercept regularization",
+                         "Euclidean Delta1=10*(X.T*X+10I)^-1*Delta0",
+                         "aligned unequal norm, oblique, antipodal, shared-row and held-out fixtures",
+                         "least-squares-stationary Euclidean no-op fixture",
+                         "positive scale invariance for tangent/chordal",
+                         "two updates, float64 retention, normalized inference and exact paid overwrite",
+                         "nonzero finite rows with existing \u003c=1e-12 guard",
+                         "unpaid proxy angular/score/ranking changes and X.T R diagnostics",
+                         "common-state C-T radial identity; do not compare diverged states"
+                     ],
+    "synthetic_tolerances":  {
+                                 "algebra_atol":  1E-10,
+                                 "algebra_rtol":  1E-10,
+                                 "frozen_per_step_float64_atol_rtol":  1E-09,
+                                 "exported_coefficient_proxy_score_maxabs":  1E-06,
+                                 "relative_normal_equation_residual":  1E-10,
+                                 "applicability":  "well-conditioned deterministic synthetic fixtures; preserve and diagnose all real drift"
+                             },
+    "no_op_policy":  "Unexpected identity on nontrivial coupled fixtures is an implementation STOP. Legitimate no-op is an outcome, never permission to modify controls. Algebraically diagnose real-data degeneracy before scoring; no post-hoc useful-effect cutoff.",
+    "run_order":  [
+                      "executor review",
+                      "commit precise protocol and source/input/runtime lock",
+                      "matching qrel-free smoke",
+                      "unique full 40-ranking directory",
+                      "complete ranking/metadata seal",
+                      "separate locked FiQA DEV scoring",
+                      "raw-file QA/tables and interpretation",
+                      "STOP before manuscript or method changes"
+                  ],
+    "resources":  {
+                      "no_artificial_time_ram_vram_cutoff":  true,
+                      "estimate":  "No credible hours without matched smoke; cached-vector linear algebra only",
+                      "record":  [
+                                     "phase wall time",
+                                     "RSS",
+                                     "versions",
+                                     "hashes",
+                                     "failures",
+                                     "shared load"
+                                 ]
+                  },
+    "interpretation":  [
+                           "Chordal is matched in r factor, not target length",
+                           "Tangent-versus-chordal isolates radial target inclusion at a common state, not a universal causal mechanism",
+                           "Tangent-versus-Euclidean also changes norm weighting/global scale behavior",
+                           "No isolated projection claim from Euclidean-only win",
+                           "No ordinary-Euclidean superiority claim from chordal-only win",
+                           "No independent paper win from FiQA development",
+                           "No physical deployment or broad geometric-baseline superiority claim"
+                       ],
+    "linked_markdown":  "TANGENT_CONTROL_DESIGN_20261102.md",
+    "inspected_input_sha256":  {
+                                   "src/arc2_global/model.py":  "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+                                   "src/arc2_global/mechanism_ablation.py":  "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+                                   "src/arc2_global/procrustes.py":  "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+                                   "src/arc2_global/numerics.py":  "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+                                   "src/arc2_global/retrieval.py":  "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+                                   "paper/sections/method.tex":  "2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b",
+                                   "paper/review/scoring_20261102/PAPER_SCORE.md":  "9c305d42ae870b423c4fcd82e42bdeff0a104d696f534cf2cae333c516bed901",
+                                   "paper/review/scoring_20261102/RESULT_TO_CLAIM_SCORE.md":  "198ff1f80177f343a01e40502ac2f1934b3b19b3fb93d2d3be70c51cdc87b2ef",
+                                   "paper/review/scoring_20261102/SCORECARD.md":  "8e699b0ce22ecdc74361e0d73fde787f44b97b0869f0d901964487dfa046deba"
+                               }
+}

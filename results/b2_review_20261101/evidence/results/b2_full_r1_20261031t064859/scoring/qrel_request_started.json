@@ -1,0 +1,11 @@
+{
+  "request_started_utc": "2026-10-31T20:12:17.410765+00:00",
+  "source": {
+    "format": "tsv",
+    "url": "https://huggingface.co/datasets/BeIR/trec-covid-qrels/resolve/532ac68ee6756ac22c9346eebf65bd3c6a042e10/test.tsv",
+    "revision": "532ac68ee6756ac22c9346eebf65bd3c6a042e10",
+    "bytes": 980831,
+    "git_blob_sha1": "9cb5167175d7cdbf9d85ea828c6a3da943fe7053"
+  },
+  "first_final_qrel_open_sha256": "01fcd0bc4b5f890eeb228eff8b1cd6cea8b15ee6afb6cc45e235b981be0421c2"
+}

@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "Existing generated numerical rows are identical to committed pre-revision values; TREC plot adds saved recall100 column. No raw/scientific code changed.",
+  "checks": [
+    {
+      "artifact": "allpaid_values.csv",
+      "existing_rows": 12,
+      "existing_columns": [
+        "method",
+        "pair",
+        "fixed_ndcg10",
+        "allpaid_ndcg10",
+        "allpaid_recall100"
+      ],
+      "unchanged_existing_values": true,
+      "added_columns": []
+    },
+    {
+      "artifact": "ablation_values.csv",
+      "existing_rows": 5,
+      "existing_columns": [
+        "contrast",
+        "left",
+        "right",
+        "delta",
+        "low",
+        "high"
+      ],
+      "unchanged_existing_values": true,
+      "added_columns": []
+    },
+    {
+      "artifact": "dev_complete_means.csv",
+      "existing_rows": 160,
+      "existing_columns": [
+        "dataset",
+        "pair",
+        "budget",
+        "method",
+        "ndcg10",
+        "recall100"
+      ],
+      "unchanged_existing_values": true,
+      "added_columns": []
+    },
+    {
+      "artifact": "trec_complete_means.csv",
+      "existing_rows": 40,
+      "existing_columns": [
+        "dataset",
+        "pair",
+        "budget",
+        "method",
+        "ndcg10",
+        "recall100"
+      ],
+      "unchanged_existing_values": true,
+      "added_columns": []
+    },
+    {
+      "artifact": "dev_quality_values.csv",
+      "existing_rows": 40,
+      "existing_columns": [
+        "pair",
+        "method",
+        "budget",
+        "ndcg10"
+      ],
+      "unchanged_existing_values": true,
+      "added_columns": []
+    },
+    {
+      "artifact": "trec_quality_values.csv",
+      "existing_rows": 40,
+      "existing_columns": [
+        "pair",
+        "method",
+        "budget",
+        "ndcg10"
+      ],
+      "unchanged_existing_values": true,
+      "added_columns": [
+        "recall100"
+      ]
+    }
+  ],
+  "scientific_tracked_changes": []
+}

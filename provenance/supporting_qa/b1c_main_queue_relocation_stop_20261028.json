@@ -1,0 +1,13 @@
+{
+  "status": "OPERATOR_RELOCATED_BEFORE_FULL",
+  "prior_queue_status": {
+    "status": "WAITING_FOR_VERIFIED_INPUT_TRANSFER",
+    "updated_unix": 1793157763.2486408,
+    "deployment_commit": "1df7c3eb39c671752e37fcda5dcfb004f51bd03d",
+    "TREC_access": false,
+    "next_phase_auto_launch": false,
+    "smoke_status": "B1C_SMOKE_PASS"
+  },
+  "reason": "Use available20GB MIG for full campaign; preserve Main smoke and all source data; no scientific full run began",
+  "time": 1793157768.3012536
+}

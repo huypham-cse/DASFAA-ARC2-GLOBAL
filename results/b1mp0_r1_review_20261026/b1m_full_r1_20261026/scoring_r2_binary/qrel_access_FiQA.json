@@ -1,0 +1,11 @@
+{
+  "dataset": "FiQA",
+  "first_dev_qrel_open": "2026-10-25T19:06:43.635645+00:00",
+  "first_access_receipt": "first_dev_qrel_open.json",
+  "expected_source": {
+    "format": "tsv",
+    "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+    "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+  },
+  "exposure": "DEV, not independent confirmation"
+}

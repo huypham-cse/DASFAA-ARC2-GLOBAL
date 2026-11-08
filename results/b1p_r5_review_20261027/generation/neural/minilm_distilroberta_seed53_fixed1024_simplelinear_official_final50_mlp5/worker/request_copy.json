@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "simplelinear",
+  "regime": "anchors",
+  "seed": 53,
+  "lockpath": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/configs/b1p_lock.json",
+  "output": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/worker",
+  "paired_source": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/paired_source.npy",
+  "paired_target": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5/paired_target.npy",
+  "full_source": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy",
+  "code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "input_sha256": {
+    "paired_source": "12809973ffc8e63d66e9b3ce57b84b65704db3519a7b9f30ab88b1c2d63a41da",
+    "paired_target": "16681cb00daf203f4aae419f0e6883a60a86c70052a2b7ff959bf04d98fce557",
+    "full_source": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782"
+  }
+}

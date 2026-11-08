@@ -1,0 +1,67 @@
+# ARC2-Global: independent-context DASFAA review, round 1
+
+Date: 2026-11-01. Reviewer: gpt-6.1-sol, high reasoning, as explicitly requested. Review independence: **same-family**. Acceptance status: **provisional**. This is an internal review simulation, not an official DASFAA rubric, decision, or acceptance probability.
+
+## Assessment
+
+**Overall: 6/10, weak accept. Confidence: 4/5.** I see a credible, useful database/retrieval contribution: a well-specified directional refinement of a compact alignment map, evaluated in the mixed gallery in which an embedding migration actually operates. The improvement over ordinary Procrustes on the development panel is substantial enough to matter, and the second-step ablation makes the proposed computation more than a new name for the initialization. The strongest independent evidence supports competitiveness with geometric alignment and clear gains over specific neural/regression configurations. It does not establish that the directional correction generally improves Procrustes on a new collection. That distinction limits the strength of the paper, but does not eliminate its publishable contribution at DASFAA.
+
+The paper is already reasonably positive and readable. Its highest-value revision is to make the small, concrete algorithmic contribution and the resulting operating points more memorable. More lists of caveats or significance counts would weaken the narrative. No mathematical theorem, production deployment, or exhaustive new benchmark suite is a prerequisite for this assessment.
+
+| Dimension | Score / 10 | Reason |
+|---|---:|---|
+| Novelty | 6 | A specific tangent-target ridge refinement with a useful affine deployment form. Translation, Procrustes, iterative refinement, and partial backfill are established; the novelty lies in this finite supervised correction, rather than the migration setting. |
+| Technical soundness | 8 | The normalized-vector differential, tangent target, ridge update, rectangular initialization, and affine accumulation are coherent. The manuscript correctly treats the differential as motivation, not a finite-step improvement guarantee. |
+| Experimental support | 7 | Matched anchors/replacement rows, exact retrieval, four development collections, two migrations, five seeds, ablations, all-paid fitting, and a prospective collection provide substantial evidence. Transfer over the strongest geometric baseline remains unconfirmed. |
+| Practical significance | 6 | A 1.13 MiB adapter with one affine application is a useful option when native destination queries are required. Several migration endpoints are strong, but the work measures cached-vector quality rather than end-to-end operational savings, and native source retrieval is often competitive. |
+| Clarity and presentation | 7 | Equations and figures explain the method well; tables expose all comparators. Some prose emphasizes locked procedures and contrast counts more than the actual retrieval outcome. The related-work distinction from directional residual regularization can be sharper. |
+| Reproducibility | 8 | Precise normalization, seeds, regularization, fitting exposure, tie handling, numerical precision, model/input pinning, and generated evidence provide a strong reproducibility basis. This review inspected evidence-generation code but did not independently rerun scientific experiments or reproduce all raw rankings. |
+| Venue fit | 8 | Embedding-index maintenance, interoperable vector spaces, budgeted replacement, and mixed-gallery quality are directly relevant to database and retrieval research. A focused empirical method paper fits this contribution better than a theory-heavy framing. |
+
+Anchors used here: 5 borderline; 6 weak accept; 7 accept; 8 strong accept. Overall is holistic, not an arithmetic average.
+
+## What is strong
+
+1. **The refinement has an understandable reason to work.** The target removes the component parallel to the current direction and rescales the remainder by the raw prediction norm. Equation (5) explains this choice directly. Regularizing the update rather than the final map preserves the useful Procrustes starting point. The two solved updates still give one affine application followed by normalization. This is a clean method, with a modest implementation and deployment burden.
+
+2. **The development gain is broad, rather than one favorable cell.** The macro improvement over Procrustes is 0.0243 nDCG@10, with the saved family interval excluding zero, and 23 of 24 condition means favor ARC2. The 0.0069 two-versus-one-step effect specifically supports recomputing and fitting the second target. The paper properly distinguishes these development results from prospective confirmation.
+
+3. **The evaluation measures a meaningful database endpoint.** True destination documents and translated documents compete under native destination queries. Anchor-inclusive accounting, the same paid sets across methods, and matched fitting exposure make the comparison interpretable. The all-paid experiment also addresses the obvious practical objection that already-encoded pairs should sometimes be used for fitting.
+
+4. **There is useful prospective evidence.** On TREC-COVID/E5, ARC2 obtains 0.5628, 0.5904, and 0.6098 nDCG across the three budgets, substantially above the declared Converter and ridge configurations. On MiniLM at 75% coverage, its 0.5195 is within 0.0008 of native Full-Y's rounded 0.5203. This is a more concrete practical result than the statement that 11 contrasts are positive.
+
+5. **The manuscript calibrates comparison claims responsibly.** It identifies Converter as an adaptation with paired-vector validation and calls out the official SimpleLinear architecture. It does not equate parameter bytes with physical migration costs. The prospective Procrustes ordering and the E5 all-paid ordering remain visible. Those disclosures strengthen trust without needing to become the paper's central message.
+
+## Strongest rejection argument
+
+The proposed algorithm is an incremental combination of Procrustes initialization and residual ridge fitting in an area with substantial existing alignment and backfilling work. Its main gain over the strongest simple comparator is measured on collections used for development; the only prospectively held collection gives Procrustes higher point means in every migration/budget cell. The large confirmed gains instead concern neural/regression configurations with restricted paired-only training and validation, so they do not establish superiority over those original methods in their usual regimes. The all-paid E5 experiment also favors the existing geometric maps. Therefore the evidence may establish a useful candidate adapter and careful migration evaluation, but not a sufficiently general advantage of the new directional correction to justify a full method paper.
+
+## Prioritized revisions
+
+These are bounded, high-value changes. None requires a new scientific run or a change to the frozen method.
+
+1. **Make the contribution sentence precise and assertive.** Target `sections/introduction.tex`, paragraphs 3–5 and contribution bullets; `sections/abstract.tex`, prospective-results sentences. State the contribution as two supervised tangent-residual ridge corrections that improve the development quality of a compact Procrustes adapter while preserving one affine application. Then characterize prospective evidence as strong gains over the evaluated neural/regression configurations and competitive geometric quality. Replace “confirms 11 baseline contrasts” with one interpretable result and the comparator scope. This both strengthens the positive message and avoids implying independent confirmation of the Procrustes increment.
+
+2. **Explain the closest directional prior in one explicit contrast.** Target `sections/related-work.tex`, the Yang–Cao paragraph, and the end of `sections/method.tex` subsection 3.3. The primary Yang–Cao text shapes errors across translators along chosen principal directions for mixing/chaining. ARC2 projects each known anchor target relative to that anchor's current prediction and fits one global correction for cosine retrieval. Say this plainly. The current list of prior ingredients is accurate, but this mechanistic contrast makes the specific novelty easier to assess. Do not claim the general ideas of directional residuals, mixed galleries, or nonmonotone backfill as new.
+
+3. **Lead the prospective results with a useful operating point.** Target `sections/results.tex`, “Prospective Gains Transfer to TREC-COVID,” and `sections/discussion.tex`, “A clear operating scenario.” Use the existing MiniLM 75% endpoint (0.5195 versus native destination 0.5203) and E5 gains over the evaluated Converter/ridge to explain what the adapter achieves during a required transition. Retain the sentence that the geometric baselines remain competitive; a single concise sentence is sufficient. Keep the count of 11 family-supported contrasts as supporting detail rather than the headline. Do not turn closeness of point means into an equivalence claim.
+
+4. **Remove unnecessary protocol language from the scientific explanation.** Target `sections/method.tex` and `sections/results.tex`: “frozen computation,” “locked family,” “locked cross-regime,” and repeated six-decimal prose. Use “fixed two-step method,” name the comparison, and usually report four decimals. Preserve exact settings, intervals, and the development/prospective distinction in setup and captions. This will read as a confident contribution-centered paper rather than a progress report, with no loss of scientific accuracy.
+
+5. **Make reproducibility access visible in the manuscript.** Target the final paragraph of `sections/experimental-setup.tex` or an appropriate anonymous artifact statement. Give the reader a concise route to the released source/configuration, generated tables, and per-query evidence if an anonymous artifact is available. The local artifact is well organized, but the paper currently says revisions are pinned without telling a reviewer where to find them. This is a writing/access task, not a request to publish or expose identifying metadata without authorization.
+
+## Evidence boundaries and optional work
+
+**Feasible in writing now:** all five items above; unchanged scores and statistics; clearer nearest-prior distinction; stronger explanation of already-measured operating points. A careful writing pass could improve clarity and persuasiveness, but cannot transform development evidence into independent confirmation.
+
+**One optional experiment with the highest information value:** after a separately committed immutable protocol and only if further work is authorized, evaluate the frozen two-step increment against Procrustes on another genuinely unopened collection, retaining the same two migrations and matched budgets. The question is whether the added correction transfers beyond development, not whether another neural baseline can be beaten. If no genuinely untouched collection is available, state that boundary instead of relabeling data. This is optional for the present weak-accept judgment; it is the clearest route to a stronger evidence-based recommendation.
+
+**Irreducible limits of this revision:** TREC-COVID does not confirm an ARC2 advantage over Procrustes/LA2M; bootstrap intervals condition on observed seeds and collections; the all-paid evidence is one development collection; the parameter ratio is structural rather than end-to-end performance. These limits require accurate scope, not a negative-evidence catalogue. No production deployment, ANN study, new theory, or broad encoder sweep is demanded by this review.
+
+## Materials and review trace
+
+Read the actual `main.tex`, all eight section files, bibliography, all generated TeX tables, generated value CSVs/verification, and text of `ARC2_Global_DASFAA2027_revised.pdf` (15 pages). Visually inspected all four figure PNGs and the compiled-paper contact sheet. Inspected `scripts/build_evidence.py` to understand the source-to-table path and per-query checks. No prior review/verdict/scoring opinion, author handoff, or literature-novelty opinion was read. No manuscript was edited and no scientific experiment was run.
+
+Primary literature inspected from `review/citation_sources/`: the full Yang–Cao translation text, Yoon–Arik Converter text, FastFill full HTML, Maystre et al. full HTML, Dar's current full HTML, and the authors' LA2M implementation. These support the specific scope comparisons above; the direct FastFill publisher PDF cache is an error response, so its full arXiv HTML was used instead. Primary links: [Yang–Cao](https://proceedings.mlr.press/v306/yang26e.html), [Embedding-Converter](https://aclanthology.org/2025.acl-long.1237/), [FastFill](https://arxiv.org/abs/2303.04766), [Procrustes bounds](https://arxiv.org/abs/2510.13406), [mini-vec2vec](https://arxiv.org/abs/2510.02348), [authors' translation implementation](https://github.com/DBgroup-Edinburgh/embedding-translation).
+
+Route: fresh reviewer agent `/root/dasfaa_score_20261101`; user-selected gpt-6.1-sol/high overrides the skill's default reviewer model. This report and its companion JSON are the saved round-1 assessment. Bounded follow-up should inspect only the final revision and whether these specific points were resolved; a stronger numerical score must be justified by that revision rather than requested in advance.

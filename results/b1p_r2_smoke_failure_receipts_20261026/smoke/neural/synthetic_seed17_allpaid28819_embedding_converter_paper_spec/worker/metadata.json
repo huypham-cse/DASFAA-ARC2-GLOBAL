@@ -1,0 +1,17 @@
+{
+  "status": "RUNNING",
+  "method": "embedding_converter",
+  "regime": "all_paid",
+  "mode": "smoke",
+  "seed": 17,
+  "failures": [],
+  "started_utc": "2026-10-26T08:49:15.349343+00:00",
+  "request_sha256": "6286de460e5b8ea06239391d4da4d5ce09fa70865a57e4df14655a2bb8ab07d9",
+  "new_qrel_reads": 0,
+  "unpaid_target_reads": 0,
+  "artificial_time_or_memory_caps": null,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "executable": "/root/paper-P2/.venv/bin/python",
+  "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+  "host": "nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-bqjpp"
+}

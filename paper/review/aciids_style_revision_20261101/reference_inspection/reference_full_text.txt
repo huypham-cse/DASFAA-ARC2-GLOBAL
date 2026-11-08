@@ -1,0 +1,792 @@
+            Does the Graph Earn Its Keep?
+      A Token-Budget Audit of Graph-Based RAG
+
+ Huynh-Gia-Huy Pham 1 , Nguyen Anh Dung 1 , Nguyen-An-Binh Pham                     1
+                                                                                        ,
+                Minh Hieu Le 1 , and Xuan-Bach Le 1 ?
+
+    Ho Chi Minh City University of Technology (HCMUT), VNU-HCM, Ho Chi Minh
+                                    City, Vietnam
+        {ghuy.pham_cse, anhdungnguyen, anbinh170700, hieu.lehieulhks,
+                             lexuanbach}@hcmut.edu.vn
+
+
+
+        Abstract. Retrieval-augmented generation (RAG) can use a graph to
+        organise evidence. We ask whether its quality gains justify construction
+        cost. We compare four structured systems (GraphRAG, LightRAG,
+        RAPTOR and HippoRAG 2) with flat retrieval. We use a generator
+        with eight billion parameters (8B), common chunks and four sampled
+        question-answering benchmarks. Our token ceiling covers construction
+        and 1 500 queries. Flat uses only 0.7 to 13.9% of that allowance. With
+        original responses, HippoRAG 2 leads fixed flat by 6.2 and 15.6 token-
+        F1 points (answer word overlap) on MuSiQue and 2WikiMultihopQA.
+        When we select between two flat settings on separate calibration ques-
+        tions, the gaps remain 6.2 and 13.6. Short-answer extraction raises fixed
+        gaps to +7.4 and +17.6, but human judgments identify 21 meaning-
+        changing extractions and two unclear cases among 76 outputs. Ligh-
+        tRAG’s MuSiQue gain depends on extraction. Flat leads on Narra-
+        tiveQA. QuALITY remains inconclusive under question and document
+        resampling. A near tie moves RAPTOR’s cost intersection from about
+        170 to 454 queries. We therefore check both scoring rules and quality
+        tolerances before comparing costs. Our conclusions concern the tested
+        configurations, which leave much of the flat budget unused.
+
+        Keywords: Retrieval-augmented generation · Knowledge graphs · To-
+        ken accounting · Evaluation methodology · Question answering.
+
+
+1     Introduction
+
+Retrieval-augmented generation (RAG) answers questions by giving a language
+model, the reader, passages retrieved from a corpus. Flat retrieval searches these
+passages directly, while structured approaches first organise them into graphs
+or trees. On the graph side, GraphRAG [2] extracts an entity graph and sum-
+marises connected groups, and LightRAG [4] combines entity and relation re-
+trieval. RAPTOR [17] instead builds a passage-summary tree. HippoRAG 2
+?
+    Corresponding author: Xuan-Bach Le. Reproducibility artifact:
+    https://github.com/lexuanbach/aciids2027-p10-artifact.
+2        H.G.-H. Pham et al.
+
+    (a) Question            (b) flat+ reads 40 passages                            (c) Total token cost
+                             retrieve                   read             answer
+                                                                                   HippoRAG 2 10.6M
+                             ????????                                                   FLAT+ 12.5M
+                             ????????                          n Dillenburg          LightRAG            90M
+                             ????????                   <        in Nassau            RAPTOR 3.0M
+                                                                his birthplace      GraphRAG         41M
+                             ????????                   8B
+                             ????????                 reader                                    0 50 100
+     “Where was the
+                                                  Ó 8.3k tok/q, no index
+                                                                                     million tokens at Q=1500
+     place of death of       gold at ranks 1, 2
+                                                                                      dark: index, light: queries
+    Maurice, Prince Of
+    Orange’s father?”
+
+                            HippoRAG 2 walks the graph, reads 5                    Answer quality
+                                              gold: 1, 3
+     Maurice of Orange
+                                  Dutch Revolt    _?                               HippoRAG 2 +17.6 59.0
+       hop 1: his father    Maurice               ?                 £ Delft             FLAT+          41.4
+    William the Silent          
+                                  succeeded
+                                               ?         <                          LightRAG          31.7
+                                                                                                       30.7
+                                                                   passage 3:
+        bridge entity                             ?            “ . . . in Delft”      RAPTOR
+       hop 2: death place
+                                        William î
+                                                  ?
+                                                        8B
+                                                      reader                        GraphRAG           25.2
+                                    the Silent
+                                               House of Nassau
+                                                                                              0 20 40 60
+     Delft   gold answer                        Ó 4.9k tok/q + 3.2M index                           F1
+
+Fig. 1. 2WikiMultihopQA example and aggregate results. (a) Two links lead to a fa-
+ther’s place of death. (b) Gold icons mark support. Query costs are dataset means. (c)
+Construction (dark) and query (light) tokens at Q = 1 500, with extracted F1 . Dashed
+line: flat forty. k/M: thousands/millions. Portrait: A. T. Key (1579), public domain.
+
+[5] also relies on a graph, which it uses to rank evidence. We call these methods
+structured retrieval and compare them with our flat+ pipeline, which searches
+corpus chunks without a graph or summary tree.
+    Unlike flat+, these systems must build their structure before they answer
+any question. This upfront cost may be recovered over later queries [5,6,19], but
+whether the investment is worthwhile depends on answer quality and on the
+total cost of building and querying the index. Under a common token ceiling
+that counts construction and query tokens, we ask when structured retrieval
+answers better than flat retrieval and how evaluation choices change the cost
+comparison. We report actual consumption next to the ceiling because the flat
+configurations we test leave much of their allowance unused.
+    Figure 1 shows why the comparison must consider how the reader uses ev-
+idence. Asked where Maurice of Orange’s father died, flat+ retrieves both
+supporting passages among forty chunks but answers with his birthplace. Hip-
+poRAG 2 answers correctly from five passages. Retrieving the right facts does
+not guarantee the right answer. Across 2WikiMultihopQA (2Wiki), HippoRAG 2
+beats flat forty by 17.6 F1 points after short-answer extraction (panel c). This
+gap alone cannot show that graph connections improve evidence use, because the
+systems also differ in context length, passage order and prompts. GraphRAG
+offers two query modes. Local search answers from evidence linked to the enti-
+ties in the question, whereas global search combines answers from community
+reports. The figure shows local search, and Sect. 7 also reports global search.
+    We study these tradeoffs with a single generator, Llama 3.1 8B Instruct [3],
+under greedy decoding. Within each dataset, every system indexes the same
+passages. We evaluate on MuSiQue [18] and 2Wiki [7] for multi-hop question
+answering and on NarrativeQA [10] and QuALITY [14] for long-document un-
+                               A Token-Budget Audit of Graph-Based RAG            3
+
+derstanding, with 293 to 300 sampled questions per benchmark. Besides the cost
+audit, we test whether the advantages hold when we score original responses and
+choose the flat configuration on separate calibration questions. We also check
+whether short-answer extraction preserves meaning and whether a small change
+in tolerated quality loss alters the flat comparator.
+Our study makes three contributions.
+ – Graph structure helps on multi-hop questions only. Scored on its original
+   responses, HippoRAG 2 beats flat retrieval by 6.2 F1 points on MuSiQue
+   and 15.6 on 2Wiki, and the margins stay at 6.2 and 13.6 when the flat
+   setting is chosen on held-out calibration questions. Flat forty retrieves more
+   MuSiQue support than HippoRAG 2 reads, which suggests that the gain
+   lies in how evidence reaches the reader. On NarrativeQA, flat retrieval leads
+   every structured system, and QuALITY remains inconclusive.
+ – Answer post-processing can create a winner. Short-answer extraction lifts
+   LightRAG’s MuSiQue F1 from 9.9 to 34.6 and reverses its comparison with
+   flat retrieval. A human audit finds that extraction changed the meaning
+   of 21 of 76 sampled outputs. Raw responses should therefore anchor the
+   comparison, with extracted scores reported as secondary.
+ – Break-even points depend on the stated quality tolerance. On NarrativeQA,
+   RAPTOR and flat twenty differ by less than 0.004 F1 points. Strict match-
+   ing forces the costlier flat forty as comparator and puts RAPTOR’s break-
+   even at about 170 queries, whereas a 0.01-point tolerance admits flat twenty
+   and moves it to 454. A cost claim means little without its tolerance.
+These findings hold for the tested configurations and sampled corpora. They do
+not show that graph connections cause the multi-hop gain.
+   Section 2 reviews related work. Sections 3 and 4 define the accounting and
+evaluation protocol, Sect. 5 gives an exploratory evidence heuristic, Sects. 6 and 7
+report the experiments, and Sects. 8 and 9 conclude.
+
+2   Related Work
+We relate our study to structured retrieval, flat alternatives and the tasks used
+to evaluate them.
+
+Structured retrieval and its cost. HippoRAG 2 already reports construction to-
+kens, indexing time, query time and memory. Han et al. [6] compare flat and
+graph retrieval on question answering (QA) and summarization, including effi-
+ciency and fixed retrieval-token analyses. Xiang et al. [19] examine construction,
+retrieval and generation on graph-specific tasks. We build on these observations
+by testing whether HippoRAG 2’s advantage persists across our flat settings
+and scoring rules, and by examining how small quality differences affect cost
+comparisons.
+    Efficient indexing can also change the tradeoff. KET-RAG [8] reduces con-
+struction cost with a selective graph skeleton and a structure linking text to key-
+words. The contemporaneous EffiRAG preprint [22] proposes a system grounded
+4        H.G.-H. Pham et al.
+
+Table 1. Cleaned recorded LM tokens: construction (left) and mean per query (right).
+k: passage count. k/M: thousands/millions. NarrQA: NarrativeQA. Decomp.: static
+decomposition. “Same”: shared local/global index. “N/A”: no saved evaluation. Flat in-
+dexing uses zero generator tokens. Embedding and reranking computation is excluded.
+
+                                    index tokens                      tokens per question
+system                  MuSiQue   2Wiki NarrQA QuALITY         MuSiQue 2Wiki NarrQA QuALITY
+GraphRAG local           68.9 M 29.6 M     37.2 M     7.1 M       8.8 k 7.4 k      9.3 k     11.9 k
+GraphRAG global            N/A     N/A       same      same       N/A N/A        842.5 k    204.1 k
+LightRAG                 51.9 M 22.8 M     37.9 M     7.7 M      42.9 k 45.0 k    36.3 k     36.7 k
+RAPTOR                   932.8 k 432.8 k   818.4 k   151.9 k      1.4 k 1.7 k      1.3 k      1.3 k
+HippoRAG 2                6.9 M 3.2 M       5.0 M    995.3 k      4.9 k 4.9 k      4.6 k      4.6 k
+BM25 (k=5)                     0       0         0         0       755    758       821        797
+flat+ (k=5)                    0       0         0         0       956 1.4 k        813        846
+flat+ (k=40, decomp.)          0       0         0         0      5.9 k 8.3 k      6.2 k      5.5 k
+
+
+in source documents and measures ingestion and querying together. We focus on
+how scoring and selection affect four existing systems. Evaluating these newer
+designs would broaden that comparison.
+
+Flat retrieval and context use. flat+ combines BM25 word matching, dense
+vector search, rank fusion and reranking [16,9,1,13]. Its static decomposition gen-
+erates subquestions together. Dependent reasoning uses earlier answers to guide
+later retrieval [15]. Long-context comparisons [11] suggest further uses of our un-
+used flat budget. Context-position effects [12] and Zarrinkia et al.’s structured
+prompting and compression [21] help explain why more retrieved evidence need
+not improve answers. Testing these explanations in our setup requires controlled
+comparisons.
+
+Evaluation coverage. MuSiQue and 2WikiMultihopQA (2Wiki) annotate sup-
+port for multi-hop questions [18,7]. NarrativeQA and QuALITY test understand-
+ing of long documents [10,14]. These tasks allow direct reference-answer scoring.
+Graph-specific resources cover hierarchical retrieval, summarization and domain
+reasoning [19,20], which extend beyond our QA conclusions.
+
+
+3    Construction and Query Accounting
+
+We distinguish construction from work repeated per question, counting input
+and output language-model (LM) tokens equally. Each token is a word or word
+fragment processed or generated by the model. Table 1 gives cleaned recorded
+costs: calls attributed to the final build after removing earlier builds and esti-
+mated retries. Section 7.3 examines that cleanup.
+    On MuSiQue, GraphRAG’s index uses 68.9 M tokens, enough for approx-
+imately 11 622 queries with the largest tested flat+ setting. As we ask more
+questions, each bears a smaller share of this initial cost. This is amortization.
+We compare total tokens at a stated query volume and check quality separately.
+Monetary cost and elapsed time require further measurements.
+                               A Token-Budget Audit of Graph-Based RAG           5
+
+4     Protocol and Evidence Measures
+
+We explain our token ceiling, flat selection rules and evidence measures. We
+measure quality with token F1 , the harmonic mean of precision (the fraction of
+answer words matching the reference) and recall (the fraction of reference words
+covered). We distinguish these words from LM cost tokens and report mean F1 ,
+or QuALITY option accuracy, on a 0 to 100 scale. Raw scoring uses original
+responses with prefix/first-line cleanup (Sect. 6).
+
+
+4.1   A common token ceiling
+
+Let Π denote a system configuration and Q the expected number of questions
+answered with one index. We define its total recorded token cost as
+
+                       K(Π, Q) = Kidx (Π) + Q Kqry (Π),                        (1)
+
+Here Kidx counts construction tokens and Kqry counts mean query tokens, includ-
+ing subquestions, fact filtering and map-reduce (answering over separate reports
+before combining responses). We pay construction once and queries Q times.
+    At Q = 1 500, we set each benchmark’s ceiling to the largest graph-system
+total. Our policy, fixed before scoring, selects the largest affordable count among
+five, ten, twenty and forty. All fit, giving forty throughout. We report allowance
+and consumption separately.
+    For flat configuration Πflat+ matching or exceeding graph configuration
+Πgraph in quality, costs meet at
+
+                             Kidx (Πgraph ) − Kidx (Πflat+ )
+                      Q† =                                   .                 (2)
+                             Kqry (Πflat+ ) − Kqry (Πgraph )
+
+We recover the graph’s extra construction cost (the numerator) through its sav-
+ing on each query (the denominator). Both must be positive. We require strict
+quality matching, then allow losses of 0.01, 0.1, 0.5 and 1 point to see whether
+the eligible flat setting changes. These tolerances do not establish statistical
+equivalence.
+
+
+4.2   The flat configuration family
+
+We retrieve 100 candidates each with BM25 word matching and dense search,
+combine their rankings through reciprocal-rank fusion, then rerank them with
+a cross-encoder that scores question-passage pairs. The reader receives k = 5
+chunks, or k ∈ {10, 20, 40} after at most three jointly generated subquestions
+search independently. Each passage retains its best rerank score across the orig-
+inal question and subquestions. These settings form our flat ladder.
+    Our quality-cost frontier includes ablations that remove pipeline steps. It
+connects settings with no tested alternative at least as accurate and no more
+costly, with one strict improvement. We separately choose between k = 10 and
+6         H.G.-H. Pham et al.
+
+
+    Algorithm 1: Token accounting and flat-policy evaluation for one
+    benchmark
+      Input: Saved predictions and usage for structured configurations G and flat
+             settings Πk , k ∈ F = {5, 10, 20, 40}, labeled evaluation questions E,
+             optional disjoint labeled calibration questions C, query volume
+             Q = 1 500.
+      Output: Recorded costs, selected flat settings, raw scores and paired intervals.
+    1 foreach configuration Π ∈ G ∪ {Πk : k ∈ F} do
+    2    IΠ ← cleaned recorded construction tokens
+    3    TΠ ← mean recorded query tokens, including auxiliary calls
+    4    KΠ ← IΠ + QTΠ
+   B ← maxΠ∈G KΠ
+    5                                                   // common token ceiling
+   A ← {k ∈ F : Kk ≤ B}
+    6                                                    // affordable settings
+ 7 kfixed ← max A                                // all four settings fit here
+ 8 kcal ← unavailable
+ 9 if saved predictions for C exist at both k = 10 and k = 40 then
+10      kcal ← arg maxk∈{10,40} RawF1(Πk , C)
+11      Break ties by lower query cost, then configuration name
+12 Score each configuration’s original predictions on its available E
+13 Report B, each KΠ , and flat usage Kk /B alongside raw quality
+14 if the benchmark is multi-hop QA then
+15     foreach available policy k ∈ {kfixed , kcal } do
+16         Align HippoRAG 2 and flat k on identical evaluation question IDs
+17         dq ← RawF1(HippoRAG 2, q) − RawF1(Πk , q)
+18         Bootstrap mean dq over paired questions: 2 000 draws, seed zero
+19         Report mean dq and percentile 95% interval, holding k fixed
+
+
+
+40, the settings with saved calibration outputs, by raw calibration F1 . Ties favor
+lower query cost, then configuration name. We exclude evaluation answers from
+selection.
+    In Algorithm 1, Πk is flat setting k. IΠ , TΠ and KΠ are construction, query
+and total costs (Eq. 1), with subscript k abbreviating Πk . RawF1(Π, S) is mean
+raw F1 on question set S, or the score of one question when S = q. A paired
+bootstrap resamples question identifiers (IDs) with replacement, keeping both
+systems’ scores together, to estimate uncertainty. Calibration is available only
+for the multi-hop datasets.
+    In Algorithm 1, we identify affordable settings before selecting by passage
+count or calibration score. Both policies can afford forty, yet calibration can
+prefer ten. We compare identical evaluation IDs with that choice fixed during
+resampling, leaving selection uncertainty unmeasured.
+
+
+4.3      Minimum evidence, annotated support, and prefix success
+
+We distinguish a conceptual evidence minimum from two observable measures.
+                               A Token-Budget Audit of Graph-Based RAG             7
+
+Definition 1 (Minimum evidence size). For question q with answer y, loc(q)
+is the smallest size of a corpus chunk set sufficient to derive y under a fixed
+inference criterion and allowed background knowledge.
+Annotated support count g(q) counts benchmark supporting paragraphs. It
+bounds loc(q) from above if they suffice. Figure 1 uses two passages, although
+another sufficient set might be smaller.
+     For our reader-dependent proxy h(q), we retrieve twenty candidates using the
+question and gold answer, then test increasing prefixes for correctness. Success
+means free-form F1 ≥ 0.5 on a 0 to 1 scale, or the correct QuALITY option.
+The first m for which prefixes m and m + 1 succeed defines h(q): success at
+two and three gives h(q) = 2. Only 1 ≤ m ≤ 19 can be certified. Other cases
+are unresolved, stored as marker 21. Because either retrieval or the reader can
+fail, we cannot infer how much evidence the question intrinsically needs. We
+report unresolved rates and resolved-case medians, excluding these gold-assisted
+diagnostic calls from system cost.
+
+
+5   An Exploratory Evidence Heuristic
+Each required passage creates another chance to miss evidence. Retrieving two
+independently with probability 0.8 each gives joint success 0.82 = 0.64. We ask
+whether a graph could gather complete evidence more reliably.
+    We model one fixed set of ` chunks, all necessary and jointly sufficient, with no
+alternative sufficient set. Let r ∈ (0, 1) be each chunk’s independent flat-retrieval
+probability. Let rg ∈ [0, 1] be the probability of retrieving graph evidence. Let
+ ∈ [0, 1] denote its conditional failure probability. Usable graph evidence then
+has probability rg (1 − ). We hold this probability constant as ` changes. If both
+readers answer correctly with probability a ∈ (0, 1] given sufficient evidence and
+otherwise fail, flat correctness is ar` . Graph correctness is pg = arg (1 − ). For
+pg > 0, the graph wins when
+                                           log(pg /a)
+                                ` > `† =              .                          (3)
+                                              log r
+We derive this threshold in the supplement. Allowing alternative sufficient sets
+would give flat retrieval more chances to succeed.
+   Our exploratory estimate uses 100 disjoint calibration questions per multi-
+hop dataset, substituting mean F1 on a 0 to 1 scale for a and pg , and annotated
+support count for `. Our estimate is exploratory: dependent retrieval, varying
+graph success or answers without all support can violate the untested probability
+assumptions. We examine failed predictions in Sect. 7.
+
+
+6   Experimental Setup
+We specify the data, systems and scoring rules before describing token accounting
+and statistical checks.
+8      H.G.-H. Pham et al.
+
+Data and splits. For MuSiQue and 2Wiki, we use the HippoRAG 2 releases and
+seeded samples of 300 evaluation and 100 disjoint calibration questions. We in-
+dex their pooled supporting and distractor paragraphs, yielding 5 723 and 2 679
+passages. NarrativeQA uses the ten-document release (4 111 passages, 293 ques-
+tions). For QuALITY, we pack validation articles into sentence-aligned passages
+of at most 128 tokens (870 passages, 300 questions from 17 articles). Within each
+dataset, all systems receive the same corpus.
+
+Systems and shared components. GraphRAG 2.3.0 uses one gleaning round (an
+extra extraction pass), Leiden community detection and level-two local/global
+search. Local search retrieves entity-related evidence. Global search combines
+community-report answers. LightRAG 1.3.9 uses one gleaning round and hy-
+brid entity/relation search. Official RAPTOR uses five summary levels, 100-
+token summaries and cross-level retrieval limited to ten nodes and 3 500 tokens.
+HippoRAG 2 (2.0.0a4) extracts facts, links similar entities, filters facts through
+recognition memory and retrieves five passages using personalised PageRank
+(query-seeded graph ranking). All use Llama 3.1 8B Instruct with greedy de-
+coding (highest-scoring next token) and bge-large-en-v1.5 embeddings. flat+
+uses bge-reranker-base. Prompts and answer limits differ by implementation.
+Our single run per configuration cannot establish pipeline determinism.
+
+Scoring and extraction. We score token F1 and exact match (EM) after low-
+ercasing, removing punctuation and articles, and normalizing whitespace. We
+maximize over accepted references (gold aliases). For QuALITY accuracy, our
+parser accepts a parenthesized letter, then a leading letter, then the closest op-
+tion text. Free-form raw scoring removes a recognized answer prefix and keeps
+the first answer line.
+    For multi-hop responses exceeding eight whitespace-delimited words, we also
+score the same model’s short extraction, labeled “normalized” in existing tables.
+It receives the question and at most 4 000 response characters, with a 32-token
+output limit and no passages or gold answers. We give prompts, EM and ab-
+lations in the supplement and exclude extraction from deployment cost. One
+author assessed 76 changed outputs, sampled deterministically with one per
+nonempty dataset/system/score-change group (stratum). We omit gold answers
+from the worksheet to focus judgments on preservation of meaning.
+
+Token accounting. We log server-reported input/output usage by system, corpus
+and phase. Query means include decomposition, filtering and report aggregation.
+Construction counts successful final-build calls. We report embedding tokens sep-
+arately without measuring embedding/reranking runtime or energy. Unrecorded
+cancelled calls and intermediate retries leave some token consumption unknown.
+
+Statistical analyses. Our 95% confidence intervals (CIs) span the 2.5th to 97.5th
+percentiles of bootstrapped mean differences. We use 1 000 paired question draws
+for original comparisons and 2 000, seed zero, for primary and sensitivity anal-
+yses. For long documents, we resample documents with all their questions to
+                                      A Token-Budget Audit of Graph-Based RAG              9
+
+Table 2. Primary raw F1 results. ∆ = F1 (HippoRAG 2) − F1 (flat). Each row pairs
+300 questions. Raw-gap 95% CIs use 2 000 bootstrap draws, seed zero, conditional on
+the named systems, saved runs and flat choice. Scores span 0 to 100. The final column
+gives the secondary extracted gap.
+
+        data      flat policy    k Hippo raw flat raw ∆ raw             95% CI ∆ extr.
+        MuSiQue   fixed         40        37.1      30.9    +6.2   [+1.6, +11.5]    +7.4
+        MuSiQue   calibrated    40        37.1      30.9    +6.2   [+1.6, +11.5]    +7.4
+        2Wiki     fixed         40        57.7      42.1   +15.6   [+9.5, +21.9]   +17.6
+        2Wiki     calibrated    10        57.7      44.1   +13.6   [+7.2, +19.6]   +15.6
+
+Table 3. Total LM-token ceiling and fixed-flat-forty consumption at Q = 1 500, includ-
+ing construction. The ceiling is each dataset’s largest graph-system total. Used/unused
+give the consumed/remaining fractions. M: millions.
+
+                dataset         ceiling (M) flat (M) used (%) unused (%)
+                MuSiQue               116.21      8.89      7.65          92.35
+                2Wiki                  90.28     12.50     13.85          86.15
+                NarrQA               1300.87      9.23      0.71          99.29
+                QuALITY               313.23      8.23      2.63          97.37
+
+account for shared information, then delete each document to check influence.
+NarrativeQA document IDs match all 293 question/answer lists in the pinned
+release. We also compare all systems on the same 100 global-search questions.
+Intervals condition on saved runs and omit rebuild variance and best-graph se-
+lection uncertainty.
+
+Published-result diagnostic. In the supplement, we compare our graph-minus-
+dense gaps with the published HippoRAG 2 evaluation using a 70B reader.
+Agreement within five F1 points is a rough diagnostic whose different reader
+and corpus preclude a reproduction claim. GraphRAG and RAPTOR exceed
+that tolerance on 2Wiki. LightRAG’s low published scores make its check un-
+informative.
+
+
+7     Results
+We first ask whether graph advantages persist when we change flat selection and
+scoring. We then examine cost recovery and what the evidence measures can tell
+us about those advantages.
+
+7.1   Quality under the common ceiling
+We compare HippoRAG 2 with fixed flat forty and the calibrated choices, forty
+on MuSiQue and ten on 2Wiki (Table 2). Our paired intervals exclude calibration
+reselection, rebuilds and best-graph selection.
+    Our raw HippoRAG 2 gains are 6.2 F1 points on MuSiQue and 15.6 on
+2Wiki, with all intervals excluding zero. Extraction raises them to +7.4 and
+10      H.G.-H. Pham et al.
+
+Table 4. Raw quality (F1 , or QuALITY accuracy) and mean query tokens (tok/q) by
+dataset. Scores span 0 to 100. Token suffix k means thousands. Settings k = 10, 20, 40
+include static decomposition. Table 1 gives index costs. Support recall and extracted
+scores are in the supplement.
+
+                              MuSiQue       2Wiki          NarrQA   QuALITY
+            configuration   raw F1 tok/q raw F1 tok/q      F1 tok/q acc. tok/q
+            dense, k = 5      31.1   0.90k   41.4   0.94k 21.5   0.82k 61.7   0.79k
+            flat+ k = 5       30.1   0.96k   42.5   1.39k 20.5   0.81k 58.3   0.85k
+            flat+ k = 10      28.0   1.70k   44.1   2.84k 20.9   1.66k 59.7   1.60k
+            flat+ k = 20      31.5   3.17k   41.9   4.90k 24.8   3.15k 60.7   2.90k
+            flat+ k = 40      30.9   5.93k   42.1   8.34k 27.8   6.15k 61.0   5.49k
+            HippoRAG 2        37.1   4.86k   57.7   4.91k 23.4   4.61k 63.3   4.61k
+
+
+
++17.6. MuSiQue’s identical rows describe one comparison under two policies.
+We establish an advantage over tested configurations, although better use of the
+unused flat allowance (Table 3) could close the gap. Savings at equal quality
+remain unmeasured.
+    Our long-document results give a different picture. On NarrativeQA, flat
+leads the best graph, RAPTOR, by 3.0 points. On QuALITY, HippoRAG 2’s
++2.3-point margin has a CI containing zero. Document length alone therefore
+offers little guidance for choosing a graph. LightRAG exceeds extracted flat
+only on MuSiQue. GraphRAG scores lower on these QA samples, which exclude
+its corpus-synthesis use case.
+
+
+7.2   Flat configurations and calibration selection
+
+We find that sending more passages to the reader raises cost without reliably
+improving answers (Table 4). MuSiQue twenty scores 31.5 versus 30.9 at forty.
+2Wiki ten scores 44.1 versus 42.1 at forty. We therefore check selection using
+the two saved calibration candidates, keeping evaluation answers separate. The
+selected raw gaps remain 6.2 and 13.6 (Table 2). Their extracted flat scores are
+30.7 and 43.4, with gaps of 7.4 and 15.6. Our multi-hop finding survives this
+check. Calibration outputs for five, twenty and long documents are unavailable.
+    In Fig. 2, we show quality (0 to 100) against total LM tokens in millions
+on a logarithmic axis. Higher and farther left is better. Multi-hop extraction
+explains differences from Table 4. The dotted frontier has no measured interme-
+diate points or policy for future questions. NarrativeQA global uses 100 questions
+versus 293 elsewhere. We give matched scores in the supplement.
+    We examine support recall, the fraction of annotated supporting passages
+retrieved, to understand why more text helps so little. From dense retrieval to
+flat forty, recall rises from 58.6 to 78.3 on MuSiQue and from 72.5 to 84.4 on
+2Wiki, with little F1 improvement. Flat forty retrieves more MuSiQue support
+than HippoRAG 2’s five passages. For our reader, coverage appears insufficient.
+Differences in context length, order, prompts and graph connections prevent us
+from isolating the cause.
+                                                         A Token-Budget Audit of Graph-Based RAG                                         11
+
+
+                                        MuSiQue                                                                      2Wiki
+           40
+                                                                                         60
+           35
+                                        20    40                                         50
+                        5                                                                                       10
+  F1 (%)
+
+
+
+
+                                                                          F1 (%)
+                                                                                                       5              20   40
+           30
+                                                                                         40
+           25                 10
+                                                                                         30
+           20
+
+                1                            10                100                            1                       10               100
+                                    NarrativeQA                                                                 QuALITY
+           30                       40
+                                                                                                           20    40
+           25                                                                            60
+
+
+
+
+                                                                          Accuracy (%)
+                               20
+                                                                                                      10
+           20                                                                                     5
+  F1 (%)
+
+
+
+
+                    5    10
+                                                                                         50
+           15
+
+           10
+                                                                                         40
+            5
+                1                  10              100        1000                            1                 10              100
+                    LM tokens at Q=1500 (millions)                                                LM tokens at Q=1500 (millions)
+
+
+                        FLAT+, 5–40 passages              flat frontier                   RAPTOR                     GraphRAG global
+                        other flat settings               HippoRAG 2                      GraphRAG local             LightRAG
+
+
+Fig. 2. Secondary quality-cost view at 1 500 queries. Multi-hop F1 uses extraction.
+Filled blue circles: flat passage settings, labeled by count. Hollow circles: other flat set-
+tings. Colored symbols: graph systems. Dotted lines connect nondominated flat points.
+Costs include construction.
+
+7.3         Robustness of scores and accounting
+
+We check extraction, parsing, question coverage, document dependence and ac-
+counting cleanup against the saved runs.
+
+Answer transformation. We examine extraction because it raises LightRAG’s
+MuSiQue score from 9.9 to 34.6, reversing its comparison with flat. Our 1.90M
+recorded tokens over 15 194 calls include calibration, unused long-document ex-
+traction and repeated work. Without per-question identifiers, we cannot allocate
+this total to changed evaluation answers.
+    We asked one author to assess the 76 sampled outputs. The author labeled
+53 as preserved, 13 as unsupported additions, seven as wrong selections, one as
+answer loss, and two as unclear. For example, N035 asks which film was released
+earlier. LightRAG states, “Jazz Boat was released in 1960, while Her Husband’s
+Trademark was released in 1922.” The extractor returns “1922”, giving a year
+where the question asks for a film. The year comes from the response, but ex-
+traction loses the comparison needed to identify the film. We judge preservation
+of meaning separately from reference-answer correctness.
+    Our 76 outputs cover 56 unique dataset/question pairs. With one annotator
+and one item per stratum, we cannot estimate agreement or within-stratum
+12     H.G.-H. Pham et al.
+
+variance. Confidence is high for 63 labels, medium for eight and low for five. We
+report weighted counts and examples in the supplement without using labels to
+repair test answers. Extraction adds processing whose effects vary by system.
+
+Parser sensitivity. We test parsing sensitivity by retaining QuALITY’s letter
+rules but assigning zero when no letter is recognized. GraphRAG global uses
+option-text fallback on 101/300 answers, with 22 ties and 11 all-zero overlaps.
+Its accuracy falls from 38.0 to 28.7. Flat forty stays at 61.0. HippoRAG 2 falls
+from 63.3 to 63.0, with a paired gap CI of [−3.7, 7.7]. Its comparison with flat
+remains inconclusive despite GraphRAG global’s parser-sensitive score.
+    For free-form answers, we retain the full response after the same prefix. Our
+HippoRAG 2 fixed-flat gaps remain 5.7 and 15.5 (5.7 and 13.5 after calibration).
+We apply both alternatives uniformly, without case-specific repair. Neither is a
+complete semantic judge: letter-only parsing can reject valid option text, while
+extra explanation can lower F1 precision.
+
+Matched questions and document dependence. We next align question coverage.
+On 100 matched NarrativeQA questions, flat forty scores 26.0. Scores are 24.3 for
+HippoRAG 2, 24.5 for RAPTOR, 14.4 for GraphRAG local, 6.5 for global and
+4.9 for LightRAG. Flat’s lead persists. Across all 293 questions, the RAPTOR-
+minus-flat document CI is [−5.3, −0.3]. Deleting any of the ten documents leaves
+gaps between −3.8 and −2.4. QuALITY’s seventeen-article CI for HippoRAG 2
+minus flat is [−2.0, 6.1]. Our sampling checks retain flat’s NarrativeQA lead and
+leave QuALITY inconclusive, although both document samples are small.
+
+Cleanup sensitivity. To check cleanup sensitivity, we count all recorded index-
+ing calls. NarrativeQA GraphRAG rises from 37.17M to 38.61M tokens and
+LightRAG from 37.93M to 66.09M. QuALITY GraphRAG rises from 7.09M
+to 7.49M. Other totals are unchanged. GraphRAG changes reflect retries. Ligh-
+tRAG also retains earlier builds, making its cost sensitive to the accounting
+boundary despite unchanged NarrativeQA rankings. We reuse saved predictions
+throughout. Without request hashes, equal token counts cannot prove duplica-
+tion. Unlogged calls remain unknown. We give cleaned, successful-before-cleanup
+and all-recorded totals in the supplement.
+    We summarize completed and unavailable checks in Table 5. A CI containing
+zero leaves the direction uncertain. Establishing equal performance requires an
+equivalence test.
+
+
+7.4   Quality-sensitive amortization
+
+We assess cost recovery against a flat setting with acceptable quality. Most
+graph/dataset pairs lack one or have a matching flat setting cheaper at ev-
+ery query volume. For RAPTOR on NarrativeQA, strict matching selects flat
+forty with Q† ≈ 170. Yet flat twenty scores 24.8276 against RAPTOR’s 24.8314.
+Both round to 24.8, concealing a difference of just 0.0038 points.
+                                         A Token-Budget Audit of Graph-Based RAG                     13
+
+Table 5. Scope of the main robustness findings. “Unavailable” means the check was not
+performed. All intervals condition on one saved run. No rebuild sensitivity is available.
+Cost cleanup changes token estimates while retaining the saved predictions.
+
+   Finding               Scoring / parser          Selection / sampling       Accounting
+   HippoRAG 2            Raw and full-span         Fixed and two-candidate Quality unchanged
+   multi-hop lead        gaps positive             calibration             under cleanup
+   Flat NarrativeQA Original and full-span         Matched 100, document      Quality unchanged
+   lead             lead persists                  interval favors flat       under cleanup
+   QuALITY               Original and letter-only Question/document CIs       Quality unchanged
+   inconclusive          parsing                  include zero                under cleanup
+   LightRAG              Extraction-dependent,  Sparse audit, no precise      Extraction workload
+   MuSiQue gain          semantic changes found prevalence estimate           reported separately
+   RAPTOR                Near tie changes          Strict 170, tolerant 454   Cleaned/all-recorded
+   intersection          eligible flat setting     queries (no equivalence)   costs in supplement
+
+Document intervals use the original parser. Multi-hop document checks and long-document calibra-
+tion comparisons are unavailable.
+
+Table 6. Reader-dependent prefix success. Medians count passages at the first of two
+consecutive successful prefixes (Sect. 4), conditional on resolution. Unresolved cases
+have no measured evidence size. Here n counts all tested questions and supplies the
+percentage denominator.
+
+                  data           n unresolved unresolved (%) resolved median
+                  MuSiQue 300                114             38.0                   2
+                  2Wiki   300                 88             29.3                   2
+                  NarrQA 293                 177             60.4                   2
+                  QuALITY 300                 76             25.3                   1
+
+    When we allow a 0.01-point loss, cheaper flat twenty becomes eligible. Its
+lower query cost gives the graph less to save on each question, moving the inter-
+section to about 454 queries. Tolerances of 0.1, 0.5 and 1 keep that choice. We
+therefore report Q† with its quality tolerance. Equal population quality remains
+untested. We give paired near-tie uncertainty and recorded-cost sensitivity in
+the supplement.
+
+
+7.5    Evidence proxies and the score-based heuristic
+
+We separate unresolved tests from successful ones in Table 6. NarrativeQA has
+60.4% unresolved cases and a resolved-case median of two passages. Reading
+marker 21 as an evidence size would turn a failed search into an apparent require-
+ment. Our 18.5% exact agreement with annotated support count on multi-hop
+questions further supports keeping these measures separate.
+    Our heuristic predicts a MuSiQue GraphRAG threshold near 3.04, yet ob-
+served graph-minus-flat margins are −9.8, +8.0 and +2.7 at support counts
+two, three and four. The positive gap at three violates the strict threshold.
+HippoRAG 2’s margins decrease: +12.5, +6.2, −5.4. On 2Wiki, GraphRAG’s
+deficit grows with count. More support therefore fails to predict a larger graph
+14     H.G.-H. Pham et al.
+
+advantage. The supplement gives stratum sizes and paired intervals. These fail-
+ures and our use of F1 as a probability proxy keep the heuristic exploratory.
+
+
+8    Limitations and Threats to Validity
+We examine limits from scope, implementation and interpretation.
+
+Scope. We index all four corpora for each system but cover only 400 sampled
+questions per multi-hop dataset, ten NarrativeQA documents and seventeen
+QuALITY articles. NarrativeQA global has 100 questions versus 293 for other
+runs. Our ranking covers one 8B generator, embedding model and chunking
+scheme. Graph-specific tasks [19,20] and efficient indexes such as KET-RAG lie
+outside this comparison. Dependent retrieval and context compression could use
+the substantial unused flat allowance.
+
+Engineering and resource boundaries. HippoRAG 2 uses a thread pool for fil-
+tering and reading. Its diagnostic dense baseline replaces a failed class with
+retrieval on the built index. LightRAG uses the server’s keyword schema, 64k-
+token context and atomic state saves. Its MuSiQue rebuild retained cached re-
+sponses. NarrativeQA was rebuilt cleanly, excluding calls before 30 September
+2026, 09:10:17 UTC. GraphRAG and HippoRAG 2 also used cached restarts.
+Estimated GraphRAG retries have equal input/output token counts 150 to
+450 seconds apart and outputs over twenty tokens. This rule can merge distinct
+requests. One to seven community reports per index failed to parse. Unlogged
+failures remain unknown.
+
+Interpretation. We count input/output tokens equally, excluding embedding and
+reranking compute. Prompts, answer limits and extraction processing differ. Raw
+scoring still uses cleanup. One annotator’s sparse judgments cannot establish
+precise prevalence or agreement. Our heuristic’s fixed evidence set, independent
+retrieval and constant graph success remain untested. Intervals condition on
+saved runs without measuring index variability, limiting our conclusions to these
+configurations.
+
+
+9    Conclusion
+With our 8B generator and sampled corpora, HippoRAG 2’s multi-hop ad-
+vantage persists across flat settings. Our pipeline leads on NarrativeQA, while
+QuALITY is inconclusive. Meaning changes occur in 21/76 outputs, with two
+unclear cases. LightRAG’s MuSiQue gain depends on extraction, shifting RAP-
+TOR’s cost intersection from ∼ 170 to 454 queries. We therefore verify original
+answers and quality tolerances before assessing cost recovery.
+
+Acknowledgments. We acknowledge Ho Chi Minh City University of Technology
+(HCMUT), VNU-HCM for supporting this study.
+                                 A Token-Budget Audit of Graph-Based RAG             15
+
+References
+ 1. Cormack, G.V., Clarke, C.L.A., Buettcher, S.: Reciprocal rank fusion outperforms
+    Condorcet and individual rank learning methods. In: SIGIR. pp. 758–759 (2009)
+ 2. Edge, D., Trinh, H., Cheng, N., et al.: From local to global: A graph RAG approach
+    to query-focused summarization. arXiv:2404.16130 (2024)
+ 3. Grattafiori, A., Dubey, A., Jauhri, A., et al.: The Llama 3 herd of models.
+    arXiv:2407.21783 (2024)
+ 4. Guo, Z., Xia, L., Yu, Y., et al.: LightRAG: Simple and fast retrieval-augmented
+    generation. In: Findings EMNLP. pp. 10746–10761 (2025)
+ 5. Gutiérrez, B.J., Shu, Y., Qi, W., et al.: From RAG to memory: Non-parametric
+    continual learning for large language models. In: ICML. pp. 21497–21515 (2025)
+ 6. Han, H., Ma, L., Wang, Y., et al.: RAG vs. GraphRAG: A systematic evaluation
+    and key insights. arXiv:2502.11371 (2026)
+ 7. Ho, X., Duong Nguyen, A.K., Sugawara, S., et al.: Constructing a multi-hop QA
+    dataset for comprehensive evaluation of reasoning steps. In: COLING. pp. 6609–
+    6625 (2020)
+ 8. Huang, Y., Zhang, S., Xiao, X.: KET-RAG: A cost-efficient multi-granular indexing
+    framework for Graph-RAG. arXiv:2502.09304 (2025)
+ 9. Karpukhin, V., Oğuz, B., Min, S., et al.: Dense passage retrieval for open-domain
+    question answering. In: EMNLP. pp. 6769–6781 (2020)
+10. Kočiský, T., Schwarz, J., Blunsom, P., et al.: The NarrativeQA reading compre-
+    hension challenge. TACL 6, 317–328 (2018)
+11. Li, Z., Li, C., Zhang, M., et al.: Retrieval augmented generation or long-context
+    LLMs? A comprehensive study and hybrid approach. In: EMNLP Industry. pp.
+    881–893 (2024)
+12. Liu, N.F., Lin, K., Hewitt, J., et al.: Lost in the middle: How language models use
+    long contexts. TACL 12, 157–173 (2024)
+13. Nogueira, R., Cho, K.: Passage re-ranking with BERT. arXiv:1901.04085 (2019)
+14. Pang, R.Y., Parrish, A., Joshi, N., et al.: QuALITY: Question answering with long
+    input texts, yes! In: NAACL. pp. 5336–5358 (2022)
+15. Press, O., Zhang, M., Min, S., et al.: Measuring and narrowing the compositionality
+    gap in language models. In: Findings EMNLP. pp. 5687–5711 (2023)
+16. Robertson, S., Zaragoza, H.: The probabilistic relevance framework: BM25 and
+    beyond. Found. Trends IR 3(4), 333–389 (2009)
+17. Sarthi, P., Abdullah, S., Tuli, A., et al.: RAPTOR: Recursive abstractive processing
+    for tree-organized retrieval. In: ICLR (2024)
+18. Trivedi, H., Balasubramanian, N., Khot, T., et al.: MuSiQue: Multihop questions
+    via single-hop question composition. TACL 10, 539–554 (2022)
+19. Xiang, Z., Wu, C., Zhang, Q., et al.: When to use graphs in RAG: A comprehensive
+    analysis for graph retrieval-augmented generation. arXiv:2506.05690 (2026)
+20. Xiao, Y., Dong, J., Zhou, C., et al.: GraphRAG-Bench: Challenging domain-specific
+    reasoning for evaluating graph retrieval-augmented generation. arXiv:2506.02404
+    (2025)
+21. Zarrinkia, Y., Srinivasan, V., Thomo, A.: The reasoning bottleneck in Graph-
+    RAG: Structured prompting and context compression for multi-hop QA.
+    arXiv:2603.14045 (2026)
+22. Zhang, Y., Ma, H., Peng, C., et al.: When is graph structure worth its cost?
+    The case for structure pricing in retrieval-augmented generation. arXiv:2609.18099
+    (2026)
+

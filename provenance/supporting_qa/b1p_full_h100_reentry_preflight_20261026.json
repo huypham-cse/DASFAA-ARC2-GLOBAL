@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-26T17:49:52.175217+07:00",
+  "host": "103.73.232.225",
+  "cpu_max": "1600000 100000\n",
+  "cpu_before": "usage_usec 4922754363950\nuser_usec 4750964628794\nsystem_usec 171789735156\nnr_periods 5703299\nnr_throttled 1956655\nthrottled_usec 4654561516946\n",
+  "cpu_after": "usage_usec 4922908219752\nuser_usec 4751103523226\nsystem_usec 171804696525\nnr_periods 5703400\nnr_throttled 1956674\nthrottled_usec 4654631970259\n",
+  "cpu_sample_seconds": 12.443698502145708,
+  "cuda_probe": {
+    "returncode": 0,
+    "stdout": "{\"name\": \"NVIDIA H100 80GB HBM3\", \"total_memory_bytes\": 84929478656, \"multiprocessor_count\": 132, \"torch\": \"2.6.0+cu124\", \"runtime\": \"12.4\", \"free_total\": [3028615168, 84929478656]}\n",
+    "stderr": ""
+  },
+  "guard_last_state": {
+    "expires_utc": "2026-10-26T10:00:00+00:00",
+    "guard_pid": 3165162,
+    "status": "EXPIRED"
+  }
+}

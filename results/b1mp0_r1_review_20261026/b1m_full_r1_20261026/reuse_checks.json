@@ -1,0 +1,398 @@
+[
+  {
+    "pair": "minilm_distilroberta",
+    "method": "full_x",
+    "seed": null,
+    "budget": "full",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "80c1c87db4e43795e403859b6a90c6117639629c701003de16cd980637d57cc9"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "full_y",
+    "seed": null,
+    "budget": "full",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "6e97d19a8da6e664ad47d67e3a9ee606db6a1e8fe9aaf20155200070b0946677"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 17,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "d496787bc9864b89e626e33358b27c475b622879c8a63cc822da5fa447df8961"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 17,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "b19a4f91097202cdf08354b5a26c0218668211cbc160bd6ad62dcb91f4373e4e"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 17,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "6c7113299ea166d14f12ab2d909dcc34936b67be6da0dad0addb215f48c5ff32"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 17,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "24fe07270c16d1ae862d7b50c6ce83c335966ab1cd3c97a8a853d4685be5497f"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 29,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "d2d8cbc12637421952e2f02da0ed4a17f2c4ecee6f4944b091b1c848024ace26"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 29,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "9f32f1501168c0efb54dc1789d3e85b10ef4fc7aaf8706fb0be60dd98c3d8f63"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 29,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "b42dd62a58d5726599af36538466ce618f6174dcaf4823efe1d3c48ca401df62"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 29,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "ef555f8cf3b29668b2c629d45d68aae0caaaecf6d6b76aaaffc19427112364dd"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 41,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "1e2b29a3666fd1f708ddea79657714b245d9a6a6241fba7d01b4b923bdcbe2ca"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 41,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "7467ebc004d94bce24c1692b45177dde58873704b9dcd5d648e09d6a63228205"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 41,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "6761f3b916b59ce5f42489e163b3e0ae95628ac5f80ad4a89e194867c1d4bbf3"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 41,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "826b95383249609c16e6b93a0fc3e52d5bf33701c15b5c2bad4de5c1e367bd25"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 53,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "37814a859d0d553d6ec6bc979ba679ec2178c361a8d876f4ee032f48509a0f04"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 53,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "2e842eb36a3ef22c4d45848b490221465abbab230f83c22b2648485478cb3f98"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 53,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "477957060069255ee9fe8d5ddefbc2e7663965e2eee7676cda872b12627fd366"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 53,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "828d0610c97a76078cc810cca21ab87d5606fd09f1e24cbf2c11bfd6bf0fc883"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 67,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "a90f9e52eac3e28c4179c12dc48df32ce8f242760608be78588624e30efc0940"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "procrustes_global",
+    "seed": 67,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "7eb12b3058ed0ca43a055d4ab2cad9b8b9faec123d2cc90d0b6dd9444e3353e4"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 67,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "58d189fb91b1b9645d19b41942e7526a06adb5e83b3981230bc6a0e48f0c15e5"
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 67,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "9b44bd8ba1fa1c46b7f5be8534bd48e6147ab3db41583f21bee67d9df79f2eb5"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "full_x",
+    "seed": null,
+    "budget": "full",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "6d27051ebbd7226e3f59bca358fc3b2dcdf2ab7b226f87273aad4873d813d825"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "full_y",
+    "seed": null,
+    "budget": "full",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "3c11866ff1b4d64ca581a54e36d4cd4d9672429ff9e50150cf5b5baf7dbbfff4"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 17,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "249a981d3f0dd23b0e7765a857f44d93f5026c726e3059b313905be59f1100e8"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 17,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "5eb7ac12ee5d6e6178a08163b279257b6df5f3417bca7cb406d171a1c70ce5da"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 17,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "cc4dfe41526fd9347d679c3165c6fe4888b1083a75181e9f204186f5d32cb329"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 17,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "d8c85add7c9ba2ab8bf3840135fdd184fee30031490f77fc822cf58aaa35fdde"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 29,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "de22a48e252c8e3f179ee378acb9d5d691c7429cb71f506b05a0640317b34e85"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 29,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "deb0f8368fec9c0483158a6f40c4bb936243bf087b68748b835cd81deaf74314"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 29,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "da60307c877d996bca85c065f2cebe5c8529138d3b553b9372f13410675d2638"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 29,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "e33b0d21fc0f494206e39e4cd6f6c699a1fb064d98e332e6d2154edf92a42755"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 41,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "ec185771a7ae78b80709e76d5db3e26420312e759cffdf49b4214d7953e5ad96"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 41,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "a1e1325cdb6591e70053d39301f0aa5875511e41e65319e771e91caa839830ff"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 41,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "3de4eab1d1c3e3f024d800899268af1a37a7dca42345b2d947e8527f436eedbf"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 41,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "b25fc55b3d2811ff9660cf0d0c068c1b047a91e630cfe56526755d1db3ba0501"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 53,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "60a5f97eb88fda15276404b2e45d31a661c83f67f79d48d3f1c2d537a50de993"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 53,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "a66b5a67575b8b55fe61b007ec3c62ec3a703a16b5f6620e795e650dac2ce7f3"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 53,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "1bd5fc570a4cbb4e8502281e29fa0c05c7e2878ca8311f8e1fff2370f2e42121"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 53,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "413cc7290f5394a92c686f0cd4facbccf29d589984e361408759f1faf82f2648"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 67,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "92aeeba2fa8dd7d89f5f851bb438ce5176e61f007e88a2965e842427bd0aa2df"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "procrustes_global",
+    "seed": 67,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "751422130385362bb59d1d2356cb981c155e6a94266af3daf27c0176ea1d539d"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 67,
+    "budget": "25pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "c6b27e133ec05dac07fea1c5cc5bb8915e06e5097ad09289cf0c58b1efa29df9"
+  },
+  {
+    "pair": "e5_small_base",
+    "method": "arc2_global_tangent2_r1",
+    "seed": 67,
+    "budget": "50pct",
+    "ranked_ids_exact": true,
+    "changed_queries": 0,
+    "source_ranking_sha256": "efb05a58597b652eabf42e5310c1a901a35e64eac77081c70e9d77a75cc099f1"
+  }
+]

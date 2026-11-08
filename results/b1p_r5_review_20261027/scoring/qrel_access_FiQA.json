@@ -1,0 +1,39 @@
+{
+  "dataset": "FiQA",
+  "first_scorer_qrel_parse": "2026-10-27T03:20:34.803524+00:00",
+  "access_scope": "first scorer parse/metric access; prior opaque DEV transport recorded",
+  "prior_dev_label_transport": {
+    "intent": {
+      "protocol": "protocols/B1P_R3_H100_MINI_DEPLOYMENT_20261026.md",
+      "pre_run_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+      "before_source_hash_stat_or_byte_read": "2026-10-26T09:12:12.274143+00:00",
+      "source_host": "103.73.232.225",
+      "destination_host": "103.73.232.201",
+      "source": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "expected_sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+      "purpose": "opaque transport of previously inspected FiQA DEV TSV; no parsing/metrics; worker API excludes qrels",
+      "judgments_parsed": false,
+      "metrics_computed": false,
+      "TREC_access": false
+    },
+    "verified": {
+      "status": "DEV_LABEL_TRANSPORT_VERIFIED",
+      "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+      "bytes": 18327,
+      "intent_sha256": "29cc5b9b5494029c7331200852201421b954680ebe0020e84a255b43a7920cad",
+      "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "judgments_parsed": false,
+      "metrics_computed": false,
+      "verified_utc": "2026-10-26T09:16:55.856407+00:00"
+    },
+    "scope": "opaque prior DEV transport; first scorer parse follows verified124-cell seal"
+  },
+  "first_access_receipt": "first_dev_qrel_open.json",
+  "expected_source": {
+    "format": "tsv",
+    "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+    "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+  },
+  "exposure": "Previously inspected FiQA DEV; not independent confirmation"
+}

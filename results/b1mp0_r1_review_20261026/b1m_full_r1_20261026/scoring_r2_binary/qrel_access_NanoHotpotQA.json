@@ -1,0 +1,13 @@
+{
+  "dataset": "NanoHotpotQA",
+  "first_dev_qrel_open": "2026-10-25T19:06:41.132875+00:00",
+  "first_access_receipt": "first_dev_qrel_open.json",
+  "expected_source": {
+    "format": "parquet",
+    "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoHotpotQA/resolve/d79c0cdda980aba54842756770928035e1b61a51/qrels/train-00000-of-00001.parquet",
+    "sha256": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+    "bytes": 3424,
+    "implicit_binary_grade": 1
+  },
+  "exposure": "DEV, not independent confirmation"
+}

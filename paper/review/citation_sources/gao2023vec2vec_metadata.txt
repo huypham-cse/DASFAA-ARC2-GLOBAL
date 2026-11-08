@@ -1,0 +1,9 @@
+@misc{gao2023vec2veccompactneuralnetwork,
+      title={Vec2Vec: A Compact Neural Network Approach for Transforming Text Embeddings with High Fidelity}, 
+      author={Andrew Kean Gao},
+      year={2023},
+      eprint={2306.12689},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2306.12689}, 
+}

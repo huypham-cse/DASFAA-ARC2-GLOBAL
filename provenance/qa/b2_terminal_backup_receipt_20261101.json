@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE_CAMPAIGN_BACKED_UP",
+  "checked_utc": "2026-11-01T02:00:38.982845+00:00",
+  "completed_utc": "20261031T201610_062525Z",
+  "root": "D:\\ARC2-B2-backup-20261031",
+  "file_count": 1330,
+  "bytes": 58977150839,
+  "groups": 60,
+  "pending": 0,
+  "unstable": 0,
+  "coverage_sha256": "8aba51b9eb3a47854a3d0a4b9056104374c6c723ef3b8c23cafb059fd8540b1f",
+  "operator_state_sha256": "613ab3d6468d5bc9b552d29508fdbf7949efbdb65f4699bf8c5e04fbb8dbf6a9",
+  "verification": "Each transferred file was whole-file SHA256-verified by operator before publishing; terminal coverage is complete. Compact selection is independently rehashed locally. This receipt does not claim a second full rehash of all58.98GB.",
+  "scope": "Current B2 campaign results/input/model files in coverage; not all historical projects, server runtime environments or unlisted caches.",
+  "last_events": [
+    {
+      "status": "POLL_VERIFIED",
+      "groups": 60,
+      "files": 1330,
+      "pending": 0,
+      "unstable": 0,
+      "utc": "20261031T201610_061524Z"
+    },
+    {
+      "status": "COMPLETE_CAMPAIGN_BACKED_UP",
+      "utc": "20261031T201610_062525Z"
+    }
+  ],
+  "manuscript_files_checked": 20,
+  "manuscript_changed": []
+}

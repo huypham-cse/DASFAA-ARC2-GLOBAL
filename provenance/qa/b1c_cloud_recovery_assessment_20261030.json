@@ -1,0 +1,39 @@
+{
+  "status": "RECOVERY_INPUTS_INCOMPLETE_PUBLIC_CLOUD_PAYLOADS",
+  "scope": "Read-only incident diagnosis and backup metadata checks; no scientific run, fitting or label scoring",
+  "mini_observed_utc": "2026-10-30T02:49:36.702554+00:00",
+  "mini_project_root_present": false,
+  "mini_runtime_root_present": false,
+  "b1c_processes_present": false,
+  "pid1_elapsed_seconds": 13651,
+  "container_recreation": "consistent with observations; exact cause not established",
+  "gpu_mig_used_mib": 25,
+  "gpu_mig_total_mib": 20096,
+  "main225_connection": "TCP timeout on configured port52194",
+  "cloud_folder": "https://drive.google.com/drive/folders/1lkDcW4UsNumOy78ntyaPMsJTrhj-ghXt",
+  "completion_sha256_matches_prior_local_receipt": true,
+  "main_inventory_sha256_matches_prior_local_receipt": true,
+  "mini_inventory_sha256_matches_prior_local_receipt": true,
+  "public_listing": {
+    "main": {"archive_payloads_visible": 78, "expected_archives": 105, "verification_receipts_visible": 105},
+    "mini": {"archive_payloads_visible": 0, "expected_archives": 72, "verification_receipts_visible": 72},
+    "qualification": "Public embedded folder listings, not an assertion about unlisted uploads, permission settings or deleted files"
+  },
+  "scientific_source_recovery": {
+    "required_original_paths": 565,
+    "represented_in_verified_backup_inventories": 565,
+    "exact_local_sha256_matches": 514,
+    "remaining_paths": 51,
+    "remaining_source_bytes": 4180135171,
+    "targeted_archive_plan_total": 22,
+    "targeted_archive_payloads_visible": 7,
+    "targeted_archive_payloads_not_visible": 15,
+    "required_upload_list": "cloud_backup_20261030/required_archive_uploads.csv"
+  },
+  "latest_preincident_b1c_observation": "242/320 new rankings and fifth converter refit; metadata observations only, not currently verified reusable raw files",
+  "earlier_downloaded_scored_results": "Still available locally; no change to their claims or raw evidence",
+  "current_b1c_artifact_reuse": "Unconfirmed; original28Oct archive snapshot predates this B1c execution",
+  "next": "Obtain missing targeted archive payloads or alternate accessible backup; verify restored scientific bytes and runtime before any committed recovery/smoke/full launch",
+  "TREC_label_access": false,
+  "new_scientific_run_started": false
+}

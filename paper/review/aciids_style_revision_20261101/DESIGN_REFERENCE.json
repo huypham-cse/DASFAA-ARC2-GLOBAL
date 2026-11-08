@@ -1,0 +1,249 @@
+{
+  "schema": "arc2-reference-design-review-v1",
+  "date": "2026-11-01",
+  "review_type": "design_and_rhetorical_structure_only",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "acceptance_score": null,
+  "scope": {
+    "manuscript_modified": false,
+    "generator_modified": false,
+    "scientific_artifacts_modified": false,
+    "new_experiments": false,
+    "reference_treated_as_instructions": false,
+    "raw_result_claim_audit": false
+  },
+  "inputs": [
+    {
+      "role": "reference",
+      "path": "C:/Users/Gia Huy/Downloads/ACIIDS2027_paper__262 (6).pdf",
+      "sha256": "0e0f87bbaf7108083a437db525ee76cdd56e4858eb8f4fe8ee2bb3871e243c66",
+      "pages": 15,
+      "all_text_read": true
+    },
+    {
+      "role": "current_paper",
+      "path": "D:/DASFAA-2027-paper/paper/ARC2_Global_DASFAA2027_final.pdf",
+      "sha256": "dead152e05d6d76e8a92d05fe524fe4fdef28b170191fbae8869b3e01d3c1d9f"
+    },
+    {
+      "role": "generator",
+      "path": "paper/scripts/build_evidence.py",
+      "sha256": "ad60cae15f38471f4d7d280776034a78c9cef9f738725ee9e4649001246e9dce"
+    }
+  ],
+  "reference_visually_inspected": [
+    {
+      "page": 2,
+      "objects": [
+        "Fig. 1"
+      ]
+    },
+    {
+      "page": 4,
+      "objects": [
+        "Table 1"
+      ]
+    },
+    {
+      "page": 9,
+      "objects": [
+        "Table 2",
+        "Table 3"
+      ]
+    },
+    {
+      "page": 10,
+      "objects": [
+        "Table 4"
+      ]
+    },
+    {
+      "page": 11,
+      "objects": [
+        "Fig. 2"
+      ]
+    },
+    {
+      "page": 13,
+      "objects": [
+        "Table 5",
+        "Table 6"
+      ]
+    }
+  ],
+  "current_visually_inspected": [
+    {
+      "page": 3,
+      "objects": [
+        "Fig. 1"
+      ]
+    },
+    {
+      "page": 10,
+      "objects": [
+        "Table 2",
+        "Fig. 2"
+      ]
+    },
+    {
+      "page": 11,
+      "objects": [
+        "Fig. 3",
+        "Table 3"
+      ]
+    },
+    {
+      "page": 12,
+      "objects": [
+        "Fig. 4"
+      ]
+    },
+    {
+      "page": 13,
+      "objects": [
+        "Table 4"
+      ]
+    }
+  ],
+  "observed_reference_principles": [
+    "Worked example followed by aggregate evidence",
+    "Finding-first paragraphs with numeric comparisons",
+    "Serif vector-style charts and light grids",
+    "Color and shape redundancy",
+    "Grouped booktabs headers",
+    "Sparse pale row shading in robustness matrix",
+    "Explicit unresolved outcomes and denominators"
+  ],
+  "not_observed_or_not_transferred": [
+    "Reference tables do not systematically mark best and second best",
+    "Reference exact colors and font sizes were not measured",
+    "Reference scatter/frontier lines do not justify performance interpolation",
+    "No reference prose, identities, results or claims copied into ARC2"
+  ],
+  "plot_decisions": {
+    "font": "LaTeX serif; maintain LNCS body layout",
+    "font_pt": {
+      "axis": 8,
+      "ticks": 8,
+      "legend": 8,
+      "panel_heading": 9
+    },
+    "colors": {
+      "ARC2": "#0F4D92",
+      "Procrustes": "#767676",
+      "LA2M20": "#42949E",
+      "SimpleLinear": "#9A4D8E",
+      "Affine ridge": "#B64342",
+      "Converter": "#A88420",
+      "native": "#272727"
+    },
+    "line_width_pt": {
+      "ARC2": [
+        1.7,
+        1.8
+      ],
+      "other_adapters": [
+        1.05,
+        1.15
+      ],
+      "native": [
+        0.85,
+        0.95
+      ]
+    },
+    "marker_size_pt": [
+      3.8,
+      4.2
+    ],
+    "panel_labels": [
+      "(a)",
+      "(b)"
+    ],
+    "legend": {
+      "shared": true,
+      "columns": 4,
+      "rows": 2,
+      "order": [
+        "ARC2",
+        "Procrustes",
+        "LA2M20",
+        "SimpleLinear",
+        "Affine ridge",
+        "Converter",
+        "Native Full-X",
+        "Native Full-Y"
+      ]
+    },
+    "x_axis": {
+      "linear": true,
+      "ticks": [
+        25,
+        50,
+        75
+      ],
+      "meaning": "anchor-inclusive unique destination document encodings"
+    },
+    "default_shared_y_ranges": {
+      "development": [
+        0.18,
+        0.72
+      ],
+      "prospective": [
+        0.28,
+        0.7
+      ]
+    },
+    "saved_value_ranges": {
+      "development": [
+        0.19689591385601218,
+        0.6929058751879555
+      ],
+      "prospective": [
+        0.29862101762519416,
+        0.6805416492225224
+      ]
+    },
+    "alternative_scale_policy": "If independent main-panel y limits are retained, label different y ranges next to panels and in caption. Any inset must retain all six methods and native references.",
+    "uncertainty": "No invented pooled bands; use all saved family-adjusted ablation intervals; keep zero, negative and unresolved controls.",
+    "candidate_annotations": [
+      "Prospective E5: +0.2572 vs Converter at 25%",
+      "Prospective MiniLM: 0.5195 at 75%, Full-Y 0.5203; point estimates, no equivalence claim"
+    ]
+  },
+  "table_decisions": {
+    "best": "Bold best full-precision mean among six adapters in every comparable metric column",
+    "second": "Underline second-best full-precision mean",
+    "native": "Separate block; preserve both native references; excluded from adapter ranks with explicit note",
+    "identity": "ARC2 label bold; optional pale blue 4% row tint is a navigation cue, not winner encoding",
+    "precision": "Four decimals uniformly; disclose rounded ties or increase entire relevant column precision",
+    "significance": "Preserve exact dagger meaning from saved adjusted intervals; ranking is distinct from significance",
+    "headers": "Migration spanners with cmidrules; budget/metric subheader above body midrule",
+    "gain": "Signed absolute nDCG difference with named comparator; no selective percentage conversion"
+  },
+  "fairness_checks": [
+    "DEV Recall best is Procrustes, second ARC2",
+    "MiniLM all-paid nDCG best point mean is ridge, ARC2 second; interval unresolved",
+    "All prospective adapter point winners must receive same emphasis",
+    "Keep all 30 prospective contrasts represented; unresolved is not equivalence",
+    "Keep native Full-X and Full-Y context"
+  ],
+  "implementation_targets": [
+    "paper/scripts/build_evidence.py::table",
+    "paper/scripts/build_evidence.py::build_tables",
+    "paper/scripts/build_evidence.py::curves",
+    "paper/scripts/build_evidence.py::ablation_plot",
+    "paper/main.tex (only table-color support if used)",
+    "paper/sections/results.tex (limited captions/transitions)"
+  ],
+  "validation": [
+    "Numeric CSV and saved interval equality before/after",
+    "Regenerate through evidence builder; no hand edits to generated tables",
+    "Compile standard LNCS without font/margin compression",
+    "Inspect every compiled page at print size and grayscale",
+    "Verify rank styling from unrounded means",
+    "Existing numerical/document QA and source ZIP smoke",
+    "Recheck any numerical prose changed"
+  ],
+  "report": "DESIGN_REFERENCE.md"
+}

@@ -1,0 +1,64 @@
+{
+  "status": "frozen external-adapter definitions; synthetic validation pending",
+  "upstream_revision": "5e62baf1544264847ce3d8feeabd1ded6499b064",
+  "la2m": {
+    "id": "la2m20_integration_script_adaptation",
+    "clusters": 20,
+    "n_init": 4,
+    "center": true,
+    "route": "nearest source centroid",
+    "singleton_fallback": "all-pair global Procrustes",
+    "source_guidance": "first non-global value in pinned script CLI grid, not claimed published optimum"
+  },
+  "simplelinear": {
+    "id": "simplelinear_official_final50_mlp5",
+    "class": "embedding_translation.mapper.simple_linear.strategy.SimpleLinearMapper",
+    "config": {
+      "learning_rate": 0.0001,
+      "num_epochs": 50,
+      "batch_size": 4028,
+      "gradient_clip": 1.0,
+      "weight_decay": 1e-05,
+      "scheduler_patience": 5,
+      "scheduler_factor": 0.5,
+      "early_stopping_patience": 10,
+      "min_delta": 1e-06,
+      "device": null,
+      "layer_num": 4,
+      "activation": "selu",
+      "dropout": 0.0,
+      "hidden_dim": 512,
+      "use_local_distill": false,
+      "local_k": 50,
+      "local_tau": 0.1,
+      "local_weight": 0.5,
+      "faiss_use_float32": true,
+      "knn_recompute_epochs": 0,
+      "global_weight": 0.5,
+      "cosine_weight": 0.5,
+      "mse_weight": 1.0,
+      "normalize_output": false,
+      "loss_kind": "mse_cos"
+    },
+    "actual_affine_layers": 5,
+    "checkpoint_policy": "final epoch50; no validation/early stopping",
+    "loss": "MSE + hard-coded0.5 cosine",
+    "fit_pairs": "all supplied allowed pairs",
+    "runtime_adaptation": "GPU Torch2.6 with appended existing dependencies; not original-requirements reproduction"
+  },
+  "ridge": {
+    "id": "ridge_affine_l10_bias_regularized",
+    "lambda": 10,
+    "bias_regularized": true,
+    "solve": "float64 primal Cholesky",
+    "stored_coefficient": "float32",
+    "orthogonal_constraint": false
+  },
+  "shared_gallery": {
+    "normalization": "unit float32 proxies",
+    "paid_only_overwrite": true,
+    "fitted_pairs_count_in_budget": true
+  },
+  "primary_ARC2_Global_changed": false,
+  "new_benchmark_results": false
+}

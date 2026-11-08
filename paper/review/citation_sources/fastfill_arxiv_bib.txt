@@ -1,0 +1,9 @@
+@misc{jaeckle2023fastfillefficientcompatiblemodel,
+      title={FastFill: Efficient Compatible Model Update}, 
+      author={Florian Jaeckle and Fartash Faghri and Ali Farhadi and Oncel Tuzel and Hadi Pouransari},
+      year={2023},
+      eprint={2303.04766},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2303.04766}, 
+}

@@ -1,0 +1,86 @@
+{
+  "group_id": "NanoFEVER_e5_small_base_seed41_fixed1024_procrustes_global",
+  "dataset": "NanoFEVER",
+  "pair": "e5_small_base",
+  "method": "procrustes_global",
+  "seed": 41,
+  "regime": "fixed1024",
+  "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/groups/NanoFEVER_e5_small_base_seed41_fixed1024_procrustes_global/rank",
+  "old_docs": {
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_small_x_docs.npy",
+    "sha256": "05590911e088b026e8489f7afb03b69cc937f9f4c0999411ea7f70ac39464255"
+  },
+  "new_queries": {
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/e5_base_y_queries.npy",
+    "sha256": "33e494415e670df2ee8b8463a1a65076103db799b02edd855dca22f4de370d4c"
+  },
+  "ids": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/1ac5a707750d824545739dec733dbe95046841e083da4a7674f522b1ff48aba2.json",
+    "sha256": "1ac5a707750d824545739dec733dbe95046841e083da4a7674f522b1ff48aba2"
+  },
+  "sample_positions": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_NanoFEVER_28e06e293059a02d.npy",
+    "sha256": "3a554be31ea5a0e831781eeafc386268ea7fe5f45afbfa93bfa5e30d04663cdb"
+  },
+  "anchors": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/324c4fab069737905967634c33ba87ed7c18d81b89f54ec6c7ad833cb73ade70.npy",
+    "sha256": "324c4fab069737905967634c33ba87ed7c18d81b89f54ec6c7ad833cb73ade70"
+  },
+  "proxy": {
+    "kind": "b1m_parameters",
+    "file": {
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/NanoFEVER_e5_small_base_seed41/parameters.npz",
+      "sha256": "12245bac678c1c9cefd285274766b8f2651020333ec604c97fe840732677b633"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "NanoFEVER_e5_small_base_seed41_fixed1024_procrustes_global_25pct",
+      "budget": "25pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/6a9940e63a9c2038d6c3b3fd85ddb2e38351187b06763c217536eca0e52d61a4.npy",
+        "sha256": "6a9940e63a9c2038d6c3b3fd85ddb2e38351187b06763c217536eca0e52d61a4"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/8abf47e06a98e27a7fbfa6c04227f7d35c9af19dc5310178385b7b3e5c80e31f.npy",
+        "sha256": "e499188d56add0e0183dfca8c31f0d3d1c0b0557c5efc51587f5690f1554ef8a"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoFEVER_e5_small_base_procrustes_global_seed41_25pct.npy",
+        "sha256": "41fb9942d385b2a5e72e793d62b36c678fbad5b73c0bfb38d746335d3a9e5ea5"
+      }
+    },
+    {
+      "case_id": "NanoFEVER_e5_small_base_seed41_fixed1024_procrustes_global_50pct",
+      "budget": "50pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/e78efc8a5b7ef529d351eb8c68918bd3ea814e3f0ca657edbcf19642f69374d8.npy",
+        "sha256": "e78efc8a5b7ef529d351eb8c68918bd3ea814e3f0ca657edbcf19642f69374d8"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/3dfcb180faf3a6812caad2d00d43b5734f2307b02829f9eb397747914f3e435c.npy",
+        "sha256": "ba42bd9435eec23e5878506d492fc47fb1ba791cdbdc067120967a6486b7287b"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoFEVER_e5_small_base_procrustes_global_seed41_50pct.npy",
+        "sha256": "c7df8f1cc23b0ba026c99ebf8768402a83716a4921ffdddfd5c3c9f5d40b101e"
+      }
+    },
+    {
+      "case_id": "NanoFEVER_e5_small_base_seed41_fixed1024_procrustes_global_75pct",
+      "budget": "75pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/57e1b24dd22feb9b8645e2f7056e3e91f4d6aebec3682d867899699cee3447d5.npy",
+        "sha256": "57e1b24dd22feb9b8645e2f7056e3e91f4d6aebec3682d867899699cee3447d5"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/d55931bc8fcfcc6edeca38f833ed5b10e3a8829b7806436ec82f5123d76da8bb.npy",
+        "sha256": "b0d94ef18bb3c0e84079fc3b36a93fb9dd27803ffc5b98d371e1f4f74125ca79"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoFEVER_e5_small_base_procrustes_global_seed41_75pct.npy",
+        "sha256": "0fe480289a4d55ffc0aa9b4b86240f7a0d7aa08ca4a5861951ad1b90bfb8d61a"
+      }
+    }
+  ]
+}

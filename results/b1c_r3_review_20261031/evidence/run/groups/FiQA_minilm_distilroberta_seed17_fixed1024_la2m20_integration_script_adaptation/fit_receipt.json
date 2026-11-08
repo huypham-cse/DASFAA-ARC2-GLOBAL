@@ -1,0 +1,32 @@
+{
+  "status": "HISTORICAL_FIT_REUSED",
+  "new_fit": false,
+  "fit_pairs": 1024,
+  "historical_fit_seconds": null,
+  "fit_seconds_semantics": "Historical fit reused; null is not zero cost",
+  "reconstruction_seconds": 2.1691291192546487,
+  "source_proxy": {
+    "kind": "b1p_parameters",
+    "file": {
+      "path": "/network-volume/arc2_recovery_20261030/restored/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/cpu/minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz",
+      "sha256": "e9bde162774055bb2b68a11a9147e49f268d2a93386acf166edf477b0d10efe8"
+    }
+  },
+  "reconstruction_input_hashes": {
+    "/network-volume/arc2_recovery_20261030/restored/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/cpu/minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/parameters.npz": "e9bde162774055bb2b68a11a9147e49f268d2a93386acf166edf477b0d10efe8"
+  },
+  "new_physical_document_encodes": 0,
+  "group_id": "FiQA_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation",
+  "dataset": "FiQA",
+  "pair": "minilm_distilroberta",
+  "seed": 17,
+  "regime": "fixed1024",
+  "method": "la2m20_integration_script_adaptation",
+  "paired_target_path": "groups/FiQA_minilm_distilroberta_seed17_fixed1024_la2m20_integration_script_adaptation/FiQA_anchor_targets.npy",
+  "paired_target_sha256": "9c5b2187f97e150bb4d83eac7a13512dcba34b59e61de749a43155d1b5a41958",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "75pct"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "gate": {
+    "status": "WAITING_FOR_VERIFIED_INPUT_TRANSFER",
+    "updated_unix": 1793159036.7504673,
+    "deployment_commit": "19f3f0e76255d76012a360477c28ecdea25eec70",
+    "TREC_access": false,
+    "next_phase_auto_launch": false,
+    "smoke_status": "B1C_SMOKE_PASS"
+  },
+  "final_received_files": 6,
+  "total_transfer_files": 453,
+  "final_received_bytes": 531792576,
+  "total_transfer_bytes": 1947593157,
+  "partials": [
+    {
+      "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/results/p8_full_r10_20261025/converter/minilm_distilroberta_seed53/worker/proxy_full.npy.arc2transfer-57024",
+      "bytes": 125829120,
+      "mtime_unix": 1793159041.6480932
+    }
+  ],
+  "now": 1793159043.4599235,
+  "receiver_marker_exists": false
+}

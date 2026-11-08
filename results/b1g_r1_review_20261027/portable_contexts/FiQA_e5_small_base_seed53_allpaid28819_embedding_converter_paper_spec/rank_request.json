@@ -1,0 +1,54 @@
+{
+  "group_id": "FiQA_e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec",
+  "dataset": "FiQA",
+  "pair": "e5_small_base",
+  "method": "embedding_converter_paper_spec",
+  "seed": 53,
+  "regime": "allpaid28819",
+  "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/groups/FiQA_e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/rank",
+  "old_docs": {
+    "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_small_x/fresh_docs.npy",
+    "sha256": "6840bcf6eead122758d6f5eae3f8cf4149b7604485e405adbf4c536e45af1fbf"
+  },
+  "new_queries": {
+    "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/e5_base_y/fresh_queries.npy",
+    "sha256": "78062f32f7f834aa04d8a0f82bc584d16a4672b393a0cb767269069709aca41c"
+  },
+  "ids": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/inputs/4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33.json",
+    "sha256": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33"
+  },
+  "sample_positions": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/inputs/sample_FiQA_9edadfd39a8a05da.npy",
+    "sha256": "6a46319fe7b4732bd2cf05c16ce9872b9200d9816c8bbbeead543a1b934f5ee8"
+  },
+  "anchors": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/inputs/49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc.npy",
+    "sha256": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc"
+  },
+  "proxy": {
+    "kind": "saved_npy",
+    "file": {
+      "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec/worker/proxy_full.npy",
+      "sha256": "de329dbc1118fc616317ec279e245e7500c843aec8c650267df4b56bd8a91a41"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "FiQA_e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec_50pct",
+      "budget": "50pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/inputs/d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c.npy",
+        "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_mini_r1_20261027/execution_paid_targets/001ebb347af26fbbd68448ab00150a9a3898e0ed6b3de0c3316772cfbe13bad6.npy",
+        "sha256": "078adaf6bf3621d12224cc28616d4c1dc77ceb0b888fa8f674c9068d001cc539"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/rankings/e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec.npy",
+        "sha256": "5a76f590ff732a9f5463198d932409b1e9792404b47c816b73cd9ec5a7596766"
+      }
+    }
+  ]
+}

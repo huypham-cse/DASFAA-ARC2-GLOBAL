@@ -1,0 +1,3524 @@
+{
+  "audit_skill": "paper-claim-audit",
+  "verdict": "PASS",
+  "reason_code": "all_numbers_match",
+  "summary": "313 claim records reconcile to declared raw/config/code evidence; 3047 deterministic checks; 0 claim issues and 0 failed checks.",
+  "audited_input_hashes": {
+    "D:/ARC2-Global_Anonymous_Artifact_20261102/MANIFEST.json": "sha256:b5c727766a4036b5295bcda263410d9fa9e08ec0007ec0b7f1fedb8ad985d133",
+    "D:/ARC2-Global_Anonymous_Artifact_20261102/README.md": "sha256:8f1bbe77a59f829944d15bb230c5bae112acc4aa24246af30f9ada89864e6969",
+    "D:/ARC2-Global_Anonymous_Artifact_20261102/verify.py": "sha256:ade631367396c920c4f8400cbc0f7fd85544fed8cd958d1d4410f22f39939538",
+    "D:/DASFAA-2027-paper/.aris/traces/paper-claim-audit/2026-11-02_frozen_delivery/gcpa_official.pdf": "sha256:75a0e06fec9bb08754dd75cb33148a60cc91d5176f918383a8609e369f826012",
+    "D:/DASFAA-2027-paper/configs/b1c_r3_lock.json": "sha256:f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+    "D:/DASFAA-2027-paper/configs/b1p_lock.json": "sha256:0224200454b0deb8f2176e509d8bd99da0f59c7ae7b12a2488ec6eadad7308ad",
+    "D:/DASFAA-2027-paper/configs/b2_lock.json": "sha256:e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+    "D:/DASFAA-2027-paper/configs/datasets.json": "sha256:c26318609b4959f2c07110c3e610de8f77befcad2c35d8de836d7821eb8a9b82",
+    "D:/DASFAA-2027-paper/configs/tc1l_minilm_local_20261102_lock.json": "sha256:82c54141f70c451ab7d90833a8c78f9e14d765aa7e19ca4cbccded50b6a2dbd6",
+    "ARC2_Global_DASFAA2027_supervisor_20261102.pdf": "sha256:a6bff1fdc33169679dc45abce0c6d516ecbd96dbc63cd50770304089ecde4451",
+    "figures/dev_ablation.pdf": "sha256:aed7707354ac9369006cf82e8a5f647629a0b6dc024a7f10a13ad7a7f2dbf947",
+    "figures/dev_quality.pdf": "sha256:41dfa46bcb687071d9ee18ed0f1b604af2ee9e610511474882b2e152df7f7cb0",
+    "figures/mechanism.pdf": "sha256:7a311bc8dd166bce96db914c5f94ad55a53fef32fc83953b2ba33ae6c2a49360",
+    "figures/trec_quality.pdf": "sha256:d9af72af39fd4ae598cd6b85faf913ef61bf868002129fe370d37c9638d966c2",
+    "generated/ablation.tex": "sha256:024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e",
+    "generated/allpaid.tex": "sha256:bd28688f51a306c9990c0174f1c3b88786eb266a5e76bafffc0217c851de4c13",
+    "generated/budget_leverage.tex": "sha256:dc8d45d6b72643735ae2135c8f970687b0eca5a9d8849de46988976a77e6719b",
+    "generated/dev_macro.tex": "sha256:58e7543a91a5bbfcce75969e6277967cc1978ec1fc6e96d5461c60d821b3ff27",
+    "generated/trec_family.tex": "sha256:b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e",
+    "generated/trec_means.tex": "sha256:354d8f8e46373015b3af96c5e66c3923777a5e88baef2f95be84728f99555dce",
+    "generated/trec_recall.tex": "sha256:92fbea88b6557670feb56192669e114184b0b77a0b20baa083bc74fbc7b5fbdd",
+    "main.tex": "sha256:704d831a3f56001486627c701512c0a03b7dcaba6ee1c5939418898f25cbd747",
+    "references.bib": "sha256:03f83b8433278cfc7c42331894bbed39adebd15b639140cd44c5238c5ec7a893",
+    "sections/abstract.tex": "sha256:9e067024e515895185e0c588d083bc454d372d4af10032011622795330570597",
+    "sections/conclusion.tex": "sha256:e99185b6264336089099ad7201552d3d83ebb3f9d8cb75e236453a38b5970193",
+    "sections/discussion.tex": "sha256:4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71",
+    "sections/experimental-setup.tex": "sha256:02b50e48781e445d8d331c0b58c4113d421b73fb2b3a6cc7f20a73c7c33f5cf6",
+    "sections/introduction.tex": "sha256:65315cd9c709b70451ce9fb4c66e69938917245d007c5782b247fcd60c469523",
+    "sections/method.tex": "sha256:d0104ddb693c16483dfef65bac68bf5224a61cb5828798556e76856996951da5",
+    "sections/related-work.tex": "sha256:de6a7e97f0ef75ec5cf8b3e38bd93294c1dd676d1bc26f5c0ac493e7058a4212",
+    "sections/results.tex": "sha256:747336a8f1064156b1268bbb09f95a640bb0fcea67d5e322ab84eeef5d90511f",
+    "D:/DASFAA-2027-paper/results/b1c_r3_review_20261031/evidence/run/scoring/cell_index.json": "sha256:c4d23f1730dbd10b3975590faf77ab0210869d19306c6adfe64785e3e7e515aa",
+    "D:/DASFAA-2027-paper/results/b1c_r3_review_20261031/evidence/run/scoring/per_query_FiQA.npy": "sha256:3008af5125a8ab4d941aa1b8597507c9e30caa17dad2ab5c4f2c8eff3a15c9da",
+    "D:/DASFAA-2027-paper/results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoFEVER.npy": "sha256:4dcb99a9ce16125b857721ec035f9a5d0ddbc78099ff1023d95bacfc11efac5d",
+    "D:/DASFAA-2027-paper/results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoHotpotQA.npy": "sha256:46966df3fffc74b63b935082b77db720cbcbc5b97bd0a656d3b9d732c508c7ee",
+    "D:/DASFAA-2027-paper/results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoNQ.npy": "sha256:59ff7a5599c53252d22680101e3804cef6effd189d8b73c158eb051add09d180",
+    "D:/DASFAA-2027-paper/results/b1c_r3_review_20261031/evidence/run/scoring/summary.json": "sha256:501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/FiQA/after_per_query.npy": "sha256:baab5d32665524d23c020240a51777381a935d44f31789a072e34b89462fa88a",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/FiQA/before_per_query.npy": "sha256:c2d5fb48213f06ebb3a377c7b13191eeaac478caa41d378cc2c09b5220fed89a",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/FiQA/cell_index.json": "sha256:f5f3eeaf535b982448908aa7c588e32d23fcc7e55824dafd02ef02eebfce3b7f",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/FiQA/delta_per_query.npy": "sha256:a312efec0f4503a06f6629b141baedd7f097f892a90aed0610860bb6dbc49da5",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoFEVER/after_per_query.npy": "sha256:8ed7163bfce0ed28cd0259bc070182f48301c81fddbd9c66f708207d775a1549",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoFEVER/before_per_query.npy": "sha256:37668c61019ac46e3a9c32632fe0a73d43dbaa0bd76564c44221cd0791ea3574",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoFEVER/cell_index.json": "sha256:8cbd230c7030dfc7a05a17df57341f53e94b45359570b28012a3413e0fd0a5bf",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoFEVER/delta_per_query.npy": "sha256:9c24168939164fecfcdd04ab45a2fff5355a08ee38b87876eb073237e7b842ec",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoHotpotQA/after_per_query.npy": "sha256:ad28792fb4eb3ec14c48f38a55cd7495302ee0e182eb80afb646f3d751420192",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoHotpotQA/before_per_query.npy": "sha256:aef4ce7e165d314f3c4f6d976f58e33973278aa26fd605d2a5e02f046973ee8d",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoHotpotQA/cell_index.json": "sha256:423360f5373bff946045f066af4fd94bc3d649d55f45c319b57222a53e6f50ec",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoHotpotQA/delta_per_query.npy": "sha256:2940efb7a673ad3871ff6824a5e4de05d1568575169302c14c87c68ecba742b2",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoNQ/after_per_query.npy": "sha256:1e54854b74be364fad0a8b8814e57dd6a4c4d05d0f374dc5446d0590144b95dd",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoNQ/before_per_query.npy": "sha256:78d6bbb1f9ff6a1bc675e3e5a9b2d11372c8066036ac3e8430051213de91f924",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoNQ/cell_index.json": "sha256:aea868caaa3847a76573e3249c8b763e8cdf5396264a9b12053e3daf213bd7f5",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/NanoNQ/delta_per_query.npy": "sha256:551ba97447ff24c91bd2a068ce22c9753d6d7f9e97567df8db218e6a392a2dde",
+    "D:/DASFAA-2027-paper/results/b1g_r1_review_20261027/scoring/results_summary.json": "sha256:2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/FiQA/cell_index.json": "sha256:ff35ab9114296da0b9ce2349edaf915180b84413589042113133292f5cb12601",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/FiQA/per_query.npy": "sha256:4647bc64355eb1de7a5e94045993895078d350d9485a4fdba24c7205b8297a5c",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/cell_index.json": "sha256:31dea095fa0af0ea391de807d3a3ce7bc5a27b5e0d86e46bfa304b175428028a",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/per_query.npy": "sha256:9dc985097699befc5073e172d3609c73951086445138e065fa981645951b54eb",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/cell_index.json": "sha256:b0b710c3fc0074aabab239721db266dafbd5a51115e87fb0fd4827df186e4811",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/per_query.npy": "sha256:d0e714342e6b3d08564ab3d988bc73f8a529db5b610a32b8d55a8bb12cb56799",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/cell_index.json": "sha256:06c4fa7251355dc4d4c955b974e21c1013e30dab7814203f1db787bae4d9ceb3",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/per_query.npy": "sha256:a53be45fba376c9ed072bbf326bdb6450599d7ed9605e87b50ed0decd9ca96e2",
+    "D:/DASFAA-2027-paper/results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json": "sha256:688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+    "D:/DASFAA-2027-paper/results/b1p_r5_review_20261027/scoring/cell_index.json": "sha256:9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375",
+    "D:/DASFAA-2027-paper/results/b1p_r5_review_20261027/scoring/per_query.npy": "sha256:551dc388059b6a530df550acbbd9a477de76cd0cc188ce54da0a1198be1434d1",
+    "D:/DASFAA-2027-paper/results/b1p_r5_review_20261027/scoring/results_summary.json": "sha256:3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7",
+    "D:/DASFAA-2027-paper/results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/bootstrap_draws.npy": "sha256:6517eb44b5c1967d7f3c54f72329f60f707892c85a395cf56210f6e58715ddba",
+    "D:/DASFAA-2027-paper/results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/cell_index.json": "sha256:d814ca87e947638e826d8f46bacab4f0f3526150ada9552c5ca59ca4b1776410",
+    "D:/DASFAA-2027-paper/results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/per_query.npy": "sha256:ffae3f16c279f3968c430537694df82ea0e8ec7aaed58576125522c9fb1d24be",
+    "D:/DASFAA-2027-paper/results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json": "sha256:646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+    "D:/DASFAA-2027-paper/results/tc1l_local_r1_20261102/full/scoring/bootstrap_draws.npy": "sha256:86f445b094eb05d67bca7fe74503bd6019baf7b4c8d89d752fb0a8ebc46b0fa6",
+    "D:/DASFAA-2027-paper/results/tc1l_local_r1_20261102/full/scoring/cell_index.json": "sha256:6888c2a279f3383b2704c4a3780d8a03d875bb8bd7ffe60b54a3ff5bcbbc6703",
+    "D:/DASFAA-2027-paper/results/tc1l_local_r1_20261102/full/scoring/per_query.npy": "sha256:c32465773a25930e3c99328f4d2022940b889ac9bc835033b78c8f49f6dfa51a",
+    "D:/DASFAA-2027-paper/results/tc1l_local_r1_20261102/full/scoring/summary.json": "sha256:79d3f10ea259a74e9543c4912b4f597266c87057e5e456216eee541d1bf0de41",
+    "D:/DASFAA-2027-paper/src/arc2_global/__init__.py": "sha256:fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "D:/DASFAA-2027-paper/src/arc2_global/baseline_adapters.py": "sha256:c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "D:/DASFAA-2027-paper/src/arc2_global/diagnostics.py": "sha256:0905e7c4cab1b0263b661f2d29677890080811e56218fbfcf0c81d2c14a18d9d",
+    "D:/DASFAA-2027-paper/src/arc2_global/embedding_converter.py": "sha256:1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+    "D:/DASFAA-2027-paper/src/arc2_global/mechanism_ablation.py": "sha256:c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "D:/DASFAA-2027-paper/src/arc2_global/model.py": "sha256:a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "D:/DASFAA-2027-paper/src/arc2_global/numerics.py": "sha256:27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "D:/DASFAA-2027-paper/src/arc2_global/procrustes.py": "sha256:2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "D:/DASFAA-2027-paper/src/arc2_global/residual_ablation.py": "sha256:e4fd831580c52420d661b0e9792a720a2fa134e49122dc168076d7d0135f90f2",
+    "D:/DASFAA-2027-paper/src/arc2_global/retrieval.py": "sha256:d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "D:/DASFAA-2027-paper/src/arc2_global/solver_backend.py": "sha256:1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887"
+  },
+  "trace_path": ".aris/traces/paper-claim-audit/2026-11-02_frozen_delivery/",
+  "thread_id": "/root/frozen_delivery_claim_audit",
+  "executor_model": "codex",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_reasoning": "high",
+  "generated_at": "2026-11-02T09:30:09.755446+00:00",
+  "details": {
+    "total_claims": 313,
+    "status_counts": {
+      "rounding_ok": 237,
+      "exact_match": 76
+    },
+    "mismatches": [],
+    "failed_deterministic_checks": [],
+    "deterministic_check_count": 3047,
+    "max_check_error": 1.1102230246251565e-15,
+    "result_files": [
+      "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "results/tc1l_local_r1_20261102/full/scoring/summary.json"
+    ],
+    "scope_limits": [
+      "Fresh same-family review is provisional, not cross-family submission acceptance.",
+      "No fitting, retrieval/search, qrel access or new scientific run.",
+      "Saved per-query scores are evidence inputs; labels were not reopened to independently re-score rankings.",
+      "Chronology/privacy claims are checked against raw metadata and manifest, not an external forensic replay.",
+      "Four figure PDFs were rendered and visually checked; illustrative mechanism numbers are not empirical results."
+    ],
+    "render_html": false
+  },
+  "claims": [
+    {
+      "claim_id": 1,
+      "location": "generated/dev_macro.tex:11, numeric cell 1",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.5275} & \\underline{0.8659} & --- & --- \\\\",
+      "paper_value": 0.5275,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.527477527300496,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 2,
+      "location": "generated/dev_macro.tex:11, numeric cell 2",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.5275} & \\underline{0.8659} & --- & --- \\\\",
+      "paper_value": 0.8659,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.8658612474562474,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 3,
+      "location": "generated/dev_macro.tex:12, numeric cell 1",
+      "paper_text": "Procrustes & \\underline{0.5032} & \\textbf{0.8661} & \\textcolor{gainGreen}{+0.0243} & [+0.0181, +0.0308] \\\\",
+      "paper_value": 0.5032,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.5031524182600609,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 4,
+      "location": "generated/dev_macro.tex:12, numeric cell 2",
+      "paper_text": "Procrustes & \\underline{0.5032} & \\textbf{0.8661} & \\textcolor{gainGreen}{+0.0243} & [+0.0181, +0.0308] \\\\",
+      "paper_value": 0.8661,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.8660998378473379,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 5,
+      "location": "generated/dev_macro.tex:12, numeric cell 3",
+      "paper_text": "Procrustes & \\underline{0.5032} & \\textbf{0.8661} & \\textcolor{gainGreen}{+0.0243} & [+0.0181, +0.0308] \\\\",
+      "paper_value": 0.0243,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.024325109040435233,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 6,
+      "location": "generated/dev_macro.tex:12, numeric cell 4",
+      "paper_text": "Procrustes & \\underline{0.5032} & \\textbf{0.8661} & \\textcolor{gainGreen}{+0.0243} & [+0.0181, +0.0308] \\\\",
+      "paper_value": 0.0181,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.018132175212397208,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 7,
+      "location": "generated/dev_macro.tex:12, numeric cell 5",
+      "paper_text": "Procrustes & \\underline{0.5032} & \\textbf{0.8661} & \\textcolor{gainGreen}{+0.0243} & [+0.0181, +0.0308] \\\\",
+      "paper_value": 0.0308,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.030791640313948616,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 8,
+      "location": "generated/dev_macro.tex:13, numeric cell 1",
+      "paper_text": "LA2M20 & 0.4234 & 0.7758 & \\textcolor{gainGreen}{+0.1041} & [+0.0861, +0.1229] \\\\",
+      "paper_value": 0.4234,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.42342257351929274,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 9,
+      "location": "generated/dev_macro.tex:13, numeric cell 2",
+      "paper_text": "LA2M20 & 0.4234 & 0.7758 & \\textcolor{gainGreen}{+0.1041} & [+0.0861, +0.1229] \\\\",
+      "paper_value": 0.7758,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.7758335509398009,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 10,
+      "location": "generated/dev_macro.tex:13, numeric cell 3",
+      "paper_text": "LA2M20 & 0.4234 & 0.7758 & \\textcolor{gainGreen}{+0.1041} & [+0.0861, +0.1229] \\\\",
+      "paper_value": 0.1041,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.10405495378120326,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 11,
+      "location": "generated/dev_macro.tex:13, numeric cell 4",
+      "paper_text": "LA2M20 & 0.4234 & 0.7758 & \\textcolor{gainGreen}{+0.1041} & [+0.0861, +0.1229] \\\\",
+      "paper_value": 0.0861,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.08607033208524335,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 12,
+      "location": "generated/dev_macro.tex:13, numeric cell 5",
+      "paper_text": "LA2M20 & 0.4234 & 0.7758 & \\textcolor{gainGreen}{+0.1041} & [+0.0861, +0.1229] \\\\",
+      "paper_value": 0.1229,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.1229148044499058,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 13,
+      "location": "generated/dev_macro.tex:14, numeric cell 1",
+      "paper_text": "SimpleLinear & 0.3554 & 0.6130 & \\textcolor{gainGreen}{+0.1721} & [+0.1499, +0.1947] \\\\",
+      "paper_value": 0.3554,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.3553776623832738,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 14,
+      "location": "generated/dev_macro.tex:14, numeric cell 2",
+      "paper_text": "SimpleLinear & 0.3554 & 0.6130 & \\textcolor{gainGreen}{+0.1721} & [+0.1499, +0.1947] \\\\",
+      "paper_value": 0.613,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.6129790412827912,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 15,
+      "location": "generated/dev_macro.tex:14, numeric cell 3",
+      "paper_text": "SimpleLinear & 0.3554 & 0.6130 & \\textcolor{gainGreen}{+0.1721} & [+0.1499, +0.1947] \\\\",
+      "paper_value": 0.1721,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.1720998649172223,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 16,
+      "location": "generated/dev_macro.tex:14, numeric cell 4",
+      "paper_text": "SimpleLinear & 0.3554 & 0.6130 & \\textcolor{gainGreen}{+0.1721} & [+0.1499, +0.1947] \\\\",
+      "paper_value": 0.1499,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.1498621517850371,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 17,
+      "location": "generated/dev_macro.tex:14, numeric cell 5",
+      "paper_text": "SimpleLinear & 0.3554 & 0.6130 & \\textcolor{gainGreen}{+0.1721} & [+0.1499, +0.1947] \\\\",
+      "paper_value": 0.1947,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.19470300383538613,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 18,
+      "location": "generated/dev_macro.tex:15, numeric cell 1",
+      "paper_text": "Affine ridge & 0.4318 & 0.7441 & \\textcolor{gainGreen}{+0.0957} & [+0.0754, +0.1164] \\\\",
+      "paper_value": 0.4318,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.4318244780276741,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 19,
+      "location": "generated/dev_macro.tex:15, numeric cell 2",
+      "paper_text": "Affine ridge & 0.4318 & 0.7441 & \\textcolor{gainGreen}{+0.0957} & [+0.0754, +0.1164] \\\\",
+      "paper_value": 0.7441,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.7441268305305805,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 20,
+      "location": "generated/dev_macro.tex:15, numeric cell 3",
+      "paper_text": "Affine ridge & 0.4318 & 0.7441 & \\textcolor{gainGreen}{+0.0957} & [+0.0754, +0.1164] \\\\",
+      "paper_value": 0.0957,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.09565304927282199,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 21,
+      "location": "generated/dev_macro.tex:15, numeric cell 4",
+      "paper_text": "Affine ridge & 0.4318 & 0.7441 & \\textcolor{gainGreen}{+0.0957} & [+0.0754, +0.1164] \\\\",
+      "paper_value": 0.0754,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.07540472081021199,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 22,
+      "location": "generated/dev_macro.tex:15, numeric cell 5",
+      "paper_text": "Affine ridge & 0.4318 & 0.7441 & \\textcolor{gainGreen}{+0.0957} & [+0.0754, +0.1164] \\\\",
+      "paper_value": 0.1164,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.11642668663044543,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 23,
+      "location": "generated/dev_macro.tex:16, numeric cell 1",
+      "paper_text": "Converter & 0.3663 & 0.7641 & \\textcolor{gainGreen}{+0.1612} & [+0.1427, +0.1799] \\\\",
+      "paper_value": 0.3663,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.36631519310915567,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 24,
+      "location": "generated/dev_macro.tex:16, numeric cell 2",
+      "paper_text": "Converter & 0.3663 & 0.7641 & \\textcolor{gainGreen}{+0.1612} & [+0.1427, +0.1799] \\\\",
+      "paper_value": 0.7641,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.7641036175861177,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 25,
+      "location": "generated/dev_macro.tex:16, numeric cell 3",
+      "paper_text": "Converter & 0.3663 & 0.7641 & \\textcolor{gainGreen}{+0.1612} & [+0.1427, +0.1799] \\\\",
+      "paper_value": 0.1612,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.16116233419134046,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 26,
+      "location": "generated/dev_macro.tex:16, numeric cell 4",
+      "paper_text": "Converter & 0.3663 & 0.7641 & \\textcolor{gainGreen}{+0.1612} & [+0.1427, +0.1799] \\\\",
+      "paper_value": 0.1427,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.14268641175964025,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 27,
+      "location": "generated/dev_macro.tex:16, numeric cell 5",
+      "paper_text": "Converter & 0.3663 & 0.7641 & \\textcolor{gainGreen}{+0.1612} & [+0.1427, +0.1799] \\\\",
+      "paper_value": 0.1799,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.17991558284155384,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 28,
+      "location": "generated/ablation.tex:11, numeric cell 1",
+      "paper_text": "Two steps minus zero steps & +0.0243 & [+0.0180, +0.0310] \\\\",
+      "paper_value": 0.0243,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.024325109040435233,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 29,
+      "location": "generated/ablation.tex:11, numeric cell 2",
+      "paper_text": "Two steps minus zero steps & +0.0243 & [+0.0180, +0.0310] \\\\",
+      "paper_value": 0.018,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.01801533254696277,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 30,
+      "location": "generated/ablation.tex:11, numeric cell 3",
+      "paper_text": "Two steps minus zero steps & +0.0243 & [+0.0180, +0.0310] \\\\",
+      "paper_value": 0.031,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.03102132243820168,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 31,
+      "location": "generated/ablation.tex:12, numeric cell 1",
+      "paper_text": "Two steps minus one step & +0.0069 & [+0.0038, +0.0100] \\\\",
+      "paper_value": 0.0069,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.006923862939737235,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 32,
+      "location": "generated/ablation.tex:12, numeric cell 2",
+      "paper_text": "Two steps minus one step & +0.0069 & [+0.0038, +0.0100] \\\\",
+      "paper_value": 0.0038,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.003809388309482942,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 33,
+      "location": "generated/ablation.tex:12, numeric cell 3",
+      "paper_text": "Two steps minus one step & +0.0069 & [+0.0038, +0.0100] \\\\",
+      "paper_value": 0.01,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.009959126205904258,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 34,
+      "location": "generated/ablation.tex:13, numeric cell 1",
+      "paper_text": "ARC2 minus affine ridge & +0.0957 & [+0.0754, +0.1166] \\\\",
+      "paper_value": 0.0957,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.09565304927282199,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 35,
+      "location": "generated/ablation.tex:13, numeric cell 2",
+      "paper_text": "ARC2 minus affine ridge & +0.0957 & [+0.0754, +0.1166] \\\\",
+      "paper_value": 0.0754,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.07535298921225946,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 36,
+      "location": "generated/ablation.tex:13, numeric cell 3",
+      "paper_text": "ARC2 minus affine ridge & +0.0957 & [+0.0754, +0.1166] \\\\",
+      "paper_value": 0.1166,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.11663127039230592,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 37,
+      "location": "generated/ablation.tex:14, numeric cell 1",
+      "paper_text": "$\\lambda=1$ minus $\\lambda=10$ & +0.0032 & [-0.0019, +0.0083] \\\\",
+      "paper_value": 0.0032,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.0031974956912717346,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 38,
+      "location": "generated/ablation.tex:14, numeric cell 2",
+      "paper_text": "$\\lambda=1$ minus $\\lambda=10$ & +0.0032 & [-0.0019, +0.0083] \\\\",
+      "paper_value": -0.0019,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": -0.0018903844098364442,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 39,
+      "location": "generated/ablation.tex:14, numeric cell 3",
+      "paper_text": "$\\lambda=1$ minus $\\lambda=10$ & +0.0032 & [-0.0019, +0.0083] \\\\",
+      "paper_value": 0.0083,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 0.00830403326634241,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 40,
+      "location": "generated/ablation.tex:15, numeric cell 1",
+      "paper_text": "$\\lambda=100$ minus $\\lambda=10$ & -0.0093 & [-0.0132, -0.0055] \\\\",
+      "paper_value": -0.0093,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": -0.00925533869678723,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 41,
+      "location": "generated/ablation.tex:15, numeric cell 2",
+      "paper_text": "$\\lambda=100$ minus $\\lambda=10$ & -0.0093 & [-0.0132, -0.0055] \\\\",
+      "paper_value": -0.0132,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": -0.01321398029023485,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 42,
+      "location": "generated/ablation.tex:15, numeric cell 3",
+      "paper_text": "$\\lambda=100$ minus $\\lambda=10$ & -0.0093 & [-0.0132, -0.0055] \\\\",
+      "paper_value": -0.0055,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": -0.005510245768211927,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 43,
+      "location": "generated/trec_means.tex:13, numeric cell 1",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & 0.4619 & 0.5000 & \\underline{0.5195} & \\underline{0.5628} & \\underline{0.5904} & 0.6098 \\\\",
+      "paper_value": 0.4619,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.4619132237639601,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 44,
+      "location": "generated/trec_means.tex:13, numeric cell 2",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & 0.4619 & 0.5000 & \\underline{0.5195} & \\underline{0.5628} & \\underline{0.5904} & 0.6098 \\\\",
+      "paper_value": 0.5,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.4999550226735597,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 45,
+      "location": "generated/trec_means.tex:13, numeric cell 3",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & 0.4619 & 0.5000 & \\underline{0.5195} & \\underline{0.5628} & \\underline{0.5904} & 0.6098 \\\\",
+      "paper_value": 0.5195,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.519513052034007,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 46,
+      "location": "generated/trec_means.tex:13, numeric cell 4",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & 0.4619 & 0.5000 & \\underline{0.5195} & \\underline{0.5628} & \\underline{0.5904} & 0.6098 \\\\",
+      "paper_value": 0.5628,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.562801573213321,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 47,
+      "location": "generated/trec_means.tex:13, numeric cell 5",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & 0.4619 & 0.5000 & \\underline{0.5195} & \\underline{0.5628} & \\underline{0.5904} & 0.6098 \\\\",
+      "paper_value": 0.5904,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5904061066004364,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 48,
+      "location": "generated/trec_means.tex:13, numeric cell 6",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & 0.4619 & 0.5000 & \\underline{0.5195} & \\underline{0.5628} & \\underline{0.5904} & 0.6098 \\\\",
+      "paper_value": 0.6098,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.6097818790197872,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 49,
+      "location": "generated/trec_means.tex:14, numeric cell 1",
+      "paper_text": "Procrustes & \\underline{0.4620} & 0.5046 & \\textbf{0.5195} & \\textbf{0.5660} & \\textbf{0.6067} & \\textbf{0.6198} \\\\",
+      "paper_value": 0.462,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.46196458443251165,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 50,
+      "location": "generated/trec_means.tex:14, numeric cell 2",
+      "paper_text": "Procrustes & \\underline{0.4620} & 0.5046 & \\textbf{0.5195} & \\textbf{0.5660} & \\textbf{0.6067} & \\textbf{0.6198} \\\\",
+      "paper_value": 0.5046,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5046218931387791,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 51,
+      "location": "generated/trec_means.tex:14, numeric cell 3",
+      "paper_text": "Procrustes & \\underline{0.4620} & 0.5046 & \\textbf{0.5195} & \\textbf{0.5660} & \\textbf{0.6067} & \\textbf{0.6198} \\\\",
+      "paper_value": 0.5195,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5195366169586203,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 52,
+      "location": "generated/trec_means.tex:14, numeric cell 4",
+      "paper_text": "Procrustes & \\underline{0.4620} & 0.5046 & \\textbf{0.5195} & \\textbf{0.5660} & \\textbf{0.6067} & \\textbf{0.6198} \\\\",
+      "paper_value": 0.566,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5660420017846071,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 53,
+      "location": "generated/trec_means.tex:14, numeric cell 5",
+      "paper_text": "Procrustes & \\underline{0.4620} & 0.5046 & \\textbf{0.5195} & \\textbf{0.5660} & \\textbf{0.6067} & \\textbf{0.6198} \\\\",
+      "paper_value": 0.6067,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.606727648648923,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 54,
+      "location": "generated/trec_means.tex:14, numeric cell 6",
+      "paper_text": "Procrustes & \\underline{0.4620} & 0.5046 & \\textbf{0.5195} & \\textbf{0.5660} & \\textbf{0.6067} & \\textbf{0.6198} \\\\",
+      "paper_value": 0.6198,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.6197938386784891,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 55,
+      "location": "generated/trec_means.tex:15, numeric cell 1",
+      "paper_text": "LA2M20 & \\textbf{0.4634} & \\underline{0.5073} & 0.5186 & 0.5206 & 0.5898 & \\underline{0.6188} \\\\",
+      "paper_value": 0.4634,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.4634176232530495,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 56,
+      "location": "generated/trec_means.tex:15, numeric cell 2",
+      "paper_text": "LA2M20 & \\textbf{0.4634} & \\underline{0.5073} & 0.5186 & 0.5206 & 0.5898 & \\underline{0.6188} \\\\",
+      "paper_value": 0.5073,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5072760250312146,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 57,
+      "location": "generated/trec_means.tex:15, numeric cell 3",
+      "paper_text": "LA2M20 & \\textbf{0.4634} & \\underline{0.5073} & 0.5186 & 0.5206 & 0.5898 & \\underline{0.6188} \\\\",
+      "paper_value": 0.5186,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5185617727755863,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 58,
+      "location": "generated/trec_means.tex:15, numeric cell 4",
+      "paper_text": "LA2M20 & \\textbf{0.4634} & \\underline{0.5073} & 0.5186 & 0.5206 & 0.5898 & \\underline{0.6188} \\\\",
+      "paper_value": 0.5206,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5205904360903386,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 59,
+      "location": "generated/trec_means.tex:15, numeric cell 5",
+      "paper_text": "LA2M20 & \\textbf{0.4634} & \\underline{0.5073} & 0.5186 & 0.5206 & 0.5898 & \\underline{0.6188} \\\\",
+      "paper_value": 0.5898,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5898118524012599,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 60,
+      "location": "generated/trec_means.tex:15, numeric cell 6",
+      "paper_text": "LA2M20 & \\textbf{0.4634} & \\underline{0.5073} & 0.5186 & 0.5206 & 0.5898 & \\underline{0.6188} \\\\",
+      "paper_value": 0.6188,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.6187771807287994,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 61,
+      "location": "generated/trec_means.tex:16, numeric cell 1",
+      "paper_text": "SimpleLinear & 0.4610 & \\textbf{0.5076} & 0.5193 & 0.4299$^{\\dagger}$ & 0.5287$^{\\dagger}$ & 0.5785 \\\\",
+      "paper_value": 0.461,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.46104030699300225,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 62,
+      "location": "generated/trec_means.tex:16, numeric cell 2",
+      "paper_text": "SimpleLinear & 0.4610 & \\textbf{0.5076} & 0.5193 & 0.4299$^{\\dagger}$ & 0.5287$^{\\dagger}$ & 0.5785 \\\\",
+      "paper_value": 0.5076,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5075901623712186,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 63,
+      "location": "generated/trec_means.tex:16, numeric cell 3",
+      "paper_text": "SimpleLinear & 0.4610 & \\textbf{0.5076} & 0.5193 & 0.4299$^{\\dagger}$ & 0.5287$^{\\dagger}$ & 0.5785 \\\\",
+      "paper_value": 0.5193,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5193021992613991,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 64,
+      "location": "generated/trec_means.tex:16, numeric cell 4",
+      "paper_text": "SimpleLinear & 0.4610 & \\textbf{0.5076} & 0.5193 & 0.4299$^{\\dagger}$ & 0.5287$^{\\dagger}$ & 0.5785 \\\\",
+      "paper_value": 0.4299,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.42992858085823116,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 65,
+      "location": "generated/trec_means.tex:16, numeric cell 5",
+      "paper_text": "SimpleLinear & 0.4610 & \\textbf{0.5076} & 0.5193 & 0.4299$^{\\dagger}$ & 0.5287$^{\\dagger}$ & 0.5785 \\\\",
+      "paper_value": 0.5287,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5286762204098695,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 66,
+      "location": "generated/trec_means.tex:16, numeric cell 6",
+      "paper_text": "SimpleLinear & 0.4610 & \\textbf{0.5076} & 0.5193 & 0.4299$^{\\dagger}$ & 0.5287$^{\\dagger}$ & 0.5785 \\\\",
+      "paper_value": 0.5785,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5784937222630202,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 67,
+      "location": "generated/trec_means.tex:17, numeric cell 1",
+      "paper_text": "Affine ridge & 0.4322 & 0.4854 & 0.5012$^{\\dagger}$ & 0.2986$^{\\dagger}$ & 0.3281$^{\\dagger}$ & 0.3278$^{\\dagger}$ \\\\",
+      "paper_value": 0.4322,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.4321704122423191,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 68,
+      "location": "generated/trec_means.tex:17, numeric cell 2",
+      "paper_text": "Affine ridge & 0.4322 & 0.4854 & 0.5012$^{\\dagger}$ & 0.2986$^{\\dagger}$ & 0.3281$^{\\dagger}$ & 0.3278$^{\\dagger}$ \\\\",
+      "paper_value": 0.4854,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.48543765007369555,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 69,
+      "location": "generated/trec_means.tex:17, numeric cell 3",
+      "paper_text": "Affine ridge & 0.4322 & 0.4854 & 0.5012$^{\\dagger}$ & 0.2986$^{\\dagger}$ & 0.3281$^{\\dagger}$ & 0.3278$^{\\dagger}$ \\\\",
+      "paper_value": 0.5012,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5012195177689744,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 70,
+      "location": "generated/trec_means.tex:17, numeric cell 4",
+      "paper_text": "Affine ridge & 0.4322 & 0.4854 & 0.5012$^{\\dagger}$ & 0.2986$^{\\dagger}$ & 0.3281$^{\\dagger}$ & 0.3278$^{\\dagger}$ \\\\",
+      "paper_value": 0.2986,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.29862101762519416,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 71,
+      "location": "generated/trec_means.tex:17, numeric cell 5",
+      "paper_text": "Affine ridge & 0.4322 & 0.4854 & 0.5012$^{\\dagger}$ & 0.2986$^{\\dagger}$ & 0.3281$^{\\dagger}$ & 0.3278$^{\\dagger}$ \\\\",
+      "paper_value": 0.3281,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.3281386648638847,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 72,
+      "location": "generated/trec_means.tex:17, numeric cell 6",
+      "paper_text": "Affine ridge & 0.4322 & 0.4854 & 0.5012$^{\\dagger}$ & 0.2986$^{\\dagger}$ & 0.3281$^{\\dagger}$ & 0.3278$^{\\dagger}$ \\\\",
+      "paper_value": 0.3278,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.3277848331657977,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 73,
+      "location": "generated/trec_means.tex:18, numeric cell 1",
+      "paper_text": "Converter & 0.4224$^{\\dagger}$ & 0.4780$^{\\dagger}$ & 0.5033 & 0.3056$^{\\dagger}$ & 0.3590$^{\\dagger}$ & 0.4098$^{\\dagger}$ \\\\",
+      "paper_value": 0.4224,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.4223735991713406,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 74,
+      "location": "generated/trec_means.tex:18, numeric cell 2",
+      "paper_text": "Converter & 0.4224$^{\\dagger}$ & 0.4780$^{\\dagger}$ & 0.5033 & 0.3056$^{\\dagger}$ & 0.3590$^{\\dagger}$ & 0.4098$^{\\dagger}$ \\\\",
+      "paper_value": 0.478,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.4780470274050105,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 75,
+      "location": "generated/trec_means.tex:18, numeric cell 3",
+      "paper_text": "Converter & 0.4224$^{\\dagger}$ & 0.4780$^{\\dagger}$ & 0.5033 & 0.3056$^{\\dagger}$ & 0.3590$^{\\dagger}$ & 0.4098$^{\\dagger}$ \\\\",
+      "paper_value": 0.5033,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5032547704761722,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 76,
+      "location": "generated/trec_means.tex:18, numeric cell 4",
+      "paper_text": "Converter & 0.4224$^{\\dagger}$ & 0.4780$^{\\dagger}$ & 0.5033 & 0.3056$^{\\dagger}$ & 0.3590$^{\\dagger}$ & 0.4098$^{\\dagger}$ \\\\",
+      "paper_value": 0.3056,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.3055679824401268,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 77,
+      "location": "generated/trec_means.tex:18, numeric cell 5",
+      "paper_text": "Converter & 0.4224$^{\\dagger}$ & 0.4780$^{\\dagger}$ & 0.5033 & 0.3056$^{\\dagger}$ & 0.3590$^{\\dagger}$ & 0.4098$^{\\dagger}$ \\\\",
+      "paper_value": 0.359,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.3590215314302837,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 78,
+      "location": "generated/trec_means.tex:18, numeric cell 6",
+      "paper_text": "Converter & 0.4224$^{\\dagger}$ & 0.4780$^{\\dagger}$ & 0.5033 & 0.3056$^{\\dagger}$ & 0.3590$^{\\dagger}$ & 0.4098$^{\\dagger}$ \\\\",
+      "paper_value": 0.4098,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.40982778236858286,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 79,
+      "location": "generated/trec_means.tex:20, numeric cell 1",
+      "paper_text": "Native Full-X & \\multicolumn{3}{c}{0.4935 (native)} & \\multicolumn{3}{c}{0.6805 (native)} \\\\",
+      "paper_value": 0.4935,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.4934781848463412,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 80,
+      "location": "generated/trec_means.tex:20, numeric cell 2",
+      "paper_text": "Native Full-X & \\multicolumn{3}{c}{0.4935 (native)} & \\multicolumn{3}{c}{0.6805 (native)} \\\\",
+      "paper_value": 0.6805,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.6805416492225224,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 81,
+      "location": "generated/trec_means.tex:21, numeric cell 1",
+      "paper_text": "Native Full-Y & \\multicolumn{3}{c}{0.5203 (native)} & \\multicolumn{3}{c}{0.6421 (native)} \\\\",
+      "paper_value": 0.5203,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5202728348242263,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 82,
+      "location": "generated/trec_means.tex:21, numeric cell 2",
+      "paper_text": "Native Full-Y & \\multicolumn{3}{c}{0.5203 (native)} & \\multicolumn{3}{c}{0.6421 (native)} \\\\",
+      "paper_value": 0.6421,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.6421134496001705,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 83,
+      "location": "generated/trec_recall.tex:13, numeric cell 1",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.0896} & \\textbf{0.0953} & \\textbf{0.0998} & \\underline{0.0866} & \\underline{0.0928} & 0.0997 \\\\",
+      "paper_value": 0.0896,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.08963088480259038,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 84,
+      "location": "generated/trec_recall.tex:13, numeric cell 2",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.0896} & \\textbf{0.0953} & \\textbf{0.0998} & \\underline{0.0866} & \\underline{0.0928} & 0.0997 \\\\",
+      "paper_value": 0.0953,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09529158965710632,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 85,
+      "location": "generated/trec_recall.tex:13, numeric cell 3",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.0896} & \\textbf{0.0953} & \\textbf{0.0998} & \\underline{0.0866} & \\underline{0.0928} & 0.0997 \\\\",
+      "paper_value": 0.0998,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09983604059514704,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 86,
+      "location": "generated/trec_recall.tex:13, numeric cell 4",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.0896} & \\textbf{0.0953} & \\textbf{0.0998} & \\underline{0.0866} & \\underline{0.0928} & 0.0997 \\\\",
+      "paper_value": 0.0866,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.0865798155941492,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 87,
+      "location": "generated/trec_recall.tex:13, numeric cell 5",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.0896} & \\textbf{0.0953} & \\textbf{0.0998} & \\underline{0.0866} & \\underline{0.0928} & 0.0997 \\\\",
+      "paper_value": 0.0928,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09284227251463124,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 88,
+      "location": "generated/trec_recall.tex:13, numeric cell 6",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.0896} & \\textbf{0.0953} & \\textbf{0.0998} & \\underline{0.0866} & \\underline{0.0928} & 0.0997 \\\\",
+      "paper_value": 0.0997,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09966692928143464,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 89,
+      "location": "generated/trec_recall.tex:14, numeric cell 1",
+      "paper_text": "Procrustes & \\underline{0.0866} & \\underline{0.0935} & \\underline{0.0994} & \\textbf{0.0886} & \\textbf{0.0976} & \\textbf{0.1061} \\\\",
+      "paper_value": 0.0866,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.08656849639226609,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 90,
+      "location": "generated/trec_recall.tex:14, numeric cell 2",
+      "paper_text": "Procrustes & \\underline{0.0866} & \\underline{0.0935} & \\underline{0.0994} & \\textbf{0.0886} & \\textbf{0.0976} & \\textbf{0.1061} \\\\",
+      "paper_value": 0.0935,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09348540930621103,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 91,
+      "location": "generated/trec_recall.tex:14, numeric cell 3",
+      "paper_text": "Procrustes & \\underline{0.0866} & \\underline{0.0935} & \\underline{0.0994} & \\textbf{0.0886} & \\textbf{0.0976} & \\textbf{0.1061} \\\\",
+      "paper_value": 0.0994,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09942876429633421,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 92,
+      "location": "generated/trec_recall.tex:14, numeric cell 4",
+      "paper_text": "Procrustes & \\underline{0.0866} & \\underline{0.0935} & \\underline{0.0994} & \\textbf{0.0886} & \\textbf{0.0976} & \\textbf{0.1061} \\\\",
+      "paper_value": 0.0886,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.08857103007611913,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 93,
+      "location": "generated/trec_recall.tex:14, numeric cell 5",
+      "paper_text": "Procrustes & \\underline{0.0866} & \\underline{0.0935} & \\underline{0.0994} & \\textbf{0.0886} & \\textbf{0.0976} & \\textbf{0.1061} \\\\",
+      "paper_value": 0.0976,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09757526289269891,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 94,
+      "location": "generated/trec_recall.tex:14, numeric cell 6",
+      "paper_text": "Procrustes & \\underline{0.0866} & \\underline{0.0935} & \\underline{0.0994} & \\textbf{0.0886} & \\textbf{0.0976} & \\textbf{0.1061} \\\\",
+      "paper_value": 0.1061,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.10605638073803039,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 95,
+      "location": "generated/trec_recall.tex:15, numeric cell 1",
+      "paper_text": "LA2M20 & 0.0736 & 0.0884 & 0.0983 & 0.0593 & 0.0823 & \\underline{0.1016} \\\\",
+      "paper_value": 0.0736,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.07356777060172419,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 96,
+      "location": "generated/trec_recall.tex:15, numeric cell 2",
+      "paper_text": "LA2M20 & 0.0736 & 0.0884 & 0.0983 & 0.0593 & 0.0823 & \\underline{0.1016} \\\\",
+      "paper_value": 0.0884,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.08842284023887333,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 97,
+      "location": "generated/trec_recall.tex:15, numeric cell 3",
+      "paper_text": "LA2M20 & 0.0736 & 0.0884 & 0.0983 & 0.0593 & 0.0823 & \\underline{0.1016} \\\\",
+      "paper_value": 0.0983,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09826954011884906,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 98,
+      "location": "generated/trec_recall.tex:15, numeric cell 4",
+      "paper_text": "LA2M20 & 0.0736 & 0.0884 & 0.0983 & 0.0593 & 0.0823 & \\underline{0.1016} \\\\",
+      "paper_value": 0.0593,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.059325559835467855,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 99,
+      "location": "generated/trec_recall.tex:15, numeric cell 5",
+      "paper_text": "LA2M20 & 0.0736 & 0.0884 & 0.0983 & 0.0593 & 0.0823 & \\underline{0.1016} \\\\",
+      "paper_value": 0.0823,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.08234134077914587,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 100,
+      "location": "generated/trec_recall.tex:15, numeric cell 6",
+      "paper_text": "LA2M20 & 0.0736 & 0.0884 & 0.0983 & 0.0593 & 0.0823 & \\underline{0.1016} \\\\",
+      "paper_value": 0.1016,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.10159163083373099,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 101,
+      "location": "generated/trec_recall.tex:16, numeric cell 1",
+      "paper_text": "SimpleLinear & 0.0626 & 0.0845 & 0.0970 & 0.0296 & 0.0510 & 0.0693 \\\\",
+      "paper_value": 0.0626,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.06257470519773327,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 102,
+      "location": "generated/trec_recall.tex:16, numeric cell 2",
+      "paper_text": "SimpleLinear & 0.0626 & 0.0845 & 0.0970 & 0.0296 & 0.0510 & 0.0693 \\\\",
+      "paper_value": 0.0845,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.0844776701539496,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 103,
+      "location": "generated/trec_recall.tex:16, numeric cell 3",
+      "paper_text": "SimpleLinear & 0.0626 & 0.0845 & 0.0970 & 0.0296 & 0.0510 & 0.0693 \\\\",
+      "paper_value": 0.097,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09701627700333974,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 104,
+      "location": "generated/trec_recall.tex:16, numeric cell 4",
+      "paper_text": "SimpleLinear & 0.0626 & 0.0845 & 0.0970 & 0.0296 & 0.0510 & 0.0693 \\\\",
+      "paper_value": 0.0296,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.029643592077240412,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 105,
+      "location": "generated/trec_recall.tex:16, numeric cell 5",
+      "paper_text": "SimpleLinear & 0.0626 & 0.0845 & 0.0970 & 0.0296 & 0.0510 & 0.0693 \\\\",
+      "paper_value": 0.051,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.05097373668709944,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 106,
+      "location": "generated/trec_recall.tex:16, numeric cell 6",
+      "paper_text": "SimpleLinear & 0.0626 & 0.0845 & 0.0970 & 0.0296 & 0.0510 & 0.0693 \\\\",
+      "paper_value": 0.0693,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.06928258053412745,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 107,
+      "location": "generated/trec_recall.tex:17, numeric cell 1",
+      "paper_text": "Affine ridge & 0.0689 & 0.0780 & 0.0856 & 0.0373 & 0.0382 & 0.0366 \\\\",
+      "paper_value": 0.0689,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.06890134085023747,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 108,
+      "location": "generated/trec_recall.tex:17, numeric cell 2",
+      "paper_text": "Affine ridge & 0.0689 & 0.0780 & 0.0856 & 0.0373 & 0.0382 & 0.0366 \\\\",
+      "paper_value": 0.078,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.0779944968405071,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 109,
+      "location": "generated/trec_recall.tex:17, numeric cell 3",
+      "paper_text": "Affine ridge & 0.0689 & 0.0780 & 0.0856 & 0.0373 & 0.0382 & 0.0366 \\\\",
+      "paper_value": 0.0856,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.08563775429812863,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 110,
+      "location": "generated/trec_recall.tex:17, numeric cell 4",
+      "paper_text": "Affine ridge & 0.0689 & 0.0780 & 0.0856 & 0.0373 & 0.0382 & 0.0366 \\\\",
+      "paper_value": 0.0373,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.03726425994631427,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 111,
+      "location": "generated/trec_recall.tex:17, numeric cell 5",
+      "paper_text": "Affine ridge & 0.0689 & 0.0780 & 0.0856 & 0.0373 & 0.0382 & 0.0366 \\\\",
+      "paper_value": 0.0382,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.038217266219315385,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 112,
+      "location": "generated/trec_recall.tex:17, numeric cell 6",
+      "paper_text": "Affine ridge & 0.0689 & 0.0780 & 0.0856 & 0.0373 & 0.0382 & 0.0366 \\\\",
+      "paper_value": 0.0366,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.03657015555736688,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 113,
+      "location": "generated/trec_recall.tex:18, numeric cell 1",
+      "paper_text": "Converter & 0.0651 & 0.0772 & 0.0892 & 0.0422 & 0.0495 & 0.0582 \\\\",
+      "paper_value": 0.0651,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.06512050655177726,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 114,
+      "location": "generated/trec_recall.tex:18, numeric cell 2",
+      "paper_text": "Converter & 0.0651 & 0.0772 & 0.0892 & 0.0422 & 0.0495 & 0.0582 \\\\",
+      "paper_value": 0.0772,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.07717310564196894,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 115,
+      "location": "generated/trec_recall.tex:18, numeric cell 3",
+      "paper_text": "Converter & 0.0651 & 0.0772 & 0.0892 & 0.0422 & 0.0495 & 0.0582 \\\\",
+      "paper_value": 0.0892,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.08920092316113651,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 116,
+      "location": "generated/trec_recall.tex:18, numeric cell 4",
+      "paper_text": "Converter & 0.0651 & 0.0772 & 0.0892 & 0.0422 & 0.0495 & 0.0582 \\\\",
+      "paper_value": 0.0422,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.042248049007770475,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 117,
+      "location": "generated/trec_recall.tex:18, numeric cell 5",
+      "paper_text": "Converter & 0.0651 & 0.0772 & 0.0892 & 0.0422 & 0.0495 & 0.0582 \\\\",
+      "paper_value": 0.0495,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.04951179253245391,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 118,
+      "location": "generated/trec_recall.tex:18, numeric cell 6",
+      "paper_text": "Converter & 0.0651 & 0.0772 & 0.0892 & 0.0422 & 0.0495 & 0.0582 \\\\",
+      "paper_value": 0.0582,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.05824037110988424,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 119,
+      "location": "generated/trec_recall.tex:20, numeric cell 1",
+      "paper_text": "Native Full-X & \\multicolumn{3}{c}{0.0936 (native)} & \\multicolumn{3}{c}{0.1235 (native)} \\\\",
+      "paper_value": 0.0936,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.09355341420637212,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 120,
+      "location": "generated/trec_recall.tex:20, numeric cell 2",
+      "paper_text": "Native Full-X & \\multicolumn{3}{c}{0.0936 (native)} & \\multicolumn{3}{c}{0.1235 (native)} \\\\",
+      "paper_value": 0.1235,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.12353038057812048,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 121,
+      "location": "generated/trec_recall.tex:21, numeric cell 1",
+      "paper_text": "Native Full-Y & \\multicolumn{3}{c}{0.1052 (native)} & \\multicolumn{3}{c}{0.1162 (native)} \\\\",
+      "paper_value": 0.1052,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.10521378018323918,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 122,
+      "location": "generated/trec_recall.tex:21, numeric cell 2",
+      "paper_text": "Native Full-Y & \\multicolumn{3}{c}{0.1052 (native)} & \\multicolumn{3}{c}{0.1162 (native)} \\\\",
+      "paper_value": 0.1162,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.11624395516879528,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 123,
+      "location": "generated/budget_leverage.tex:13, numeric cell 1",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.2731,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.27310684220470094,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 124,
+      "location": "generated/budget_leverage.tex:13, numeric cell 2",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.2718,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.2717780394485493,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 125,
+      "location": "generated/budget_leverage.tex:13, numeric cell 3",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.1416,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.14157395302032982,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 126,
+      "location": "generated/budget_leverage.tex:13, numeric cell 4",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.2781,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.2781397818845367,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 127,
+      "location": "generated/budget_leverage.tex:13, numeric cell 5",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.161,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.1609714907578672,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 128,
+      "location": "generated/budget_leverage.tex:13, numeric cell 6",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.2095,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.2095336751807801,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 129,
+      "location": "generated/budget_leverage.tex:13, numeric cell 7",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.3465,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.3464782895762744,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 130,
+      "location": "generated/budget_leverage.tex:13, numeric cell 8",
+      "paper_text": "FiQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.2731} & 0.2718 & 0.1416 & 0.2781 & 0.1610 & 0.2095 & 0.3465 & 0.3891 \\\\",
+      "paper_value": 0.3891,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.3891325249294525,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 131,
+      "location": "generated/budget_leverage.tex:14, numeric cell 1",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.5071,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.5071236847804641,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 132,
+      "location": "generated/budget_leverage.tex:14, numeric cell 2",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.4852,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.48523704628244235,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 133,
+      "location": "generated/budget_leverage.tex:14, numeric cell 3",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.364,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.36403641053270247,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 134,
+      "location": "generated/budget_leverage.tex:14, numeric cell 4",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.4839,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.48387757204577336,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 135,
+      "location": "generated/budget_leverage.tex:14, numeric cell 5",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.4428,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.44284099940693855,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 136,
+      "location": "generated/budget_leverage.tex:14, numeric cell 6",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.4021,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.40208721230157407,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 137,
+      "location": "generated/budget_leverage.tex:14, numeric cell 7",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.6595,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.6595104530695758,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 138,
+      "location": "generated/budget_leverage.tex:14, numeric cell 8",
+      "paper_text": "NanoNQ & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5071} & 0.4852 & 0.3640 & 0.4839 & 0.4428 & 0.4021 & 0.6595 & 0.6669 \\\\",
+      "paper_value": 0.6669,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.6669078991393519,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 139,
+      "location": "generated/budget_leverage.tex:15, numeric cell 1",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.5845,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.5844856557302884,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 140,
+      "location": "generated/budget_leverage.tex:15, numeric cell 2",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.5512,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.5512346178902974,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 141,
+      "location": "generated/budget_leverage.tex:15, numeric cell 3",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.3869,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.38689849635905205,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 142,
+      "location": "generated/budget_leverage.tex:15, numeric cell 4",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.6174,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.6173880843274537,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 143,
+      "location": "generated/budget_leverage.tex:15, numeric cell 5",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.5053,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.5053470075849882,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 144,
+      "location": "generated/budget_leverage.tex:15, numeric cell 6",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.5016,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.5016332374347163,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 145,
+      "location": "generated/budget_leverage.tex:15, numeric cell 7",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.8278,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.8277532428383954,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 146,
+      "location": "generated/budget_leverage.tex:15, numeric cell 8",
+      "paper_text": "NanoHotpotQA & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5845} & 0.5512 & 0.3869 & 0.6174 & 0.5053 & 0.5016 & 0.8278 & 0.8193 \\\\",
+      "paper_value": 0.8193,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.8192540193891485,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 147,
+      "location": "generated/budget_leverage.tex:16, numeric cell 1",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.7555,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.7554512732607813,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 148,
+      "location": "generated/budget_leverage.tex:16, numeric cell 2",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.7147,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.714661665844085,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 149,
+      "location": "generated/budget_leverage.tex:16, numeric cell 3",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.4991,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.4990506224837599,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 150,
+      "location": "generated/budget_leverage.tex:16, numeric cell 4",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.7087,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.7087460112987809,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 151,
+      "location": "generated/budget_leverage.tex:16, numeric cell 5",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.729,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.7289860142730652,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 152,
+      "location": "generated/budget_leverage.tex:16, numeric cell 6",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.7326,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.7325762381767909,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 153,
+      "location": "generated/budget_leverage.tex:16, numeric cell 7",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.8984,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.898352760618845,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 154,
+      "location": "generated/budget_leverage.tex:16, numeric cell 8",
+      "paper_text": "NanoFEVER & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.7555} & 0.7147 & 0.4991 & 0.7087 & 0.7290 & 0.7326 & 0.8984 & 0.8963 \\\\",
+      "paper_value": 0.8963,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.8963290572938694,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 155,
+      "location": "generated/budget_leverage.tex:17, numeric cell 1",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.5628,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.562801573213321,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 156,
+      "location": "generated/budget_leverage.tex:17, numeric cell 2",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.566,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5660420017846071,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 157,
+      "location": "generated/budget_leverage.tex:17, numeric cell 3",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.5206,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5205904360903386,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 158,
+      "location": "generated/budget_leverage.tex:17, numeric cell 4",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.5785,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.5784937222630202,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 159,
+      "location": "generated/budget_leverage.tex:17, numeric cell 5",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.3278,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.3277848331657977,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 160,
+      "location": "generated/budget_leverage.tex:17, numeric cell 6",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.4098,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.40982778236858286,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 161,
+      "location": "generated/budget_leverage.tex:17, numeric cell 7",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.6805,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.6805416492225224,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 162,
+      "location": "generated/budget_leverage.tex:17, numeric cell 8",
+      "paper_text": "\\midrule \\textbf{TREC-COVID} & \\cellcolor{arcPale}\\textcolor{arcBlue}{0.5628} & 0.5660 & 0.5206 & 0.5785 & 0.3278 & 0.4098 & 0.6805 & 0.6421 \\\\",
+      "paper_value": 0.6421,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.6421134496001705,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 163,
+      "location": "generated/allpaid.tex:13, numeric cell 1",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.3075} & \\underline{0.3671} & \\underline{0.6922} & \\textbf{0.3116} & 0.2919 & 0.5595 \\\\",
+      "paper_value": 0.3075,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3075048582716371,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 164,
+      "location": "generated/allpaid.tex:13, numeric cell 2",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.3075} & \\underline{0.3671} & \\underline{0.6922} & \\textbf{0.3116} & 0.2919 & 0.5595 \\\\",
+      "paper_value": 0.3671,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.36714602143626496,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 165,
+      "location": "generated/allpaid.tex:13, numeric cell 3",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.3075} & \\underline{0.3671} & \\underline{0.6922} & \\textbf{0.3116} & 0.2919 & 0.5595 \\\\",
+      "paper_value": 0.6922,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6922001554001553,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 166,
+      "location": "generated/allpaid.tex:13, numeric cell 4",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.3075} & \\underline{0.3671} & \\underline{0.6922} & \\textbf{0.3116} & 0.2919 & 0.5595 \\\\",
+      "paper_value": 0.3116,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3116352075358866,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 167,
+      "location": "generated/allpaid.tex:13, numeric cell 5",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.3075} & \\underline{0.3671} & \\underline{0.6922} & \\textbf{0.3116} & 0.2919 & 0.5595 \\\\",
+      "paper_value": 0.2919,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.29186698206096195,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 168,
+      "location": "generated/allpaid.tex:13, numeric cell 6",
+      "paper_text": "\\rowcolor{arcPale}\\textbf{ARC2-Global} & \\textbf{0.3075} & \\underline{0.3671} & \\underline{0.6922} & \\textbf{0.3116} & 0.2919 & 0.5595 \\\\",
+      "paper_value": 0.5595,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.5594899234099235,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 169,
+      "location": "generated/allpaid.tex:14, numeric cell 1",
+      "paper_text": "Procrustes & 0.2858 & 0.3334$^{\\dagger}$ & 0.6905 & \\underline{0.3100} & \\textbf{0.3362}$^{\\ddagger}$ & \\textbf{0.6534} \\\\",
+      "paper_value": 0.2858,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.28582824088854003,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 170,
+      "location": "generated/allpaid.tex:14, numeric cell 2",
+      "paper_text": "Procrustes & 0.2858 & 0.3334$^{\\dagger}$ & 0.6905 & \\underline{0.3100} & \\textbf{0.3362}$^{\\ddagger}$ & \\textbf{0.6534} \\\\",
+      "paper_value": 0.3334,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3333864741159597,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 171,
+      "location": "generated/allpaid.tex:14, numeric cell 3",
+      "paper_text": "Procrustes & 0.2858 & 0.3334$^{\\dagger}$ & 0.6905 & \\underline{0.3100} & \\textbf{0.3362}$^{\\ddagger}$ & \\textbf{0.6534} \\\\",
+      "paper_value": 0.6905,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6904948307248308,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 172,
+      "location": "generated/allpaid.tex:14, numeric cell 4",
+      "paper_text": "Procrustes & 0.2858 & 0.3334$^{\\dagger}$ & 0.6905 & \\underline{0.3100} & \\textbf{0.3362}$^{\\ddagger}$ & \\textbf{0.6534} \\\\",
+      "paper_value": 0.31,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.31003589203103826,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 173,
+      "location": "generated/allpaid.tex:14, numeric cell 5",
+      "paper_text": "Procrustes & 0.2858 & 0.3334$^{\\dagger}$ & 0.6905 & \\underline{0.3100} & \\textbf{0.3362}$^{\\ddagger}$ & \\textbf{0.6534} \\\\",
+      "paper_value": 0.3362,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.33620246107664287,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 174,
+      "location": "generated/allpaid.tex:14, numeric cell 6",
+      "paper_text": "Procrustes & 0.2858 & 0.3334$^{\\dagger}$ & 0.6905 & \\underline{0.3100} & \\textbf{0.3362}$^{\\ddagger}$ & \\textbf{0.6534} \\\\",
+      "paper_value": 0.6534,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.653388922188922,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 175,
+      "location": "generated/allpaid.tex:15, numeric cell 1",
+      "paper_text": "LA2M20 & 0.2377 & 0.3389$^{\\dagger}$ & \\textbf{0.6950} & 0.2300 & \\underline{0.3293}$^{\\ddagger}$ & \\underline{0.6473} \\\\",
+      "paper_value": 0.2377,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.2376740142398725,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 176,
+      "location": "generated/allpaid.tex:15, numeric cell 2",
+      "paper_text": "LA2M20 & 0.2377 & 0.3389$^{\\dagger}$ & \\textbf{0.6950} & 0.2300 & \\underline{0.3293}$^{\\ddagger}$ & \\underline{0.6473} \\\\",
+      "paper_value": 0.3389,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3389234669245038,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 177,
+      "location": "generated/allpaid.tex:15, numeric cell 3",
+      "paper_text": "LA2M20 & 0.2377 & 0.3389$^{\\dagger}$ & \\textbf{0.6950} & 0.2300 & \\underline{0.3293}$^{\\ddagger}$ & \\underline{0.6473} \\\\",
+      "paper_value": 0.695,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.695005148185148,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 178,
+      "location": "generated/allpaid.tex:15, numeric cell 4",
+      "paper_text": "LA2M20 & 0.2377 & 0.3389$^{\\dagger}$ & \\textbf{0.6950} & 0.2300 & \\underline{0.3293}$^{\\ddagger}$ & \\underline{0.6473} \\\\",
+      "paper_value": 0.23,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.22999031724981683,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 179,
+      "location": "generated/allpaid.tex:15, numeric cell 5",
+      "paper_text": "LA2M20 & 0.2377 & 0.3389$^{\\dagger}$ & \\textbf{0.6950} & 0.2300 & \\underline{0.3293}$^{\\ddagger}$ & \\underline{0.6473} \\\\",
+      "paper_value": 0.3293,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3293413014310004,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 180,
+      "location": "generated/allpaid.tex:15, numeric cell 6",
+      "paper_text": "LA2M20 & 0.2377 & 0.3389$^{\\dagger}$ & \\textbf{0.6950} & 0.2300 & \\underline{0.3293}$^{\\ddagger}$ & \\underline{0.6473} \\\\",
+      "paper_value": 0.6473,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6473306193806192,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 181,
+      "location": "generated/allpaid.tex:16, numeric cell 1",
+      "paper_text": "SimpleLinear & 0.2360 & 0.3323$^{\\dagger}$ & 0.6778 & 0.1942 & 0.1679$^{\\dagger}$ & 0.3618 \\\\",
+      "paper_value": 0.236,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.2359531204225403,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 182,
+      "location": "generated/allpaid.tex:16, numeric cell 2",
+      "paper_text": "SimpleLinear & 0.2360 & 0.3323$^{\\dagger}$ & 0.6778 & 0.1942 & 0.1679$^{\\dagger}$ & 0.3618 \\\\",
+      "paper_value": 0.3323,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3323162470088491,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 183,
+      "location": "generated/allpaid.tex:16, numeric cell 3",
+      "paper_text": "SimpleLinear & 0.2360 & 0.3323$^{\\dagger}$ & 0.6778 & 0.1942 & 0.1679$^{\\dagger}$ & 0.3618 \\\\",
+      "paper_value": 0.6778,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6777889244089242,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 184,
+      "location": "generated/allpaid.tex:16, numeric cell 4",
+      "paper_text": "SimpleLinear & 0.2360 & 0.3323$^{\\dagger}$ & 0.6778 & 0.1942 & 0.1679$^{\\dagger}$ & 0.3618 \\\\",
+      "paper_value": 0.1942,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.1941674316269752,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 185,
+      "location": "generated/allpaid.tex:16, numeric cell 5",
+      "paper_text": "SimpleLinear & 0.2360 & 0.3323$^{\\dagger}$ & 0.6778 & 0.1942 & 0.1679$^{\\dagger}$ & 0.3618 \\\\",
+      "paper_value": 0.1679,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.16794940738858383,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 186,
+      "location": "generated/allpaid.tex:16, numeric cell 6",
+      "paper_text": "SimpleLinear & 0.2360 & 0.3323$^{\\dagger}$ & 0.6778 & 0.1942 & 0.1679$^{\\dagger}$ & 0.3618 \\\\",
+      "paper_value": 0.3618,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3617845476745477,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 187,
+      "location": "generated/allpaid.tex:17, numeric cell 1",
+      "paper_text": "Affine ridge & \\underline{0.2890} & \\textbf{0.3673} & 0.6800 & 0.1479 & 0.2270$^{\\dagger}$ & 0.4245 \\\\",
+      "paper_value": 0.289,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.28904545781234714,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 188,
+      "location": "generated/allpaid.tex:17, numeric cell 2",
+      "paper_text": "Affine ridge & \\underline{0.2890} & \\textbf{0.3673} & 0.6800 & 0.1479 & 0.2270$^{\\dagger}$ & 0.4245 \\\\",
+      "paper_value": 0.3673,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.36726327671078884,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 189,
+      "location": "generated/allpaid.tex:17, numeric cell 3",
+      "paper_text": "Affine ridge & \\underline{0.2890} & \\textbf{0.3673} & 0.6800 & 0.1479 & 0.2270$^{\\dagger}$ & 0.4245 \\\\",
+      "paper_value": 0.68,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6800430125430126,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 190,
+      "location": "generated/allpaid.tex:17, numeric cell 4",
+      "paper_text": "Affine ridge & \\underline{0.2890} & \\textbf{0.3673} & 0.6800 & 0.1479 & 0.2270$^{\\dagger}$ & 0.4245 \\\\",
+      "paper_value": 0.1479,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.14792156930525965,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 191,
+      "location": "generated/allpaid.tex:17, numeric cell 5",
+      "paper_text": "Affine ridge & \\underline{0.2890} & \\textbf{0.3673} & 0.6800 & 0.1479 & 0.2270$^{\\dagger}$ & 0.4245 \\\\",
+      "paper_value": 0.227,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.2270145751549427,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 192,
+      "location": "generated/allpaid.tex:17, numeric cell 6",
+      "paper_text": "Affine ridge & \\underline{0.2890} & \\textbf{0.3673} & 0.6800 & 0.1479 & 0.2270$^{\\dagger}$ & 0.4245 \\\\",
+      "paper_value": 0.4245,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.42451112110112116,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 193,
+      "location": "generated/allpaid.tex:18, numeric cell 1",
+      "paper_text": "Converter & 0.2496 & 0.3258$^{\\dagger}$ & 0.6633 & 0.1397 & 0.2625 & 0.5789 \\\\",
+      "paper_value": 0.2496,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.24963647764120794,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 194,
+      "location": "generated/allpaid.tex:18, numeric cell 2",
+      "paper_text": "Converter & 0.2496 & 0.3258$^{\\dagger}$ & 0.6633 & 0.1397 & 0.2625 & 0.5789 \\\\",
+      "paper_value": 0.3258,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.32576143937636975,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 195,
+      "location": "generated/allpaid.tex:18, numeric cell 3",
+      "paper_text": "Converter & 0.2496 & 0.3258$^{\\dagger}$ & 0.6633 & 0.1397 & 0.2625 & 0.5789 \\\\",
+      "paper_value": 0.6633,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6632694838494837,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 196,
+      "location": "generated/allpaid.tex:18, numeric cell 4",
+      "paper_text": "Converter & 0.2496 & 0.3258$^{\\dagger}$ & 0.6633 & 0.1397 & 0.2625 & 0.5789 \\\\",
+      "paper_value": 0.1397,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.1396653650449041,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 197,
+      "location": "generated/allpaid.tex:18, numeric cell 5",
+      "paper_text": "Converter & 0.2496 & 0.3258$^{\\dagger}$ & 0.6633 & 0.1397 & 0.2625 & 0.5789 \\\\",
+      "paper_value": 0.2625,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.2625194643556271,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 198,
+      "location": "generated/allpaid.tex:18, numeric cell 6",
+      "paper_text": "Converter & 0.2496 & 0.3258$^{\\dagger}$ & 0.6633 & 0.1397 & 0.2625 & 0.5789 \\\\",
+      "paper_value": 0.5789,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.5789074192474193,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 199,
+      "location": "generated/allpaid.tex:20, numeric cell 1",
+      "paper_text": "Native Full-X & \\multicolumn{2}{c}{0.3900 (native)} & 0.7002 & \\multicolumn{2}{c}{0.3465 (native)} & 0.6453 \\\\",
+      "paper_value": 0.39,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.38996146433493817,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 200,
+      "location": "generated/allpaid.tex:20, numeric cell 2",
+      "paper_text": "Native Full-X & \\multicolumn{2}{c}{0.3900 (native)} & 0.7002 & \\multicolumn{2}{c}{0.3465 (native)} & 0.6453 \\\\",
+      "paper_value": 0.7002,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.7001835830835832,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 201,
+      "location": "generated/allpaid.tex:20, numeric cell 3",
+      "paper_text": "Native Full-X & \\multicolumn{2}{c}{0.3900 (native)} & 0.7002 & \\multicolumn{2}{c}{0.3465 (native)} & 0.6453 \\\\",
+      "paper_value": 0.3465,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3464782895762744,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 202,
+      "location": "generated/allpaid.tex:20, numeric cell 4",
+      "paper_text": "Native Full-X & \\multicolumn{2}{c}{0.3900 (native)} & 0.7002 & \\multicolumn{2}{c}{0.3465 (native)} & 0.6453 \\\\",
+      "paper_value": 0.6453,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6453320235320233,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 203,
+      "location": "generated/allpaid.tex:21, numeric cell 1",
+      "paper_text": "Native Full-Y & \\multicolumn{2}{c}{0.4047 (native)} & 0.7039 & \\multicolumn{2}{c}{0.3891 (native)} & 0.6968 \\\\",
+      "paper_value": 0.4047,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.4047359707946925,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 204,
+      "location": "generated/allpaid.tex:21, numeric cell 2",
+      "paper_text": "Native Full-Y & \\multicolumn{2}{c}{0.4047 (native)} & 0.7039 & \\multicolumn{2}{c}{0.3891 (native)} & 0.6968 \\\\",
+      "paper_value": 0.7039,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.703892218892219,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 205,
+      "location": "generated/allpaid.tex:21, numeric cell 3",
+      "paper_text": "Native Full-Y & \\multicolumn{2}{c}{0.4047 (native)} & 0.7039 & \\multicolumn{2}{c}{0.3891 (native)} & 0.6968 \\\\",
+      "paper_value": 0.3891,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3891325249294525,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 206,
+      "location": "generated/allpaid.tex:21, numeric cell 4",
+      "paper_text": "Native Full-Y & \\multicolumn{2}{c}{0.4047 (native)} & 0.7039 & \\multicolumn{2}{c}{0.3891 (native)} & 0.6968 \\\\",
+      "paper_value": 0.6968,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6967968586968585,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 207,
+      "location": "generated/trec_family.tex:11",
+      "paper_text": "Procrustes & 0/3/0 & 0/3/0 \\\\",
+      "paper_value": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 208,
+      "location": "generated/trec_family.tex:12",
+      "paper_text": "LA2M20 & 0/3/0 & 0/3/0 \\\\",
+      "paper_value": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 209,
+      "location": "generated/trec_family.tex:13",
+      "paper_text": "SimpleLinear & 0/3/0 & 2/1/0 \\\\",
+      "paper_value": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 210,
+      "location": "generated/trec_family.tex:14",
+      "paper_text": "Affine ridge & 1/2/0 & 3/0/0 \\\\",
+      "paper_value": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 211,
+      "location": "generated/trec_family.tex:15",
+      "paper_text": "Converter & 2/1/0 & 3/0/0 \\\\",
+      "paper_value": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 212,
+      "location": "sections/results.tex",
+      "paper_text": "descriptive pair-wise gains are $0.0257$ for MiniLM",
+      "paper_value": 0.0257,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.02573293623675471,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 213,
+      "location": "sections/results.tex",
+      "paper_text": "and $0.0229$ for E5",
+      "paper_value": 0.0229,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 0.022917281844115567,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 214,
+      "location": "sections/results.tex",
+      "paper_text": "Each of the four collection-level macros also favors ARC2 over every baseline.",
+      "paper_value": 4,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 4,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 215,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 leads Procrustes in 23 of 24 point means and every other baseline in all 24.",
+      "paper_value": 23,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 23,
+      "status": "exact_match",
+      "details": "procrustes_global"
+    },
+    {
+      "claim_id": 216,
+      "location": "sections/results.tex",
+      "paper_text": "Each of the four collection-level macros also favors ARC2 over every baseline.",
+      "paper_value": 4,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 4,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 217,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 leads Procrustes in 23 of 24 point means and every other baseline in all 24.",
+      "paper_value": 24,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 24,
+      "status": "exact_match",
+      "details": "la2m20_integration_script_adaptation"
+    },
+    {
+      "claim_id": 218,
+      "location": "sections/results.tex",
+      "paper_text": "Each of the four collection-level macros also favors ARC2 over every baseline.",
+      "paper_value": 4,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 4,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 219,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 leads Procrustes in 23 of 24 point means and every other baseline in all 24.",
+      "paper_value": 24,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 24,
+      "status": "exact_match",
+      "details": "simplelinear_official_final50_mlp5"
+    },
+    {
+      "claim_id": 220,
+      "location": "sections/results.tex",
+      "paper_text": "Each of the four collection-level macros also favors ARC2 over every baseline.",
+      "paper_value": 4,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 4,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 221,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 leads Procrustes in 23 of 24 point means and every other baseline in all 24.",
+      "paper_value": 24,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 24,
+      "status": "exact_match",
+      "details": "ridge_affine_l10_bias_regularized"
+    },
+    {
+      "claim_id": 222,
+      "location": "sections/results.tex",
+      "paper_text": "Each of the four collection-level macros also favors ARC2 over every baseline.",
+      "paper_value": 4,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 4,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 223,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 leads Procrustes in 23 of 24 point means and every other baseline in all 24.",
+      "paper_value": 24,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 24,
+      "status": "exact_match",
+      "details": "embedding_converter_paper_spec"
+    },
+    {
+      "claim_id": 224,
+      "location": "sections/results.tex",
+      "paper_text": "FiQA/E5 at 75\\% ($-0.0036$)",
+      "paper_value": -0.0036,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": -0.003582687566503484,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 225,
+      "location": "sections/results.tex",
+      "paper_text": "The point gain appears in 22 of 24 conditions",
+      "paper_value": 22,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 22,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 226,
+      "location": "sections/results.tex",
+      "paper_text": "in each of the five seed-level macros",
+      "paper_value": 5,
+      "evidence_file": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "evidence_value": 5,
+      "status": "exact_match",
+      "details": "[0.003827292446927389, 0.006180850754361864, 0.007927119071210907, 0.007647106742974317, 0.00903694568321168]"
+    },
+    {
+      "claim_id": 227,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 reaches $0.3075$ nDCG, versus $0.2935$ for the norm-scaled chordal control, $0.2959$ for Euclidean residual refinement and $0.2858$ for unrefined Procrustes.",
+      "paper_value": 0.3075,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.3075048582716371,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 228,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 reaches $0.3075$ nDCG, versus $0.2935$ for the norm-scaled chordal control, $0.2959$ for Euclidean residual refinement and $0.2858$ for unrefined Procrustes.",
+      "paper_value": 0.2935,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.2935058031310443,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 229,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 reaches $0.3075$ nDCG, versus $0.2935$ for the norm-scaled chordal control, $0.2959$ for Euclidean residual refinement and $0.2858$ for unrefined Procrustes.",
+      "paper_value": 0.2959,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.2959154931179677,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 230,
+      "location": "sections/results.tex",
+      "paper_text": "ARC2 reaches $0.3075$ nDCG, versus $0.2935$ for the norm-scaled chordal control, $0.2959$ for Euclidean residual refinement and $0.2858$ for unrefined Procrustes.",
+      "paper_value": 0.2858,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.28582824088854003,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 231,
+      "location": "sections/results.tex",
+      "paper_text": "The tangent gains are $0.0140$ ($[0.0097,0.0186]$) and $0.0116$ ($[0.0078,0.0157]$)",
+      "paper_value": 0.014,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.013999055140592891,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 232,
+      "location": "sections/results.tex",
+      "paper_text": "The tangent gains are $0.0140$ ($[0.0097,0.0186]$) and $0.0116$ ($[0.0078,0.0157]$)",
+      "paper_value": 0.0097,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.009703861642472786,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 233,
+      "location": "sections/results.tex",
+      "paper_text": "The tangent gains are $0.0140$ ($[0.0097,0.0186]$) and $0.0116$ ($[0.0078,0.0157]$)",
+      "paper_value": 0.0186,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.018620502805854717,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 234,
+      "location": "sections/results.tex",
+      "paper_text": "both differences positive in all five fixed seed means",
+      "paper_value": 5,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 5,
+      "status": "exact_match",
+      "details": "chordal2: [0.014091522297069115, 0.014442350945513882, 0.01413530584186301, 0.012806648311579516, 0.014519448306938965]"
+    },
+    {
+      "claim_id": 235,
+      "location": "sections/results.tex",
+      "paper_text": "The tangent gains are $0.0140$ ($[0.0097,0.0186]$) and $0.0116$ ($[0.0078,0.0157]$)",
+      "paper_value": 0.0116,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.011589365153669408,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 236,
+      "location": "sections/results.tex",
+      "paper_text": "The tangent gains are $0.0140$ ($[0.0097,0.0186]$) and $0.0116$ ($[0.0078,0.0157]$)",
+      "paper_value": 0.0078,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.007820844428750586,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 237,
+      "location": "sections/results.tex",
+      "paper_text": "The tangent gains are $0.0140$ ($[0.0097,0.0186]$) and $0.0116$ ($[0.0078,0.0157]$)",
+      "paper_value": 0.0157,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 0.015656396532695304,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 238,
+      "location": "sections/results.tex",
+      "paper_text": "both differences positive in all five fixed seed means",
+      "paper_value": 5,
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": 5,
+      "status": "exact_match",
+      "details": "euclidean2: [0.01165823840255209, 0.013169960003684367, 0.011445941889303257, 0.009613888122461944, 0.01205879735034543]"
+    },
+    {
+      "claim_id": 239,
+      "location": "sections/results.tex",
+      "paper_text": "the 30-contrast family supports five improvements over Converter, four over ridge and two over SimpleLinear.",
+      "paper_value": 5,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 5,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 240,
+      "location": "sections/results.tex",
+      "paper_text": "the 30-contrast family supports five improvements over Converter, four over ridge and two over SimpleLinear.",
+      "paper_value": 4,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 4,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 241,
+      "location": "sections/results.tex",
+      "paper_text": "the 30-contrast family supports five improvements over Converter, four over ridge and two over SimpleLinear.",
+      "paper_value": 2,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 2,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 242,
+      "location": "sections/results.tex",
+      "paper_text": "All Procrustes and LA2M nDCG family intervals cross zero.",
+      "paper_value": 6,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 6,
+      "status": "exact_match",
+      "details": "procrustes_global"
+    },
+    {
+      "claim_id": 243,
+      "location": "sections/results.tex",
+      "paper_text": "All Procrustes and LA2M nDCG family intervals cross zero.",
+      "paper_value": 6,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 6,
+      "status": "exact_match",
+      "details": "la2m20_integration_script_adaptation"
+    },
+    {
+      "claim_id": 244,
+      "location": "sections/results.tex",
+      "paper_text": "Procrustes has higher nDCG point means in all six cells",
+      "paper_value": 6,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 6,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 245,
+      "location": "sections/results.tex",
+      "paper_text": "its MiniLM/75\\% difference is below $0.0001$",
+      "paper_value": "<0.0001",
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 2.3564924613306282e-05,
+      "status": "exact_match",
+      "details": "Confirmed strictly below bound."
+    },
+    {
+      "claim_id": 246,
+      "location": "sections/results.tex; abstract; introduction; conclusion",
+      "paper_text": "E5 ARC2 at 25\\% coverage exceeds both Converter and affine ridge at 75\\%.",
+      "paper_value": 5,
+      "evidence_file": [
+        "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+      ],
+      "evidence_value": 5,
+      "status": "exact_match",
+      "details": "embedding_converter_paper_spec; explicitly post-hoc descriptive."
+    },
+    {
+      "claim_id": 247,
+      "location": "sections/results.tex; abstract; introduction; conclusion",
+      "paper_text": "E5 ARC2 at 25\\% coverage exceeds both Converter and affine ridge at 75\\%.",
+      "paper_value": 5,
+      "evidence_file": [
+        "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+      ],
+      "evidence_value": 5,
+      "status": "exact_match",
+      "details": "ridge_affine_l10_bias_regularized; explicitly post-hoc descriptive."
+    },
+    {
+      "claim_id": 248,
+      "location": "sections/discussion.tex",
+      "paper_text": "all 24 partial-development five-seed ARC2 condition means are below it.",
+      "paper_value": 24,
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": 24,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 249,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "above_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "above_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__procrustes_global"
+    },
+    {
+      "claim_id": 250,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "above_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "above_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__la2m20_integration_script_adaptation"
+    },
+    {
+      "claim_id": 251,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "above_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "above_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__simplelinear_official_final50_mlp5"
+    },
+    {
+      "claim_id": 252,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "unresolved",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "unresolved",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__ridge_affine_l10_bias_regularized"
+    },
+    {
+      "claim_id": 253,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "above_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "above_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__embedding_converter_paper_spec"
+    },
+    {
+      "claim_id": 254,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "below_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "below_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__procrustes_global"
+    },
+    {
+      "claim_id": 255,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "below_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "below_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__la2m20_integration_script_adaptation"
+    },
+    {
+      "claim_id": 256,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "below_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "below_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__simplelinear_official_final50_mlp5"
+    },
+    {
+      "claim_id": 257,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "below_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "below_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__ridge_affine_l10_bias_regularized"
+    },
+    {
+      "claim_id": 258,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "below_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "below_zero",
+      "status": "exact_match",
+      "details": "minilm_distilroberta__arc2_fixed_vs_baseline_allpaid__embedding_converter_paper_spec"
+    },
+    {
+      "claim_id": 259,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "below_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "below_zero",
+      "status": "exact_match",
+      "details": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__procrustes_global"
+    },
+    {
+      "claim_id": 260,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "below_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "below_zero",
+      "status": "exact_match",
+      "details": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__la2m20_integration_script_adaptation"
+    },
+    {
+      "claim_id": 261,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "above_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "above_zero",
+      "status": "exact_match",
+      "details": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__simplelinear_official_final50_mlp5"
+    },
+    {
+      "claim_id": 262,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "above_zero",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "above_zero",
+      "status": "exact_match",
+      "details": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__ridge_affine_l10_bias_regularized"
+    },
+    {
+      "claim_id": 263,
+      "location": "sections/results.tex, all-paid paragraph",
+      "paper_text": "MiniLM exceeds Procrustes, LA2M, SimpleLinear and Converter; ridge unresolved. E5 trails Procrustes and LA2M, exceeds SimpleLinear and ridge, unresolved against Converter. Fixed-anchor MiniLM trails every all-paid baseline.",
+      "paper_value": "unresolved",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "unresolved",
+      "status": "exact_match",
+      "details": "e5_small_base__arc2_allpaid_vs_baseline_allpaid__embedding_converter_paper_spec"
+    },
+    {
+      "claim_id": 264,
+      "location": "sections/results.tex; introduction",
+      "paper_text": "a gain of $0.0596$ with family interval $[0.0393,0.0806]$",
+      "paper_value": 0.0596,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.05964116316462802,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 265,
+      "location": "sections/results.tex; introduction",
+      "paper_text": "a gain of $0.0596$ with family interval $[0.0393,0.0806]$",
+      "paper_value": 0.0393,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.03934110686868015,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 266,
+      "location": "sections/results.tex; introduction",
+      "paper_text": "a gain of $0.0596$ with family interval $[0.0393,0.0806]$",
+      "paper_value": 0.0806,
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.08060437708604837,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 267,
+      "location": "sections/results.tex",
+      "paper_text": "true-vector replacement raises MiniLM all-paid nDCG from $0.3510$ to $0.3671$, but lowers E5 from $0.3149$ to $0.2919$.",
+      "paper_value": 0.351,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.3509507352060274,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 268,
+      "location": "sections/results.tex",
+      "paper_text": "true-vector replacement raises MiniLM all-paid nDCG from $0.3510$ to $0.3671$, but lowers E5 from $0.3149$ to $0.2919$.",
+      "paper_value": 0.3671,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.36714602143626507,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 269,
+      "location": "sections/results.tex",
+      "paper_text": "true-vector replacement raises MiniLM all-paid nDCG from $0.3510$ to $0.3671$, but lowers E5 from $0.3149$ to $0.2919$.",
+      "paper_value": 0.3149,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.31490775036459107,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 270,
+      "location": "sections/results.tex",
+      "paper_text": "true-vector replacement raises MiniLM all-paid nDCG from $0.3510$ to $0.3671$, but lowers E5 from $0.3149$ to $0.2919$.",
+      "paper_value": 0.2919,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.29186698206096207,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 271,
+      "location": "sections/results.tex",
+      "paper_text": "For E5, Recall falls from $0.6542$ to $0.5595$",
+      "paper_value": 0.6542,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.6541642457542457,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 272,
+      "location": "sections/results.tex",
+      "paper_text": "For E5, Recall falls from $0.6542$ to $0.5595$",
+      "paper_value": 0.5595,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.5594899234099234,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 273,
+      "location": "sections/results.tex",
+      "paper_text": "paid-document share of top-10 results falls from $0.4916$ to $0.0647$",
+      "paper_value": 0.4916,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.49164,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 274,
+      "location": "sections/results.tex",
+      "paper_text": "paid-document share of top-10 results falls from $0.4916$ to $0.0647$",
+      "paper_value": 0.0647,
+      "evidence_file": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "evidence_value": 0.06472000000000001,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 275,
+      "location": "sections/experimental-setup.tex",
+      "paper_text": "seeds 17, 29, 41, 53, and 67",
+      "paper_value": [
+        17,
+        29,
+        41,
+        53,
+        67
+      ],
+      "evidence_file": "configs/b1c_r3_lock.json",
+      "evidence_value": [
+        17,
+        29,
+        41,
+        53,
+        67
+      ],
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 276,
+      "location": "sections/experimental-setup.tex",
+      "paper_text": "Collection documents / queries: NanoNQ",
+      "paper_value": [
+        5035,
+        50
+      ],
+      "evidence_file": "configs/datasets.json",
+      "evidence_value": [
+        5035,
+        50
+      ],
+      "status": "exact_match",
+      "details": "Registry counts cross-check query array axis and prospective metadata; no qrels opened."
+    },
+    {
+      "claim_id": 277,
+      "location": "sections/experimental-setup.tex",
+      "paper_text": "Collection documents / queries: NanoHotpotQA",
+      "paper_value": [
+        5090,
+        50
+      ],
+      "evidence_file": "configs/datasets.json",
+      "evidence_value": [
+        5090,
+        50
+      ],
+      "status": "exact_match",
+      "details": "Registry counts cross-check query array axis and prospective metadata; no qrels opened."
+    },
+    {
+      "claim_id": 278,
+      "location": "sections/experimental-setup.tex",
+      "paper_text": "Collection documents / queries: NanoFEVER",
+      "paper_value": [
+        4996,
+        50
+      ],
+      "evidence_file": "configs/datasets.json",
+      "evidence_value": [
+        4996,
+        50
+      ],
+      "status": "exact_match",
+      "details": "Registry counts cross-check query array axis and prospective metadata; no qrels opened."
+    },
+    {
+      "claim_id": 279,
+      "location": "sections/experimental-setup.tex",
+      "paper_text": "Collection documents / queries: FiQA",
+      "paper_value": [
+        57638,
+        500
+      ],
+      "evidence_file": "configs/datasets.json",
+      "evidence_value": [
+        57638,
+        500
+      ],
+      "status": "exact_match",
+      "details": "Registry counts cross-check query array axis and prospective metadata; no qrels opened."
+    },
+    {
+      "claim_id": 280,
+      "location": "sections/experimental-setup.tex",
+      "paper_text": "Collection documents / queries: TREC-COVID",
+      "paper_value": [
+        171332,
+        50
+      ],
+      "evidence_file": "configs/datasets.json",
+      "evidence_value": [
+        171332,
+        50
+      ],
+      "status": "exact_match",
+      "details": "Registry counts cross-check query array axis and prospective metadata; no qrels opened."
+    },
+    {
+      "claim_id": 281,
+      "location": "sections/experimental-setup.tex; sections/method.tex; Matched-target study",
+      "paper_text": "MiniLM-only local FiQA; original four-contrast family, two E5 contrasts pending",
+      "paper_value": "MiniLM-only local FiQA; original four-contrast family, two E5 contrasts pending",
+      "evidence_file": "results/tc1l_local_r1_20261102/full/scoring/summary.json",
+      "evidence_value": {
+        "draws": 20000,
+        "seed": 20261102,
+        "unit": "query after five-seed averaging",
+        "family_size": 4,
+        "observed_contrasts": 2,
+        "pending_E5_contrasts": 2,
+        "individual_coverage": 0.9875,
+        "approx_original_family_coverage": 0.95,
+        "quantile_method": "linear",
+        "query_indices_sha256_le_int64": "d18a5bb239f4672c36b37c15105218b8c4694b75e21f3e5f349849bcfef9a132"
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 282,
+      "location": "sections/experimental-setup.tex; sections/method.tex; Main development",
+      "paper_text": "Four collections, two migrations, three budgets, six methods, five seeds",
+      "paper_value": "Four collections, two migrations, three budgets, six methods, five seeds",
+      "evidence_file": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "evidence_value": {
+        "collections": 4,
+        "migrations": 2,
+        "budgets": 3,
+        "methods": 6,
+        "seeds": 5
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 283,
+      "location": "sections/experimental-setup.tex; sections/method.tex; Prospective inference",
+      "paper_text": "30 primary contrasts, 50 query units; approximately 99.8333% individual intervals",
+      "paper_value": "30 primary contrasts, 50 query units; approximately 99.8333% individual intervals",
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": {
+        "bootstrap_draws": 20000,
+        "bootstrap_seed": 20261031,
+        "contrasts": 30,
+        "alpha": 0.05,
+        "qrels": {
+          "format": "tsv",
+          "url": "https://huggingface.co/datasets/BeIR/trec-covid-qrels/resolve/532ac68ee6756ac22c9346eebf65bd3c6a042e10/test.tsv",
+          "revision": "532ac68ee6756ac22c9346eebf65bd3c6a042e10",
+          "bytes": 980831,
+          "git_blob_sha1": "9cb5167175d7cdbf9d85ea828c6a3da943fe7053"
+        }
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 284,
+      "location": "sections/experimental-setup.tex; sections/method.tex; All-paid inference",
+      "paper_text": "32-contrast family",
+      "paper_value": "32-contrast family",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": {
+        "metric": "ndcg10",
+        "contrasts": 32,
+        "family_confidence": 0.95,
+        "per_interval_confidence": 0.9984375,
+        "method": "bonferroni_percentile"
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 285,
+      "location": "sections/experimental-setup.tex; sections/method.tex; No final-test method selection",
+      "paper_text": "Development labels informed selection; prospective TREC labels closed until sealed and verified",
+      "paper_value": "Development labels informed selection; prospective TREC labels closed until sealed and verified",
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": {
+        "ranking_seal": "08e82c19a2d1974edb094e520d0b1b6ac4e6138e3a717c5014d183669c7c25de",
+        "verification_seal": "78e67ab2aac47d0590db54ffd20170c30f8e7a5c96153bf17a1fee1e5322c968",
+        "lock_policy": "qrel-free until all184 sealed and separately verified"
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 286,
+      "location": "sections/experimental-setup.tex; sections/method.tex; SimpleLinear policy",
+      "paper_text": "five-layer SELU MLP; 50 final epochs; batch 4028; MSE plus cosine; no qrel stopping",
+      "paper_value": "five-layer SELU MLP; 50 final epochs; batch 4028; MSE plus cosine; no qrel stopping",
+      "evidence_file": "configs/b1c_r3_lock.json",
+      "evidence_value": {
+        "learning_rate": 0.0001,
+        "num_epochs": 50,
+        "batch_size": 4028,
+        "gradient_clip": 1.0,
+        "weight_decay": 1e-05,
+        "scheduler_patience": 5,
+        "scheduler_factor": 0.5,
+        "early_stopping_patience": 10,
+        "min_delta": 1e-06,
+        "device": null,
+        "layer_num": 4,
+        "activation": "selu",
+        "dropout": 0.0,
+        "hidden_dim": 512,
+        "use_local_distill": false,
+        "local_k": 50,
+        "local_tau": 0.1,
+        "local_weight": 0.5,
+        "faiss_use_float32": true,
+        "knn_recompute_epochs": 0,
+        "global_weight": 0.5,
+        "cosine_weight": 0.5,
+        "mse_weight": 1.0,
+        "normalize_output": false,
+        "loss_kind": "mse_cos"
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 287,
+      "location": "sections/experimental-setup.tex; sections/method.tex; Converter policy",
+      "paper_text": "50,000-update selection; batch 64; local k=100; earliest validation MAE minimum every 250; fresh all-pairs refit",
+      "paper_value": "50,000-update selection; batch 64; local k=100; earliest validation MAE minimum every 250; fresh all-pairs refit",
+      "evidence_file": [
+        "configs/b1c_r3_lock.json",
+        "src/arc2_global/embedding_converter.py"
+      ],
+      "evidence_value": {
+        "hidden_multiplier": 5,
+        "iterations": 50000,
+        "batch_size": 64,
+        "local_k": 100,
+        "local_samples_per_center": 1,
+        "alpha": 0.1,
+        "beta": 0.1,
+        "learning_rate": 0.001,
+        "adam_betas": [
+          0.9,
+          0.999
+        ],
+        "adam_epsilon": 1e-08,
+        "report_every": 250,
+        "transform_batch_size": 256,
+        "threads": 4,
+        "device": "cuda"
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 288,
+      "location": "sections/experimental-setup.tex; sections/method.tex; Method computation",
+      "paper_text": "lambda=10, exactly two float64 tangent corrections; final float32 affine matrix; dual and primal backends",
+      "paper_value": "lambda=10, exactly two float64 tangent corrections; final float32 affine matrix; dual and primal backends",
+      "evidence_file": [
+        "src/arc2_global/model.py",
+        "src/arc2_global/solver_backend.py"
+      ],
+      "evidence_value": {
+        "lambda": 10,
+        "steps": 2,
+        "dual": "model._tangent2",
+        "primal": "solver_backend.tangent2_primal"
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 289,
+      "location": "sections/experimental-setup.tex; sections/method.tex; Retrieval",
+      "paper_text": "exact float32 inner product; top100; stable ascending document-row tie order; ID exclusion",
+      "paper_value": "exact float32 inner product; top100; stable ascending document-row tie order; ID exclusion",
+      "evidence_file": "src/arc2_global/retrieval.py",
+      "evidence_value": {
+        "exact_topk": "stable argsort",
+        "dtype": "float32"
+      },
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 290,
+      "location": "sections/experimental-setup.tex; sections/method.tex; Claims scope",
+      "paper_text": "Logical destination-vector exposure, parameter storage; no physical encoding time, latency, SLO or ANN claim",
+      "paper_value": "Logical destination-vector exposure, parameter storage; no physical encoding time, latency, SLO or ANN claim",
+      "evidence_file": [
+        "sections/method.tex",
+        "sections/discussion.tex"
+      ],
+      "evidence_value": true,
+      "status": "exact_match",
+      "details": "Documentary/code reconciliation; chronology is supported by saved seal metadata, not an independent rerun."
+    },
+    {
+      "claim_id": 291,
+      "location": "sections/method.tex; discussion; abstract",
+      "paper_text": "295,680 float32 coefficients",
+      "paper_value": 295680,
+      "evidence_file": "src/arc2_global/model.py",
+      "evidence_value": 295680,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 292,
+      "location": "sections/method.tex",
+      "paper_text": "1,182,720 bytes",
+      "paper_value": 1182720,
+      "evidence_file": "src/arc2_global/model.py",
+      "evidence_value": 1182720,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 293,
+      "location": "sections/method.tex; discussion; abstract",
+      "paper_text": "1.13 MiB",
+      "paper_value": 1.13,
+      "evidence_file": "src/arc2_global/model.py",
+      "evidence_value": 1.1279296875,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 294,
+      "location": "sections/discussion.tex; abstract",
+      "paper_text": "114.7 times fewer parameter bytes than the evaluated Converter",
+      "paper_value": 114.7,
+      "evidence_file": "src/arc2_global/embedding_converter.py",
+      "evidence_value": 114.74285714285715,
+      "status": "rounding_ok",
+      "details": "33927168 Converter float32 parameters / 295680 ARC2 parameters = 114.74285714285715. Coefficient bytes only."
+    },
+    {
+      "claim_id": 295,
+      "location": "sections/method.tex, equations and algorithm",
+      "paper_text": "Centered rectangular Procrustes; raw affine B0; norm-scaled tangent negative cosine gradient; correction penalty around current map; common positive-scale equivariance",
+      "paper_value": true,
+      "evidence_file": [
+        "src/arc2_global/model.py",
+        "src/arc2_global/procrustes.py",
+        "src/arc2_global/solver_backend.py"
+      ],
+      "evidence_value": true,
+      "status": "exact_match",
+      "details": "Equations inspected algebraically and reconciled with code. No finite-step monotonicity or independent novelty over prior directional correction is claimed."
+    },
+    {
+      "claim_id": 296,
+      "location": "sections/results.tex; sections/introduction.tex; figures/dev_quality.pdf",
+      "paper_text": "Four equally weighted collection curves, five-seed means, three measured budgets, six adapters plus two native references.",
+      "paper_value": "Four equally weighted collection curves, five-seed means, three measured budgets, six adapters plus two native references.",
+      "evidence_file": "figures/dev_quality.pdf",
+      "evidence_value": "Rendered PDF visually agrees with caption and raw-data ordering.",
+      "status": "exact_match",
+      "details": "Figure PNG and extracted text retained in trace; no regeneration."
+    },
+    {
+      "claim_id": 297,
+      "location": "sections/results.tex; sections/introduction.tex; figures/dev_ablation.pdf",
+      "paper_text": "Five macro controls, 99% intervals; two FiQA/MiniLM controls, 98.75% intervals; full ranges and separate scales.",
+      "paper_value": "Five macro controls, 99% intervals; two FiQA/MiniLM controls, 98.75% intervals; full ranges and separate scales.",
+      "evidence_file": "figures/dev_ablation.pdf",
+      "evidence_value": "Rendered PDF visually agrees with caption and raw-data ordering.",
+      "status": "exact_match",
+      "details": "Figure PNG and extracted text retained in trace; no regeneration."
+    },
+    {
+      "claim_id": 298,
+      "location": "sections/results.tex; sections/introduction.tex; figures/trec_quality.pdf",
+      "paper_text": "Two nDCG and two Recall panels; explicit panel-specific ranges; six adapters plus native references.",
+      "paper_value": "Two nDCG and two Recall panels; explicit panel-specific ranges; six adapters plus native references.",
+      "evidence_file": "figures/trec_quality.pdf",
+      "evidence_value": "Rendered PDF visually agrees with caption and raw-data ordering.",
+      "status": "exact_match",
+      "details": "Figure PNG and extracted text retained in trace; no regeneration."
+    },
+    {
+      "claim_id": 299,
+      "location": "sections/results.tex; sections/introduction.tex; figures/mechanism.pdf",
+      "paper_text": "Explicitly illustrative 24 documents, 8 anchors + 4 additional encodings = 12 paid; one mixed gallery and native destination query.",
+      "paper_value": "Explicitly illustrative 24 documents, 8 anchors + 4 additional encodings = 12 paid; one mixed gallery and native destination query.",
+      "evidence_file": "figures/mechanism.pdf",
+      "evidence_value": "Rendered PDF visually agrees with caption and raw-data ordering.",
+      "status": "exact_match",
+      "details": "Figure PNG and extracted text retained in trace; no regeneration."
+    },
+    {
+      "claim_id": 300,
+      "location": "sections/experimental-setup.tex, artifact footnote",
+      "paper_text": "mapper code, baseline settings, frozen per-query results, raw ranking evidence and scripts to verify the reported numerical results",
+      "paper_value": 0,
+      "evidence_file": "D:\\ARC2-Global_Anonymous_Artifact_20261102\\MANIFEST.json",
+      "evidence_value": 0,
+      "status": "exact_match",
+      "details": "1743 manifest entries exist; existence only, no executor QA used."
+    },
+    {
+      "claim_id": 301,
+      "location": "sections/related-work.tex; references.bib",
+      "paper_text": "GCPA corrects directional mismatch after Procrustes; shared multi-model universe; residual MLP toward consensus directions with angular trust penalty.",
+      "paper_value": true,
+      "evidence_file": "https://proceedings.mlr.press/v306/achara26a.html",
+      "evidence_value": true,
+      "status": "exact_match",
+      "details": "Official page and official linked PDF inspected. PDF copy and extracted text retained in trace; GCPA pages 310-331, PMLR 306 (2026), author/title match."
+    },
+    {
+      "claim_id": 302,
+      "location": "sections/abstract.tex",
+      "paper_text": "gains over the evaluated Converter range from 0.2000 to 0.2572",
+      "paper_value": 0.2,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.1999540966512042,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 303,
+      "location": "sections/abstract.tex",
+      "paper_text": "gains over the evaluated Converter range from 0.2000 to 0.2572",
+      "paper_value": 0.2572,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.25723359077319435,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 304,
+      "location": "sections/results.tex",
+      "paper_text": "Converter gain is $0.2572$, with family interval $[0.1757,0.3376]$",
+      "paper_value": 0.2572,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.25723359077319435,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 305,
+      "location": "sections/results.tex",
+      "paper_text": "Converter gain is $0.2572$, with family interval $[0.1757,0.3376]$",
+      "paper_value": 0.1757,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.17573076152800798,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 306,
+      "location": "sections/results.tex",
+      "paper_text": "Converter gain is $0.2572$, with family interval $[0.1757,0.3376]$",
+      "paper_value": 0.3376,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.33756850203860655,
+      "status": "rounding_ok",
+      "details": ""
+    },
+    {
+      "claim_id": 307,
+      "location": "sections/results.tex; introduction; conclusion",
+      "paper_text": "MiniLM has two supported Converter comparisons and one ridge comparison.",
+      "paper_value": 2,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 2,
+      "status": "exact_match",
+      "details": "minilm_distilroberta; embedding_converter_paper_spec"
+    },
+    {
+      "claim_id": 308,
+      "location": "sections/results.tex; introduction; conclusion",
+      "paper_text": "MiniLM has two supported Converter comparisons and one ridge comparison.",
+      "paper_value": 1,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 1,
+      "status": "exact_match",
+      "details": "minilm_distilroberta; ridge_affine_l10_bias_regularized"
+    },
+    {
+      "claim_id": 309,
+      "location": "sections/results.tex; introduction; conclusion",
+      "paper_text": "On the held collection, E5 ARC2 exceeds the evaluated Converter and affine ridge at all three migration budgets.",
+      "paper_value": 3,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 3,
+      "status": "exact_match",
+      "details": "e5_small_base; embedding_converter_paper_spec"
+    },
+    {
+      "claim_id": 310,
+      "location": "sections/results.tex; introduction; conclusion",
+      "paper_text": "On the held collection, E5 ARC2 exceeds the evaluated Converter and affine ridge at all three migration budgets.",
+      "paper_value": 3,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 3,
+      "status": "exact_match",
+      "details": "e5_small_base; ridge_affine_l10_bias_regularized"
+    },
+    {
+      "claim_id": 311,
+      "location": "sections/results.tex; abstract",
+      "paper_text": "MiniLM Recall@100 point mean is the highest among the six adapters at each budget",
+      "paper_value": 3,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 3,
+      "status": "exact_match",
+      "details": ""
+    },
+    {
+      "claim_id": 312,
+      "location": "sections/results.tex",
+      "paper_text": "Its fixed-to-all-paid change, $0.3116$ to $0.2919$, is unresolved.",
+      "paper_value": "unresolved",
+      "evidence_file": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "evidence_value": "unresolved",
+      "status": "exact_match",
+      "details": "{'delta': -0.019768225474924635, 'ci95': [-0.04220860561973594, 0.002119824562517512], 'descriptive': True, 'interval_interpretation': 'unresolved', 'mapping_seed_variability': {'mean': -0.019768225474924635, 'seed_std': 0.0033232662040852097, 'seed_range': [-0.023552154355393862, -0.015668827243269116], 'seeds': 5}, 'ci_bonferroni_family95': [-0.056329874306672884, 0.016636927373489714], 'per_interval_confidence': 0.9984375, 'family_interval_interpretation': 'unresolved'}"
+    },
+    {
+      "claim_id": 313,
+      "location": "sections/results.tex",
+      "paper_text": "one quarter of the gallery still uses proxies",
+      "paper_value": 0.25,
+      "evidence_file": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "evidence_value": 0.25,
+      "status": "exact_match",
+      "details": ""
+    }
+  ]
+}

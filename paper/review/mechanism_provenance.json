@@ -1,0 +1,18 @@
+{
+  "kind": "worked migration schematic, toy24; not measured ranking or deployment cost",
+  "method": "arc2_global_tangent2_r1",
+  "typography": "native LaTeX/TikZ, Computer Modern",
+  "visual_reference": "D:/DASFAA-2027-MixIndex/figures/fig_arc2_mechanism_v2.png",
+  "algorithm_reference": "src/arc2_global/model.py",
+  "initialization": "centered rectangular Procrustes",
+  "tangent_steps": 2,
+  "lambda": 10,
+  "local_residual": false,
+  "source_sha256": "d1aa2957624bf0ed726303973d565286b5e31b3938d439278885662cfc0bdc60",
+  "script_sha256": "67426d62a04e338081885acf10cbef80ef2a9319831c31a3efdc8f806f43fbf6",
+  "outputs": {
+    "mechanism.pdf": "7a311bc8dd166bce96db914c5f94ad55a53fef32fc83953b2ba33ae6c2a49360",
+    "mechanism.svg": "27465b27ae85521cc377165a8dc3d143737aa8099c73523f6e8bbbb8e48da88c",
+    "mechanism.png": "2d246aa2a42c06ceb4cbdfb91769cf6c59f56bdbf557678afb0e9ea7aff52789"
+  }
+}

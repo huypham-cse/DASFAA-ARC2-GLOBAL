@@ -1,0 +1,14 @@
+{
+  "status": "B1P_COMPLETE_VERIFIED_STOP",
+  "observed_utc": "2026-10-27T03:29:53.298476+00:00",
+  "ranking_cells": 124,
+  "generation_code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "recovery_scorer_code_commit": "4062d96c353ac567fb90a6093cd8059d4647e252",
+  "recovery_completed_sha256": "ae8a39f6ee2bedf6a326ac185d9900b9cfb55ce273ebc76f9ab4fc2e11724827",
+  "original_raw_status": "FAILED_PRESERVED",
+  "original_metadata_unchanged": true,
+  "original_seal_unchanged": true,
+  "active_owned_experiment_processes": [],
+  "TREC_access": false,
+  "next_action": "STOP after B1-P report; B1-G/D1 and later studies await user instruction"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "la2m20_integration_script_adaptation",
+  "fit_pairs": 1024,
+  "fit_seconds": 1.057442375458777,
+  "mapping_seconds": 0.04193970840424299,
+  "phases": {},
+  "parameters_sha256": "fd991b0228cb6f6fe0dae23919f88d2aa3fd38a12f945032a001a5f4c56d95a0",
+  "backend_id": null,
+  "new_physical_document_encodes": 0,
+  "new_fit": true,
+  "group_id": "NanoHotpotQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation",
+  "dataset": "NanoHotpotQA",
+  "pair": "e5_small_base",
+  "seed": 53,
+  "regime": "fixed1024",
+  "paired_target_path": "groups/NanoHotpotQA_e5_small_base_seed53_fixed1024_la2m20_integration_script_adaptation/NanoHotpotQA_anchor_targets.npy",
+  "paired_target_sha256": "0f2005d2302414a2ec38a9bafa4a06abee9dad9605c2ff2f2d781f64512d5d68",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "50pct",
+    "75pct"
+  ]
+}

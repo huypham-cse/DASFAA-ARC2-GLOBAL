@@ -1,0 +1,60 @@
+{
+  "first_dev_qrel_open": "2026-10-25T19:06:39.607324+00:00",
+  "ranking_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+  "lock_sha256": "b165de5ce8fccd2e13e11bb93bfe41160e8cd180dbd196fa4fd4c3b10b805b32",
+  "scorer_sha256": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+  "scorer_code_commit": "55a600f104ded05562d4212d7c07a1330701a4b0",
+  "rescore_context": {
+    "original_lock_sha256": "21921816a8e9dd11594ba1d39a090e78ffed5d8b107c720cf5f44c98fff22693",
+    "ranking_seal_sha256": "d5e3f57c5e84498d14d66ba343cf5fa6f0c9e515580039ea4ae87fd887ce96c7",
+    "original_code_commit": "4056612dcccac74fdf84ccf67783ab87afd85c26",
+    "prior_failure_sha256": "9e787eeda5c99e562b672615303999f5b6c5f907a33f387ec6176a4da1070cfc",
+    "prior_failure_path": "scoring/failure.json",
+    "prior_first_access_sha256": "5f8843b7d5fe0e5919ba25699068bd5002ffc4fbad7c32223ed34335d9d10ed7"
+  },
+  "all_736_rankings_and_ids_verified": true,
+  "synthetic_checks": {
+    "status": "PASS",
+    "graded_ndcg": 0.7002755876478819,
+    "full_qrel_denominator_recall": 0.6666666666666666,
+    "zero_and_unjudged_queries": "zero",
+    "serialized_order": "unchanged",
+    "implicit_binary_parser": {
+      "status": "PASS",
+      "ndcg10": 0.38685280723454163,
+      "recall100": 0.5,
+      "unlisted_pairs": 0,
+      "requires_explicit_parquet_opt_in": true
+    }
+  },
+  "expected_qrel_sources": {
+    "NanoNQ": {
+      "format": "parquet",
+      "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoNQ/resolve/77540146379abf95df8326a3c5bb9eb21c7146c3/qrels/train-00000-of-00001.parquet",
+      "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+      "bytes": 2020,
+      "implicit_binary_grade": 1
+    },
+    "NanoHotpotQA": {
+      "format": "parquet",
+      "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoHotpotQA/resolve/d79c0cdda980aba54842756770928035e1b61a51/qrels/train-00000-of-00001.parquet",
+      "sha256": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+      "bytes": 3424,
+      "implicit_binary_grade": 1
+    },
+    "NanoFEVER": {
+      "format": "parquet",
+      "url": "https://huggingface.co/datasets/zeta-alpha-ai/NanoFEVER/resolve/a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8/qrels/train-00000-of-00001.parquet",
+      "sha256": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+      "bytes": 2730,
+      "implicit_binary_grade": 1
+    },
+    "FiQA": {
+      "format": "tsv",
+      "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+    }
+  },
+  "exposure": "DEV only",
+  "access_scope": "First label access in this repair attempt; original DEV access is preserved in rescore_context"
+}

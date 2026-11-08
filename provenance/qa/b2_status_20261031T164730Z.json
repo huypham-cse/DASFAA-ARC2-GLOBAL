@@ -1,0 +1,128 @@
+{
+  "utc": "2026-10-31T16:47:29.858287+00:00",
+  "campaign_status": "RUNNING",
+  "stage": "full",
+  "current_job": {
+    "stage": "full",
+    "argv": [
+      "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+      "-u",
+      "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_stage.py",
+      "--stage",
+      "full",
+      "--lock",
+      "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+      "--code-commit",
+      "26feef1026bea610ec7f53d581c3c9064949d004",
+      "--output",
+      "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859",
+      "--encoding",
+      "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859",
+      "--smoke",
+      "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859"
+    ],
+    "started_utc": "2026-10-31T07:28:48.362584+00:00",
+    "pid": 261763
+  },
+  "free_bytes": 539262337024,
+  "final_labels_opened": false,
+  "metadata.json": {
+    "status": "RUNNING",
+    "stage": "full",
+    "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+    "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+    "started_utc": "2026-10-31T07:28:49.999057+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "artificial_time_memory_caps": null,
+    "new_physical_document_encodes": 0,
+    "physical_cost_claim": false,
+    "search": "exact only; no ANN measurement"
+  },
+  "progress.json": {
+    "stage": "FIT",
+    "pair": "e5_small_base",
+    "seed": 29,
+    "method": "embedding_converter_paper_spec",
+    "cells": 127
+  },
+  "rankings_count": 127,
+  "fit_groups_complete": 41,
+  "worker": {
+    "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/neural/e5_small_base_seed29_embedding_converter_paper_spec/worker/metadata.json",
+    "status": "RUNNING",
+    "failures": [],
+    "selection_progress.jsonl": {
+      "cuda_reserved_bytes": 809500672,
+      "elapsed_seconds": 3008.034852099605,
+      "global": 0.0024204375222325325,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.0013121685478836298,
+      "gradients_finite": true,
+      "local": 0.0022237692028284073,
+      "loss": 0.0010791280074045062,
+      "observed_rss_bytes": 1815011328,
+      "own_cuda_allocated_bytes": 617617920,
+      "parameters_finite": true,
+      "regression": 0.0006147073581814766,
+      "step": 50000,
+      "validation_mae": 0.013744371943175793
+    },
+    "refit_progress.jsonl": {
+      "cuda_reserved_bytes": 809500672,
+      "elapsed_seconds": 215.83701742906123,
+      "global": 0.016562454402446747,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.0032388956751674414,
+      "gradients_finite": true,
+      "local": 0.017238786444067955,
+      "loss": 0.014270973391830921,
+      "observed_rss_bytes": 1685540864,
+      "own_cuda_allocated_bytes": 617028096,
+      "parameters_finite": true,
+      "regression": 0.010890848934650421,
+      "step": 7000
+    }
+  },
+  "completed_converters": [
+    {
+      "group": "minilm_distilroberta_seed17_embedding_converter_paper_spec",
+      "wall_seconds": 4753.315565647557,
+      "ended_utc": "2026-10-31T08:50:13.008769+00:00"
+    },
+    {
+      "group": "minilm_distilroberta_seed29_embedding_converter_paper_spec",
+      "wall_seconds": 2806.24377798941,
+      "ended_utc": "2026-10-31T09:38:39.937064+00:00"
+    },
+    {
+      "group": "minilm_distilroberta_seed41_embedding_converter_paper_spec",
+      "wall_seconds": 2421.139514441602,
+      "ended_utc": "2026-10-31T10:19:55.380962+00:00"
+    },
+    {
+      "group": "minilm_distilroberta_seed53_embedding_converter_paper_spec",
+      "wall_seconds": 9234.72474156227,
+      "ended_utc": "2026-10-31T12:55:30.398692+00:00"
+    },
+    {
+      "group": "minilm_distilroberta_seed67_embedding_converter_paper_spec",
+      "wall_seconds": 6830.950236529112,
+      "ended_utc": "2026-10-31T14:52:00.640009+00:00"
+    },
+    {
+      "group": "e5_small_base_seed17_embedding_converter_paper_spec",
+      "wall_seconds": 3505.8920453116298,
+      "ended_utc": "2026-10-31T15:52:25.975507+00:00"
+    }
+  ],
+  "gpu_lines": [
+    "|  0    3   0   0  |            2614MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |",
+    "|                  |                 6MiB / 32767MiB  |           |                       |",
+    "|    0   N/A  N/A    348416      C   ...miniforge3/envs/privlava/bin/python          0MiB |",
+    "|    0   N/A  N/A    361500      C   ...covery_20261030/envs/gpu/bin/python          0MiB |",
+    "|    0   N/A  N/A    372454      C   /usr/bin/python3.10                             0MiB |"
+  ],
+  "processes": " 252862       1    09:58:30  0.0 20416 /network-volume/arc2_recovery_20261030/envs/cpu/bin/python -u /home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_campaign.py --lock /home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json --code-commit 26feef1026bea610ec7f53d581c3c9064949d004 --name r1_20261031t064859\n 261763  252862    09:18:42  2.3 1708732 /network-volume/arc2_recovery_20261030/envs/cpu/bin/python -u /home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_stage.py --stage full --lock /home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json --code-commit 26feef1026bea610ec7f53d581c3c9064949d004 --output /home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859 --encoding /home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859 --smoke /home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859"
+}

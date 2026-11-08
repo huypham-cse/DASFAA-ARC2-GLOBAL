@@ -1,0 +1,14 @@
+{
+  "skill": "paper-claim-audit",
+  "verdict": "BLOCKED",
+  "reason": "REVIEW_UNAVAILABLE",
+  "failure_class": "account_usage_limit",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "agent_id": "/root/paper_zero_context_audit",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "completed_semantic_verdict": false,
+  "fallback_attempted": false,
+  "scope": "Fresh final manuscript-to-evidence audit only; prior completed reviews preserved."
+}

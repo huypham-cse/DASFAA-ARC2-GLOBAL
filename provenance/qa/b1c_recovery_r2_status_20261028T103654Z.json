@@ -1,0 +1,93 @@
+{
+  "observed_utc": "2026-10-28T10:36:47.966057+00:00",
+  "metadata": {
+    "status": "RUNNING",
+    "stage": "full",
+    "code_commit": "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+    "started_utc": "2026-10-28T06:50:59.853338+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null
+  },
+  "progress": {
+    "stage": "GROUP_START",
+    "group": "NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec",
+    "group_index": 90,
+    "groups_total": 120,
+    "rankings_complete": 230,
+    "rankings_total": 320
+  },
+  "schedule": {
+    "status": "RUNNING",
+    "code_commit": "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+    "started_unix": 1793169809.3765953,
+    "jobs": [
+      {
+        "stage": "smoke",
+        "argv": [
+          "/root/arc2_p3h_20261020/venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py",
+          "--stage",
+          "smoke",
+          "--output",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028",
+          "--code-commit",
+          "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+          "--lock",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json",
+          "--recovery",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+        ],
+        "started_unix": 1793169809.376895,
+        "pid": 79759,
+        "returncode": 0,
+        "ended_unix": 1793170252.1589112
+      },
+      {
+        "stage": "full",
+        "argv": [
+          "/root/arc2_p3h_20261020/venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py",
+          "--stage",
+          "full",
+          "--output",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028",
+          "--code-commit",
+          "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+          "--smoke",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028",
+          "--lock",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json",
+          "--recovery",
+          "/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+        ],
+        "started_unix": 1793170252.1593666,
+        "pid": 80905
+      }
+    ],
+    "TREC_access": false,
+    "next_scientific_phase_auto_launch": false
+  },
+  "score": null,
+  "score_failure": null,
+  "cells_count": 230,
+  "processes": [
+    "  80239   58090 Rl    352 21279872 03:50:54 /workspace/cyber-cli-lab/lib/ollama/llama-server --model /workspace/cyber-cli-lab/models/blobs/sha256-9fddd9b57b678ca9f9f7b07b02c6f7107bc0f8b307e2383a68cf7a513e6ae0f5 --port 45829 --host 127.0.0.1 --no-webui --offline -c 16384 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on -b 512 -ub 512 --context-shift --keep 4",
+    "  90351   80905 Rl+  11.0 1588060  01:35:12 /root/paper-P2/.venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1p_neural_worker.py --request /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/request.json",
+    "  80905   79758 Sl+   4.4 223904   03:45:56 /root/arc2_p3h_20261020/venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_stage.py --stage full --output /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028 --code-commit 67d7b16c28f7205d3873f6fe09df62eab722fdd4 --smoke /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_smoke_mini_r2_20261028 --lock /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json --recovery /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json",
+    "  79758   79755 S+    0.0 23240    03:53:19 /root/arc2_p3h_20261020/venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1c_campaign.py --code-commit 67d7b16c28f7205d3873f6fe09df62eab722fdd4 --name mini_r2_20261028 --lock /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_lock.json --recovery /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/configs/b1c_recovery_r2_manifest.json"
+  ],
+  "gpu": "Wed Oct 28 10:36:48 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.5     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          Off |   00000000:1C:00.0 Off |                   On |\n| N/A   34C    P0            119W /  700W |                  N/A   |     N/A      Default |\n|                                         |                        |              Enabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| MIG devices:                                                                            |\n+------------------+----------------------------------+-----------+-----------------------+\n| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|      Shared           |\n|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |\n|                  |                                  |        ECC|                       |\n|==================+==================================+===========+=======================|\n|  0    3   0   0  |           18943MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |\n|                  |                15MiB / 32767MiB  |           |                       |\n+------------------+----------------------------------+-----------+-----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A     77677      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78376      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78377      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78378      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     78379      C   ...iniforge3/envs/privpetal/bin/python          0MiB |\n|    0   N/A  N/A     80239      C   ...ber-cli-lab/lib/ollama/llama-server          0MiB |\n|    0   N/A  N/A     90351      C   /root/paper-P2/.venv/bin/python                 0MiB |\n+-----------------------------------------------------------------------------------------+\n",
+  "recent_workers": {
+    "neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/worker/selection_progress.jsonl": "conds\": 5249.003373088315, \"global\": 0.005890360102057457, \"gradient_nonzero\": true, \"gradient_norm\": 0.0038436613976955414, \"gradients_finite\": true, \"local\": 0.008257139474153519, \"loss\": 0.0033649257384240627, \"observed_rss_bytes\": 1625788416, \"own_cuda_allocated_bytes\": 617617920, \"parameters_finite\": true, \"regression\": 0.0019501758506521583, \"step\": 22750, \"validation_mae\": 0.027435434982180595}\n{\"cuda_reserved_bytes\": 809500672, \"elapsed_seconds\": 5351.20065586362, \"global\": 0.007892424240708351, \"gradient_nonzero\": true, \"gradient_norm\": 0.003649582853540778, \"gradients_finite\": true, \"local\": 0.010476084426045418, \"loss\": 0.003840069752186537, \"observed_rss_bytes\": 1625788416, \"own_cuda_allocated_bytes\": 617617920, \"parameters_finite\": true, \"regression\": 0.0020032187458127737, \"step\": 23000, \"validation_mae\": 0.02740519307553768}\n{\"cuda_reserved_bytes\": 809500672, \"elapsed_seconds\": 5450.100472513586, \"global\": 0.006546069402247667, \"gradient_nonzero\": true, \"gradient_norm\": 0.0038199464324861765, \"gradients_finite\": true, \"local\": 0.01034653838723898, \"loss\": 0.003669584635645151, \"observed_rss_bytes\": 1626136576, \"own_cuda_allocated_bytes\": 617617920, \"parameters_finite\": true, \"regression\": 0.0019803238101303577, \"step\": 23250, \"validation_mae\": 0.027408283203840256}\n{\"cuda_reserved_bytes\": 809500672, \"elapsed_seconds\": 5548.005191662349, \"global\": 0.0051209344528615475, \"gradient_nonzero\": true, \"gradient_norm\": 0.0038678741548210382, \"gradients_finite\": true, \"local\": 0.00988343171775341, \"loss\": 0.003426887094974518, \"observed_rss_bytes\": 1626152960, \"own_cuda_allocated_bytes\": 617617920, \"parameters_finite\": true, \"regression\": 0.001926450408063829, \"step\": 23500, \"validation_mae\": 0.027439389377832413}\n{\"cuda_reserved_bytes\": 809500672, \"elapsed_seconds\": 5646.000673874281, \"global\": 0.005782978609204292, \"gradient_nonzero\": true, \"gradient_norm\": 0.0035336120054125786, \"gradients_finite\": true, \"local\": 0.008053705096244812, \"loss\": 0.003249821253120899, \"observed_rss_bytes\": 1626173440, \"own_cuda_allocated_bytes\": 617617920, \"parameters_finite\": true, \"regression\": 0.0018661527428776026, \"step\": 23750, \"validation_mae\": 0.027436215430498123}\n",
+    "neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/worker/metadata.json": "ot found': ['AVX512_KNL', 'AVX512_KNM']}}\",\n  \"inputs\": {\n    \"paired_source\": {\n      \"path\": \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/NanoNQ_paired_source.npy\",\n      \"sha256\": \"eba78af91a4539900b85b1ba58f9b21d20555786966d7275da924e2bbb2b4deb\",\n      \"shape\": [\n        1024,\n        384\n      ],\n      \"dtype\": \"float32\"\n    },\n    \"paired_target\": {\n      \"path\": \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/NanoNQ_paired_target.npy\",\n      \"sha256\": \"b299956a7106b7f78a272ef40e9c17e252720752989198a7350a7e56542330fd\",\n      \"shape\": [\n        1024,\n        768\n      ],\n      \"dtype\": \"float32\"\n    },\n    \"full_source\": {\n      \"path\": \"/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoNQ/minilm_x_docs.npy\",\n      \"sha256\": \"4a807ce6ed5965bbcb77948f295e9bc3c371621a6ada6d9d3f65322dfbdea9a3\",\n      \"shape\": [\n        5035,\n        384\n      ],\n      \"dtype\": \"float32\"\n    }\n  },\n  \"fit_pairs\": 1024,\n  \"target_population\": \"supplied paired rows only; no unpaid target or qrels API\",\n  \"train_count\": 896,\n  \"validation_count\": 128,\n  \"config\": {\n    \"hidden_multiplier\": 5,\n    \"iterations\": 50000,\n    \"batch_size\": 64,\n    \"local_k\": 100,\n    \"local_samples_per_center\": 1,\n    \"alpha\": 0.1,\n    \"beta\": 0.1,\n    \"learning_rate\": 0.001,\n    \"adam_betas\": [\n      0.9,\n      0.999\n    ],\n    \"adam_epsilon\": 1e-08,\n    \"report_every\": 250,\n    \"transform_batch_size\": 256,\n    \"threads\": 4,\n    \"device\": \"cuda\"\n  },\n  \"validation_policy\": \"default_rng(seed+20261025); first floor(N/8) validation; rest training; earliest minimum MAE at 250-step checkpoints\",\n  \"refit_policy\": \"fresh model and Adam; same seed; selected_iteration updates; every supplied paired row\",\n  \"durable_resume_policy\": \"exact model+Adam+NumPy/Torch RNG; every5000 updates full/every250 smoke and final; identical paired inputs/configuration/runtime required\",\n  \"independent_paper_spec_adaptation\": true\n}\n",
+    "neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/stdout.log": "",
+    "neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/process_exit.json": "{\n  \"status\": \"RUNNING\",\n  \"started_utc\": \"2026-10-28T09:01:36.251689+00:00\",\n  \"request_sha256\": \"ee70bfb41d6bd1c3e286abb50f88a97c30717dc5a67fa147c1968e6ad026e5cd\",\n  \"argv\": [\n    \"/root/paper-P2/.venv/bin/python\",\n    \"-u\",\n    \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1p_neural_worker.py\",\n    \"--request\",\n    \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec/request.json\"\n  ],\n  \"cgroup_memory_events_before\": \"low 0\\nhigh 0\\nmax 843657\\noom 0\\noom_kill 0\\n\",\n  \"pid\": 90351\n}\n",
+    "neural/NanoFEVER_NanoFEVER_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/process_exit.json": "{\n  \"status\": \"EXITED\",\n  \"started_utc\": \"2026-10-28T08:58:06.950982+00:00\",\n  \"request_sha256\": \"1ada8c4482795340068f0bf129733fba55a7a5b151c728264596be5193cf1798\",\n  \"argv\": [\n    \"/root/paper-P2/.venv/bin/python\",\n    \"-u\",\n    \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1p_neural_worker.py\",\n    \"--request\",\n    \"/root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028/neural/NanoFEVER_NanoFEVER_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5/request.json\"\n  ],\n  \"cgroup_memory_events_before\": \"low 0\\nhigh 0\\nmax 842420\\noom 0\\noom_kill 0\\n\",\n  \"pid\": 90082,\n  \"returncode\": 0,\n  \"signal_number\": null,\n  \"signal_name\": null,\n  \"ended_utc\": \"2026-10-28T09:01:28.053172+00:00\",\n  \"stdout_sha256\": \"a3acd5233331b726dbb20d77a27e0e7558b25e75b541506f7ab486393bc8f31b\",\n  \"stderr_sha256\": \"45a615ca2ec2b583c96720d55919054a6ad1c74e72a7b3cfdb3baa283e3cdb82\",\n  \"cgroup_memory_events_after\": \"low 0\\nhigh 0\\nmax 843657\\noom 0\\noom_kill 0\\n\"\n}\n"
+  }
+}

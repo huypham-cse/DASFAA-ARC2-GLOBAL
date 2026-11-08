@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "embedding_converter",
+  "regime": "all_paid",
+  "seed": 29,
+  "lockpath": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/configs/b1p_lock.json",
+  "output": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/worker",
+  "paired_source": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+  "paired_target": "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/neural/minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+  "full_source": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy",
+  "code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "input_sha256": {
+    "paired_source": "91e0bbe0acf4fb987e8ef157abf4cf301ba019e766901257ebd8e9be976f7b70",
+    "paired_target": "eaede3db4d7d73e78d06786d7fb4b36c7195cedad0b88d80e927cfaba24cc4f2",
+    "full_source": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782"
+  }
+}

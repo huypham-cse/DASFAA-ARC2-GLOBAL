@@ -1,0 +1,11 @@
+{
+  "scope": "first local synchronization-verifier attempt, not H100 failure",
+  "status": "FAILED_LOCAL_VERIFIER_ASSUMPTION",
+  "reason": "Compared Linux committed lock raw hash to Windows CRLF working copy. Correct check is exact Git blob bytes at recorded pre-run commit, plus parsed-object equality.",
+  "metadata_lock_sha256": "008d3efafa9c56f4331a97a2edddbcd141a053ac4579b47bc5d67084b09201aa",
+  "committed_git_blob_sha256": "008d3efafa9c56f4331a97a2edddbcd141a053ac4579b47bc5d67084b09201aa",
+  "working_copy_sha256": "9d3015e5567c02348a2586152ba3222ad5a7c2cddb131565d14efedc9b04435a",
+  "semantic_identity": true,
+  "scientific_outputs_changed": false,
+  "H100_rerun": false
+}

@@ -1,0 +1,65 @@
+{
+  "status": "B1C_R3_RANKINGS_SEALED_STOP",
+  "stage": "full",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "restored_root": "/network-volume/arc2_recovery_20261030/restored",
+  "started_utc": "2026-10-30T03:47:30.526928+00:00",
+  "failures": [],
+  "qrels_opened": false,
+  "ranking_process_qrel_reads": 0,
+  "TREC_access": false,
+  "new_physical_document_encodes": 0,
+  "artificial_time_memory_caps": null,
+  "lock_sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+  "runtime": {
+    "python": "3.11.17 (main, Oct 21 2026, 17:46:53) [Clang 23.1.3 ]",
+    "executable": "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+    "platform": "Linux-5.15.0-176-generic-x86_64-with-glibc2.35",
+    "hostname": "nb-eac57496-67a5-4d45-9cf8-8504d68ddce6-5c9589b95f-mw6d5",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.5.1",
+    "environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4"
+    },
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/network-volume/arc2_recovery_20261030/envs/cpu/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+        "version": "0.3.31.188.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 4,
+        "prefix": "libscipy_openblas",
+        "filepath": "/network-volume/arc2_recovery_20261030/envs/cpu/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ]
+  },
+  "registry_sha256": "876511967ee767a062a8d2ce66406a184dc42ce4f5ee70e6b3570aae08e8a5e5",
+  "existing_registry_sha256": "7a131a80f965bb561f3d5228be05d970b182950907c456a65e7cdd84fb1e2395",
+  "smoke": {
+    "path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347",
+    "metadata_sha256": "325f195ce05b140f4e0714a8c3655f0de6560bae2c96ecb87e222ee6011ef3ec"
+  },
+  "ranking_count": 358,
+  "ranking_seal_sha256": "a60b352dd1bb19b4f35783ce5c5172aea6ab3bbc9d4691c740320883dd2bae88",
+  "new_nano_fits": 90,
+  "new_fiqa_fits": 28,
+  "historical_fiqa_fits_reused": 2,
+  "next_action": "Separate DEV scoring after358 seal; report/final D1 then STOP before B2",
+  "wall_seconds": 93144.8952920977,
+  "peak_process_tree_rss_bytes": 2493046784,
+  "ended_utc": "2026-10-31T05:39:55.422204+00:00"
+}

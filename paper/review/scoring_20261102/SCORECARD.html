@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARC2-Global: current paper scorecard</title>
+
+<meta name="generator" content="ARIS render-html (dashboard, v1)">
+<meta name="aris:source-path" content="paper\review\scoring_20261102\SCORECARD.md">
+<meta name="aris:source-sha256" content="349ad261013509edaf99e53bbc28abe5e87320890b8603d2fda27ca21b8ceeb9">
+<meta name="aris:generated-at" content="2026-11-01 19:35 UTC">
+
+<!-- offline mode: MathJax + highlight.js skipped; math and code blocks render as plain text -->
+
+<style>
+:root {
+  --bg: #fdfcf7;
+  --bg-soft: #f4f1ea;
+  --bg-card: #ffffff;
+  --bg-code: #f8f5ec;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #6b6b6b;
+  --primary: #1a4a8c;
+  --primary-soft: #2d6cb8;
+  --accent: #b8390e;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --info-bg: #dbeafe;
+  --good-bg: #d1fae5;
+  --good: #065f46;
+  --bad-bg: #fee2e2;
+  --bad: #991b1b;
+  --border: #d6d0c0;
+  --border-soft: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Serif Pro", "Source Serif 4", "Crimson Pro", "Georgia", "Songti SC", "STSong", serif;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 32px 48px;
+}
+
+header.hero {
+  border-bottom: 3px double var(--primary);
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+}
+header.hero .eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+header.hero h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.hero .subtitle {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+  font-style: italic;
+}
+header.hero .byline {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+header.hero .byline strong { color: var(--ink); font-weight: 600; }
+header.hero .meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 12px;
+}
+header.hero .meta span strong { color: var(--ink-soft); }
+header.hero .meta code {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 16px 0 28px;
+}
+.grid.metrics { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+.card .card-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.card .card-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  letter-spacing: -0.01em;
+}
+.card .card-sub {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 6px;
+}
+.card.accent .card-value { color: var(--accent); }
+.card.good .card-value { color: var(--good); }
+.card.warn .card-value { color: var(--warn); }
+.card.bad .card-value { color: var(--bad); }
+
+h2 {
+  font-size: 20px;
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 700;
+}
+h3 { font-size: 16px; margin: 22px 0 8px; color: var(--primary); font-weight: 600; }
+h4 { font-size: 14px; margin: 16px 0 6px; color: var(--ink); font-weight: 600; }
+
+p { margin: 8px 0; }
+ul, ol { padding-left: 20px; margin: 8px 0; }
+ul li, ol li { margin: 3px 0; }
+ul li::marker { color: var(--primary); }
+
+strong { color: var(--accent); font-weight: 600; }
+em { color: var(--ink-soft); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+code:not(.hljs) {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.86em;
+  background: var(--bg-code);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  color: var(--accent);
+}
+
+pre {
+  background: #fafaf6;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+pre code, pre code.hljs {
+  background: transparent !important;
+  display: block;
+  padding: 12px 16px !important;
+  font-size: 12.5px;
+  line-height: 1.5;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  color: var(--ink);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+thead { background: var(--primary); color: white; }
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 12px; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--bg-soft); }
+
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: "JetBrains Mono", "SF Mono", monospace;
+  letter-spacing: 0.02em;
+}
+.badge-good { background: var(--good-bg); color: var(--good); }
+.badge-warn { background: var(--warn-bg); color: var(--warn); }
+.badge-bad { background: var(--bad-bg); color: var(--bad); }
+.badge-info { background: var(--info-bg); color: var(--primary); }
+
+.callout {
+  margin: 14px 0;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 14px;
+}
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.callout-info { background: var(--info-bg); border-left-color: var(--primary); }
+.callout-info .callout-title { color: var(--primary); }
+.callout-warn { background: var(--warn-bg); border-left-color: var(--warn); }
+.callout-warn .callout-title { color: var(--warn); }
+.callout-good { background: var(--good-bg); border-left-color: var(--good); }
+.callout-good .callout-title { color: var(--good); }
+.callout-bad { background: var(--bad-bg); border-left-color: var(--bad); }
+.callout-bad .callout-title { color: var(--bad); }
+
+details {
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 9px 13px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--primary);
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸ ";
+  margin-right: 4px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { border-bottom: 1px solid var(--border-soft); }
+details > :not(summary) { padding: 8px 13px; }
+
+footer.aris-footer {
+  margin-top: 48px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+footer.aris-footer a { color: var(--ink-muted); border-bottom: 1px dotted var(--border); }
+
+@media (max-width: 600px) {
+  .shell { padding: 20px 16px; }
+  header.hero h1 { font-size: 22px; }
+  .card .card-value { font-size: 24px; }
+}
+@media print {
+  .shell { padding: 0; }
+  body { background: white; }
+  .card { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<header class="hero">
+  
+  <h1>ARC2-Global: current paper scorecard</h1>
+  
+  
+  <div class="meta">
+    <span><strong>Source:</strong> <code>paper\review\scoring_20261102\SCORECARD.md</code></span>
+    <span><strong>SHA256:</strong> <code>349ad2610135</code></span>
+    <span><strong>Rendered:</strong> 2026-11-01 19:35 UTC</span>
+    
+  </div>
+</header>
+
+<h1 id="arc2-global-current-paper-scorecard">ARC2-Global: current paper scorecard</h1>
+<p><strong>6/10 — weak accept.</strong> This is a completed internal ARIS assessment of the current 16-page manuscript, using three separate gpt-6.1-sol/high reviewer threads. Overall confidence: <strong>4/5</strong>.</p>
+<table><thead><tr><th>ARIS review</th><th>Result</th><th>Meaning</th></tr></thead><tbody><tr><td>Research review</td><td><strong>6/10 — weak accept</strong></td><td>A useful, coherent scoped contribution; not yet a strong accept.</td></tr><tr><td>Novelty check</td><td><strong>6/10 — PROCEED</strong></td><td>A concrete incremental computation; no inspected paper duplicates its exact update.</td></tr><tr><td>Result-to-claim</td><td><strong>YES</strong>, high confidence</td><td>All 12 evaluated bounded claims supported; no material unsupported claim found.</td></tr></tbody></table>
+<p>The overall score is one reviewer's holistic judgment. It is not an average of skill scores, an official DASFAA score, or an acceptance probability. The holistic reviewer independently rated novelty 5/10; the focused novelty reviewer rated it 6/10 under the novelty skill's stated anchors. This modest difference is retained rather than reconciled by picking a preferred score.</p>
+<h2 id="dimension-scores">Dimension scores</h2>
+<table><thead><tr><th>Paper-review dimension</th><th style="text-align:right">Score / 10</th></tr></thead><tbody><tr><td>Novelty</td><td style="text-align:right">5</td></tr><tr><td>Technical soundness</td><td style="text-align:right">8</td></tr><tr><td>Experimental evidence</td><td style="text-align:right">7</td></tr><tr><td>Practical significance</td><td style="text-align:right">6</td></tr><tr><td>Clarity and figures</td><td style="text-align:right">8</td></tr><tr><td>Reproducibility</td><td style="text-align:right">7</td></tr><tr><td>Venue fit</td><td style="text-align:right">8</td></tr></tbody></table>
+<table><thead><tr><th>Focused evidence-review dimension</th><th style="text-align:right">Score / 10</th></tr></thead><tbody><tr><td>Empirical support</td><td style="text-align:right">8</td></tr><tr><td>Fairness and rigor</td><td style="text-align:right">8</td></tr><tr><td>Value in the stated deployment scenario</td><td style="text-align:right">7</td></tr><tr><td>Claim calibration</td><td style="text-align:right">9</td></tr></tbody></table>
+<h2 id="what-makes-the-paper-worth-reading">What makes the paper worth reading</h2>
+<p>The development study supports +0.0243 nDCG over Procrustes, with a positive corrected interval; the second tangent correction contributes +0.0069. These are development findings, not independent-test victories. In the prospective E5 study, gains over the declared Converter configuration persist across budgets. The five-collection E5 comparison also shows ARC2 at 25% exposure above Converter and ridge at 75% in point means; this is a descriptive quality/exposure result, not a measured physical-cost saving.</p>
+<p>The final map has 1.13 MiB of float32 coefficients and needs no neural mapper training. Mixed-gallery and all-paid analyses explain when the approach helps and when replacing proxies can hurt. Together, these form a useful compact-migration contribution with concrete operating conditions.</p>
+<h2 id="why-the-overall-score-remains-6">Why the overall score remains 6</h2>
+<p>The exact refinement is a defensible combination of established ingredients. On the prospective collection, Procrustes has higher nDCG point means in all six conditions, with unresolved corrected contrasts. Thus the strongest geometric-baseline advantage is not independently confirmed. One 50-query held collection and two encoder transitions also bound generality. These are contribution-strength limits; the reviews found no material contradiction in the current bounded claims.</p>
+<h2 id="finite-follow-up-before-submission">Finite follow-up before submission</h2>
+<ol><li>Add the published <a href="https://proceedings.mlr.press/v306/achara26a.html">GCPA / Multi-Way Representation Alignment</a> citation and a short technical comparison. Its consensus-target residual MLP and angular trust hinge differ from ARC2's paired-destination tangent ridge updates. This is a positioning repair, not evidence of an exact duplicate.</li><li>Supply an accessible anonymous frozen code/evidence package. The existing anonymous manuscript-source ZIP is not the full scientific artifact.</li><li>Obtain supervisor feedback on the current contribution and framing. <strong>No new scientific experiment is required to support the claims presently written.</strong> Broader superiority or physical deployment claims would require additional evidence.</li></ol>
+<h2 id="review-provenance-and-limits">Review provenance and limits</h2>
+<p>All reviews are <strong>same-family / provisional</strong>. The paper grader did not see earlier local scores. The evidence reviewer accidentally encountered previous opinions in required AGENTS/protocol text and disclosed that exposure. The novelty reviewer avoided prior local scores but saw incidental external search commentary; primary papers alone support its technical comparisons. Consequently this is not three perfectly blinded external reviews.</p>
+<p>Reviewers inspected all 16 PDF pages, existing per-query outputs and selected sealed records. The support reviewer checked saved means and family quantiles and hash-verified all 184 B2 rankings. No qrels were opened, no new scientific runs launched, and no manuscript or scientific inputs changed. Numerical consistency is not a complete independent re-execution of fitting/scoring or a proof of prior non-exposure.</p>
+<p>Scored PDF SHA256: <code>e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc</code>.</p>
+<h2 id="complete-reports">Complete reports</h2>
+<ul><li><a href="PAPER_SCORE.md">Research review</a></li><li><a href="NOVELTY_SCORE.md">Novelty check and primary-source comparisons</a></li><li><a href="RESULT_TO_CLAIM_SCORE.md">Result-to-claim review</a></li><li><a href="SCORECARD.json">Machine-readable scorecard</a></li><li><a href="INPUT_SNAPSHOT.json">Frozen input snapshot</a></li></ul>
+<p>Original reports and differing judgments are retained. This scorecard does not modify the manuscript, submission status, protocols or historical verdicts.</p>
+
+<footer class="aris-footer">
+  Generated by <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/render-html/SKILL.md">ARIS <code>/render-html</code></a> ·
+  source <code>paper\review\scoring_20261102\SCORECARD.md</code> ·
+  SHA256 <code>349ad2610135</code> ·
+  generated at 2026-11-01 19:35 UTC.
+  Edit the source Markdown / JSON, then re-render.
+</footer>
+
+</div>
+</body>
+</html>

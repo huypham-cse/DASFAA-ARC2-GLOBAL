@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "simplelinear",
+  "regime": "anchors",
+  "seed": 41,
+  "lockpath": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+  "output": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/worker",
+  "paired_source": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/NanoHotpotQA_paired_source.npy",
+  "paired_target": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5/NanoHotpotQA_paired_target.npy",
+  "full_source": "/network-volume/arc2_recovery_20261030/restored/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/minilm_x_docs.npy",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "input_sha256": {
+    "paired_source": "f038f4aa393fb587c042f82195142d0f06b88f039804b74589b8fae86b3a6268",
+    "paired_target": "2c21393cb514fa80b535db42ea235c18eb4e994aec89f7fc52476762a18facd5",
+    "full_source": "33872a10dea389aba01798828ba3556ba33007fafd93c4da844c99db158f1d9f"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "first_scorer_dev_qrel_parse": "2026-10-27T03:20:34.803308+00:00",
+  "binding": {
+    "lock_sha256": "17e93a5da59fe29193bf385cb9b7a0b94381beea9fc70e32d4bfe8858eeb79d9",
+    "descriptor_sha256": "b3eb72da273310ca969ac174b039feb543f962b79ff0b505bc1b5a653054ca32",
+    "generation_code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+    "recovery_scorer_code_commit": "4062d96c353ac567fb90a6093cd8059d4647e252",
+    "ranking_seal_sha256": "1b993e1bf3fe0248f0a48e52cc371f232ceeba615f81672ec30b81048ba5be1d",
+    "original_metadata_sha256": "c6b386180a9445e0e40efaee1c8bd2a3d234edc1576c9611859a8b2d38b5be0f"
+  },
+  "prior_dev_label_transport": {
+    "intent": {
+      "protocol": "protocols/B1P_R3_H100_MINI_DEPLOYMENT_20261026.md",
+      "pre_run_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+      "before_source_hash_stat_or_byte_read": "2026-10-26T09:12:12.274143+00:00",
+      "source_host": "103.73.232.225",
+      "destination_host": "103.73.232.201",
+      "source": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "expected_sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+      "purpose": "opaque transport of previously inspected FiQA DEV TSV; no parsing/metrics; worker API excludes qrels",
+      "judgments_parsed": false,
+      "metrics_computed": false,
+      "TREC_access": false
+    },
+    "verified": {
+      "status": "DEV_LABEL_TRANSPORT_VERIFIED",
+      "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+      "bytes": 18327,
+      "intent_sha256": "29cc5b9b5494029c7331200852201421b954680ebe0020e84a255b43a7920cad",
+      "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "judgments_parsed": false,
+      "metrics_computed": false,
+      "verified_utc": "2026-10-26T09:16:55.856407+00:00"
+    },
+    "scope": "opaque prior DEV transport; first scorer parse follows verified124-cell seal"
+  },
+  "all_124_rankings_and_ids_verified": true,
+  "synthetic_checks": {
+    "status": "PASS",
+    "graded_ndcg": 0.7002755876478819,
+    "full_qrel_denominator_recall": 0.6666666666666666,
+    "zero_and_unjudged_queries": "zero",
+    "serialized_order": "unchanged",
+    "implicit_binary_parser": {
+      "status": "PASS",
+      "ndcg10": 0.38685280723454163,
+      "recall100": 0.5,
+      "unlisted_pairs": 0,
+      "requires_explicit_parquet_opt_in": true
+    }
+  },
+  "expected_qrel_sources": {
+    "FiQA": {
+      "format": "tsv",
+      "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+    }
+  },
+  "smoke_completed_sha256": "897e73e73406040d5525149d005709d7b894730b0c7e09a91bc5e4a4ddb6dc58",
+  "exposure": "Previously inspected FiQA DEV; not independent confirmation"
+}

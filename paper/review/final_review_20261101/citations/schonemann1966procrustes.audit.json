@@ -1,0 +1,37 @@
+﻿{
+    "key":  "schonemann1966procrustes",
+    "existence":  "VERIFIED",
+    "metadata":  {
+                     "author":  "Peter H. Schönemann",
+                     "title":  "A Generalized Solution of the Orthogonal Procrustes Problem",
+                     "year":  1966,
+                     "venue":  "Psychometrika",
+                     "volume":  "31",
+                     "issue":  "1",
+                     "pages":  "1–10",
+                     "doi":  "10.1007/BF02289451",
+                     "status":  "All supplied bibliographic fields match live Crossref and publisher metadata. Cambridge online publication date 2025 is the platform date; original issue date is March 1966."
+                 },
+    "sources":  [
+                    {
+                        "URL":  "https://api.crossref.org/works/10.1007%2FBF02289451",
+                        "what_verified":  "Live Crossref API retrieved with Invoke-RestMethod on 2026-11-01: author, title, year/month, journal, volume, issue, pages and DOI."
+                    },
+                    {
+                        "URL":  "https://www.cambridge.org/core/journals/psychometrika/article/abs/generalized-solution-of-the-orthogonal-procrustes-problem/AF9BDA5A7C7771F1ECE5632862068F27",
+                        "what_verified":  "Live publisher abstract and bibliographic record: classical orthogonal least-squares problem; author, title, original March 1966 issue, volume 31(1), pages 1–10 and DOI. Full text was not read."
+                    }
+                ],
+    "uses":  [
+                 {
+                     "file":  "sections/related-work.tex",
+                     "line":  21,
+                     "verdict":  "SUPPORTS",
+                     "reason":  "The publisher abstract explicitly describes minimizing the squared residual for AT = B + E under an orthogonality constraint. This supports the stated classical least-squares alignment attribution. The citation is not used to claim that this source establishes ARC2 tangent corrections or a particular rectangular implementation."
+                 }
+             ],
+    "action":  "KEEP",
+    "fix_if_needed":  null,
+    "confidence":  "high for existence, metadata and the narrow classical attribution; full text not inspected",
+    "review_status":  "same-family/provisional"
+}

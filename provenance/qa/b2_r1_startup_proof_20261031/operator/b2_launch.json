@@ -1,0 +1,22 @@
+{
+  "status": "LAUNCHED",
+  "utc": "2026-10-31T06:49:00.051381+00:00",
+  "name": "r1_20261031t064859",
+  "pid": 252862,
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "repo": "/home/jovyan/arc2_b2_20261031/code_26feef1",
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "argv": [
+    "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+    "-u",
+    "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b2_campaign.py",
+    "--lock",
+    "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+    "--code-commit",
+    "26feef1026bea610ec7f53d581c3c9064949d004",
+    "--name",
+    "r1_20261031t064859"
+  ],
+  "manuscript_updates": false,
+  "qrels_opened": false
+}

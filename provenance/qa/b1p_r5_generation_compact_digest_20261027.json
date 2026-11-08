@@ -1,0 +1,10 @@
+{
+  "status": "GENERATION_COMPACT_EXPORT_READY",
+  "remote": "/root/arc2_global_paper_20261025/b1p_r5_generation_compact_20261027.tar.gz",
+  "bytes": 19905816,
+  "sha256": "3d2a62f89e4291e6bfdd4b5d26707cd7ffdbc715d5d2730be07b5cb5a3876ea9",
+  "inventoried_files": 759,
+  "ranking_count": 124,
+  "total_raw_bytes": 25539871372,
+  "captured_utc": "2026-10-27T03:14:32.960427+00:00"
+}

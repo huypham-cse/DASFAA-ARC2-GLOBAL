@@ -1,0 +1,10 @@
+{
+  "status": "OPAQUE_RELOCATION_FIXTURE_PASS",
+  "copy_hash_filemode_mtime": "PASS",
+  "preserved_original_tree": "PASS",
+  "root_symlink_rglob": "PASS",
+  "nested_symlink_rejection": "PASS",
+  "process_signals": false,
+  "scientific_data_opened": false,
+  "operator_sha256": "d51ec101b256cdb79bc4e69452ffdef50729b73b6b16122e50a29e64bea200d3"
+}

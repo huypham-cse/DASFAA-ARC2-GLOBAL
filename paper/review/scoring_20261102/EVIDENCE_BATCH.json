@@ -1,0 +1,52 @@
+[
+  {
+    "id": "dev_sample_ndcg10",
+    "value": "0.4888067441388958",
+    "source": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json"
+  },
+  {
+    "id": "dev_sample_recall100",
+    "value": "0.97",
+    "source": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json"
+  },
+  {
+    "id": "trec_sample_ndcg10",
+    "value": "0.4619132237639601",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  },
+  {
+    "id": "trec_sample_recall100",
+    "value": "0.08963088480259038",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  },
+  {
+    "id": "paid_sample_ndcg10",
+    "value": "0.3075048582716371",
+    "source": "results/b1p_r5_review_20261027/scoring/results_summary.json"
+  },
+  {
+    "id": "paid_sample_recall100",
+    "value": "0.6765693384393384",
+    "source": "results/b1p_r5_review_20261027/scoring/results_summary.json"
+  },
+  {
+    "id": "dev_procrustes_gain",
+    "value": "0.024325109040435233",
+    "source": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json"
+  },
+  {
+    "id": "second_step_gain",
+    "value": "0.006923862939737235",
+    "source": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json"
+  },
+  {
+    "id": "paid_minilm_gain",
+    "value": "0.05964116316462802",
+    "source": "results/b1p_r5_review_20261027/scoring/results_summary.json"
+  },
+  {
+    "id": "trec_e5_converter25_gain",
+    "value": "0.25723359077319435",
+    "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json"
+  }
+]

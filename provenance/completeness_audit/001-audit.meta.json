@@ -1,0 +1,16 @@
+{
+  "audit_scope": "releaseclaim surfaces r1; not manuscript",
+  "reviewer": "/root/release_zero_context_audit",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "context": "none/fresh",
+  "final_semantic_verdict": "REVIEW_UNAVAILABLE",
+  "cause": "account usage limit",
+  "recorded_at": "2026-11-01T02:57:30.449870+00:00",
+  "raw_numeric_artifacts_written_before_interruption": [
+    "verify_control_families.py",
+    "numeric_verification.json",
+    "numeric_input_hashes.json"
+  ],
+  "root_R2_extensions": "G660rawranking export, exactint32/int64arrayparity, fullI64rescore, 1340identity/hash census; stored in portable tools andchecks, not falsely attributed to the interrupted reviewer."
+}

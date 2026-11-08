@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-26T17:37:09.559420+07:00",
+  "full_metadata": {
+    "status": "RUNNING",
+    "stage": "full",
+    "code_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+    "lock_sha256": "b6300820b3caf0395911bd19155cd9a7e4cea39283ca1e6438bf42a3f0f0ac06",
+    "started_utc": "2026-10-26T09:42:51.955394+00:00",
+    "failures": [],
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null,
+    "new_current_dev_qrel_sources_opened": 1,
+    "transported_qrel_free_files_verified": 266,
+    "prior_dev_label_transport": {
+      "intent": {
+        "protocol": "protocols/B1P_R3_H100_MINI_DEPLOYMENT_20261026.md",
+        "pre_run_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+        "before_source_hash_stat_or_byte_read": "2026-10-26T09:12:12.274143+00:00",
+        "source_host": "103.73.232.225",
+        "destination_host": "103.73.232.201",
+        "source": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "expected_sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+        "purpose": "opaque transport of previously inspected FiQA DEV TSV; no parsing/metrics; worker API excludes qrels",
+        "judgments_parsed": false,
+        "metrics_computed": false,
+        "TREC_access": false
+      },
+      "verified": {
+        "status": "DEV_LABEL_TRANSPORT_VERIFIED",
+        "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+        "bytes": 18327,
+        "intent_sha256": "29cc5b9b5494029c7331200852201421b954680ebe0020e84a255b43a7920cad",
+        "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "judgments_parsed": false,
+        "metrics_computed": false,
+        "verified_utc": "2026-10-26T09:16:55.856407+00:00"
+      },
+      "scope": "opaque prior DEV transport; first scorer parse follows verified124-cell seal"
+    },
+    "ranking_process_qrel_reads": 0,
+    "qrels_opened": true
+  },
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 51,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "ranking_files": 51,
+  "scoring_started": false,
+  "sealed": false,
+  "workers": [
+    {
+      "name": "minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec",
+      "status": "RUNNING",
+      "failures": [],
+      "selected_iteration": null,
+      "selection_last": {
+        "cuda_reserved_bytes": 931135488,
+        "elapsed_seconds": 3175.6992579698563,
+        "global": 0.048366859555244446,
+        "gradient_nonzero": true,
+        "gradient_norm": 0.00397830456495285,
+        "gradients_finite": true,
+        "local": 0.10418335348367691,
+        "loss": 0.039268676191568375,
+        "observed_rss_bytes": 2126327808,
+        "own_cuda_allocated_bytes": 744842240,
+        "parameters_finite": true,
+        "regression": 0.02401365339756012,
+        "step": 18250,
+        "validation_mae": 0.023653049021959305
+      },
+      "process": {
+        "status": "RUNNING",
+        "started_utc": "2026-10-26T09:43:35.360633+00:00",
+        "request_sha256": "125627957cf27f23aef145c0ea0b659c44e6db93d6d7a98c175c72e185841c01",
+        "argv": [
+          "/root/paper-P2/.venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/ops/b1p_neural_worker.py",
+          "--request",
+          "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/request.json"
+        ],
+        "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+        "pid": 18841
+      },
+      "pid_alive": true,
+      "last_resource": {
+        "unix": 1793011029.3575768,
+        "pid": 18841,
+        "process_rss_bytes": 2126344192,
+        "host_available_memory_bytes": 2094843097088,
+        "host_cpu_percent": 11.0,
+        "own_cuda_allocated_bytes": 744843776,
+        "own_cuda_reserved_bytes": 931135488,
+        "own_peak_cuda_allocated_bytes": 862822400,
+        "own_peak_cuda_reserved_bytes": 931135488
+      },
+      "resource_age_seconds": 0.29361581802368164,
+      "checkpoints": [
+        {
+          "name": "selection_resume.pt",
+          "bytes": 542865240,
+          "modified_unix": 1793010396.7562234
+        }
+      ]
+    }
+  ]
+}

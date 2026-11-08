@@ -1,0 +1,59 @@
+{
+  "status": "R2_COMPLETENESS_AND_NUMERICAL_AUDIT_COMPLETE",
+  "created_utc": "2026-11-01T03:09:53.713536+00:00",
+  "release_root": "D:\\DASFAA-2027-paper-release",
+  "archive": {
+    "status": "ARCHIVE_CONTENTS_VERIFIED",
+    "archive": "D:\\DASFAA-2027-paper-release-20261101-r2-complete.zip",
+    "bytes": 371845465,
+    "sha256": "0de0dbac7f886f0da1524abad445e6883a4259c252c8ef61b788248433550344",
+    "manifest_sha256": "1c3fbabafa9a00f66703528160ca68ab5c4e9475027db440bd919b1cd8c7f4fd",
+    "manifested_files_verified_inside_archive": 6247,
+    "archive_file_count": 6379,
+    "created_utc": "2026-11-01T03:08:23.939986+00:00"
+  },
+  "validation": {
+    "status": "NUMERICAL_AND_COMPLETENESS_PASS_FOR_SUPERVISOR_FACT_CHECK",
+    "release_revision": "supervisor-review-20261101-r2-completeness",
+    "created_utc": "2026-11-01T03:05:02.228632+00:00",
+    "manifest_sha256": "1c3fbabafa9a00f66703528160ca68ab5c4e9475027db440bd919b1cd8c7f4fd",
+    "main_full_verification": "checks/portable_verification_full_20261101T030222625112Z.json",
+    "all_controls_verification": "checks/control_families_20261101T025930544495Z.json",
+    "inventory_verification": "checks/experiment_inventory_20261101T025232696498Z.json",
+    "source_copy_audit": "checks/nonG_source_copy_audit.json",
+    "new_figures_visual_QA": "checks/control_figures_visual_qa.json",
+    "unique_quality_cells": 1340,
+    "G_raw_pure": 210,
+    "G_raw_mixed": 450,
+    "all_imported_historical_raw_rankings": 64,
+    "displaced_historical_version_records": 38,
+    "nonG_source_result_files_verified": 4777,
+    "metric_values_compared_with_duplicates_across_studies": 1020800,
+    "numerical_change_to_original_results": false,
+    "old_r1_archive_preserved": true,
+    "new_scientific_experiment_or_fit": false,
+    "manuscript_modified": false,
+    "fresh_semantic_review_status": "REVIEW_UNAVAILABLE: account usage limit interrupted final verdict. Not PASS; existing B2 completed partial verdict unchanged.",
+    "unrun_scope": [
+      "B3/B4 physicalmigration/traffic",
+      "freshmodel encoding/fit/vectorsearch reproduction"
+    ],
+    "earlier_R1_validation": "checks/packaging_attempts/FINAL_REVIEW_VALIDATION_r1.json",
+    "final_hashes_receipt": "checks/portable_verification_hashes_20261101T030651004233Z.json",
+    "metadata_only_change_after_full_check": "Added final R2 packaging code commit to PACKAGE_SCOPE; all scientific summaries, sources, raw rankings and verifier bytes unchanged; final all-file hash audit PASS."
+  },
+  "source_audit_outputs": [
+    ".aris/traces/research-review/2026-11-01_release_completeness/experiment_inventory.json",
+    ".aris/traces/research-review/2026-11-01_release_completeness/results_depth.json"
+  ],
+  "source_nonG_files_preserved": 4777,
+  "historical_imported_rankings_preserved": 64,
+  "missing_active_logical_keys": 0,
+  "unique_quality_keys": 1340,
+  "G_diagnostic_raw_records": 660,
+  "paper_figures_main_plus_new_controls": 9,
+  "semantic_review": "REVIEW_UNAVAILABLE; quota interrupted fresh reviewer. No fabricated final reviewer verdict. Earlier completed B2partialverdict unchanged.",
+  "r1_archive_preserved": true,
+  "manuscript_unchanged_files": 20,
+  "new_scientific_experiment_or_retuning": false
+}

@@ -1,0 +1,299 @@
+{
+  "checked_at": "2026-10-26T15:39:24.284173+07:00",
+  "run_metadata": {
+    "status": "FAILED_PRESERVED",
+    "stage": "full",
+    "code_commit": "f1457b8ee9f51d14330f04a14ec0f75d040b08c2",
+    "lock_sha256": "6b5cd7166d2674d80de3778bac9008e5ee54127370440e9b3c3cf5e8887969ee",
+    "started_utc": "2026-10-26T01:25:06.700875+00:00",
+    "failures": [
+      "RuntimeError('Neural worker failed: /root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec')"
+    ],
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null,
+    "new_current_dev_qrel_sources_opened": 0,
+    "runtime": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "sklearn": "1.5.1",
+      "python": "/root/arc2_p3h_20261020/venv/bin/python",
+      "environment": {
+        "OPENBLAS_CORETYPE": "Haswell",
+        "OMP_NUM_THREADS": "4",
+        "OPENBLAS_NUM_THREADS": "4"
+      },
+      "blas": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+          "version": "0.3.31.188.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libgomp",
+          "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+          "version": "0.3.30",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "verified_openblas_architecture_threads": true
+    },
+    "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_f1457b8_r1/ops/b1p_stage.py\", line 175, in main\n    full(lock,a.code_commit,out,meta)\n  File \"/root/arc2_global_paper_20261025/code_f1457b8_r1/ops/b1p_stage.py\", line 142, in full\n    if method in [SIMPLE,CONVERTER]:proxy,receipt=neural(lock,commit,out,pair,seed,regime,method,oldpath,old,fit,target,'full')\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_f1457b8_r1/ops/b1p_stage.py\", line 74, in neural\n    if p.returncode:raise RuntimeError('Neural worker failed: '+str(request_dir))\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Neural worker failed: /root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec\n",
+    "wall_seconds": 3983.448884223588,
+    "peak_process_tree_rss_bytes": 5783756800,
+    "ended_utc": "2026-10-26T02:31:30.149318+00:00"
+  },
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 51,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "schedule": {
+    "status": "FAILED_PRESERVED",
+    "code_commit": "f1457b8ee9f51d14330f04a14ec0f75d040b08c2",
+    "jobs": [
+      {
+        "stage": "smoke",
+        "argv": [
+          "/root/arc2_p3h_20261020/venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_f1457b8_r1/ops/b1p_stage.py",
+          "--stage",
+          "smoke",
+          "--output",
+          "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_smoke_r1_20261026",
+          "--code-commit",
+          "f1457b8ee9f51d14330f04a14ec0f75d040b08c2"
+        ],
+        "started_unix": 1792977840.463407,
+        "exit_code": 0,
+        "ended_unix": 1792977906.51828
+      },
+      {
+        "stage": "full",
+        "argv": [
+          "/root/arc2_p3h_20261020/venv/bin/python",
+          "-u",
+          "/root/arc2_global_paper_20261025/code_f1457b8_r1/ops/b1p_stage.py",
+          "--stage",
+          "full",
+          "--output",
+          "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026",
+          "--code-commit",
+          "f1457b8ee9f51d14330f04a14ec0f75d040b08c2",
+          "--smoke",
+          "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_smoke_r1_20261026"
+        ],
+        "started_unix": 1792977906.51861,
+        "exit_code": 1,
+        "ended_unix": 1792981890.281575
+      }
+    ],
+    "next_item_auto_launch": false
+  },
+  "worker_metadata": {
+    "status": "RUNNING",
+    "method": "embedding_converter",
+    "regime": "all_paid",
+    "mode": "full",
+    "seed": 17,
+    "failures": [],
+    "started_utc": "2026-10-26T01:26:12.160783+00:00",
+    "request_sha256": "582229bf76f32eb4ab9cc7c09b9d6d149e8e33b5075057ea23818fb293026c85",
+    "new_qrel_reads": 0,
+    "unpaid_target_reads": 0,
+    "artificial_time_or_memory_caps": null,
+    "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+    "executable": "/root/paper-P2/.venv/bin/python",
+    "platform": "Linux-5.15.0-157-generic-x86_64-with-glibc2.35",
+    "host": "nb-3c26f892-ce03-467f-b7b0-8915efdf251c-8677f467bc-bqjpp",
+    "lock_sha256": "6b5cd7166d2674d80de3778bac9008e5ee54127370440e9b3c3cf5e8887969ee",
+    "code_commit": "f1457b8ee9f51d14330f04a14ec0f75d040b08c2",
+    "source_sha256_canonical_lf": {
+      "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+      "src/arc2_global/embedding_converter.py": "1434ad8541fb6c80abbfd3b1365aa4e108f84f68c4b61fc53b9feec23c553143",
+      "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+      "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+      "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+      "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+      "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+      "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+      "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+      "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+      "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+      "ops/b1p_stage.py": "76523d3b24f6d78b52b3935fb4ea9d96a368bf865664de0dd2baa6721ecd8aa6",
+      "ops/b1p_campaign.py": "d89c0086c5484b85751a7420defe9db0c6bb2c9f8fa3f9c2895be6ddc8c337b3",
+      "ops/b1p_neural_worker.py": "624442b7c7911fc010ceb7920f6cce193fbd33440352c3b835b306d74a2d907f",
+      "ops/b1p_score.py": "0d0561aa1a8072d2c98a26aeb8a43db477bb02f0270ca20a62bb94a3614f2790",
+      "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+      "configs/baselines.json": "1bd95fc1dfdea6fd459c825f85c44aeb86d7c1a05cbdb56a5a15f8f9a9a3d4a3",
+      "protocols/B1P_ALL_PAID_FIQA_20261026.md": "27e6f52a46ccf2fd53b409805192b64e7a35adced1e42b0c79a6cb9b3397fbbb",
+      "protocols/B1P_R1_DENSE_REFERENCE_NEIGHBORS_20261026.md": "c27f4f50822142c5cb6a0a4a10e31ad5a01a7e846bd92c2e53c76d1d636ba62f"
+    },
+    "environment": {
+      "OPENBLAS_CORETYPE": "Haswell",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "modules": {
+      "numpy": {
+        "version": "2.2.6",
+        "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/numpy/__init__.py"
+      },
+      "scipy": {
+        "version": "1.15.3",
+        "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/scipy/__init__.py"
+      },
+      "torch": {
+        "version": "2.6.0+cu124",
+        "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/torch/__init__.py"
+      },
+      "sklearn": {
+        "version": "1.6.1",
+        "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/sklearn/__init__.py"
+      },
+      "pydantic": {
+        "version": "2.14.1",
+        "file": "/root/miniforge3/envs/sandboxdp/lib/python3.11/site-packages/pydantic/__init__.py"
+      },
+      "faiss": {
+        "version": "1.15.1",
+        "file": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/faiss/__init__.py"
+      },
+      "loguru": {
+        "version": "0.7.3",
+        "file": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/loguru/__init__.py"
+      },
+      "tqdm": {
+        "version": "4.70.1",
+        "file": "/root/paper-P2/.venv/lib/python3.11/site-packages/tqdm/__init__.py"
+      }
+    },
+    "cuda_runtime": "12.4",
+    "device": "NVIDIA H100 80GB HBM3",
+    "numpy_build": "{'Compilers': {'c': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.1.0', 'commands': 'cython'}, 'c++': {'name': 'gcc', 'linker': 'ld.bfd', 'version': '10.2.1', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}, 'build': {'cpu': 'x86_64', 'family': 'x86_64', 'endian': 'little', 'system': 'linux'}}, 'Build Dependencies': {'blas': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}, 'lapack': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.29', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.11.10/lib/python3.11/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}}, 'Python Information': {'path': '/tmp/build-env-nx8g0bo7/bin/python', 'version': '3.11'}, 'SIMD Extensions': {'baseline': ['SSE', 'SSE2', 'SSE3'], 'found': ['SSSE3', 'SSE41', 'POPCNT', 'SSE42', 'AVX', 'F16C', 'FMA3', 'AVX2', 'AVX512F', 'AVX512CD', 'AVX512_SKX', 'AVX512_CLX', 'AVX512_CNL', 'AVX512_ICL'], 'not found': ['AVX512_KNL', 'AVX512_KNM']}}",
+    "inputs": {
+      "paired_source": {
+        "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/paired_source.npy",
+        "sha256": "bf8755737ad5949958a15fe59bf57dfe0b2286c0e4e65e5a643e0441a1f7bd99",
+        "shape": [
+          28819,
+          384
+        ],
+        "dtype": "float32"
+      },
+      "paired_target": {
+        "path": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/paired_target.npy",
+        "sha256": "f275495cb3a472b6196bdd744cfc6d497b68d976b7663a9fa9179dad6f9c2b91",
+        "shape": [
+          28819,
+          768
+        ],
+        "dtype": "float32"
+      },
+      "full_source": {
+        "path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy",
+        "sha256": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782",
+        "shape": [
+          57638,
+          384
+        ],
+        "dtype": "float32"
+      }
+    },
+    "fit_pairs": 28819,
+    "target_population": "supplied paired rows only; no unpaid target or qrels API",
+    "train_count": 25217,
+    "validation_count": 3602,
+    "config": {
+      "hidden_multiplier": 5,
+      "iterations": 50000,
+      "batch_size": 64,
+      "local_k": 100,
+      "local_samples_per_center": 1,
+      "alpha": 0.1,
+      "beta": 0.1,
+      "learning_rate": 0.001,
+      "adam_betas": [
+        0.9,
+        0.999
+      ],
+      "adam_epsilon": 1e-08,
+      "report_every": 250,
+      "transform_batch_size": 256,
+      "threads": 4,
+      "device": "cuda"
+    },
+    "validation_policy": "default_rng(seed+20261025); first floor(N/8) validation; rest training; earliest minimum MAE at 250-step checkpoints",
+    "refit_policy": "fresh model and Adam; same seed; selected_iteration updates; every supplied paired row",
+    "independent_paper_spec_adaptation": true
+  },
+  "phase_last": {
+    "selection": {
+      "cuda_reserved_bytes": 931135488,
+      "elapsed_seconds": 2084.226920252666,
+      "global": 0.0387386754155159,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.003392263548448682,
+      "gradients_finite": true,
+      "local": 0.04646085202693939,
+      "loss": 0.02572660520672798,
+      "observed_rss_bytes": 2162872320,
+      "own_cuda_allocated_bytes": 744842240,
+      "parameters_finite": true,
+      "regression": 0.017206652089953423,
+      "step": 50000,
+      "validation_mae": 0.021350141614675522
+    },
+    "refit": {
+      "cuda_reserved_bytes": 931135488,
+      "elapsed_seconds": 1829.4207796202973,
+      "global": 0.037232231348752975,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.00329399760812521,
+      "gradients_finite": true,
+      "local": 0.06490659713745117,
+      "loss": 0.02943231165409088,
+      "observed_rss_bytes": 1893572608,
+      "own_cuda_allocated_bytes": 744255488,
+      "parameters_finite": true,
+      "regression": 0.019218429923057556,
+      "step": 43750
+    }
+  },
+  "diagnostics": {
+    "/sys/fs/cgroup/memory.events": "low 0\nhigh 0\nmax 2788294\noom 0\noom_kill 0\n",
+    "/sys/fs/cgroup/memory.max": "268435456000\n",
+    "dmesg": {
+      "returncode": 1,
+      "stderr": "dmesg: read kernel buffer failed: Operation not permitted\n",
+      "tail": ""
+    },
+    "gpu": "41 %, 52058 MiB, 81559 MiB\n",
+    "tmux_exists": false
+  },
+  "interpretation": "Full parent FAILED_PRESERVED; worker RUNNING metadata is stale. No B1-P scoring. Parent did not persist child return code; abrupt child termination cause is not established."
+}

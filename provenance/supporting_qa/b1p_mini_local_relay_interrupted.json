@@ -1,0 +1,7 @@
+{
+  "status": "OPERATOR_INTERRUPTED_PRESERVED",
+  "reason": "Laptop-mediated throughput about0.5MB/s; switch to direct SSH transport",
+  "last_logged_bytes": 104857600,
+  "training_affected": false,
+  "partial_destination_files_preserved": true
+}

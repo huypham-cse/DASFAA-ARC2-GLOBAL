@@ -1,0 +1,27 @@
+\section{Introduction}
+\label{sec:introduction}
+Embedding-model upgrades create a mismatch between destination-model queries and legacy document vectors. We study transitions where destination-space queries are required while document encoding proceeds gradually. A staged solution learns from paired source and destination embeddings, maps the remaining document vectors, and replaces those proxies as true destination vectors become available. The data-management question is the quality of the index at intermediate migration budgets.
+
+The intermediate index must rank true destination embeddings and mapped proxies together. A mapper that works well on a proxy-only gallery can change behavior after true vectors are inserted. Cosine retrieval also depends on direction, whereas coordinate regression spends capacity on radial errors that disappear after normalization. This motivates a directional document adapter that preserves compact inference and searches with the native destination query.
+
+Document-side conversion and query-side adaptation already provide routes across embedding spaces~\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map.
+
+\method\ applies two tangent corrections to a centered rectangular Procrustes map. For each paired document, it projects destination error onto the tangent plane at the predicted direction, rescales it to the raw prediction, and fits an affine ridge update. Repeating this operation twice yields coefficients that collapse into one affine map followed by normalization. Native destination queries then search true and proxy vectors together, with each newly encoded document replacing its proxy under the same identifier (Fig.~\ref{fig:mechanism}).
+
+On four development collections, the fixed 1,024-pair adapter improves macro \ndcg\ over five baseline configurations across two encoder migrations and 25\%, 50\% and 75\% destination coverage. The Procrustes gain is 0.0243; the second correction contributes 0.0069 beyond one step. Matched all-paid fitting supplies an additional MiniLM operating point. A prospective TREC-COVID evaluation confirms gains over selected neural and regression configurations, including E5 improvements at every budget against Converter and ridge.
+
+\noindent\begin{minipage}{\linewidth}
+Our contributions are:
+\begin{itemize}
+  \item \textbf{Directional refinement with affine inference.} Two tangent-residual ridge updates improve normalized alignment while retaining a single compact document map and native destination queries.
+  \item \textbf{Strong quality at matched fitting exposure.} Across two migrations and three paid-document budgets, the four-collection development macro favors \method\ over all five evaluated alternatives. Ablations quantify the value of the second update, and all-paid fitting tests the method beyond fixed-anchor supervision.
+  \item \textbf{Prospective transfer and practical migration insight.} A held-collection evaluation confirms E5 gains over Converter and affine ridge at every tested budget. Paired gallery diagnostics identify when true-vector replacement changes the ranking benefit of a fitted adapter.
+\end{itemize}
+\end{minipage}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{mechanism.pdf}
+\caption{A worked \method\ migration. Paired document vectors train centered Procrustes and two tangent corrections, yielding one affine adapter. Unencoded documents remain searchable through proxies; backfill replaces them with native vectors in the same gallery. The 24-document corpus, eight anchors, four additional encodings and displayed hits are illustrative, not measured retrieval results.}
+\label{fig:mechanism}
+\end{figure}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-01",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "round": 1,
+  "skills": ["aris:research-review", "aris:ablation-planner", "aris:novelty-check", "formula-derivation"],
+  "scores_1_to_10": {"novelty": 6, "technical_soundness": 8, "mechanism_evidence": 6, "practical_significance_within_scope": 7},
+  "recommendation": "PROCEED WITH CAUTION",
+  "reason": "Exact finite tangent-ridge document adapter has a defensible delta; tangent causality is not isolated and prospective superiority does not extend to Procrustes or LA2M.",
+  "code_equation_match": true,
+  "new_scientific_runs": false,
+  "manuscript_written": false,
+  "derivation_status": "COHERENT AS STATED",
+  "checked_identities": [
+    "T_j = -r_j^2 grad_z (1-cos(z_j,y_j))",
+    "B_next uniquely minimizes ||H C-(H B+T)||^2+lambda||C-B||^2",
+    "A radial-inclusive residual update equals direct_ridge + lambda G_inverse B; not an evaluated comparison",
+    "T(cB)=cT(B), F(cB)=cF(B) for common c>0, nonzero predictions, exact arithmetic"
+  ],
+  "boundaries": ["No finite-step descent or convergence guarantee", "Fitted row corrections need not be tangent", "No pure tangent causal attribution", "Scale equivariance does not imply arbitrary finite-precision parity", "Unresolved contrasts do not establish equivalence"],
+  "coverage": [
+    {"question": "zero versus two steps", "status": "supported", "delta_ndcg": 0.024325109040435233},
+    {"question": "one versus two steps", "status": "supported", "delta_ndcg": 0.006923862939737235, "saved_family_interval": [0.003809388309482942, 0.009959126205904258]},
+    {"question": "lambda 1/10/100", "status": "supported", "scope": "local sensitivity only"},
+    {"question": "complete procedure versus direct ridge", "status": "supported", "delta_ndcg": 0.09565304927282199},
+    {"question": "tangent versus radial residual with same retained prior", "status": "not_isolated"},
+    {"question": "initialization necessity", "status": "not_isolated"},
+    {"question": "norm multiplier empirical necessity", "status": "not_isolated"},
+    {"question": "all paid fitting fairness", "status": "supported", "scope": "FiQA 50 percent, two migrations; development"},
+    {"question": "actual mixed gallery replacement effect", "status": "supported", "scope": "descriptive development interventions with fixed maps"},
+    {"question": "prospective transfer", "status": "supported", "scope": "11 baseline contrasts; no supported Procrustes or LA2M superiority"},
+    {"question": "deployment latency and encoding savings", "status": "optional_future"}
+  ],
+  "minimum_edits": ["Explain norm-squared cosine gradient and current-map prior", "Clarify ridge contrast does not isolate tangent projection", "State required destination-query single-gallery operating scenario early", "Keep positive all-paid MiniLM point with ridge unresolved and E5 reversal", "Scope novelty against H-MoE, SLERP and FastFill"],
+  "required_new_experiments_for_current_scoped_claims": [],
+  "optional_next_experiment_if_pure_tangent_claim_is_added": "Prior-matched radial-inclusive residual control under a new immutable protocol",
+  "storage": {"coefficients": 295680, "float32_bytes": 1182720, "rounded_MiB": 1.13, "converter_parameter_ratio_rounded": 114.7, "ratio_scope": "parameter bytes only"},
+  "report": "METHOD_ABLATION_R1.md"
+}

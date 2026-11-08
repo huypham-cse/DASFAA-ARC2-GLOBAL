@@ -1,0 +1,73 @@
+{
+  "status": "PASS_LOCAL_SYNTHETIC_ONLY",
+  "checks": {
+    "exact_ties_stable_original_order": true,
+    "identical_id_exclusion": true,
+    "serialization": "PASS",
+    "paired_target_guard": "PASS",
+    "scorer_synthetic": {
+      "status": "PASS",
+      "graded_ndcg": 0.7002755876478819,
+      "full_qrel_denominator_recall": 0.6666666666666666,
+      "zero_and_unjudged_queries": "zero",
+      "serialized_order": "unchanged",
+      "implicit_binary_parser": {
+        "status": "PASS",
+        "ndcg10": 0.38685280723454163,
+        "recall100": 0.5,
+        "unlisted_pairs": 0,
+        "requires_explicit_parquet_opt_in": true
+      }
+    },
+    "b1c_scorer_synthetic": {
+      "status": "PASS",
+      "metric_checks": {
+        "status": "PASS",
+        "graded_ndcg": 0.7002755876478819,
+        "full_qrel_denominator_recall": 0.6666666666666666,
+        "zero_and_unjudged_queries": "zero",
+        "serialized_order": "unchanged",
+        "implicit_binary_parser": {
+          "status": "PASS",
+          "ndcg10": 0.38685280723454163,
+          "recall100": 0.5,
+          "unlisted_pairs": 0,
+          "requires_explicit_parquet_opt_in": true
+        }
+      },
+      "matrix_missing_duplicate_checks": "PASS",
+      "shared_query_bootstrap_vs_direct_indices": "PASS",
+      "ranking_tamper_rejection": "PASS",
+      "generated_artifact_tamper_rejection": "PASS",
+      "real_labels_accessed": false
+    },
+    "expected_failed_children": [
+      {
+        "status": "EXITED",
+        "started_utc": "2026-10-28T03:04:06.890216+00:00",
+        "request_sha256": null,
+        "argv": [
+          "C:\\Users\\Gia Huy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-c",
+          "raise SystemExit(7)"
+        ],
+        "cgroup_memory_events_before": null,
+        "pid": 24816,
+        "returncode": 7,
+        "signal_number": null,
+        "signal_name": null,
+        "ended_utc": "2026-10-28T03:04:06.917806+00:00",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cgroup_memory_events_after": null
+      }
+    ]
+  },
+  "complete_matrix_expected": 736,
+  "existing_registry_cells": 416,
+  "missing_new_cells": 320,
+  "source_hashes_refreshed_before_commit": 34,
+  "H100_smoke": "PENDING",
+  "real_data_or_qrels_opened": false,
+  "actual_source_availability_gate": "transport and final565-source check pending"
+}

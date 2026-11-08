@@ -1,0 +1,1482 @@
+[
+  {
+    "dataset": "NanoNQ",
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.20094569120556116,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.07738033682107925,
+        "gram_seconds": 0.010696782730519772,
+        "factor_seconds": 0.009236169047653675,
+        "tangent_target1_seconds": 0.012653065845370293,
+        "solve_update1_seconds": 0.01793396007269621,
+        "tangent_target2_seconds": 0.013110162690281868,
+        "solve_update2_seconds": 0.01805244293063879
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.07910111825913191,
+        "gram_seconds": 0.010904285125434399,
+        "factor_seconds": 0.009302860125899315,
+        "tangent_target1_seconds": 0.022345413453876972,
+        "solve_update1_seconds": 0.01837954018265009,
+        "tangent_target2_seconds": 0.012931649573147297,
+        "solve_update2_seconds": 0.018375635147094727
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.07992813736200333,
+        "gram_seconds": 0.013423114083707333,
+        "factor_seconds": 0.009852508082985878,
+        "tangent_target1_seconds": 0.013509695418179035,
+        "solve_update1_seconds": 0.028532897122204304,
+        "tangent_target2_seconds": 0.01419675163924694,
+        "solve_update2_seconds": 0.019398195669054985
+      },
+      "ridge_fit_seconds": 0.015079016797244549
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.18509559985250235,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.060037581250071526,
+        "gram_seconds": 0.008847810328006744,
+        "factor_seconds": 0.008729899302124977,
+        "tangent_target1_seconds": 0.01418372243642807,
+        "solve_update1_seconds": 0.017491026781499386,
+        "tangent_target2_seconds": 0.011037972755730152,
+        "solve_update2_seconds": 0.033954767510294914
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.047223472967743874,
+        "gram_seconds": 0.00821312703192234,
+        "factor_seconds": 0.025047817267477512,
+        "tangent_target1_seconds": 0.012157854624092579,
+        "solve_update1_seconds": 0.018506646156311035,
+        "tangent_target2_seconds": 0.012659554369747639,
+        "solve_update2_seconds": 0.018611731939017773
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.06373167224228382,
+        "gram_seconds": 0.010379550978541374,
+        "factor_seconds": 0.00869821198284626,
+        "tangent_target1_seconds": 0.01417726743966341,
+        "solve_update1_seconds": 0.03390707075595856,
+        "tangent_target2_seconds": 0.012906788848340511,
+        "solve_update2_seconds": 0.018383126705884933
+      },
+      "ridge_fit_seconds": 0.013759258203208447
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.15155835915356874,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04800533875823021,
+        "gram_seconds": 0.00923431571573019,
+        "factor_seconds": 0.008847824297845364,
+        "tangent_target1_seconds": 0.012604855000972748,
+        "solve_update1_seconds": 0.017763187177479267,
+        "tangent_target2_seconds": 0.011055013164877892,
+        "solve_update2_seconds": 0.017481183633208275
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.053675638511776924,
+        "gram_seconds": 0.00883227027952671,
+        "factor_seconds": 0.008705242536962032,
+        "tangent_target1_seconds": 0.011804230511188507,
+        "solve_update1_seconds": 0.017659728415310383,
+        "tangent_target2_seconds": 0.019167030230164528,
+        "solve_update2_seconds": 0.01769419014453888
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04669988714158535,
+        "gram_seconds": 0.010460360907018185,
+        "factor_seconds": 0.008951426483690739,
+        "tangent_target1_seconds": 0.021463816054165363,
+        "solve_update1_seconds": 0.01856500469148159,
+        "tangent_target2_seconds": 0.012806744314730167,
+        "solve_update2_seconds": 0.018349017947912216
+      },
+      "ridge_fit_seconds": 0.013393787667155266
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.15640914160758257,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.05189473368227482,
+        "gram_seconds": 0.009675170294940472,
+        "factor_seconds": 0.009178698994219303,
+        "tangent_target1_seconds": 0.012171696871519089,
+        "solve_update1_seconds": 0.017374644055962563,
+        "tangent_target2_seconds": 0.0282913101837039,
+        "solve_update2_seconds": 0.01748557109385729
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.046504187397658825,
+        "gram_seconds": 0.008825032971799374,
+        "factor_seconds": 0.017326323315501213,
+        "tangent_target1_seconds": 0.011801211163401604,
+        "solve_update1_seconds": 0.01790533773601055,
+        "tangent_target2_seconds": 0.010765673592686653,
+        "solve_update2_seconds": 0.01764164585620165
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.055281996726989746,
+        "gram_seconds": 0.009953728877007961,
+        "factor_seconds": 0.00876078475266695,
+        "tangent_target1_seconds": 0.011559302918612957,
+        "solve_update1_seconds": 0.017781764268875122,
+        "tangent_target2_seconds": 0.013396255671977997,
+        "solve_update2_seconds": 0.030108309350907803
+      },
+      "ridge_fit_seconds": 0.013767541386187077
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.17739642225205898,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.07693205401301384,
+        "gram_seconds": 0.010386737994849682,
+        "factor_seconds": 0.009114747866988182,
+        "tangent_target1_seconds": 0.013926427811384201,
+        "solve_update1_seconds": 0.018558924086391926,
+        "tangent_target2_seconds": 0.011914307251572609,
+        "solve_update2_seconds": 0.025916271843016148
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.06718813441693783,
+        "gram_seconds": 0.010943087749183178,
+        "factor_seconds": 0.016849728301167488,
+        "tangent_target1_seconds": 0.01304218266159296,
+        "solve_update1_seconds": 0.018070703372359276,
+        "tangent_target2_seconds": 0.01210542768239975,
+        "solve_update2_seconds": 0.017794638872146606
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.07687481585890055,
+        "gram_seconds": 0.010103468783199787,
+        "factor_seconds": 0.008832019753754139,
+        "tangent_target1_seconds": 0.012308824807405472,
+        "solve_update1_seconds": 0.026569955050945282,
+        "tangent_target2_seconds": 0.013188833370804787,
+        "solve_update2_seconds": 0.018718210980296135
+      },
+      "ridge_fit_seconds": 0.01398476306349039
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "e5_small_base",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.18079973757266998,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.0739762606099248,
+        "gram_seconds": 0.009299594908952713,
+        "factor_seconds": 0.00958156492561102,
+        "tangent_target1_seconds": 0.012766114436089993,
+        "solve_update1_seconds": 0.026045127771794796,
+        "tangent_target2_seconds": 0.013471407815814018,
+        "solve_update2_seconds": 0.019198150373995304
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.07490189094096422,
+        "gram_seconds": 0.012111460790038109,
+        "factor_seconds": 0.009497912600636482,
+        "tangent_target1_seconds": 0.012598072178661823,
+        "solve_update1_seconds": 0.018741587176918983,
+        "tangent_target2_seconds": 0.012050330638885498,
+        "solve_update2_seconds": 0.03007469791918993
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.06827269122004509,
+        "gram_seconds": 0.010428761132061481,
+        "factor_seconds": 0.017390762455761433,
+        "tangent_target1_seconds": 0.013235325925052166,
+        "solve_update1_seconds": 0.018701542168855667,
+        "tangent_target2_seconds": 0.013109506107866764,
+        "solve_update2_seconds": 0.01808153372257948
+      },
+      "ridge_fit_seconds": 0.013116644695401192
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "e5_small_base",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.17639398854225874,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.07970298733562231,
+        "gram_seconds": 0.010097268968820572,
+        "factor_seconds": 0.009401100687682629,
+        "tangent_target1_seconds": 0.012980473227798939,
+        "solve_update1_seconds": 0.018299116753041744,
+        "tangent_target2_seconds": 0.012144291773438454,
+        "solve_update2_seconds": 0.01800179947167635
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.06740269158035517,
+        "gram_seconds": 0.009977921843528748,
+        "factor_seconds": 0.009400449693202972,
+        "tangent_target1_seconds": 0.020257932133972645,
+        "solve_update1_seconds": 0.01827014982700348,
+        "tangent_target2_seconds": 0.013362863101065159,
+        "solve_update2_seconds": 0.018453020602464676
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.08172072470188141,
+        "gram_seconds": 0.009767932817339897,
+        "factor_seconds": 0.009502816945314407,
+        "tangent_target1_seconds": 0.012871146202087402,
+        "solve_update1_seconds": 0.02644924260675907,
+        "tangent_target2_seconds": 0.013885661959648132,
+        "solve_update2_seconds": 0.01925574243068695
+      },
+      "ridge_fit_seconds": 0.013833991251885891
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "e5_small_base",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.1894399542361498,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.06869268976151943,
+        "gram_seconds": 0.02675118576735258,
+        "factor_seconds": 0.009658162482082844,
+        "tangent_target1_seconds": 0.012822061777114868,
+        "solve_update1_seconds": 0.018289756029844284,
+        "tangent_target2_seconds": 0.012403405271470547,
+        "solve_update2_seconds": 0.01791020669043064
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.07611049897968769,
+        "gram_seconds": 0.010769582353532314,
+        "factor_seconds": 0.008900577202439308,
+        "tangent_target1_seconds": 0.0205165296792984,
+        "solve_update1_seconds": 0.01833630632609129,
+        "tangent_target2_seconds": 0.012438902631402016,
+        "solve_update2_seconds": 0.01803247258067131
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.07733278535306454,
+        "gram_seconds": 0.011801778338849545,
+        "factor_seconds": 0.009346880950033665,
+        "tangent_target1_seconds": 0.012271001003682613,
+        "solve_update1_seconds": 0.02046625968068838,
+        "tangent_target2_seconds": 0.017579885199666023,
+        "solve_update2_seconds": 0.018481114879250526
+      },
+      "ridge_fit_seconds": 0.013450629077851772
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "e5_small_base",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.16432284470647573,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.07365082297474146,
+        "gram_seconds": 0.010400623083114624,
+        "factor_seconds": 0.009006889536976814,
+        "tangent_target1_seconds": 0.013182607479393482,
+        "solve_update1_seconds": 0.02612888254225254,
+        "tangent_target2_seconds": 0.012416861951351166,
+        "solve_update2_seconds": 0.018053460866212845
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.07569195237010717,
+        "gram_seconds": 0.010804089717566967,
+        "factor_seconds": 0.009106430225074291,
+        "tangent_target1_seconds": 0.012739505618810654,
+        "solve_update1_seconds": 0.018115718849003315,
+        "tangent_target2_seconds": 0.012615527957677841,
+        "solve_update2_seconds": 0.026279618963599205
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.0691237235441804,
+        "gram_seconds": 0.010240818373858929,
+        "factor_seconds": 0.017346011474728584,
+        "tangent_target1_seconds": 0.01309709157794714,
+        "solve_update1_seconds": 0.018746793270111084,
+        "tangent_target2_seconds": 0.012550336308777332,
+        "solve_update2_seconds": 0.01823331229388714
+      },
+      "ridge_fit_seconds": 0.013428996317088604
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoNQ",
+    "pair": "e5_small_base",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.19066078774631023,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.07254057936370373,
+        "gram_seconds": 0.011269215494394302,
+        "factor_seconds": 0.008940604515373707,
+        "tangent_target1_seconds": 0.011937011033296585,
+        "solve_update1_seconds": 0.018055487424135208,
+        "tangent_target2_seconds": 0.012546444311738014,
+        "solve_update2_seconds": 0.026007858105003834
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.06903068069368601,
+        "gram_seconds": 0.011150111444294453,
+        "factor_seconds": 0.017460152506828308,
+        "tangent_target1_seconds": 0.012528229504823685,
+        "solve_update1_seconds": 0.018257443793118,
+        "tangent_target2_seconds": 0.011908579617738724,
+        "solve_update2_seconds": 0.017941243946552277
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.0750579796731472,
+        "gram_seconds": 0.00899944081902504,
+        "factor_seconds": 0.008869410492479801,
+        "tangent_target1_seconds": 0.011859826743602753,
+        "solve_update1_seconds": 0.025719973258674145,
+        "tangent_target2_seconds": 0.011371221393346786,
+        "solve_update2_seconds": 0.017685567028820515
+      },
+      "ridge_fit_seconds": 0.013647869229316711
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.14607069548219442,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04650159366428852,
+        "gram_seconds": 0.011892654001712799,
+        "factor_seconds": 0.00895998626947403,
+        "tangent_target1_seconds": 0.012832549400627613,
+        "solve_update1_seconds": 0.017732353881001472,
+        "tangent_target2_seconds": 0.012206846848130226,
+        "solve_update2_seconds": 0.01786023285239935
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.054525887593626976,
+        "gram_seconds": 0.009409140795469284,
+        "factor_seconds": 0.00891862902790308,
+        "tangent_target1_seconds": 0.012302814982831478,
+        "solve_update1_seconds": 0.017350221052765846,
+        "tangent_target2_seconds": 0.01952620968222618,
+        "solve_update2_seconds": 0.01763553638011217
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04637041687965393,
+        "gram_seconds": 0.008433151058852673,
+        "factor_seconds": 0.008851476013660431,
+        "tangent_target1_seconds": 0.02008606307208538,
+        "solve_update1_seconds": 0.017788470722734928,
+        "tangent_target2_seconds": 0.012673069722950459,
+        "solve_update2_seconds": 0.018227717839181423
+      },
+      "ridge_fit_seconds": 0.013022143393754959
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.14775808807462454,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04827597737312317,
+        "gram_seconds": 0.009312967769801617,
+        "factor_seconds": 0.009055492468178272,
+        "tangent_target1_seconds": 0.013124998658895493,
+        "solve_update1_seconds": 0.017938640899956226,
+        "tangent_target2_seconds": 0.011586041189730167,
+        "solve_update2_seconds": 0.02543218620121479
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04610391426831484,
+        "gram_seconds": 0.008905823342502117,
+        "factor_seconds": 0.009103955700993538,
+        "tangent_target1_seconds": 0.012569598853588104,
+        "solve_update1_seconds": 0.02593243680894375,
+        "tangent_target2_seconds": 0.012901859357953072,
+        "solve_update2_seconds": 0.0187490526586771
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.045863907784223557,
+        "gram_seconds": 0.01752824056893587,
+        "factor_seconds": 0.008801142685115337,
+        "tangent_target1_seconds": 0.011887142434716225,
+        "solve_update1_seconds": 0.01796396542340517,
+        "tangent_target2_seconds": 0.012793338857591152,
+        "solve_update2_seconds": 0.01865069754421711
+      },
+      "ridge_fit_seconds": 0.012400716543197632
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.15542235039174557,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.050946674309670925,
+        "gram_seconds": 0.008982096798717976,
+        "factor_seconds": 0.00862986408174038,
+        "tangent_target1_seconds": 0.01189933717250824,
+        "solve_update1_seconds": 0.025654800236225128,
+        "tangent_target2_seconds": 0.011584226973354816,
+        "solve_update2_seconds": 0.017650571651756763
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04664500243961811,
+        "gram_seconds": 0.016648031771183014,
+        "factor_seconds": 0.00908735767006874,
+        "tangent_target1_seconds": 0.012443441897630692,
+        "solve_update1_seconds": 0.017906765453517437,
+        "tangent_target2_seconds": 0.012319846078753471,
+        "solve_update2_seconds": 0.017991289496421814
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05539053585380316,
+        "gram_seconds": 0.00907820276916027,
+        "factor_seconds": 0.009247694164514542,
+        "tangent_target1_seconds": 0.012611228972673416,
+        "solve_update1_seconds": 0.01767092477530241,
+        "tangent_target2_seconds": 0.011395093984901905,
+        "solve_update2_seconds": 0.025338081642985344
+      },
+      "ridge_fit_seconds": 0.012826550751924515
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.1539171887561679,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.05061200354248285,
+        "gram_seconds": 0.008186805993318558,
+        "factor_seconds": 0.008931531570851803,
+        "tangent_target1_seconds": 0.011011169292032719,
+        "solve_update1_seconds": 0.017357291653752327,
+        "tangent_target2_seconds": 0.011024219915270805,
+        "solve_update2_seconds": 0.01761008333414793
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05490654427558184,
+        "gram_seconds": 0.009403693489730358,
+        "factor_seconds": 0.009200526401400566,
+        "tangent_target1_seconds": 0.012882344424724579,
+        "solve_update1_seconds": 0.030909101478755474,
+        "tangent_target2_seconds": 0.012227647006511688,
+        "solve_update2_seconds": 0.017435213550925255
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.047960853204131126,
+        "gram_seconds": 0.02520481962710619,
+        "factor_seconds": 0.009148990735411644,
+        "tangent_target1_seconds": 0.013125265948474407,
+        "solve_update1_seconds": 0.01936574373394251,
+        "tangent_target2_seconds": 0.013674009591341019,
+        "solve_update2_seconds": 0.01820338238030672
+      },
+      "ridge_fit_seconds": 0.02459537610411644
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.17339449748396873,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.05054596159607172,
+        "gram_seconds": 0.009337260387837887,
+        "factor_seconds": 0.009005019441246986,
+        "tangent_target1_seconds": 0.013065746054053307,
+        "solve_update1_seconds": 0.017997117713093758,
+        "tangent_target2_seconds": 0.011056614108383656,
+        "solve_update2_seconds": 0.0331153254956007
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04639442544430494,
+        "gram_seconds": 0.008483117446303368,
+        "factor_seconds": 0.009075946174561977,
+        "tangent_target1_seconds": 0.012224974110722542,
+        "solve_update1_seconds": 0.027292720042169094,
+        "tangent_target2_seconds": 0.012302583083510399,
+        "solve_update2_seconds": 0.018431653268635273
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.046519030816853046,
+        "gram_seconds": 0.008796465583145618,
+        "factor_seconds": 0.009098240174353123,
+        "tangent_target1_seconds": 0.012359557673335075,
+        "solve_update1_seconds": 0.017900405451655388,
+        "tangent_target2_seconds": 0.01270589604973793,
+        "solve_update2_seconds": 0.018399217166006565
+      },
+      "ridge_fit_seconds": 0.021499736234545708
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "e5_small_base",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.1522018350660801,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.051147306337952614,
+        "gram_seconds": 0.009514257311820984,
+        "factor_seconds": 0.00893206987529993,
+        "tangent_target1_seconds": 0.011444108560681343,
+        "solve_update1_seconds": 0.01735926978290081,
+        "tangent_target2_seconds": 0.0201393011957407,
+        "solve_update2_seconds": 0.017576579935848713
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04621561337262392,
+        "gram_seconds": 0.008885519579052925,
+        "factor_seconds": 0.009095730260014534,
+        "tangent_target1_seconds": 0.020309538580477238,
+        "solve_update1_seconds": 0.018165746703743935,
+        "tangent_target2_seconds": 0.012441946193575859,
+        "solve_update2_seconds": 0.019186276011168957
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05656603164970875,
+        "gram_seconds": 0.00920366495847702,
+        "factor_seconds": 0.008878336288034916,
+        "tangent_target1_seconds": 0.012465824373066425,
+        "solve_update1_seconds": 0.017867140471935272,
+        "tangent_target2_seconds": 0.01239966880530119,
+        "solve_update2_seconds": 0.02572582382708788
+      },
+      "ridge_fit_seconds": 0.013630131259560585
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "e5_small_base",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.15035148616880178,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.046373097226023674,
+        "gram_seconds": 0.009426195174455643,
+        "factor_seconds": 0.009023012593388557,
+        "tangent_target1_seconds": 0.012268587946891785,
+        "solve_update1_seconds": 0.01825080346316099,
+        "tangent_target2_seconds": 0.010905834846198559,
+        "solve_update2_seconds": 0.017268642783164978
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05482004303485155,
+        "gram_seconds": 0.008952924981713295,
+        "factor_seconds": 0.009213742800056934,
+        "tangent_target1_seconds": 0.010853786952793598,
+        "solve_update1_seconds": 0.017654902301728725,
+        "tangent_target2_seconds": 0.02029284927994013,
+        "solve_update2_seconds": 0.01808694191277027
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.046740153804421425,
+        "gram_seconds": 0.00875172484666109,
+        "factor_seconds": 0.0089493403211236,
+        "tangent_target1_seconds": 0.02047418337315321,
+        "solve_update1_seconds": 0.01815592497587204,
+        "tangent_target2_seconds": 0.011967104859650135,
+        "solve_update2_seconds": 0.017853650264441967
+      },
+      "ridge_fit_seconds": 0.012935010716319084
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "e5_small_base",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.145852193236351,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04583320580422878,
+        "gram_seconds": 0.008670472539961338,
+        "factor_seconds": 0.009311912581324577,
+        "tangent_target1_seconds": 0.012581589631736279,
+        "solve_update1_seconds": 0.021355372853577137,
+        "tangent_target2_seconds": 0.01223748829215765,
+        "solve_update2_seconds": 0.018801726400852203
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.045897203497588634,
+        "gram_seconds": 0.012468419037759304,
+        "factor_seconds": 0.008980735205113888,
+        "tangent_target1_seconds": 0.011141673661768436,
+        "solve_update1_seconds": 0.017608284018933773,
+        "tangent_target2_seconds": 0.011585436761379242,
+        "solve_update2_seconds": 0.017427651211619377
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05445112194865942,
+        "gram_seconds": 0.008724363520741463,
+        "factor_seconds": 0.008707997389137745,
+        "tangent_target1_seconds": 0.012188280932605267,
+        "solve_update1_seconds": 0.017914502881467342,
+        "tangent_target2_seconds": 0.011932102963328362,
+        "solve_update2_seconds": 0.025605130940675735
+      },
+      "ridge_fit_seconds": 0.013024672865867615
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "e5_small_base",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.14584897551685572,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.046336740255355835,
+        "gram_seconds": 0.00858220737427473,
+        "factor_seconds": 0.00885348953306675,
+        "tangent_target1_seconds": 0.011997454799711704,
+        "solve_update1_seconds": 0.017520716413855553,
+        "tangent_target2_seconds": 0.011773132719099522,
+        "solve_update2_seconds": 0.017854221165180206
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05436728708446026,
+        "gram_seconds": 0.009676040150225163,
+        "factor_seconds": 0.008824323303997517,
+        "tangent_target1_seconds": 0.011250462383031845,
+        "solve_update1_seconds": 0.01773764193058014,
+        "tangent_target2_seconds": 0.015368936583399773,
+        "solve_update2_seconds": 0.017460884526371956
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04644429683685303,
+        "gram_seconds": 0.008738154545426369,
+        "factor_seconds": 0.011101152747869492,
+        "tangent_target1_seconds": 0.01971769891679287,
+        "solve_update1_seconds": 0.01791567262262106,
+        "tangent_target2_seconds": 0.011992163024842739,
+        "solve_update2_seconds": 0.018538804724812508
+      },
+      "ridge_fit_seconds": 0.01316277775913477
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoHotpotQA",
+    "pair": "e5_small_base",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.15119661297649145,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.0466940151527524,
+        "gram_seconds": 0.009024427272379398,
+        "factor_seconds": 0.008919063955545425,
+        "tangent_target1_seconds": 0.011297523975372314,
+        "solve_update1_seconds": 0.025715669617056847,
+        "tangent_target2_seconds": 0.01147144939750433,
+        "solve_update2_seconds": 0.018063561990857124
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.062362187542021275,
+        "gram_seconds": 0.008800300769507885,
+        "factor_seconds": 0.009052176959812641,
+        "tangent_target1_seconds": 0.012306111864745617,
+        "solve_update1_seconds": 0.018375089392066002,
+        "tangent_target2_seconds": 0.01314097736030817,
+        "solve_update2_seconds": 0.02766674291342497
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04717255663126707,
+        "gram_seconds": 0.010003342293202877,
+        "factor_seconds": 0.008945165202021599,
+        "tangent_target1_seconds": 0.011259005405008793,
+        "solve_update1_seconds": 0.025357824750244617,
+        "tangent_target2_seconds": 0.011640862561762333,
+        "solve_update2_seconds": 0.018417823128402233
+      },
+      "ridge_fit_seconds": 0.012968470342457294
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.14978419989347458,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.045825506560504436,
+        "gram_seconds": 0.008268658071756363,
+        "factor_seconds": 0.012858948670327663,
+        "tangent_target1_seconds": 0.01208859495818615,
+        "solve_update1_seconds": 0.017932772636413574,
+        "tangent_target2_seconds": 0.011540724895894527,
+        "solve_update2_seconds": 0.01744095701724291
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05401455517858267,
+        "gram_seconds": 0.008964122273027897,
+        "factor_seconds": 0.008731678128242493,
+        "tangent_target1_seconds": 0.011849184520542622,
+        "solve_update1_seconds": 0.017550899647176266,
+        "tangent_target2_seconds": 0.011413193307816982,
+        "solve_update2_seconds": 0.025896107777953148
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04705178923904896,
+        "gram_seconds": 0.010409088805317879,
+        "factor_seconds": 0.008965875022113323,
+        "tangent_target1_seconds": 0.010933030396699905,
+        "solve_update1_seconds": 0.02716183103621006,
+        "tangent_target2_seconds": 0.012574534863233566,
+        "solve_update2_seconds": 0.017448955215513706
+      },
+      "ridge_fit_seconds": 0.012282729148864746
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.15835396386682987,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.05121502559632063,
+        "gram_seconds": 0.00936559122055769,
+        "factor_seconds": 0.008913744240999222,
+        "tangent_target1_seconds": 0.012602587230503559,
+        "solve_update1_seconds": 0.01771178748458624,
+        "tangent_target2_seconds": 0.0192785132676363,
+        "solve_update2_seconds": 0.017650741152465343
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04628966003656387,
+        "gram_seconds": 0.00990515947341919,
+        "factor_seconds": 0.016906107775866985,
+        "tangent_target1_seconds": 0.012286907061934471,
+        "solve_update1_seconds": 0.01774913538247347,
+        "tangent_target2_seconds": 0.013388275168836117,
+        "solve_update2_seconds": 0.017686661332845688
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.0548057621344924,
+        "gram_seconds": 0.009055296890437603,
+        "factor_seconds": 0.008632862009108067,
+        "tangent_target1_seconds": 0.012728371657431126,
+        "solve_update1_seconds": 0.018220622092485428,
+        "tangent_target2_seconds": 0.013250519521534443,
+        "solve_update2_seconds": 0.03412020951509476
+      },
+      "ridge_fit_seconds": 0.013132831081748009
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.15077710431069136,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04992402344942093,
+        "gram_seconds": 0.008553816005587578,
+        "factor_seconds": 0.008883710019290447,
+        "tangent_target1_seconds": 0.011342577636241913,
+        "solve_update1_seconds": 0.017432539723813534,
+        "tangent_target2_seconds": 0.011107067577540874,
+        "solve_update2_seconds": 0.01743127964437008
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.054538301192224026,
+        "gram_seconds": 0.008305917493999004,
+        "factor_seconds": 0.008902698755264282,
+        "tangent_target1_seconds": 0.01281579677015543,
+        "solve_update1_seconds": 0.01795072853565216,
+        "tangent_target2_seconds": 0.01952377986162901,
+        "solve_update2_seconds": 0.017392288893461227
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.046912847086787224,
+        "gram_seconds": 0.009134967811405659,
+        "factor_seconds": 0.021116307005286217,
+        "tangent_target1_seconds": 0.013214657083153725,
+        "solve_update1_seconds": 0.01845589652657509,
+        "tangent_target2_seconds": 0.013702820055186749,
+        "solve_update2_seconds": 0.01833953522145748
+      },
+      "ridge_fit_seconds": 0.012891098856925964
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.14835198316723108,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04638975765556097,
+        "gram_seconds": 0.008921818807721138,
+        "factor_seconds": 0.008992061950266361,
+        "tangent_target1_seconds": 0.013391208834946156,
+        "solve_update1_seconds": 0.022239482030272484,
+        "tangent_target2_seconds": 0.011774412356317043,
+        "solve_update2_seconds": 0.01768568530678749
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04597593564540148,
+        "gram_seconds": 0.015665937215089798,
+        "factor_seconds": 0.008300977759063244,
+        "tangent_target1_seconds": 0.011944704689085484,
+        "solve_update1_seconds": 0.018285401165485382,
+        "tangent_target2_seconds": 0.011663456447422504,
+        "solve_update2_seconds": 0.01979889627546072
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05530663579702377,
+        "gram_seconds": 0.008790023624897003,
+        "factor_seconds": 0.009355115704238415,
+        "tangent_target1_seconds": 0.012790790759027004,
+        "solve_update1_seconds": 0.034053913317620754,
+        "tangent_target2_seconds": 0.012356264516711235,
+        "solve_update2_seconds": 0.020181449130177498
+      },
+      "ridge_fit_seconds": 0.012668531388044357
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.1483914516866207,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04660435300320387,
+        "gram_seconds": 0.009170309640467167,
+        "factor_seconds": 0.008654373697936535,
+        "tangent_target1_seconds": 0.012150127440690994,
+        "solve_update1_seconds": 0.01743968576192856,
+        "tangent_target2_seconds": 0.011481720954179764,
+        "solve_update2_seconds": 0.01739560067653656
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.054268548265099525,
+        "gram_seconds": 0.009141232818365097,
+        "factor_seconds": 0.008990611881017685,
+        "tangent_target1_seconds": 0.011450177989900112,
+        "solve_update1_seconds": 0.017884954810142517,
+        "tangent_target2_seconds": 0.01213936135172844,
+        "solve_update2_seconds": 0.017657275311648846
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.054040273651480675,
+        "gram_seconds": 0.009412573650479317,
+        "factor_seconds": 0.009065262041985989,
+        "tangent_target1_seconds": 0.011964373290538788,
+        "solve_update1_seconds": 0.03352219797670841,
+        "tangent_target2_seconds": 0.012080781161785126,
+        "solve_update2_seconds": 0.01796811167150736
+      },
+      "ridge_fit_seconds": 0.01285055372864008
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "e5_small_base",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.14824450388550758,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04686768539249897,
+        "gram_seconds": 0.008987118490040302,
+        "factor_seconds": 0.008464500308036804,
+        "tangent_target1_seconds": 0.011473320424556732,
+        "solve_update1_seconds": 0.017432679422199726,
+        "tangent_target2_seconds": 0.011847598478198051,
+        "solve_update2_seconds": 0.017630242742598057
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04600371699780226,
+        "gram_seconds": 0.01359574869275093,
+        "factor_seconds": 0.009912236593663692,
+        "tangent_target1_seconds": 0.011828879825770855,
+        "solve_update1_seconds": 0.01776935625821352,
+        "tangent_target2_seconds": 0.012123598717153072,
+        "solve_update2_seconds": 0.01760384626686573
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.06252416409552097,
+        "gram_seconds": 0.008970231749117374,
+        "factor_seconds": 0.008859822526574135,
+        "tangent_target1_seconds": 0.01242557168006897,
+        "solve_update1_seconds": 0.03384491987526417,
+        "tangent_target2_seconds": 0.011934115551412106,
+        "solve_update2_seconds": 0.017970247194170952
+      },
+      "ridge_fit_seconds": 0.014021903276443481
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "e5_small_base",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.15464968979358673,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.0476459264755249,
+        "gram_seconds": 0.009605125524103642,
+        "factor_seconds": 0.009280896745622158,
+        "tangent_target1_seconds": 0.011790674179792404,
+        "solve_update1_seconds": 0.021583929657936096,
+        "tangent_target2_seconds": 0.011783324182033539,
+        "solve_update2_seconds": 0.01833149790763855
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.046642428264021873,
+        "gram_seconds": 0.02102948073297739,
+        "factor_seconds": 0.009294355288147926,
+        "tangent_target1_seconds": 0.012213670648634434,
+        "solve_update1_seconds": 0.017602650448679924,
+        "tangent_target2_seconds": 0.012107753194868565,
+        "solve_update2_seconds": 0.017691252753138542
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.06316803209483624,
+        "gram_seconds": 0.008699767291545868,
+        "factor_seconds": 0.009137489832937717,
+        "tangent_target1_seconds": 0.01292903907597065,
+        "solve_update1_seconds": 0.018076821230351925,
+        "tangent_target2_seconds": 0.02204190380871296,
+        "solve_update2_seconds": 0.0188811207190156
+      },
+      "ridge_fit_seconds": 0.0137441735714674
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "e5_small_base",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.14642241783440113,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.047180550172924995,
+        "gram_seconds": 0.00923178717494011,
+        "factor_seconds": 0.009006657637655735,
+        "tangent_target1_seconds": 0.013442273251712322,
+        "solve_update1_seconds": 0.01764720119535923,
+        "tangent_target2_seconds": 0.010808596387505531,
+        "solve_update2_seconds": 0.02537714783102274
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.046770756132900715,
+        "gram_seconds": 0.008405954577028751,
+        "factor_seconds": 0.008686567656695843,
+        "tangent_target1_seconds": 0.011934780515730381,
+        "solve_update1_seconds": 0.026205002330243587,
+        "tangent_target2_seconds": 0.012183365412056446,
+        "solve_update2_seconds": 0.017356357537209988
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.06514292676001787,
+        "gram_seconds": 0.011530859395861626,
+        "factor_seconds": 0.009369452483952045,
+        "tangent_target1_seconds": 0.01517100352793932,
+        "solve_update1_seconds": 0.017770824022591114,
+        "tangent_target2_seconds": 0.03121481742709875,
+        "solve_update2_seconds": 0.018674597144126892
+      },
+      "ridge_fit_seconds": 0.014635322615504265
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "e5_small_base",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.1494225598871708,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.047228806652128696,
+        "gram_seconds": 0.009432898834347725,
+        "factor_seconds": 0.009382177144289017,
+        "tangent_target1_seconds": 0.016833318397402763,
+        "solve_update1_seconds": 0.018056686036288738,
+        "tangent_target2_seconds": 0.011084594763815403,
+        "solve_update2_seconds": 0.017495401203632355
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05451028235256672,
+        "gram_seconds": 0.008904444053769112,
+        "factor_seconds": 0.008860494010150433,
+        "tangent_target1_seconds": 0.011260059662163258,
+        "solve_update1_seconds": 0.017634863033890724,
+        "tangent_target2_seconds": 0.011971453204751015,
+        "solve_update2_seconds": 0.033987926319241524
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.0464814230799675,
+        "gram_seconds": 0.008873417973518372,
+        "factor_seconds": 0.010859427973628044,
+        "tangent_target1_seconds": 0.02071890514343977,
+        "solve_update1_seconds": 0.017702066339552402,
+        "tangent_target2_seconds": 0.012756861746311188,
+        "solve_update2_seconds": 0.018012896180152893
+      },
+      "ridge_fit_seconds": 0.013717610388994217
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "NanoFEVER",
+    "pair": "e5_small_base",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.14725979696959257,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04665891081094742,
+        "gram_seconds": 0.009220905601978302,
+        "factor_seconds": 0.009933467954397202,
+        "tangent_target1_seconds": 0.01299058087170124,
+        "solve_update1_seconds": 0.01769878063350916,
+        "tangent_target2_seconds": 0.011298964731395245,
+        "solve_update2_seconds": 0.025543931871652603
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04654048476368189,
+        "gram_seconds": 0.008559350855648518,
+        "factor_seconds": 0.024499598890542984,
+        "tangent_target1_seconds": 0.011207438074052334,
+        "solve_update1_seconds": 0.017883846536278725,
+        "tangent_target2_seconds": 0.011376790702342987,
+        "solve_update2_seconds": 0.01739793736487627
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.054840460419654846,
+        "gram_seconds": 0.009271197021007538,
+        "factor_seconds": 0.008881126530468464,
+        "tangent_target1_seconds": 0.011898131109774113,
+        "solve_update1_seconds": 0.017771207727491856,
+        "tangent_target2_seconds": 0.011788792908191681,
+        "solve_update2_seconds": 0.02577831968665123
+      },
+      "ridge_fit_seconds": 0.013406535610556602
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.19307318795472383,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.05430005211383104,
+        "gram_seconds": 0.00920695997774601,
+        "factor_seconds": 0.009385911747813225,
+        "tangent_target1_seconds": 0.012410775758326054,
+        "solve_update1_seconds": 0.017700815573334694,
+        "tangent_target2_seconds": 0.011655882000923157,
+        "solve_update2_seconds": 0.035569158382713795
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04550269152969122,
+        "gram_seconds": 0.008645200170576572,
+        "factor_seconds": 0.008502129465341568,
+        "tangent_target1_seconds": 0.021396618336439133,
+        "solve_update1_seconds": 0.018787958659231663,
+        "tangent_target2_seconds": 0.013010324910283089,
+        "solve_update2_seconds": 0.01853292528539896
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.054671104066073895,
+        "gram_seconds": 0.008547800593078136,
+        "factor_seconds": 0.008968164213001728,
+        "tangent_target1_seconds": 0.012096448801457882,
+        "solve_update1_seconds": 0.017408693209290504,
+        "tangent_target2_seconds": 0.013828834518790245,
+        "solve_update2_seconds": 0.03443198278546333
+      },
+      "ridge_fit_seconds": 0.013532713986933231
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.19526490475982428,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04731948487460613,
+        "gram_seconds": 0.008722037076950073,
+        "factor_seconds": 0.009206442162394524,
+        "tangent_target1_seconds": 0.019055526703596115,
+        "solve_update1_seconds": 0.017423409968614578,
+        "tangent_target2_seconds": 0.012726740911602974,
+        "solve_update2_seconds": 0.01760117057710886
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05443837679922581,
+        "gram_seconds": 0.008667781949043274,
+        "factor_seconds": 0.009038289077579975,
+        "tangent_target1_seconds": 0.013233611360192299,
+        "solve_update1_seconds": 0.017836938612163067,
+        "tangent_target2_seconds": 0.011038667522370815,
+        "solve_update2_seconds": 0.02553492970764637
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.046293276362121105,
+        "gram_seconds": 0.008910613134503365,
+        "factor_seconds": 0.008930269628763199,
+        "tangent_target1_seconds": 0.013020815327763557,
+        "solve_update1_seconds": 0.026817466132342815,
+        "tangent_target2_seconds": 0.011786756105720997,
+        "solve_update2_seconds": 0.01825443748384714
+      },
+      "ridge_fit_seconds": 0.013158295303583145
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.19397495407611132,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04668132122606039,
+        "gram_seconds": 0.00869730394333601,
+        "factor_seconds": 0.008802013471722603,
+        "tangent_target1_seconds": 0.012199643068015575,
+        "solve_update1_seconds": 0.01775445882230997,
+        "tangent_target2_seconds": 0.01603677123785019,
+        "solve_update2_seconds": 0.01756013836711645
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04617941565811634,
+        "gram_seconds": 0.008661694824695587,
+        "factor_seconds": 0.01710523385554552,
+        "tangent_target1_seconds": 0.011510579846799374,
+        "solve_update1_seconds": 0.01754701044410467,
+        "tangent_target2_seconds": 0.011450732126832008,
+        "solve_update2_seconds": 0.017544640228152275
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05421618092805147,
+        "gram_seconds": 0.009562668390572071,
+        "factor_seconds": 0.008638441562652588,
+        "tangent_target1_seconds": 0.011554388329386711,
+        "solve_update1_seconds": 0.017761684954166412,
+        "tangent_target2_seconds": 0.011437124572694302,
+        "solve_update2_seconds": 0.025476794689893723
+      },
+      "ridge_fit_seconds": 0.012825027108192444
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.1988587500527501,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04636170621961355,
+        "gram_seconds": 0.008289525285363197,
+        "factor_seconds": 0.00839651096612215,
+        "tangent_target1_seconds": 0.011730547063052654,
+        "solve_update1_seconds": 0.025875755585730076,
+        "tangent_target2_seconds": 0.011718801222741604,
+        "solve_update2_seconds": 0.017521606758236885
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04608338791877031,
+        "gram_seconds": 0.017036303877830505,
+        "factor_seconds": 0.009304258041083813,
+        "tangent_target1_seconds": 0.013027059845626354,
+        "solve_update1_seconds": 0.018529223278164864,
+        "tangent_target2_seconds": 0.013523786328732967,
+        "solve_update2_seconds": 0.017842041328549385
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.061835804022848606,
+        "gram_seconds": 0.00836918130517006,
+        "factor_seconds": 0.008373433724045753,
+        "tangent_target1_seconds": 0.01194821298122406,
+        "solve_update1_seconds": 0.032385253347456455,
+        "tangent_target2_seconds": 0.011647364124655724,
+        "solve_update2_seconds": 0.01780482567846775
+      },
+      "ridge_fit_seconds": 0.013891858048737049
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.19421039801090956,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.0509441327303648,
+        "gram_seconds": 0.008494935929775238,
+        "factor_seconds": 0.008404681459069252,
+        "tangent_target1_seconds": 0.011913956142961979,
+        "solve_update1_seconds": 0.017691551707684994,
+        "tangent_target2_seconds": 0.012481716461479664,
+        "solve_update2_seconds": 0.026423736475408077
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04715538676828146,
+        "gram_seconds": 0.008911436423659325,
+        "factor_seconds": 0.008584287017583847,
+        "tangent_target1_seconds": 0.013333919458091259,
+        "solve_update1_seconds": 0.02628401853144169,
+        "tangent_target2_seconds": 0.012495872564613819,
+        "solve_update2_seconds": 0.01770491525530815
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04628504440188408,
+        "gram_seconds": 0.008602593094110489,
+        "factor_seconds": 0.008779612369835377,
+        "tangent_target1_seconds": 0.012561299838125706,
+        "solve_update1_seconds": 0.017660368233919144,
+        "tangent_target2_seconds": 0.01199414487928152,
+        "solve_update2_seconds": 0.01804045494645834
+      },
+      "ridge_fit_seconds": 0.02089961525052786
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "e5_small_base",
+    "seed": 17,
+    "phases": {
+      "frozen_fit_seconds": 0.19943882524967194,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.047088646329939365,
+        "gram_seconds": 0.008300240151584148,
+        "factor_seconds": 0.00843601394444704,
+        "tangent_target1_seconds": 0.012048376724123955,
+        "solve_update1_seconds": 0.0256965309381485,
+        "tangent_target2_seconds": 0.011371227912604809,
+        "solve_update2_seconds": 0.017302051186561584
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.04674871824681759,
+        "gram_seconds": 0.008924894966185093,
+        "factor_seconds": 0.008593518286943436,
+        "tangent_target1_seconds": 0.012988000176846981,
+        "solve_update1_seconds": 0.017726537771523,
+        "tangent_target2_seconds": 0.011908266693353653,
+        "solve_update2_seconds": 0.01779663749039173
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05427476391196251,
+        "gram_seconds": 0.008761388249695301,
+        "factor_seconds": 0.008845865726470947,
+        "tangent_target1_seconds": 0.011363632045686245,
+        "solve_update1_seconds": 0.017847178503870964,
+        "tangent_target2_seconds": 0.019871640019118786,
+        "solve_update2_seconds": 0.017663822509348392
+      },
+      "ridge_fit_seconds": 0.014527221210300922
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "e5_small_base",
+    "seed": 29,
+    "phases": {
+      "frozen_fit_seconds": 0.18960817996412516,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.046393364667892456,
+        "gram_seconds": 0.008980801329016685,
+        "factor_seconds": 0.00880276970565319,
+        "tangent_target1_seconds": 0.012207219377160072,
+        "solve_update1_seconds": 0.021921020932495594,
+        "tangent_target2_seconds": 0.011708579026162624,
+        "solve_update2_seconds": 0.017661776393651962
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.046598006039857864,
+        "gram_seconds": 0.016380238346755505,
+        "factor_seconds": 0.008565745316445827,
+        "tangent_target1_seconds": 0.011332564987242222,
+        "solve_update1_seconds": 0.01745300367474556,
+        "tangent_target2_seconds": 0.011544957756996155,
+        "solve_update2_seconds": 0.017745106481015682
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05443504545837641,
+        "gram_seconds": 0.009258492849767208,
+        "factor_seconds": 0.009236237965524197,
+        "tangent_target1_seconds": 0.012226913124322891,
+        "solve_update1_seconds": 0.01787426881492138,
+        "tangent_target2_seconds": 0.02780162077397108,
+        "solve_update2_seconds": 0.01777627505362034
+      },
+      "ridge_fit_seconds": 0.013439415954053402
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "e5_small_base",
+    "seed": 41,
+    "phases": {
+      "frozen_fit_seconds": 0.1835310524329543,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.04660822730511427,
+        "gram_seconds": 0.008928108029067516,
+        "factor_seconds": 0.009015708230435848,
+        "tangent_target1_seconds": 0.01189977303147316,
+        "solve_update1_seconds": 0.02604449726641178,
+        "tangent_target2_seconds": 0.011648195795714855,
+        "solve_update2_seconds": 0.017732346430420876
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05500842444598675,
+        "gram_seconds": 0.009373519569635391,
+        "factor_seconds": 0.008664831519126892,
+        "tangent_target1_seconds": 0.011790349148213863,
+        "solve_update1_seconds": 0.017500624991953373,
+        "tangent_target2_seconds": 0.012093430384993553,
+        "solve_update2_seconds": 0.017974261194467545
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05477654002606869,
+        "gram_seconds": 0.008582085371017456,
+        "factor_seconds": 0.009137699380517006,
+        "tangent_target1_seconds": 0.01226758398115635,
+        "solve_update1_seconds": 0.017782398499548435,
+        "tangent_target2_seconds": 0.019203592091798782,
+        "solve_update2_seconds": 0.017455901950597763
+      },
+      "ridge_fit_seconds": 0.012905734591186047
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "e5_small_base",
+    "seed": 53,
+    "phases": {
+      "frozen_fit_seconds": 0.1913399761542678,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.05044968239963055,
+        "gram_seconds": 0.009411835111677647,
+        "factor_seconds": 0.009041867218911648,
+        "tangent_target1_seconds": 0.012452111579477787,
+        "solve_update1_seconds": 0.017505982890725136,
+        "tangent_target2_seconds": 0.012555793859064579,
+        "solve_update2_seconds": 0.025708897970616817
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.045423210598528385,
+        "gram_seconds": 0.009200496599078178,
+        "factor_seconds": 0.008665631525218487,
+        "tangent_target1_seconds": 0.01224424410611391,
+        "solve_update1_seconds": 0.022849219851195812,
+        "tangent_target2_seconds": 0.01246156357228756,
+        "solve_update2_seconds": 0.019298238679766655
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.04584090132266283,
+        "gram_seconds": 0.016826413571834564,
+        "factor_seconds": 0.00865993369370699,
+        "tangent_target1_seconds": 0.011678501963615417,
+        "solve_update1_seconds": 0.018201809376478195,
+        "tangent_target2_seconds": 0.011445492506027222,
+        "solve_update2_seconds": 0.01779364701360464
+      },
+      "ridge_fit_seconds": 0.012786160223186016
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  },
+  {
+    "dataset": "FiQA",
+    "pair": "e5_small_base",
+    "seed": 67,
+    "phases": {
+      "frozen_fit_seconds": 0.1939341276884079,
+      "tangent_l10_diagnostic": {
+        "procrustes_seconds": 0.046582228504121304,
+        "gram_seconds": 0.00866270437836647,
+        "factor_seconds": 0.00903947651386261,
+        "tangent_target1_seconds": 0.021155206486582756,
+        "solve_update1_seconds": 0.018092346377670765,
+        "tangent_target2_seconds": 0.011855595745146275,
+        "solve_update2_seconds": 0.017796526663005352
+      },
+      "tangent2_l1": {
+        "procrustes_seconds": 0.05407273583114147,
+        "gram_seconds": 0.009221981279551983,
+        "factor_seconds": 0.00904956366866827,
+        "tangent_target1_seconds": 0.011512240394949913,
+        "solve_update1_seconds": 0.0175869045779109,
+        "tangent_target2_seconds": 0.011687508784234524,
+        "solve_update2_seconds": 0.01777568180114031
+      },
+      "tangent2_l100": {
+        "procrustes_seconds": 0.05440856050699949,
+        "gram_seconds": 0.008114563301205635,
+        "factor_seconds": 0.008689544163644314,
+        "tangent_target1_seconds": 0.011984437704086304,
+        "solve_update1_seconds": 0.025746357627213,
+        "tangent_target2_seconds": 0.012145336717367172,
+        "solve_update2_seconds": 0.017690369859337807
+      },
+      "ridge_fit_seconds": 0.013048107735812664
+    },
+    "note": "one-step shares frozen two-step work; diagnostic recomputation recorded separately"
+  }
+]

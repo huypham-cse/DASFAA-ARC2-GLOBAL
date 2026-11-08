@@ -1,0 +1,160 @@
+{
+  "NanoNQ": [
+    {
+      "type": "file",
+      "oid": "1c85b490b88314a0f2eb383d64dc459a9dd44d20",
+      "size": 2020,
+      "lfs": {
+        "oid": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+        "size": 2020,
+        "pointerSize": 129
+      },
+      "xetHash": "305e4cd5f56f4a4301e670ec55d53b93e5d3510910a8b0f1b0eb522c17273b38",
+      "path": "qrels/train-00000-of-00001.parquet",
+      "lastCommit": {
+        "id": "77540146379abf95df8326a3c5bb9eb21c7146c3",
+        "title": "Upload dataset",
+        "date": "2024-09-10T09:44:24.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "avScan": {
+          "status": "safe",
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned",
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5?utm_source=huggingface"
+        }
+      }
+    }
+  ],
+  "NanoHotpotQA": [
+    {
+      "type": "file",
+      "oid": "3f605969fec5c0e3d9fb1a61765cd304bcf112e1",
+      "size": 3424,
+      "lfs": {
+        "oid": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+        "size": 3424,
+        "pointerSize": 129
+      },
+      "xetHash": "e2eed0c4ab3b94f0f140bd5d122dd18fa8bb12a74592064324501375f4aa057a",
+      "path": "qrels/train-00000-of-00001.parquet",
+      "lastCommit": {
+        "id": "d79c0cdda980aba54842756770928035e1b61a51",
+        "title": "Upload dataset",
+        "date": "2024-09-10T09:44:04.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "avScan": {
+          "status": "safe",
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned",
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5?utm_source=huggingface"
+        }
+      }
+    }
+  ],
+  "NanoFEVER": [
+    {
+      "type": "file",
+      "oid": "767b36e5b3b53fd7103b0ddc775012dfa5d1b30a",
+      "size": 2730,
+      "lfs": {
+        "oid": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+        "size": 2730,
+        "pointerSize": 129
+      },
+      "xetHash": "0f9dcb8a1f3c26d3a5b59e376e15d1c6f0a4f7ded2e969b5c7dea9a7933535d2",
+      "path": "qrels/train-00000-of-00001.parquet",
+      "lastCommit": {
+        "id": "a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8",
+        "title": "Upload dataset",
+        "date": "2024-09-10T09:43:51.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "unscanned"
+        },
+        "avScan": {
+          "status": "safe",
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned",
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f?utm_source=huggingface"
+        }
+      }
+    }
+  ],
+  "old_source_references": {
+    "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/src/mixindex_arc2/p8_learned_converter.py": [
+      "No data/model downloading, qrels, search, or implicit tuning occurs here."
+    ],
+    "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/src/mixindex_arc2/p8_numerical_diagnosis.py": [
+      "\"\"\"Bounded P8D numerical diagnosis; no qrels, quality metrics or new candidate.\"\"\"",
+      "    meta={'status':'RUNNING','source':origin,'stage':args.stage,'qrels_opened':False,"
+    ],
+    "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/src/mixindex_arc2/p8_prepare_inputs.py": [
+      "            'qrels_read': False, 'method_fit': False, 'rankings_generated': False,"
+    ],
+    "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/src/mixindex_arc2/p8_procrustes_geometry.py": [],
+    "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/src/mixindex_arc2/p8_development.py": [
+      "qrels. Converter workers receive source documents and paired target anchors",
+      "QREL = ROOT / \"artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv\"",
+      "        if \"qrels\" in (ROOT / rel).parts:",
+      "            raise ValueError(\"STOP: qrels cannot be opened by a pre-ranking control lock\")",
+      "            \"qrels_read\": False, \"target_population\": \"paired_anchors_only\",",
+      "        if request.get(\"full_target_cache_supplied\") is not False or request.get(\"qrels_supplied\") is not False:",
+      "    if full.get(\"dev_qrels_opened\") is not False or full.get(\"test_qrels_opened\") is not False:",
+      "            result.get(\"qrels_read\") is not False or result.get(\"failures\") or",
+      "    for key in (\"seed\", \"stage\", \"qrels_supplied\", \"full_target_cache_supplied\"):",
+      "                    \"full_target_cache_supplied\": False, \"qrels_supplied\": False})",
+      "            preparation.get(\"input_manifest_sha256\") != expected_sha256 or preparation.get(\"qrels_read\") is not False):",
+      "    write(output / \"cells_pre_qrels.json\", cells)",
+      "            \"source\": source, \"synthetic_only\": synthetic, \"dev_qrels_opened\": False,",
+      "            \"test_qrels_opened\": False, \"cells\": cells}",
+      "            seal[\"ranking_count\"] != RANKING_COUNT or seal.get(\"dev_qrels_opened\") is not False):",
+      "        qrels = {qid: {dids[i % len(dids)]: 2, dids[(i + 1) % len(dids)]: 1} for i, qid in enumerate(qids)}",
+      "        meta.update(dev_qrels_opened=True, first_dev_qrel_open_unix=time.time(),",
+      "        qrels = p4.read_dev_qrels(QREL, qids, dids)",
+      "        meta[\"dev_qrels_sha256\"] = sha(QREL)",
+      "        values = p4.score_rankings(np.load(path, allow_pickle=False), qids, dids, qrels)",
+      "    meta.update(ranking_count=RANKING_COUNT, all_rankings_frozen_before_dev_qrels=True,",
+      "    write(output / \"metadata_pre_qrels.json\", meta)",
+      "            \"budgets\": list(BUDGETS), \"dev_qrels_opened\": False, \"test_qrels_opened\": False,"
+    ]
+  }
+}

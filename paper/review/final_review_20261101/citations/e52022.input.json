@@ -1,0 +1,26 @@
+{
+  "key": "e52022",
+  "bib_entry": "@misc{e52022,\n  author = {Liang Wang and Nan Yang and Xiaolong Huang and Binxing Jiao and Linjun Yang and Daxin Jiang and Rangan Majumder and Furu Wei},\n  title = {Text Embeddings by Weakly-Supervised Contrastive Pre-training},\n  year = {2024},\n  eprint = {2212.03533},\n  archiveprefix = {arXiv},\n  primaryclass = {cs.CL},\n  url = {https://arxiv.org/abs/2212.03533},\n}",
+  "contexts": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 21,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 31,
+      "text": "\\paragraph{Retrieval evaluation.}\nBEIR emphasizes retrieval across heterogeneous tasks and domains~\\cite{beir2021}, while NanoBEIR provides smaller collections suitable for development comparisons~\\cite{nanobeir}.\nSentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}.\nOur evaluation targets judged retrieval quality in actual mixed galleries, separating that quantity from agreement with a destination ranking or approximate nearest-neighbor overlap.\nThis distinction matters because accurately reconstructing individual vectors and preserving their internal neighborhoods do not directly measure the relevance of the final combined ranking.\nThe experimental question is therefore whether the frozen correction improves retrieval under a matched encoding budget, and in which encoder and gallery conditions that improvement persists.\n"
+    }
+  ],
+  "primary_source_record": {
+    "key": "e52022",
+    "source_file": "citation_sources/wang2022e5_metadata.txt",
+    "metadata_url": "https://arxiv.org/bibtex/2212.03533",
+    "verification": "publisher-export",
+    "sha256": "5ba0251e315129416bf6dce60060b0e803be308439e9af3f9c8aba29efd7db3d",
+    "metadata_type": "misc",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

@@ -1,0 +1,6 @@
+{"unix": 1792944863.0969727, "pid": 2785179, "process_tree_rss_bytes": 28155904, "host_available_memory_bytes": 2025378758656, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 71930 MiB, 100 %", "gpu_query_exit": 0}
+{"unix": 1792944868.2210658, "pid": 2785179, "process_tree_rss_bytes": 80855040, "host_available_memory_bytes": 2025343553536, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 71930 MiB, 34 %", "gpu_query_exit": 0}
+{"unix": 1792944873.3425183, "pid": 2785179, "process_tree_rss_bytes": 218206208, "host_available_memory_bytes": 2024608514048, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 71930 MiB, 100 %", "gpu_query_exit": 0}
+{"unix": 1792944878.491617, "pid": 2785179, "process_tree_rss_bytes": 751632384, "host_available_memory_bytes": 2023903047680, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 71930 MiB, 100 %", "gpu_query_exit": 0}
+{"unix": 1792944883.9382732, "pid": 2785179, "process_tree_rss_bytes": 1707347968, "host_available_memory_bytes": 2023501647872, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 72754 MiB, 77 %", "gpu_query_exit": 0}
+{"unix": 1792944885.5679572, "pid": 2785179, "process_tree_rss_bytes": 253521920, "host_available_memory_bytes": 2024843718656, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 71930 MiB, 93 %", "gpu_query_exit": 0}

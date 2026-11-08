@@ -1,0 +1,55 @@
+{
+  "key": "driftadapter",
+  "checked_at_utc": "2026-11-01 08:22:58 UTC",
+  "existence": "VERIFIED: live ACL Anthology record, publisher BibTeX, and proceedings PDF opened",
+  "metadata": {
+    "status": "MATCH",
+    "authors": ["Harshil Vejendla"],
+    "title": "Drift-Adapter: A Practical Approach to Near Zero-Downtime Embedding Model Upgrades in Vector Databases",
+    "year": 2025,
+    "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    "publisher": "Association for Computational Linguistics",
+    "doi": "10.18653/v1/2025.emnlp-main.805",
+    "pages": "15938–15949",
+    "version": "Published EMNLP 2025 main-conference proceedings version; ACL Anthology 2025.emnlp-main.805; 12-page publisher PDF",
+    "bib_entry_changes_required": false
+  },
+  "sources": [
+    {
+      "url": "https://aclanthology.org/2025.emnlp-main.805/",
+      "access": "live web open",
+      "verified_fact": "Publisher landing page confirms existence, sole author, title, year, proceedings, pages, DOI, and publisher."
+    },
+    {
+      "url": "https://aclanthology.org/2025.emnlp-main.805.bib",
+      "access": "live web open",
+      "verified_fact": "Publisher export matches every supplied bibliographic field; local citation key is an acceptable alias."
+    },
+    {
+      "url": "https://aclanthology.org/2025.emnlp-main.805.pdf",
+      "access": "live web open; publisher PDF text inspected",
+      "verified_fact": "Title page confirms proceedings version. Section 3 (p.15940) learns g(f_new(q)) approximately f_old(q), using paired document embeddings; inference queries the unchanged legacy ANN index. It specifies Orthogonal Procrustes, low-rank affine, and a residual MLP. Section 2.4 identifies adaptation as post-hoc rather than encoder training."
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "verdict": "SUPPORTS",
+      "reason": "Supports the query-side adaptation branch of the jointly cited sentence: new-encoder queries are translated into the old index space. It does not establish the document-side conversion branch, which is separately attributed to embeddingconverter. Later claims about other alignment papers and ARC2 are outside this key's scope.",
+      "evidence": "Publisher PDF abstract and Section 3, pp.15938 and 15940."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 15,
+      "verdict": "SUPPORTS",
+      "reason": "The Drift-Adapter sentence correctly states new-model query to legacy-index translation and the three adapter families. Paired samples are document embeddings used to fit a query-time map; this is not conversion of stored old document vectors into the new space. The frozen-encoder/paired-embedding comparison is consistent with its post-hoc setup. ARC2-specific behavior and other cited methods are not validated by this source.",
+      "evidence": "Publisher PDF Sections 2.4 and 3, p.15940."
+    }
+  ],
+  "verdict": "KEEP",
+  "fix_if_needed": null,
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional"
+}

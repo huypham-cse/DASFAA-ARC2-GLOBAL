@@ -1,0 +1,29 @@
+{
+  "revision": "arc2_global_tangent2_r1",
+  "numerical_change_intended": false,
+  "changes": "standalone packaging; selected global path only; dependencies reduced; numerical parity must pass before use",
+  "sources": [
+    {
+      "path": "D:\\DASFAA-2027-MixIndex\\artifact\\src\\mixindex_arc2\\core.py",
+      "sha256": "34d51a0fde518d3c5d00ab425459a423502ce6f17e39a111ce6c9566006bf714"
+    },
+    {
+      "path": "D:\\DASFAA-2027-MixIndex\\artifact\\src\\mixindex_arc2\\p8_procrustes_geometry.py",
+      "sha256": "141f1dfd0530cab5dd6d814e0a6639cb99dc6212ca4917c7df82e32608580327"
+    },
+    {
+      "path": "D:\\DASFAA-2027-MixIndex\\artifact\\src\\mixindex_arc2\\arc2_global.py",
+      "sha256": "365aad09e69a7a3852e48bd95744694ec6dc04f286d4e43f4c7efb3113de3496"
+    },
+    {
+      "path": "D:\\DASFAA-2027-P1-embedding-migration\\artifact\\results\\r12_official_translator_feasibility\\r12_full_20261007T162300+0700\\upstream_source\\reproduce-scripts\\la2m\\exp_la2m.py",
+      "sha256": "8040db888379dca990bf0ac74c87d5b27b5269c0fe7c359f4fd76f8950b249b1"
+    }
+  ],
+  "canonical_lf_hashes": {
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf"
+  }
+}

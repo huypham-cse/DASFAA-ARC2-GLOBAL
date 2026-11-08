@@ -1,0 +1,21 @@
+{
+  "key": "fastfill2023",
+  "bib_entry": "@inproceedings{fastfill2023,\n  author = {Jaeckle, Florian and Faghri, Fartash and Farhadi, Ali and Tuzel, Oncel and Pouransari, Hadi},\n  title = {FastFill: Efficient Compatible Model Update},\n  booktitle = {International Conference on Learning Representations},\n  year = {2023},\n}",
+  "contexts": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 9,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ],
+  "primary_source_record": {
+    "key": "fastfill2023",
+    "source_file": "citation_sources/fastfill_verified.bib",
+    "metadata_url": "https://raw.githubusercontent.com/apple/ml-fct/main/README.md",
+    "verification": "publisher-export",
+    "sha256": "61e3a1c30b19e18cdeca9467d4478b7bbf698660e7ef01c3e7691b295df7a039",
+    "metadata_type": "inproceedings",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

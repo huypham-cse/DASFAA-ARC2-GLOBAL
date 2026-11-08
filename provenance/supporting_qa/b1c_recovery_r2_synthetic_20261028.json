@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "imported_groups": 2,
+  "imported_rankings": 2,
+  "byte_identity": true,
+  "rejected": [
+    "duplicate",
+    "partial",
+    "identity_drift",
+    "order_drift",
+    "mutation"
+  ]
+}

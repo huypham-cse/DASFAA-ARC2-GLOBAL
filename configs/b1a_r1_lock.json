@@ -1,0 +1,246 @@
+{
+  "stage": "B1a only",
+  "model_revision": "arc2_global_tangent2_r1",
+  "source_sha256_canonical_lf": {
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "ops/b1a_stage.py": "4f95404821cf15e2e3ffaa38949ef6327ede6f83dbf407e70dbd15d1f34c14d5",
+    "ops/b1a_gpu_worker.py": "03babcfb09a5d5bdabfb0ebb59094a847d6734b1edca4edbde9d9b24845975ea",
+    "configs/method.json": "0747ebb6b90a437b75a2c5c1b01804767140077baa0778d8c9c0f347e033e319",
+    "protocols/B1A_INPUTS_GPU_SMOKE_20261025.md": "9927fb309e2c2e82683964e78070b38198a792ea8887ae89b5011cc2612c2092",
+    "protocols/B1A_R1_LINUX_SOURCE_BYTES_20261025.md": "58d00f4737a38e18e712e4aefeb33c8f1e95635f9ead41ab780547d58adbe90f"
+  },
+  "cpu_versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "cpu_python": "/root/arc2_p3h_20261020/venv/bin/python",
+  "gpu_python": "/root/paper-P2/.venv/bin/python",
+  "gpu_versions": {
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "4.1.0",
+    "transformers": "4.51.3"
+  },
+  "models": {
+    "distilroberta_y": {
+      "id": "sentence-transformers/all-distilroberta-v1",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/distilroberta_y",
+      "revision": "842eaed40bee4d61673a81c92d5689a8fed7a09f",
+      "dimension": 768,
+      "file_sha256": {
+        "1_Pooling/config.json": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56",
+        "config.json": "6f9efb40bd192274dd2e6f43c326cd4571cbefe647f4a274e83073be4f13f928",
+        "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "data_config.json": "2ba682c372ee7ac37d519df39571ec0543f55ae31273844be05f8a5acdf92e2a",
+        "merges.txt": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862",
+        "model.safetensors": "3c739fad12f3f12428a677cfcc73391a5860a8bad0ff7a971fd67e6065201fc2",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+        "special_tokens_map.json": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+        "tokenizer.json": "7a6751507c44ab383cc8ba8ab97cd857d35025ff1b29162b1690cc5e0c6030e9",
+        "tokenizer_config.json": "5066b57002ab15418f3472aa53a8b083878f84050e8153ba62b9d40e10651a4c",
+        "vocab.json": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e"
+      },
+      "document_prefix": "",
+      "query_prefix": ""
+    },
+    "e5_base_y": {
+      "id": "intfloat/e5-base-v2",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/e5_base_y",
+      "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+      "dimension": 768,
+      "file_sha256": {
+        "1_Pooling/config.json": "f586ab6c734af7b8d14d898bfa7faa886f23b46f86dd1730514309893af13d75",
+        "config.json": "01cc39aa39538a8179aa131c8a16adc03b506c92009f091502e4eb0c702f5f78",
+        "model.safetensors": "d0d559c47d5f71b1d280b13b62a2657f3e3bc70c0786f9ab91a36545e6a8f693",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "ae83fa6ca0333117ff12606020af925d648667ef70d92ff7f27d781ba0ca4544",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "document_prefix": "passage: ",
+      "query_prefix": "query: "
+    },
+    "e5_small_x": {
+      "id": "intfloat/e5-small-v2",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/e5_small_x",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "dimension": 384,
+      "file_sha256": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "5dfb0363cd0243be179c03bcaafd1542d0fbb95e8cbcf575fff3e229342adc2f",
+        "model.safetensors": "45bfa60070649aae2244fbc9d508537779b93b6f353c17b0f95ceccb1c5116c1",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "ae83fa6ca0333117ff12606020af925d648667ef70d92ff7f27d781ba0ca4544",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "document_prefix": "passage: ",
+      "query_prefix": "query: "
+    },
+    "minilm_x": {
+      "id": "sentence-transformers/all-MiniLM-L6-v2",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/minilm_x",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "dimension": 384,
+      "file_sha256": {
+        "1_Pooling/config.json": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+        "config.json": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+        "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "data_config.json": "32edcb108fc2516b920734a862ae0692bcae1c5d45d5f8d972cb0d53434a4c54",
+        "model.safetensors": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+        "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "tokenizer.json": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "tokenizer_config.json": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "document_prefix": "",
+      "query_prefix": ""
+    }
+  },
+  "datasets": {
+    "NanoNQ": {
+      "repo": "zeta-alpha-ai/NanoNQ",
+      "revision": "77540146379abf95df8326a3c5bb9eb21c7146c3",
+      "expected_docs": 5035,
+      "expected_queries": 50,
+      "files": [
+        {
+          "rfilename": "corpus/train-00000-of-00001.parquet",
+          "blobId": "54ce8461ac23e7191b6a72ba645aaab88e4c3e71",
+          "size": 1776094,
+          "lfs": {
+            "sha256": "0a23818bfb7f8eeb0aa3c6db6dcd629122adeb1db9ee74a7344b0b17405d06f5",
+            "size": 1776094,
+            "pointerSize": 132
+          }
+        },
+        {
+          "rfilename": "queries/train-00000-of-00001.parquet",
+          "blobId": "d5685e59d3a9a1df7e0e80e9dc283e256f8fbe59",
+          "size": 3658,
+          "lfs": {
+            "sha256": "fbcbcff5d8a537e68075a891b565c1891b51c0bcbac4556ed97ff48aa8cebc5b",
+            "size": 3658,
+            "pointerSize": 129
+          }
+        }
+      ],
+      "qrels_requested_or_read": false
+    },
+    "NanoHotpotQA": {
+      "repo": "zeta-alpha-ai/NanoHotpotQA",
+      "revision": "d79c0cdda980aba54842756770928035e1b61a51",
+      "expected_docs": 5090,
+      "expected_queries": 50,
+      "files": [
+        {
+          "rfilename": "corpus/train-00000-of-00001.parquet",
+          "blobId": "88e895c36eedcfdbadfd0c42d0a5ebead06d8af3",
+          "size": 1247690,
+          "lfs": {
+            "sha256": "ba6b24a43534da33144886762af4984dadcd54c8969deeb3cf6689d9fd3174b9",
+            "size": 1247690,
+            "pointerSize": 132
+          }
+        },
+        {
+          "rfilename": "queries/train-00000-of-00001.parquet",
+          "blobId": "65be89fea06e4ab7daa7da5374021ce02a698894",
+          "size": 6431,
+          "lfs": {
+            "sha256": "6b65aa944e0d12f9e9996a78fe6f3348c06c169da42cc85d6d4004eff9811890",
+            "size": 6431,
+            "pointerSize": 129
+          }
+        }
+      ],
+      "qrels_requested_or_read": false
+    },
+    "NanoFEVER": {
+      "repo": "zeta-alpha-ai/NanoFEVER",
+      "revision": "a8bfdf1bf15181167a7e22e69cf8754bdea9b4c8",
+      "expected_docs": 4996,
+      "expected_queries": 50,
+      "files": [
+        {
+          "rfilename": "corpus/train-00000-of-00001.parquet",
+          "blobId": "031c47684662f162d617a7921add10a3545d0751",
+          "size": 3930640,
+          "lfs": {
+            "sha256": "27030417f0df4af2f762bae0477215ea7c5df28ce4f2944df8847f57defd05ad",
+            "size": 3930640,
+            "pointerSize": 132
+          }
+        },
+        {
+          "rfilename": "queries/train-00000-of-00001.parquet",
+          "blobId": "ec21051da07b6a3eac66256b65feae6be577c1ee",
+          "size": 3881,
+          "lfs": {
+            "sha256": "f3741586cc44563a481b3d12891d46cf33266125cf91f6ddc2ff0d21c82bc9d5",
+            "size": 3881,
+            "pointerSize": 129
+          }
+        }
+      ],
+      "qrels_requested_or_read": false
+    }
+  },
+  "seeds": [
+    17,
+    29,
+    41,
+    53,
+    67
+  ],
+  "fiqa": {
+    "manifest_path": "/root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/results/p8i_full_r1_20261022/manifest.json",
+    "manifest_sha256": "e22cf779ba9f280b7f97e93cb48cf0ef009c8cf70940aa9f34082f608e8f3ba6"
+  },
+  "reference_root": "/root/arc2_p3h_20261020/p8_r10_work_20261025",
+  "reference_sha256_canonical_lf": {
+    "artifact/src/mixindex_arc2/core.py": "34d51a0fde518d3c5d00ab425459a423502ce6f17e39a111ce6c9566006bf714",
+    "artifact/src/mixindex_arc2/p8_procrustes_geometry.py": "141f1dfd0530cab5dd6d814e0a6639cb99dc6212ca4917c7df82e32608580327"
+  },
+  "upstream_script": "/root/arc2_p3h_20261020/upstream_clean/reproduce-scripts/la2m/exp_la2m.py",
+  "upstream_sha256": "37015108e855101f3855755b755836280d8bb073389b23455825980302b49c67",
+  "inventory_sha256": "bd05fa57630e115c65b033f1a569560294dea18657bf7450d9b9227af451df9e",
+  "no_qrel_downloads": true,
+  "TREC_access": false,
+  "next_stage_requires_user_confirmation": true,
+  "artificial_resource_or_time_caps": null,
+  "paper_cost_or_quality_claims_authorized": false,
+  "toy_documents": [
+    "The Eiffel Tower is a landmark in Paris.",
+    "Water freezes at zero degrees Celsius.",
+    "A solar panel converts light into electricity.",
+    "The Moon orbits the Earth.",
+    "An index stores document vectors for retrieval.",
+    "A library lends books to its members.",
+    "A train connects two nearby cities.",
+    "A battery stores electrical energy.",
+    "A river carries water toward the sea.",
+    "A telescope observes distant stars.",
+    "A database can replace a stored vector.",
+    "A migration upgrades a retrieval encoder."
+  ],
+  "toy_queries": [
+    "Where is the Eiffel Tower?",
+    "What converts light into electricity?",
+    "How do vector indexes store documents?",
+    "What does a telescope observe?"
+  ],
+  "upstream_revision": "5e62baf1544264847ce3d8feeabd1ded6499b064",
+  "amendment": "protocols/B1A_R1_LINUX_SOURCE_BYTES_20261025.md"
+}

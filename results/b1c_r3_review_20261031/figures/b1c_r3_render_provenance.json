@@ -1,0 +1,66 @@
+{
+  "status": "RENDERED_FROM_INDEPENDENTLY_VERIFIED_SAVED_SCORES",
+  "generated_utc": "2026-10-31T06:02:38.898179+00:00",
+  "python": "3.12.10",
+  "inputs_sha256": {
+    "D:\\DASFAA-2027-paper\\tools\\render_b1c_r3_report.py": "695ad44d0984fd2093e28510f6c81ee36a96f0ab1cbe415cb9b3a9750bf39ac3",
+    "D:\\DASFAA-2027-paper\\results\\b1c_r3_review_20261031\\qa_completed_20261031T060049161714Z.json": "b92d738a79dec3151e09cf9c8d0b311f71e89f9c6a74dc224fb97b949cd3c5d3",
+    "D:\\DASFAA-2027-paper\\results\\b1c_r3_review_20261031\\evidence\\run\\scoring\\summary.json": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5",
+    "D:\\DASFAA-2027-paper\\results\\b1c_r3_review_20261031\\evidence\\run\\scoring\\completed.json": "1b641652575437399f9621c0bf580f774419fa9b1d03a5c8be7ae908cd034591"
+  },
+  "outputs_sha256": {
+    "figures/b1c_r3_quality_budget.pdf": "12c93f05f7fa9e3c4479e16b511901fbe896b4991f30080dfa65ec3596f8069f",
+    "figures/b1c_r3_quality_budget.svg": "6111954d0ddf8aec9a73ab6145f349633f12f15f458957527a6e43373cdf0633",
+    "figures/b1c_r3_quality_budget.png": "43b9bd96f8b2408d5320b74faf152b7dfcb01964ab72bd8bf837f599d8b2122b",
+    "figures/b1c_r3_quality_budget.csv": "a04b74688cc209e36db0817de1e6185eb9d5fc81633543d05b54f43026b191e4",
+    "figures/b1c_r3_recall_budget.pdf": "e27a4d1dd281b8883f86c575e183a196b9399ea3689bf45250cc010a6106b408",
+    "figures/b1c_r3_recall_budget.svg": "371d7e4880c06d7d68d450c244dc84a2bf9bdf93eb8902934e36e7f5c607ad3e",
+    "figures/b1c_r3_recall_budget.png": "412eb5eb6870a647c67781cef33e9cf06097d8bc00b616f0bae4ab44bfa4171d",
+    "figures/b1c_r3_recall_budget.csv": "6ab457715e2e5017aad5e0ae49eedae81edc17b82c89c8384396df72a65fbd2a",
+    "figures/b1c_r3_macro_and_condition_deltas.pdf": "b8366ee6b970576680c395ff01a044c386fb43f3c41abe08f2086bce028af79f",
+    "figures/b1c_r3_macro_and_condition_deltas.svg": "4c4b1f40eab886ddb468a9397a576a30bb9b5116a01ba17b7af3a6e75ac977b4",
+    "figures/b1c_r3_macro_and_condition_deltas.png": "a3b65267630545d74e063cc919785b77f9f8c58d3aad50369029e6dc78504072",
+    "condition_means.csv": "b6167e36197c5c99a5f835264d321d3f3613c60feff8c2b65c455ab7d8b74263",
+    "condition_contrasts.csv": "28294ffe248465f3e4a32abf794feb81e9cd5a6ef90be5faf3ebe58f057f22fa",
+    "macro_contrasts.csv": "3eb0ef58c48239f7b50ff411e7771f025fc1f057a7596a0ca4f69fc7b1b5d52b",
+    "pair_dataset_deltas.csv": "38ab30edfc36a310b04d17a46e84afa6c3f376c2160f6db27062aff541f34b88",
+    "derived_analysis.json": "d1ce38b9d7e5e77791fd47c19e0c03a1a03de99f932e5cb21be85ae4031c40b6",
+    "SUMMARY.md": "0cc1ce1cc76e9471ad13fd82a5a27edb0dde84b8a9c6b305dd81574c7e89e4fe"
+  },
+  "style": {
+    "matplotlib": "3.11.2",
+    "font_path": "C:\\Windows\\Fonts\\arial.ttf",
+    "colors": {
+      "arc2_global_tangent2_r1": "#0F4D92",
+      "procrustes_global": "#B64342",
+      "la2m20_integration_script_adaptation": "#5B9B59",
+      "simplelinear_official_final50_mlp5": "#9A4D8E",
+      "ridge_affine_l10_bias_regularized": "#42949E",
+      "embedding_converter_paper_spec": "#A17C25"
+    },
+    "dpi": 300,
+    "figure_skill": "D:/graph4paper/figures4papers/scientific-figure-making/SKILL.md",
+    "demo": "D:/graph4paper/figures4papers/figure_ophthal_review/plot_trend.py"
+  },
+  "new_scientific_computation": false,
+  "uncertainty": "saved scorer intervals only; none recomputed",
+  "visual_qa": {
+    "status": "PASS",
+    "reviewed_utc": "2026-10-31T06:03:00.270299+00:00",
+    "checks": [
+      "All three native PNG exports visually inspected",
+      "All three PDF exports rasterized with pdftoppm and visually inspected",
+      "All three SVG exports XML-parse successfully",
+      "Every mean/condition delta/condition interval in generated CSV exactly matches saved scorer",
+      "Native PNG DPI metadata is300",
+      "No clipped labels or overlaps; all six methods and native references visible; negative nDCG heatmap cell highlighted red"
+    ],
+    "reviewer": "report/figure agent; numeric evidence independently verified in input QA receipt"
+  },
+  "scope": "All 144 partial +16 reference means;120 condition contrasts;five macro contrasts;no omitted negative conditions",
+  "pdf_previews_sha256": {
+    "b1c_r3_macro_and_condition_deltas_pdf_preview.png": "37908c5a440fb3a52399ff7c1a3ba5aedef35aedfe7f18d46558be23eedd6c2f",
+    "b1c_r3_quality_budget_pdf_preview.png": "654745c213d104dff6a4d74c68f6952b9ba8fbf744d7279ccd062d951eb49a27",
+    "b1c_r3_recall_budget_pdf_preview.png": "e5a1a840397b0b8218b53e45f630193abb990dfc0c4271bbb2600e6cf1189ed1"
+  }
+}

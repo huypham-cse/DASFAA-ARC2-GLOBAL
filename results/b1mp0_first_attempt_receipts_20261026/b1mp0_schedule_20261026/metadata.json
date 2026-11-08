@@ -1,0 +1,45 @@
+{
+  "status": "FAILED_PRESERVED",
+  "code_commit": "5070bda3288e7f80b978898bb8710ba4107ca687",
+  "authorized_items": [
+    "B1-M",
+    "B1-P0"
+  ],
+  "automatic_next_stage": false,
+  "jobs": [
+    {
+      "job": "p0_smoke",
+      "started_unix": 1792954035.2665672,
+      "argv": [
+        "/root/arc2_p3h_20261020/venv/bin/python",
+        "/root/arc2_global_paper_20261025/code_5070bda/ops/b1p0_worker.py",
+        "--lock",
+        "/root/arc2_global_paper_20261025/code_5070bda/configs/b1p0_lock.json",
+        "--stage",
+        "smoke",
+        "--output",
+        "/root/arc2_global_paper_20261025/code_5070bda/results/b1p0_smoke_20261026",
+        "--code-commit",
+        "5070bda3288e7f80b978898bb8710ba4107ca687"
+      ],
+      "exit_code": 0,
+      "ended_unix": 1792954036.1507468
+    },
+    {
+      "job": "mechanism_smoke",
+      "started_unix": 1792954036.151024,
+      "argv": [
+        "/root/arc2_p3h_20261020/venv/bin/python",
+        "/root/arc2_global_paper_20261025/code_5070bda/ops/b1m_stage.py",
+        "--stage",
+        "smoke",
+        "--output",
+        "/root/arc2_global_paper_20261025/code_5070bda/results/b1m_smoke_20261026",
+        "--code-commit",
+        "5070bda3288e7f80b978898bb8710ba4107ca687"
+      ],
+      "exit_code": 1,
+      "ended_unix": 1792954037.4420297
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "observed_utc": "2026-10-29T04:12:46.850885+00:00",
+  "sample_seconds": 10.093619705177844,
+  "cpu_max": "400000 100000\n",
+  "cgroup_cpu_cores_used": 4.016200747012961,
+  "cgroup_delta": {
+    "usage_usec": 40538003,
+    "user_usec": 39775517,
+    "system_usec": 762486,
+    "nr_periods": 102,
+    "nr_throttled": 102,
+    "throttled_usec": 678567861
+  },
+  "processes": {
+    "114773": {
+      "cmd": "/workspace/cyber-cli-lab/lib/ollama/llama-server --model /workspace/cyber-cli-lab/models/blobs/sha256-9fddd9b57b678ca9f9f7b07b02c6f7107bc0f8b307e2383a68cf7a513e6ae0f5 --port 40361 --host 127.0.0.1 --no-webui --offline -c 16384 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on -b 512 -ub 512 --context-shift --keep 4 ",
+      "cpu_cores_used": 3.6369509722234175,
+      "main_thread_run_seconds": 0.579885011,
+      "main_thread_runqueue_wait_seconds": 9.620704565
+    },
+    "148640": {
+      "cmd": "/root/paper-P2/.venv/bin/python -u /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/ops/b1p_neural_worker.py --request /root/arc2_global_paper_20261025/code_67d7b16_b1c_r2/results/b1c_full_mini_r2_20261028/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec/request.json ",
+      "cpu_cores_used": 0.05746204205637651,
+      "main_thread_run_seconds": 0.452992834,
+      "main_thread_runqueue_wait_seconds": 8.156346592
+    }
+  },
+  "progress": {
+    "stage": "GROUP_START",
+    "group": "NanoNQ_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec",
+    "group_index": 92,
+    "groups_total": 120,
+    "rankings_complete": 236,
+    "rankings_total": 320
+  }
+}

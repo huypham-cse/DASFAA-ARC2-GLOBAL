@@ -1,0 +1,112 @@
+{
+  "status": "EXACT_SAME_DEVICE_CHECKPOINT_FROZEN",
+  "source": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker/selection_resume.pt",
+  "path": "/root/arc2_global_paper_20261025/handoff_mini_r5_20261026/selection_resume.pt",
+  "sha256": "42568657061faa8c408a7c0c7cba1482f334a0478cc1233eb5b7d18784dc9f09",
+  "bytes": 542871640,
+  "current_step": 25000,
+  "selected_step": 24750,
+  "identity": {
+    "method": "embedding_converter_paper_spec_paired_budget",
+    "config": {
+      "hidden_multiplier": 5,
+      "iterations": 50000,
+      "batch_size": 64,
+      "local_k": 100,
+      "local_samples_per_center": 1,
+      "alpha": 0.1,
+      "beta": 0.1,
+      "learning_rate": 0.001,
+      "adam_betas": [
+        0.9,
+        0.999
+      ],
+      "adam_epsilon": 1e-08,
+      "report_every": 250,
+      "transform_batch_size": 256,
+      "threads": 4,
+      "device": "cuda"
+    },
+    "seed": 17,
+    "converter_source_sha256_canonical_lf": "1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+    "source": {
+      "shape": [
+        25217,
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "338e626a816652586fbca4496c4f46e0dfa273c50487b54f7d7d968119b73af9"
+    },
+    "target": {
+      "shape": [
+        25217,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "5a187b60e16128105700018b0f7560aa693be65438b7aa45ac33a68e78e58608"
+    },
+    "normalized_source": {
+      "shape": [
+        25217,
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "7510af1e7728c7a2013b428d9a94010a5112f0c6e564d997afae8bf6a65b7751"
+    },
+    "normalized_target": {
+      "shape": [
+        25217,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "d0ed119ba368a9fa7590657811d806e4ef60cf14cd4c669bdb75cbf82845b90b"
+    },
+    "validation_source": {
+      "shape": [
+        3602,
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "10d9323f85c530a5bc9f32e16b944bc9027fb6706744fb103dd03987303ee113"
+    },
+    "validation_target": {
+      "shape": [
+        3602,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "20f3e1a663e427c472577cca4a80f35402a684be95898b2842403a43167ad12e"
+    },
+    "normalized_validation_source": {
+      "shape": [
+        3602,
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "68804f1683a26ed9fd19daf8bfec69ca4f3a69cebc3571425715a5e5892f4824"
+    },
+    "normalized_validation_target": {
+      "shape": [
+        3602,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "eda15661bd2e25e0d3b342abf09f4de00d5d62d25846c63ee6044d9a9dc2ae7f"
+    },
+    "neighbor_implementation": "dense_float32_scores_stable_topk_r1",
+    "neighbor_block_rows": 256,
+    "neighbor_sha256": "ba787ed812e66a0e3cb3fd001d5355b7c0635592f77f3abe7679f44169f78fcf",
+    "torch_version": "2.6.0+cu124",
+    "numpy_version": "2.2.6",
+    "cuda_runtime": "12.4",
+    "cuda_device": "NVIDIA H100 80GB HBM3 MIG 2g.20gb",
+    "cublas_workspace_config": ":4096:8"
+  },
+  "utc": "2026-10-26T13:41:25.658375+00:00",
+  "optimizer_updates": 0,
+  "qrel_reads": 0,
+  "fields_changed": [],
+  "source_final_logged_step": 28000,
+  "discarded_logged_updates_for_R5": 3000,
+  "qualification": "Original25k Mini checkpoint copied without reserialization; not the20k full-H100 derivative. Original timing/discarded compute kept separate."
+}

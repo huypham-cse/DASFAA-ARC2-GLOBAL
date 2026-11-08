@@ -1,0 +1,310 @@
+{
+  "claim_revision": "supervisor-review-20261101-r3-paper-story",
+  "purpose": "Freeze the interpretation of completed evidence before manuscript writing; not a new experiment protocol or method revision.",
+  "method": "arc2_global_tangent2_r1",
+  "algorithm": {
+    "initialization": "centered rectangular Procrustes affine map",
+    "ridge_lambda": 10,
+    "tangent_steps": 2,
+    "local_residual": false,
+    "neural_training_required": false,
+    "main_fit_pairs": 1024
+  },
+  "central_claim": "ARC2-Global combines a compact affine document adapter with two closed-form tangent corrections for staged embedding-index migration. With 1,024 paired fitting documents, it improves aggregate nDCG@10 over five declared baseline configurations on four development collections and achieves prospective TREC-COVID gains over the declared Converter, affine-ridge and SimpleLinear configurations.",
+  "independent_family": {
+    "positive": 11,
+    "unresolved": 19,
+    "negative": 0,
+    "positive_by_baseline": {
+      "Procrustes": 0,
+      "LA2M20": 0,
+      "SimpleLinear": 2,
+      "affine_ridge": 4,
+      "Converter": 5
+    },
+    "comparisons_per_baseline": 6,
+    "nDCG_Procrustes_point_differences_all_negative": true,
+    "no_equivalence_or_noninferiority_claim": true
+  },
+  "statistical_scope": "B2: all50queries, seeds17/29/41/53/67 averaged before20kshared query bootstrap, seed20261031,30Bonferroni contrasts. Approximate percentile family coverage95%; Recall95% nominal descriptive.",
+  "evidence_sources": {
+    "DEV": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+    "independent": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+    "all_paid": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+    "mechanism": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+    "mixed_diagnostics": "results/b1g_r1_review_20261027/scoring/results_summary.json"
+  },
+  "preserved_limits": [
+    "No independently confirmed nDCG advantage over Procrustes/LA2M.",
+    "All-paid E5 loses to Procrustes/LA2M; MiniLM versus ridge is unresolved.",
+    "Two-step necessity is DEV evidence; not an independent B2 ablation.",
+    "Mixed-vector replacement can reverse proxy-only ordering.",
+    "No measured physical migration cost, dollar saving, ANN/SLO or real-traffic benefit.",
+    "No novelty priority or venue acceptance probability established."
+  ],
+  "review_assurance": {
+    "claim_supported": "partial",
+    "review_independence": "same-family",
+    "acceptance_status": "provisional",
+    "formal_paper_integrity_audit": "not performed"
+  },
+  "manuscript_modified": false,
+  "further_experiments_authorized_by_package": false,
+  "complete_experiment_coverage": {
+    "main_DEV": 736,
+    "extra_mechanism": 360,
+    "extra_allpaid": 60,
+    "independent_B2": 184,
+    "unique_quality_cells": 1340,
+    "G_diagnostic_cases_separate": 450,
+    "original_FiQA_versions_retained": 64,
+    "B3_B4": "not run / conditional"
+  },
+  "fresh_release_semantic_audit": "REVIEW_UNAVAILABLE: account quota interrupted final reviewer verdict; deterministic numerical/inventory checks retained.",
+  "presentation_highlights": [
+    {
+      "title": "Broad development gain",
+      "scope": "Four inspected DEV collections; fixed1,024 pairs; macro over24dataset/pair/budget strata; ARC2 minus Procrustes.",
+      "delta_ndcg10": 0.024325109040435233,
+      "saved_family_interval": [
+        0.018132175212397208,
+        0.030791640313948616
+      ],
+      "source": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "source_sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5",
+      "raw_record": {
+        "left": "arc2_global_tangent2_r1",
+        "right": "procrustes_global",
+        "strata": 24,
+        "aggregation": "equal_dataset_pair_budget",
+        "ndcg10": {
+          "ci95": [
+            0.01955835392729735,
+            0.029207604573451666
+          ],
+          "descriptive": false,
+          "interval_interpretation": "above_zero",
+          "ci_bonferroni_family95": [
+            0.018132175212397208,
+            0.030791640313948616
+          ],
+          "per_interval_confidence": 0.99,
+          "family_interval_interpretation": "above_zero",
+          "delta": 0.024325109040435233,
+          "ci95_descriptive": true
+        },
+        "recall100": {
+          "ci95": [
+            -0.004943626172438673,
+            0.0043358499949124945
+          ],
+          "descriptive": true,
+          "interval_interpretation": "unresolved",
+          "delta": -0.0002385903910903914,
+          "ci95_descriptive": true
+        }
+      }
+    },
+    {
+      "title": "The second correction contributes",
+      "scope": "DEV ablation; two steps minus one step; fixedlambda10.",
+      "delta_ndcg10": 0.006923862939737235,
+      "saved_family_interval": [
+        0.003809388309482942,
+        0.009959126205904258
+      ],
+      "source": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "source_sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+      "raw_record": {
+        "scope": "overall",
+        "left": "arc2_global_tangent2_r1",
+        "right": "tangent1_l10",
+        "strata": 24,
+        "aggregation": "equal weight over 24 dataset/pair/budget strata; within dataset equal queries; five-seed average",
+        "ndcg10": {
+          "delta": 0.006923862939737235,
+          "ci95": [
+            0.004584432900988409,
+            0.009226028099450147
+          ],
+          "descriptive": true,
+          "interval_interpretation": "above_zero",
+          "mapping_seed_variability": {
+            "mean": 0.006923862939737235,
+            "seed_std": 0.0020084533271641346,
+            "seed_range": [
+              0.003827292446927387,
+              0.009036945683211683
+            ],
+            "seeds": 5
+          },
+          "ci99_bonferroni_family95": [
+            0.003809388309482942,
+            0.009959126205904258
+          ],
+          "family_interval_interpretation": "above_zero"
+        },
+        "recall100": {
+          "delta": -0.0012588394475894476,
+          "ci95": [
+            -0.0036198694765882263,
+            0.0006479673671236164
+          ],
+          "descriptive": true,
+          "interval_interpretation": "unresolved",
+          "mapping_seed_variability": {
+            "mean": -0.0012588394475894478,
+            "seed_std": 0.001774075749788361,
+            "seed_range": [
+              -0.0031884860509860512,
+              0.0005221331908831909
+            ],
+            "seeds": 5
+          }
+        }
+      }
+    },
+    {
+      "title": "Matched all-paid evidence",
+      "scope": "FiQA DEV, MiniLM→DistilRoBERTa,50%budget; both methods fit28,819paid pairs; ARC2 minus Procrustes.",
+      "delta_ndcg10": 0.03375954732030533,
+      "saved_family_interval": [
+        0.018645329403840227,
+        0.05040795355988812
+      ],
+      "source": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "source_sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7",
+      "raw_record": {
+        "id": "minilm_distilroberta__arc2_allpaid_vs_baseline_allpaid__procrustes_global",
+        "kind": "arc2_allpaid_vs_baseline_allpaid",
+        "pair": "minilm_distilroberta",
+        "left": {
+          "method": "arc2_global_tangent2_r1",
+          "regime": "allpaid28819"
+        },
+        "right": {
+          "method": "procrustes_global",
+          "regime": "allpaid28819"
+        },
+        "familywise": true,
+        "dataset": "FiQA",
+        "budget": "50pct",
+        "ndcg10": {
+          "delta": 0.03375954732030533,
+          "ci95": [
+            0.0241099466663953,
+            0.04404567583409277
+          ],
+          "descriptive": true,
+          "interval_interpretation": "above_zero",
+          "mapping_seed_variability": {
+            "mean": 0.033759547320305325,
+            "seed_std": 0.0003138837740250079,
+            "seed_range": [
+              0.03351601138314186,
+              0.03420657058388042
+            ],
+            "seeds": 5
+          },
+          "ci_bonferroni_family95": [
+            0.018645329403840227,
+            0.05040795355988812
+          ],
+          "per_interval_confidence": 0.9984375,
+          "family_interval_interpretation": "above_zero"
+        },
+        "recall100": {
+          "delta": 0.0017053246753246736,
+          "ci95": [
+            -0.012078228715728716,
+            0.015719799783549773
+          ],
+          "descriptive": true,
+          "interval_interpretation": "unresolved",
+          "mapping_seed_variability": {
+            "mean": 0.0017053246753246753,
+            "seed_std": 0.0019984335324254093,
+            "seed_range": [
+              -0.0018595959595959597,
+              0.0028181818181818186
+            ],
+            "seeds": 5
+          }
+        }
+      }
+    },
+    {
+      "title": "Prospective transfer gain",
+      "scope": "TREC-COVID, E5-small→E5-base,25%budget; fixed1,024 pairs; ARC2 minus declared Converter.",
+      "delta_ndcg10": 0.25723359077319435,
+      "saved_family_interval": [
+        0.17573076152800798,
+        0.33756850203860655
+      ],
+      "source": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "source_sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+      "raw_record": {
+        "dataset": "TREC-COVID",
+        "pair": "e5_small_base",
+        "budget": "25pct",
+        "left": "arc2_global_tangent2_r1",
+        "right": "embedding_converter_paper_spec",
+        "ndcg10": {
+          "ci95": [
+            0.20634954315490223,
+            0.3084705371596377
+          ],
+          "ci95_descriptive": true,
+          "interval_interpretation": "above_zero",
+          "ci_bonferroni_family95": [
+            0.17573076152800798,
+            0.33756850203860655
+          ],
+          "per_interval_confidence": 0.9983333333333333,
+          "family_interval_interpretation": "above_zero",
+          "coverage": "approximate percentile bootstrap",
+          "delta": 0.25723359077319435,
+          "mapping_seed_variability": {
+            "mean": 0.25723359077319435,
+            "seed_std": 0.024304549666813863,
+            "seed_range": [
+              0.2170697592382117,
+              0.2767858989374312
+            ],
+            "seeds": 5
+          }
+        },
+        "recall100": {
+          "ci95": [
+            0.03448584750468477,
+            0.05524002316870595
+          ],
+          "ci95_descriptive": true,
+          "interval_interpretation": "above_zero",
+          "delta": 0.04433176658637875,
+          "mapping_seed_variability": {
+            "mean": 0.04433176658637876,
+            "seed_std": 0.0020902260256626293,
+            "seed_range": [
+              0.0416278423134174,
+              0.046496346914421
+            ],
+            "seeds": 5
+          }
+        }
+      }
+    }
+  ],
+  "parameter_storage_comparison": {
+    "dimensions": [
+      384,
+      768
+    ],
+    "dtype": "float32",
+    "ARC2_final_affine_parameters": 295680,
+    "declared_converter_MLP_parameters": 33927168,
+    "parameter_byte_ratio_converter_to_ARC2": 114.74285714285715,
+    "scope": "Final mapping coefficients/weights only, not total fit/RSS/encoding/index/serving cost. Affine ridge also has295680coefficients."
+  },
+  "presentation_scope": "Positive results are foregrounded with explicit experiment conditions; full declared comparisons, historical evidence and review status remain available in the evidence guide."
+}

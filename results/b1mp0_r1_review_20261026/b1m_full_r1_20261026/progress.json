@@ -1,0 +1,9 @@
+{
+  "stage": "RANKING",
+  "cells": 736,
+  "total": 736,
+  "dataset": "FiQA",
+  "pair": "e5_small_base",
+  "method": "ridge_affine_l10_bias_regularized",
+  "seed": 67
+}

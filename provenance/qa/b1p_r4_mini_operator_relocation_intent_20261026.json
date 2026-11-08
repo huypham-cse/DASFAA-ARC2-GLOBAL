@@ -1,0 +1,39 @@
+{
+  "status": "OPERATOR_RELOCATION_INTENT",
+  "utc_before_signal": "2026-10-26T11:12:33.560269+00:00",
+  "reason": "User requested transfer to full H100; destination smoke B1P_SMOKE_PASS and zero-update HANDOFF_TARGET_LOAD_PASS verified before stop",
+  "pid": 18841,
+  "argv": [
+    "/root/paper-P2/.venv/bin/python",
+    "-u",
+    "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/ops/b1p_neural_worker.py",
+    "--request",
+    "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/request.json"
+  ],
+  "source_code_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+  "source_request_sha256": "125627957cf27f23aef145c0ea0b659c44e6db93d6d7a98c175c72e185841c01",
+  "source_run": "/root/arc2_global_paper_20261025/code_3b56a1c_mini_r3/results/b1p_full_mini_r3b_20261026",
+  "resume_step": 20000,
+  "last_logged_progress_before_signal": {
+    "cuda_reserved_bytes": 931135488,
+    "elapsed_seconds": 5264.098343869671,
+    "global": 0.052827030420303345,
+    "gradient_nonzero": true,
+    "gradient_norm": 0.003784953150898218,
+    "gradients_finite": true,
+    "local": 0.063925601541996,
+    "loss": 0.03244282677769661,
+    "observed_rss_bytes": 2127638528,
+    "own_cuda_allocated_bytes": 744842240,
+    "parameters_finite": true,
+    "regression": 0.020767562091350555,
+    "step": 28000,
+    "validation_mae": 0.022525446489453316
+  },
+  "post_snapshot_logged_updates_discarded_before_signal": 8000,
+  "qualification": "Last logged step is a lower bound; retain unreported work and all raw metadata without relabeling",
+  "destination_code_commit": "42731ebdaf79527a45ba6d2ae868385755dafbd2",
+  "destination_host": "103.73.232.225",
+  "signal": "SIGTERM",
+  "other_processes_signalled": false
+}

@@ -1,0 +1,160 @@
+{
+  "status": "STATIC_AUXILIARY_IMPORT_AUDIT_COMPLETE",
+  "created_utc": "2026-10-30T03:45:01.051795+00:00",
+  "scope": "Auxiliary dependency repair after first R3 synthetic smoke failed at official config loader import; no numerical method/source/protocol/lock change",
+  "historical_evidence": {
+    "mini_gpu_freeze": {
+      "path": "results/b1p_mini_runtime_review_20261026/mini_dependency_inventory_pre_r3b_20261026.json",
+      "sha256": "15db8daffad63070f7dbea5f33de398de379ac604917bd6b87835d93b4a26034",
+      "packages_axis": "packages.gpu"
+    },
+    "mini_official_import_preflight": {
+      "path": "results/b1p_mini_runtime_review_20261026/mini_official_import_preflight_r2_20261026.json",
+      "sha256": "64b2453d79df30f7815e20f48968cdce2fac0761be3de8dab5a3dd2d2be1c2c4",
+      "observed_status": "OFFICIAL_IMPORT_AND_DEFAULTS_PASS",
+      "returncode": 0,
+      "no_fit_no_labels": true
+    },
+    "current_lock_read_only": {
+      "path": "configs/b1c_r3_lock.json",
+      "sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d"
+    }
+  },
+  "upstream_static_verification": {
+    "local_historical_clone": "D:\\DASFAA-2027-P1-embedding-migration\\artifact\\results\\r12_official_translator_feasibility\\r12_full_20261007T162300+0700\\upstream_source",
+    "git_revision": "5e62baf1544264847ce3d8feeabd1ded6499b064",
+    "expected_revision": "5e62baf1544264847ce3d8feeabd1ded6499b064",
+    "method": "Read Git HEAD blobs and compare SHA256 against upstream_raw_sha256; never import package code. Working checkout uses CRLF, so immutable Git blobs are the comparison source.",
+    "locked_blobs_checked": 83,
+    "all_locked_blob_hashes_match": true,
+    "relevant_blob_sha256": {
+      "src/embedding_translation/__init__.py": "56e48543ff1dad3277d8c6be8ffd5d99be67db129d63a04671be431aa8badd1d",
+      "src/embedding_translation/clustering/manage.py": "9bdae3b1734ca8aeaec68102d544cfc99f82a33a6a0eb8012d60f41cffc16678",
+      "src/embedding_translation/clustering/utils.py": "ede38e36942b410f43a47c82afa7d12ee9a718e56e893b009dfa63e672f75dd2",
+      "src/embedding_translation/config/__init__.py": "482de09e67f12e1715ce020a776150e9a9e391be207d46cce4b046218fa96396",
+      "src/embedding_translation/config/loader.py": "cf39e73b4aa4576ac7131d7bec41992334f1c882bbf700e8f388572532bbd650",
+      "src/embedding_translation/config/settings.py": "4b394c20a8eea3bb6ad558244139c367156ce2ff723a0312eb714a5a0cbcbd3b",
+      "src/embedding_translation/dataset/__init__.py": "53984e85e3d449a3799e9812e99b00e7b151448a7cf4f7c3b75399848467ebcf",
+      "src/embedding_translation/embedding/__init__.py": "36dc67a6176b30dae788548f6868f2d8085e62fa4b6cfba265520702577952ec",
+      "src/embedding_translation/mapper/__init__.py": "8e298c51db664493f47ea4d086ed393ba48830720c390e1ea0386ddb9971cf65",
+      "src/embedding_translation/mapper/gromov_wasserstein/strategy.py": "af3342d1713e8d8e97d4e0452330d6cd0551ff0ce5096a775ac36dbe2b17893f",
+      "src/embedding_translation/mapper/simple_linear/strategy.py": "9f22cb2c39baca27b660260c80df31da8ab6bb856160b660b5b3840c649ea821",
+      "src/embedding_translation/reference/la2m_split.py": "b6da718a266664cc483cf3e84ddfe409e54be33368966c3e390c88adbfdca0b4",
+      "src/embedding_translation/reference/manage.py": "b1740b2cc6a1bdc37de28714668ae05983fb59933e186e14cbb80f778d974ef2"
+    }
+  },
+  "required_auxiliary_repair": [
+    {
+      "distribution": "PyYAML",
+      "version": "6.0.3",
+      "installation_policy": "Explicit exact version, --no-deps, isolated GPU environment only",
+      "historical_gpu_freeze_entry": "pyyaml==6.0.3"
+    },
+    {
+      "distribution": "pydantic-settings",
+      "version": "2.16.1",
+      "installation_policy": "Explicit exact version, --no-deps, isolated GPU environment only",
+      "historical_gpu_freeze_entry": "pydantic-settings==2.16.1"
+    },
+    {
+      "distribution": "python-dotenv",
+      "version": "1.2.4",
+      "installation_policy": "Explicit exact version, --no-deps, isolated GPU environment only",
+      "historical_gpu_freeze_entry": "python-dotenv==1.2.4"
+    },
+    {
+      "distribution": "POT",
+      "version": "0.9.7.post1",
+      "installation_policy": "Explicit exact version, --no-deps, isolated GPU environment only",
+      "historical_gpu_freeze_entry": "pot==0.9.7.post1"
+    }
+  ],
+  "static_import_findings": [
+    {
+      "source": "src/embedding_translation/__init__.py",
+      "finding": "Package initialization eagerly imports mapper and clustering families, so importing official SimpleLinear/config also reaches unrelated mapper module imports."
+    },
+    {
+      "source": "src/embedding_translation/config/loader.py:15",
+      "finding": "Unconditional import yaml requires PyYAML."
+    },
+    {
+      "source": "src/embedding_translation/config/settings.py:11",
+      "finding": "Unconditional import pydantic_settings requires pydantic-settings and its base dependency python-dotenv."
+    },
+    {
+      "source": "src/embedding_translation/mapper/gromov_wasserstein/strategy.py:11",
+      "finding": "Eager import ot raises ImportError when POT is absent, even though this campaign never fits Gromov-Wasserstein."
+    },
+    {
+      "source": "src/embedding_translation/embedding/__init__.py",
+      "finding": "EmbeddingRequest and function definitions import without invoking vectorbench. vectorbench imports occur inside get_embedding, generate_embeddings, and __getattr__; these APIs are never called by official_components/default inspection."
+    },
+    {
+      "source": "src/embedding_translation/dataset/__init__.py",
+      "finding": "Dataset type import is guarded by TYPE_CHECKING; other vectorbench imports are inside lazy helper functions/__getattr__."
+    },
+    {
+      "source": "src/embedding_translation/reference/manage.py:19",
+      "finding": "Dataset import is under TYPE_CHECKING; no runtime VectorBenchmark import."
+    },
+    {
+      "source": "src/embedding_translation/reference/la2m_split.py:21",
+      "finding": "Dataset import is under TYPE_CHECKING; no runtime VectorBenchmark import."
+    },
+    {
+      "source": "src/embedding_translation/clustering/manage.py:12",
+      "finding": "Imports EmbeddingRequest/get_embedding function objects without calling embedding acquisition/generation."
+    },
+    {
+      "source": "src/embedding_translation/clustering/utils.py:255",
+      "finding": "matplotlib, seaborn and umap imports occur inside plotting functions; they are outside the official SimpleLinear API-only import/default path."
+    }
+  ],
+  "dependency_metadata_crosscheck": {
+    "pydantic-settings": {
+      "version": "2.16.1",
+      "source_url": "https://pypi.org/pypi/pydantic-settings/2.16.1/json",
+      "base_requires_dist": [
+        "pydantic>=2.7.0",
+        "python-dotenv>=1.2.2",
+        "typing-extensions>=4.0.0",
+        "typing-inspection>=0.4.0"
+      ],
+      "interpretation": "Existing pinned pydantic and installed typing dependencies satisfy the base requirements; python-dotenv is the additional explicit repair."
+    },
+    "PyYAML": {
+      "version": "6.0.3",
+      "source_url": "https://pypi.org/pypi/PyYAML/6.0.3/json",
+      "base_requires_dist": []
+    },
+    "POT": {
+      "version": "0.9.7.post1",
+      "source_url": "https://pypi.org/pypi/POT/0.9.7.post1/json",
+      "base_requires_dist": [
+        "numpy>=1.16",
+        "scipy>=1.6"
+      ],
+      "interpretation": "Existing pinned NumPy/SciPy satisfy base requirements; extras are not requested."
+    }
+  },
+  "excluded_additional_installation": {
+    "vectorbench_sentence_transformers_transformers": "Not needed for the API-only import/default path. None occur in the historical Mini GPU freeze that accompanies successful official import/default preflight. No model/dataset APIs may be called.",
+    "pandas": "Historical Mini freeze contains pandas==3.1.0; no direct eager upstream dependency in this API-only static closure, so excluded from this four-package repair.",
+    "plotting_packages": "matplotlib/seaborn/umap lazy plotting path is not executed."
+  },
+  "observed_actions": {
+    "static_source_reads": true,
+    "distribution_metadata_reads": true,
+    "upstream_package_imports": false,
+    "package_installations_by_this_audit": false,
+    "fits": false,
+    "scientific_runs": false,
+    "scientific_rankings_generated": 0,
+    "real_data_or_qrels_opened": false,
+    "numerical_source_changes": false,
+    "bootstrap_source_changes": false,
+    "protocol_or_lock_changes": false
+  },
+  "next_gate": "Root records isolated exact-version --no-deps repair, then pure official_components/defaults plus metadata preflight. Preserve first failed smoke; only after that gate use a distinct matching synthetic smoke output under unchanged scientific source/lock."
+}

@@ -1,0 +1,74 @@
+{
+  "key": "yang2026translation",
+  "existence": "YES",
+  "metadata": {
+    "authors": {
+      "status": "correct",
+      "canonical": [
+        "Beining Yang",
+        "Yang Cao"
+      ]
+    },
+    "title": {
+      "status": "correct",
+      "canonical": "Generalizable and Composable Multi-Model Embedding Translation"
+    },
+    "year": {
+      "status": "correct",
+      "canonical": 2026
+    },
+    "venue": {
+      "status": "correct",
+      "canonical": "Proceedings of the 43rd International Conference on Machine Learning"
+    },
+    "volume": {
+      "status": "correct",
+      "canonical": "306"
+    },
+    "pages": {
+      "status": "correct",
+      "canonical": "144275--144302"
+    },
+    "DOI": {
+      "status": "not supplied; not listed in publisher record",
+      "canonical": null
+    },
+    "version": {
+      "status": "correct",
+      "canonical": "Published ICML 2026 / PMLR 306 proceedings version"
+    },
+    "url": {
+      "status": "correct",
+      "canonical": "https://proceedings.mlr.press/v306/yang26e.html"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "what_verified": "Live publisher landing page and exported BibTeX: existence, authors, title, year, venue, volume, pages, proceedings version; abstract confirms OOD, mixing, chaining and HMoE."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf",
+      "what_verified": "Live publisher-linked full PDF downloaded successfully. Sections 3 and 4, especially 4.1/4.2 and Figure 6, support hierarchical experts and PCA-based directional residual penalties. PDF pages 6-7 extracted directly with pypdf.",
+      "sha256": "38b35ae4755468e2619731e527d216792b936008e343c09e229c8e4f04856c05",
+      "matches_local_pdf": "paper/review/citation_sources/yang2026translation_reading.pdf"
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 8,
+      "verdict": "SUPPORTS",
+      "reason": "The cited sentence accurately summarizes OOD translation, multi-model mixing/chaining, HMoE and directional residual regularization. Section 4 defines PC1/PC2 from target training embeddings; mixing penalizes residual components orthogonal to PC1, while chaining allocates propagated upstream and downstream errors to PC1 and PC2. This is shared principal-direction residual shaping, not a per-anchor tangent target."
+    }
+  ],
+  "verdict": "KEEP",
+  "exact_correction": null,
+  "scope_note": "Only yang2026translation and its supplied occurrence were audited; neighboring citations were not assessed. No manuscript or bibliography changes made.",
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "generated_at": "2026-11-01T08:20:20.315077+00:00"
+}

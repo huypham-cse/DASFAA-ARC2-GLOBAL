@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+<link rel="stylesheet"  type="text/css" href="./style.css">    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Publication</title>	
+		<meta name="Description" content="Publication">
+
+          <style>
+          a {
+  /* color: inherit; /\* blue colors for links too *\/ */
+  text-decoration: inherit; /* no underline */
+          }
+          </style>
+
+	</head>
+<body>
+
+<a name="publications" style="font-family: arial,sans-serif; color: #00c"></a>
+	<div class="publications">
+	  <h2>Publications
+        <a href="./pub-topic.html" style="font-size:12pt; font-weight: 400; text-decoration: none; color:inherit">[By Topic]</a>
+        <!-- <a href="./pub-year.html" style="font-size:12pt; font-weight: 400; text-decoration: none; color:inherit">[By Year]</a> -->
+        <a href="./index.html" style="font-size:12pt; text-decoration: none; color:inherit">[<img src="./files/home.jpg" width="28" border="0" alt="Home" align="ABSMIDDLE">]
+</a>
+      </h2>
+        <style>.A{text-decoration:none}</style>
+
+
+        <h3>2027</h3>
+
+        <ul>
+<dvi id="VecDB">
+  <li>
+    <cite><a name="SIGMOD27", href="">Metric Algebra: Embedding-Independence in Vector Databases</a></cite></br>
+  ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2027. </br>
+Tianjian Yang,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>,
+<a href="https://people.inf.ed.ac.uk/Beining_Yang.html">Beining Yang</a>,
+Ziying Chen
+and
+Tiejun Ma
+      </li></br>
+
+        </ul>
+
+        <h3>2026</h3>
+        
+        <ul>
+  <li>
+    <cite><a name="ICML26a", href="">Generalizable and Composable Multi-Model Embedding Translation</a></cite></br>
+International Conference on Machine Learning (<b>ICML</b>), 2026. (<FONT COLOR=RED>Spotlight</FONT>) </br>
+<a href="https://people.inf.ed.ac.uk/Beining_Yang.html">Beining Yang</a> and
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> 
+      </li></br>
+
+
+<li>
+  <cite><a name="ICML26b", href="">Vector Linking via Cross-Model Local Isometric Consistency</a></cite></br>
+International Conference on Machine Learning (<b>ICML</b>), 2026. </br>
+Ziying Chen, <a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>, <a href="https://homepages.inf.ed.ac.uk/hsun4/index.html">He Sun</a>,
+<a href="https://people.inf.ed.ac.uk/Beining_Yang.html">Beining Yang</a> and
+Tianjian Yang
+      </li></br>
+
+  
+
+  <li>
+    <cite><a name="SIGMOD26", href="https://dl.acm.org/doi/10.1145/3769803">Integrating Vector Databases across Embedding Models</a></cite></br>
+    ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2026. (<a href="https://2026.sigmod.org/sigmod_awards.shtml"><FONT COLOR=RED>Best Paper Honorable Mention</FONT></a>)</br>
+<a href="https://people.inf.ed.ac.uk/Beining_Yang.html">Beining Yang</a>,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and
+Yang Ren
+      </li></br>
+</dvi>
+
+<li>
+  <cite><a name="SIGMODRecord26"><a href="https://sigmodrecord.org/publications/sigmodRecord/2603/pdfs/06_vectorized-zhao.pdf">
+ One Graph, Many Sources: Automating Vectorization Safely</a>
+      </a></cite></br>
+SIGMOD Record Research Highlights (<b>SIGMOD Record</b>), 2026. (<FONT COLOR=RED>Invited</FONT>)
+</br>
+<a href="http://www.inf.ed.ac.uk/people/students/Wenyue_Zhao.html">Wenyue Zhao</a>,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>, <a href="https://homepages.inf.ed.ac.uk/opb/">Peter Buneman</a>,
+<a href="https://lijia6.github.io"> Jia Li</a> and
+<a href="https://ntarmos.info">Nikos Ntarmos</a>
+      </li></br>
+
+</ul>
+
+
+<h3>2025</h3>
+<ul>
+  <dvi id="graphtrans">
+  <li>
+  <cite><a name="VLDB25", href="">Shifting Transaction Isolation on Graphs: From Systems to Data</a></cite></br>
+Proceedings of the VLDB Endowment, Volume 18 (<b>VLDB</b>), 2025</br>
+<a href="https://people.inf.ed.ac.uk/Wenzhi_Fu.html">Wenzhi Fu</a> and
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>
+      </li></br>
+</dvi>
+
+          
+<!--   <li> -->
+<!--   <cite><a name="VLDB25", href="">Shifting Transaction Isolation on Graphs: From Systems to Data</a></cite></br> -->
+<!-- Proceedings of the VLDB Endowment, Volume 18 (<b>VLDB</b>), 2025</br> -->
+<!-- <a href="https://people.inf.ed.ac.uk/Wenzhi_Fu.html">Wenzhi Fu</a> and -->
+<!-- <a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> -->
+<!--       </li></br> -->
+          
+
+
+<li>
+  <cite><a name="SIGMOD25"><a href="https://dl.acm.org/doi/10.1145/3698833?cid=81758918657">Automating Vectorized Distributed Graph Computations </a>
+      </a></cite></br>
+ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2025. (<FONT COLOR=RED>SIGMOD Research Highlight Award
+</FONT>)
+</br>
+<a href="http://www.inf.ed.ac.uk/people/students/Wenyue_Zhao.html">Wenyue Zhao</a>,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>, <a href="https://homepages.inf.ed.ac.uk/opb/">Peter Buneman</a>,
+<a href="https://lijia6.github.io"> Jia Li</a> and
+<a href="https://ntarmos.info">Nikos Ntarmos</a>
+      </li></br>
+
+<li>
+  <cite><a name="ICDE25a"> <a href="./papers/ICDE25a.pdf">Towards On-database Contextual Model Explanation</a></a></cite>
+<br>
+    The 41st IEEE International Conference on Database Engineering (<b>ICDE</b>), demo, 2025.</br>
+<a href="http://www.inf.ed.ac.uk/people/students/Shuai_An.html">Shuai An</a> and
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>
+</li><br>
+
+
+<li>
+  <cite><a name="ICDE25b"> <a href="./papers/ICDE25b.pdf">MITra: Populating Graph Traversal Algorithms
+</a></a></cite>
+<br>
+    The 41st IEEE International Conference on Database Engineering (<b>ICDE</b>), demo, 2025.</br>
+<a href="http://www.inf.ed.ac.uk/people/students/Wenyue_Zhao.html">Wenyue Zhao</a>,
+<a href="https://lijia6.github.io"> Jia Li</a>,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and
+<a href="https://ntarmos.info">Nikos Ntarmos</a>
+      </li></br>
+</ul>
+
+
+<h3>2024</h3>
+<ul>
+<li>
+  <cite><a name="SIGMOD24a"; href="https://dl.acm.org/doi/10.1145/3639263?cid=81758918657">Relative Keys: Putting Feature Explanation into Context</a></cite></br>
+ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2024.</br>
+<a href="http://www.inf.ed.ac.uk/people/students/Shuai_An.html">Shuai An</a> and
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>
+      </li></br>
+          
+
+<li>
+  <cite><a name="SIGMOD24b"><a href="https://dl.acm.org/doi/10.1145/3654933?cid=81758918657">Counterfactual Explanation at Will, with Zero Privacy Leakage</a></a></cite></br>
+ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2024.</br>
+<a href="http://www.inf.ed.ac.uk/people/students/Shuai_An.html">Shuai An</a> and
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>
+      </li></br>
+</ul>
+
+
+
+<h3>2023</h3>
+<ul>
+<li>
+  <cite><a name="VLDB23b", href="https://www.pure.ed.ac.uk/ws/portalfiles/portal/370689075/MITra_LI_DOA23052023_AFV_CC_BY.pdf">MITra: A Framework for Multi-Instance Graph Traversal </a></cite></br>
+Proceedings of the VLDB Endowment (<b>VLDB</b>) 2023.</br>
+<a href="https://lijia6.github.io"> Jia Li</a>,
+<a href="http://www.inf.ed.ac.uk/people/students/Wenyue_Zhao.html">Wenyue Zhao</a>, <a href="https://ntarmos.info">Nikos Ntarmos</a>, <a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and <a href="https://homepages.inf.ed.ac.uk/opb/">Peter Buneman</a>
+      </li></br>
+
+
+          <li>
+<cite><a name="SIGMOD23", href="https://www.pure.ed.ac.uk/ws/portalfiles/portal/360117816/Transaction_Scheduling_CAO_DOA16082022_AFV.pdf">Transaction Scheduling: From Conflicts to Runtime Conflicts</a></cite></br>
+ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2023.</br>
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>,
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>,
+Weijie Ou,
+Rui Xie and
+<a href="http://www.inf.ed.ac.uk/people/students/Wenyue_Zhao.html">Wenyue Zhao</a>
+      </li></br>
+
+
+  
+  <li>
+  <cite><a name="ICDE23", href="https://www.pure.ed.ac.uk/ws/portalfiles/portal/329359019/Extracting_Graphs_CAO_DOA10022023_AFV_CC_BY.pdf">Extracting Graphs Properties with Semantic Joins 
+</a></cite></br>
+The 38th International Conference on Database Engineering (<b>ICDE</b>), 2023.</br>
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>,
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>,
+Wenzhi Fu,
+Ruochun Jin,
+Weijie Ou
+and
+Wenliang Yi
+</li></br>
+</ul>
+
+
+<h3>2022</h3>
+<ul>
+<li>
+  <cite><a name="VLDB23a", href="https://www.vldb.org/pvldb/vol16/p891-cao.pdf">Making Cache Monotonic and Consistent</a> </cite></br>
+Proceedings of the VLDB Endowment, Volume 16 (<b>VLDB</b>), 2022</br>
+<a href="http://www.inf.ed.ac.uk/people/students/Shuai_An.html">Shuai An</a> and
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>
+      </li></br>
+
+          <li>
+    <cite><a name="ICDE22", href="https://www.pure.ed.ac.uk/ws/portalfiles/portal/262596459/Competitive_Consistent_AN_DOA23032022_AFV.pdf">Competitive Consistent Caching for Transactions</a> </cite></br>
+      The 38th IEEE International Conference on Data Engineering (<b>ICDE</b>), 2022.</br>
+        <a href="http://www.inf.ed.ac.uk/people/students/Shuai_An.html">Shuai An</a>,
+        <a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and
+        <a href="http://www.inf.ed.ac.uk/people/students/Wenyue_Zhao.html">Wenyue Zhao</a>
+      </li></br>
+</ul>
+
+
+<h3>2020</h3>
+<ul>
+<li>
+    <cite><a name="SIGMOD20"><a href="https://www.research.ed.ac.uk/portal/files/143085316/Querying_Shared_Data_CAO_DOA07042020_AFV.pdf" >Querying Shared Data with Security Heterogeneity</a></a></cite><br>
+    ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2020.<br>
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>,
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a> ,
+Yanghao Wang and
+<a href="https://www.cse.ust.hk/~yike/">Ke Yi</a>
+</li><br>
+
+        <li>
+    <cite><a name="VLDB20"> <a href="./papers/vldb20.pdf">Pattern Functional Dependencies for Data Cleaning</a></a></cite>
+    <br>
+    The 46th International Conference on Very Large Data Bases (<b>VLDB</b>), 2020.<br>
+Abdulhakim Qahtan, <a href="http://da.qcri.org/ntang/">Nan Tang</a>, <a href="https://www.hbku.edu.qa/en/staff/dr-mourad-ouzzani-0">Mourad Ouzzani</a>,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and
+<a href="https://www.csail.mit.edu/person/michael-stonebraker">Michael Stonebraker</a>
+        </li><br>
+
+ <li>
+    <cite><a name="IJAC20"> <a href="./papers/IJAC.pdf">Bounded Evaluation: Querying Big Data with Bounded Resources</a></a></cite>
+    <br>
+    International Journal of Automation and Computing, 2020
+(<font color="RED"><em>invited</em></font>).<br>
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>,
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a> 
+and
+<a href="https://www.inf.ed.ac.uk/people/students/Tengfei_Yuan.html">Tengfei Yuan</a>
+</li><br>
+        </li>
+</ul>
+
+
+<h3>2019</h3>
+<ul>    
+<li>
+    <cite><a name="VLDB19"><a href="./papers/VLDB19.pdf">Block as a Value for SQL over NoSQL</a></a></cite>
+  <br>
+45th International Conference on Very Large Data Bases (<b>VLDB</b>), 2019.<br>
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a>,
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a> 
+and
+<a href="https://www.inf.ed.ac.uk/people/students/Tengfei_Yuan.html">Tengfei Yuan</a>
+</li><br>
+
+        <li>
+    <cite><a name="SIGMOD19"> <a href="./papers/sigmod19.pdf">ANMAT: Automatic Knowledge Discovery and Error Detection through Pattern Functional Dependencies</a></a></cite>
+    <br>
+ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), demo, 2019.<br>
+Abdulhakim Qahtan, <a href="http://da.qcri.org/ntang/">Nan Tang</a>, <a href="https://www.hbku.edu.qa/en/staff/dr-mourad-ouzzani-0">Mourad Ouzzani</a>,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and
+<a href="https://www.csail.mit.edu/person/michael-stonebraker">Michael Stonebraker</a>
+        </li><br>
+</ul>
+        
+
+<h3>2018</h3>
+<ul>
+<li>
+    <cite><a name="TODS18a"> <a href="./papers/tods18.pdf">Bounded Query Rewriting Using Views</a></a></cite>
+    <br>
+ACM Transactions on Database Systems (<b>TODS</b>), 2018.
+(<font color="RED"><em>invited</em></font>).<br>
+<a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a>,
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>,
+<a href="http://homepages.inf.ed.ac.uk/fgeerts/">Floris Geerts</a>,
+and
+Ping Lu
+<br><p>
+</p></li>
+
+<li>
+    <cite><a name="SIGMODRecord18"> <a href="papers/SIGMOD-record-18.pdf">From Think Parallel to Think Sequential</a></a> </cite><Br>
+<b>SIGMOD Record</b> 47(1): 15-22, 2018 (<FONT COLOR=RED>SIGMOD Research Highlight Award
+</FONT>).<br>
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>,
+<a href="http://homepages.inf.ed.ac.uk/ycao/">
+Yang Cao</a>,
+<a href="https://www.inf.ed.ac.uk/people/students/Jingbo_Xu.html">
+Jingbo Xu </a>,
+<a href="http://www.inf.ed.ac.uk/people/students/Wenyuan_Yu.html">
+Wenyuan Yu</a>,
+<a href="http://eecs.wsu.edu/~yinghui/">
+Yinghui Wu</a>, <a href="http://homepages.inf.ed.ac.uk/s1400132">
+<a href="http://www.inf.ed.ac.uk/people/students/Chao_Tian.html">
+Chao Tian</a>,
+<a href="http://www.comp.hkbu.edu.hk/~jxjian/"> Jiaxin Jiang</a>,
+and
+<a href="https://github.com/bohanjason">Bohan Zhang</a>
+<br><p>
+</p></li>
+
+
+<li>
+    <cite><a name="TODS18b"> <a href="https://dl.acm.org/authorize?N41470">Parallelizing Sequential Graph Computations</a></a> </cite>
+            <br>
+ACM Transactions on Database Systems (<b>TODS</b>), 2018
+            <br>
+                Wenfei Fan, Yinghui Wu, Jingbo Xu , Wenyuan Yu, Jiaxin
+                Jiang, Zeyu Zheng, Bohan Zhang, Yang Cao and Chao Tian
+            <br><p>
+            </p></li>
+</ul>
+
+
+
+
+<h3>2017</h3>      
+<ul>
+<li>
+    <cite><a name="VLDB17"> <a href="http://www.vldb.org/pvldb/vol10/p973-cao.pdf">Data Driven Approximation with Bounded Resources</a></a> </cite>
+    <!-- [&nbsp;<a href="./papers/VLDB17.pptx">Slides</a>&nbsp;] -->
+    <br>
+The 43rd International Conference on Very Large Data Bases (<b>VLDB</b>), 2017.<br>
+<a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and
+<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>
+<br><p>
+</p></li>
+
+
+
+            <li>
+                <cite><a name="SIGMOD17a"> <a href="https://dl.acm.org/authorize?N41471">
+                        BEAS: Bounded Evaluation of SQL Queries
+                </a></a> </cite><br>
+            ACM SIGMOD Conference on Management of Data, (<b>SIGMOD</b>)
+            demo, 2017.<br>
+            <a href="http://homepages.inf.ed.ac.uk/ycao/">
+                Yang Cao</a>, 
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>,
+            Yanghao Wang, Tengfei Yuan, Yanchao Li
+            and Laura Yu Chen.
+            <br><p>
+            </p></li>
+
+
+
+            <li>
+                <cite><a name="SIGMOD17b"> <a href="https://dl.acm.org/authorize?N41470">Parallelizing Sequential Graph Computations</a></a> </cite>
+            <br>
+            ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2017 (<em><font color="RED">the Best Paper Award</font></em>).<br>
+                Wenfei Fan, Yinghui Wu, Jingbo Xu , Wenyuan Yu, Jiaxin
+                Jiang, Zeyu Zheng, Bohan Zhang, Yang Cao and Chao Tian
+            <br><p>
+            </p></li>
+
+
+            <li>
+                <cite><a name="CIKM17"> <a href="https://dl.acm.org/authorize?N41479">
+                    Relaxing Graph Pattern Matching With Explanations
+                </a></a> </cite>
+            <br>
+            The ACM International Conference on Information and
+                Knowledge Management (<b>CIKM</b>), 2017. <br>
+            <a = href="https://lijia6.github.io/">Jia Li</a>,
+            <a href="http://homepages.inf.ed.ac.uk/ycao/">
+                Yang Cao</a>, 
+            <a href="http://mashuai.buaa.edu.cn/">Shuai Ma</a>
+            <br><p>
+            </p></li>
+
+            <li>
+                <cite><a name="DAKD17"> <a href="http://manu44.magtech.com.cn/Jwk_infotech_wk3/CN/10.11925/infotech.2096-3467.2017.0723">
+                            Is Big Data Analytics beyond the Reach of Small Companies?
+                </a></a> </cite><br>
+                        Data Analysis and Knowledge Discovery, Sept. 2017
+                        (<font color="RED"><em>invited</em></font>).<br>
+                        <a href="http://homepages.inf.ed.ac.uk/s1165433/">
+                            Yang Cao</a>,
+                        <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>, and
+                        Tengfei Yuan
+                           <br><p>
+                           </p></li>
+        
+                       <li>
+                           <cite><a name="CJ17"> <a href="https://academic.oup.com/comjnl/article/60/3/287/2608063">Virtual Network Mapping in Cloud Computing: A Graph Pattern Matching Approach</a></a></cite>
+            <br>
+            The Computer Journal, 2017, Vol 60(3) 
+                (<FONT COLOR=RED>invited</FONT>)<br>
+            <a
+                href="http://homepages.inf.ed.ac.uk/s1165433/">Yang
+                Cao</a>,
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei
+                Fan</a> and
+<a href="http://mashuai.buaa.edu.cn">Shuai Ma</a>
+                </li><br>
+</ul>                       
+
+
+
+<h3>2016</h3>
+<ul>
+<li>
+<cite><a name="SIGMOD16"> <a href="https://dl.acm.org/authorize?N26337">An Effective Syntax for Bounded Relational Queries</a></a></cite>
+        <!-- [&nbsp;<a href="./papers/SIGMOD16-slides.pdf">Slides</a>&nbsp;] -->
+            <br>
+            ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2016. <br>
+            <a href="http://homepages.inf.ed.ac.uk/ycao/">Yang Cao</a> and 
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a> 
+            </li><br>
+
+
+            <li>
+            <cite><a name="PODS16"> <a href="https://dl.acm.org/authorize?N26336">
+                        Bounded Query Rewriting Using Views
+            </a></a></cite><Br>
+            ACM Symposium on Principles of Database Systems
+               (<b>PODS</b>), 2016. <br>
+            <!--<em><FONT COLOR=RED>(Invited to the "Best of PODS 2016" issue of ACM TODS)</FONT></em>-->
+            <a href="http://homepages.inf.ed.ac.uk/s1165433/">
+                Yang Cao</a>,
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei
+                Fan</a>,
+            <a href="http://homepages.inf.ed.ac.uk/fgeerts/">Floris
+                Geerts</a>,
+            and
+            Ping Lu
+            </li>
+            <br>
+
+
+        <li>
+        <cite><a name="CIKM16"> <a href="https://dl.acm.org/authorize?N41472">Approximating Graph
+            Pattern Queries Using Views</a></a></cite>
+            <br>
+            The ACM International Conference on Information and
+                Knowledge Management (<b>CIKM</b>), 2016. <br>
+            <a href="https://lijia6.github.io/">Jia Li</a>, 
+            <a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a> and 
+            Xudong Liu
+            </li><br>
+</ul>
+            
+
+<h3>2015</h3>            
+<ul>
+<li>
+<cite><a name="PODS15"> <a href="https://dl.acm.org/authorize?N26338">Querying Big Data by Accessing Small Data</a></a></cite>
+            <!-- [&nbsp;<a href="./papers/pods15.ppt">Slides</a>&nbsp;] -->
+            <br>
+            ACM Symposium on Principles of Database Systems
+                (<b>PODS</b>), 2015.<br>
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei
+                Fan</a>,
+            <a  href="http://adrem.ua.ac.be/floris.geerts">Floris Geerts</a>,
+            <a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a>,
+            <a>Ting Deng</a> and
+            <a>Ping Lu</a>
+                </li><br>
+
+            <li>
+                <cite><a name="ICDE15"> <a href="./papers/icde15.pdf">Making Pattern Queries Bounded in Big Graphs</a></a></cite>
+            <!-- [&nbsp;<a href="./papers/BoundedG.ppt">Slides</a>&nbsp;] -->
+            <br>
+            The 31st International Conference on Data
+                Engineering (<b>ICDE</b>), 2015.<br>
+            <a
+                href="http://homepages.inf.ed.ac.uk/s1165433/">Yang
+                Cao</a>,
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei
+                Fan</a>,
+            <a>Jinpeng Huai</a>,
+            <a>Ruizhe Huang</a>
+                </li><br>
+
+            <li>
+                <cite><a name="BICOD15"> <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-20424-6_6">Virtual Network Mapping: A Graph Pattern Matching Approach</a></a></cite>
+            <br>
+            The 30th British International Conference on
+                Databases (<b>BICOD</b>), 2015.<br> <!--<em><FONT COLOR=RED>(Invited to the "Best of papers from BICOD 2015" issue of the Computer Journal)</FONT></em>--> 
+            <a
+                href="http://homepages.inf.ed.ac.uk/s1165433/">Yang
+                Cao</a>,
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei
+                Fan</a> and
+<a href="http://mashuai.buaa.edu.cn">Shuai Ma</a>
+                </li><br>
+</ul>
+
+            
+<h3>2014</h3>            
+<ul>
+            <li>
+                <cite><a name="VLDB14"> <a href="./papers/vldb14.pdf">Bounded Conjunctive Queries</a></a></cite>
+            <!-- [&nbsp;<a href="./papers/vldb14.ppt">Slides</a>&nbsp;] -->
+            <br>
+            The 40th International Conference on Very Large Data
+                Bases (<b>VLDB</b>), 2014.<br>
+            <a
+                href="http://homepages.inf.ed.ac.uk/s1165433/">Yang
+                Cao</a>,
+            <a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei
+                Fan</a>,
+            and
+            <a
+                href="http://www.inf.ed.ac.uk/people/students/Wenyuan_Yu.html">
+                Wenyuan Yu</a>
+            </li><br>
+
+		    <li>
+                <cite><a name="TODS13"> <a href="./papers/TODS13.pdf">Strong Simulation: Capturing Topology in Graph Pattern Matching</a></a></cite>
+        <br>
+                ACM Transaction on Database Systems (<b>TODS</b>)<br>
+				<a href="mashuai.buaa.edu.cn">Shuai Ma</a>, and
+				<a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a>, 
+				<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>, 
+				<a>Jinpeng Huai</a>,
+				<a>Tianyu Wo</a>
+                </li><br>
+
+            <li>
+                <cite><a name="IS14"> <a href="./papers/IS14.pdf">On the Data Complexity of Relative Information Completeness</a></a></cite>
+            <br>
+            Information Systems 45:18-34, 2014<br>
+            <a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a>,
+            <a>Ting Deng</a>,
+            <a>Wenfei Fan</a>,
+            <a>Floris Geerts</a>
+            </li><br>
+</ul>
+
+
+<h3>2013</h3>            
+<ul>
+            <li>
+                <cite><a name="SIGMOD13"> <a href="https://dl.acm.org/authorize?N46912">Determining the Relative Accuracy of Attributes</a></a></cite>
+                <!-- [&nbsp;<a href="./papers/sigmod13.pptx">Slides</a>&nbsp;] -->
+                <br>
+				ACM SIGMOD Conference on Management of Data (<b>SIGMOD</b>), 2013<br>
+				<a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a>, 
+				<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>, and 
+				<a>Wenyuan Yu</a>
+			    </li><br>
+</ul>
+
+<h3>2012</h3>                
+<ul>
+<li>
+                <cite><a name="WWW12"> <a href="./papers/www12.pdf">Distributed Graph Pattern Matching</a></a></cite>
+                <br>
+				The  21st International World Wide Web Conference  (<b>WWW</b>), 2012<br>
+				<a href=" http://mashuai.buaa.edu.cn/">Shuai Ma</a>, 
+				<a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a>, 
+				<a>Jinpeng Huai</a>, and 
+				<a>Tianyu Wo</a>
+			</li>	
+            <br>
+
+			<li>
+                <cite><a name="VLDB12"> <a href="./papers/vldb12.pdf">Capturing Topology in Graph Pattern Matching</a></a></cite>
+         <br>
+                The 38th International Conference on Very Large Data Bases  (<b>VLDB</b>), 2012<br>
+                <a href=" http://mashuai.buaa.edu.cn/">Shuai Ma</a>, 
+				<a href="http://homepages.inf.ed.ac.uk/s1165433/">Yang Cao</a>, 
+				<a href="http://homepages.inf.ed.ac.uk/wenfei/">Wenfei Fan</a>, 
+				<a>Jinpeng Huai</a>, 
+				<a>Tianyu Wo</a>
+			</li>
+            <br>
+            </ul>
+</ul>
+	     </div>
+</body></html>

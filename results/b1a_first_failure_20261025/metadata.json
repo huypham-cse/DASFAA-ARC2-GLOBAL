@@ -1,0 +1,19 @@
+{
+  "status": "FAILED_PRESERVED",
+  "stage": "B1a only",
+  "code_commit": "7e5bd0f36a9875eec800006811215903ef21f2a9",
+  "lock_sha256": "3631968355583b3a2ca9ded1fa8beed9473f16a834c9aa1cb8362a374e7fda83",
+  "started_utc": "2026-10-25T16:11:35.572696+00:00",
+  "new_qrel_reads": 0,
+  "benchmark_rankings_generated": false,
+  "independent_scoring": false,
+  "artificial_resource_or_time_caps": null,
+  "failures": [
+    "ValueError('Upstream kernel changed')"
+  ],
+  "source_worktree": "/root/arc2_global_paper_20261025/code_7e5bd0f",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_7e5bd0f/ops/b1a_stage.py\", line 224, in main\n    meta['cpu_runtime']=synthetic_checks(lock,out)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/code_7e5bd0f/ops/b1a_stage.py\", line 177, in synthetic_checks\n    if sha(upstream)!=lock['upstream_sha256']:raise ValueError('Upstream kernel changed')\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Upstream kernel changed\n",
+  "wall_seconds": 1.4051045030355453,
+  "peak_process_tree_rss_bytes": 63447040,
+  "ended_utc": "2026-10-25T16:11:36.977609+00:00"
+}

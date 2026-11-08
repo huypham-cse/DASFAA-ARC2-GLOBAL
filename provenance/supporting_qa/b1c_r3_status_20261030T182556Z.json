@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-30T18:25:56.163975+00:00",
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "NanoHotpotQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec",
+    "group_index": 109,
+    "groups_total": 120,
+    "rankings_complete": 325,
+    "rankings_total": 358
+  },
+  "run_metadata": {
+    "status": "B1C_R3_RUNNING",
+    "stage": "full",
+    "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+    "restored_root": "/network-volume/arc2_recovery_20261030/restored",
+    "started_utc": "2026-10-30T03:47:30.526928+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null
+  },
+  "schedule_status": "RUNNING",
+  "free_bytes": 594012512256,
+  "worker": {
+    "path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoHotpotQA_NanoHotpotQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec/worker",
+    "status": "RUNNING",
+    "failures": [],
+    "selection_progress.jsonl": {
+      "cuda_reserved_bytes": 809500672,
+      "elapsed_seconds": 2318.5626678057015,
+      "global": 0.0039047906175255775,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.0018996908329427242,
+      "gradients_finite": true,
+      "local": 0.0038749855011701584,
+      "loss": 0.001740449806675315,
+      "observed_rss_bytes": 1556996096,
+      "own_cuda_allocated_bytes": 617617920,
+      "parameters_finite": true,
+      "regression": 0.0009624722297303379,
+      "step": 36000,
+      "validation_mae": 0.016271082684397697
+    }
+  },
+  "gpu_lines": [
+    "|  0    3   0   0  |            8222MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |",
+    "|                  |                13MiB / 32767MiB  |           |                       |",
+    "|    0   N/A  N/A     97688      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    101181      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    101182      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    101183      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    101184      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    116226      C   ...covery_20261030/envs/gpu/bin/python          0MiB |"
+  ],
+  "owned_processes": [
+    "   2777       1 Ss      14:39:24  0.0 21424 /network-volume/arc2_recovery_20261030/envs/cpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_campaign.py --code-commit 61f73171b1869a186648aadd88f1b6f81a61376b --name mini_r3b_20261030t0347 --restored-root /network-volume/arc2_recovery_20261030/restored --lock /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+    "   2997    2777 Sl      14:38:27  2.9 246796 /network-volume/arc2_recovery_20261030/envs/cpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_stage.py --stage full --output /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347 --code-commit 61f73171b1869a186648aadd88f1b6f81a61376b --smoke /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347 --lock /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json --restored-root /network-volume/arc2_recovery_20261030/restored",
+    " 116226    2997 Rl         38:45 48.6 1515072 /network-volume/arc2_recovery_20261030/envs/gpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1p_neural_worker.py --request /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoHotpotQA_NanoHotpotQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec/request.json"
+  ],
+  "scoring_completed.json": null,
+  "scoring_failure.json": null
+}

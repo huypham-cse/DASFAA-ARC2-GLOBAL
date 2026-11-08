@@ -1,0 +1,16 @@
+{
+  "observed_utc": "2026-10-29T12:34:37.859908+00:00",
+  "sample_seconds": 5.101730512455106,
+  "cpu_quota": "400000 100000\n",
+  "container_cores_used": 4.012347761220586,
+  "processes": {
+    "216388": {
+      "kind": "baseline_worker",
+      "cores_used": 0.06860417247550174
+    },
+    "220913": {
+      "kind": "other_llama",
+      "cores_used": 3.810471751210726
+    }
+  }
+}

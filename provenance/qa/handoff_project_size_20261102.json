@@ -1,0 +1,93 @@
+[
+  {
+    "path": "D:\\DASFAA-2027-paper\\.git",
+    "logical_bytes": 717561880,
+    "files": 513,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\.cache",
+    "logical_bytes": 265596160,
+    "files": 2,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\results",
+    "logical_bytes": 2195516197,
+    "files": 9194,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\paper",
+    "logical_bytes": 116110975,
+    "files": 954,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\provenance",
+    "logical_bytes": 396555679,
+    "files": 348,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\tmp",
+    "logical_bytes": 3596360,
+    "files": 25,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\src",
+    "logical_bytes": 238323,
+    "files": 22,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\ops",
+    "logical_bytes": 1524482,
+    "files": 77,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\configs",
+    "logical_bytes": 3599387,
+    "files": 28,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\protocols",
+    "logical_bytes": 138985,
+    "files": 23,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\refine-logs",
+    "logical_bytes": 182449,
+    "files": 11,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\tools",
+    "logical_bytes": 1365011,
+    "files": 96,
+    "errors": [],
+    "reparse_skipped": []
+  },
+  {
+    "path": "D:\\DASFAA-2027-paper\\manuscript",
+    "logical_bytes": 422940,
+    "files": 25,
+    "errors": [],
+    "reparse_skipped": []
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "status": "SNAPSHOT_VERIFIED_BEFORE_SMOKE",
+  "origin_project_commit": "989e6794a5e4900436360f091d3849b58466f9fb",
+  "deployment_commit": "67d7b16c28f7205d3873f6fe09df62eab722fdd4",
+  "sources_verified": 38,
+  "bundle": "D:\\ARC2-server-backup-20261028\\b1c_recovery_r2_source.bundle",
+  "bundle_bytes": 447689,
+  "bundle_sha256": "3f028c279d49628e792d0f166ac545a567bda0fa0e2b15b362108d4bf7d2e0fc",
+  "lock_sha256": "c032cfae85321c4d56b83e2c31e7ec4e32dd355f264fab5fe72240aff0ebcceb",
+  "manifest_sha256": "e9e06db2d6e9a910cf6dd00af066a9f83a02ed9be3a50c57a97088a3ede7f8da",
+  "operator_first_launch": "Missing empty results parent; launcher failed before scientific directory creation, logs retained remotely.",
+  "operator_correction": "Created results parent, relaunched identical committed campaign via distinct operator retry directory."
+}

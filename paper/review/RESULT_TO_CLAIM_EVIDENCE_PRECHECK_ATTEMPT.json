@@ -1,0 +1,8 @@
+{
+  "completed": "paper/review/RESULT_TO_CLAIM_EVIDENCE_PRECHECK_CONFIG.json",
+  "summary": {
+    "verified": 3
+  },
+  "primary_values": "Primary-source field/array checks and all stated family intervals verified in RESULT_TO_CLAIM_NUMERIC_CHECKS.json.",
+  "full_text_scan": "Stopped owned token-only scan because repeated large-JSON scans were slow; no verdict derived from incomplete scan."
+}

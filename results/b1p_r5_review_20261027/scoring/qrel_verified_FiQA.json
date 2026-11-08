@@ -1,0 +1,14 @@
+{
+  "dataset": "FiQA",
+  "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+  "bytes": 18327,
+  "columns": [
+    "query-id",
+    "corpus-id",
+    "score"
+  ],
+  "evaluation_queries": 500,
+  "queries_without_positive_judgments": 0,
+  "positive_judgments_outside_corpus_retained_in_denominator": 0,
+  "qrel_queries_outside_evaluation_set": 0
+}

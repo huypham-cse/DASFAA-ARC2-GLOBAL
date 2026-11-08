@@ -1,0 +1,180 @@
+{
+  "id": "tc1l_minilm_local_20261102_r1",
+  "scope": "MiniLM-only local FiQA development; E5 pending",
+  "protocol": "protocols/TC1L_MINILM_LOCAL_20261102.md",
+  "parent_lock_sha256": "c48679786a8216e18fcdd61fe7cae366b7c9b0383c7a3da35293c1a10e78c30b",
+  "pairs": [
+    "minilm_distilroberta"
+  ],
+  "seeds": [
+    17,
+    29,
+    41,
+    53,
+    67
+  ],
+  "methods": [
+    "procrustes",
+    "tangent2",
+    "chordal2",
+    "euclidean2"
+  ],
+  "budget": 0.5,
+  "anchor_count": 1024,
+  "lambda": 10,
+  "steps": 2,
+  "data": {
+    "old_docs": {
+      "path": ".cache\\tc1l_minilm\\old_docs_1110a243fdf4.npy",
+      "sha256": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782"
+    },
+    "new_docs": {
+      "path": ".cache\\tc1l_minilm\\new_docs_842eaed40bee.npy",
+      "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56"
+    },
+    "new_queries": {
+      "path": "D:\\DASFAA-2027-MixIndex\\artifact\\results\\q16c_arc2_dev\\q16c_encode_20261018T003211\\dev_queries.npy",
+      "sha256": "826911a012bb37e0b117f0929517ee3c21345dc9f402cda71c47cf677a550375"
+    }
+  },
+  "ids": {
+    "path": "results\\fiqa_development\\ids.json",
+    "sha256": "4e35413aac2b8f4cd4d27137089d73953e96d2b09c19eaf8331c9c80f4de7d33"
+  },
+  "anchors": {
+    "17": {
+      "path": "results\\fiqa_development\\selections\\anchors_seed_17.npy",
+      "sha256": "9017e78fb0d0ccfc9be165e4b54237c4a64e99340f6e6d2b7509d0951b1d3742"
+    },
+    "29": {
+      "path": "results\\fiqa_development\\selections\\anchors_seed_29.npy",
+      "sha256": "ed71f164f67b7a52e0178d5c72a4831d707d23940054bbb2bdbec7384f4e6799"
+    },
+    "41": {
+      "path": "results\\fiqa_development\\selections\\anchors_seed_41.npy",
+      "sha256": "25ff4c37f05f6a5f688b735832cbe0318ac4253a09db2d3a0837695bb37c65c3"
+    },
+    "53": {
+      "path": "results\\fiqa_development\\selections\\anchors_seed_53.npy",
+      "sha256": "49df88affebb76e24b9aa5b6683238d46addf286be630d7095f0a8fe92bf10cc"
+    },
+    "67": {
+      "path": "results\\fiqa_development\\selections\\anchors_seed_67.npy",
+      "sha256": "8cbf18767cb2b7605aa9f0210f48f14ba1364cd81e4c27b989ea24e76a5d257c"
+    }
+  },
+  "paid50": {
+    "17": {
+      "path": "results\\fiqa_development\\selections\\seed17_50pct.npy",
+      "sha256": "8440c5dcffac5c910b6371178b997e695013113334789389b7aed89fa0147372"
+    },
+    "29": {
+      "path": "results\\fiqa_development\\selections\\seed29_50pct.npy",
+      "sha256": "d03e01ca34dcd5f3525667cb4693957194d40158a1a5333b161742af0c053606"
+    },
+    "41": {
+      "path": "results\\fiqa_development\\selections\\seed41_50pct.npy",
+      "sha256": "2e16553bdd5592efdc8a7dd0e28940b3b26d17465241874ccd5b5a58cbdbc97a"
+    },
+    "53": {
+      "path": "results\\fiqa_development\\selections\\seed53_50pct.npy",
+      "sha256": "d19abd2321ece1cdd4f72298120fdb1a9d1c7293d979c53136e1e00e51af4f5c"
+    },
+    "67": {
+      "path": "results\\fiqa_development\\selections\\seed67_50pct.npy",
+      "sha256": "f75b8a20bab0551c81d5ca56075d46700dfba4dd24444e1db5d1a7063d90cf24"
+    }
+  },
+  "runtime": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Windows"
+  },
+  "blas_threads": 4,
+  "expected_full_rankings": 20,
+  "expected_smoke_rankings": 4,
+  "qrels": {
+    "archive": "provenance/qa/cloud_backup_20261030/local_transport_20261030.tar",
+    "member": "root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+    "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+    "already_inspected_development": true
+  },
+  "model_provenance": {
+    "distilroberta_y": {
+      "id": "sentence-transformers/all-distilroberta-v1",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/distilroberta_y",
+      "revision": "842eaed40bee4d61673a81c92d5689a8fed7a09f",
+      "dimension": 768,
+      "file_sha256": {
+        "1_Pooling/config.json": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56",
+        "config.json": "6f9efb40bd192274dd2e6f43c326cd4571cbefe647f4a274e83073be4f13f928",
+        "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "data_config.json": "2ba682c372ee7ac37d519df39571ec0543f55ae31273844be05f8a5acdf92e2a",
+        "merges.txt": "fe36cab26d4f4421ed725e10a2e9ddb7f799449c603a96e7f29b5a3c82a95862",
+        "model.safetensors": "3c739fad12f3f12428a677cfcc73391a5860a8bad0ff7a971fd67e6065201fc2",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "ec8e29d6dcb61b611b7d3fdd2982c4524e6ad985959fa7194eacfb655a8d0d51",
+        "special_tokens_map.json": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+        "tokenizer.json": "7a6751507c44ab383cc8ba8ab97cd857d35025ff1b29162b1690cc5e0c6030e9",
+        "tokenizer_config.json": "5066b57002ab15418f3472aa53a8b083878f84050e8153ba62b9d40e10651a4c",
+        "vocab.json": "ed19656ea1707df69134c4af35c8ceda2cc9860bf2c3495026153a133670ab5e"
+      },
+      "document_prefix": "",
+      "query_prefix": ""
+    },
+    "minilm_x": {
+      "id": "sentence-transformers/all-MiniLM-L6-v2",
+      "path": "/root/arc2_p3h_20261020/p3h_b_models/minilm_x",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "dimension": 384,
+      "file_sha256": {
+        "1_Pooling/config.json": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+        "config.json": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+        "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "data_config.json": "32edcb108fc2516b920734a862ae0692bcae1c5d45d5f8d972cb0d53434a4c54",
+        "model.safetensors": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+        "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "tokenizer.json": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "tokenizer_config.json": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "document_prefix": "",
+      "query_prefix": ""
+    }
+  },
+  "bootstrap": {
+    "draws": 20000,
+    "seed": 20261102,
+    "family_size": 4,
+    "observed_contrasts": 2,
+    "E5_pending": 2,
+    "quantiles": [
+      0.00625,
+      0.99375
+    ]
+  },
+  "source_sha256": {
+    "protocols/TC1L_MINILM_LOCAL_20261102.md": "78ab3da4bad52044190fb45ee2c4f3e4b6dbfe6edcc91b14534574cf26b7a57e",
+    "tools/build_tc1l_lock.py": "a7bc3e088d5971347ef68dde3053c6fcd1cbe75f6f5824944aec93939dee8843",
+    "ops/tangent_control_local_run.py": "7d4eba8fc377155e49cce36d2f8e2af54f9c223b56cdde28b06765b2c19ff1c8",
+    "ops/tangent_control_local_score.py": "a929b177ac22c26bcc12920552bcc919d7dac2421eeb833598cb87000075c6e7",
+    "ops/tangent_control_local_campaign.py": "984b681437a0d73cbdb6c89128664711a481f204120e8529fc55f6528b967477",
+    "ops/tangent_control_run.py": "1bb3bd91d4a9d4bae9329f39cb0fab56ccd74e38d086457bd10c4fd72b4ca069",
+    "ops/b1m_score.py": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+    "src/arc2_global/__init__.py": "fcc953b59fcd88e686af0fb6555c78d8abdf31aae50e348905e80760b0a325cf",
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "src/arc2_global/diagnostics.py": "0905e7c4cab1b0263b661f2d29677890080811e56218fbfcf0c81d2c14a18d9d",
+    "src/arc2_global/embedding_converter.py": "1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+    "src/arc2_global/mechanism_ablation.py": "c1e87fc33198b75976954f2388c486880b37a388ff8b3267e223b3f8b5c84d9b",
+    "src/arc2_global/model.py": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+    "src/arc2_global/numerics.py": "27b5d96941af54a2e5f202df447a34548d369d8bd6a1b4013af047803d85a5a5",
+    "src/arc2_global/procrustes.py": "2a6142a65498f0376e7fd8e4cc433b4a1a1bd072e8fa3379f5a11585cd299e64",
+    "src/arc2_global/residual_ablation.py": "e4fd831580c52420d661b0e9792a720a2fa134e49122dc168076d7d0135f90f2",
+    "src/arc2_global/retrieval.py": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+    "src/arc2_global/solver_backend.py": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887"
+  },
+  "STOP": "After local verification/report/ARIS; before manuscript, method, regrade, E5 or new study"
+}

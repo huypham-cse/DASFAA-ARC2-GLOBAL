@@ -1,0 +1,21 @@
+\section{Practical Value of Directional Adaptation}
+\label{sec:discussion}
+\paragraph{Compact inference with stronger development ranking.}
+The 295,680 float32 coefficients occupy 1.13\,MiB, or 114.7 times fewer
+parameter bytes than the evaluated Converter. Both corrections are absorbed
+into this matrix. Affine ridge has the same coefficient count; refinement
+provides the measured quality benefit, while affine mapping provides compactness.
+
+\paragraph{When the adapter is useful.}
+ARC2 targets required destination-model queries during staged document
+replacement. E5 demonstrates useful quality at limited exposure; MiniLM
+benefits from fitting all paid pairs without increasing document coverage.
+Procrustes and LA2M remain competitive on the held collection, so deployment
+choice should follow encoder-specific mixed-gallery validation. When source
+queries remain acceptable, Full-X is also viable: all 24 partial-development
+five-seed ARC2 condition means are below it.
+
+\paragraph{Efficiency in the measured units.}
+Destination-vector exposure, coefficient storage and the absence of neural
+mapper training describe the demonstrated resource advantages. Physical
+encoding time, index resources and serving SLOs require deployment measurements.

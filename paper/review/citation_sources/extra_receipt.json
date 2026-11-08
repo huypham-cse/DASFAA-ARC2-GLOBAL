@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://www.research.ed.ac.uk/en/publications/integrating-vector-databases-across-embedding-models/",
+    "status": 200,
+    "file": "la2m_institutional_page.txt",
+    "sha256": "de335b414a39717ac2974e8aa8ac19dde4f6968143337213ae91dca6a65b8dd6"
+  },
+  {
+    "url": "https://www.research.ed.ac.uk/files/572061340/main.pdf",
+    "status": 403,
+    "file": "la2m_author_pdf_attempt.txt",
+    "sha256": "bf89928609b0b6950b68fde6ad3e535bab242afce99bf412bf315c86d12b00fb"
+  },
+  {
+    "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/106-/bibtex",
+    "status": 200,
+    "file": "beir_correct_bib.txt",
+    "sha256": "88cbe79f8366e5ba980ee43c4e73b76c621e875f8e8a63669779932358676d24"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/src/embedding_translation/mapper/simple_linear/strategy.py",
+    "status": 200,
+    "file": "simplelinear_source_verified.txt",
+    "sha256": "9f22cb2c39baca27b660260c80df31da8ab6bb856160b660b5b3840c649ea821"
+  }
+]

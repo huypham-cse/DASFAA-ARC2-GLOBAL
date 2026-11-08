@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering
+\caption{Matched-initialization ablation on FiQA development, MiniLM to DistilRoBERTa, at 50\% anchor-inclusive exposure (1,024 fitted anchors; five seeds).}
+\label{tab:tc1l-matched}
+\begin{tabular}{lrr}
+\toprule
+Method & nDCG@10 & Recall@100 \\
+\midrule
+Procrustes initialization & 0.28583 & 0.66879 \\
+Euclidean residual, two steps & 0.29592 & 0.67400 \\
+Norm-scaled chordal, two steps & 0.29351 & 0.67401 \\
+\textbf{ARC2-Global, two tangent steps} & \textbf{0.30750} & \textbf{0.67657} \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tabular}{lr}
+\toprule
+ARC2 minus control & $\Delta$ nDCG@10 [98.75\% interval] \\
+\midrule
+Norm-scaled chordal & +0.01400 [+0.00970, +0.01862] \\
+Euclidean residual & +0.01159 [+0.00782, +0.01566] \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{0.96\linewidth}\small
+Intervals retain the original four-contrast family (two E5 contrasts pending). These are inspected development results; the initialization, anchors, regularization and two-update count are shared across controls.
+\end{minipage}
+\end{table}

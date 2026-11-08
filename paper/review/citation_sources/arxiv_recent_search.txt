@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/yGkkZtJ6vJLNVVJqHtJQEWAgtFo</id>
+  <title>arXiv Query: search_query=all:"embedding translation" AND submittedDate:"202605010000 TO 2611012359"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-11-01T04:04:32Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22embedding+translation%22+AND+submittedDate:%22202605010000+TO+2611012359%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.40218v1</id>
+    <title>Celia: Catalog Embeddings Learned from cosmologIcal simulAtions</title>
+    <updated>2026-10-29T15:00:09Z</updated>
+    <link href="https://arxiv.org/abs/2610.40218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.40218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cosmological hydrodynamical simulations connect observed galaxies to cosmology and the physics of galaxy formation. Each simulation is expensive, and different codes model galaxy formation in different ways. We present Celia (Catalog Embeddings Learned from cosmologIcal simulAtions), a self-supervised foundation model that maps catalogs of subhalos and their galaxy properties to an embedding vector for the purposes of compression and organization of astrophysical and large-scale structure information. Celia is pretrained without parameter labels on the IllustrisTNG, SIMBA and Astrid suites of CAMELS and their N-body counterparts, by reconstructing masked subhalo properties and predicting the representations of a teacher network. Simple linear models fitted to the embeddings recover $Ω_{\mathrm m}$ with $R^2=0.999$, and $σ_8$ and both supernova-feedback amplitudes with $R^2\geq0.97$, in all three suites. The embeddings translate well to out-of-distribution simulations such as Swift-EAGLE, a code that Celia never saw. A linear model fitted on the three training codes predicts its $Ω_{\mathrm m}$ with a correlation coefficient $r=0.985$, and linear models fitted on 20 labeled simulations reach $r\geq0.94$ for $Ω_{\mathrm m}$, $σ_8$ and a supernova-feedback amplitude. We decompose the variation among the simulations of each suite into principal components of the embedding, and simple power laws of the simulation parameters describe the leading components. Celia gives simulated galaxy catalogs a shared coordinate system for simulation-based inference, emulation, the comparison of galaxy-formation models, the detection of physical degeneracies and the discovery of new astrophysical probes.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-29T15:00:09Z</published>
+    <arxiv:comment>23 pages, 14 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>Xiaowen Zhang</name>
+    </author>
+    <author>
+      <name>Matthew Ho</name>
+    </author>
+    <author>
+      <name>Anshul Kumar</name>
+    </author>
+    <author>
+      <name>Tiziana Di Matteo</name>
+    </author>
+    <author>
+      <name>Rupert A. C. Croft</name>
+    </author>
+    <author>
+      <name>Barnabás Póczos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.31669v1</id>
+    <title>Collapsed translating solitons with planar wings</title>
+    <updated>2026-10-22T17:59:50Z</updated>
+    <link href="https://arxiv.org/abs/2610.31669v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.31669v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study complete embedded translating solitons in R^3 with finite genus and finite entropy. We prove that such collapsed translators whose wings are all of planar type (in a weak topological sense) must be vertical flat planes.
+  In particular, this implies the non-existence result for gluing and doubling constructions involving planes that was conjectured in (14) and announced in (9) as an application of the authors' techniques, under weaker assumptions than previous rigidity results by Khan and Lynch-Tinaglia in (17,19,20).
+  A key ingredient is a sharp new a priori decay estimate in the exterior problem for the horizontal graphical translator equation, showing that bounded solutions to the nonlinear equation, and their gradients, are controlled by multiples of the Green's function of the linear drift Laplacian, regardless of the size of the given L^\infty data. Combined with a graphical description of the infinite ends and the Neves-Tian flux identity, this yields the main rigidity result.
+  As another application, we obtain a full classification of collapsed embedded finite-genus translators of entropy lambda &lt; 3.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-22T17:59:50Z</published>
+    <arxiv:comment>36 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Eddygledson Souza Gama</name>
+    </author>
+    <author>
+      <name>Francisco Martín</name>
+    </author>
+    <author>
+      <name>Niels Martin Møller</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.21849v1</id>
+    <title>The Weight Is Over - Interactive Diffusion on Consumer GPUs</title>
+    <updated>2026-09-18T14:42:55Z</updated>
+    <link href="https://arxiv.org/abs/2609.21849v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.21849v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On-device inference is booming, but the momentum is almost all in language models. Diffusion pipelines are memory hungry, latency-sensitive, and require orchestrating an embedder, a transformer, a decoder, and often further postprocessing that is not as standardized as LLM inference loops are. We navigate the trade-off between performance, quality, and model footprint to reach as many client devices in the wild as possible. We make three contributions: an embedding translator that maps a small text encoder into a large encoder space to cut weight and latency; a reproducible sweep recipe for navigating the speed/quality/memory triangle in diffusion pipelines; and an interactive on-device image generation editor achieving sub-second TTFI on recent GPUs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-18T14:42:55Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Frieder Ganz</name>
+    </author>
+    <author>
+      <name>Maximilian Müller</name>
+    </author>
+    <arxiv:doi>10.1145/3829339.3847852</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3829339.3847852" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04160v3</id>
+    <title>Vanilla Exact Synthesis of CNOT Circuits is NP-hard</title>
+    <updated>2026-10-16T07:33:48Z</updated>
+    <link href="https://arxiv.org/abs/2609.04160v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04160v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Exact CNOT synthesis seeks a minimum-size circuit implementing a given invertible binary linear transformation. We study its vanilla formulation: synthesis from the identity on fixed labeled qubits, without ancillas and with all-to-all connectivity. We prove that this problem is NP-hard and that its bounded decision version is NP-complete. Hardness persists even for unitriangular targets that are low-rank perturbations of the identity and under near-linear gate budgets. Our proof gives a polynomial-time reduction from the NP-complete Hamiltonian path problem on grid graphs. A unary hypercube embedding translates graph vertices into circuit parities and edge traversals into CNOT updates. The central challenge is that Hamiltonian paths require intermediate vertex visits, whereas exact synthesis constrains only the final transformation. We bridge this gap with a replicated recorder qubits construction that encodes the required parities in the final outputs, together with a tight gate budget that forces every sufficiently short implementation to trace a Hamiltonian path. Crucially, this path structure is enforced by the construction rather than imposed as a restriction on the circuit. The result directly implies NP-hardness for shortest word problem and Cayley-graph distance computation over $\mathrm{GL}(n,2)$ with elementary transvections as generators, as well as fixed-width sequential XOR program minimization. For CNOT-minimal exact phase polynomial synthesis, it yields NP-hardness with a zero phase polynomial; extending the reduction to grid-graph Hamiltonian cycle problem establishes hardness even when the final linear transformation is the identity. These complementary results show that the linear and phase components each independently suffice for NP-hardness of exact phase polynomial synthesis.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T17:49:16Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Chenjian Li</name>
+    </author>
+    <author>
+      <name>Ji Guan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.00681v1</id>
+    <title>Operationalizing open-ended biological discovery across single-cell representations</title>
+    <updated>2026-09-01T03:58:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.00681v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.00681v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Single-cell studies are typically initiated from predefined research questions, leaving much of the biological information encoded within existing data unexplored. We formalize open-ended discovery as an analytical paradigm, in which data-derived signals are identified before biological context is interrogated and subsequently evaluated according to their potential to justify prospective experimental investment. Here we develop PROSPECTor, an end-to-end framework that searches for reproducible biological structures across conventional expression representations and diverse foundation-model embeddings, translating robust signals into quantitatively testable candidate hypotheses. Projection into unseen datasets then evaluates their generalizability and phenotype association, providing a scalable screen for candidates that warrant prospective validation. Supported signals emerged from different representation spaces and search strategies. PROSPECTor-nominated hypotheses were then examined in independent biological settings: fibroblast extracellular-matrix programmes demonstrated transferability to an independent mouse cohort with an intervention context, while a patient-resolved gastric-cancer T-cell programme recurred across single-cell, bulk and spatial cohorts. PROSPECTor establishes an auditable framework for systematically revisiting single-cell datasets across expanding representation spaces, turning retrospective collections into prospective resources for biological discovery that can motivate new research questions.</summary>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T03:58:21Z</published>
+    <arxiv:comment>32 pages, 5 figures and 2 supplementary figures</arxiv:comment>
+    <arxiv:primary_category term="q-bio.QM"/>
+    <author>
+      <name>Ningxuan Zhang</name>
+    </author>
+    <author>
+      <name>Ziwei Wang</name>
+    </author>
+    <author>
+      <name>Ning Xie</name>
+    </author>
+    <author>
+      <name>Na Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22619v1</id>
+    <title>GET: Generative Embedding Translation for Medical Image Segmentation</title>
+    <updated>2026-08-23T21:49:18Z</updated>
+    <link href="https://arxiv.org/abs/2608.22619v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22619v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative segmentation provides an alternative to direct pixel-wise prediction by operating on learned latent representations, but effective image-to-mask translation must preserve target structure while remaining computationally efficient. We propose Generative Embedding Translation (GET), a structured embedding-translation framework that progressively transforms image embeddings into mask embeddings within the frozen latent space of a Stable Diffusion VAE. GET uses a U-Net-style Embedding Translation Network with 1.07M trainable parameters, combining Mobile Bottleneck Convolutions, Subsampled Self-Attention, and Multi-scale Feature Enrichment for local modeling, global context, and multi-scale refinement. Across five medical segmentation datasets, GET outperforms generative, CNN, and Transformer baselines. Compared with the strongest generative baseline, GMS, GET improves average Dice and IoU by 0.93% and 1.26%, reduces HD95 by 0.81 pixels, and uses 31.41% fewer trainable parameters. Under bidirectional BUS-BUSI domain shift, GET further improves Dice and IoU by 3.51% and 3.39%, while reducing HD95 by 27.37 pixels. Our code is available at: https://github.com/maklachur/GET.</summary>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-23T21:49:18Z</published>
+    <arxiv:comment>Accepted at ECCV 2026 - BioImage Computing Workshop</arxiv:comment>
+    <arxiv:primary_category term="eess.IV"/>
+    <author>
+      <name>Md Maklachur Rahman</name>
+    </author>
+    <author>
+      <name>Md Hasan Al Banna</name>
+    </author>
+    <author>
+      <name>Saraf Anjum</name>
+    </author>
+    <author>
+      <name>Mahmudul Hasan</name>
+    </author>
+    <author>
+      <name>Tracy Hammond</name>
+    </author>
+  </entry>
+</feed>

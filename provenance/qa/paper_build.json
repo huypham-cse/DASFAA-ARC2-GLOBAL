@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "pages": 5,
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "visual_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "pdf_sha256": "8279568f86dc26d121bb5fd0fb059b74efa122708f373295b6d024f5558c6d10",
+  "scope": "working development paper scaffold, not final publication claim audit",
+  "reused_assets": "LNCS class/style, bibliography, Makefile and section structure",
+  "initial_render_failure": "generated directory absent; fixed renderer mkdir before final successful builds",
+  "new_scientific_runs": 0,
+  "new_qrel_reads": 0,
+  "H100_accesses": 0
+}

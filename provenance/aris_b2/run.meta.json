@@ -1,0 +1,12 @@
+{
+  "skill": "result-to-claim",
+  "run_id": "2026-11-01_b2",
+  "recorded_at": "2026-11-01T02:01:57.020716+00:00",
+  "executor": "codex",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "D:/DASFAA-2027-paper"
+}

@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-22",
+  "provenance": "explicit user response to asynchronous exposure question",
+  "question": "For a possible later independent TREC-COVID test: have you or anyone on your team previously inspected its qrels, ARC2/baseline nDCG results, or tuned a method using those results? I will keep its labels closed while the development experiment runs.",
+  "answer_verbatim": "No, we have not inspected or tuned on TREC-COVID results.",
+  "dataset": "TREC-COVID",
+  "team_exposure_attested": false,
+  "labels_opened_by_P8": false,
+  "independent_scoring_authorized_by_this_record": false,
+  "future_admission": "Meaningful P8 development gate pass, separate immutable protocol and resource gates required; no automatic score or dataset substitution"
+}

@@ -1,0 +1,14 @@
+{
+  "protocol": "protocols/B1P_R3_H100_MINI_DEPLOYMENT_20261026.md",
+  "pre_run_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+  "before_source_hash_stat_or_byte_read": "2026-10-26T09:12:12.274143+00:00",
+  "source_host": "103.73.232.225",
+  "destination_host": "103.73.232.201",
+  "source": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+  "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+  "expected_sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+  "purpose": "opaque transport of previously inspected FiQA DEV TSV; no parsing/metrics; worker API excludes qrels",
+  "judgments_parsed": false,
+  "metrics_computed": false,
+  "TREC_access": false
+}

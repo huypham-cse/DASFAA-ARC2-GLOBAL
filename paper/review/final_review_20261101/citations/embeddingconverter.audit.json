@@ -1,0 +1,63 @@
+{
+  "key": "embeddingconverter",
+  "existence": "YES",
+  "metadata": {
+    "status": "matches canonical publisher export",
+    "type": "inproceedings",
+    "title": "Embedding-Converter: A Unified Framework for Cross-Model Embedding Transformation",
+    "authors": ["Jinsung Yoon", "Sercan O Arik"],
+    "author_display_note": "Publisher BibTeX uses Sercan O Arik; the PDF displays Sercan Ö. Arık. The supplied author field follows the canonical export.",
+    "booktitle": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    "year": 2025,
+    "pages": "25464--25482",
+    "doi": "10.18653/v1/2025.acl-long.1237",
+    "version": "ACL 2025 published proceedings version, 19 pages; this is the cited version, not an inferred preprint version.",
+    "canonical_url": "https://aclanthology.org/2025.acl-long.1237/"
+  },
+  "sources": [
+    {
+      "url": "https://aclanthology.org/2025.acl-long.1237/",
+      "verification": "Live primary publisher landing page opened 2026-11-01; confirms existence and bibliographic fields."
+    },
+    {
+      "url": "https://aclanthology.org/2025.acl-long.1237.bib",
+      "verification": "Live publisher-export URL opened 2026-11-01; all supplied substantive BibTeX fields match."
+    },
+    {
+      "url": "https://aclanthology.org/2025.acl-long.1237.pdf",
+      "verification": "Live primary published PDF opened and searched 2026-11-01; checked Sections 3.1–3.3, 4.2 and Appendix B."
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 44,
+      "verdict": "SUPPORTS",
+      "reason": "Appendix B specifies 50,000 iterations, batches of 64, validation every 250 iterations, and k=100; Section 3.3 specifies retrieval-based selection. The manuscript explicitly declares MAE selection and refitting as its own adaptation. No reproduction claim is made; local implementation execution is outside this citation check.",
+      "evidence_location": "Section 3.3, printed p.25467; Appendix B, printed p.25475",
+      "source_url": "https://aclanthology.org/2025.acl-long.1237.pdf"
+    },
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "verdict": "SUPPORTS",
+      "reason": "Section 4.2 converts corpus embeddings and encodes queries with the target model, directly supporting the document-side clause. The query-side clause belongs to the co-citation, not this source.",
+      "evidence_location": "Section 4.2, printed p.25468",
+      "source_url": "https://aclanthology.org/2025.acl-long.1237.pdf"
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 5,
+      "verdict": "SUPPORTS",
+      "reason": "Equations 1–4 combine pointwise L1 regression, global random-pair cosine-distance matching, and local target-neighbor distance matching. Section 4.2 establishes document-side application. This accurately supports the cited sentence; other methods in the paragraph are outside this entry's scope.",
+      "evidence_location": "Section 3.2, printed pp.25466–25467; Section 4.2, printed p.25468",
+      "source_url": "https://aclanthology.org/2025.acl-long.1237.pdf"
+    }
+  ],
+  "verdict": "KEEP",
+  "exact_fix": null,
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "Fresh one-entry citation audit from supplied input and live primary sources; no prior reviews, other models, subagents, experiments or qrels consulted."
+}

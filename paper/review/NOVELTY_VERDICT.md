@@ -1,0 +1,47 @@
+# Fresh novelty verdict
+
+Date: 2026-11-01. Reviewer: `gpt-6.1-sol`, high reasoning, following the user's model override. `review_independence: same-family`; `acceptance_status: provisional`.
+
+**Verdict: PROCEED. Score: 5/10. Confidence: moderate.** ARC2-Global clears this early novelty check as a specific, finite document-alignment refinement. Five means clear neighbors and a defensible delta, not strong novelty or submission acceptance. No inspected named paper contains the exact norm-scaled tangent-target, two-ridge-update algorithm. This search is not proof of novelty. The broad setting and several motivating observations have close prior art and must not carry the novelty claim by themselves.
+
+## Proposed method
+
+Given known paired normalized source/destination document embeddings, initialize with centered rectangular Procrustes. Twice recompute each prediction's norm and unit direction, fit an affine ridge correction to the norm-scaled component of the target perpendicular to that direction, and accumulate the coefficients. Apply the final affine map plus normalization to legacy documents, replace paid rows by true destination embeddings, and search with destination queries.
+
+## Four core claims and verifiable deltas
+
+| Claim | Nearest primary work and overlap | Technical delta and verdict |
+|---|---|---|
+| C1. Finite tangent-residual refinement of a geometric document map | Procrustes post-processing; mini-vec2vec's Procrustes initialization and refinements; recent spherical-interpolation work on residual angular discrepancy | ARC2 fixes known document correspondences and twice ridge-fits `r[y-(u dot y)u]` as an additive affine update. mini-vec2vec iteratively revises pseudo-correspondences; spherical interpolation combines old and aligned-new query directions. This exact target/solve/accumulation is a defensible narrow algorithmic delta. |
+| C2. One small final affine artifact despite directional refinement | Drift-Adapter already considers affine adaptation; Procrustes is already compact; mini-vec2vec explicitly produces a linear transformation | Addition collapses ARC2's two updates into the initial coefficients. The specific construction is useful; “small linear/affine alignment” and “no neural translator” are not independently novel. Claim the concrete 295,680-coefficient artifact, not discovery of compact cross-model conversion. |
+| C3. Destination queries over mapped legacy plus native destination documents during partial replacement | LA2M integrates databases; HMoE explicitly mixes original and translated embeddings; FastFill section 4.2 replaces transformed old gallery vectors by true new vectors | Neither coexistence nor progressive replacement is new. ARC2's contribution is evaluating this particular paired-only affine correction under explicitly anchor-inclusive document exposure and matched supervision. This is experimental specificity supporting C1, not a new problem formulation. |
+| C4. Good proxy behavior need not survive replacement; fitting on all paid pairs has encoder-dependent effects | FastFill already reports detrimental partial-backfill behavior for prior objectives; HMoE analyzes mixing residual interactions | The specified FiQA E5 fixed-fit reversal and contrasting MiniLM behavior are new measurements for the frozen configuration, with a documented paid top-10 share change. The general lesson that alignment and partial-backfill quality differ has precedent. State the measured case and retain its open causal explanation. |
+
+## Closest work and evidence basis
+
+| Work | Evidence read | What it establishes relative to ARC2 |
+|---|---|---|
+| [Integrating Vector Databases across Embedding Models](https://doi.org/10.1145/3769803), Yang/Cao/Ren, PACMMOD 2025 | DOI and institutional abstract; pinned authors' integration implementation. Publisher/author PDF fetches inaccessible. | Global and local isometric alignment and integrated retrieval already exist. Current LA2M20 is a declared paired-budget adaptation of the integration script. Full-text access limitation prevents an exhaustive line-by-line exclusion of every variation in that paper. |
+| [Generalizable and Composable Multi-Model Embedding Translation](https://proceedings.mlr.press/v306/yang26e.html), Yang/Cao, ICML 2026 | Primary proceedings and saved PDF extraction, especially sections 4 and 5.4, Fig. 9 | HMoE treats OOD translation, native/translated mixing, chaining, and residual direction regularization. Its target-space principal-direction regularizer differs from ARC2's per-prediction tangent target and global ridge solve. No HMoE superiority comparison is available here. |
+| [Embedding-Converter](https://aclanthology.org/2025.acl-long.1237/), Yoon/Arik, ACL 2025 | Primary paper sections 3–4 | Paired document conversion into a destination query space and nonlinear mapping with pointwise/global/local losses are established. ARC2's fixed affine refinement is a different mapper, not first document-side migration. Original retrieval-based selection differs from this study's MAE selection. |
+| [Drift-Adapter](https://aclanthology.org/2025.emnlp-main.805/), Vejendla, EMNLP 2025 | Primary paper | Frozen-encoder post-hoc adapters and compact affine alternatives exist. It maps destination queries to a legacy gallery; ARC2 maps legacy documents to a destination gallery. Direction is a valid scope distinction, not novelty alone. |
+| [mini-vec2vec](https://arxiv.org/html/2510.02348), Dar, latest v4 February 2026 | Latest primary method | Linear transformation, Procrustes initialization and finite/iterative refinement already exist. Its pseudo-pair matching and refinement objectives differ from fixed known-pair tangent regression. |
+| [When Embedding Models Meet](https://arxiv.org/abs/2510.13406), Maystre et al., 2025 | Primary theory and applications | Procrustes interoperability and retrieval usefulness are established. ARC2 deliberately relaxes the final isometry; it does not establish the same geometry-preservation theorem. |
+| [FastFill: Efficient Compatible Model Update](https://arxiv.org/html/2303.04766), Jaeckle et al., ICLR 2023 | Primary full HTML, especially sections 4.1–4.2 | Old-to-new mapping plus partial native-vector replacement and nonmonotonic behavior of earlier objectives are prior art. ARC2 uses a different paired-only finite objective without FastFill's neural, discriminative, and uncertainty mechanisms. |
+| [Spherical Interpolation for Backward-Compatible Multimodal Representations](https://arxiv.org/html/2609.39836), Ricci et al., September 2026 preprint | Primary abstract, introduction and method description | Angular discrepancy after Procrustes is already a direct target. Query-side SLERP using two representations differs from a stored document-side affine map learned by two tangent regressions. This is recent competing context, not a veto. |
+
+## Search breadth and limits
+
+Independent web searches used formulations around (1) tangent/residual/ridge/Procrustes normalized retrieval, (2) closed-form angular/affine embedding translation, (3) staged migration and native/translated mixing, and (4) partial backfilling, replacement quality and small linear maps. Queries included 2025/2026, arXiv, primary proceedings, and a May–November 2026 recency formulation. More than three related formulations covered each of the method, compactness, mixing and replacement claims. Recent primary work found beyond the author's initial source collection included the September 2026 spherical-interpolation paper. Older backfilling literature was followed because novelty checks cannot stop at recent text-embedding papers.
+
+Search results from general notes/blogs were discovery leads only; technical judgments above rely on the linked primary papers or official code. The search is broad, not literally exhaustive across unpublished or inaccessible manuscripts. In particular LA2M's inaccessible full PDF is an explicit confidence limit. No evidence justified ABANDON, which would require naming a paper already containing the actual result.
+
+## Positioning sentence
+
+ARC2-Global refines a paired-document Procrustes map with exactly two norm-scaled tangent-residual ridge updates that collapse into one affine adapter, and evaluates the frozen correction in anchor-inclusive staged text-index migration with development gains and selective prospective transfer.
+
+## What makes the delta carry
+
+Keep the exact target and closed-form update visible; cite the established mixed-gallery and backfilling setting fairly; distinguish the two-update development result from independent confirmation. The existing ablation shows a useful second update but does not uniquely identify tangent projection as the causal ingredient. The prospective test does not confirm improvement over Procrustes. Those issues limit contribution strength and generality rather than identifying a duplicate. A reviewer can reasonably find the method incremental; the inspected literature does not justify killing it as already published.
+
+Follow-up status: the revised Related Work now includes FastFill and spherical interpolation and states the exact paired tangent-correction delta; the revised Results avoids the causal projection inference. The verdict remains PROCEED at 5/10. These edits improve attribution and scope; they do not change the empirical evidence or turn the search into proof of novelty.

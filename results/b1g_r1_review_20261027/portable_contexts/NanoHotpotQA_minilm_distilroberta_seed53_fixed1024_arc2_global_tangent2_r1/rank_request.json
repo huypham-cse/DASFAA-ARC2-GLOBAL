@@ -1,0 +1,86 @@
+{
+  "group_id": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_arc2_global_tangent2_r1",
+  "dataset": "NanoHotpotQA",
+  "pair": "minilm_distilroberta",
+  "method": "arc2_global_tangent2_r1",
+  "seed": 53,
+  "regime": "fixed1024",
+  "output": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/groups/NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_arc2_global_tangent2_r1/rank",
+  "old_docs": {
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/minilm_x_docs.npy",
+    "sha256": "33872a10dea389aba01798828ba3556ba33007fafd93c4da844c99db158f1d9f"
+  },
+  "new_queries": {
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/distilroberta_y_queries.npy",
+    "sha256": "d569b66270e5fd9b246a875c5bb8f74a8239d13b79dbb03e549cd3b220c0b5f4"
+  },
+  "ids": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/27728b4305817d662eb6697b212c2a8958b0827aa92f45e5a5ebc4acd0dce0a5.json",
+    "sha256": "27728b4305817d662eb6697b212c2a8958b0827aa92f45e5a5ebc4acd0dce0a5"
+  },
+  "sample_positions": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_NanoHotpotQA_458d2dd0a83af0a4.npy",
+    "sha256": "f65d6f780744e649233decc0a07b4c4ae888369e832c8d219dc89bc19f268067"
+  },
+  "anchors": {
+    "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/4c1d36f589aef7e6cb02809383dcdf6ad1b92d820ca4ca45cc414cbf5ba33962.npy",
+    "sha256": "4c1d36f589aef7e6cb02809383dcdf6ad1b92d820ca4ca45cc414cbf5ba33962"
+  },
+  "proxy": {
+    "kind": "b1m_parameters",
+    "file": {
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/NanoHotpotQA_minilm_distilroberta_seed53/parameters.npz",
+      "sha256": "04e5223420e9389b3e8e073470b419e612dff38e577191a7e85758aa06797b6b"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_arc2_global_tangent2_r1_25pct",
+      "budget": "25pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/92135482cadac8732bb37e5b386c9ceed677fa39ea2629e4cb4bb1c7ca6ea536.npy",
+        "sha256": "92135482cadac8732bb37e5b386c9ceed677fa39ea2629e4cb4bb1c7ca6ea536"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/e00ecf1ec76fcd6e3ad14422602922f23b01722661b106fcae27a206a4bee597.npy",
+        "sha256": "0b70ab9f93341fa7efbdcdf43c89de7c58fa0b43ef3d4d5266643b090d470f16"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_minilm_distilroberta_arc2_global_tangent2_r1_seed53_25pct.npy",
+        "sha256": "42f7c85097c8b62088f61944b93c27b2d2e570e9d04c987cdbab83b451d51e00"
+      }
+    },
+    {
+      "case_id": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_arc2_global_tangent2_r1_50pct",
+      "budget": "50pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/15bbc390f1fe78499ba75171e1ade92f1646af173dceb0c49705bf0c1253b5b6.npy",
+        "sha256": "15bbc390f1fe78499ba75171e1ade92f1646af173dceb0c49705bf0c1253b5b6"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/d1da6cc09ce3f755d8651252c7d3d62106f784151d3f7a90a3fff106d7975ab2.npy",
+        "sha256": "ad13e31102b80f90de5a93c4ee1a9420e4d5d46266133f63d563c3d8b8f1cb16"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_minilm_distilroberta_arc2_global_tangent2_r1_seed53_50pct.npy",
+        "sha256": "b029dd9fd33cb22ec5c7fe2abbd1ee31e51001d202a947ef6483e13101fd229a"
+      }
+    },
+    {
+      "case_id": "NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_arc2_global_tangent2_r1_75pct",
+      "budget": "75pct",
+      "paid": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/2f3307d4ca26079a2e4a915afdd29fca46dd1055c52581a25edfa337b003cc76.npy",
+        "sha256": "2f3307d4ca26079a2e4a915afdd29fca46dd1055c52581a25edfa337b003cc76"
+      },
+      "paid_targets": {
+        "path": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/de2e94219f552c24eef55fb7a4551bd71ede3a8fd0a9a6f71c78602ff2a50bfd.npy",
+        "sha256": "5dce205724d87ed7c722a37f63ccbef3786c2247bb8a818248eec412b7af9ab3"
+      },
+      "published_ranking": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_minilm_distilroberta_arc2_global_tangent2_r1_seed53_75pct.npy",
+        "sha256": "2656ac959920cc22789c20dfed98795eb233b2d841d050d420effae8f75b8a1e"
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "utc": "2026-10-31T08:18:34.482468+00:00",
+  "campaign_status": "RUNNING",
+  "stage": "full",
+  "jobs": [
+    {
+      "stage": "acquire",
+      "pid": 252865,
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:49:00.203352+00:00",
+      "ended_utc": "2026-10-31T06:49:36.359798+00:00"
+    },
+    {
+      "stage": "encode_smoke",
+      "pid": 252972,
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:49:36.362117+00:00",
+      "ended_utc": "2026-10-31T06:49:53.525860+00:00"
+    },
+    {
+      "stage": "smoke",
+      "pid": 253064,
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:49:53.551094+00:00",
+      "ended_utc": "2026-10-31T06:52:40.657129+00:00"
+    },
+    {
+      "stage": "verify_smoke",
+      "pid": 253619,
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:52:40.663143+00:00",
+      "ended_utc": "2026-10-31T06:52:44.003917+00:00"
+    },
+    {
+      "stage": "encode_full",
+      "pid": 253787,
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:52:44.005899+00:00",
+      "ended_utc": "2026-10-31T07:28:48.361357+00:00"
+    },
+    {
+      "stage": "full",
+      "pid": 261763,
+      "returncode": null,
+      "started_utc": "2026-10-31T07:28:48.362584+00:00",
+      "ended_utc": null
+    }
+  ],
+  "free_bytes": 572618862592,
+  "final_labels_opened": false,
+  "metadata.json": {
+    "status": "RUNNING",
+    "stage": "full",
+    "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+    "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+    "started_utc": "2026-10-31T07:28:49.999057+00:00",
+    "failures": [],
+    "qrels_opened": false,
+    "ranking_process_qrel_reads": 0,
+    "artificial_time_memory_caps": null,
+    "new_physical_document_encodes": 0,
+    "physical_cost_claim": false,
+    "search": "exact only; no ANN measurement"
+  },
+  "progress.json": {
+    "stage": "FIT",
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "method": "embedding_converter_paper_spec",
+    "cells": 17
+  },
+  "encoding": {
+    "status": "ENCODING_PASS",
+    "wall_seconds": 2162.2248654933646,
+    "doc_encodes": 685328,
+    "models": {
+      "distilroberta_y": 463.00094093289226,
+      "e5_base_y": 785.9140302846208,
+      "e5_small_x": 494.9855403136462,
+      "minilm_x": 406.50342148542404
+    }
+  },
+  "worker": {
+    "path": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/neural/minilm_distilroberta_seed17_embedding_converter_paper_spec/worker/metadata.json",
+    "status": "RUNNING",
+    "failures": [],
+    "selection_progress.jsonl": {
+      "cuda_reserved_bytes": 809500672,
+      "elapsed_seconds": 2734.3291937913746,
+      "global": 0.005474379751831293,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.0020312436390668154,
+      "gradients_finite": true,
+      "local": 0.005210720933973789,
+      "loss": 0.0021873998921364546,
+      "observed_rss_bytes": 1822375936,
+      "own_cuda_allocated_bytes": 617617920,
+      "parameters_finite": true,
+      "regression": 0.0011188897769898176,
+      "step": 50000,
+      "validation_mae": 0.022979777306318283
+    },
+    "refit_progress.jsonl": {
+      "cuda_reserved_bytes": 809500672,
+      "elapsed_seconds": 106.29129513911903,
+      "global": 0.07925889641046524,
+      "gradient_nonzero": true,
+      "gradient_norm": 0.007547661196440458,
+      "gradients_finite": true,
+      "local": 0.11600084602832794,
+      "loss": 0.04488183185458183,
+      "observed_rss_bytes": 1678557184,
+      "own_cuda_allocated_bytes": 617028096,
+      "parameters_finite": true,
+      "regression": 0.025355858728289604,
+      "step": 2500
+    }
+  },
+  "completed_converters": [],
+  "gpu_lines": [
+    "|  0    3   0   0  |            9104MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |",
+    "|                  |                13MiB / 32767MiB  |           |                       |",
+    "|    0   N/A  N/A    250568      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    251534      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    251535      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    251536      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    251537      C   ...iniforge3/envs/privpetal/bin/python          0MiB |",
+    "|    0   N/A  N/A    262366      C   ...covery_20261030/envs/gpu/bin/python          0MiB |"
+  ]
+}

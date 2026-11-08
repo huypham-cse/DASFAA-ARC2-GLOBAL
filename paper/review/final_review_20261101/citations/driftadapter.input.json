@@ -1,0 +1,26 @@
+{
+  "key": "driftadapter",
+  "bib_entry": "@inproceedings{driftadapter,\n  author = \"Vejendla, Harshil\",\n  title = \"Drift-Adapter: A Practical Approach to Near Zero-Downtime Embedding Model Upgrades in Vector Databases\",\n  booktitle = \"Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing\",\n  pages = \"15938--15949\",\n  year = \"2025\",\n  doi = \"10.18653/v1/2025.emnlp-main.805\",\n}",
+  "contexts": [
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "text": "Document-side conversion and query-side adaptation already provide routes across embedding spaces~\\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 15,
+      "text": "\\paragraph{Compatibility and translation direction.}\nBackward-compatible representation learning trains a new encoder to remain usable with previously computed gallery features~\\cite{shen2020backward}.\nDrift-Adapter instead fits a post-hoc map from new-model queries to an existing legacy index, comparing Procrustes, low-rank affine, and residual neural adapters~\\cite{driftadapter}.\nSpherical interpolation refines Procrustes-aligned queries through SLERP between old and aligned new query directions~\\cite{spherical2026}; ARC2 instead fits tangent ridge updates to document anchors.\nARC2-Global shares the use of paired embeddings and frozen encoders, but maps legacy document vectors into the destination space.\nIts evaluation concerns mapped and native destination documents competing as re-encoding progresses."
+    }
+  ],
+  "primary_source_record": {
+    "key": "driftadapter",
+    "source_file": "citation_sources/vejendla2025drift_metadata.txt",
+    "metadata_url": "https://aclanthology.org/2025.emnlp-main.805.bib",
+    "verification": "publisher-export",
+    "sha256": "f79a16801aaa1ebc53bfe78ce79ec13797a33239333bbb50b25ce7cb14a4c243",
+    "metadata_type": "inproceedings",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

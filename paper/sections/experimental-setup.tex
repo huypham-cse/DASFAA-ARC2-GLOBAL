@@ -1,0 +1,108 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+We ask three questions: does angular refinement improve fixed-supervision
+alignment, how does it compare with other mappers at a matched encoding
+budget, and which gains transfer to a prospectively held collection?
+All experiments use exact retrieval, isolating representation quality from
+approximate-index effects.
+
+\paragraph{Collections and migrations.}
+Development uses FiQA (57,638 documents, 500 development queries), NanoNQ
+(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from
+BEIR and NanoBEIR~\cite{beir2021,nanobeir}. FiQA informed method selection
+after its scores were inspected; all four collections are development evidence.
+We subsequently fixed a separate confirmation on the BEIR release of
+TREC-COVID~\cite{treccovid2020,beir2021}. Its input manifest contains all
+171,332 documents and 50 queries. For this study, labels remained
+closed until every ranking and endpoint had been sealed and separately
+verified. This distinguishes development evidence from the prospective test.
+We evaluate two 384-to-768-dimensional migrations:
+\texttt{all-MiniLM-L6-v2} to \texttt{all-distilroberta-v1}, and
+\texttt{e5-small-v2} to \texttt{e5-base-v2}.\footnote{Pinned maintainer cards:
+\href{https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md}{MiniLM},
+\href{https://huggingface.co/sentence-transformers/all-distilroberta-v1/blob/842eaed40bee4d61673a81c92d5689a8fed7a09f/README.md}{DistilRoBERTa},
+\href{https://huggingface.co/intfloat/e5-small-v2/blob/ffb93f3bd4047442299a41ebb6fa998a38507c52/README.md}{E5-small}, and
+\href{https://huggingface.co/intfloat/e5-base-v2/blob/f52bf8ec8c7124536f0efb74aca902b2995e5bcd/README.md}{E5-base}.}
+Model revisions and input hashes are pinned. Text encoding uses normalized
+float32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes.
+
+\paragraph{Matched supervision and exposure.}
+The main matrix crosses four development collections, two migrations,
+three paid-document budgets (25/50/75\%), six methods, and seeds
+17, 29, 41, 53, and 67. All methods fit the same ordered 1,024 paired anchors
+and replace the same paid document rows. Paid sets contain all anchors and
+are nested, with exactly $\lfloor \rho N\rfloor$ unique target document vectors;
+the accounting is $|A\cup S|$, including anchors. On the Nano collections and
+TREC-COVID, independent seeded streams sample anchors without replacement
+and a document permutation; unseen permutation rows fill the budget. FiQA
+retains its historical anchor/order arrays. Neither fitting nor selection uses
+relevance labels. Paid nonanchor vectors provide replacement only in this
+fixed-anchor regime. A separate FiQA experiment holds the 50\% paid set
+fixed and compares fitting on 1,024 versus all 28,819 paid pairs.
+Development fixed-anchor ARC2 rankings use the float64 dual backend;
+all-paid and TREC-COVID fits use the float64 primal backend in
+Sect.~\ref{sec:method-cost}. The all-paid study reuses the dual fixed-anchor
+comparisons. Both backends implement the same two-update rule.
+
+\paragraph{Matched-target controls.}
+An additional FiQA/MiniLM study at 50\% coverage holds $B_0$, the ordered
+1,024 anchors, $\lambda=10$, the current-map penalty and two updates fixed.
+It replaces the tangent target by either norm-scaled chordal error
+$r(y-u)$ or Euclidean error $y-z$, recomputed at each control's own state.
+All four arms, including unrefined $B_0$, run in the same Windows environment
+(NumPy 2.5.3, SciPy 1.18.1), using float64 dual fitting and the same float32
+exact search. This is a separate development measurement.
+
+\paragraph{Comparison methods.}
+We retain the full five-baseline panel: centered rectangular Procrustes
+(an A2M adaptation); LA2M with 20 source-anchor clusters, local alignment
+for clusters with at least two anchors and global fallback for singletons;
+SimpleLinear; affine ridge with $\lambda=10$
+and a regularized bias; and Embedding-Converter~\cite{la2m,simplelinear,embeddingconverter}.
+SimpleLinear uses pinned official code: despite its name, the locked
+configuration is a five-layer SELU MLP, trained for the final 50 epochs with
+batch size 4,028 and the MSE plus cosine loss, without qrel-based stopping.
+Converter is a paper-specification adaptation with a 50,000-update
+selection run, batch size 64, and local neighborhood size 100. Paired-vector
+validation MAE selects the earliest minimum at 250-update checkpoints;
+a fresh fit uses all fitting pairs for that selected length. Unlike the
+original retrieval-based validation, this adaptation uses paired-vector MAE
+to respect paired-document-only supervision. These are the
+declared implementations and training policies, rather than claims to
+reproduce every original-paper setting. \method{} remains fixed at two
+tangent updates and $\lambda=10$ throughout.
+
+\paragraph{Retrieval and inference.}
+Destination queries search a single gallery containing unit-normalized
+proxies and paid true vectors, using exact float32 inner products and
+top-100 retrieval. Score ties use original document row order; identical
+query/document IDs are excluded. Native Full-X and Full-Y use their own
+query/document encoders throughout and provide reference operating points.
+Our primary metric is graded \ndcg{} with gain $2^{\mathrm{rel}}-1$; auxiliary
+\recall{} measures coverage over all
+positive judgments, including positives outside a Nano corpus. All queries
+count; unjudged documents are nonrelevant. The prospective figure reports both
+metrics; a companion Recall table is included in the manuscript-source package.
+
+Each locked analysis uses 20,000 paired query-bootstrap draws after
+averaging the five mapping seeds. Development macro effects weight the
+24 collection/migration/budget conditions equally and resample queries
+within each collection. Within each analysis, the same sampled query indices
+are shared across methods, budgets and migrations for that collection.
+Saved 99\% percentile intervals give approximate
+95\% coverage for the five-comparison family; the ablations have a separate
+five-contrast family. The all-paid experiment uses its predeclared
+32-contrast family. TREC-COVID has 30 primary contrasts
+(five baselines, two migrations, three budgets), with approximately
+99.8333\% individual percentile intervals for approximate 95\% family
+coverage. Its independent units are the 50 queries. Recall intervals are
+nominal 95\% descriptive intervals. An interval touching zero is unresolved.
+The matched-target study retains its original four-contrast family, with
+98.75\% individual intervals; two MiniLM contrasts are observed and the two
+planned E5 contrasts remain pending.
+These intervals condition on the five observed mapping seeds and fixed
+collections and encoder pairs; development intervals do not adjust for
+method selection.\footnote{The accompanying anonymous artifact provides
+mapper code, baseline settings, frozen per-query results, raw ranking evidence
+and scripts to verify the reported numerical results.}

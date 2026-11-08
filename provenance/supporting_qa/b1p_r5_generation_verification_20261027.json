@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "compact generation hash/124-ranking verification; no label access or new fit",
+  "ranking_count": 124,
+  "source_generation_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "ranking_seal_sha256": "1b993e1bf3fe0248f0a48e52cc371f232ceeba615f81672ec30b81048ba5be1d",
+  "original_failure_preserved": true,
+  "original_parse_started": false,
+  "large_raw_bytes_remote": 25539871372,
+  "TREC_access": false
+}

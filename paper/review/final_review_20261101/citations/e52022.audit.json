@@ -1,0 +1,61 @@
+{
+  "key": "e52022",
+  "existence": "verified",
+  "metadata": {
+    "status": "matches live arXiv BibTeX export",
+    "authors": ["Liang Wang", "Nan Yang", "Xiaolong Huang", "Binxing Jiao", "Linjun Yang", "Daxin Jiang", "Rangan Majumder", "Furu Wei"],
+    "title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training",
+    "year": 2024,
+    "original_submission_year": 2022,
+    "venue": "arXiv preprint",
+    "type": "misc",
+    "identifier": "arXiv:2212.03533",
+    "doi": "10.48550/arXiv.2212.03533",
+    "version": "v2, revised 2024-02-22; v1 submitted 2022-12-07",
+    "year_explanation": "The supplied 2024 year is exactly the current arXiv export year and refers to the latest revision. The original work appeared in 2022; the key e52022 is not itself an error. Neither the arXiv record nor the author institution publication page identifies a conference or journal version. Do not invent a published venue or silently treat 2024 as the first-publication year."
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2212.03533",
+      "what_verified": "Live primary record: existence, title, author order, abstract, v1/v2 dates, revision note, arXiv identifier and DOI; no journal-reference venue displayed."
+    },
+    {
+      "url": "https://arxiv.org/bibtex/2212.03533",
+      "what_verified": "Live primary BibTeX export matches supplied author/title/year=2024/type/eprint/archivePrefix/primaryClass/URL fields."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/publication/text-embeddings-by-weakly-supervised-contrastive-pre-training/",
+      "what_verified": "Author institution identifies the work as December 2022, published by arXiv, and confirms the E5 family and weakly supervised contrastive training."
+    },
+    {
+      "url": "https://huggingface.co/intfloat/e5-small-v2",
+      "what_verified": "Author-maintained model card identifies this exact model, links the cited paper, specifies embedding size 384, and documents query/passage prefixes and normalization."
+    },
+    {
+      "url": "https://huggingface.co/intfloat/e5-base-v2",
+      "what_verified": "Author-maintained model card identifies this exact model, links the cited paper, specifies embedding size 768, and documents query/passage prefixes and normalization."
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 21,
+      "verdict": "SUPPORTS",
+      "reason": "Appropriate attribution for E5. The exact v2 checkpoints, 384/768 dimensions and prefixes are corroborated by their primary model cards. The migration, 128-token cap, pinned revisions and experimental procedure are this manuscript's choices, not results established by this citation."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 31,
+      "verdict": "SUPPORTS",
+      "reason": "The paper introduces E5 as a text-embedding family with weakly supervised contrastive pre-training, directly supporting the E5 portion of the grouped encoder-family/training attribution."
+    }
+  ],
+  "verdict": "KEEP",
+  "exact_fix": null,
+  "optional_clarification": "If the bibliography requires original-release years consistently, use 2022 and explicitly note the 2024 v2 revision; the supplied 2024 export is independently valid and needs no mandatory correction.",
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "verification_date": "2026-11-01",
+  "scope": "Fresh per-entry check of supplied e52022 packet and live primary sources; no previous reviews consulted."
+}

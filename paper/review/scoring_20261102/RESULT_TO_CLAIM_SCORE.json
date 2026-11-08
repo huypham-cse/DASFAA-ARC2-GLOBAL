@@ -1,0 +1,1826 @@
+{
+  "schema_version": "1.0",
+  "review_type": "fresh_current_bounded_result_to_claim_scoring",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "model_configuration": "gpt-6.1-sol/high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "review_date": "2026-11-02",
+  "created_utc": "2026-11-01T19:32:54.071595+00:00",
+  "claim_supported": "yes",
+  "confidence": "high",
+  "verdict_scope": "The exact current bounded manuscript and selected recorded evidence; not a holistic venue score, acceptance probability, universal-best-method claim, novelty audit or full end-to-end reproduction.",
+  "overall_reason": "The current manuscript states the outcomes the records support and explicitly retains the principal limits. I found no material unsupported current empirical claim. Independent confirmation is narrower than DEV breadth, but the current prose already makes that distinction.",
+  "scoring_anchors": {
+    "1-3": "Little relevant direct evidence, serious contradictions or unusable design.",
+    "4-6": "Meaningful evidence but important gaps for the current stated claim or practical scenario.",
+    "7-8": "Strong useful bounded evidence with explicit limits on breadth, design or deployment maturity.",
+    "9-10": "Exceptionally strong support/calibration for the dimension, with broad independent robustness or near-complete scope discipline."
+  },
+  "scores": {
+    "empirical_support": {
+      "score": 8,
+      "reason": "Strong direct support for the current bounded findings: complete development breadth, mechanism controls, recorded prospective matched-budget evidence and per-query consistency. It is below 9 because independent confirmation is one 50-query collection with two fixed migrations, and does not establish an nDCG win over the strongest geometric alternatives or a prospective second-step benefit. Those are limits on evidence breadth, not contradictions of the written claim."
+    },
+    "fairness_rigor": {
+      "score": 8,
+      "reason": "Shared anchor-inclusive exposure, the full five-baseline panel, native references, exact search, seed averaging before query resampling, explicit family correction and the recorded pre-label endpoint gate are substantial strengths. Baselines are openly declared adaptations, with paired-MAE Converter selection and fixed SimpleLinear training rather than equally tuned original-paper optima. DEV selection remains exposed; bootstrap coverage is approximate and conditional on fixed seeds/tasks. The audit does not independently reexecute remote provenance."
+    },
+    "practical_value_under_stated_scenario": {
+      "score": 7,
+      "reason": "A useful compact candidate when destination queries are required and document replacement is staged: lower-exposure E5 points, no neural mapper training, all-paid MiniLM improvement and a small final map. Procrustes/LA2M remain competitive on the held collection and incumbent Full-X often has better quality if source queries are acceptable. Value is demonstrated in quality/exposure and storage, while deployment time, index resources, ANN and SLOs remain unmeasured. Those systems studies are optional extensions for the current claims."
+    },
+    "claim_calibration": {
+      "score": 9,
+      "reason": "Current manuscript consistently separates DEV from held confirmation, matched-budget inference from post-hoc cross-budget point comparisons, auxiliary Recall from primary nDCG, geometric unresolved results from superiority, and structural storage from physical cost. Negative E5 all-paid and Full-X outcomes remain visible. It avoids universal-best, native-equivalence and physical-savings claims. Broad closing practical language is reasonably bounded by the explicit scenario and resource limitations."
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "intended_claim": "Two tangent-residual ridge updates target cosine-relevant direction and collapse into one affine document map, retaining native destination queries.",
+      "manuscript_locations": [
+        "abstract; introduction contributions; method equations (2)-(9); conclusion"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "The tangent target r[y-(u y^T)u] is orthogonal to the current unit prediction u and equals -r^2 times the cosine-loss gradient for nonzero predictions. Each fitted update is affine, so accumulating B0+Delta0+Delta1 yields one final coefficient matrix. The source implementation uses lambda=10, exactly two float64 updates, and float32 output coefficients.",
+        "The stored second correction is absorbed into B2; inference applies affine multiplication and row normalization. A fitted shared correction need not itself remain tangent, and the paper explicitly says so."
+      ],
+      "scope_limits": [
+        "Algebra and implementation support the computation, not guaranteed finite-step cosine improvement, universal retrieval improvement or an independently verified novelty claim. The scale-equivariance statement requires common positive scaling and nonzero predictions, as stated."
+      ],
+      "strongest_supported_wording": "ARC2 is a two-update, direction-targeted refinement with one affine-plus-normalization document application stage and unchanged destination queries.",
+      "sources": [
+        "src/arc2_global/model.py::_tangent2;transform_old_docs",
+        "src/arc2_global/solver_backend.py::tangent2_primal",
+        "paper/sections/method.tex::equations (4)-(8)"
+      ]
+    },
+    {
+      "id": "C2",
+      "intended_claim": "At matched 1,024-pair fitting exposure, ARC2 has the highest development macro nDCG among six declared adapters.",
+      "manuscript_locations": [
+        "abstract; introduction; results 5.1; generated/dev_macro.tex"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "Equal-condition means recomputed from summary.means: ARC2 0.527477527300496; Procrustes 0.5031524182600609; LA2M 0.42342257351929274; SimpleLinear 0.3553776623832738; ridge 0.4318244780276741; Converter 0.36631519310915556.",
+        "ARC2-minus-Procrustes is 0.024325109040435233, family interval [0.018132175212397208,0.030791640313948616]. All five saved development macro family intervals are positive. Existing per-query arrays reproduce all 160 mean rows to max absolute error 9.44e-16."
+      ],
+      "scope_limits": [
+        "Four inspected development collections, two encoder pairs, three budgets, five fixed seeds; intervals do not remove method selection and do not imply general-population superiority. The statement concerns declared baseline configurations."
+      ],
+      "strongest_supported_wording": "Across the 24 fixed-supervision development conditions, ARC2 has the largest six-adapter macro nDCG, with positive five-comparison family intervals against each baseline.",
+      "sources": [
+        "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json::means;aggregate_contrasts",
+        "results/b1c_r3_review_20261031/evidence/run/scoring/cell_index.json",
+        "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_{FiQA,NanoNQ,NanoHotpotQA,NanoFEVER}.npy"
+      ]
+    },
+    {
+      "id": "C3",
+      "intended_claim": "The development gain is broad in nDCG, while Recall and native references constrain its interpretation.",
+      "manuscript_locations": [
+        "results 5.1; discussion"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "Each of four collection-level nDCG macros favors ARC2 over all five baselines. Point gains over Procrustes occur in 23/24 conditions, and over each other baseline in 24/24. Encoder-specific Procrustes gains are 0.025732936236754725 and 0.02291728184411574.",
+        "ARC2 macro Recall 0.8658612474562474 is slightly below Procrustes 0.8660998378473379; difference -0.0002385903910903914 has descriptive interval [-0.004943626172438673,0.0043358499949124945]. All 24 ARC2 partial-development nDCG means are below native Full-X."
+      ],
+      "scope_limits": [
+        "Collection and condition comparisons are descriptive; no claim of 24 significant improvements or Recall superiority follows. Full-X uses source queries, so its practical availability depends on the stated destination-query requirement."
+      ],
+      "strongest_supported_wording": "Development gains concern macro top-ranked relevance across the measured conditions, with one Procrustes point loss, no macro Recall advantage over Procrustes, and a viable native incumbent alternative when source queries remain acceptable.",
+      "sources": [
+        "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json::means;condition_contrasts;aggregate_contrasts",
+        "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json::per_encoder_macro"
+      ]
+    },
+    {
+      "id": "C4",
+      "intended_claim": "The second correction adds measurable development value; the ridge and lambda controls have the reported limited interpretation.",
+      "manuscript_locations": [
+        "abstract; introduction; results 5.2; generated/ablation.tex"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "Two-minus-one macro nDCG is 0.006923862939737235 with separate-family interval [0.003809388309482942,0.009959126205904258]. Per-query recomputation confirms 22/24 positive condition means and all seed macros positive: 17=0.003827292446927389,29=0.006180850754361864,41=0.007927119071210907,53=0.007647106742974317,67=0.00903694568321168.",
+        "ARC2-minus-affine-ridge is 0.09565304927282199 with ablation-family interval [0.07535298921225946,0.11663127039230592]. Lambda1-minus10 is +0.0031974956912717346, interval [-0.0018903844098364442,0.00830403326634241]; lambda100-minus10 is -0.00925533869678723, interval [-0.01321398029023485,-0.005510245768211927]."
+      ],
+      "scope_limits": [
+        "This is DEV mechanism evidence, not prospective proof that two steps are necessary on TREC or that lambda10 is optimal. Ridge comparison changes both directional targets and retained prior, as the paper states. The two nonpositive second-step conditions are FiQA/E5 50% and 75%."
+      ],
+      "strongest_supported_wording": "A second update adds a repeatable bounded development nDCG benefit without another document inference stage; the controls support the tested initialized refinement, not an isolated universal tangent mechanism or an optimum step count.",
+      "sources": [
+        "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json::overall_macro",
+        "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/{FiQA,NanoNQ,NanoHotpotQA,NanoFEVER}/cell_index.json",
+        "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/{FiQA,NanoNQ,NanoHotpotQA,NanoFEVER}/per_query.npy",
+        "protocols/B1M_B1P0_DEVELOPMENT_20261026.md"
+      ]
+    },
+    {
+      "id": "C5",
+      "intended_claim": "The held TREC-COVID study is a prospective fixed-procedure, matched-budget confirmation within this project.",
+      "manuscript_locations": [
+        "experimental setup; results 5.3"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "Protocol fixes the full 171,332-document/50-query collection, two pairs, five seeds, six methods, three budgets and 30 contrasts. Current lock hash matches all sealed references.",
+        "Ranking seal is dated 2026-10-31T19:56:09.382605Z; separate verification completes 20:11:42.810083Z with 184/184 ordered top100 matches and qrels_opened=false; first-final-open receipt is 20:12:17.410541Z. All 184 local raw ranking hashes match the seal. The source scorer verifies the seals and writes the receipt before label acquisition."
+      ],
+      "scope_limits": [
+        "I verified the recorded chain and file hashes, not remote execution, complete organizational exposure history, inaccessible endpoints or a cryptographic proof that nobody had seen public benchmark labels. Independent refers to held-collection confirmation, not cross-family reviewer independence."
+      ],
+      "strongest_supported_wording": "The recorded B2 protocol, seal and separate-verifier chain supports a prospectively frozen held-collection evaluation in this project, conditional on the recorded non-exposure and execution provenance.",
+      "sources": [
+        "protocols/B2_TREC_COVID_CONFIRMATION_20261031.md",
+        "configs/b2_lock.json",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/metadata.json",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/ranking_seal.json",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/verification/verification_seal.json",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/first_final_qrel_open.json",
+        "ops/b2_score.py"
+      ]
+    },
+    {
+      "id": "C6",
+      "intended_claim": "On TREC/E5, gains over the evaluated Converter and ridge persist at all three matched budgets; eleven total family-supported contrasts are reported.",
+      "manuscript_locations": [
+        "abstract; introduction; results 5.3; conclusion; generated/trec_means.tex; generated/trec_family.tex"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "E5 Converter differences at 25/50/75% are 0.25723359077319435,0.23138457517015265,0.1999540966512042, with respective family intervals [0.17573076152800798,0.33756850203860655], [0.15671745879653792,0.3085072832020045], [0.13925018639424472,0.2642221645268023]. E5 ridge differences are 0.2641805555881269,0.2622674417365517,0.2819970458539894, all positive family intervals.",
+        "Across both pairs: five supported Converter improvements, four ridge, two SimpleLinear; 11 positive/19 unresolved/0 negative family intervals. All 40 mean rows reproduce from per-query arrays to max error 5.56e-16; all 30 saved nDCG-family quantiles reproduce exactly from saved bootstrap draws."
+      ],
+      "scope_limits": [
+        "One held collection with 50 independent queries, two fixed pairs, five averaged mapping seeds. Positive family outcomes concern declared adaptations. There is no prospective all-baseline dominance or independent second-step confirmation."
+      ],
+      "strongest_supported_wording": "On the prospective TREC/E5 evaluation, ARC2 improves nDCG over the declared Converter and ridge at all three matched budgets under the locked 30-contrast family; additional supported contrasts yield eleven total.",
+      "sources": [
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json::means;contrasts;bootstrap",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/per_query.npy",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/bootstrap_draws.npy"
+      ]
+    },
+    {
+      "id": "C7",
+      "intended_claim": "TREC geometric baselines remain competitive; ARC2 has no confirmed nDCG superiority over Procrustes or LA2M.",
+      "manuscript_locations": [
+        "results 5.3; discussion; generated/trec_means.tex; generated/trec_family.tex"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "All six ARC2-minus-Procrustes point differences are negative; MiniLM/75% is -0.000023564924613148544. Every Procrustes and LA2M nDCG family interval crosses zero. The current table ranks unrounded adapter means and does not put superiority markers on those comparisons."
+      ],
+      "scope_limits": [
+        "Unresolved is not equivalence or noninferiority. This limits the added held-collection evidence for the angular refinement beyond geometric alignment, but does not contradict the narrower E5-versus-Converter/ridge claim."
+      ],
+      "strongest_supported_wording": "Procrustes is numerically ahead in all six held nDCG cells, and the family cannot distinguish ARC2 from Procrustes or LA2M; the confirmed held gains concern other stated configurations.",
+      "sources": [
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json::contrasts;means"
+      ]
+    },
+    {
+      "id": "C8",
+      "intended_claim": "MiniLM/75% is close in nDCG to native Full-Y and has the largest adapter Recall point mean at every TREC budget.",
+      "manuscript_locations": [
+        "abstract; results 5.3; generated/trec_recall.tex; prospective figure"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "MiniLM/75% ARC2 nDCG is 0.519513052034007 versus Full-Y 0.5202728348242263, an observed gap -0.0007597827902193; 25% of rows remain proxies.",
+        "MiniLM ARC2 Recall point means 0.08963088480259038,0.09529158965710632,0.09983604059514704 exceed all five adapter alternatives at corresponding budgets. Full-Y Recall is 0.10521378018323918. E5 ARC2/75% Recall is 0.09966692928143464 versus Full-Y 0.11624395516879528."
+      ],
+      "scope_limits": [
+        "Recall is auxiliary/descriptive; no family-adjusted superiority, native-quality equivalence or coverage preservation claim. Point nDCG proximity does not establish equivalence. The paper states this distinction."
+      ],
+      "strongest_supported_wording": "MiniLM ARC2 at 75% has observed nDCG near the native destination reference while keeping one-quarter proxy rows, and leads the six-adapter Recall point means at the three measured budgets.",
+      "sources": [
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json::means",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/per_query.npy"
+      ]
+    },
+    {
+      "id": "C9",
+      "intended_claim": "Across all five collections, E5 ARC2 at 25% exceeds the measured Converter and ridge at 75%.",
+      "manuscript_locations": [
+        "abstract; introduction; results 5.4; generated/budget_leverage.tex; conclusion"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "ARC2/25%, Converter/75%, ridge/75% nDCG triples: FiQA=(0.27310684220470094,0.2095336751807801,0.1609714907578672); NanoNQ=(0.5071236847804641,0.40208721230157407,0.44284099940693855); NanoHotpotQA=(0.5844856557302884,0.5016332374347163,0.5053470075849882); NanoFEVER=(0.7554512732607813,0.7325762381767909,0.7289860142730652); TREC=(0.562801573213321,0.40982778236858286,0.3277848331657977). All ten point differences are positive."
+      ],
+      "scope_limits": [
+        "Post-hoc descriptive comparison of the measured grid, not a member of matched-budget families. It shows lower logical destination-vector exposure, not the minimum budget for equal quality, threefold physical savings, or superiority over 25% Procrustes/LA2M. The table retains these alternatives and native references."
+      ],
+      "strongest_supported_wording": "At the measured E5 operating points, ARC2/25% has larger mean nDCG than the evaluated Converter and ridge/75% on each of five collections; this is a descriptive quality-exposure observation.",
+      "sources": [
+        "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json::means",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json::means"
+      ]
+    },
+    {
+      "id": "C10",
+      "intended_claim": "Using all already-paid FiQA pairs strengthens MiniLM at the same 50% destination-document budget, with important E5 and cross-regime limits.",
+      "manuscript_locations": [
+        "introduction; results 5.5; generated/allpaid.tex; discussion"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "MiniLM ARC2 changes from 0.3075048582716371 to 0.36714602143626507, delta 0.05964116316462802 with 32-family interval [0.03934110686868015,0.08060437708604837]. Its all-paid comparisons beat Procrustes, LA2M, SimpleLinear and Converter; ridge is unresolved with delta -0.00011725527452398765.",
+        "E5 all-paid ARC2 trails Procrustes and LA2M with negative family intervals, beats SimpleLinear and ridge, and is unresolved against Converter. Its allpaid-minus-fixed delta -0.019768225474924635 has interval [-0.056329874306672884,0.016636927373489714]. Fixed MiniLM ARC2 trails every all-paid baseline in the cross-regime family. All 28 mean rows reproduce to max error 1.00e-15 from existing per-query arrays."
+      ],
+      "scope_limits": [
+        "FiQA DEV, one 50% set of 28,819 paid pairs, not held confirmation or zero additional fitting work. This comparison retains summed-objective lambda10 and uses dual fixed rankings versus primal all-paid fits; the current paper discloses both. It does not isolate data quantity at fixed effective regularization."
+      ],
+      "strongest_supported_wording": "For the fixed recorded procedure on FiQA/MiniLM, fitting all paid pairs improves nDCG without additional destination-document exposure; the result is encoder-dependent and does not establish an all-paid universal winner.",
+      "sources": [
+        "results/b1p_r5_review_20261027/scoring/results_summary.json::means;contrasts",
+        "results/b1p_r5_review_20261027/scoring/per_query.npy",
+        "protocols/B1P_ALL_PAID_FIQA_20261026.md",
+        "src/arc2_global/solver_backend.py"
+      ]
+    },
+    {
+      "id": "C11",
+      "intended_claim": "Inserting native vectors can improve or damage the same fitted map, so mixed-gallery relevance must be measured.",
+      "manuscript_locations": [
+        "introduction motivation/contribution; results 5.5; conclusion"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "Five-seed all-paid ARC2 MiniLM proxy-only to mixed nDCG is 0.3509507352060274 -> 0.36714602143626507; E5 is 0.31490775036459107 -> 0.29186698206096207.",
+        "E5 Recall changes 0.6541642457542457 -> 0.5594899234099234, and top10 paid share 0.49164 -> 0.06472000000000001 despite 50% paid coverage. These are within-fit before/after replacement diagnostics, not different fitted models."
+      ],
+      "scope_limits": [
+        "Descriptive development evidence; pure endpoint already trained on paid pairs and is not a zero-encoding deployment. Returned-share imbalance does not identify a unique causal mechanism or establish miscalibration. Current prose does not make that stronger assertion."
+      ],
+      "strongest_supported_wording": "For these fixed fitted galleries, paid-vector insertion changes judged retrieval in opposite directions across the two pairs; proxy-only quality cannot substitute for evaluation of the mixed gallery to be searched.",
+      "sources": [
+        "results/b1g_r1_review_20261027/scoring/results_summary.json::aggregate_five_seed_conditions;case_diagnostics_and_metrics",
+        "protocols/B1G_MIXED_GALLERY_DIAGNOSTICS_20261027.md"
+      ]
+    },
+    {
+      "id": "C12",
+      "intended_claim": "The final adapter is compact in coefficient storage and avoids neural mapper training; exposure and storage are distinct from physical deployment cost.",
+      "manuscript_locations": [
+        "abstract; method 3.5; discussion; conclusion"
+      ],
+      "claim_supported": "yes",
+      "positive_evidence": [
+        "(384+1)*768=295,680 float32 coefficients=1,182,720 bytes=1.1279296875 MiB. Converter architecture widths (384,3840,3840,3840,768) give 33,927,168 weights/biases=135,708,672 float32 bytes, ratio 114.74285714285715.",
+        "Source implements affine ridge solves and no neural training for ARC2. Both dual and primal backends implement the same exact-arithmetic equations with distinct stated complexity. Paid exposure counts anchors in |A union S|; B2 paid counts are 42,833/85,666/128,499."
+      ],
+      "scope_limits": [
+        "Parameter bytes exclude fitting state, galleries, encoder weights and deployment memory. Primal/dual finite-precision rankings can differ. Cached full-destination evaluation does not measure partial physical encoding work, end-to-end migration saving, latency, ANN behavior or SLOs. Affine ridge has identical coefficient storage, as stated."
+      ],
+      "strongest_supported_wording": "ARC2 stores a 1.13 MiB final affine coefficient matrix, 114.7 times smaller in float32 parameter bytes than the evaluated Converter; its demonstrated efficiency quantities are structural storage and logical exposure, not measured deployment savings.",
+      "sources": [
+        "src/arc2_global/model.py",
+        "src/arc2_global/solver_backend.py",
+        "src/arc2_global/embedding_converter.py::parameter_count;build_model",
+        "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/ranking_seal.json::cells",
+        "paper/sections/method.tex::Computation and Storage"
+      ]
+    }
+  ],
+  "actual_unsupported_current_claims": [],
+  "current_claim_necessities": [],
+  "useful_missing_evidence_optional_extensions": [
+    {
+      "item": "More independent collections and migration pairs",
+      "would_support": "Broader robustness and transfer; not required to sustain the specified DEV and TREC results."
+    },
+    {
+      "item": "Prospectively locked one-versus-two-step controls on fresh held data",
+      "would_support": "Independent necessity/value of the second correction beyond geometric alignment; current second-step claim is explicitly DEV."
+    },
+    {
+      "item": "Additional paired-document-only baseline sensitivity and stronger/localized adapters",
+      "would_support": "Robustness to implementation/training-policy choices or a broader method-ranking claim; current claim is restricted to the declared configurations."
+    },
+    {
+      "item": "A physical incremental migration/index/serving measurement under a concrete deployment",
+      "would_support": "Latency, resource, ANN/SLO and monetary/end-to-end savings claims; none is claimed here."
+    },
+    {
+      "item": "Denser budget grid or prospectively defined quality-matching analysis",
+      "would_support": "The minimum exposure at a target quality; current 25-versus-75 comparison is descriptive."
+    }
+  ],
+  "non_experimental_reproducibility_followup": "The paper says an anonymous public evidence/code link is pending. Providing accessible frozen artifacts would improve reader reproducibility and submission completeness; it does not require rerunning or revising the supported scientific outcomes.",
+  "checks_performed": {
+    "precheck": "Read all ten verified entries; treated as value-existence checks only.",
+    "pdf": "Read text from actual 16-page PDF and visually inspected two contact sheets covering all 16 rendered pages; verified specified PDF SHA256.",
+    "means": "Recomputed all DEV(160), B2(40), all-paid(28) summary mean rows from stored per-query arrays, without opening labels.",
+    "means_max_absolute_error": {
+      "DEV": 9.43689570931383e-16,
+      "B2": 5.551115123125783e-16,
+      "allpaid": 9.992007221626409e-16
+    },
+    "second_step": "Computed 22/24 positive condition means and five positive seed-level macros from existing per-query arrays.",
+    "B2_family_quantiles": "Computed 30 family quantiles from saved bootstrap_draws.npy; max absolute error 0.0. No new bootstrap run.",
+    "B2_rankings": "Read/hash-verified all 184 sealed raw ranking arrays; zero missing or wrong hashes. No retrieval was run.",
+    "B2_gate": "Current lock/seal/verifier hashes and their receipt chronology match.",
+    "cross_budget": "Computed all ten E5 25%-minus-75% point differences directly from the two raw summary means.",
+    "storage": "Computed declared architecture parameter counts/bytes arithmetically; no model fit was run."
+  },
+  "explicit_unverified_scope": [
+    "No qrel file was opened, parsed or scored. Metric correctness against labels was not independently recalculated.",
+    "No new fit, retrieval, bootstrap sampling, experiment, source/manuscript edit or publication occurred. Only the two requested reports were written in the workspace; PDF review images were temporary outside it.",
+    "No full remote cache, fitting-checkpoint, encoder regeneration or physical endpoint replay was performed. The existing verifier record was inspected.",
+    "The complete no-prior-label-exposure history is not independently proved; conclusions rely on recorded prospective provenance.",
+    "No external literature/novelty/citation correctness audit, original-paper reproduction certification, isolated timing measurement or deployment audit.",
+    "Input hashes describe bytes examined, not proof of scientific correctness or exposure independence."
+  ],
+  "accidental_prior_opinion_exposure": {
+    "occurred": true,
+    "sources": [
+      "AGENTS.md",
+      "protocols/B2_TREC_COVID_CONFIRMATION_20261031.md"
+    ],
+    "detail": "Reading required workspace AGENTS.md exposed earlier audit verdicts, an earlier score mention and reviewer interpretations. The B2 protocol also contains a prior D1 characterization. None was used as evidence or a score anchor. No earlier standalone score/review report or author-summary file was read. This is a fresh re-evaluation from current claims/raw records, but cannot be described as entirely opinion-unexposed."
+  },
+  "integrity_status": "not_a_new_integrity_audit; selected raw consistency and provenance checks passed",
+  "routing_action": "Return the bounded positive result to the parent/user; no automatic next experiment, manuscript change or scientific gate release.",
+  "input_hash_algorithm": "SHA256 exact current raw file bytes",
+  "input_manifest_sha256": "64555c2f0a3cc42fa55592b96ecdad2a059a4552061ae3b7c2dfd2c178903741",
+  "input_hashes": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "b7fe7447cc2f5958cd62ce12f58695f455555d344195395f9f78ef20687a72a5",
+      "bytes": 18792,
+      "role": "instructions_with_exposed_prior_opinions_excluded"
+    },
+    {
+      "path": "configs/b2_lock.json",
+      "sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+      "bytes": 28456,
+      "role": "current_input"
+    },
+    {
+      "path": "configs/baselines.json",
+      "sha256": "b0be0352d174157d91a32437c6db0e3479ceb4c829ba75a5703189f19dd4a2a5",
+      "bytes": 2174,
+      "role": "current_input"
+    },
+    {
+      "path": "ops/b1c_r3_score.py",
+      "sha256": "803fe091e4a5c442810850217a0a80b2302e8132c38649d3dcb0c728a90f10ef",
+      "bytes": 47112,
+      "role": "current_input"
+    },
+    {
+      "path": "ops/b1m_score.py",
+      "sha256": "fad8a3123d9a3acf7943665718c16d5ba27cfc3445f6b44dc9abd454390a15f6",
+      "bytes": 32016,
+      "role": "current_input"
+    },
+    {
+      "path": "ops/b2_score.py",
+      "sha256": "1596876fc15a9e170553fa251b0a198f9b810a5c7946aac69e2a0f54858ebf8f",
+      "bytes": 16889,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/ARC2_Global_DASFAA2027_final.pdf",
+      "sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+      "bytes": 846818,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/generated/ablation.tex",
+      "sha256": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e",
+      "bytes": 836,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/generated/allpaid.tex",
+      "sha256": "bd28688f51a306c9990c0174f1c3b88786eb266a5e76bafffc0217c851de4c13",
+      "bytes": 1677,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/generated/budget_leverage.tex",
+      "sha256": "dc8d45d6b72643735ae2135c8f970687b0eca5a9d8849de46988976a77e6719b",
+      "bytes": 1445,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/generated/dev_macro.tex",
+      "sha256": "58e7543a91a5bbfcce75969e6277967cc1978ec1fc6e96d5461c60d821b3ff27",
+      "bytes": 1134,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/generated/trec_family.tex",
+      "sha256": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e",
+      "bytes": 655,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/generated/trec_means.tex",
+      "sha256": "354d8f8e46373015b3af96c5e66c3923777a5e88baef2f95be84728f99555dce",
+      "bytes": 1630,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/generated/trec_recall.tex",
+      "sha256": "92fbea88b6557670feb56192669e114184b0b77a0b20baa083bc74fbc7b5fbdd",
+      "bytes": 1462,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/review/scoring_20261102/EVIDENCE_PRECHECK.json",
+      "sha256": "bee8d16ee1523a428a9db77df99b3666836889f6a275668bc46b6945701e6415",
+      "bytes": 3964,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/review/scoring_20261102/REQUEST_SUPPORT.md",
+      "sha256": "2765d52147f9f0555a6aa129a4e921c6c295613aef7bae454f5a30b57886652d",
+      "bytes": 2518,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/abstract.tex",
+      "sha256": "24a2314dcfb5090ba76b4cb7dfea95c8c941eacff94881e451edea6374d3043a",
+      "bytes": 1346,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/conclusion.tex",
+      "sha256": "7f9bb6b3a071a3fa02338249c0b949dc1bf8b2d9863c4c23644a65e80def4caf",
+      "bytes": 547,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/discussion.tex",
+      "sha256": "4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71",
+      "bytes": 1274,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/experimental-setup.tex",
+      "sha256": "4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215",
+      "bytes": 6443,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/introduction.tex",
+      "sha256": "4785d051ea8266d7907b2ca55417a2ae6744c9ea01e9adb90ef0db1fd34a6f5f",
+      "bytes": 4208,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "sha256": "2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b",
+      "bytes": 9667,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/related-work.tex",
+      "sha256": "ff5a1ac26f3ca8eb9865f99fec92e3e5b185756c3d67fcae2b048f6654594f44",
+      "bytes": 4436,
+      "role": "current_input"
+    },
+    {
+      "path": "paper/sections/results.tex",
+      "sha256": "9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d",
+      "bytes": 7222,
+      "role": "current_input"
+    },
+    {
+      "path": "protocols/B1G_MIXED_GALLERY_DIAGNOSTICS_20261027.md",
+      "sha256": "bf41596b57c718bf571833e5bf5388bd340170677a218897de162ffffe397fe4",
+      "bytes": 7506,
+      "role": "current_input"
+    },
+    {
+      "path": "protocols/B1M_B1P0_DEVELOPMENT_20261026.md",
+      "sha256": "6a78cbd26a9075e32b14985705577e3868f4a2f22fc6b9e71325e926596ee196",
+      "bytes": 9060,
+      "role": "current_input"
+    },
+    {
+      "path": "protocols/B1P_ALL_PAID_FIQA_20261026.md",
+      "sha256": "27e6f52a46ccf2fd53b409805192b64e7a35adced1e42b0c79a6cb9b3397fbbb",
+      "bytes": 10585,
+      "role": "current_input"
+    },
+    {
+      "path": "protocols/B2_TREC_COVID_CONFIRMATION_20261031.md",
+      "sha256": "109847050cd77317eee118f459e8a6e696572eb8181d46e24b9dd0752d5827c2",
+      "bytes": 11734,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/cell_index.json",
+      "sha256": "c4d23f1730dbd10b3975590faf77ab0210869d19306c6adfe64785e3e7e515aa",
+      "bytes": 1190975,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_FiQA.npy",
+      "sha256": "3008af5125a8ab4d941aa1b8597507c9e30caa17dad2ab5c4f2c8eff3a15c9da",
+      "bytes": 1472128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoFEVER.npy",
+      "sha256": "4dcb99a9ce16125b857721ec035f9a5d0ddbc78099ff1023d95bacfc11efac5d",
+      "bytes": 147328,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoHotpotQA.npy",
+      "sha256": "46966df3fffc74b63b935082b77db720cbcbc5b97bd0a656d3b9d732c508c7ee",
+      "bytes": 147328,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoNQ.npy",
+      "sha256": "59ff7a5599c53252d22680101e3804cef6effd189d8b73c158eb051add09d180",
+      "bytes": 147328,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5",
+      "bytes": 319914,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f",
+      "bytes": 6831819,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/FiQA/cell_index.json",
+      "sha256": "ff35ab9114296da0b9ce2349edaf915180b84413589042113133292f5cb12601",
+      "bytes": 113278,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/FiQA/per_query.npy",
+      "sha256": "4647bc64355eb1de7a5e94045993895078d350d9485a4fdba24c7205b8297a5c",
+      "bytes": 1472128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/cell_index.json",
+      "sha256": "31dea095fa0af0ea391de807d3a3ce7bc5a27b5e0d86e46bfa304b175428028a",
+      "bytes": 110286,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/per_query.npy",
+      "sha256": "9dc985097699befc5073e172d3609c73951086445138e065fa981645951b54eb",
+      "bytes": 147328,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/cell_index.json",
+      "sha256": "b0b710c3fc0074aabab239721db266dafbd5a51115e87fb0fd4827df186e4811",
+      "bytes": 112315,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/per_query.npy",
+      "sha256": "d0e714342e6b3d08564ab3d988bc73f8a529db5b610a32b8d55a8bb12cb56799",
+      "bytes": 147328,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/cell_index.json",
+      "sha256": "06c4fa7251355dc4d4c955b974e21c1013e30dab7814203f1db787bae4d9ceb3",
+      "bytes": 109264,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/per_query.npy",
+      "sha256": "a53be45fba376c9ed072bbf326bdb6450599d7ed9605e87b50ed0decd9ca96e2",
+      "bytes": 147328,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+      "bytes": 238917,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1p_r5_review_20261027/scoring/cell_index.json",
+      "sha256": "9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375",
+      "bytes": 497323,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1p_r5_review_20261027/scoring/per_query.npy",
+      "sha256": "551dc388059b6a530df550acbbd9a477de76cd0cc188ce54da0a1198be1434d1",
+      "bytes": 992128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7",
+      "bytes": 93427,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/first_final_qrel_open.json",
+      "sha256": "01fcd0bc4b5f890eeb228eff8b1cd6cea8b15ee6afb6cc45e235b981be0421c2",
+      "bytes": 859,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/metadata.json",
+      "sha256": "8af0d4cc27dfa6caa5258182c2a1cd1c7a07bae7a228c995cae82d0b4bd2f554",
+      "bytes": 2402,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/ranking_seal.json",
+      "sha256": "08e82c19a2d1974edb094e520d0b1b6ac4e6138e3a717c5014d183669c7c25de",
+      "bytes": 1600672,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "4e2c1473c98d410cd456f1727ff2b54bdc64579bd1d7cd04f66cb0c83b2cc755",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "657ccd4baec29509c42c4543f34b4d5f3e0b0f2c716789718752cfc75453802d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "43c7fff3b5a56aef37c846488cbf5fe7d77b26576abec69eaad326e32f0f521a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "3f4466a6c5b5fdbde4d7fbc634ac474061b2748050d7f60726299f047243f7d0",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "2ae41c13a9cd21e6e307c1ba6d4711b5656d2ea118a7dbc8ddcf86897d757a65",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "91ce40d400c21ce9405e95dc0b289a9127c9e71381ec2a515889a99772e6ddf6",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "d4bcb01ca330f1f3a7481e601be1bc390b1dc82935b8bb5c34331edb730de6e9",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "13e0586c65a87aa97582384b9d7c123426af2ffedd780dc8163802dd2cecff3e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "23aa7b424c10cd0f88d0abc4b4857b8de1057f901f82fd87f3e4dcf54779f3ec",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_procrustes_global_25pct.npy",
+      "sha256": "ce031cb8e4f43d76f382db3c7087c8c3a441393c765fb67ae48aac47b15d4e96",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_procrustes_global_50pct.npy",
+      "sha256": "207b9d8461731da980df7581de38413eccf131c3f529c67665d23fe658f54c7b",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_procrustes_global_75pct.npy",
+      "sha256": "64e6233793e6d5bba4e703c1eb7da6e6aa9b859429f68c8f8b5c306a4bd95c11",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "0171271775c0a7257d49310d2a4f425d3b6d6b59cf397ffa07296b142342e645",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "3be40f3d40f2170d9a768769f3a8fcce82d7b70ea33123b12eebe7d44b83df0d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "b62669ee7f1a523e4154e7af03a8d3732fa723bd9e5464366bac2c5ba6a1604b",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "cd9cd0ce6c14fd7b67bf33cd286ae1d327ca513830ae45106e56c02cf2944c92",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "8defd3e84a0983ebf7fa06b783fca5e1bcf83feb88ccaa65cd552c2a02ebdf1d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed17_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "24733c2d9b1d6e9e2e7da8823ec70b0104e0c8c93efa102969f135de218e9655",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "601817974118562be834285a6da4ec59784cc8bd0d61ce058b667badbfa30a8d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "c4203f0d61ac89ce62b54bd689d6e80894abc989526cead59d2e777e4269aba6",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "756205c8de7cea30fe01aad5664d7f2e3157aba6d523480c515cc438ca8a112c",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "2138b82310b2e70ada0078ea139de790c24a0c0b5283fc9617b8aad9e0987e8e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "646d98a75fc1bda7e12e9317143763614b5827fc064974ab963c465fe9f738c0",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "3991ff36eb32104c7c4c313802a57902765b52c0fde4bba4618ae340092d78ae",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "c145c6b525ee01bc00780a5097c787d15334dfa8058d159f4dfd9facabf3581e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "76298b0bbb190e55d980942ed0351cd77005ba17492ec82478ac47a07f2f8417",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "fc5b9a3e0202b114bf9e01dd1884519b6a580ba256d4fb25c14a1dbb473b60c3",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_procrustes_global_25pct.npy",
+      "sha256": "4689da046e60729589e1b61aef3842820e2244d3ee44fb574ebd31c026f3121c",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_procrustes_global_50pct.npy",
+      "sha256": "217f8ebdb0a72ff1a1c7c3f337d95e18d9685a9eaa562f8597ba0723bb28ea5e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_procrustes_global_75pct.npy",
+      "sha256": "91c6c1921ea788a4b417d89262e4e20a710eda41554d92ffeb76b4486e6e4d90",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "2512c689a0acadd233f9279924cf4311d7fab3ebb17c3322942f54529ba9bf8c",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "94bedbb9d40effe6d3f06135c0eb96d5a86ff3ca73530999528d832e89a2c35e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "c4b3927753026af3b2b4cac0cf22c305c08e6c7527b92688ad1cc16328e3b275",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "b1d5ac07287de9f9d93d07e90922db9f5deb4d5124d5a944535eba560c297867",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "4d09b3be656e719714aa057cfeae5a59219650929fd3dc3023167da4643c6569",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed29_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "1a2dcd70853ce5cd9078a968ee7efda68751eff50aacc4c6e83a711625cfa490",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "6cb145202917c6787a26b54fe2961f1ba989725e95aabbd09fa064d2ae9d01f1",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "1ff4d5a60f6f21011cbc4c594d40e23698fe02d4f1b940822003a33a3bdff30f",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "819af0c658678e8a1fd5f344d98e0d1f9e3e93119d433213e17fc7375a16f192",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "9bc593006b39049fdb9dade08f256f56bd72f686a3caab141c1acf7d1dbbbd5a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "cb6e5158261d4d8c00e19fdad0705a84f68a4365867570e2df24baaf65bc50d6",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "c8a4e8da83e40a9b32ad81fba28f367753cd1da2072005ea39256ac20e993e07",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "342ef7279578b57853ae8ea219d90778850498e1d2a968bde76fa628a03d9697",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "f5b7ac70f80040cc072c39048af0245196d883f949f6ba25a42318f2d7225c81",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "e09bd403e9bbd48c259d419b2cbd7a8d93461259edc60f32ed376df1e2aa5faa",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_procrustes_global_25pct.npy",
+      "sha256": "aaca53895f453c89d81cc4e199ab85985a7090cc870f8e6d0ca942b7a648d7b2",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_procrustes_global_50pct.npy",
+      "sha256": "62c4e519741ae2a951b0b695a6da46958abe9551439cd202dc320f3bfd1e2f51",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_procrustes_global_75pct.npy",
+      "sha256": "fcd44f2ee424c198e2bc20cd098705c441beb27d4c43c73cf5c9146f2034f2a1",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "161908104fee59b23ff9de2f11988c198703f6ac481aeb710c00ccb056d25109",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "f2e49387516533581a63ca32dc80ddb5ff5c04529d5975f52ef87a76221a092f",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "1b36829aa75bb85a3f2d9699fcb4029d6a78711844ccd72cd87c568185fed190",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "679355fe716e3fb2f6570c29d48ac5dfb384c76a0752d1442c9f0b98cfa3320e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "af1c2874acabf384fad3815f63594b108c692daef7b89246d4870bcde14ac57f",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed41_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "f31a7383e0f6fe84ba6bc7769a9a51697004b85c8c983004c8ba51969bd2fbe3",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "2be048043b28c3a155fae3a10721e1aa6706628e9b4cfa903a5edae4cbb8ff75",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "4ec23af8e0aa695bd2dac9051241b1c2ecd912bfc6181b8b9d71ffc1792c649d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "ce477651b1fc9b13bddc2f2112e229c0a97f0a8da729096c364aff9e81d4666b",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "6e328e503fa9758ca4bf412aee4df471828706730396cb559991997cd6479b3c",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "18c4c2643c79bc353d43728f579867186d143e70b2cb98aa96836396fc7e056f",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "67a049af83e9ef566595de9fb545e22d92877629370dfee02e85f85f57040b30",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "d35985ef7f34de0f8d0cd21cc4a44aa1073f98a7fafb4e641f6f6ef2359b690e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "d933b58e20dc6c606b4224450eec383a85e8befbabb4a0d7b6360a7d9429e1bb",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "f76b16a28cac1bf280b78561e53f77d92b03a1e2676ecaa5b18559113a12998e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_procrustes_global_25pct.npy",
+      "sha256": "8ddced411c7157b07d4b7938b53dffdc3df2cd44a0a2e7d38498a4adbc0c529b",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_procrustes_global_50pct.npy",
+      "sha256": "f3db15ece2432b48e06a5add5276ed9bc10af6cd87b794773132e1932378d5b7",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_procrustes_global_75pct.npy",
+      "sha256": "d97589a648671496919aa37e1cab54f6dd471a4eda3f998d853f5e86ca38c07f",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "41425ddba776f6b6c69e84e6763c0a6ba2bec121e4a5084261e25d481c41e6eb",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "e97f6356f5f123d374cd19c3472289a772ad6119b2003afec487166260fa96e0",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "b6b6df9e0bc2a9dde9b50e8456d68bd45305216a32f7541afb04d9147b09565e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "3d8b6701397142d86ea7959f7613e442f69e1e5a3f296e5aab6d355f04b69fde",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "008c6f16e410462e31458880562d696c108ec519273f33ff5ab7c90e269bd472",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed53_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "698b3e74001d16b7ab65d47567368ae9c3577692504b7e176d99be2a02c04ca7",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "642d49178b2db29a91ae9b2de06cbb2afb8f1a061c5d80639bae6f2e59f0e534",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "8546a7264ed909ab241788d570d18aa56105c597e93bef04f2df2338ad13220a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "b730f8ccb88908227120dc4a68eeef68b013d13f8a7658e7a871e4aa54dc4f20",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "d2e75b76a2b735b9e66d1ff53af39282b92254ffbf600639ea2a4c2d5865368d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "4efb5f247d72dddc5ac56f976c31caa6de63cadc2f0ee1acce990d3fb9d3381b",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "6a5640c09b07c19431f0400cdda419d77f32ac334df6b44e7b4542dfd28b3807",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "1d3d06083af7306ef418d99519825d6855a23a983ef02933ced635471fcbd27e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "47ba1530834b4ba59c2db2941ce25bb32f46c11463bb47657beaa51b65634049",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "4c30e03c35a34b758f29d4c8d19d6e0e7b51352683a16b4177a5a62265a5db01",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_procrustes_global_25pct.npy",
+      "sha256": "6cc88bacc35c10022e674fbe85a6fb3810b8b2088ebcd7b1637430345167d320",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_procrustes_global_50pct.npy",
+      "sha256": "8913428311e32c5b73bf1cd61e6b8b41e2c7547e55b1e2d561d3c0146643d6a9",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_procrustes_global_75pct.npy",
+      "sha256": "61eef267088789b4a501e2e3ce07ad67d8165e7dc1ba745cc5e1affa737cf400",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "b2b329f71f4ff8e1a633a02388f18b44035fc7a2fa9201e8c373bcf045180e59",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "e644383256f472633d0bfa0fa02a27bd08d9113fa8be40df6179150215517b63",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "72423a38a5e4fc702601fc33a5c3fda1ca1d62a6cf10bf5ff228573bfa66b4de",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "bb9ed4e9735b7aeefbeace8b622fa1b9684bc3974e3418a13a744fbf2c41b327",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "77c70278bab769eb886c4ba94b2dfcfa09cf4f55e0e0efeaf1a43b2f3087b54d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seed67_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "42b5ee9a715702aea18d224c51ad935c973a3d8eba2ae6190f505b7c13016afc",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seedNone_full_x_full.npy",
+      "sha256": "4ea1fdaa8dc5dd0015591d52e7d949f1f9dc57d960ef1020636d0bbf6a7ce9d7",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/e5_small_base_seedNone_full_y_full.npy",
+      "sha256": "b88dec6522ae4fa529ad36fa8641ab485356df24db355f222b9c2da48c540779",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "475d880377402d429fc1cc8b83356a371736dba8e7f04d7a9370a8f49f5b10c7",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "99ed151a252400a845bb6336e75c102a07ccfa0caf591e78927253e75e0f4297",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "9e29d67ffd11b4bb4818d78e3e596beb2c2682b0dbf53dbf738e286d6df0e846",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "c87346d7fc594ff2ad770f6b739f0aa550155a8ad681b11975d5822a7e580e57",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "6405b115e86889673c86a4ce4dfb32fade0596593aa04846658f1dca200ba419",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "c833861022d1cc2673ddc5a8ca3cc0ded4a1fbfa10afade73be596aaf2fc2162",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "cbfb0bfcd25d92dacb24bc6022af8e4a82ae955bda160cd5eb6ad76795373b33",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "0bc268ec210705412ac0e97407238618880f9e6147d548dd882216491163e83c",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "9dff6ed5aa51cf071a17ec814945b2e4b5fd7eb64b0341c7d6529c36f8ab9626",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_procrustes_global_25pct.npy",
+      "sha256": "8b251aebdd8f3c01f2b26e5089e5eca730801af0a61f55fcd612023d7161afde",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_procrustes_global_50pct.npy",
+      "sha256": "eba990edecf5cb5eef3409aa2351df976e0cde7bf6d0f1d0cc12f01616a8eca7",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_procrustes_global_75pct.npy",
+      "sha256": "8e5dc9a15e0d640f546f3ce39b96fe4a850382bcb1da184df6047c13f9470c70",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "5ad146f8f9d7e79aa402e7d2ad41dbc04eb16329c97f41199ae2472a69250690",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "ea20eaadc0de15c6eed0aaaf463e43f8889731686e7540e86bbdaa0e5e4f11de",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "8d95a778771d36a9d7e7cbc6b1b19f43f24ffe90f6ec74de3e9334384154149d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "b265083fa3ed43c91c0b42e6f5c7be83c1e564ad6de84e2205009e712b4b0457",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "454013da98f6fad722aac2c634e937f4445718bc258737c1d3ff92d4b79545b2",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed17_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "c82a99f711a3f96e8885c7308f5b3b488ebb93fe3c1ddad91ec70b15350d969b",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "176a4154e596728eddbb421ea3fc0c3a11bbf20e2fb4b98cbe3f7f487170e69e",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "c549bdf5a80e86f5bf1325a959031d238bf13d0771ea5842d15540f4c9ff1c48",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "f35639fb3dc9aa82de05bcef08c07bd92d6f2d106dc94c0cbff9326144a2df75",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "2ae1fe858916ca93d1336c7c998fe7e68d6d8ad3b3e5c1312463138f8fb26af5",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "eee51f657d7eb93634d0b8366234ac7a5b34dca7d61c1c42409d00126766aeca",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "050d300e1c6293410786172eb22701a1f0a4066402543e4bacf2b5cde0e15136",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "019e6d697c625b28583d2ad8801d6e5f5c9019f1940390f7aa3a28fe2c36bd6a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "803d0e9e80a9fcf1ca35106c153a0387ad35d2e76192379e7350134801e98e16",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "7b97aee7ba4a099608956cef9c670b8244e6d8f1de01d0ae65b249aa4d771f67",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_procrustes_global_25pct.npy",
+      "sha256": "d58c50e7d7ade036cc774bad186f72547ca32e12db4fc92e318087272dfcf9f2",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_procrustes_global_50pct.npy",
+      "sha256": "41fe456630c836d3b231c208724267ab907fe7897fab8a6ed0523da153cb951c",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_procrustes_global_75pct.npy",
+      "sha256": "2534f99abbd077ab64d866cead5bc15c8f90ca39ead008816c9c878b94423014",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "291e9821ad55bdc156cdc35ee1301daeb6d1ac95444cae0f774c91cca3033513",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "5da7fa29f18449de387e6c5c32ad280ded99b5afdc0d99d83186fcfd53a73aa4",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "89b3a326c7d1f82a086ffbaca03b60429669bfa1dfb42236da71f8ac022fa412",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "5d9dfa1a6a27ef086b94d8a9280f9a2523c95d0f893f65a85306be9771671ed9",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "c85f2e54eeb045924f16dceab73e36ef9a371bfa6aaded3ea47012feecac7b69",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed29_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "fd1c6489fb1cb8754d90a68d7458aaa4113c6982c21e0f0005f3d2a68dfd9e8a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "ba9061f8144180babf86453d011b7eec922f407380b43ac9cff92743d5aa943d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "5c8c87b63594a58b635af0ac04ac0c8cc7172e1752d8967b90c830d581deda5d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "dad6a2d71dd9635d0aca86e21ac8ff174e9151be129624cdb1c711657794bdca",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "a47985d63b73127ad839f7126321395500920ad17b608a3f32ae42139878c4fb",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "580e2e91e9179a1a715ac0d2ca24a87ead85625e9a53b1c4c610da16c9fc9938",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "8650ad5d55490303f27fd31c047e74caf7d9c81bb30bba8e54fc684c1ae214d6",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "d52dffde51efb03ad75c2f9c0d3be70237931bf91d9f577a1afc61171b9a4854",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "442ca87a550d7c614c086ecaeb5c7025ae90f153f3e62c75dcefdcbc3d19d709",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "82b5d6a1afb5b83f3f148843928ccc87c8b12e86f44c41c75cebeef01b66a354",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_procrustes_global_25pct.npy",
+      "sha256": "a5a0225552548f7fc8dffab8e0eba10550e114edf189df6b83bdbf86ca7eb41c",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_procrustes_global_50pct.npy",
+      "sha256": "e3221e36696661841dfc17a9fe3fb0230bef6cb14f47ddc970b6142540a65f02",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_procrustes_global_75pct.npy",
+      "sha256": "b05da3ee1898d097ab61a95b051a44f1610aeeba92d36d6b2bae89ec3fa84e8a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "4864e35df610f0ac39c1577a815a9e6be162ca0599171333844edbf91797a7c5",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "60674bf70b632f3827c126ef4bfde9944b5c21ef1492c6c9ec44e05423cb7a33",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "e1d744544a2ecdf8cbf1afca6795a2a7a163d015d6e1293499d49a94a3d9b368",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "a3f8d5f066ae86e6c2390c38ba1c79b23db6708b80d35f362f7a4ef1ab185fbe",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "e4b1f424ed5732251394598d9aeb5140d5cfcadb65ec331ff5fdb931376af40d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed41_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "cc026fbc2401eb47ff61cfb3b21fe3ef2d26ffa95b4547c4c52750799c255f98",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "6b03cef45b07d305b7b9e96d9b5f9a7771b4464d744d51807e2468d4994b9b93",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "4f4a99a0fd6873c1fd3400966fa5a2e631ba9326815dd63a04268299af515e09",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "0897e64102ca5b5abd76e2660c6b3fd200873aae6b31d6e87b7dd365e24715b9",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "194982f98af436f8499436f3504daa82708e84bc1b1bb650fb90818f44dbe7de",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "507fceb0921190f7bc8355686f9a1b4f29855eb0523fcfa7cb8cede1c1c30e66",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "d006c393a2fe0213cc02625f834f88e37c24ad9fdab96dd9ecdae1bd41a8c039",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "f9895971a95db3cc3bb5757a76097eb12290f574b78c72cc3e37b50733af5ad5",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "2e5c279b1d972b6890354759ccc01645d89364e008322f8d15a15831b1939049",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "cbccb46719a05e12fbfd4879a3fede8583f2096e2d8fe7160f47d42e02d3df93",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_procrustes_global_25pct.npy",
+      "sha256": "2a87f5432610f63f182ff9365d7a2c7c5d66e1f8a3a0a00153211025e3916647",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_procrustes_global_50pct.npy",
+      "sha256": "940c5086ec519a6cf25d29a10259903ce968b654976afb7d7601153eda3652ee",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_procrustes_global_75pct.npy",
+      "sha256": "c9ccadf00e014b1e665865b62b2a8d4ed8ab737ac91095da82132fad96549dee",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "4be0b92673b291020fac7ea3fecaee99714f6b9e409740436d6d57e1dee27232",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "f8e2885ffb976fad5ffef7adb01cd57fd2e4c253bbb4785df82a1b93a18854d4",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "5a7b02aa7e3218fba0d0f6b04b2a593032c6a8a4a7825f1edeba963f368146c3",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "0aec9bfe90faec5dbed91e4bb7a828dde4b5243ce166000a3c531ec7a2b8ff34",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "e03c34bf5658b554a7b589487ab8f383b595e6536787fc2e29bdc5630b6c860a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed53_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "322066898c2cd347b825441bfb1e11aac7e2b6cb511c191ee93e23abc41bf256",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_arc2_global_tangent2_r1_25pct.npy",
+      "sha256": "b741d833f2397570953a47841a3d39efc6ce793754336d569fe195f1705d88f9",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_arc2_global_tangent2_r1_50pct.npy",
+      "sha256": "25a48a5e926e234daf6328ba6a0c20d8b3ad2e8b3188e774b14c18b660ea2b94",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_arc2_global_tangent2_r1_75pct.npy",
+      "sha256": "675f79e134438327890c908664a26749de9004eab3efbd876aa9a35262cf7527",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_embedding_converter_paper_spec_25pct.npy",
+      "sha256": "73fc294ef84beb9fda4199b6883cdd8d8a1961b9f60516526f1f3ff7ef357bec",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_embedding_converter_paper_spec_50pct.npy",
+      "sha256": "0ae929fb3af8fc70a70e16ed4943ec522fde9fbe8fc4b3c3c65cdb26eb0af540",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_embedding_converter_paper_spec_75pct.npy",
+      "sha256": "2cc503d32ce10f0d8d620ddd3d175ddd41904a56515765c0334e8ec266cbdfbc",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_la2m20_integration_script_adaptation_25pct.npy",
+      "sha256": "200c7f6e210f5fceeb9b15e5c4878bcad73078f6f37b4885fd96419f16f4d969",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_la2m20_integration_script_adaptation_50pct.npy",
+      "sha256": "5dfea20d2da7b1e9e91970e50179da6c17aa8d2d26e896a81ec0d5db9e86e693",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_la2m20_integration_script_adaptation_75pct.npy",
+      "sha256": "b6730dff6906398586abe807097a93a99af2bfbca78cee60a809fc6030dfb7cf",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_procrustes_global_25pct.npy",
+      "sha256": "fdbea331224dc825b7109de4a9896fee8353c744f54e30df88af76e61c8d4e5a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_procrustes_global_50pct.npy",
+      "sha256": "d864b28d85ef8cc0a1262e7cdb950ea24dd5472eda2ad362ed085d2679d68b12",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_procrustes_global_75pct.npy",
+      "sha256": "111cb1a81794e272abe380b6ee98f0b9013ae0f514a19dd9b8d180c5b6816197",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_ridge_affine_l10_bias_regularized_25pct.npy",
+      "sha256": "6281250e9c2a442df426ae07104bb689bff58db89d66a4aa41aceb42931320ce",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_ridge_affine_l10_bias_regularized_50pct.npy",
+      "sha256": "30946f0ba1cdbab3952239ea3737b841d8e340739f66c095898bfec0148780c0",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_ridge_affine_l10_bias_regularized_75pct.npy",
+      "sha256": "dc54039088ac387df34130a8ae44dc2e458e8f495976b68d1df9a2852114880d",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_simplelinear_official_final50_mlp5_25pct.npy",
+      "sha256": "39117cf77bd5a3f17f286241bbf69b3654e1205e51c81f74c02ba40c2401418a",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_simplelinear_official_final50_mlp5_50pct.npy",
+      "sha256": "46d92b0b1f8e4d004fd7ed168b90d95191a865fb64801478563a4e18fbb6c27b",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seed67_simplelinear_official_final50_mlp5_75pct.npy",
+      "sha256": "71cfd448fa7e5a56c1266d5f05bb9b9de5b662d5c8c370ea94c3639ed82d03a5",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seedNone_full_x_full.npy",
+      "sha256": "4bb6ada1c5f663b126bf252e1a34afddebd23ae80d45cb72af0d7a24e62ecce9",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/rankings/minilm_distilroberta_seedNone_full_y_full.npy",
+      "sha256": "bf1155d6d8777dfb8f607858266fa6b0d5b9796afd3c365ea7ea6eb8191696ca",
+      "bytes": 40128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/bootstrap_draws.npy",
+      "sha256": "6517eb44b5c1967d7f3c54f72329f60f707892c85a395cf56210f6e58715ddba",
+      "bytes": 22400128,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/cell_index.json",
+      "sha256": "d814ca87e947638e826d8f46bacab4f0f3526150ada9552c5ca59ca4b1776410",
+      "bytes": 1522829,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/per_query.npy",
+      "sha256": "ffae3f16c279f3968c430537694df82ea0e8ec7aaed58576125522c9fb1d24be",
+      "bytes": 147328,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/started.json",
+      "sha256": "b0fed013f2b6169b045c1e3ecccd68b01bc8283a7801bc6ef17da187d2e02cb0",
+      "bytes": 343,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+      "bytes": 97716,
+      "role": "current_input"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/verification/verification_seal.json",
+      "sha256": "78e67ab2aac47d0590db54ffd20170c30f8e7a5c96153bf17a1fee1e5322c968",
+      "bytes": 74230,
+      "role": "current_input"
+    },
+    {
+      "path": "src/arc2_global/baseline_adapters.py",
+      "sha256": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+      "bytes": 6988,
+      "role": "current_input"
+    },
+    {
+      "path": "src/arc2_global/embedding_converter.py",
+      "sha256": "1df925b184f506db800945ae8e420c59aa34e8bf895ccfb33d0d972c7eae0508",
+      "bytes": 47554,
+      "role": "current_input"
+    },
+    {
+      "path": "src/arc2_global/model.py",
+      "sha256": "a678d522ce47be251af8d43fb21f94591e373aae6a8abcd290929f787b3aa6e2",
+      "bytes": 7376,
+      "role": "current_input"
+    },
+    {
+      "path": "src/arc2_global/retrieval.py",
+      "sha256": "d984d348cff6869ec6efa5c7eeb60402bce4b9df9c967e84c520f70d892ba3b1",
+      "bytes": 1601,
+      "role": "current_input"
+    },
+    {
+      "path": "src/arc2_global/solver_backend.py",
+      "sha256": "1b76bb8adf98ecc846505b7c89d983a0cf0740931d925e775a34f24a66da9887",
+      "bytes": 11932,
+      "role": "current_input"
+    }
+  ]
+}

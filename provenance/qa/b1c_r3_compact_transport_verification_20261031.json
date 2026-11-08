@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-31T05:59:49.795795+00:00",
+  "status": "PASS",
+  "archive_sha256": "2c2a8389342c5ff157b65ee8aae35b9763b445055635e4be5d708bd73450ec8e",
+  "archive_bytes": 37930852,
+  "files_verified": 1540,
+  "bytes_verified": 120882877,
+  "all_rankings": 736,
+  "scope": "Compact review evidence; no claim of complete checkpoint/full embedding backup",
+  "bundle": "results/b1c_r3_review_20261031/evidence"
+}

@@ -1,0 +1,368 @@
+{
+  "review_date": "2026-11-02",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "overall_score": 6,
+  "recommendation": "weak accept",
+  "confidence": 4,
+  "scale": {
+    "minimum": 1,
+    "maximum": 10,
+    "5": "borderline",
+    "6": "weak accept",
+    "7": "accept",
+    "8": "strong accept",
+    "official_DASFAA_scale": false,
+    "acceptance_probability": false,
+    "arithmetic_dimension_average": false
+  },
+  "scores": {
+    "novelty": 5,
+    "technical_soundness": 8,
+    "experimental_evidence": 7,
+    "practical_significance": 6,
+    "clarity_figures": 8,
+    "reproducibility": 7,
+    "venue_fit": 8
+  },
+  "summary": "A modest but coherent two-step tangent refinement with supported development gains and real prospective E5 improvements against the declared Converter/ridge configurations. Weak accept for the useful scoped contribution; independent nDCG advantage over the strongest geometric baseline is not demonstrated.",
+  "strengths_ranked": [
+    "Correct, explicit norm-scaled cosine-gradient target and compact affine accumulation, without claiming guaranteed finite-step improvement.",
+    "Matched development evidence supports +0.0243 nDCG over Procrustes and +0.0069 from the second correction; prospective E5 gains against Converter/ridge persist across budgets.",
+    "Exact retrieval, anchor-inclusive accounting, five seeds, approximate family intervals, development/test distinction and negative results are explicit.",
+    "Mixed-gallery diagnostics establish meaningful replacement effects without claiming that partial backfilling itself is new."
+  ],
+  "weaknesses_ranked": [
+    {
+      "finding": "No independently confirmed nDCG improvement over Procrustes; its point mean is higher in all six prospective cells.",
+      "kind": "contribution strength, not current-claim contradiction"
+    },
+    {
+      "finding": "Incremental novelty; ARC2-versus-ridge changes the prior/initialization as well as tangent targeting.",
+      "kind": "novelty and causal attribution limit"
+    },
+    {
+      "finding": "Only one prospective 50-query collection and two dimensionality-matched encoder transitions; no deployment measurements, and Full-X remains stronger on all partial-development means.",
+      "kind": "scope and practical significance limit"
+    },
+    {
+      "finding": "Adapted neural baseline training/selection bounds the meaning of large gains; HMoE is not evaluated and public artifact access remains pending.",
+      "kind": "comparison and reproducibility limit"
+    }
+  ],
+  "strongest_rejection_argument": "The procedure is an incremental refinement whose advantage over the strongest simple alignment baseline occurs on development evidence. The only prospective collection gives Procrustes higher nDCG in all six cells; large confirmed gains are against weaker adapted configurations. Thus the new refinement has limited independent evidence of advancing the best migration operating point.",
+  "required_current_claim_fixes": [
+    "Replace the pending artifact notice with an accessible anonymous package supplying the promised baseline settings, revisions, protocol locks and analysis entry points."
+  ],
+  "minimum_response": "Explicitly acknowledge the unresolved prospective nDCG comparison with Procrustes, already disclosed in the body, and retain the distinction between the full initialized refinement and an isolated tangent-specific effect.",
+  "new_experiment_necessary_for_actual_claim": false,
+  "experiment_decision_reason": "The narrow descriptive development, second-step, held configuration-specific, cross-budget and coefficient-storage claims are supported by the inspected evidence. No fatal current-claim inconsistency was found.",
+  "optional_extensions": [
+    "Additional independently locked collections and encoder transitions",
+    "Matched-prior tangent-versus-other-residual control",
+    "HMoE comparison",
+    "Supervision-size study with matched effective regularization",
+    "Physical migration and serving measurements"
+  ],
+  "verification": {
+    "pdf_pages_visual_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "render_max_side_pixels": 1450,
+    "figures_visual_inspected": [
+      {
+        "figure": 1,
+        "page": 3,
+        "topic": "mechanism"
+      },
+      {
+        "figure": 2,
+        "page": 10,
+        "topic": "development quality"
+      },
+      {
+        "figure": 3,
+        "page": 11,
+        "topic": "development ablation intervals"
+      },
+      {
+        "figure": 4,
+        "page": 13,
+        "topic": "prospective nDCG and Recall"
+      }
+    ],
+    "pdf_sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+    "pdf_sha256_matches_request": true,
+    "material_visual_defects_found": false,
+    "saved_mean_checks": {
+      "development": {
+        "cells": 736,
+        "max_absolute_error": 0
+      },
+      "allpaid": {
+        "cells": 124,
+        "max_absolute_error": 0
+      },
+      "trec": {
+        "cells": 184,
+        "max_absolute_error": 0
+      }
+    },
+    "check_scope": "Arithmetic over existing saved per-query metric arrays, not new scientific runs; no upstream scorer correctness certification.",
+    "generated_tex_files_read_count": 7,
+    "section_tex_files_read_count": 8
+  },
+  "input_manifest": [
+    {
+      "path": "paper/main.tex",
+      "sha256": "704d831a3f56001486627c701512c0a03b7dcaba6ee1c5939418898f25cbd747",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/abstract.tex",
+      "sha256": "24a2314dcfb5090ba76b4cb7dfea95c8c941eacff94881e451edea6374d3043a",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/conclusion.tex",
+      "sha256": "7f9bb6b3a071a3fa02338249c0b949dc1bf8b2d9863c4c23644a65e80def4caf",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/discussion.tex",
+      "sha256": "4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/experimental-setup.tex",
+      "sha256": "4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/introduction.tex",
+      "sha256": "4785d051ea8266d7907b2ca55417a2ae6744c9ea01e9adb90ef0db1fd34a6f5f",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/method.tex",
+      "sha256": "2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/related-work.tex",
+      "sha256": "ff5a1ac26f3ca8eb9865f99fec92e3e5b185756c3d67fcae2b048f6654594f44",
+      "access": "full"
+    },
+    {
+      "path": "paper/sections/results.tex",
+      "sha256": "9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d",
+      "access": "full"
+    },
+    {
+      "path": "paper/generated/ablation.tex",
+      "sha256": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e",
+      "access": "full"
+    },
+    {
+      "path": "paper/generated/allpaid.tex",
+      "sha256": "bd28688f51a306c9990c0174f1c3b88786eb266a5e76bafffc0217c851de4c13",
+      "access": "full"
+    },
+    {
+      "path": "paper/generated/budget_leverage.tex",
+      "sha256": "dc8d45d6b72643735ae2135c8f970687b0eca5a9d8849de46988976a77e6719b",
+      "access": "full"
+    },
+    {
+      "path": "paper/generated/dev_macro.tex",
+      "sha256": "58e7543a91a5bbfcce75969e6277967cc1978ec1fc6e96d5461c60d821b3ff27",
+      "access": "full"
+    },
+    {
+      "path": "paper/generated/trec_family.tex",
+      "sha256": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e",
+      "access": "full"
+    },
+    {
+      "path": "paper/generated/trec_means.tex",
+      "sha256": "354d8f8e46373015b3af96c5e66c3923777a5e88baef2f95be84728f99555dce",
+      "access": "full"
+    },
+    {
+      "path": "paper/generated/trec_recall.tex",
+      "sha256": "92fbea88b6557670feb56192669e114184b0b77a0b20baa083bc74fbc7b5fbdd",
+      "access": "full"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+      "access": "full"
+    },
+    {
+      "path": "paper/ARC2_Global_DASFAA2027_final.pdf",
+      "sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+      "access": "full"
+    },
+    {
+      "path": "paper/scripts/build_evidence.py",
+      "sha256": "8f81be962794f48c68b8cdef917cb34fb95aaf8e2e911515c547b2289e3d2a16",
+      "access": "lines 1-150 only"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5",
+      "access": "full JSON parsed; selected numerical means, contrasts and run metadata assessed; not an independent reviewer report"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/cell_index.json",
+      "sha256": "c4d23f1730dbd10b3975590faf77ab0210869d19306c6adfe64785e3e7e515aa",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_FiQA.npy",
+      "sha256": "3008af5125a8ab4d941aa1b8597507c9e30caa17dad2ab5c4f2c8eff3a15c9da",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoFEVER.npy",
+      "sha256": "4dcb99a9ce16125b857721ec035f9a5d0ddbc78099ff1023d95bacfc11efac5d",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoHotpotQA.npy",
+      "sha256": "46966df3fffc74b63b935082b77db720cbcbc5b97bd0a656d3b9d732c508c7ee",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoNQ.npy",
+      "sha256": "59ff7a5599c53252d22680101e3804cef6effd189d8b73c158eb051add09d180",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded",
+      "access": "full JSON parsed; selected numerical means, contrasts and run metadata assessed; not an independent reviewer report"
+    },
+    {
+      "path": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7",
+      "access": "full JSON parsed; selected numerical means, contrasts and run metadata assessed; not an independent reviewer report"
+    },
+    {
+      "path": "results/b1p_r5_review_20261027/scoring/cell_index.json",
+      "sha256": "9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b1p_r5_review_20261027/scoring/per_query.npy",
+      "sha256": "551dc388059b6a530df550acbbd9a477de76cd0cc188ce54da0a1198be1434d1",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f",
+      "access": "full JSON parsed; selected numerical means, contrasts and run metadata assessed; not an independent reviewer report"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7",
+      "access": "full JSON parsed; selected numerical means, contrasts and run metadata assessed; not an independent reviewer report"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/cell_index.json",
+      "sha256": "d814ca87e947638e826d8f46bacab4f0f3526150ada9552c5ca59ca4b1776410",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/per_query.npy",
+      "sha256": "ffae3f16c279f3968c430537694df82ea0e8ec7aaed58576125522c9fb1d24be",
+      "access": "full saved score arrays; no relevance labels or rankings"
+    },
+    {
+      "path": "paper/review/scoring_20261102/primary_sources/yang26e.pdf",
+      "sha256": "38b35ae4755468e2619731e527d216792b936008e343c09e229c8e4f04856c05",
+      "access": "downloaded full bytes; selectively extracted/read method portions from pp. 1-6; no full-paper visual inspection"
+    },
+    {
+      "path": "paper/review/scoring_20261102/primary_sources/yang26e.txt",
+      "sha256": "21eccf3b4a87752486bdefaf67e64780f7a286f2886fd1af00cd4b9377468293",
+      "access": "downloaded full bytes; selectively extracted/read method portions from pp. 1-6; no full-paper visual inspection"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://aclanthology.org/2025.acl-long.1237.pdf",
+      "access": "method and selection pp. 3-4; Appendix B p. 12; official page/abstract also inspected"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v306/yang26e.html",
+      "access": "official abstract and metadata"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf",
+      "sha256": "38b35ae4755468e2619731e527d216792b936008e343c09e229c8e4f04856c05",
+      "access": "selective method text inspection from pp. 1-6, including localized experts and directional residual regularizer"
+    },
+    {
+      "url": "https://arxiv.org/html/2510.13406v1",
+      "access": "abstract and Section 4.2"
+    },
+    {
+      "url": "https://machinelearning.apple.com/research/fastfill",
+      "access": "author abstract"
+    },
+    {
+      "url": "https://homepages.inf.ed.ac.uk/ycao/pub-topic.html",
+      "access": "author bibliography for primary-source discovery only"
+    }
+  ],
+  "access_limits": [
+    "ACM LA2M full text was not assessed: publisher access returned 403.",
+    "Pinned SimpleLinear GitHub URL failed in the browser tool; its implementation was not independently inspected.",
+    "OpenReview FastFill access encountered a browser challenge; no reviews were read.",
+    "The initial attempted FastFill OpenReview identifier was inaccessible; the correct source was subsequently found through the author page.",
+    "HMoE web extraction failed but the official PMLR-linked PDF downloaded successfully for selective local text inspection.",
+    "Web responses were not byte-hashed; incidental secondary search snippets were not scientific evidence.",
+    "Pinned model cards were not independently downloaded; raw labels, embeddings and rankings were not opened.",
+    "Prospective custody/commit history, all interval calculations and upstream scorer correctness were not fully audited.",
+    "This is not an exhaustive literature novelty search or an actual conference decision."
+  ],
+  "reviewer_independence_limits": {
+    "earlier_scores_or_opinions_exposed": false,
+    "prior_review_outputs_read": false,
+    "project_scientific_opinion_files_read": false,
+    "user_supplied_scope_contract_available": true,
+    "fully_score_blind_relative_to_earlier_reviews": true,
+    "cross_family_independent": false,
+    "subagents_used": false,
+    "other_models_used": false
+  },
+  "actions": {
+    "manuscript_edits": false,
+    "scientific_input_edits": false,
+    "qrels_opened": false,
+    "training": false,
+    "encoding": false,
+    "rankings_retrieved": false,
+    "new_scientific_runs": false,
+    "external_method_reproduction": false
+  },
+  "full_review": "PAPER_SCORE.md"
+}

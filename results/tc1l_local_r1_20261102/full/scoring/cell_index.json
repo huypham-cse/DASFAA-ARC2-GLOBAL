@@ -1,0 +1,282 @@
+[
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "method": "procrustes",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed17/procrustes_rankings.npy",
+    "sha256": "ec0b3dfc0d8286b347be16c6ad4b083e6b75edaeb2135f5661b14c3f7359ec57",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.546866200020304,
+    "search_seconds": 2.295709199999692
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "method": "tangent2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed17/tangent2_rankings.npy",
+    "sha256": "83d928c4da06981f173b541e3c7a5d6ce57380e58da8bf9174cc883b6d9ecd57",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.5527646999980789,
+    "search_seconds": 2.3065523999975994
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "method": "chordal2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed17/chordal2_rankings.npy",
+    "sha256": "e006af36c3e78b5db0dcfcb8b701ecf71f6393ad9bcc5416502e7e9cd32d568d",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.5848086999903899,
+    "search_seconds": 2.295202299981611
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "method": "euclidean2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed17/euclidean2_rankings.npy",
+    "sha256": "6d0b2e6d3c569eb876bb4556ae2d398ee26742b6962d58e064c88e8c48047b7a",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6197749999992084,
+    "search_seconds": 2.3058992000005674
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "method": "procrustes",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed29/procrustes_rankings.npy",
+    "sha256": "c846f2f2dcc08217dc2db4b517c4fff2a04fa2e0e9e9b8de2d2ae9b8df25eaae",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.610614799981704,
+    "search_seconds": 2.30373809998855
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "method": "tangent2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed29/tangent2_rankings.npy",
+    "sha256": "81bc9803ebec09d399d0bafe1db8089ee5a64908d510b12f5a98a0c86ab0504d",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6142269000119995,
+    "search_seconds": 2.315215899987379
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "method": "chordal2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed29/chordal2_rankings.npy",
+    "sha256": "2fe38594621530ed8e6e9f1845844c22a5680b871a879a2202cf372b7b9d4c28",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6466582000139169,
+    "search_seconds": 2.3332524999859743
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 29,
+    "method": "euclidean2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed29/euclidean2_rankings.npy",
+    "sha256": "02546f2050a6ab464c21c3ff31c1ed585f8b19540cdbaec3962c6a29fad73540",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.64151290000882,
+    "search_seconds": 2.287230699992506
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "method": "procrustes",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed41/procrustes_rankings.npy",
+    "sha256": "1e3c0ad49712064b9ee273b2e679e3fb53eb10d1aaf13da663cf071c1b31bc99",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6118781999975909,
+    "search_seconds": 2.3374439000035636
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "method": "tangent2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed41/tangent2_rankings.npy",
+    "sha256": "2a2e0e766b195ea3ed694a7e8cc21bd46bb17cb540be23af991caecf559b161d",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6485535000101663,
+    "search_seconds": 2.280393000022741
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "method": "chordal2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed41/chordal2_rankings.npy",
+    "sha256": "ebb703cd6cc2542c376c3f1e8d07b11e5a3a1073d57a514dc9ed35676b124083",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.611513100011507,
+    "search_seconds": 2.325353799998993
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 41,
+    "method": "euclidean2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed41/euclidean2_rankings.npy",
+    "sha256": "461b46aa7d2c3da0da6d450702863cf2915127d4839451dace170f53b0a9f976",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.648890799988294,
+    "search_seconds": 2.3020352000021376
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "method": "procrustes",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed53/procrustes_rankings.npy",
+    "sha256": "2f51744d866141986257947723b0ed6b8885e7287098e9637cd0ed1f4af0dbc3",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6124085999908857,
+    "search_seconds": 2.3145173999946564
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "method": "tangent2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed53/tangent2_rankings.npy",
+    "sha256": "ff59f50c6ebec3abd79c159ac7f11680681d21d288f5afcf1d621b6b06884fc3",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6209157000121195,
+    "search_seconds": 2.321694500016747
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "method": "chordal2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed53/chordal2_rankings.npy",
+    "sha256": "8b026e124010d812a835bca32c4c834dbacdd25601bfbf0bf62619103420f85e",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6308468999923207,
+    "search_seconds": 2.2902450999827124
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 53,
+    "method": "euclidean2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed53/euclidean2_rankings.npy",
+    "sha256": "b56e84ec1d3f426c56bc935326daca9749046671067cdfc3693054b439f8364e",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.5810894000169355,
+    "search_seconds": 2.2910197000019252
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "method": "procrustes",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed67/procrustes_rankings.npy",
+    "sha256": "dd3b94b98bec079c564dd9aa46044749edf246804947e632a0f699632c144c69",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.5753020000120159,
+    "search_seconds": 2.3201498999842443
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "method": "tangent2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed67/tangent2_rankings.npy",
+    "sha256": "7ab248317404b69d6c8f5b325d12e2df173d2936140d1b5575cd7bbda132d228",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.5800568000122439,
+    "search_seconds": 2.303767700010212
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "method": "chordal2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed67/chordal2_rankings.npy",
+    "sha256": "72749b189943a54f6514c8990713986dd7d0fa107252ed24b8e1d05042c6a01b",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.5961400000087451,
+    "search_seconds": 2.309051799995359
+  },
+  {
+    "pair": "minilm_distilroberta",
+    "seed": 67,
+    "method": "euclidean2",
+    "budget": "50pct",
+    "ranking_path": "minilm_distilroberta_seed67/euclidean2_rankings.npy",
+    "sha256": "b292109a3f2ed67df4e6e4828130174fae368d0a974ee8992532e5efdbdb65a5",
+    "shape": [
+      500,
+      100
+    ],
+    "map_seconds": 0.6056874000059906,
+    "search_seconds": 2.3064796999969985
+  }
+]

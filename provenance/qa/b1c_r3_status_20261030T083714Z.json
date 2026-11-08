@@ -1,0 +1,357 @@
+{
+  "utc": "2026-10-30T08:37:14+00:00",
+  "b1c_r3_full_mini_r3b_20261030t0347": {
+    "status": "B1C_R3_RUNNING",
+    "failures": [],
+    "wall_seconds": null,
+    "ranking_count": null,
+    "started_utc": "2026-10-30T03:47:30.526928+00:00",
+    "ended_utc": null,
+    "jobs": null
+  },
+  "b1c_r3_schedule_mini_r3b_20261030t0347": {
+    "status": "RUNNING",
+    "failures": null,
+    "wall_seconds": null,
+    "ranking_count": null,
+    "started_utc": null,
+    "ended_utc": null,
+    "jobs": [
+      {
+        "stage": "smoke",
+        "argv": [
+          "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+          "-u",
+          "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_stage.py",
+          "--stage",
+          "smoke",
+          "--output",
+          "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347",
+          "--code-commit",
+          "61f73171b1869a186648aadd88f1b6f81a61376b",
+          "--lock",
+          "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+          "--restored-root",
+          "/network-volume/arc2_recovery_20261030/restored"
+        ],
+        "started_unix": 1793331993.305209,
+        "pid": 2794,
+        "returncode": 0,
+        "ended_unix": 1793332050.041277,
+        "receipt_path": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347/metadata.json",
+        "receipt_sha256": "325f195ce05b140f4e0714a8c3655f0de6560bae2c96ecb87e222ee6011ef3ec"
+      },
+      {
+        "stage": "full",
+        "argv": [
+          "/network-volume/arc2_recovery_20261030/envs/cpu/bin/python",
+          "-u",
+          "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_stage.py",
+          "--stage",
+          "full",
+          "--output",
+          "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347",
+          "--code-commit",
+          "61f73171b1869a186648aadd88f1b6f81a61376b",
+          "--smoke",
+          "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347",
+          "--lock",
+          "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+          "--restored-root",
+          "/network-volume/arc2_recovery_20261030/restored"
+        ],
+        "started_unix": 1793332050.0560582,
+        "pid": 2997
+      }
+    ]
+  },
+  "b1c_r3_smoke_mini_r3b_20261030t0347": {
+    "status": "B1C_R3_SMOKE_PASS",
+    "failures": [],
+    "wall_seconds": 56.04376174882054,
+    "ranking_count": null,
+    "started_utc": "2026-10-30T03:46:33.871576+00:00",
+    "ended_utc": "2026-10-30T03:47:29.915321+00:00",
+    "jobs": null
+  },
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "NanoNQ_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec",
+    "group_index": 94,
+    "groups_total": 120,
+    "rankings_complete": 280,
+    "rankings_total": 358
+  },
+  "FiQA_FiQA_e5_small_base_seed17_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1133.8168121743947
+  },
+  "FiQA_FiQA_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.033377476967871
+  },
+  "FiQA_FiQA_e5_small_base_seed29_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1121.4937890926376
+  },
+  "FiQA_FiQA_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.170701366849244
+  },
+  "FiQA_FiQA_e5_small_base_seed41_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1127.97451495938
+  },
+  "FiQA_FiQA_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.254788715392351
+  },
+  "FiQA_FiQA_e5_small_base_seed53_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1132.1950919982046
+  },
+  "FiQA_FiQA_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.954727387987077
+  },
+  "FiQA_FiQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1131.411342847161
+  },
+  "FiQA_FiQA_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.272300732322037
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1127.7961046658456
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1129.5280943783
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.6292518600821495
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1118.302459416911
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.538139426149428
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1111.4475413700566
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.346308388747275
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1129.631716053933
+  },
+  "FiQA_FiQA_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 7.078179948031902
+  },
+  "NanoFEVER_NanoFEVER_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.096942490898073
+  },
+  "NanoFEVER_NanoFEVER_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.341766010969877
+  },
+  "NanoFEVER_NanoFEVER_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.3944664699956775
+  },
+  "NanoFEVER_NanoFEVER_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.589938638731837
+  },
+  "NanoFEVER_NanoFEVER_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.114226686768234
+  },
+  "NanoFEVER_NanoFEVER_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 6.024831891991198
+  },
+  "NanoFEVER_NanoFEVER_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.600588938221335
+  },
+  "NanoFEVER_NanoFEVER_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.112944191321731
+  },
+  "NanoFEVER_NanoFEVER_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.146979087032378
+  },
+  "NanoFEVER_NanoFEVER_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.108103401958942
+  },
+  "NanoHotpotQA_NanoHotpotQA_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.732845079153776
+  },
+  "NanoHotpotQA_NanoHotpotQA_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.510672711767256
+  },
+  "NanoHotpotQA_NanoHotpotQA_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.619781383313239
+  },
+  "NanoHotpotQA_NanoHotpotQA_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.5878544906154275
+  },
+  "NanoHotpotQA_NanoHotpotQA_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.504344182088971
+  },
+  "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.366637473925948
+  },
+  "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.322553539648652
+  },
+  "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.0138049172237515
+  },
+  "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 4.991939970292151
+  },
+  "NanoHotpotQA_NanoHotpotQA_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.7463654251769185
+  },
+  "NanoNQ_NanoNQ_e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 6.0008245669305325
+  },
+  "NanoNQ_NanoNQ_e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.88234752509743
+  },
+  "NanoNQ_NanoNQ_e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 6.204627362079918
+  },
+  "NanoNQ_NanoNQ_e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.2299956027418375
+  },
+  "NanoNQ_NanoNQ_e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 4.920430829748511
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1129.1852807346731
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed17_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 6.588215574622154
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed29_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1125.367475562729
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.52482948359102
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed41_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1112.4781500240788
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.6705980421975255
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed53_fixed1024_embedding_converter_paper_spec": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 1120.9933983515948
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.775381442159414
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec": {
+    "status": "RUNNING",
+    "failures": [],
+    "wall_seconds": null
+  },
+  "NanoNQ_NanoNQ_minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5": {
+    "status": "B1P_NEURAL_FULL_PASS",
+    "failures": [],
+    "wall_seconds": 5.615893095731735
+  },
+  "processes": "    PID %CPU   RSS COMMAND\n  13276  100 1402060 /network-volume/arc2_recovery_20261030/envs/gpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1p_neural_worker.py --request /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoNQ_NanoNQ_minilm_distilroberta_seed67_fixed1024_embedding_converter_paper_spec/request.json\n   2997  8.0 267716 /network-volume/arc2_recovery_20261030/envs/cpu/bin/python -u /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/ops/b1c_r3_stage.py --stage full --output /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347 --code-commit 61f73171b1869a186648aadd88f1b6f81a61376b --smoke /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_smoke_mini_r3b_20261030t0347 --lock /network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json --restored-root /network-volume/arc2_recovery_20261030/restored\n   1741  0.2     0 [python3] <defunct>\n   9098  0.1 52120 /workspace/vericache_r5_20261029/env/venv/bin/python -Wignore -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=12) --multiprocessing-fork\n   9102  0.1 51572 /workspace/vericache_r5_20261029/env/venv/bin/python -Wignore -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=16) --multiprocessing-fork\n      1  0.0  1012 sleep infinity",
+  "gpu": "Fri Oct 30 08:37:14 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          Off |   00000000:1C:00.0 Off |                   On |\n| N/A   39C    P0            195W /  700W |                  N/A   |     N/A      Default |\n|                                         |                        |              Enabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| MIG devices:                                                                            |\n+------------------+----------------------------------+-----------+-----------------------+\n| GPU  GI  CI  MIG |                     Memory-Usage |        Vol|      Shared           |\n|      ID  ID  Dev |                       BAR1-Usage | SM     Unc| CE ENC DEC OFA JPG    |\n|                  |                                  |        ECC|                       |\n|==================+==================================+===========+=======================|\n|  0    3   0   0  |            1041MiB / 20096MiB    | 32      0 |  2   0    2    0    2 |\n|                  |                 2MiB / 32767MiB  |           |                       |\n+------------------+----------------------------------+-----------+-----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A     13276      C   ...covery_20261030/envs/gpu/bin/python          0MiB |\n+-----------------------------------------------------------------------------------------+"
+}

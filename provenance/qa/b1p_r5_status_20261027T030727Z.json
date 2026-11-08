@@ -1,0 +1,293 @@
+{
+  "time_vn": "2026-10-27T10:07:27.932869+07:00",
+  "status": "FAILED_PRESERVED",
+  "failures": [
+    "RuntimeError('Scorer failed; preserve all sealed rankings')"
+  ],
+  "progress": {
+    "stage": "DEV_SCORING",
+    "cells": 124,
+    "total": 124
+  },
+  "ranking_files": 124,
+  "completed_neural_fits": [
+    {
+      "cell": "e5_small_base_seed17_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1260.7688751714304,
+      "selected_iteration": 49500
+    },
+    {
+      "cell": "e5_small_base_seed17_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 19.751601181924343,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed17_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 4.6907404493540525,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed29_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1276.0772782796994,
+      "selected_iteration": 49500
+    },
+    {
+      "cell": "e5_small_base_seed29_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 21.107618873007596,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed29_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 5.582494423724711,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed41_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1278.5821019224823,
+      "selected_iteration": 49500
+    },
+    {
+      "cell": "e5_small_base_seed41_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 19.78743741288781,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed41_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 5.196194297634065,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed53_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1235.6955958064646,
+      "selected_iteration": 48500
+    },
+    {
+      "cell": "e5_small_base_seed53_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 19.066628385335207,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed53_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 4.625878510996699,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed67_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1181.3628388987854,
+      "selected_iteration": 50000
+    },
+    {
+      "cell": "e5_small_base_seed67_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 17.68335567507893,
+      "selected_iteration": null
+    },
+    {
+      "cell": "e5_small_base_seed67_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 5.295677577145398,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 11347.499832377769,
+      "selected_iteration": 48750
+    },
+    {
+      "cell": "minilm_distilroberta_seed29_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 4370.661741730757,
+      "selected_iteration": 49750
+    },
+    {
+      "cell": "minilm_distilroberta_seed29_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 225.30007178895175,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 61.59076723083854,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed41_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1191.9998139999807,
+      "selected_iteration": 50000
+    },
+    {
+      "cell": "minilm_distilroberta_seed41_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 19.53144918847829,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed41_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 5.552184955216944,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed53_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1278.6855374462903,
+      "selected_iteration": 50000
+    },
+    {
+      "cell": "minilm_distilroberta_seed53_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 18.038541388697922,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed53_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 4.910486198030412,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed67_allpaid28819_embedding_converter_paper_spec",
+      "method": "embedding_converter",
+      "wall_seconds": 1272.6670730113983,
+      "selected_iteration": 49750
+    },
+    {
+      "cell": "minilm_distilroberta_seed67_allpaid28819_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 20.164856642484665,
+      "selected_iteration": null
+    },
+    {
+      "cell": "minilm_distilroberta_seed67_fixed1024_simplelinear_official_final50_mlp5",
+      "method": "simplelinear",
+      "wall_seconds": 5.427853069268167,
+      "selected_iteration": null
+    }
+  ],
+  "active_worker": null,
+  "metadata": {
+    "status": "FAILED_PRESERVED",
+    "stage": "full",
+    "code_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+    "lock_sha256": "0224200454b0deb8f2176e509d8bd99da0f59c7ae7b12a2488ec6eadad7308ad",
+    "started_utc": "2026-10-26T13:57:21.053083+00:00",
+    "failures": [
+      "RuntimeError('Scorer failed; preserve all sealed rankings')"
+    ],
+    "TREC_access": false,
+    "new_physical_document_encodes": 0,
+    "artificial_time_memory_caps": null,
+    "new_current_dev_qrel_sources_opened": 1,
+    "transported_qrel_free_files_verified": 266,
+    "prior_dev_label_transport": {
+      "intent": {
+        "protocol": "protocols/B1P_R3_H100_MINI_DEPLOYMENT_20261026.md",
+        "pre_run_commit": "3b56a1c7fcdd0cf54ba7da22cfe448c6747433e2",
+        "before_source_hash_stat_or_byte_read": "2026-10-26T09:12:12.274143+00:00",
+        "source_host": "103.73.232.225",
+        "destination_host": "103.73.232.201",
+        "source": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "expected_sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+        "purpose": "opaque transport of previously inspected FiQA DEV TSV; no parsing/metrics; worker API excludes qrels",
+        "judgments_parsed": false,
+        "metrics_computed": false,
+        "TREC_access": false
+      },
+      "verified": {
+        "status": "DEV_LABEL_TRANSPORT_VERIFIED",
+        "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+        "bytes": 18327,
+        "intent_sha256": "29cc5b9b5494029c7331200852201421b954680ebe0020e84a255b43a7920cad",
+        "destination": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+        "judgments_parsed": false,
+        "metrics_computed": false,
+        "verified_utc": "2026-10-26T09:16:55.856407+00:00"
+      },
+      "scope": "opaque prior DEV transport; first scorer parse follows verified124-cell seal"
+    },
+    "ranking_process_qrel_reads": 0,
+    "qrels_opened": true,
+    "runtime": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "sklearn": "1.5.1",
+      "python": "/root/arc2_p3h_20261020/venv/bin/python",
+      "environment": {
+        "OPENBLAS_CORETYPE": "Haswell",
+        "OMP_NUM_THREADS": "4",
+        "OPENBLAS_NUM_THREADS": "4"
+      },
+      "blas": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+          "version": "0.3.30",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+          "version": "0.3.31.188.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libgomp",
+          "filepath": "/root/arc2_p3h_20261020/venv/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        }
+      ],
+      "verified_openblas_architecture_threads": true
+    },
+    "recovered_successful_cells": 7,
+    "ranking_count": 124,
+    "ranking_seal_sha256": "1b993e1bf3fe0248f0a48e52cc371f232ceeba615f81672ec30b81048ba5be1d",
+    "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/ops/b1p_stage.py\", line 268, in main\n    full(lock,a.code_commit,out,meta)\n  File \"/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/ops/b1p_stage.py\", line 188, in full\n    if p.returncode:raise RuntimeError('Scorer failed; preserve all sealed rankings')\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Scorer failed; preserve all sealed rankings\n",
+    "wall_seconds": 26996.03477970604,
+    "peak_process_tree_rss_bytes": 5850812416,
+    "ended_utc": "2026-10-26T21:27:16.998937+00:00"
+  },
+  "output_files": [
+    "metadata.json",
+    "resource_trace.jsonl",
+    "inputs",
+    "rankings",
+    "reuse_receipts.json",
+    "cells_pre_qrels.json",
+    "recovery_verification.json",
+    "neural",
+    "progress.json",
+    "cpu",
+    "ranking_seal.json",
+    "scorer.stdout.log",
+    "scorer.stderr.log",
+    "scoring"
+  ]
+}

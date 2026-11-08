@@ -1,0 +1,32 @@
+{
+  "observed_unix": 1792978088.977806,
+  "full_status": "RUNNING",
+  "progress": {
+    "stage": "NEURAL_FIT",
+    "cells": 51,
+    "total": 124,
+    "pair": "minilm_distilroberta",
+    "seed": 17,
+    "regime": "allpaid28819",
+    "method": "embedding_converter_paper_spec",
+    "worker": "/root/arc2_global_paper_20261025/code_f1457b8_r1/results/b1p_full_r1_20261026/neural/minilm_distilroberta_seed17_allpaid28819_embedding_converter_paper_spec/worker"
+  },
+  "selection_latest": {
+    "cuda_reserved_bytes": 931135488,
+    "elapsed_seconds": 105.61463542096317,
+    "global": 0.1567060351371765,
+    "gradient_nonzero": true,
+    "gradient_norm": 0.008992457762360573,
+    "gradients_finite": true,
+    "local": 0.1498141884803772,
+    "loss": 0.06133531033992767,
+    "observed_rss_bytes": 2161311744,
+    "own_cuda_allocated_bytes": 744842240,
+    "parameters_finite": true,
+    "regression": 0.03068329021334648,
+    "step": 2000,
+    "validation_mae": 0.030216531828045845
+  },
+  "failures": [],
+  "worker_status": "RUNNING"
+}

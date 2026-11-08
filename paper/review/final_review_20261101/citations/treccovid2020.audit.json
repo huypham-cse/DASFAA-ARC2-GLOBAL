@@ -1,0 +1,81 @@
+{
+  "key": "treccovid2020",
+  "audit_date": "2026-11-01",
+  "review_status": "same-family/provisional",
+  "existence": {
+    "verdict": "VERIFIED",
+    "reason": "Live Crossref API, official NIST author publication record and author-hosted full text establish the publication."
+  },
+  "metadata": {
+    "verdict": "MATCH",
+    "title": "TREC-COVID: constructing a pandemic information retrieval test collection",
+    "authors_in_order": ["Ellen Voorhees", "Tasmeer Alam", "Steven Bedrick", "Dina Demner-Fushman", "William R. Hersh", "Kyle Lo", "Kirk Roberts", "Ian Soboroff", "Lucy Lu Wang"],
+    "year": 2020,
+    "year_note": "Crossref print/issue date is June 2020; published-online is 2021-02-19. The official PDF footer says Vol. 54 No. 1 June 2020. The NIST landing page uses the online year 2021. Keeping 2020 for this issue is justified.",
+    "venue": "ACM SIGIR Forum",
+    "volume": "54",
+    "number": "1",
+    "pages": "1-12",
+    "doi": "10.1145/3451964.3451965",
+    "version": "Journal article, 12 pages; distinguish from arXiv:2005.04474v1, submitted 2020-05-09, whose record describes 10 pages. The cited journal article is an early Round 1/2 snapshot, not the final five-round dataset specification.",
+    "fix_required": false
+  },
+  "sources": [
+    {
+      "URL": "https://api.crossref.org/works/10.1145/3451964.3451965",
+      "access": "LIVE API via PowerShell Invoke-RestMethod",
+      "facts": ["Nine authors and order match the entry.", "Title plus subtitle matches; ACM SIGIR Forum 54(1), pages 1-12, journal-article, DOI match.", "Published-print June 2020; published-online 2021-02-19."]
+    },
+    {
+      "URL": "https://www.nist.gov/publications/trec-covid-constructing-pandemic-information-retrieval-test-collection",
+      "access": "LIVE web",
+      "facts": ["Official author institution record links the cited DOI and local full text; lists ACM SIGIR Forum 54(1).", "Landing record uses February 19, 2021; its author display order differs from the publication, so the publication/Crossref order is used."]
+    },
+    {
+      "URL": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=930360",
+      "access": "LIVE official author full text",
+      "facts": ["Twelve pages, full title and nine authors; footer identifies June 2020, volume 54, number 1.", "Introduction states Round 1 has completed and Round 2 has begun; document section describes 51K/60K early snapshots, and Round 1 results use 30 topics.", "Supports collection motivation and construction, not the later exact BEIR corpus size or the present authors' label-access chronology."]
+    },
+    {
+      "URL": "https://arxiv.org/abs/2005.04474",
+      "access": "LIVE author-deposited record",
+      "facts": ["v1 submitted May 9, 2020; full title and nine-author order agree; record describes a 10-page preprint intended for the June 2020 Forum issue."]
+    },
+    {
+      "URL": "https://ir.nist.gov/covidSubmit/data.html",
+      "access": "LIVE official collection documentation; no qrels downloaded or inspected",
+      "facts": ["TREC-COVID Complete uses the July 16 CORD-19 release and final 50 topics after five rounds; separates this final collection from residual evaluation of original submissions."]
+    },
+    {
+      "URL": "https://raw.githubusercontent.com/beir-cellar/beir/main/README.md",
+      "access": "LIVE benchmark-maintainer repository",
+      "facts": ["TREC-COVID BEIR test entry lists 50 queries and 171K corpus, with dataset download and checksum."]
+    },
+    {
+      "URL": "https://datasets-server.huggingface.co/info?dataset=BeIR%2Ftrec-covid",
+      "access": "LIVE dataset metadata API via PowerShell Invoke-RestMethod; metadata only",
+      "facts": ["BEIR dataset corpus split has 171332 examples; queries split has 50 examples. This confirms current public packaging, not identity of the authors' locally pinned files."]
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 16,
+      "verdict": "WEAK",
+      "reason": "Appropriate original collection background citation. However, the citation immediately follows the precise 171,332-document/50-query confirmation statement. This early-round paper does not establish those final BEIR dimensions. Live BEIR metadata independently agrees with the counts, and official final-collection documentation establishes 50 topics. Whether all locally pinned documents/queries were used, confirmation was frozen, and labels remained closed until sealed rankings/endpoints were separately verified are claims about this study, requiring its immutable protocol, input manifest and seal records; external collection citations cannot substantiate them. Those local claims were not audited here.",
+      "claim_breakdown": [
+        {"claim": "TREC-COVID collection identity/background", "verdict": "SUPPORTS"},
+        {"claim": "171,332 documents and 50 queries", "verdict": "WEAK", "reason": "Matches current BEIR metadata but not established by cited early-round article; locally pinned identity still needs manifest."},
+        {"claim": "Prospective confirmation, labels closed until rankings/endpoints sealed and separately verified", "verdict": "WEAK", "reason": "Study-specific provenance outside this source's scope, not a demonstrated contradiction."}
+      ]
+    }
+  ],
+  "action": "FIX",
+  "fix_if_needed": {
+    "bibliography": "Keep existing entry and 2020 issue year; no metadata repair needed.",
+    "context": "Retain treccovid2020 as collection background and add beir2021 to the exact BEIR packaging statement. Name the BEIR TREC-COVID release explicitly rather than imply this early article defines the complete collection. Cite the local pinned input manifest for counts/file identity and the immutable protocol/seal audit for the confirmation and label-access sequence. Do not imply external references prove this study's sealing history.",
+    "suggested_wording": "We subsequently froze a separate confirmation using the BEIR release of TREC-COVID\\cite{treccovid2020,beir2021}, with all 171,332 documents and 50 queries in our pinned input manifest. [Attach the actual local manifest/protocol/seal references to the corresponding study-specific assertions.]"
+  },
+  "confidence": "high for existence and bibliographic metadata; high for source-scope assessment; local protocol/manifest/seal claims not verified in this citation-only audit",
+  "limitations": ["Same-family/provisional citation audit, not independent cross-family review.", "ACM publisher page returned HTTP 403; live publisher-deposited Crossref metadata and official author full text supplied verification.", "No prior reviews, other agents/models, experiments or relevance judgments were consulted; no manuscript or bibliography edits made."]
+}

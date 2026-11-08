@@ -1,0 +1,33 @@
+{
+  "status": "BACKUP_IN_PROGRESS",
+  "created_unix": 1793151632.3603115,
+  "local_destination": "D:\\ARC2-server-backup-20261028",
+  "unified_exec_session": 49572,
+  "roots": [
+    "/root/arc2_global_paper_20261025",
+    "/root/arc2_p3h_20261020"
+  ],
+  "host_observations": {
+    "main": {
+      "entries": 53707,
+      "source_file_bytes": 50213936392,
+      "previous_large_files_missing": [],
+      "previous_large_files_size_changed": [],
+      "verified_archive_count_at_receipt": 2
+    },
+    "mini": {
+      "entries": 23679,
+      "source_file_bytes": 34970898859,
+      "previous_large_files_missing": [],
+      "previous_large_files_size_changed": [],
+      "verified_archive_count_at_receipt": 2
+    }
+  },
+  "verification": "Each gzip tar archive has streaming source SHA256, local stream SHA256, and independently reread member SHA256 against embedded source manifest. Completed archive receipts enable resume.",
+  "excluded_root": "/root/p8-a-recompute-20261022 (217.61GB prior disk usage; no reference to this root found in current configs/ops or B1-G source registries; not yet backed up by this job)",
+  "scientific_run_started": false,
+  "scientific_labels_interpreted": false,
+  "remote_deletion_performed": false,
+  "test_exposure": "Byte-preserving opaque backup, no scientific label interpretation",
+  "utility_smoke": "PASS: valid archive; changed inventory and manifest rejected; remote code compiled"
+}

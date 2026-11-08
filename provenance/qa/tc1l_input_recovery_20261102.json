@@ -1,0 +1,18 @@
+{
+  "source_archive": "D:\\DASFAA-2027-paper\\provenance\\qa\\cloud_backup_20261030\\local_transport_20261030.tar",
+  "scope": "Byte transport only; no numerical use, qrels, re-encoding or new rankings",
+  "files": [
+    {
+      "path": "D:\\DASFAA-2027-paper\\.cache\\tc1l_minilm\\new_docs_842eaed40bee.npy",
+      "sha256": "a0d10483e5c02ddadee94aeb44da717d6fb068473702caac63249ee33a89ff56",
+      "bytes": 177064064,
+      "archive_member": "root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/new_docs_842eaed40bee.npy"
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\.cache\\tc1l_minilm\\old_docs_1110a243fdf4.npy",
+      "sha256": "59b14828cfe583d279c6cd2f79365c169b573e8331dbf4c1f4ee241214c35782",
+      "bytes": 88532096,
+      "archive_member": "root/arc2_p3h_20261020/p8i_work_20261022_4cb7ba7/artifact/data/p4_fiqa_minilm_distilroberta/embeddings/old_docs_1110a243fdf4.npy"
+    }
+  ]
+}

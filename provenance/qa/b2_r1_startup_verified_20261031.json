@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-31T06:56:52.404522+00:00",
+  "transport_sha256": "5f617f82c7d20372b7f251d1078bf6eed4f99f4b6ee9e498e6e1636491c199a8",
+  "files": 21,
+  "acquisition_status": "ACQUISITION_PASS",
+  "encode_smoke_status": "SMOKE_ENCODING_PASS",
+  "method_smoke_status": "B2_SMOKE_PASS",
+  "endpoint_smoke_status": "B2_ENDPOINT_SMOKE_PASS",
+  "qrels_opened": false,
+  "manuscript_updates": false
+}

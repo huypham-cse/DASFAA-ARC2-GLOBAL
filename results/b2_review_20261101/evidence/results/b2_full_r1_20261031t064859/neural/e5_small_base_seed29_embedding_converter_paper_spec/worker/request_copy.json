@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "embedding_converter",
+  "regime": "anchors",
+  "seed": 29,
+  "lockpath": "/home/jovyan/arc2_b2_20261031/code_26feef1/configs/b2_lock.json",
+  "output": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/neural/e5_small_base_seed29_embedding_converter_paper_spec/worker",
+  "paired_source": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/neural/e5_small_base_seed29_embedding_converter_paper_spec/paired_source.npy",
+  "paired_target": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_full_r1_20261031t064859/neural/e5_small_base_seed29_embedding_converter_paper_spec/paired_target.npy",
+  "full_source": "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_encode_full_r1_20261031t064859/vectors/e5_small_x_docs.npy",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "input_sha256": {
+    "paired_source": "9983c05d53d9fcb1e069bae6a6a70aa7d24224d8fbf4054d5f0a1f47da514d18",
+    "paired_target": "64ccc5de162b9d0c3a4d7d2466fc3a6efff8ac3952134fc1bedac7685807ef04",
+    "full_source": "34b93cec91d7880f1dc3563951021a174f79d6509fbf0c857403a7e93703e14e"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "key": "simplelinear",
+  "verdict": "KEEP",
+  "review_date": "2026-11-01",
+  "reviewer_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "scope": "Fresh single-entry audit; no other reviewer reports or prior review scores read; no experiments run; manuscript not edited.",
+  "axes": {
+    "existence": {
+      "status": "PASS",
+      "finding": "Official repository, pinned revision and SimpleLinearMapper/SimpleLinearModel exist. GitHub commit API resolved the complete SHA; commit timestamp is 2026-07-04T09:50:02Z."
+    },
+    "metadata": {
+      "status": "PASS",
+      "finding": "This is a software citation, not a separate published SimpleLinear algorithm paper. Organization attribution is a defensible repository-owner citation; the title is descriptive. The 2026 field is treated as software/access year, never as a claimed algorithm publication year. URL and abbreviated revision identify the verified resource. Package metadata names embedding-translation version 0.1.0 and Beining Yang; no requirement to replace the software citation with a paper."
+    },
+    "context": {
+      "status": "PASS",
+      "finding": "All three current citation commands in paper/sections/*.tex were inspected, including the entire comparison paragraph. Each use is supported within its stated scope."
+    }
+  },
+  "implementation_check": {
+    "architecture": "The default MappingConfig subconfiguration uses layer_num=4, hidden_dim=512 and SELU. The constructor creates one input linear, three hidden linears and one output linear: five linear layers, with SELU between them. The model-constructor standalone defaults differ; the mapper passes its subconfiguration explicitly.",
+    "source_defaults": "The pinned SimpleLinearMapperConfig defaults include 50 epochs, batch size 4028 and use_local_distill=false. Its early-stopping fields are not used by this strategy fit loop.",
+    "actual_strategy": "The strategy uses MSE plus 0.5 times cosine distance, AdamW and a scheduler driven by training loss; it executes the configured epoch count and retains the final state. No qrels are accepted by this fit API.",
+    "local_policy": "configs/baselines.json selects this official configuration and names the policy final epoch 50 without validation or early stopping. The local adapter and worker retain that policy and use allowed paired vectors. Shared supervision, normalization, runtime dependencies and final-checkpoint choice are the study implementation policy, not a claim to reproduce every source-paper setting.",
+    "empirical_limit": "This is a citation/source-code audit. Existing rankings, measured outcomes and complete training execution were not re-audited."
+  },
+  "current_citation_count": 3,
+  "contexts": [
+    {
+      "file": "paper/sections/experimental-setup.tex",
+      "citation_line": 49,
+      "paragraph": "\\paragraph{Comparison methods.}\nWe retain the full five-baseline panel: centered rectangular Procrustes\n(an A2M adaptation); LA2M with 20 source-anchor clusters, local alignment\nfor clusters with at least two anchors and global fallback for singletons;\nSimpleLinear; affine ridge with $\\lambda=10$\nand a regularized bias; and Embedding-Converter~\\cite{la2m,simplelinear,embeddingconverter}.\nSimpleLinear uses pinned official code: despite its name, the locked\nconfiguration is a five-layer SELU MLP, trained for the final 50 epochs with\nbatch size 4,028 and the MSE plus cosine loss, without qrel-based stopping.\nConverter is a paper-specification adaptation with a 50,000-update\nselection run, batch size 64, and local neighborhood size 100. Paired-vector\nvalidation MAE selects the earliest minimum at 250-update checkpoints;\na fresh fit uses all fitting pairs for that selected length. Unlike the\noriginal retrieval-based validation, this adaptation uses paired-vector MAE\nto respect paired-document-only supervision. These are the\ndeclared implementations and training policies, rather than claims to\nreproduce every original-paper setting. \\method{} remains fixed at two\ntangent updates and $\\lambda=10$ throughout.",
+      "verdict": "KEEP",
+      "assessment": "The citation identifies the compared software. Architecture, batch size, loss and final-epoch policy agree with pinned code and the local declarations; the prose explicitly disclaims full original-setting reproduction."
+    },
+    {
+      "file": "paper/sections/introduction.tex",
+      "citation_line": 7,
+      "paragraph": "Document-side conversion and query-side adaptation already provide routes across embedding spaces~\\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map.",
+      "verdict": "KEEP",
+      "assessment": "The software implements neural regression, supporting the broad alternative-mapper statement."
+    },
+    {
+      "file": "paper/sections/related-work.tex",
+      "citation_line": 7,
+      "paragraph": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and residual regularization along target principal directions~\\cite{yang2026translation}.\nOur directional target instead uses the tangent plane at each anchor's current prediction, and both corrections collapse into one global affine map.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup}).",
+      "verdict": "KEEP",
+      "assessment": "The official repository provides this mapper; the README associates the repository with the authors of the preceding work."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/README.md",
+      "type": "official pinned repository raw file",
+      "accessed": "2026-11-01",
+      "sha256": "5fc828bfa341ff4b5988ff8d47efef3066530bacaf4d087f3a40e1a6cd31ee1b",
+      "access": "Live web lookup and independent HTTPS byte retrieval succeeded."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/pyproject.toml",
+      "type": "official pinned repository raw file",
+      "accessed": "2026-11-01",
+      "sha256": "6db4eb263bba420d0bba5eb8ca7fcf24fe385400ff1efd9dc422cc8ed30b658b",
+      "access": "Live web lookup and independent HTTPS byte retrieval succeeded."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/src/embedding_translation/config/models.py",
+      "type": "official pinned repository raw file",
+      "accessed": "2026-11-01",
+      "sha256": "d26380ad82572336d15f76a0c646930df502d8ae374baa7a56c2783a5ddb7cc3",
+      "access": "Live web lookup and independent HTTPS byte retrieval succeeded."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/src/embedding_translation/mapper/simple_linear/strategy.py",
+      "type": "official pinned repository raw file",
+      "accessed": "2026-11-01",
+      "sha256": "9f22cb2c39baca27b660260c80df31da8ab6bb856160b660b5b3840c649ea821",
+      "access": "Live web lookup and independent HTTPS byte retrieval succeeded."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DBgroup-Edinburgh/embedding-translation/5e62baf1544264847ce3d8feeabd1ded6499b064/src/embedding_translation/mapper/simple_linear/__init__.py",
+      "type": "official pinned repository raw file",
+      "accessed": "2026-11-01",
+      "sha256": "2ef7f2a35501474e298e7f9d1aae8f85edacd516b4ef4c78e04efa754b6733d6",
+      "access": "Live web lookup and independent HTTPS byte retrieval succeeded."
+    }
+  ],
+  "commit_api": {
+    "url": "https://api.github.com/repos/DBgroup-Edinburgh/embedding-translation/commits/5e62baf1544264847ce3d8feeabd1ded6499b064",
+    "resolved_sha": "5e62baf1544264847ce3d8feeabd1ded6499b064",
+    "committer_date": "2026-07-04T09:50:02Z",
+    "access": "Web tool unavailable for this API URL; direct HTTPS request succeeded."
+  },
+  "access_limitations": [
+    "GitHub tree view failed in the web tool. All relied-on pinned raw files loaded successfully.",
+    "Guessed config.py and config/mapping.py URLs returned 404; config/__init__.py identified the correct config/models.py, which was then read.",
+    "The packet primary_source_record and its prior verification label were treated as pointers, not accepted as independent evidence."
+  ],
+  "required_changes": [],
+  "optional_clarifications": [
+    "An explicit access date or full SHA in the bibliography could make software-year semantics and retrieval easier.",
+    "The setup phrase could read \"trained for 50 epochs, retaining the final checkpoint\" to make the final-state policy more immediate."
+  ],
+  "input_hashes_sha256": {
+    "paper/review/final_review_20261101/citations/simplelinear.input.json": "2ea24f93172c4692a18d67521c487996668800579ca864c11e5968c37cfbf321",
+    "paper/references.bib": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+    "configs/baselines.json": "b0be0352d174157d91a32437c6db0e3479ceb4c829ba75a5703189f19dd4a2a5",
+    "src/arc2_global/baseline_adapters.py": "c0269d631defb4ba00f09bf6def75182b988a9d4b8c719c81633c800e1189b0d",
+    "ops/b1p_neural_worker.py": "d87efe737064d9019b2dc951ec0c593040aaa9fafe80bb73e2c75155e5f8d66e",
+    "protocols/B2_TREC_COVID_CONFIRMATION_20261031.md": "109847050cd77317eee118f459e8a6e696572eb8181d46e24b9dd0752d5827c2",
+    "paper/sections/abstract.tex": "c75dc88657f9b538f314b1787e75b08f9b3864f000a0f7e8b729effbe5f7d3d4",
+    "paper/sections/conclusion.tex": "5ab2f71361be86ad2ddc5d4d21e00cc0a1ac869c900ef6546edba72be0b572b7",
+    "paper/sections/discussion.tex": "834323c766a49b3b3874b660b9e6fdad3b660e8b5d93a5afeeae0c22fea01240",
+    "paper/sections/experimental-setup.tex": "c6dfc7e773e6f448118013e5f11ec35eed6f849f7fb475bb1d690b1e07220828",
+    "paper/sections/introduction.tex": "d67c836c50b51760cb279b62c1096a4b4a3e4498fa9e6b547df72d79cc27945f",
+    "paper/sections/method.tex": "c4babc62dd94e8c6e2ccd6b921ea9d82db762ddf73df5c6efe71a3f022ce0e37",
+    "paper/sections/related-work.tex": "bb47d22e21547ef1e96f4eb3634cda7039d2d6078082bae302d6507380a2b10f",
+    "paper/sections/results.tex": "a8d76c0bc6ffcd14af3d461baf406837e3cd34a371585cd1e9754c28a64bafd3"
+  },
+  "packet_bibliography_hash_matches_current": true
+}

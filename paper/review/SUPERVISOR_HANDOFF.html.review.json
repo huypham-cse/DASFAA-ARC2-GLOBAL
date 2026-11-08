@@ -1,0 +1,151 @@
+{
+  "verdict": "PASS",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_reasoning": "high",
+  "generated_at": "2026-11-01T19:16:18.365513+00:00",
+  "review_scope": "Fresh render-fidelity, static HTML structure/safety, metadata, and local-link integrity only. Not a scientific claim audit, scoring round, submission-readiness or venue acceptance review.",
+  "source_artifact": "D:\\DASFAA-2027-paper\\paper\\review\\SUPERVISOR_HANDOFF.md",
+  "html_artifact": "D:\\DASFAA-2027-paper\\paper\\review\\SUPERVISOR_HANDOFF.html",
+  "audited_input_hashes": [
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\review\\SUPERVISOR_HANDOFF.md",
+      "role": "canonical Markdown",
+      "sha256": "9e716d45220e00f2b362ee72fb37c000102e44e44a73591c777b26e282e3d067",
+      "bytes": 5193
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\review\\SUPERVISOR_HANDOFF.html",
+      "role": "reviewed HTML",
+      "sha256": "1d6eb697cfc4bf78a4b64fcfe7d42e62cd802c03580cf2ac281e11dfb21b3d99",
+      "bytes": 14799
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_final.pdf",
+      "role": "local link target",
+      "sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+      "bytes": 846818
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_source.zip",
+      "role": "local link target",
+      "sha256": "92cf5ea033d817eebd0ca2581fa8dd92f3e0175c293983c174b8a7e2f78f0cc1",
+      "bytes": 1314994
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\review\\aciids_style_revision_20261101\\POSITIVE_EVIDENCE.md",
+      "role": "local link target",
+      "sha256": "81db1e087aac4e3de920787f7b0583cf244f1a2175dbf768e4a854c82820915d",
+      "bytes": 20036
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\review\\aciids_style_revision_20261101\\CONTRADICTIONS.md",
+      "role": "local link target",
+      "sha256": "42211e537a762bc1644781443610e1ac3cf26d44b8450ab3c545b691d6be5e20",
+      "bytes": 11891
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\PAPER_CLAIM_AUDIT.md",
+      "role": "local link target",
+      "sha256": "a009f6dcea10d76203a51f5f894d10750c3ce69e5521de3c197b31bd9ef0e9e4",
+      "bytes": 127817
+    },
+    {
+      "path": "D:\\DASFAA-2027-paper\\paper\\review\\aciids_style_revision_20261101\\PRESENTATION_REVIEW.md",
+      "role": "local link target",
+      "sha256": "480ff17ce92abcbb778b135f8a6cb09d1330aca6fe7c26d3c4b4354004f83a5d",
+      "bytes": 6169
+    }
+  ],
+  "checks": {
+    "source_hash_match": "pass",
+    "information_fidelity": "pass",
+    "structure": "pass",
+    "math_code_tables": "pass",
+    "callouts": "not_applicable",
+    "safety_escaping": "pass",
+    "placeholder_leak": "pass",
+    "complete_json_sidecar": "not_applicable",
+    "metadata_dates": "pass",
+    "local_links": "pass",
+    "offline_self_containment": "pass"
+  },
+  "blocking_issues": [],
+  "warnings": [],
+  "details": {
+    "source_text_units_preserved_in_order": 17,
+    "source_heading_count": 5,
+    "source_list_item_count": 6,
+    "source_inline_code_span_count": 0,
+    "source_fenced_code_blocks": 0,
+    "source_table_count": 2,
+    "table_rows_including_headers": [
+      7,
+      6
+    ],
+    "table_cells": 26,
+    "fragment_links_checked": 0,
+    "balanced_html": true,
+    "unique_ids": true,
+    "source_body_callouts": 0,
+    "unexpected_executable_tags": 0,
+    "event_handler_attributes": 0,
+    "unsafe_url_schemes": 0,
+    "template_or_private_placeholder_leaks": 0,
+    "external_resource_dependencies": 0,
+    "local_links": [
+      {
+        "href": "../ARC2_Global_DASFAA2027_final.pdf",
+        "path": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_final.pdf",
+        "exists": true,
+        "sha256": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc"
+      },
+      {
+        "href": "../ARC2_Global_DASFAA2027_source.zip",
+        "path": "D:\\DASFAA-2027-paper\\paper\\ARC2_Global_DASFAA2027_source.zip",
+        "exists": true,
+        "sha256": "92cf5ea033d817eebd0ca2581fa8dd92f3e0175c293983c174b8a7e2f78f0cc1"
+      },
+      {
+        "href": "aciids_style_revision_20261101/POSITIVE_EVIDENCE.md",
+        "path": "D:\\DASFAA-2027-paper\\paper\\review\\aciids_style_revision_20261101\\POSITIVE_EVIDENCE.md",
+        "exists": true,
+        "sha256": "81db1e087aac4e3de920787f7b0583cf244f1a2175dbf768e4a854c82820915d"
+      },
+      {
+        "href": "aciids_style_revision_20261101/CONTRADICTIONS.md",
+        "path": "D:\\DASFAA-2027-paper\\paper\\review\\aciids_style_revision_20261101\\CONTRADICTIONS.md",
+        "exists": true,
+        "sha256": "42211e537a762bc1644781443610e1ac3cf26d44b8450ab3c545b691d6be5e20"
+      },
+      {
+        "href": "../PAPER_CLAIM_AUDIT.md",
+        "path": "D:\\DASFAA-2027-paper\\paper\\PAPER_CLAIM_AUDIT.md",
+        "exists": true,
+        "sha256": "a009f6dcea10d76203a51f5f894d10750c3ce69e5521de3c197b31bd9ef0e9e4"
+      },
+      {
+        "href": "aciids_style_revision_20261101/PRESENTATION_REVIEW.md",
+        "path": "D:\\DASFAA-2027-paper\\paper\\review\\aciids_style_revision_20261101\\PRESENTATION_REVIEW.md",
+        "exists": true,
+        "sha256": "480ff17ce92abcbb778b135f8a6cb09d1330aca6fe7c26d3c4b4354004f83a5d"
+      }
+    ],
+    "generation_metadata": {
+      "source_path": "paper\\review\\SUPERVISOR_HANDOFF.md",
+      "source_sha256": "b5522266a66b9ea420b30a08ee728d2de9785be5ded986d1f161a39c3c847a56",
+      "source_hash_algorithm": "SHA256 of UTF-8 text returned by pathlib.read_text; universal-newline normalization (CRLF to LF), matching render_html.py:812-813. Exact on-disk byte hashes are separately recorded in audited_input_hashes.",
+      "generated_at_utc": "2026-11-01 19:13 UTC",
+      "generated_at_asia_saigon": "2026-11-02T02:13:00+07:00",
+      "visible_header_and_footer_consistent": true
+    }
+  },
+  "limitations": [
+    "Static parser/text/markup review; no browser pixel-layout inspection was performed.",
+    "External hyperlinks were preserved but not fetched; offline rendering is intentional.",
+    "Referenced scientific evidence was not rescored or reopened. JSON source content was checked for faithful embedding, not reaudited for scientific truth.",
+    "No prior HTML-review reports were read. Source MD/HTML, manuscript and scientific files were not edited."
+  ],
+  "summary": "PASS within render-fidelity scope: all five source headings, 17 non-table source text units, six bullets and both tables (13 rows including headers, 26 cells) are preserved. All six local PDF/ZIP/report links resolve, and the PDF SHA matches the requested snapshot. Normalized source SHA and visible metadata agree. No unsafe markup, external runtime dependency or template leakage found."
+}

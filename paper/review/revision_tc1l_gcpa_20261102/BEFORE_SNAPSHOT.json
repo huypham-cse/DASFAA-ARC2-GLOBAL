@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-02T09:03:14.163563+00:00",
+  "files": {
+    "main.tex": "704d831a3f56001486627c701512c0a03b7dcaba6ee1c5939418898f25cbd747",
+    "references.bib": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2",
+    "ARC2_Global_DASFAA2027_final.pdf": "e91b71e929a25d9a6e6a94d0f95703fa9eefbc80e8ef12d53082c1a2a82f85bc",
+    "PAPER_CLAIM_AUDIT.json": "09ef0890bb10f62d2f45b3b5b1431e74ef5c39c60f9eda38ee953b83f3129449",
+    "PAPER_CLAIM_AUDIT.md": "a009f6dcea10d76203a51f5f894d10750c3ce69e5521de3c197b31bd9ef0e9e4",
+    "PAPER_IMPROVEMENT_STATE.json": "e8096df4663531606e67d3ddc5dba670d60e04ad2530116178a60fa62dbfb384",
+    "review/EVIDENCE_MAP.json": "735f3eefd12a0356b3009bf375b435630e600f90eff615ca69f0040514a4e46b",
+    "review/build_receipt.json": "31b4dfcfa56bc6a3b9b7838a74f96314126c13ef8b38ae8540e4755e55f3686e",
+    "sections/abstract.tex": "24a2314dcfb5090ba76b4cb7dfea95c8c941eacff94881e451edea6374d3043a",
+    "sections/conclusion.tex": "7f9bb6b3a071a3fa02338249c0b949dc1bf8b2d9863c4c23644a65e80def4caf",
+    "sections/discussion.tex": "4529307286eeca7d4b30adb3d20368f320ee291262059779993bb403d4ab3c71",
+    "sections/experimental-setup.tex": "4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215",
+    "sections/introduction.tex": "4785d051ea8266d7907b2ca55417a2ae6744c9ea01e9adb90ef0db1fd34a6f5f",
+    "sections/method.tex": "2865c725f2b969b82be7d6d624a084268f9a0ed10c832b88ba35de8d8b98fc2b",
+    "sections/related-work.tex": "ff5a1ac26f3ca8eb9865f99fec92e3e5b185756c3d67fcae2b048f6654594f44",
+    "sections/results.tex": "9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d"
+  },
+  "scope": "Preserve previous draft/audits; no scientific inputs modified"
+}

@@ -1,0 +1,15 @@
+@InProceedings{pmlr-v306-yang26e,
+  title = 	 {Generalizable and Composable Multi-Model Embedding Translation},
+  author =       {Yang, Beining and Cao, Yang},
+  booktitle = 	 {Proceedings of the 43rd International Conference on Machine Learning},
+  pages = 	 {144275--144302},
+  year = 	 {2026},
+  editor = 	 {Zhang, Tong and Dudik, Miroslav and Jaggi, Martin and Agarwal, Alekh and Li, Sharon and Schuurmans, Dale and Zhu, Jerry and Berkenkamp, Felix and Dong, Hanze and Bietti, Alberto},
+  volume = 	 {306},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--11 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v306/main/assets/yang26e/yang26e.pdf},
+  url = 	 {https://proceedings.mlr.press/v306/yang26e.html},
+  abstract = 	 {Embedding translation enables interoperability across embedding models, allowing embedding vectors to be reused without costly re-embedding. However, existing methods are typically evaluated under simplified pairwise and i.i.d. settings and behave as black boxes at inference time, leading to unreliable performance under out-of-distribution (OOD) inputs, multi-model mixing, and composed translations. We analyze embedding translation from a geometric perspective and derive an interpretable error bound that explains systematic error amplification under OOD inputs, mixing and chaining. Building on this, we propose a geometry-aware confidence metric and a Hierarchical Mixture of Experts (HMoE) framework with localized, parameter-efficient adaptation. Following the MTEB leaderboard, we conduct large-scale experiments over 10 embedding models and 6 datasets across 90 pairwise translation settings. HMoE outperforms every baseline for every model pair over every dataset under OOD scenarios. Furthermore, multi-model mixing and chaining only degrade our performance in Recall@100 by $0.5% – 2.6%$, compared to $7.2% – 92.3%$ recall drop by existing methods.}
+}

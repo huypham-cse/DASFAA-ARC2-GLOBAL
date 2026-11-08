@@ -1,0 +1,337 @@
+[2607.18348] An Analysis of Residual-Stream Geometry Across Transformer Depth - Academus scientific article reader (https://academ.us/article/2607.18348/)
+citeturn134search0 [wordlim: 200] Published: 3 months ago; Crawled: last month; July 20, 2026 ... These patterns are statistically robust under hierarchical bootstrap and layer-permutation tests with Holm correction. ... Procrustes residual  | 101.5%  | 6/6  | 114.7%  | 6/6 ... Image: fig: Figure 8: Procrustes residual during translation generation. ... This paper offers a measurement framework and descriptive regularities, not a mechanistic explanation.
+# An Analysis of Residual-Stream Geometry Across Transformer Depth
+
+Sunit Bhattacharya, Ravi Kolli
+ProRata AI
+Correspondence: [email protected]
+
+July 20, 2026
+
+* * *
+
+#### Abstract
+
+We propose a transition-centred geometric analysis of transformer residual streams. Relative displacement measures how far representations move between consecutive layers, and orthogonal Procrustes analysis separates each transition into a rigid rotation and a non-rigid residual. Across six instruction-tuned models, on code generation and cross-lingual translation, these measurements reveal reproducible depth regularities. Relative displacement is strongly layer-dependent; typically larger early and late, with a quieter middle third; and nearly invariant across conditions within each model. Rotation magnitude is nearly constant across depth, while Procrustes residual and angle concentration remain depth-modulated, with residual peaking at the final transition. During generation, non-English targets show larger final-layer displacement and residual than English targets. During translation generation, residual curves stay low through most of the stack and then rise sharply near the output (Figure 8), again separating by target language: non-English targets leave a larger non-rigid mismatch than English targets. As in Methods, we treat residual as geometric mismatch after global alignment, not as computational effort.
+
+Image: fig: Figure 9: Rotation-angle concentration during translation prefill. Most models form a broad mid-depth plateau, with sharper changes in early and final transitions; language directions largely overlap.
+
+Angle concentration is also depth-structured, though more weakly (Table 1). Prefill peaks fall early to mid-depth (median \(0.30\)); generation peaks are more mid-depth (median \(0.47\)). The raw curves show a broad mid-depth plateau with sharper changes near the beginning and end of the stack (Figure 9). Together these results separate two claims: the size of the global rotation is nearly depth-invariant, while the distribution of that rotation across planes and the residual mismatch after alignment both vary systematically with depth. The informative signal is this dissociation, not rotational flatness alone.
+
+--------------------------------------------------------------------------------
+Are Face Embeddings Compatible Across Deep Neural Network Models? (https://rt.http3.lol/index.php?q=aHR0cHM6Ly9hcnhpdi5vcmcvcGRmLzI2MDQuMDcyODI)
+citeturn134search12 [wordlim: 200] Published: 5 months ago; achieve substantial cross-model alignment, despite differences in training data, ... this regime, cross-model alignment reduces to estimating a linear map between
+two tangent-space representations of the same intrinsic structure. ... the embedding Si = fi(If). ... the samples span the entire feature spaces, whereas the ridge regression offers an
+In
+this regime, cross-model alignment reduces to estimating a linear map between
+two tangent-space representations of the same intrinsic structure. Thus, simple
+linear transformations suffice: they approximate a coordinate change between
+local linearizations of a shared geometric manifold.
+More precisely, we may postulate our result as an alignment of the embed-
+dings of a df-dimensional submanifold of face images If within the set of generic
+images I, under two embeddings f1 and f2 as demonstrated in Figure 7. An ideal
+nonlinear alignment would have φ(f1(u))=f2(u) for any u∈If, i.e., f
+−1
+2
+◦φ ◦f1
+is the identity map. Assuming smoothness of the alignment mapping φ, we may
+linearize it in the neighborhood of ¯u which is a mean face image, with the em-
+bedding f1(¯u) and f2(¯u) estimated by the respective training set means (µX
+and µY ). Our linear map W can be interpreted by the differential Dφ (Jacobian
+matrix) that aligns the image of tangent space TuIf under the embeddings as
+affine subspaces Tf1(u)S1 and Tf2(u)S2 of the corresponding feature spaces for
+the embedding Si = fi(If). The linear map directly finds the best Dφ assuming
+the samples span the entire feature spaces, whereas the ridge regression offers an
+alignment when the samples may span only a subspace of the feature spaces, as
+these embeddings are typically not diffeomorphisms. Under the assumption that
+the embedding Hilbert spaces learned a good approximation of the same kernel
+function K(u1, u2) ≈⟨f1(u1), f1(u2)⟩≈⟨f2(u1), f2(u2)⟩, W can be interpreted
+as the orthogonal transformation W ∈O(D) that aligns the images of the tan-
+gent space of If under the two embeddings (note that results are not influenced
+by how the vectors outside of the tangent spaces are rotated or reflected).
+8.2
+Model Organization and Hierarchy
+To understand global structure in cross-model compatibility, we performed hi-
+erarchical clustering on the symmetrized alignment matrix (average of A→B
+and B →A). The resulting dendrogram shown in Figure 8a reveals a consistent--------------------------------------------------------------------------------
+Beyond Fine-Tuning: Procrustes Alignment of Multilingual Embeddings for Low-Resource Cross-Lingual Retrieval - LREC 2026 | LREC Proceedings (https://lrec.elra.info/lrec2026-ws-sigul-23)
+citeturn134search1 [wordlim: 200] Published: 6 months ago; Crawled: last month; Request Correction
+
+Proceedings of the SIGUL 2026 Joint Workshop with ELE, EURALI, and DCLRL "Towards Inclusivity and Equality: Language Resources and Technologies for Under-Resourced and Endangered Languages ... To resolve this misalignment without model fine-tuning, we apply Procrustes transformation, which is an orthogonal post-hoc alignment method with a closed-form solution. ... We utilize SQuAD and UQA datasets to learn a rotation matrix from a small set of sentence pairs and evaluate its effect across five multilingual embedding models (MiniLM, DistilUSE, E5-Base, LaBSE, and E5-Large) and perform geometric alignment, cross-lingual retrieval, and question-answering tasks on these models. ... Paper ID
+
+LREC 2026 workshop
+
+# Beyond Fine-Tuning: Procrustes Alignment of Multilingual Embeddings for Low-Resource Cross-Lingual Retrieval
+
+Request Correction
+
+Proceedings of the SIGUL 2026 Joint Workshop with ELE, EURALI, and DCLRL "Towards Inclusivity and Equality: Language Resources and Technologies for Under-Resourced and Endangered Languages
+
+DOI:10.63317/3bfgv7a4e3xh
+
+Cite BibTeX
+
+## Abstract
+
+Multilingual sentence-embedding models are widely used for cross-lingual retrieval; however, their performance drops significantly in low-resource languages. The Urdu language, which is considered a low-resource language by the NL community, poses this challenge, despite being spoken by over 246 million people worldwide. Its distribution in training corpora results in poor alignment with English within shared embedding spaces. To resolve this misalignment without model fine-tuning, we apply Procrustes transformation, which is an orthogonal post-hoc alignment method with a closed-form solution. We utilize SQuAD and UQA datasets to learn a rotation matrix from a small set of sentence pairs and evaluate its effect across five multilingual embedding models (MiniLM, DistilUSE, E5-Base, LaBSE, and E5-Large) and perform geometric alignment, cross-lingual retrieval, and question-answering tasks on these models. We find that cosine distances between parallel pairs decrease by up to 38.67%, and retrieval accuracy improves by 12.49% points in Recall@1. We also analyze that models with better pre-trained cross-lingual representations exhibit a saturation effect, showing minimal retrieval change even as geometric tightening increases. Our error analysis reveals that morphologically complex queries and colloquial expressions remain challenging, indicating representational limitations beyond the scope of a linear transformation. These findings demonstrate that a computationally inexpensive alignment step can meaningfully improve cross-lingual retrieval for low-resource languages, with implications for retrieval-augmented generation (RAG) in resource-constrained settings.
+
+## Resources
+
+PDF
+
+## Details
+
+Paper ID
+    lrec2026-ws-sigul-23
+
+Pages
+    pp. 233-241
+
+DOI
+    10.63317/3bfgv7a4e3xh
+
+BibKey
+    faheem-etal-2026-beyond
+
+Editors
+    Atul Kr. Ojha, Sakriani Sakti, Claudia Soria, Maite Melero, John P. McCrae, Constantine Lignos, Chao-Hong Liu, German Rigau Claramunt, Georg Rehm
+
+Publisher
+    European Language Resources Association (ELRA)
+
+ISSN
+    N/A
+
+ISBN
+    N/A
+
+Workshop
+    Proceedings of the SIGUL 2026 Joint Workshop with ELE, EURALI, and DCLRL "Towards Inclusivity and Equality: Language Resources and Technologies for Under-Resourced and Endangered Languages
+
+Location
+    Palma, Mallorca, Spain
+
+Date
+    11 - 16 May 2026
+
+## Authors
+
+  * AF
+
+Ali Faheem
+
+  * MH
+
+Muhammad Hammad
+
+  * FU
+
+Faizad Ullah
+
+  * AH
+
+Ahmed Hassan
+
+  * FR
+
+Fezan Rasool
+
+  * AK
+
+Asim Karim--------------------------------------------------------------------------------
+geomorph/man/gpagen.Rd at master · cran/geomorph · GitHub (https://github.com/cran/geomorph/blob/master/man/gpagen.Rd)
+citeturn134search2 [wordlim: 200] Crawled: 2 weeks ago; The Procrustes aligned specimens may be projected into tangent
+
+NOTE: Large datasets may exceed the memory limitations of R.
+
+Generalized Procrustes Analysis (GPA: Gower 1975, Rohlf and Slice 1990) is the primary means by which
+
+shape variables are obtained from landmark data (for a general overview of geometric morphometrics see
+
+Bookstein 1991, Rohlf and Marcus 1993, Adams et al. 2004, Zelditch et al. 2012, Mitteroecker and
+
+Gunz 2009, Adams et al. 2013). GPA translates all specimens to the origin, scales them to unit-centroid
+
+size, and optimally rotates them (using a least-squares criterion) until the coordinates of corresponding
+
+points align as closely as possible. The resulting aligned Procrustes coordinates represent the shape
+
+of each specimen, and are found in a curved space related to Kendall's shape space (Kendall 1984).
+
+Typically, these are projected into a linear tangent space yielding Kendall's tangent space coordinates
+
+(i.e., Procrustes shape variables), which are used for subsequent multivariate analyses (Dryden and Mardia 1993, Rohlf 1999).
+
+Additionally, any semilandmarks on curves and surfaces are slid along their tangent directions or tangent planes during the
+
+superimposition (see Bookstein 1997; Gunz et al. 2005). Presently, two implementations are possible:
+
+--------------------------------------------------------------------------------
+Size, shape, and form: concepts of allometry in geometric morphometrics | Discover Developmental Biology | Springer Nature Link (https://doi.org/10.1007/s00427-016-0539-2)
+citeturn134search3 [wordlim: 200] Published: 10.6 years ago; Crawled: 4 days ago; The hidden hemisphere of the shape space contains mirror images of the triangles visible in this diagram. b The tangent space, a plane in this case, touching the sphere of the shape space at an arbitrary location. c The connection between Procrustes superimposition and Kendall’s shape space for triangles (modified after Rohlf 1999). ... Therefore, the Procrustes superimposition and projection to tangent space can provide a local, linear approximation of the arrangement in shape space.
+Fortunately, in most biological datasets, shape variation is sufficiently limited for such distortions to be negligible, even in studies that include a substantial range of shapes such as skull shapes across the orders of mammals (Marcus et al. 2000).
+
+In practice, a local approximation of the tangent space for a dataset can be obtained from a generalized Procrustes superimposition of the landmark configurations (Goodall 1991; Dryden and Mardia 1998). First, all the landmark configurations are scaled to unit centroid size by dividing all the landmark coordinates by the centroid size of the respective configuration. Variation in position is removed by centering the configurations, so that they all share the same centroid, at the origin of the coordinate system. These configurations, standardized for size and position, are called preshapes (Goodall 1991; Dryden and Mardia 1998). Finally, variation in the orientation of the landmark configurations is removed in an iterative procedure. --------------------------------------------------------------------------------
+A Registration and Deep Learning Approach to Automated Landmark Detection for Geometric Morphometrics - PMC (https://pmc.ncbi.nlm.nih.gov/articles/PMC7880197/)
+citeturn134search4 [wordlim: 200] Published: 6.3 years ago; Crawled: last week; This registration is considered symmetric in that it defines a variational energy splitting the spatial normalization in half. ... We recover the non-linear transformations, concatenate them with our affine transformations, and propagate the atlas landmarks along this path to the rigid space of each image (Fig. ... We orthogonally project the Procrustes aligned configurations into the tangent space of the manual mean to leverage the statistical properties of Kendall’s tangent space coordinates (Kendall 1984), otherwise known as Procrustes shape variables (Fig.
+We orthogonally project the Procrustes aligned configurations into the tangent space of the manual mean to leverage the statistical properties of Kendall’s tangent space coordinates (Kendall 1984), otherwise known as Procrustes shape variables (Fig. 2B). This projection linearizes the data and simplifies the problem of learning non-linear shape differences at each point. In addition, the range of Procrustes shape variables ensures that each landmark contributes proportionately to the loss function, and that the optimizer (e.g., gradient descent) converges faster.
+
+For each deformable registration workflow, we train a deep FFNN to learn a multi-output regression model that minimizes automated and manual shape differences (Fig. 2B). The network contains an input layer, three hidden layers, and an output layer. We define p × k fully connected neurons in each layer to integrate across the entire configuration and therefore consider covariance among landmarks. Rectified linear unit activations are used in the hidden layers and identity activations in the output layer. --------------------------------------------------------------------------------
+Thesis_v2.2 (https://escholarship.mcgill.ca/downloads/bk128h036)
+citeturn134search13 [wordlim: 200] Crawled: 5 months ago; Given a source \(G_s\) and a target \(G_t\) representation, Procrustes analysis seeks an orthogonal linear transformation \(\psi\) to align the source to the target, such that \(\psi(G_s)\) and \(G_t\) are superimposed. ... 4.5.8 **Joint embedding**
+4.5.7 **Procrustes analysis**
+
+Given a source \(G_s\) and a target \(G_t\) representation, Procrustes analysis seeks an orthogonal linear transformation \(\psi\) to align the source to the target, such that \(\psi(G_s)\) and \(G_t\) are superimposed. Translation and scaling can also be performed by initially centering and normalizing the data prior to estimation of the transformation. For multiple datasets, a generalized Procrustes analysis can be employed. Let \(G_k, k = 1,2,\ldots,N\) be the low-dimensional representations of \(N\) different datasets (i.e., input matrices \(X_k\)). The procedure proceeds iteratively by aligning all representations \(G_k\) to a reference and updating the reference \(G_R = \frac{1}{N}\sum_k \psi(G_k)\) by averaging the aligned representations. In the first iteration, the reference can be chosen from the available representations, or an out-of-sample template can be provided (e.g., from a hold-out group).
+
+4.5.8 **Joint embedding**
+
+Joint embedding is a dimensionality reduction technique that finds a common underlying representation of multiple datasets via simultaneous embedding (Xu et al., 2020). --------------------------------------------------------------------------------
+Preface
+The work presented in this thesis has been (https://citeseerx.ist.psu.edu/document?doi=85e2f19e560011230b950ed8d0e39b2ec83c039e&repid=rep1&type=pdf)
+citeturn134search14 [wordlim: 200] Published: 9 months ago; The normalisation that occurs during the Procrustes alignment ... tangent space of the unit sphere to the mean shape ¯x is the hyperplane of all vectors
+3.6. NORMALISATION AND LINEARISATION
+Figure 3.4: A simple synthetic example of how the Procrustes alignment can go wrong.
+To the left the training set of 24 box bumps and to the right the Procrustes aligned box
+bumps.
+3.6
+Normalisation and Linearisation
+Before a training set of shapes can be analysed, the scale of each shape must be normalised.
+Using the Procrustes method, the β-parameter takes care of this. Other scaling techniques
+could on the other hand be considered. During alignment it is common to normalise all
+shapes so that |x| = 1. Different norms | · | have been tested but |x|2 = xT x
+(x∗x if x is complex) is common. If large shape changes occur, this can introduce sig-
+niﬁcant non-linearities, since the normalisation constraint means that the aligned shapes
+x lie on a hyper-sphere. The normalisation that occurs during the Procrustes alignment
+might even introduce higher order of non-linearity, see [29].
+If small shape changes occur it is common to linearise the shape space around the
+mean shape ¯x. --------------------------------------------------------------------------------
+MorphoJ User's Guide (https://morphometrics.uk/MorphoJ_guide/preliminaries/newProc.htm)
+citeturn134search5 [wordlim: 200] Crawled: 4 months ago; MorphoJ uses a full Procrustes fit and projects the data to the tangent space by orthogonal projection (Dryden and Mardia 1998).
+# New Procrustes Fit
+
+The first step after importing a file with raw data is almost always a new Procrustes fit. Some procedures in MorphoJ are automatically followed by a new Procrustes fit, for example, after excluding outliers or choosing a subset of landmarks. Moreover, a new Procrustes fit can also be used to change the alignment of the landmark configurations in the graphocal output windows (mostly for esthetical reasons).
+
+## Background
+
+### Type of Procrustes fit
+
+MorphoJ uses a full Procrustes fit and projects the data to the tangent space by orthogonal projection (Dryden and Mardia 1998). For most applications, there is very little difference between the different methods for Procrustes fitting (full versus partial Procrustes fits), but for datasets with unusually large variation, the full Procrustes fit puts less weight on observations that are far from the average shape and will therefore be somewhat more robust against the influence of outliers.
+
+### Reflection
+
+The implementation of the Procrustes fit in MorphoJ includes reflection if that improves the fit. --------------------------------------------------------------------------------
+Text-To-Concept (and Back) via Cross-Model Alignment (https://proceedings.mlr.press/v202/moayeri23a/moayeri23a.pdf)
+citeturn134search15 [wordlim: 200] Published: 3.4 years ago; Text-To-Concept (and Back) via Cross-Model Alignment ... This is mainly due to the fact that CLIP models encode images and texts in relatively low-dimensional spaces and in linear regression, approximating dependent variables becomes harder as the number of independent variables decreases. ... Leveraging representation space alignment, specifically to CLIP, we perform text-to-concept, where text descriptions of semantic concepts are encoded as vectors that can be directly compared (i.e. via cosine similarity) with the aligned features of images obtained from an off-the-shelf vision encoder (see Figure 1).
+That is, one can minimize ℓ(g_t(W^T f_s(x) + b), y) over a set of image-label pairs {(x, y)}, where ℓ is the cross entropy loss. One can replace labels y with predictions g_s(f_s(x)) if remaining faithful to the source model is desirable; this also alleviates the need for labeled data to train the aligner. Lastly, a data-free approach is to optimize the aligner so that g_s becomes equivalent to the composition of the aligner and g_t. Essentially, here we seek to re-express the classification head of the source model as a function of the learnable aligner and the fixed classification head of the target model. We investigate these alternate approaches in Appendix A.2.
+
+regression problems; thus we evaluate the linear alignment on D_test by considering the quality of the solution on those linear regression problems. We use Coefficient of Determination, i.e., R^2 which is the proportion of the variation in the dependent variables that is predictable from the independent variables. Furthermore, we note that for the vision encoder f_s, there usually exists a classification head g_s : R^d → C that classifies a representation in the space of model f_s. --------------------------------------------------------------------------------
+Adaptive Cross-Modal Embeddings for Image-Text Alignment | Proceedings of the AAAI Conference on Artificial Intelligence (https://ojs.aaai.org/index.php/AAAI/article/view/6915)
+citeturn134search6 [wordlim: 200] Published: 6.6 years ago; Crawled: 5 months ago; # Adaptive Cross-Modal Embeddings for Image-Text Alignment ... a using an embedding vector of an instance from modality b. ... Experimental results on two large-scale Image-Text alignment datasets show that ADAPT models outperform all the baseline approaches by large margins. Particularly, for Image Retrieval, ADAPT, with a single model, outperforms the state-of-the-art approach by a relative improvement of R@1 ≈ 24% and for Image Annotation, R@1 ≈ 8% on Flickr30k dataset.
+
+# Adaptive Cross-Modal Embeddings for Image-Text Alignment
+
+## Authors
+
+  * Jonatas Wehrmann Pontifícia Universidade Católica do Rio Grande do Sul
+  * Camila Kolling Pontifícia Universidade Católica do Rio Grande do Sul
+  * Rodrigo C Barros Pontifícia Universidade Católica do Rio Grande do Sul
+
+## DOI:
+
+https://doi.org/10.1609/aaai.v34i07.6915
+
+## Abstract
+
+a using an embedding vector of an instance from modality b. Such an adaptation is designed to filter and enhance important information across internal features, allowing for guided vector representations – which resembles the working of attention modules, though far more computationally efficient. Experimental results on two large-scale Image-Text alignment datasets show that ADAPT models outperform all the baseline approaches by large margins. Particularly, for Image Retrieval, ADAPT, with a single model, outperforms the state-of-the-art approach by a relative improvement of R@1 ≈ 24% and for Image Annotation, R@1 ≈ 8% on Flickr30k dataset. On MS COCO it provides an improvement of R@1 ≈ 12% for Image Retrieval, and ≈ 7% R@1 for Image Annotation. Code is available at https://github.com/jwehrmann/retrieval.pytorch.
+
+## Downloads
+
+  * PDF
+
+## Published
+
+2020-04-03
+
+## How to Cite
+
+Wehrmann, J., Kolling, C., & C Barros, R. (2020). Adaptive Cross-Modal Embeddings for Image-Text Alignment. Proceedings of the AAAI Conference on Artificial Intelligence, 34(07), 12313–12320. https://doi.org/10.1609/aaai.v34i07.6915
+
+[Button: More Citation Formats ]
+
+  * ACM
+  * ACS
+  * APA
+  * ABNT
+  * Chicago
+  * Harvard
+  * IEEE
+  * MLA
+  * Turabian
+  * Vancouver
+
+Download Citation
+
+  * Endnote/Zotero/Mendeley (RIS)
+  * BibTeX
+
+## Issue
+
+Vol. 34 No. 07: AAAI-20 Technical Tracks 7
+
+## Section
+
+AAAI Technical Track: Vision--------------------------------------------------------------------------------
+Frontiers | Tangent space alignment: Transfer learning for Brain-Computer Interface (https://doi.org/10.3389/fnhum.2022.1049985.s001)
+citeturn134search7 [wordlim: 200] Published: 3.9 years ago; Crawled: 2 weeks ago; In particular, we rotate the tangent vectors using an Euclidean Procrustes procedure.
+
+Let us consider the set of centered tangent vectors for the source {s_{n}}n∈[1, N_{s}] and the target {t_{n}}n∈[1, N_{t}] domain.
+### 2.3. Alignment
+
+As anticipated in the introduction, the method here proposed has been inspired by previous Riemannian TL methods, such as in Zanini et al. (2018) and Rodrigues et al. (2019) which focus on covariance matrices in the Riemannian space of SPD matrices. In Rodrigues et al. (2019) the authors consider again the recentering and add two further alignment steps:
+
+  * a rescaling so as to match the dispersion around the mean (center of mass) in both the source and target data sets and
+
+  * a rotation so as to align the mean of each class as much as possible. This effectively results in a Riemannian Procrustes alignment.
+
+In this article, the same steps are undertaken in the tangent space. In particular, we rotate the tangent vectors using an Euclidean Procrustes procedure.
+
+Let us consider the set of centered tangent vectors for the source {s_{n}}n∈[1, N_{s}] and the target {t_{n}}n∈[1, N_{t}] domain. N_{s} and N_{t} are the number of vectors for, respectively, the source and the target data set. --------------------------------------------------------------------------------
+Evolutionary Ecology (2022) 36:439–470 (https://morphometrics.uk/PDF_files/EvolEcol2022.pdf)
+citeturn134search16 [wordlim: 200] Published: 5 months ago; data to tangent space is a Procrustes superimposition that omits the scaling step (Table 1, ... step (step 4) is the same for a given target M and centered landmark configuration, regard-
+--------------------------------------------------------------------------------
+effects of translation, rotation and scaling are removed. The obtained Procrustes shape coordinates are subsequently projected onto the tangent plane of the shape manifold at the mean shape. The texture examples are warped into correspondence using a piece-wise affine warp and subsequently sampled from this shape-free reference. Typically, this geometrical reference shape is the Procrustes mean shape. (https://www2.imm.dtu.dk/pubdb/edoc/imm4090.pdf)
+citeturn134search17 [wordlim: 200] Published: 21.1 years ago; Crawled: 5 months ago; The obtained Procrustes shape coordinates are subsequently projected onto the tangent plane of the shape manifold at the mean shape. The texture examples are warped into correspondence using a piece-wise affine warp and subsequently sampled from this shape-free reference.
+--------------------------------------------------------------------------------
+GRAIL: Post-hoc Compensation by Linear Reconstruction for Compressed Networks (https://proceedings.mlr.press/v328/tang26a.html)
+citeturn134search8 [wordlim: 200] Published: 7 months ago; Crawled: 3 weeks ago; The method summarizes producer-side activations with a Gram matrix and solves a ridge least-squares problem to project the original hidden representation onto the reduced hidden space, yielding a linear map that is merged into the consumer weights while the producer is narrowed to the selected or folded outputs. ... `%0 Conference Paper %T GRAIL: Post-hoc Compensation by Linear Reconstruction for Compressed Networks %A Wenwu Tang %A Dong Wang %A Lothar Thiele %A Olga Saukh %B Conference on Parsimony and Learning %C Proceedings of Machine Learning Research %D 2026 %E Rebekka Burkholz %E Shiwei Liu %E Saiprasad Ravishankar %E William Redman %E Wei Huang %E Weijie Su %E Zhihui Zhu %F pmlr-v328-tang26a %I PMLR %P 881--895 %U https://proceedings.mlr.press/v328/tang26a.html %V 328 %X Structured deep model compression methods reduce memory and inference costs, but the majority of existing approaches still suffer from notable accuracy degradation under aggressive compression.
+--------------------------------------------------------------------------------
+Shape, Procrustes tangent projections and bilateral symmetry | Biometrika | Oxford Academic (https://academic.oup.com/biomet/article-abstract/88/2/469/264951)
+citeturn134search9 [wordlim: 200] Published: 25.4 years ago; Crawled: last week; # Shape, Procrustes tangent projections and bilateral symmetry
+--------------------------------------------------------------------------------
+Training Overview — Sentence Transformers documentation (https://sbert.net/docs/cross_encoder/training_overview.html)
+citeturn134search10 [wordlim: 200] Crawled: last week; For reranking or other regression-style tasks, use `num_labels=1` so that the model outputs a single score per pair, which works well with losses like `BinaryCrossEntropyLoss`. ... In this case, it uses a text-generation backbone and adds a `sentence_transformers.cross_encoder.modules.LogitScore`, which looks at specific “true” / “false” tokens (for example “yes” and “no” or “1” or “0”) and converts the causal logits into a single scalar score per input pair. ... When supplied as `documents` (which have to be 1. ranked and 2. contain positives) to `CrossEncoderRerankingEvaluator`, the evaluator will not just evaluate the reranking performance of the CrossEncoder, but also the original rankings by the embedding model used for mining. ... Repeating the same script with this realistic two-stage performance results in:
+--------------------------------------------------------------------------------
+Cross-model comparison - GRADIEND (https://aieng-lab.github.io/gradiend/guides/cross-model-comparison/)
+citeturn134search11 [wordlim: 200] Crawled: 3 months ago; Cross-model comparison asks whether two or more trained GRADIENDs agree on where and what they learned. ... Pick one lens per question: where weights changed (top-k, cosine), what signal they encode on data (cross-encoding), or how stable training was across seeds (dispersion). ... Component grouping (`embedding`, `attention`, `mlp`, `layer`, `lm_head`) follows Hugging Face naming.
+--------------------------------------------------------------------------------
+Is Cosine-Similarity of Embeddings Really About Similarity? (https://arxiv.org/abs/2403.05440)
+citeturn134academia18 [wordlim: 200] Published: 2.6 years ago; Cosine-similarity is the cosine of the angle between two vectors, or equivalently the dot product between their normalizations. A popular application is to quantify semantic similarity between high-dimensional objects by applying cosine-similarity to a learned low-dimensional feature embedding.
+--------------------------------------------------------------------------------
+LXMERT: Learning Cross-Modality Encoder Representations from Transformers (https://arxiv.org/abs/1908.07490)
+citeturn134academia19 [wordlim: 200] Published: 7.2 years ago; Vision-and-language reasoning requires an understanding of visual concepts, language semantics, and, most importantly, the alignment and relationships between these two modalities. ... Next, to endow our model with the capability of connecting vision and language semantics, we pre-train the model with large amounts of image-and-sentence pairs, via five diverse representative pre-training tasks: masked language modeling, masked object prediction (feature regression and label classification), cross-modality matching, and image question answering.
+--------------------------------------------------------------------------------
+Procrustes analysis (https://en.wikipedia.org/wiki/Procrustes_analysis)
+citeturn134search20 [wordlim: 200] Crawled: 6 days ago; The figure shows the three transformation steps of an ordinary Procrustes fit for two configurations of landmarks. (a) Scaling of both configurations to the same size; (b) Transposition to the same position of the center of gravity; (c) Rotation to the orientation that provides the minimum sum of squared distances between corresponding landmarks. ... * an orthogonal Procrustes problem is a method which can be used to find out the optimal rotation and/or reflection (i.e., the optimal orthogonal linear transformation) for the Procrustes Superimposition (PS) of an object with respect to another.
+--------------------------------------------------------------------------------
+Affine shape adaptation (https://en.wikipedia.org/wiki/Affine_shape_adaptation)
+citeturn134search21 [wordlim: 200] Crawled: 2 days ago; Again, disregarding somewhat messy technical details, the important message here is that given a correspondence between the image points ${\displaystyle {\bar {p}}}$ and ${\displaystyle {\bar {q}}}$, the affine transformation ${\displaystyle B}$ can be estimated from measurements of the multi-scale second-moment matrices ${\displaystyle \mu _{L}}$ and ${\displaystyle \mu _{R}}$ in the two domains. ... Closely related to the notion of affine shape adaptation is the notion of affine normalization, which defines an affine invariant reference frame as further described in Lindeberg (2013a,b, 2021:Appendix I.3), such that any image measurement performed in the affine invariant reference frame is affine invariant.
+--------------------------------------------------------------------------------
+Procrustes transformation (https://en.wikipedia.org/wiki/Procrustes_transformation)
+citeturn134search22 [wordlim: 200] Crawled: 1.9 years ago; A Procrustes transformation is a geometric transformation that involves only translation, rotation, uniform scaling, or a combination of these transformations. ... * Affine transformation, which also allows for shear
+--------------------------------------------------------------------------------
+Step-Wise Hierarchical Alignment Network for Image-Text Matching (https://arxiv.org/abs/2106.06509)
+citeturn134academia23 [wordlim: 200] Published: 5.4 years ago; Different from them, in this work, we propose a step-wise hierarchical alignment network (SHAN) that decomposes image-text matching into multi-step cross-modal reasoning process. ... This progressive alignment strategy supplies our model with more complementary and sufficient semantic clues to understand the hierarchical correlations between image and text. The experimental results on two benchmark datasets demonstrate the superiority of our proposed method.
+--------------------------------------------------------------------------------
+Cross-lingual Entity Alignment with Incidental Supervision (https://arxiv.org/abs/2005.00171)
+citeturn134academia24 [wordlim: 200] Published: 6.5 years ago; Title: Cross-lingual Entity Alignment with Incidental Supervision ... Therefore, we propose an incidentally supervised model, JEANS , which jointly represents multilingual KGs and text corpora in a shared embedding scheme, and seeks to improve entity alignment with incidental supervision signals from text. ... Then, two learning processes are conducted: (i) an embedding learning process to encode the KG and text of each language in one embedding space, and (ii) a selflearning based alignment learning process to iteratively induce the matching of entities and that of lexemes between embeddings.
+

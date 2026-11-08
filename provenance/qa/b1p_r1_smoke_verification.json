@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "synthetic six-method B1-P infrastructure smoke receipts and exact ranking serialization; not full scientific outcome",
+  "methods": 6,
+  "neighbor_parity_cases": 38,
+  "full_width_smoke_selection_updates": 500,
+  "smoke_refit_updates": 500,
+  "new_qrel_reads": 0,
+  "full_background_status": "RUNNING as separately observed",
+  "frozen_ARC2_changed": false
+}

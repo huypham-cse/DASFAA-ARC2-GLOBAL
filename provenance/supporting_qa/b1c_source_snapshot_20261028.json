@@ -1,0 +1,11 @@
+{
+  "status": "PASS_SOURCE_SNAPSHOT_BEFORE_SCIENTIFIC_RUN",
+  "origin_project_commit": "585b8b809352f51a877c264a2485a7f8023a89d3",
+  "deployment_commit": "1df7c3eb39c671752e37fcda5dcfb004f51bd03d",
+  "canonical_scientific_sources_verified": 34,
+  "locks_registries_byte_identical": true,
+  "bundle": "D:\\ARC2-server-backup-20261028\\b1c_scientific_source.bundle",
+  "bundle_bytes": 394350,
+  "bundle_sha256": "2fdb390a647a286613d472fa257b521c0274c1e096207d8978724f56a2c15f22",
+  "qualification": "Distinct clean scientific-source Git snapshot, not the full historical repository. Origin commit and all locked scientific bytes preserved. Deployment commit precedes smoke/full and is the code_commit passed to workers. Historical raw sources remain at their locked absolute paths."
+}

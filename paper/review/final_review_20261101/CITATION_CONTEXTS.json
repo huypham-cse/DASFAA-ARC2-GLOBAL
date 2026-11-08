@@ -1,0 +1,188 @@
+{
+  "driftadapter": [
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "text": "Document-side conversion and query-side adaptation already provide routes across embedding spaces~\\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 15,
+      "text": "\\paragraph{Compatibility and translation direction.}\nBackward-compatible representation learning trains a new encoder to remain usable with previously computed gallery features~\\cite{shen2020backward}.\nDrift-Adapter instead fits a post-hoc map from new-model queries to an existing legacy index, comparing Procrustes, low-rank affine, and residual neural adapters~\\cite{driftadapter}.\nSpherical interpolation refines Procrustes-aligned queries through SLERP between old and aligned new query directions~\\cite{spherical2026}; ARC2 instead fits tangent ridge updates to document anchors.\nARC2-Global shares the use of paired embeddings and frozen encoders, but maps legacy document vectors into the destination space.\nIts evaluation concerns mapped and native destination documents competing as re-encoding progresses."
+    }
+  ],
+  "embeddingconverter": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 44,
+      "text": "\\paragraph{Comparison methods.}\nWe retain the full five-baseline panel: centered rectangular Procrustes\n(an A2M adaptation); LA2M with 20 source-anchor clusters, local alignment\nfor clusters with at least two anchors and global fallback for singletons;\nSimpleLinear; affine ridge with $\\lambda=10$\nand a regularized bias; and Embedding-Converter~\\cite{la2m,simplelinear,embeddingconverter}.\nSimpleLinear uses pinned official code: despite its name, the locked\nconfiguration is a five-layer SELU MLP, trained for the final 50 epochs with\nbatch size 4,028 and the MSE plus cosine loss, without qrel-based stopping.\nConverter is a paper-specification adaptation with a 50,000-update\nselection run, batch size 64, and local neighborhood size 100. Paired-vector\nvalidation MAE selects the earliest minimum at 250-update checkpoints;\na fresh fit uses all fitting pairs for that selected length. Unlike the\noriginal retrieval-based validation, this adaptation uses paired-vector MAE\nto respect paired-document-only supervision. These are the\ndeclared implementations and training policies, rather than claims to\nreproduce every original-paper setting. \\method{} remains fixed at two\ntangent updates and $\\lambda=10$ throughout."
+    },
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "text": "Document-side conversion and query-side adaptation already provide routes across embedding spaces~\\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 5,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ],
+  "la2m": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 44,
+      "text": "\\paragraph{Comparison methods.}\nWe retain the full five-baseline panel: centered rectangular Procrustes\n(an A2M adaptation); LA2M with 20 source-anchor clusters, local alignment\nfor clusters with at least two anchors and global fallback for singletons;\nSimpleLinear; affine ridge with $\\lambda=10$\nand a regularized bias; and Embedding-Converter~\\cite{la2m,simplelinear,embeddingconverter}.\nSimpleLinear uses pinned official code: despite its name, the locked\nconfiguration is a five-layer SELU MLP, trained for the final 50 epochs with\nbatch size 4,028 and the MSE plus cosine loss, without qrel-based stopping.\nConverter is a paper-specification adaptation with a 50,000-update\nselection run, batch size 64, and local neighborhood size 100. Paired-vector\nvalidation MAE selects the earliest minimum at 250-update checkpoints;\na fresh fit uses all fitting pairs for that selected length. Unlike the\noriginal retrieval-based validation, this adaptation uses paired-vector MAE\nto respect paired-document-only supervision. These are the\ndeclared implementations and training policies, rather than claims to\nreproduce every original-paper setting. \\method{} remains fixed at two\ntangent updates and $\\lambda=10$ throughout."
+    },
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "text": "Document-side conversion and query-side adaptation already provide routes across embedding spaces~\\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 6,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ],
+  "yang2026translation": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 8,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ],
+  "jha2025geometry": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 23,
+      "text": "\\paragraph{Geometric alignment and refinement.}\nOrthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\\cite{schonemann1966procrustes}.\nRecent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\\cite{maystre2025procrustes}.\nUnpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\\cite{dar2025mini}.\nThus, linear translation, Procrustes initialization, and refinement are all established ingredients.\nARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.\nBoth corrections are folded into one affine coefficient matrix, followed by row normalization at application time.\nThis differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps."
+    }
+  ],
+  "dar2025mini": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 23,
+      "text": "\\paragraph{Geometric alignment and refinement.}\nOrthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\\cite{schonemann1966procrustes}.\nRecent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\\cite{maystre2025procrustes}.\nUnpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\\cite{dar2025mini}.\nThus, linear translation, Procrustes initialization, and refinement are all established ingredients.\nARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.\nBoth corrections are folded into one affine coefficient matrix, followed by row normalization at application time.\nThis differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps."
+    }
+  ],
+  "maystre2025procrustes": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 22,
+      "text": "\\paragraph{Geometric alignment and refinement.}\nOrthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\\cite{schonemann1966procrustes}.\nRecent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\\cite{maystre2025procrustes}.\nUnpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\\cite{dar2025mini}.\nThus, linear translation, Procrustes initialization, and refinement are all established ingredients.\nARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.\nBoth corrections are folded into one affine coefficient matrix, followed by row normalization at application time.\nThis differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps."
+    }
+  ],
+  "schonemann1966procrustes": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 21,
+      "text": "\\paragraph{Geometric alignment and refinement.}\nOrthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\\cite{schonemann1966procrustes}.\nRecent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\\cite{maystre2025procrustes}.\nUnpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\\cite{dar2025mini}.\nThus, linear translation, Procrustes initialization, and refinement are all established ingredients.\nARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.\nBoth corrections are folded into one affine coefficient matrix, followed by row normalization at application time.\nThis differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps."
+    }
+  ],
+  "shen2020backward": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 14,
+      "text": "\\paragraph{Compatibility and translation direction.}\nBackward-compatible representation learning trains a new encoder to remain usable with previously computed gallery features~\\cite{shen2020backward}.\nDrift-Adapter instead fits a post-hoc map from new-model queries to an existing legacy index, comparing Procrustes, low-rank affine, and residual neural adapters~\\cite{driftadapter}.\nSpherical interpolation refines Procrustes-aligned queries through SLERP between old and aligned new query directions~\\cite{spherical2026}; ARC2 instead fits tangent ridge updates to document anchors.\nARC2-Global shares the use of paired embeddings and frozen encoders, but maps legacy document vectors into the destination space.\nIts evaluation concerns mapped and native destination documents competing as re-encoding progresses."
+    }
+  ],
+  "fastfill2023": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 9,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ],
+  "spherical2026": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 16,
+      "text": "\\paragraph{Compatibility and translation direction.}\nBackward-compatible representation learning trains a new encoder to remain usable with previously computed gallery features~\\cite{shen2020backward}.\nDrift-Adapter instead fits a post-hoc map from new-model queries to an existing legacy index, comparing Procrustes, low-rank affine, and residual neural adapters~\\cite{driftadapter}.\nSpherical interpolation refines Procrustes-aligned queries through SLERP between old and aligned new query directions~\\cite{spherical2026}; ARC2 instead fits tangent ridge updates to document anchors.\nARC2-Global shares the use of paired embeddings and frozen encoders, but maps legacy document vectors into the destination space.\nIts evaluation concerns mapped and native destination documents competing as re-encoding progresses."
+    }
+  ],
+  "beir2021": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 13,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 30,
+      "text": "\\paragraph{Retrieval evaluation.}\nBEIR emphasizes retrieval across heterogeneous tasks and domains~\\cite{beir2021}, while NanoBEIR provides smaller collections suitable for development comparisons~\\cite{nanobeir}.\nSentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}.\nOur evaluation targets judged retrieval quality in actual mixed galleries, separating that quantity from agreement with a destination ranking or approximate nearest-neighbor overlap.\nThis distinction matters because accurately reconstructing individual vectors and preserving their internal neighborhoods do not directly measure the relevance of the final combined ranking.\nThe experimental question is therefore whether the frozen correction improves retrieval under a matched encoding budget, and in which encoder and gallery conditions that improvement persists.\n"
+    }
+  ],
+  "sbert2019": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 21,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 31,
+      "text": "\\paragraph{Retrieval evaluation.}\nBEIR emphasizes retrieval across heterogeneous tasks and domains~\\cite{beir2021}, while NanoBEIR provides smaller collections suitable for development comparisons~\\cite{nanobeir}.\nSentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}.\nOur evaluation targets judged retrieval quality in actual mixed galleries, separating that quantity from agreement with a destination ranking or approximate nearest-neighbor overlap.\nThis distinction matters because accurately reconstructing individual vectors and preserving their internal neighborhoods do not directly measure the relevance of the final combined ranking.\nThe experimental question is therefore whether the frozen correction improves retrieval under a matched encoding budget, and in which encoder and gallery conditions that improvement persists.\n"
+    }
+  ],
+  "minilm2020": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 21,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 31,
+      "text": "\\paragraph{Retrieval evaluation.}\nBEIR emphasizes retrieval across heterogeneous tasks and domains~\\cite{beir2021}, while NanoBEIR provides smaller collections suitable for development comparisons~\\cite{nanobeir}.\nSentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}.\nOur evaluation targets judged retrieval quality in actual mixed galleries, separating that quantity from agreement with a destination ranking or approximate nearest-neighbor overlap.\nThis distinction matters because accurately reconstructing individual vectors and preserving their internal neighborhoods do not directly measure the relevance of the final combined ranking.\nThe experimental question is therefore whether the frozen correction improves retrieval under a matched encoding budget, and in which encoder and gallery conditions that improvement persists.\n"
+    }
+  ],
+  "e52022": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 21,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 31,
+      "text": "\\paragraph{Retrieval evaluation.}\nBEIR emphasizes retrieval across heterogeneous tasks and domains~\\cite{beir2021}, while NanoBEIR provides smaller collections suitable for development comparisons~\\cite{nanobeir}.\nSentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}.\nOur evaluation targets judged retrieval quality in actual mixed galleries, separating that quantity from agreement with a destination ranking or approximate nearest-neighbor overlap.\nThis distinction matters because accurately reconstructing individual vectors and preserving their internal neighborhoods do not directly measure the relevance of the final combined ranking.\nThe experimental question is therefore whether the frozen correction improves retrieval under a matched encoding budget, and in which encoder and gallery conditions that improvement persists.\n"
+    }
+  ],
+  "treccovid2020": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 16,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    }
+  ],
+  "nanobeir": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 13,
+      "text": "\\paragraph{Collections and migrations.}\nDevelopment uses FiQA (57,638 documents, 500 development queries), NanoNQ\n(5,035/50), NanoHotpotQA (5,090/50), and NanoFEVER (4,996/50), drawn from\nBEIR and NanoBEIR~\\cite{beir2021,nanobeir}. FiQA informed method selection\nafter its scores were inspected; all four collections are development evidence.\nWe subsequently froze a separate TREC-COVID\nconfirmation with all 171,332 documents and 50 queries~\\cite{treccovid2020}. Its labels remained\nclosed until every ranking and endpoint had been sealed and separately\nverified. This distinguishes development evidence from the prospective test.\nWe evaluate two 384-to-768-dimensional migrations:\n\\texttt{all-MiniLM-L6-v2} to \\texttt{all-distilroberta-v1}, and\n\\texttt{e5-small-v2} to \\texttt{e5-base-v2}~\\cite{minilm2020,sbert2019,e52022}.\nModel revisions and input hashes are pinned. Text encoding uses normalized\nfloat32 vectors, a maximum of 128 tokens, and the E5 query/passage prefixes."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 30,
+      "text": "\\paragraph{Retrieval evaluation.}\nBEIR emphasizes retrieval across heterogeneous tasks and domains~\\cite{beir2021}, while NanoBEIR provides smaller collections suitable for development comparisons~\\cite{nanobeir}.\nSentence-BERT, MiniLM, and E5 supply established encoder families and training approaches relevant to our model transitions~\\cite{sbert2019,minilm2020,e52022}.\nOur evaluation targets judged retrieval quality in actual mixed galleries, separating that quantity from agreement with a destination ranking or approximate nearest-neighbor overlap.\nThis distinction matters because accurately reconstructing individual vectors and preserving their internal neighborhoods do not directly measure the relevance of the final combined ranking.\nThe experimental question is therefore whether the frozen correction improves retrieval under a matched encoding budget, and in which encoder and gallery conditions that improvement persists.\n"
+    }
+  ],
+  "simplelinear": [
+    {
+      "file": "sections/experimental-setup.tex",
+      "line": 44,
+      "text": "\\paragraph{Comparison methods.}\nWe retain the full five-baseline panel: centered rectangular Procrustes\n(an A2M adaptation); LA2M with 20 source-anchor clusters, local alignment\nfor clusters with at least two anchors and global fallback for singletons;\nSimpleLinear; affine ridge with $\\lambda=10$\nand a regularized bias; and Embedding-Converter~\\cite{la2m,simplelinear,embeddingconverter}.\nSimpleLinear uses pinned official code: despite its name, the locked\nconfiguration is a five-layer SELU MLP, trained for the final 50 epochs with\nbatch size 4,028 and the MSE plus cosine loss, without qrel-based stopping.\nConverter is a paper-specification adaptation with a 50,000-update\nselection run, batch size 64, and local neighborhood size 100. Paired-vector\nvalidation MAE selects the earliest minimum at 250-update checkpoints;\na fresh fit uses all fitting pairs for that selected length. Unlike the\noriginal retrieval-based validation, this adaptation uses paired-vector MAE\nto respect paired-document-only supervision. These are the\ndeclared implementations and training policies, rather than claims to\nreproduce every original-paper setting. \\method{} remains fixed at two\ntangent updates and $\\lambda=10$ throughout."
+    },
+    {
+      "file": "sections/introduction.tex",
+      "line": 7,
+      "text": "Document-side conversion and query-side adaptation already provide routes across embedding spaces~\\cite{embeddingconverter,driftadapter}. Orthogonal alignment supplies a compact geometric starting point, while local alignment and neural regression provide more flexible alternatives~\\cite{la2m,simplelinear}. We investigate a complementary design: correcting the prediction error that changes vector direction while retaining one affine document map."
+    },
+    {
+      "file": "sections/related-work.tex",
+      "line": 7,
+      "text": "\\paragraph{Document-side translation and mixed databases.}\nEmbedding-Converter learns document-side conversion using regression together with global and local similarity losses~\\cite{embeddingconverter}.\nYang et al. study integration across embedding models through global alignment and locally fitted isometries, giving the A2M and LA2M approaches~\\cite{la2m}.\nTheir authors' repository also provides the SimpleLinear neural mapper used in our comparison~\\cite{simplelinear}.\nMore recently, Yang and Cao study out-of-distribution translation, multi-model mixing, and chaining, with a hierarchical mixture of experts and directional residual regularization~\\cite{yang2026translation}.\nFastFill already combines visual feature alignment with uncertainty-based partial backfilling, and shows that replacement can initially reduce retrieval performance~\\cite{fastfill2023}.\nBuilding on these migration settings, we study the frozen two-correction affine computation and its relevance-judged text-retrieval behavior under anchor-inclusive encoding budgets.\nOur comparison instantiates five alignment and regression configurations under common paired-document supervision (Sect.~\\ref{sec:setup})."
+    }
+  ]
+}

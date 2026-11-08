@@ -1,0 +1,35 @@
+\section{Practical Value of Directional Adaptation}
+\label{sec:discussion}
+\paragraph{Better ranking without a larger inference model.}
+\method\ combines the strongest development macro quality in the evaluated
+panel with a compact deployment artifact. For 384-to-768-dimensional
+conversion, its 295,680 float32 coefficients occupy 1.13\,MiB: 114.7 times
+fewer parameter bytes than the evaluated 33,927,168-parameter Converter.
+The two corrections are absorbed into the affine coefficients, so they add
+no stages to document mapping at inference. Affine ridge has the same
+coefficient count; the comparison therefore separates the retrieval
+benefit of the correction procedure from the storage benefit of affine
+mapping relative to the evaluated neural alternative.
+
+\paragraph{A clear operating scenario.}
+The intended user must support destination-model queries while retaining
+a single destination-space gallery during staged document replacement.
+The fixed-anchor study demonstrates strong mapping quality with limited
+paired supervision; the all-paid MiniLM result shows a useful operating
+point when all available paid pairs are used. Prospective E5 gains over
+Converter and ridge persist through 25\%, 50\% and 75\% coverage. These
+gains complement the TREC-COVID/MiniLM operating point: $0.5195$ nDCG at
+75\% coverage versus $0.5203$ for native Full-Y. These measured conditions
+make \method\ a concrete candidate for evaluating a required
+encoder transition. If source queries can remain in service, native
+Full-X remains a viable alternative: every partial development five-seed
+ARC2 condition mean is below it. Procrustes and LA2M also remain strong choices on
+the prospective collection, so encoder-specific mixed-gallery validation
+should determine which adapter to deploy.
+
+\paragraph{What the efficiency evidence measures.}
+The compact final map and absence of neural mapper training are structural
+advantages. Our cached-vector experiments measure retrieval under matched
+destination exposure. Physical encoding time, fitting workspace, index
+resources and serving SLOs are separate deployment quantities; the
+parameter-storage ratio is not an end-to-end cost ratio.

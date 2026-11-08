@@ -1,0 +1,21 @@
+{
+  "key": "shen2020backward",
+  "bib_entry": "@inproceedings{shen2020backward,\n  author = {Shen, Yantao and Xiong, Yuanjun and Xia, Wei and Soatto, Stefano},\n  title = {Towards Backward-Compatible Representation Learning},\n  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year = {2020},\n}",
+  "contexts": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 14,
+      "text": "\\paragraph{Compatibility and translation direction.}\nBackward-compatible representation learning trains a new encoder to remain usable with previously computed gallery features~\\cite{shen2020backward}.\nDrift-Adapter instead fits a post-hoc map from new-model queries to an existing legacy index, comparing Procrustes, low-rank affine, and residual neural adapters~\\cite{driftadapter}.\nSpherical interpolation refines Procrustes-aligned queries through SLERP between old and aligned new query directions~\\cite{spherical2026}; ARC2 instead fits tangent ridge updates to document anchors.\nARC2-Global shares the use of paired embeddings and frozen encoders, but maps legacy document vectors into the destination space.\nIts evaluation concerns mapped and native destination documents competing as re-encoding progresses."
+    }
+  ],
+  "primary_source_record": {
+    "key": "shen2020backward",
+    "source_file": "citation_sources/shen2020backward_metadata.txt",
+    "metadata_url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html",
+    "verification": "publisher-export",
+    "sha256": "90c71f50f18070d45a088705c23793864d91b7f8339b6f1e4cc1821d9b62b733",
+    "metadata_type": "inproceedings",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

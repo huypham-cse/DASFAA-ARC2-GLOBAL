@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "Parent visually inspected generated PNG via view_image",
+  "plot": "fig_tangent_controls.png",
+  "intervals": "98.75% individual, originalK4 family",
+  "findings": "Both point estimates and full intervals visible; zero reference, labels and titles legible; no clipping/overlap observed",
+  "png_sha256": "463e83951072b2b7612a4811c728fedc3078d3ad539de085671dbcc13c5c606b"
+}

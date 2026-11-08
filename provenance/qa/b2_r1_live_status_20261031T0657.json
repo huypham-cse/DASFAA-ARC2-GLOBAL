@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-31T06:57:40.183342+00:00",
+  "campaign_status": "RUNNING",
+  "current_stage": "encode_full",
+  "campaign_pid": 252862,
+  "current_stage_pid": 253787,
+  "name": "r1_20261031t064859",
+  "repo": "/home/jovyan/arc2_b2_20261031/code_26feef1",
+  "code_commit": "26feef1026bea610ec7f53d581c3c9064949d004",
+  "lock_sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5",
+  "encoding_status": "RUNNING",
+  "physical_document_encodes_completed": 106496,
+  "models": {
+    "distilroberta_y": {
+      "active": {
+        "attempted_start": 106496,
+        "attempted_stop": 110592,
+        "completed_rows": 106496,
+        "role": "docs"
+      },
+      "wall_seconds": null,
+      "outputs": []
+    }
+  },
+  "failures": [],
+  "first_final_qrel_open_exists": false,
+  "jobs": [
+    {
+      "stage": "acquire",
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:49:00.203352+00:00",
+      "ended_utc": "2026-10-31T06:49:36.359798+00:00"
+    },
+    {
+      "stage": "encode_smoke",
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:49:36.362117+00:00",
+      "ended_utc": "2026-10-31T06:49:53.525860+00:00"
+    },
+    {
+      "stage": "smoke",
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:49:53.551094+00:00",
+      "ended_utc": "2026-10-31T06:52:40.657129+00:00"
+    },
+    {
+      "stage": "verify_smoke",
+      "returncode": 0,
+      "started_utc": "2026-10-31T06:52:40.663143+00:00",
+      "ended_utc": "2026-10-31T06:52:44.003917+00:00"
+    },
+    {
+      "stage": "encode_full",
+      "returncode": null,
+      "started_utc": "2026-10-31T06:52:44.005899+00:00",
+      "ended_utc": null
+    }
+  ]
+}

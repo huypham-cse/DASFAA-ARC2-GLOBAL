@@ -1,0 +1,13 @@
+{
+  "bytes": 980831,
+  "sha256": "10669ab7d526cb04f52079139fd88c3d467a0776441b046567f540582798982b",
+  "git_blob_sha1": "9cb5167175d7cdbf9d85ea828c6a3da943fe7053",
+  "source": {
+    "format": "tsv",
+    "url": "https://huggingface.co/datasets/BeIR/trec-covid-qrels/resolve/532ac68ee6756ac22c9346eebf65bd3c6a042e10/test.tsv",
+    "revision": "532ac68ee6756ac22c9346eebf65bd3c6a042e10",
+    "bytes": 980831,
+    "git_blob_sha1": "9cb5167175d7cdbf9d85ea828c6a3da943fe7053"
+  },
+  "observed_utc": "2026-10-31T20:12:18.094163+00:00"
+}

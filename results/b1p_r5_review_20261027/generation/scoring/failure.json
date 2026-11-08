@@ -1,0 +1,7 @@
+{
+  "status": "FAILED_PRESERVED",
+  "failed_utc": "2026-10-26T21:27:16.907988+00:00",
+  "error": "FileExistsError(17, 'File exists')",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/ops/b1p_score.py\", line 305, in run_score\n    write_json(out / 'started.json',receipt)\n  File \"/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/ops/b1m_score.py\", line 53, in write_json\n    with Path(path).open(\"x\", encoding=\"utf-8\", newline=\"\\n\") as stream:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/arc2_global_paper_20261025/mini_bootstrap_20261026/python/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/pathlib.py\", line 1044, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/scoring/started.json'\n",
+  "dev_qrel_access_started": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "la2m20_integration_script_adaptation",
+  "fit_pairs": 1024,
+  "fit_seconds": 1.450271975249052,
+  "mapping_seconds": 0.04552766866981983,
+  "phases": {},
+  "parameters_sha256": "7ecf8ac6ab11973e0f37308b89f53aaa820a34944031c69a9370c29e5ff81e33",
+  "backend_id": null,
+  "new_physical_document_encodes": 0
+}

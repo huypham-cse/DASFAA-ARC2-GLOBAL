@@ -1,0 +1,2114 @@
+Generalizable and Composable Multi-Model Embedding Translation
+Beining Yang1 Yang Cao1
+Abstract
+Embedding translation enables interoper-
+ability across embedding models, allowing
+embedding vectors to be reused without costly
+re-embedding. However, existing methods are
+typically evaluated under simplified pairwise
+and in-domain settings and behave as black
+boxes at inference time, leading to unreliable
+performance under out-of-distribution (OOD)
+inputs, multi-model mixing, and composed
+translations. We analyze embedding translation
+from a geometric perspective and derive an
+interpretable error bound that explains systematic
+error amplification under OOD inputs, mixing
+and chaining. Building on this, we propose a
+geometry-aware confidence metric and a Hierar-
+chical Mixture of Experts ( H-MoE) framework
+with localized, parameter-efficient adaptation.
+Following MTEB leaderboard, we conduct
+large-scale experiments over10embedding
+models and6benchmarks across90translation
+directions. H-MoE outperformseverybaseline
+foreverymodel pair overeverybenchmark
+under OOD scenarios. Furthermore, multi-model
+mixing and chaining only degrade our per-
+formance in Recall@100 by 0.5%∼2.6% ,
+compared to 7.2%∼92.3% recall drop by
+existing methods. Code is available at https:
+//github.com/DBgroup-Edinburgh/
+embedding-translation.
+1. Introduction
+Embedding models map unstructured objects (e.g.,text)
+into high-dimensional vectors and enable efficient similar-
+ity search viae.g.,vector databases. In practice, embedding
+models evolve rapidly (provider switches, fine-tuning, fre-
+quent upgrades), yet different models induce incompatible
+vector spaces: a database built with one model cannot be
+directly queried with vectors from another model without
+1University of Edinburgh, Edinburgh, United Kingdom Corre-
+spondence to: Yang Cao <Yang.Cao@ed.ac.uk>.Proceedings of
+the 43 rd International Conference on Machine Learning, Seoul,
+South Korea. PMLR 306, 2026. Copyright 2026 by the author(s).
+Q1: Can we bound 
+error	𝒆(𝒇𝑨→𝑩) under Out-
+of-Distribution (OOD)?
+Q2: Can we minimize gap 
+𝒆(𝒇𝑨→𝑩;	𝒇𝑪→𝑩)	𝒗𝒔.
+	𝒎𝒂𝒙(𝒆𝒇𝑨→𝑩,𝒆𝒇𝑪→𝑩)?
+Q3: Can we minimize gap 
+𝒆(𝒇𝐀→𝑪∘𝒇𝐂→𝑩)	𝒗𝐬.𝒆(𝒇𝐀→𝑩)?
+𝐵𝐴
+ 𝐶
+𝑓!→#
+Translation
+𝑓!→#
+𝑓$→#
+Mixing
+Chaining
+𝑓$→#𝑓!→$
+Figure 1.Cross-model embedding interoperability
+costly re-embedding.Embedding translationaims to bridge
+this gap by learning a function that maps embeddings from
+one model space to another, enabling cross-model queries.
+Prior art. Earlier studies focus on structure-preserving map-
+pings such as Procrustes Analysis (PA) (Wang & Mahade-
+van, 2008)), Canonical Correlation Analysis (CCA) (Artetxe
+et al., 2016)), and Gromov–Wasserstein learning (GW) (Chen
+et al., 2020)), targeting cross -lingual dictionary induc-
+tion (Mikolov et al., 2013; Artetxe et al., 2016; Smith et al.,
+2017; Joulin et al., 2018). The rationale is that different em-
+bedding spaces are structurally consistent as they encode
+the same semantic space of words across languages. The
+idea has also been exploited for integrating partially over-
+lapping vector databases across embedding models (Yang
+et al., 2025). Recent studies exploit expressive nonlinear
+and adversarial architectures,e.g.,Embedding Converter
+(EmbConv) (Yoon & Arik, 2025) andVec2Vec (Jha et al.,
+2025), to accommodate complex cross-space mappings that
+deviate from the global structural consistency.
+Limitations. There are still several key areas unaddressed.
+Out-of-distribution vectors. Existing translators are trained
+and evaluated in a simplified pairwise, in-domain regime:
+two models embed the same corpus and the translator is fit
+on a subset, mirroring classic cross -lingual alignment. In
+practice, embeddings come from heterogeneous and evolv-
+ing data sources (e.g.,different vector databases or domains),
+each with its own similarity geometry, so test embeddings
+are often out-of-distribution (OOD)w.r.t.training data.
+As shown in Fig. 2a, current translators can fail catas-
+trophically under OOD inputs, and scaling up training data
+does not prevent these drops. While some methods (e.g.,
+1
+Generalizable and Composable Multi-Model Embedding Translation
+GW PA CCA Vec2Vec EmbConv H MoE(Ours)
+In-domain (ID)
+(SciFact  SciFact)
+Cross-domain (OOD)
+(FiQA-2018  SciFact)
+0
+20
+40
+60
+80
+100Recall@100 (%)
+-97.3%
+-82.4%
+-36.0%-57.6%
+-15.2%
+-2.6%
+(a)Pairwise Translation
+2 3 4 5 6 7 8 9 10
+Number of Source Models  openai
+ (FiQA-2018  SciFact)
+0
+25
+50
+75
+100Recall@100 (%)
+ (b)Multi-model Mixing
+0 25 50 75 100
+Source (gemini)  Target (openai) (%) 
+(FiQA-2018  SciFact)
+0
+25
+50
+75
+100S  Hub (qwen)  T(%)
+ (c)Multi-model Chaining
+Figure 2.Embedding translation scenarios.(a)Pairwise Translation: evaluating translators from gemini→openai under in-domain
+(ID) and cross-domain (OOD) shifts;FiQA-2018→SciFact means we train translator overFiQA-2018 and use it to translategemini embeddings
+of SciFact to openai of SciFact. (b)Multi-model mixing: translating embeddings from multiple source models into a unified openai target
+space. (c)Multi-model chaining: the x-axis reports direct translation performance ( gemini→openai ), while the y-axis shows chained
+results via the Hub model qwen. Detailed settings for each scenario are provided in Appendix A. Results show that our method (HMoE)
+avoids the significant recall@100 drop in ODD translation, and is substantially more robust in both mixing and chaining scenarios.
+EmbConv) report OOD results, translation is still treated
+as a black-box: they provide little insight into how errors
+arise under shift and, critically, no pre-translation reliability
+signal. This forces systems to translate every input blindly
+and only detect failures after observing degraded retrieval.
+Multi-model translation. Prior work studies embedding
+translation in isolation for a single source -target pair. In
+practice, many fine-tuned and frequently updated embed-
+ding models coexist (Muennighoff et al., 2023), so trans-
+lated embeddings from multiple sources may be stored in
+one target space (mixing), and missing pairwise translators
+often necessitate multi-hop translation steps such as A→
+Hub→B (chaining). As shown in Figures 2b -2c, both
+patterns can amplify residual errors under composition, yet
+current methods degrade sharply in both settings.
+Where these settings arise. The three settings above are not
+isolated edge cases: they arise naturally in two common
+deployments.(i) Staged migration of large or legacy vec-
+tor databases, where the historical corpus is already em-
+bedded with model A while queries or new documents
+switch to model B because of provider changes, fine -tun-
+ing, or upgrades; full re -embedding is often infeasible
+(API/operational limits, or raw data being unavailable), so
+teams collect only a small paired set to trainfA→B while de-
+ployment later reaches broader or different corpora, which
+is exactly the OOD regime.(ii) Federated or multi -tenant
+retrieval, where autonomous vector stores use different em-
+bedders, so old and new vectors coexist (mixing), and when
+a direct translator is unavailable systems must rely on ex-
+isting A→Hub and Hub→B translators (chaining).
+Importantly, inference-time translation does not require ac-
+cess to the original paired training corpus: our translation-
+confidence signal only needs a source-side reference set (or
+its ANN index), which can be shipped with the translator.
+Contributions. We study embedding translation beyond the
+standard pairwise, in-domain setting, focusing on the more
+challenging scenarios in Fig. 1: OOD inputs, multi-model
+mixing, and multi-hop chaining. Rather than treating trans-
+lation as black-box regression, we analyze how translation
+error arises from source-space geometry and how residual
+errors interact when translations are mixed or chained.
+(1) Geometric OOD error bound (Section 2.2). We formal-
+ize translation as learning a mapping fA→B between two
+embedding spaces and study its behavior under distribu-
+tion shift. Under mild regularity (Lipschitz) assumptions,
+we derive a pointwise bound for an unseen embedding x:
+e(x)≤(L+L ∗)δ(x) +e(x nn), where e(x) is the transla-
+tion error of x relative to an idealized reference translation,
+xnn is the nearest training reference point in the source
+space, and δ(x) is the corresponding distance-to-reference.
+The bound separates error into a training term (i.e.,local fit
+around xnn) and a coverage term (i.e.,extrapolation con-
+trolled by δ(x)), explaining why translators trained i.i.d. can
+fail systematically on OOD embedding inputs.
+(2) Translation confidence (Section 2.3). The bound im-
+plies that translation is strongly affected by distance-to-refer-
+ence. We thus develop a translator-independent confidence
+purely from source-space geometry, enabling systems to es-
+timatetranslatability before translationwithout access to
+target-side labels or post-translation evaluation.
+(3) Generalizable translation (Section 3). Guided by the
+bound, we design H-MoE, a hierarchical mixture-of-experts
+translator that preserves the expressiveness of nonlinear
+models while reducing local expansion and extrapolation.
+H-MoE organizes the source embedding space into a hierar-
+chy of regions, each with a specialized translator. It routes
+test embedding reliably by traversing the hierarchy, and op-
+2
+Generalizable and Composable Multi-Model Embedding Translation
+Target Space 𝓓𝟐Source Space 𝓓𝟏
+𝒙
+Test sample
+𝑓
+𝒆(𝒙𝒏𝒏)
+≤𝑳	(𝜹(𝒙)
+≤𝑳∗	(𝜹(𝒙)
+𝜹𝒙=𝑫𝒊𝒔𝒕(𝒙,𝒙𝒏𝒏)
+Reference 
+Translator 𝑓∗(⋅)
+Learned 
+Translator 𝑓(⋅)
+𝒙𝒏𝒏= 𝒂𝒓𝒈𝒎𝒊𝒏𝒙∈𝓧𝒕𝒓𝒂𝒊𝒏𝑫𝒊𝒔𝒕(𝒙,𝒙%)
+𝒇(𝒙)
+𝒇𝒙𝒏𝒏
+𝒇∗(𝒙𝒏𝒏)
+𝒇∗(𝒙)
+Bound derived via Triangle Inequality
+𝒆𝒙≤𝒆𝒙𝒏𝒏+𝑳+𝑳∗⋅𝜹(𝒙)
+𝑓∗(⋅)
+𝑬𝒙=𝑫𝒊𝒔𝒕(𝒇𝒙,𝒇∗𝒙)
+Figure 3.Geometric illustration of the translation error bound.
+For a test vector x at distance δ(x) from its nearest training neigh-
+bor xnn, we bound the error between thelearned f and ideal
+reference f ∗ by decomposing it into the empirical errore(xnn) at
+the nearest neighbor and the Lipschitz expansion (L+L ∗)δ(x).
+timizes parameter-efficiency via Low-Rank Adaptation.
+(4) Multi-model consistency and transitivity (Section 4).
+We characterize why multi-model settings are harder than
+pairwise translation: mixing embeddings from different
+sources distort cross-source distances when different trans-
+lators introduce residuals in incompatible directions, and
+chaining can accumulate error when propagated upstream
+residuals align with downstream residuals. We address both
+with a unified geometric principle: regularize residual errors
+to bedirectionally predictableusing principal directions of
+the target embedding distribution, yielding robustconsis-
+tencyfor mixing and improvedtransitivityfor chaining.
+(5) Library and large-scale evaluation (Section 5). We im-
+plement our approach as a unified library supporting all
+90translation directions among10embedding models. We
+evaluate on6BEIR benchmarks (Thakur et al., 2021), cov-
+ering cross-dataset OOD, multi-model mixing, and chaining.
+while existing baselines suffer severe degradation, H-MoE
+maintains stable performance. In particular, we achieve
+state-of-the-art results under OOD translation and limits
+degradation under multi-model settings to 0.5%∼2.6% ,
+compared to7.2%∼92.3%for prior methods.
+Conflict of Interest Disclosure.The authors declare no fi-
+nancial conflicts of interest. Both authors are affiliated solely
+with the University of Edinburgh, an academic institution.
+The embedding models evaluated in this work (e.g.,openai,
+gemini, qwen, gritlm) are independent third -party sys-
+tems with which the authors have no financial or employ-
+ment relationship, and no proprietary models developed by
+the authors’ institution are evaluated as part of this study.
+2. Bounding Translation Error
+In this section, we derive a pointwise upper bound on em-
+bedding-translation error under distribution shift. The bound
+separates error into (i) atrainingterm that captures transla-
+tor’s quality over training set, and (ii) a datacoverageterm
+that is dependent on the geometry of source-side dataset.
+2.1. Preliminaries
+Let O be a universe of objects. Two embedding models
+embA and embB map each o∈ Oto a source embedding x
+:= embA(o)∈R dA and a target embedding y:= emb B(o)
+∈R dB. Embedding translation learns fA→B :R dA →R dB
+so that fA→B(embA(o)) is close to embB(o) for the same
+objecto, given paired training data{(x i,y i)}ni=1.
+Let Otrain and Otest be training and test collections, and
+define the corresponding source-embedding sets Xtrain :=
+{embA(o)|o∈ O train}, also referred to as the reference
+set or pool, and Xtest :={emb A(o)|o∈ O test} as the test-
+ing set. Out-of-distribution (OOD) means Otest differ sub-
+stantially from Otrain. We use Euclidean distance Dist(u,
+v) :=∥u−v∥ 2 (see Appendix B.1 for cosine variant).
+2.2. A pointwise upper bound under distribution shift
+We posit an (unknown) ideal alignment f ∗ :R dA →R dB
+that exactly matches training pairs,i.e., f ∗(embA(o)) =
+embB(o) for all o∈ Otrain. We measure pointwise transla-
+tion error relative tof ∗ bye(x) :=∥f(x)−f ∗(x)∥2.
+Distance-to-reference. Given a test embedding x∈ Xtest,
+let xnn denote its nearest neighbor in the source-side train-
+ing reference set,i.e., xnn := arg minx′∈Xtrain ∥x−x ′∥2,
+and define thedistance -to-referenceas δ(x) :=∥x−x nn∥2.
+Intuitively, δ(x) indicates how much generalization power
+we would require from f to translate it. When δ(x) is large,
+the test point x lies far from the region covered by the train-
+ing reference set, so translation requires more extrapolation.
+Lipschitz continuity. Following the standard regularity con-
+dition, we assume that the learned translatorf is L-Lipschitz
+and the ideal reference translator f ∗ is L∗-Lipschitz: for all
+x,x ′ ∈R dA, we have ∥f(x)−f(x ′)∥2 ≤L∥x−x ′∥2
+and ∥f ∗(x)−f ∗(x′)∥2 ≤L ∗∥x−x ′∥2. Intuitively, this as-
+serts that perturbations in the source space should not cause
+arbitrarily large changes in the translated embedding.
+Theorem 1:For any x∈ Xtest, the translation error e(x)
+ofxby translatorfrelative tof ∗ is bounded by
+e(x)≤(L+L ∗)δ(x) +e(x nn),
+wheree(x nn) :=∥f(x nn)−f ∗(xnn)∥2.□
+As illustrated in Fig. 3, Theorem 1 follows by anchoring x
+to xnn and applying the triangle inequality and Lipschitz
+continuity (see Appendix B for full proof). It makes the de-
+composition explicit: e(xnn) is atrainingterm (local fit),
+while (L+L ∗)δ(x) is acoverageterm that grows with
+distance-to-reference. In particular, if δ(x) = 0 the bound
+reduces to training error; conversely, even with small train-
+3
+Generalizable and Composable Multi-Model Embedding Translation
+0.00 0.25 0.50 0.75 1.00
+Translation Confidence (TC(x))
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+Empirical Translation Error e(x)
+Fever
+FiQA-2018
+SciDocs
+Arguana
+NFCorpus
+(a)Fix method ( H-MoE), com-
+paring all datasets toSciFact.
+0.00 0.25 0.50 0.75 1.00
+Translation Confidence (TC(x))
+0.0
+0.5
+1.0
+1.5
+2.0
+Empirical Translation Error e(x)
+GW
+PA
+Vec2Vec
+CCA
+EmbConv
+HMoE(Ours)
+(b)Fix dataset ( FiQA-2018→
+SciFact), comparing methods.
+Figure 4.Translation confidence (TC) vs. empirical transla-
+tion error e(x) (gemini→openai) :(a) the concentration of
+NFCorpus near TC≈0 reflects significant domain divergence from
+the SciFact samples; (b) on FiQA-2018→SciFact , the high error ofGW
+and PA empirically validates the importance of the reconstruction
+terme(r(o))in Theorem 1, whileH-MoEachieves loweste(x).
+ing error, large δ(x) can lead to large OOD translation error.
+2.3. Translation Confidence Metric (TC(x))
+Theorem 1 suggests that the main per-point factor govern-
+ing OOD translation quality is δ(x): the remaining terms
+L, L∗, and e(xnn) are either global properties of the trans-
+lators or small after successful training, while δ(x) varies
+substantially across test inputs. This motivates a translator-
+independent per-input metric that decides translatability of
+a given test vector based solely on source-space geometry.
+Translation confidence. For any test embedding x∈ Xtest,
+we use its distance-to-reference δ(x) = minx′∈Xtrain ∥x−
+x′∥ as the core indicator of uncertainty. To ensure the met-
+ric is comparable across different datasets and embedding
+scales, we normalize this distance by the intrinsic scale of
+the training reference set. We estimate this scaleσdata as the
+standard deviation of pairwise distances within the training
+set:σ data :=
+q
+Varxi,xj ∈Xtrain,i̸=j
+
+∥xi −x j∥
+
+.
+We then define theTranslation Confidence(TC) for a query
+object o with embedding x:= emb A(o) as: TC(x) :=
+exp
+
+− δ(x)σdata
+
+. Note that TC(x)∈(0,1] , where higher
+values indicate better coverage,i.e.,the query lies near the
+training manifold and is expected to be more stable.
+As shown in Fig. 4, translation confidence is indeed an accu-
+rate indicator of the empirical translation error when trans-
+lating gemini to openai embeddings across (a) varying
+training set (Fig. 4a) and (b) different translators (Fig. 4b).
+Implications. (1) In practice, δ(x) can be efficiently
+computed by querying a fast nearest -neighbor index (e.g.,
+FAISS (Johnson et al., 2021)) built on Xtrain. The scale
+σdata is computed once offline (typically using a random
+subset of pairs) and cached. This makes the confidence score
+TC(x) available in real time and does not require any labels
+or ground-truth embeddings in the target space.
+(2) Because TC(x) is computedbeforetranslation, it en-
+ables abstention policies such as translating only if TC(x)
+is greater than a threshold (determined by the application
+scenario), otherwise falling back to recomputing the target
+embedding directly. As we will see shortly in Section 5,
+TC(x) correlates strongly with downstream retrieval perfor-
+mance (e.g.,Recall@K) under distribution shift, supporting
+its use as a practical translation quality indicator.
+Scope and calibration. TC is designed for online reliabil-
+ity assessment under afixeddeployed translator and refer-
+ence pool. For a given pool Xtrain, σdata is constant, and
+TC(x) = exp(−δ(x)/σ data) is a monotone transform of
+δ(x). Hence, it preserves the ranking of risky inputs, and
+only the operating threshold needs to be calibrated for each
+reference pool. Directly comparing raw TC values across
+reference pools with substantially different scales or cluster
+structures is therefore not the intended use. For heteroge-
+neous multi-domain pools, we further provide a local-kNN
+normalization variant as a natural extension. Appendix C
+reports cross-pool evidence showing that the rank correla-
+tion between TC and per-vector empirical translation error
+remains strong as the reference pool is enlarged.
+3. Hierarchical Mixture-of-Experts Translator
+Theorem 1 bounds the translation error at a test embeddingx
+by a training terme(xnn) and a coverage term(L+L ∗)δ(x).
+For a fixed training set, δ(x) is determined by how well the
+training data covers the source space, and cannot be changed
+at inference time. Our design focus in this section is thus
+translator-side: (i) reduce the empirical error on training set
+and (ii) reduce the expansion factor corresponding toL.
+Impact of Lipschitz expansion. We first examine the im-
+pact of the expansion factor on the design of translators.
+Since computing a certified global Lipschitz constant for a
+neural network is NP-hard (Fazlyab et al., 2019; Virmaux &
+Scaman, 2018), we use an empirical Lipschitz proxy follow-
+ing (Gamba et al., 2023). Specifically, for a differentiable
+translator f:R dA →R dB, a local empirical Lipschitz
+constant can be estimated as ˆLJac = maxxi∈X ∥Jf (xi)∥2,
+where Jf (x) is the Jacobian of f and ∥ · ∥2 is the spectral
+norm. This Lipschitz proxy can be efficiently approximated
+using power iteration with Jacobian–vector products.
+Fig. 5a plots ˆLJac(f) as we increase the size (and coverage)
+of the training reference set. Orthogonal Procrustes (PA) has
+constant 1 Lipschitz value because it is an isometry, but its
+rigid form can underfit cross-model alignment. In contrast,
+learned nonlinear translators are more expressive, yet their
+empirical expansion grows with dataset size, indicating a
+larger effective Lipschitz term that can amplify OOD devia-
+tions in Theorem 1. This implies that a single global transla-
+4
+Generalizable and Composable Multi-Model Embedding Translation
+H-MoE EmbConv CCA Vec2Vec PA
+̂Jac Hier. Routing (Recall@100) Flat Routing (Recall@100)
+NFCorpus(#3.6K)SciFact(#5K)ArguAna(#8.7K)SCIDOCS(#25K) FiQA(#57K)FEVER(#5.4M)
+0
+50
+100
+150
+200
+250
+300
+̂Jac
+(a)Impact of dataset scale
+5 10 15 20
+Number of Clusters (k)
+30
+50
+70
+100
+120
+4 × 101
+6 × 101
+̂Jac
+80
+85
+90
+95
+Recall@100 (%)
+ (b)Routing strategies
+Figure 5.Analysis of empirical Lipschitz constants ˆLJac.(a)
+ˆLJac VS. dataset scales; (b) The impact of query routing (FlatVS.
+Hierarchical) on Lipschitz constants and retrieval performance.
+tor must accommodate progressively more complex geom-
+etry, and thus inevitably getting worse with OOD inputs.
+This motivates a key design principle for embedding transla-
+tion: preserve the expressiveness of nonlinear translators
+while controlling local expansion by replacing a single
+monolithic mapping with multiple region-wise translators,
+each with lowerlocalLipschitz complexity. We then trans-
+late a test pointxby routing it to a nearby local translator.
+Local translators and query routing. We next formal-
+ize the idea of local translators. Let Otrain be the training
+objects, and for each o∈ Otrain let xo = emb A(o) and
+yo = embB(o). We partition the training set into regions
+(clusters) in thesourceembedding space (emb A).
+Suppose we have a family of experts indexed by i, where
+expert i is trained on a subset Oi ⊆ Otrain and defines a
+translator fi. For a test pointx, define the expert-specific dis-
+tance-to-reference δi(x) := mino∈Oi ∥x−x o∥2. Repeating
+the same argument as in Theorem 1 yields an expert-specific
+bound involving δi(x) and the local expansion behavior of
+fi. This highlights a concrete routing objective: we would
+like to apply an expert whose training region is close to
+the query (small δi(x)) and whose mapping is locally non-
+expansive (small empirical expansion).
+However, naive routing introduces its own failure mode: if
+we always select the single nearest cluster,i.e.,flatnearest -
+centroid routing, small perturbations can flip the chosen ex-
+pert near cluster boundaries, leading to unstable translations.
+Hierarchical routing. To make translation stable, we build
+a hierarchy over the source training embeddings via hier-
+archical clustering (Pedregosa et al., 2011; Nielsen, 2016).
+This produces a rooted binary tree with K leaf clusters (a
+partition of the training data) and 2K−1 total nodes. Each
+node corresponds to a subset of training objects; leaves rep-
+resent fine regions, while internal nodes are unions of their
+descendant leaves (coarser regions). We train one expert
+translator fv for each node v. At inference time, routing
+proceeds top-down: we descend the tree while the query is
+clearly closer to one child than the other; otherwise we stop
+early and use the current node’s (coarser) expert. Unlike
+learned top-1 gating or flat nearest-centroid routing, which
+must always commit to a single fine-grained expert and can
+therefore switch abruptly when a query lies near a cluster
+boundary, our rule is purely geometry-based on the source
+space andbacks offto a coarser expert whenever the child -
+level decision is ambiguous. Together with the fact that each
+internal-node expert is trained on the union of its descendant
+leaves, this guarantees that a boundary query is served by
+an expert whose training support actually covers it, which
+empirically gives the stability advantage reported in Fig. 5b.
+As shown in Fig. 5b, this reduces translation boundary insta-
+bility: its retrieval performance improves steadily for small
+to moderate numbers of clusters, while the naive flat strategy
+deteriorates when the partition becomes overly fine-grained.
+Moreover, it also shows that increasing the number of clus-
+ters consistently reduces the empirical Lipschitz constant,
+confirming the effectiveness of localized modeling.
+Hierarchical Mixture-of-Experts Translation. Guided by
+the above analysis, we propose a Hierarchical Mixture-of-
+Experts (H-MoE) embedding translator, using local transla-
+tor experts and hierarchical routing described above.
+Each expert fi is implemented as a lightweight feed-forward
+translator and is trained only on samples within its assigned
+cluster Ci. Concretely, the shared base translator is a 4 -
+layer MLP with SELU activations (the same backbone as
+EmbConv), and each tree node adds a node-specific LoRA
+adapter on top, so the additional capacity comes from local-
+ized low-rank adaptation rather than from instantiating a full
+network per expert. The training objective combines a point-
+wise regression loss with a local structure-preserving loss:
+L=L reg +αL local. The regression loss enforces pointwise
+alignment between translated and target embeddings:
+Lreg =
+X
+t∈Ci
+Dist(fi(emb1(t)),emb 2(t)).
+Following EmbConv (Yoon & Arik, 2025), to preserve
+neighborhood geometry within each localized region, we
+adopt a local similarity loss that penalizes discrepancies in
+pairwise distances between a sample t1 and its m nearest
+neighborsN Nm(t1)(withm= 100):
+Llocal =
+X
+t1∈Ci
+X
+t2∈N Nm(t1)
+Dist fi(emb1(t1)), fi(emb1(t2))
+−Dist
+ 
+emb2(t1),emb 2(t2)
+.
+We omit global similarity losses used in prior work (e.g.,
+EmbConv), as each expert operates on a localized manifold
+where global-scale distance preservation is unnecessary.
+5
+Generalizable and Composable Multi-Model Embedding Translation
+Mixing (Before) Mixing (Ours)
+Chaining (Before) Chaining (Ours)
+𝐞𝟏
+𝐞𝟐 𝐞𝟐||𝖚𝟏
+𝐞𝟏||𝖚𝟏
+𝖚𝟏(PC#)
+𝐉𝐞𝟏+𝐞𝟐𝐞𝟏
+𝖚𝟏(PC#)
+𝖚𝟏(PC#) 𝖚𝟏(PC#)
+𝖚𝟐(PC$)
+𝖚𝟐(PC$)𝖚𝟐(PC$)
+𝖚𝟐(PC$)
+𝐞𝟏||𝖚𝟏𝐞𝟐||𝖚𝟐
+<𝐉𝐞𝟏,𝐞𝟐>≈0
+Figure 6.Unified directional residual error control.Top (mixing):
+make residuals from different source translators directionally con-
+sistent by concentrating them alongu 1 (PC1).Bottom (chaining):
+reduce constructive accumulation in two-hop translation by allocat-
+ing the downstream residual to an orthogonal direction u2 (PC2).
+Parameter-efficient optimization. Training 2K−1 inde-
+pendent neural translators would scale parameters linearly
+with the number of experts. To avoid this, we adopt Low-
+Rank Adaptation (LoRA) (Hu et al., 2022). Each expert in-
+troduces cluster-specific low-rank updates on top of a shared
+base translator, enabling localized specialization with mini-
+mal additional parameters. The rank of the low-rank adapta-
+tion is set to r, which is shared across all experts. Training
+and inference details are provided in Appendix E.
+4. Multi-Model Mixing and Chaining
+We consider two common multi-model usage patterns.Mix-
+ingstores embeddings translated from multiple source mod-
+els in a single target space.Chainingcomposes translators
+across multiple hops (e.g., A→Hub→B ) when a direct
+translator is unavailable. In both cases, even if each trans-
+lator has low average error in isolation, their residuals can
+interact and distort geometry in the shared target space.
+Our key idea, as illustrated in Fig. 6, is to make residualsdi-
+rectionally predictable: (i) residuals from different sources
+should be compatible under mixing, and (ii) residuals from
+different hops should not add constructively under chaining.
+Principal directions. We extract two stable directions from
+the target embedding space. Specifically, we run PCA on tar-
+get embeddings of training objects {embt(o)|o∈ O train}
+and denote by u1 and u2 the first two principal directions
+(PC1 and PC2). By construction, u1 ⊥u 2. We use them
+as low-dimensional “error channels” to shape residuals. We
+emphasize that this is not an assumption that translation
+residuals must lie along principal components: u1 and u2
+are simply the most stable, data-driven, geometry-aware ba-
+sis shared across translators of the same target space. u1
+provides acommon channelso that residuals from different
+source translators become more directionally compatible
+under mixing, while u2 ⊥u 1 provides the simplestorthog-
+onal channelfor the downstream hop in chaining, so the
+propagated upstream and the downstream residuals occupy
+decoupled directions to first order.
+4.1. Consistent Mixing: Aligning alongu 1
+Let S be a set of source models and lett be a common target
+model. For each s∈ S, we train a translator fs→t into the
+target space. For each o∈ Otrain, itsresidual errorin the
+target space ise s→t(o) :=f s→t(embs(o))−emb t(o).
+Mixing is challenging because cross -source distances de-
+pend on differences between residuals. For two translated
+embeddings ˆy1 = embt(o1) +e1 and ˆy2 = embt(o2) +e2,
+∥ˆy1−ˆy2∥22 =∥y 1−y2∥22+∥e1−e2∥22+2⟨y1−y2,e 1−e2⟩,
+where yi := embt(oi). The latter two terms are induced by
+residuals; if residual directions vary arbitrarily across source
+translators, they introduce large distortions and accumulate
+quadratically:E∥e 1 −e 2∥22 ≈E∥e 1∥22 +E∥e 2∥22.
+Consistent mixing. To improve cross-source compatibility,
+we direct residuals from all sources to concentrate along the
+same direction u1 by penalizing their component orthogonal
+tou 1. For each translatorf s→t, we add the regularizer
+Lmixdir =E o∼Otrain
+hes→t(o)−(e s→t(o)⊤u1)u122i .
+This directs the residual so that different source translators
+introduce more consistent distortions when mixed.
+4.2. Transitive Chaining: Orthogonal Decoupling via u2
+We next consider chainings
+fs→h
+− − − →Hub
+fh→t
+− − − →t,i.e.,trans-
+lation from source model s to a target model t via an inter-
+mediate hub model h using two translators, fs→h and fh→t.
+For a test object o, define z= emb h(o) and y= emb t(o).
+The chained output is ˆy=f h→t(fs→h(embs(o))).
+Let the first -hop residual in hub space be e1 :=
+fs→h(embs(o))−z , and the second -hop residual (evalu-
+ated at the clean hub embedding) be e2 :=f h→t(z)−y . A
+first-order Taylor approximation aroundzgives
+fh→t(z+e 1)≈f h→t(z) +J fh→t (z)e 1,
+where Jfh→t (z) is the Jacobian of fh→t w.r.t.its input eval-
+uated at z= emb h(o). Thus the chained error in the target
+space satisfies ˆy−y≈J fh→t (z)e1 +e 2, and
+∥ˆy−y∥ 22 ≈ ∥Jfh→t (z)e1∥22 +∥e 2∥22 +2⟨J fh→t (z)e1,e 2⟩.
+The inner-product term capturesconstructive accumulation:
+when the propagated upstream residual and the downstream
+residual are aligned, the cross term becomes large and chain-
+ing deviates substantially from a direct translation.
+6
+Generalizable and Composable Multi-Model Embedding Translation
+0.2
+0.4
+0.6
+0.8
+1.0Translation Confidence (TC)
+TC: gemini openai (Left)
+TC: kalm qwen (Left)
+Recall@100: gemini openai (Right)
+Recall@100: kalm qwen (Right)
+20
+40
+60
+80
+100
+Cross-Dataset Recall@100 (%)
+Figure 7.Translation Confidence ( TC(x)) scoresVS.Re-
+call@100 across Otrain → Otest pairs.(Datasets are indexed
+by ①SciDocs , ②ArguAna , ③FiQA-2018 , ④NFCorpus , and ⑤SciFact .)
+Orthogonal decoupling.To promote translation transitivity,
+we encourage these two contributions to occupy different
+target-space directions. Specifically, we (i) apply the same
+projection penalty as Lmix to thepropagated upstream per-
+turbationin the target space, fh→t(z+e1)−fh→t(z) (which
+equals Jfh→t (z)e1 to first order), encouraging it to concen-
+trate along u1; and (ii) regularize the second-hop residual
+to concentrate along the orthogonal directionu 2 via
+Lchaindir =E o∼Otrain
+he2 −(e ⊤2 u2)u222i ,
+where e2 =f h→t(embh(o))−emb t(o). By directing resid-
+ual contributions to orthogonal channels, we reduce the ex-
+pected cross term ⟨Jfh→t (z)e1,e 2⟩ in chained error, which
+stabilizes multi -hop composition and improves transitiv-
+ity. Combining the Lreg and Llocal, the final loss become
+L=L reg +αL local +βL dir, we ablate each term and test
+the sensitivity in the Sec. 5 and Appendix K.
+Putting it all together. H-MoE combines all components
+into a risk-aware translation pipeline. (i) TC flags a test vec-
+tor as riskybeforetranslation when it is far from anything
+seen during training, so a downstream system can abstain or
+fall back to re-embedding. (ii) Based on Theorem 1, local ex-
+perts of H-MoE allow references to cover more OOD inputs
+that otherwise would be risky to translate. Further, hierarchi-
+cal routing makes the per-query expert choice stable: when a
+query falls cleanly inside one child cluster, it is served by the
+corresponding fine expert; when it is near a boundary, the
+router backs off to a coarser expert whose training support
+actually covers it. (iii) For mixing and chaining, directional
+regularization shapes residual errors so that errors from dif-
+ferent translators occupy compatible directions rather than
+interfere constructively. All these methods make H-MoE
+robust for both OOD and mixing/chaining scenarios.
+5. Experimental Study
+Main findings. Across 10 embedding models, 6 BEIR
+datasets, and 90 directed translation directions, we find:
+①②③④⑤⑥⑦⑧⑨⑩
+Source Model Index
+①
+②
+③
+④
+⑤
+⑥
+⑦
+⑧
+⑨
+⑩
+Target Model Index
+ 50
+60
+70
+80
+90
+100
+Recall@100 (%)
+(a)EmbConv
+①②③④⑤⑥⑦⑧⑨⑩
+Source Model Index
+①
+②
+③
+④
+⑤
+⑥
+⑦
+⑧
+⑨
+⑩
+Target Model Index
+ 50
+60
+70
+80
+90
+100
+Recall@100 (%) (b)H-MoE
+Figure 8.Heatmap of cross-model translation performance.
+(All results trained on the FiQA-2018 and test on the SciFact . The
+indices follow: ①e5 , ②gemini , ③gritlm , ④kalm , ⑤linq ,
+⑥mistral,⑦nemotron,⑧openai,⑨qwen, and⑩sfr.)
+•Translation risk estimate : Translation confidence (TC)
+strongly correlates with Recall@100 over translated em-
+beddings under cross-dataset evaluation (Fig. 7; § 5.2).
+•Best OOD pairwise translation : H-MoE has the top Re-
+call@100 across all cases, improving by 12.0% on aver-
+age over the strongest baseline (Table 1, Fig. 8; § 5.3).
+•Robust multi-model interoperability : mixing and chain-
+ing degrade H-MoE by only 0.5%–2.6% Recall@100,
+while baselines can drop by up to 36.6% (mixing) and
+36.8%(chaining) (Fig. 9; § 5.4).
+•Efficiency: H-MoE translates 1M vectors in <1 s with
+negligible overhead with more experts (Table 3; § 5.5).
+5.1. Experimental setup
+Datasets. Following BEIR (Thakur et al., 2021), we evalu-
+ated on six retrieval datasets: SciFact (Wadden et al., 2020)
+and Fever (Thorne et al., 2018) (fact checking), SciDocs (Co-
+han et al., 2020) (citation prediction), ArguAna (Wachsmuth
+et al., 2018) (argument retrieval), FiQA-2018 (Maia et al.,
+2018) (financial QA), and NFCorpus (Boteva et al., 2016)
+(biomedical IR). Dataset statistics are in Appendix F. We
+report Recall@100, which is stable for methods whose per-
+formance can be volatile under cross-dataset shift.
+Embedding models. Following MTEB leaderboard (Muen-
+nighoff et al., 2023), we used 10 major embedding mod-
+els: linq (Kim et al., 2024), e5 (Wang et al., 2024),
+sfr (Meng et al., 2024), gritlm (Muennighoff et al.,
+2024), kalm (Zhao et al., 2025), nemotron (Babakhin et al.,
+2025), qwen (Zhang et al., 2025), openai (OpenAI, 2022),
+mistral (Jiang et al., 2023), and gemini (Google, 2025).
+This yields 90 translation directions (details in Appendix G).
+Configuration. We set up translation tasks as follows.
+Pairwise OOD translation. A pairwise translation aims to
+translate two different representations (by models s and t)
+of the same test corpora following a direction s→t . We
+trained translators on a training dataset that is different from
+the test corpora, generating domain shifts. We use Otrain
+→ Otest to represent that we train translator over corpora
+7
+Generalizable and Composable Multi-Model Embedding Translation
+Table 1.Cross-data Translation performance (Recall@100).We adopt the setting from Fever to multiple target datasets (five runs).Bold
+and underline denote the best and runner-up average results in each column, respectively. Values highlighted in red indicate high-variance
+outcomes (std>10 ). We only report7pairs involving all 10 models due to space limit; the remaining83pairs are reported in Appendix J.
+Method Dataset gemini→openai linq→gritlm qwen→gemini linq→e5 mistral→openai e5→sfr nemotron→linq
+GW
+SciDocs 0.1± 0.0 0.2±0.0 0.9±0.2 0.1±0.0 0.1±0.0 0.1±0.0 0.4±0.1
+FiQA-2018 0.0± 0.0 0.0±0.0 0.5±0.1 0.2±0.0 0.0±0.0 0.0±0.0 0.0±0.0
+ArguAna 1.1± 0.1 1.6±0.2 0.7±0.1 1.0±0.1 1.0±0.1 0.8±0.1 2.9±0.4
+Avg.0.4 0.6 0.7 0.4 0.4 0.3 1.1
+PA
+SciDocs 0.1± 0.0 10.0±7.8 0.2±0.0 0.1±0.0 13.4±5.5 0.2±0.0 18.4±6.5
+FiQA-2018 0.0± 0.0 13.3±12.0 0.5±0.1 0.4±0.1 16.9±9.6 0.0±0.0 16.0±10.1
+ArguAna 1.1± 0.1 18.4±14.9 1.1±0.1 1.1±0.1 35.1±16.2 1.0±0.2 20.1±15.0
+Avg.0.4 13.9 0.6 0.5 21.8 0.4 18.2
+CCA
+SciDocs 24.1± 3.0 40.5±5.6 29.5±4.5 24.1±3.3 24.8±3.9 44.1±7.3 38.8±5.5
+FiQA-2018 47.8± 7.4 75.9±11.0 30.2±5.0 72.8±10.5 49.7±6.7 79.0±12.2 69.3±10.3
+ArguAna 73.8± 12.3 73.8±9.8 75.0±10.5 73.8±11.9 71.8±9.4 79.0±13.8 76.9±10.1
+Avg.48.6 63.4 44.9 56.9 48.8 67.4 61.7
+Vec2Vec
+SciDocs 20.3± 5.8 20.3±6.2 24.7±6.6 38.4±8.6 25.0±13.9 45.0±10.3 27.8±6.8
+FiQA-2018 31.1± 10.5 31.1±8.7 20.3±12.4 23.4±11.1 11.1±9.5 31.1±9.9 31.1±6.5
+ArguAna 37.2± 12.6 14.8±13.0 36.6±14.2 33.4±13.0 37.2±11.2 36.6±10.7 42.9±9.9
+Avg.29.5 22.1 27.2 31.7 24.4 37.6 33.9
+EmbConv
+SciDocs 57.0± 1.3 57.0±1.6 52.6±1.9 48.6±1.6 50.6±1.3 38.2±0.9 57.0±2.2
+FiQA-2018 78.3± 2.4 73.6±2.0 72.3±2.3 71.9±1.6 71.9±2.2 59.7±1.6 52.5±1.1
+ArguAna 79.6± 1.8 79.6±2.7 78.6±3.0 78.4±2.1 87.6±1.8 77.4±1.9 76.3±2.9
+Avg.71.6 70.1 67.8 66.3 70.0 58.4 61.9
+SciDocs 56.7±2.5 58.2±3.6 61.1±4.4 67.6±3.4 73.2±1.1 72.1±4.5 62.1±1.0
+FiQA-2018 88.3±0.8 86.7±6.1 79.8±0.1 77.8±2.3 85.0±6.7 80.3±0.6 80.3±3.5
+ArguAna 92.4±5.9 91.6±1.3 92.4±2.7 93.6±1.7 92.9±4.1 93.1±2.4 93.1±1.6
+H-MoE(Ours)
+Avg. 79.1 78.8 77.8 79.7 83.7 81.8 78.5
+Otrain and use it to translate different embeddings of Otest.
+In all cases, we use full dataset for bothO train andO test.
+Mixing and chaining. We evaluated multi-model mixing and
+two-hop chaining using setup in Fig. 9 (see Appendix H).
+Baselines. We compared to linear translators PA, CCA, and
+GW, and neural translators Vec2Vec and EmbConv. For
+GW, PA, CCA, and EmbConv we followed the original pa-
+pers; forVec2Vecwe used the authors’ implementation.
+Implementation. We implemented our method as a uni-
+fied library with precomputed embeddings for all docu-
+ments and queries across 10 models and 6 datasets (60
+embedding sets, 900 GB). Open-weight models were exe-
+cuted locally under default settings, with a maximum input
+length of 4096 tokens to fit GPU memory; For H-MoE, we
+used k=8 clusters on Fever and k=4 otherwise, and fixed
+the LoRA rank to r=8. The hyper-parameters are set to
+τ= 0.8, α= 0.5, β= 0.7. All experts were trained with a
+learning rate of 10−4 and early stopping. Experiments were
+conducted on an AMD EPYC 7713P CPU with 120 GB
+RAM and an NVIDIA A100 80 GB GPU.
+5.2. Effectiveness of Translation Confidence (TC(x))
+In section 2, we have already reported per-vector TC. Here
+we further evaluated whether TC tracks translation qual-
+ity at the dataset level. For two representative translation
+directions openai→gemini and kalm→qwen , we com-
+puted dataset-level confidence by averagingTC over the cor-
+pus embeddings to be translated in each Otrain → Otest
+dataset transfer pair, and compare it with the Recall@100.
+Figure 7 shows a strong positive relationship: recall de-
+creases consistently as TC drops across both model pairs.
+Notably, transfers involving NFCorpus (biomedical) yield
+low TC and substantial performance degradation, reflect-
+ing its domain mismatch with the other datasets. This vali-
+dates TC as a practical, model-agnostic indicator for decid-
+ing when to translate (or abstain) under distribution shift.
+5.3. Cross-Dataset (OOD) Pairwise Translation
+Tables 1 and App. J confirm the robust generalization of
+H-MoE under substantial domain shifts. Although trained
+solely on Fever, H-MoE establishes a new state of the art
+across all 90 evaluated pairs, outperforming the strongest
+baseline ( EmbConv) by an average of 14.9% in Re-
+call@100. Importantly, H-MoE exhibits markedly improved
+stability by avoiding high-variance results (std >10 ) com-
+mon to baselines such asVec2VecandPA.
+Figure 8 shows cross-dataset results for the FiQA-2018→
+SciFact direction across all translation pairs, comparing
+H-MoE with the strongest baseline, EmbConv. H-MoE
+consistently exhibits stronger performance, as reflected by
+deeper saturation. Although minor variation appears across
+certain directions (e.g.,bridging encoder-only ( ①e5 ) and
+LLM-based embeddings), recall remains above 90% for
+8
+Generalizable and Composable Multi-Model Embedding Translation
+CCA Vec2Vec Emb Conv H − MoE(Ours)
+①/②/③ ④/⑤/⑨ ③/⑥/⑧ ⑦/②/① ⑤/④/⑧ 
+0
+10
+20
+30
+40
+Recall@100 Drop (%) ↓
+32.9
+13.8
+28.6
+36.6
+18.2
+25.3
+12.6
+26.1
+21.0
+14.6
+4.7 6.2
+16.3 14.1
+8.2
+1.4 1.3 0.5 0.1 1.1
+(a)Multi-model Mixing
+①→②
+via ③
+④→①
+via ②
+③→⑥
+via ⑤
+⑦→②
+via ①
+0
+10
+20
+30
+40
+Recall@100 Drop (%) ↓
+32.9 34.9
+24.6
+36.8
+25.3 22.6 19.8
+29.2
+14.7 12.0 15.3
+21.1
+1.4 2.6 1.7 1.1 (b)Multi-model Chaining
+Figure 9.Multi-model performance degradation.Evaluation
+under FiQA-2018→SciFact setting. (a)Mixing: Co-existence of
+original and translated embeddings (e.g.,① along with ②→① and
+③→① in a single retrieval database. (b)Chaining: Cumulative
+error in multi-hop translation (e.g.,①→② via ③). Bars represent
+drop relative to direct translation. Indices follow the Fig. 8.
+Table 2.Ablation study of architectural capacity and geometric
+constraints. P1: gemini→openai, P2: kalm→qwen. Values
+denote Recall@100 (OOD) and performance degradation ( ∆↓ )
+for Interoperability. All metrics are reported asP 1 /P 2.
+Variant Arch. Loss OOD (↑) Mixing (↓) Chaining (↓)
+Mono MoEL loc Ldir P1 /P 2 P1 /P 2 P1 /P 2
+(1) Base✓– – – 83.8/85.9 28.8/17.5 24.6/27.3
+(2) + Constraint✓–✓ ✓86.7/87.4 3.8/1.1 2.5/1.9
+(3) + Capacity –✓ ✓– 89.8/91.1 11.1/13.4 16.7/18.9
+(4)H-MoE – ✓ ✓ ✓ 93.4 / 94.2 2.3/0.8 1.8/1.4
+most pairs. These results demonstrate that H-MoE reli-
+ably translates between heterogeneous models with minimal
+degradation, highlighting its practical utility.
+5.4. Multi-Model Interoperability Analysis
+Mixing. Figure 9a shows that aggregating embeddings from
+heterogeneous source models into a shared target index
+causes severe performance degradation for baseline meth-
+ods, with Recall@100 dropping by up to36.6%. In contrast,
+H-MoE typically degrades by less than 2%. This observa-
+tion aligns with our theoretical analysis in Sec. 4.
+Chaining. We further evaluated 2-hop chaining. As shown
+in Fig. 9b, baselines suffer substantial error amplification.
+In particular, EmbConv incurs a 21.1% performance drop,
+indicating that strong pairwise performance does not imply
+robust composition. By contrast, H-MoE limits chaining
+degradation to within about 3% of direct translation, validat-
+ing our orthogonal decoupling strategy from Section 4.2.
+5.5. Ablation and Efficiency
+We carried out an ablation and efficiency study using
+FiQA-2018→SciFact as Otrain → Otest dataset transfer
+pair (See also Appendix K for a sensitivity study).
+Ablation Study.Table 2 demonstrates that both architec-
+tural capacity and geometric controls are critical. Incorpo-
+rating geometric constraints (Ldir) substantially improves
+Table 3.Inference Efficiency and Scalability Analysis.We fix the
+LoRA rank r= 8 and report performance here. Latency denotes
+amortized per-sample processing time; Total Time represents end-
+to-end conversion for106 vectors on a single NVIDIA A100 GPU.
+Method Params(↓)Latency /µs↓Total Time/ s (↓)Throughput(↑)
+(M)10 3 106 106 (M s/s)
+EmbConv0.62 0.71 0.61 0.61 s 1.64
+H-MoE(k= 4) 0.79 0.81 0.72 0.72 1.39
+H-MoE(k= 6) 0.96 0.83 0.73 0.73 1.37
+H-MoE(k= 8) 1.22 0.85 0.75 0.75 1.33
+stability, reducing mixing and chaining errors (e.g.,from
+28.8% to 3.8% on P1) relative to the (1), underscoring the
+importance of directional residual alignment. Increasing ar-
+chitectural capacity with MoE (3) yields notable OOD gains
+(e.g.,+6.0% on P1) over the single varaint, indicating local
+experts more effective and align with our analysis.
+Efficiency. Table 3 evaluates the computational efficiency
+of our method. Although the hierarchical strategy theo-
+retically instantiates 2k−1 experts (e.g.,15 experts for k
+= 8), LoRA parameterization restricts the parameter count
+to about 2.0× that of the monolithic baseline (1.22M vs.
+0.62M). Inference efficiency is similarly preserved: despite
+the added routing logic, latency increases modestly (0.75µs
+vs. 0.61µs), demonstrating scalability ofH-MoE.
+6. Conclusion
+We study embedding translation under out-of-distribution
+(OOD) inputs, multi-model mixing, and multi-hop chain-
+ing, which are critical for practical cross-model interoper-
+ability. We derive a geometric pointwise error bound that
+explains performance degradation under OOD shift and mo-
+tivates a translator-independent confidence score. Building
+on this analysis, we propose H-MoE, a hierarchical mixture-
+of-experts translator that is robust under OOD and improves
+both consistency and transitivity. Extensive experiments
+across 10 embedding models, 6 datasets, and 90 translation
+directions demonstrate strong OOD translation performance
+and substantially reduced degradation in multi-model sce-
+narios. Future work includes tighter end-to-end retrieval
+analysis and extensions to multimodal and evolving spaces.
+Limitations. H-MoE still depends on the coverage of the
+source-side reference pool. When inputs are far from all
+training references, translation can be unreliable; while
+TC should flag those risky cases, it is up to the users to
+decide whether to translate or provide a fallback,e.g.,re-
+embedding. Further, our experiments focus on text embed-
+ding models and retrieval metrics; evaluating downstream
+end-to-end RAG pipelines may introduce additional gen-
+erator and reranker effects, which requires further system-
+atic studies. We also mainly study two-hop chaining, while
+longer translation chains and continuously evolving embed-
+ding spaces may offer opportunities for deep future work.
+9
+Generalizable and Composable Multi-Model Embedding Translation
+Impact Statement
+This paper presents work whose goal is to advance the field
+of Machine Learning. There are many potential societal
+consequences of our work, none of which we feel must be
+specifically highlighted here.
+Acknowledgements
+We thank the anonymous ICML reviewers and area chair
+for their constructive feedback. This work is supported by
+RAEng RF \201920\19\319 and the Huawei-Edinburgh
+Joint Lab, the Edinburgh International Data Facility (EIDF)
+and the Data-Driven Innovation Programme at the Univer-
+sity of Edinburgh.
+References
+Artetxe, M., Labaka, G., and Agirre, E. Learning princi-
+pled bilingual mappings of word embeddings while pre-
+serving monolingual invariance. In Su, J., Carreras, X.,
+and Duh, K. (eds.),Proceedings of the 2016 Conference
+on Empirical Methods in Natural Language Processing,
+EMNLP 2016, Austin, Texas, USA, November 1-4, 2016,
+pp. 2289–2294. The Association for Computational Lin-
+guistics, 2016. doi: 10.18653/V1/D16-1250.
+Babakhin, Y ., Osmulski, R., Ak, R., Moreira, G., Xu, M.,
+Schifferer, B., Liu, B., and Oldridge, E. Llama-Embed-
+Nemotron-8B: A universal text embedding model for mul-
+tilingual and cross-lingual tasks, 2025. URL https:
+//arxiv.org/abs/2511.07025.
+Boteva, V ., Ghalandari, D. G., Sokolov, A., and Riezler, S. A
+full-text learning to rank dataset for medical information
+retrieval. InAdvances in Information Retrieval - 38th Eu-
+ropean Conference on IR Research, ECIR 2016, Padua,
+Italy, March 20-23, 2016. Proceedings, pp. 716–722.
+Springer, 2016. doi: 10.1007/978-3-319-30671-1\ 58.
+Chen, L., Gan, Z., Cheng, Y ., Li, L., Carin, L., and Liu, J.
+Graph optimal transport for cross-domain alignment. In
+Proceedings of the 37th International Conference on Ma-
+chine Learning, ICML 2020, 13-18 July 2020, Virtual
+Event, volume 119 ofProceedings of Machine Learning
+Research, pp. 1542–1553. PMLR, 2020.
+Cohan, A., Feldman, S., Beltagy, I., Downey, D., and Weld,
+D. S. Specter: Document-level representation learning
+using citation-informed transformers.arXiv preprint
+arXiv:2004.07180, 2020.
+Fazlyab, M., Robey, A., Hassani, H., Morari, M., and Pap-
+pas, G. J. Efficient and accurate estimation of lipschitz
+constants for deep neural networks. In Wallach, H. M.,
+Larochelle, H., Beygelzimer, A., d’Alch ´e-Buc, F., Fox,
+E. B., and Garnett, R. (eds.),Advances in Neural Infor-
+mation Processing Systems 32: Annual Conference on
+Neural Information Processing Systems 2019, NeurIPS
+2019, December 8-14, 2019, Vancouver, BC, Canada, pp.
+11423–11434, 2019.
+Gamba, M., Azizpour, H., and Bj¨orkman, M. On the lips-
+chitz constant of deep networks and double descent. In
+34th British Machine Vision Conference 2023, BMVC
+2023, Aberdeen, UK, November 20-24, 2023, pp. 871–
+880. BMV A Press, 2023.
+Google. Gemini embedding 001. https://ai.google.
+dev/gemini-api/docs/embeddings, 2025. Ac-
+cessed: 2026-1-21.
+Hu, E. J., Shen, Y ., Wallis, P., Allen-Zhu, Z., Li, Y ., Wang, S.,
+Wang, L., and Chen, W. LoRA: Low-rank adaptation of
+large language models. InThe Tenth International Con-
+ference on Learning Representations, ICLR 2022, Virtual
+Event, April 25-29, 2022. OpenReview.net, 2022.
+Huh, M., Cheung, B., Wang, T., and Isola, P. Position: The
+platonic representation hypothesis. InForty-First Inter-
+national Conference on Machine Learning, ICML 2024,
+Vienna, Austria, July 21-27, 2024. OpenReview.net, 2024.
+Jha, R. D., Zhang, C., Shmatikov, V ., and Morris, J. X. Har-
+nessing the universal geometry of embeddings. InAd-
+vances in Neural Information Processing Systems, vol-
+ume 38, 2025. URL https://arxiv.org/abs/
+2505.12540.
+Jiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C.,
+Chaplot, D. S., de las Casas, D., Bressand, F., Lengyel,
+G., Lample, G., Saulnier, L., Lavaud, L. R., Lachaux, M.-
+A., Stock, P., Le Scao, T., Lavril, T., Wang, T., Lacroix,
+T., and El Sayed, W. Mistral 7B.arXiv preprint
+arXiv:2310.06825, 2023. doi: 10.48550/arXiv.2310.
+06825. URL https://arxiv.org/abs/2310.
+06825.
+Johnson, J., Douze, M., and J ´egou, H. Billion-scale sim-
+ilarity search with gpus.IEEE Trans. Big Data, 7(3):
+535–547, 2021.
+Joulin, A., Bojanowski, P., Mikolov, T., J´egou, H., and Grave,
+E. Loss in translation: Learning bilingual word mapping
+with a retrieval criterion. In Riloff, E., Chiang, D., Hock-
+enmaier, J., and Tsujii, J. (eds.),Proceedings of the 2018
+Conference on Empirical Methods in Natural Language
+Processing, Brussels, Belgium, October 31 - November
+4, 2018, pp. 2979–2984. Association for Computational
+Linguistics, 2018. doi: 10.18653/V1/D18-1330.
+Kim, J., Lee, S., Kwon, J., Gu, S., Kim, Y ., Cho, M., yong
+10
+Generalizable and Composable Multi-Model Embedding Translation
+Sohn, J., and Choi, C. Linq-Embed-Mistral: Elevat-
+ing text retrieval with improved GPT data through task-
+specific control and quality refinement. Linq AI Research
+Blog, 2024. URL https://getlinq.com/blog/
+linq-embed-mistral/.
+Maia, M., Handschuh, S., Freitas, A., Davis, B., McDermott,
+R., Zarrouk, M., and Balahur, A. Www’18 open chal-
+lenge: financial opinion mining and question answering.
+InCompanion proceedings of the the web conference
+2018, pp. 1941–1942, 2018.
+Meng, R., Liu, Y ., Joty, S. R., Xiong, C., Zhou, Y ., and Yavuz,
+S. SFR-Embedding-Mistral: Enhance text retrieval
+with transfer learning, 2024. URL https://www.
+salesforce.com/blog/sfr-embedding/.
+Salesforce AI Research.
+Mikolov, T., Le, Q. V ., and Sutskever, I. Exploiting simi-
+larities among languages for machine translation.CoRR,
+abs/1309.4168, 2013.
+Muennighoff, N., Tazi, N., Magne, L., and Reimers, N.
+MTEB: massive text embedding benchmark. InEACL,
+pp. 2006–2029. Association for Computational Linguis-
+tics, 2023.
+Muennighoff, N., Su, H., Wang, L., Yang, N., Wei, F., Yu,
+T., Singh, A., and Kiela, D. Generative representational
+instruction tuning, 2024.
+Nielsen, F. Hierarchical clustering. InIntroduction to HPC
+with MPI for Data Science, pp. 195–211. Springer In-
+ternational Publishing, Cham, 2016. ISBN 978-3-319-
+21903-5. doi: 10.1007/978-3-319-21903-5 8.
+OpenAI. New and improved embed-
+ding model: Text-embedding-small-
+003. https://openai.com/blog/
+new-and-improved-embedding-model , 2022.
+Accessed: 2025-04-04.
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V .,
+Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P.,
+Weiss, R., Dubourg, V ., Vanderplas, J., Passos, A., Cour-
+napeau, D., Brucher, M., Perrot, M., and Duchesnay, E.
+Scikit-learn: Machine learning in Python.Journal of
+Machine Learning Research, 12:2825–2830, 2011.
+Smith, S. L., Turban, D. H. P., Hamblin, S., and Hammerla,
+N. Y . Offline bilingual word vectors, orthogonal transfor-
+mations and the inverted softmax. In5th International
+Conference on Learning Representations, ICLR 2017,
+Toulon, France, April 24-26, 2017, Conference Track Pro-
+ceedings. OpenReview.net, 2017.
+Thakur, N., Reimers, N., R ¨uckl´e, A., Srivastava, A., and
+Gurevych, I. BEIR: A heterogeneous benchmark for zero-
+shot evaluation of information retrieval models. InPro-
+ceedings of the Neural Information Processing Systems
+Track on Datasets and Benchmarks 1, NeurIPS Datasets
+and Benchmarks 2021, December 2021, virtual, 2021.
+Thorne, J., Vlachos, A., Christodoulopoulos, C., and Mittal,
+A. Fever: a large-scale dataset for fact extraction and
+verification.arXiv preprint arXiv:1803.05355, 2018.
+Virmaux, A. and Scaman, K. Lipschitz regularity of deep
+neural networks: Analysis and efficient estimation. In
+Bengio, S., Wallach, H. M., Larochelle, H., Grauman, K.,
+Cesa-Bianchi, N., and Garnett, R. (eds.),Advances in Neu-
+ral Information Processing Systems 31: Annual Confer-
+ence on Neural Information Processing Systems 2018,
+NeurIPS 2018, December 3-8, 2018, Montr´eal, Canada,
+pp. 3839–3848, 2018.
+Wachsmuth, H., Syed, S., and Stein, B. Retrieval of the best
+counterargument without prior topic knowledge. InPro-
+ceedings of the 56th Annual Meeting of the Association
+for Computational Linguistics (Volume 1: Long Papers),
+pp. 241–251, 2018.
+Wadden, D., Lin, S., Lo, K., Wang, L. L., van Zuylen,
+M., Cohan, A., and Hajishirzi, H. Fact or fiction:
+Verifying scientific claims. InProceedings of the
+2020 Conference on Empirical Methods in Natu-
+ral Language Processing (EMNLP), pp. 7534–7550,
+Online, November 2020. Association for Computa-
+tional Linguistics. doi: 10.18653/v1/2020.emnlp-main.
+609. URL https://aclanthology.org/2020.
+emnlp-main.609/.
+Wang, C. and Mahadevan, S. Manifold alignment using
+procrustes analysis. InICML, volume 307, pp. 1120–
+1127. ACM, 2008.
+Wang, L., Yang, N., Huang, X., Yang, L., Majumder, R., and
+Wei, F. Multilingual E5 text embeddings: A technical
+report.arXiv preprint arXiv:2402.05672, 2024.
+Yang, B., Cao, Y ., and Ren, Y . Integrating vector databases
+across embedding models.Proc. ACM Manag. Data, 3(6),
+December 2025. doi: 10.1145/3769803. URL https:
+//doi.org/10.1145/3769803.
+Yoon, J. and Arik, S. O. Embedding-converter: A unified
+framework for cross-model embedding transformation.
+In Che, W., Nabende, J., Shutova, E., and Pilehvar, M. T.
+(eds.),Proceedings of the 63rd Annual Meeting of the As-
+sociation for Computational Linguistics (Volume 1: Long
+Papers), ACL 2025, Vienna, Austria, July 27 - August 1,
+2025, pp. 25464–25482. Association for Computational
+Linguistics, 2025.
+11
+Generalizable and Composable Multi-Model Embedding Translation
+Zhang, Y ., Li, M., Long, D., Zhang, X., Lin, H., Yang, B.,
+Xie, P., Yang, A., Liu, D., Lin, J., Huang, F., and Zhou,
+J. Qwen3 embedding: Advancing text embedding and
+reranking through foundation models.arXiv preprint
+arXiv:2506.05176, 2025.
+Zhao, X., Hu, X., Shan, Z., Huang, S., Zhou, Y ., Zhang, X.,
+Sun, Z., Liu, Z., Li, D., Wei, X., Pan, Y ., Xiang, Y ., Zhang,
+M., Wang, H., Yu, J., Hu, B., and Zhang, M. KaLM-
+Embedding-V2: Superior training techniques and data
+inspire a versatile embedding model, 2025. URLhttps:
+//arxiv.org/abs/2506.20923.
+12
+Generalizable and Composable Multi-Model Embedding Translation
+A. Embedding Translation Scenario Settings
+A.1. Preliminaries
+Let O denote a universe of objects. We consider two embedding models: asource model embA and atarget model embB,
+which map each object o∈ Oto a source embedding x:= emb A(o)∈R dA and a target embedding y:= emb B(o)∈R dB,
+respectively.
+Embedding Translation.The goal of embedding translation is to learn a function fA→B :R dA →R dB such that the
+translated source embedding approximates the target embedding of the same object. The translator fA→B is trained using a
+paired dataset defined on a training collectionO train:
+Dtrain :={(emb A(o),emb B(o))|o∈ O train}.(1)
+The training objective can be minimize the distanceDist(f A→B(x),y)over all pairs inD train.
+A.2. Translation Scenarios
+All scenarios are evaluated on a held-out test collection Otest, where Otrain ∩ Otest =∅ . Evaluation is conducted via a
+retrieval-based protocol, as detailed below.
+Pairwise Translation Scenario.This scenario evaluates a single translator fA→B between one source model and one
+target model. The evaluation proceeds as follows:
+1. Corpus Translation.The learned translator fA→B is applied to all objects in Otest. For each object o∈ Otest, we
+compute the translated embedding ˆyo :=f A→B(embA(o)). The resulting translated corpus is ˆYtest :={ ˆyo |o∈
+Otest}.
+2. Retrieval.For each query object q∈ Otest, its ground-truth target embedding embB(q) is used as the query. Nearest
+neighbor search is performed over ˆYtest.
+3. Metric.Candidates in ˆYtest are ranked by their distance to embB(q). Performance is measured by Recall@100, which
+checks whether the ground-truth answer (by index) forqappears in the top-100retrieved results.
+Multi-model Mixing Scenario.This scenario extends pairwise translation to multiple source models that share a common
+target space. We train multiple translators covering different source–target pairs (e.g., embA →emb B, embC →emb B,
+embD →emb B). At inference time, the translated corpus is constructed as follows:
+• The test collectionO test is partitioned into disjoint subsets, with each subset assigned to a specific translator.
+• Each translator is applied to its assigned subset to produce translated embeddings in the shared target space.
+• Translated embeddings from all translators are merged into a single mixed search corpus.
+• Retrieval and evaluation follow the same protocol and metric as in the pairwise translation scenario.
+Multi-model Chaining Scenario.This scenario evaluates sequential composition of translators through an intermediate
+embedding space. Specifically, we consider a two-hop translation pipeline of the form embA →emb B →emb C. The
+evaluation protocol largely follows the pairwise scenario:
+• Sequential Translation.For each object o∈ Otest, we first apply fA→B to obtain an intermediate embedding, followed
+byf B→C to produce the final translated embedding.
+•Corpus Construction.Final translated embeddings for all objects form the search corpus in the target space.
+• Retrieval.For each query object q∈ Otest, retrieval is performed using its ground-truth target embedding as the query.
+•Metric.Performance is evaluated using Recall@100, consistent with the pairwise translation scenario.
+13
+Generalizable and Composable Multi-Model Embedding Translation
+B. Proof of Theorem 1.
+We first briefly recall the key notations defined in Section 3. Let f be the learned translator and f ⋆ be the ground-truth
+translator. For any test samplex∈ Xtest, we denote its nearest neighbor in the training reference setX train as:
+xnn = arg minx′∈Xtrain ∥x−x ′∥.
+The distance to the training manifold is δ(x) =∥x−x nn∥. Furthermore, f and f ⋆ are assumed to be L-Lipschitz and
+L⋆-Lipschitz continuous, respectively.
+Proof:By adding and subtracting f(x nn) and f ⋆(xnn) inside the norm and applying the triangle inequality, we can
+decompose the pointwise translation error into three distinct components:
+e(x) =∥f(x)−f ⋆(x)∥
+=∥f(x)−f(x nn) +f(x nn)−f ⋆(xnn) +f ⋆(xnn)−f ⋆(x)∥
+≤ ∥f(x)−f(xnn)∥| {z }
+Term (I)
++∥f(x nn)−f ⋆(xnn)∥| {z }
+Term (II)
++∥f ⋆(xnn)−f ⋆(x)∥| {z }
+Term (III)
+.(2)
+We now bound each term individually based on our assumptions:
+•Term (I):By theL-Lipschitz continuity of the learned translatorf, we have:
+∥f(x)−f(x nn)∥ ≤L∥x−xnn∥=Lδ(x).
+• Term (II):By definition, this term represents the translation error at the training point xnn, which we denote as e(xnn).
+•Term (III):Similarly, by theL ⋆-Lipschitz continuity of the ground-truth translatorf ⋆, we have:
+∥f ⋆(xnn)−f ⋆(x)∥ ≤L⋆∥xnn −x∥=L ⋆δ(x).
+Substituting these bounds back into Equation (2), we obtain:
+e(x)≤Lδ(x) +e(x nn) +L ⋆δ(x)
+= (L+L ⋆)δ(x) +e(x nn).
+This completes the proof. □
+B.1. Extension to Cosine Distance for Normalized Embeddings
+In practice, embeddings are often L2-normalized such that ∥x∥= 1 for all x∈ X. In this context, we define the cosine
+distance between two vectors u and v as dcos(u,v) = 1−u ⊤v. We now show that the Euclidean-based bound in Theorem 1
+directly constrains the translation error in terms of cosine distance.
+Relationship between Euclidean and Cosine DistanceFor any two unit vectors u,v where ∥u∥=∥v∥= 1 , the
+following identity holds:
+∥u−v∥ 2 =∥u∥ 2 +∥v∥ 2 −2u ⊤v= 2−2u ⊤v= 2d cos(u,v).(3)
+This implies thatd cos(u,v) = 12 ∥u−v∥ 2.
+Translation Error in Cosine SpaceLet ecos(x) =d cos(f(x), f⋆(x)) be the translation error measured by cosine distance.
+Assuming the outputs of the translatorsfandf ⋆ are also normalized, we can apply the result from Theorem 1:
+ecos(x) = 12 ∥f(x)−f ⋆(x)∥2
+= 12 e(x)2
+≤ 12 [(L+L ⋆)δ(x) +e(x nn)]2 .(4)
+whereδ(x) =
+p
+2dcos(x,x nn)represents the distance to the training set in the source space.
+14
+Generalizable and Composable Multi-Model Embedding Translation
+ConclusionEquation (4) demonstrates that although the cosine distance itself does not satisfy the triangle inequality, the
+translation error in cosine space is strictly bounded by the proximity of the test sample to the training manifold Xtrain in
+the source space. As δ(x)→0 (i.e., the test sample approaches a training sample) and the empirical error e(xnn)→0 , the
+cosine-based translation errore cos(x)is guaranteed to vanish.
+C. Translation Confidence Across Reference Pools
+This appendix complements Section 2.3 by stress -testing TC(x) on heterogeneous, mixed-domain reference pools, ad-
+dressing the concern that pooling distinct -domain datasets could expand σdata and push TC values uniformly toward
+1.0.
+Setup.We progressively enlarge the training/reference pool of the translator fGEMINI→OPENAI in three stages: FiQA-2018 only,
+FiQA-2018+SciDocs, and FiQA-2018+SciDocs+ARGUANA, by retraining the translator each time and keeping the evaluation
+set fixed. For each pool we report the mean TC over evaluation embeddings and the Pearson correlation betweenTC(x) and
+the per-vector empirical translation error e(x). We also evaluate a local-kNN variant of the normalization in which σdata is
+replaced by the median nearest-neighbor distance inside each query’s local region.
+Results.Table 4 summarizes the results.
+Table 4.Translation confidence TC as the reference pool becomes more heterogeneous. All Pearson correlations are significant at
+p <0.001.
+Reference Pool Globalσ data Local-kNN normalization
+Mean TC Pearson Mean TC Pearson
+FiQA-20180.51 0.81 0.62 0.81
+FiQA-2018+SciDocs0.48 0.78 0.55 0.77
+FiQA-2018+SciDocs+ ARGUANA0.31 0.78 0.51 0.76
+Discussion.We do not observe the hypothesized inflation of TC toward 1.0: the mean TC actuallydecreases( 0.51→
+0.48→0.31 ) as the pool becomes more heterogeneous, because the larger pool also enlarges σdata but δ(x) does not
+shrink proportionally. Crucially, the rank correlation between TC(x) and the empirical error e(x) remains strong across
+all pools (Pearson 0.81/0.78/0.78), confirming the intended use of TC in Section 2.3: for a fixed deployed translator, TC
+preserves the ranking of risky inputs and only the operating threshold needs per-pool calibration. The local-kNN variant
+yields comparable correlations (0.81/0.77/0.76) while keeping the absolute TC scale more stable across pools, providing a
+practical extension for mixed-domain deployments.
+D. Additional Empirical Results
+This appendix collects empirical results that complement the main experiments and address questions raised during the
+review period. All results follow thegemini→openai setting of Table??, using the same translator backbone and training
+hyperparameters.
+D.1. In-Domain and Multi-Metric Comparison
+The main paper reports R@100 because it is the most stable indicator under strong cross-dataset shift. Table 5 reports the
+same comparison under R@10, NDCG@10, and MRR@10 on FiQA-2018, SciDocs, and ARGUANA, together with the in -
+domain (ID) numbers in which 1/3 of the corpus is used to train the translator and the remainder is used for evaluation.
+H-MoE dominates all baselines across all four metrics on both ID and OOD inputs, so the OOD gains in Table ?? are not
+bought at the cost of ID quality.
+D.2. Statistical Significance
+We assess the significance of the H-MoE vs. EmbConv gap with a paired bootstrap over the full query set of each of
+FiQA-2018, SciDocs, and ARGUANA; Table 6 reports the estimated 95% confidence intervals on the per -query gain ∆ =
+15
+Generalizable and Composable Multi-Model Embedding Translation
+Table 5.Multi -metric retrieval on FiQA-2018, SciDocs, and ARGUANA( gemini→openai ). ID uses 1/3 of the corpus to train the
+translator and the remainder for evaluation; OOD trains on a different corpus and evaluates without further adaptation. N@10
+abbreviates NDCG@10 and M@10 abbreviates MRR@10.
+FiQA-2018SciDocsARGUANA
+Type Method R@100 R@10 N@10 M@10 R@100 R@10 N@10 M@10 R@100 R@10 N@10 M@10
+ID
+CCA83.4 82.3 73.5 70.8 55.2 49.8 35.9 41.9 81.6 52.2 48.1 38.8
+Vec2Vec86.5 81.3 71.3 66.4 55.8 47.2 34.2 38.4 44.8 39.4 30.4 27.2
+EmbConv89.3 82.6 75.4 71.7 58.6 52.5 37.5 45.8 83.8 75.8 71.4 54.3
+H-MoE93.4 87.5 81.8 78.3 62.1 60.2 46.7 51.3 92.8 89.4 83.1 70.5
+OOD
+CCA47.8 32.8 21.7 18.3 24.1 17.4 13.5 10.1 73.8 38.4 31.4 24.7
+Vec2Vec31.1 11.4 12.3 7.2 20.3 5.8 4.3 3.4 37.2 14.8 11.9 8.6
+EmbConv78.3 54.8 28.4 21.6 57.0 26.3 18.3 15.3 79.6 58.7 46.8 33.1
+H-MoE88.3 61.7 44.2 39.7 56.7 35.1 24.2 21.8 92.4 72.6 61.3 47.8
+H-MoE−EmbConv . Across all four metrics and three datasets, the lower CI endpoint stays above zero, and gains range
+from+6.1to+19.7points.
+Table 6.Paired bootstrap95%CI on the per-query gain∆ =H-MoE−EmbConv.
+MetricFiQA-2018SciDocsARGUANA
+R@100+14.1 [10.2,17.8] +7.1 [3.9,10.0] +14.5 [10.7,18.0]
+NDCG@10+16.5 [11.8,20.9] +7.1 [3.5,10.2] +19.7 [14.1,24.8]
+MRR@10+18.8 [13.6,23.4] +6.1 [2.7,9.1] +12.8 [8.1,17.0]
+D.3. Translation versus Re-Embedding Compute
+Translation operates on existing source-space vectors, whereas re-embedding additionally requires tokenization and a full
+encoder forward pass over raw text. On a single A100 GPU, re -embedding the SciDocs corpus (25,657 documents) with
+QWEN3 -EMBEDDING -8B takes 171 min, while translating the same number of already-available source embeddings with
+H-MoE takes 38.43 ms on the same machine — a ratio of roughly 2.7×10 5. The exact ratio depends on encoder size,
+document length, batching, and I/O, but the qualitative gap is inherent: translation cost is independent of input text length
+once source embeddings exist.
+D.4. Underfitting Does Not Explain the OOD Gap
+To test the hypothesis that the EmbConv OOD gap is an artifact of overfitting (so an early-stopped EmbConv would close
+it), we evaluate EmbConv checkpoints at 10%,20%, . . . ,100%of training under the same OOD setting as Table??; results
+in Table 7 show that no early-stopped checkpoint comes close to H-MoE (e.g., 79.6 vs. 92.4 on ARGUANAat the strongest
+checkpoint). This is consistent with the bounde(x)≤(L+L ∗)δ(x) +e(xnn) in Theorem 1: global underfitting may reduce
+the expansion (L) but leaves the fit term (e(xnn)) large, whereas H-MoE reduces both terms by splitting the problem into
+local regions.
+Table 7.OOD R@100 of EmbConv checkpoints at every 10% of training, and the converged H-MoE for reference
+(gemini→openai).
+EmbConvfraction10% 20% 30% 40% 50% 60% 70% 80% 90% 100%H-MoE
+FiQA-201834.8 51.7 73.8 74.5 71.9 68.4 72.9 74.9 77.8 78.388.3
+SciDocs21.5 33.8 46.1 49.8 47.3 44.5 50.6 53.9 55.8 57.056.7
+ARGUANA36.2 61.2 68.9 72.3 68.8 66.5 71.8 74.6 77.3 79.692.4
+D.5. Component Contributions of the Directional Loss
+Table 8 isolates the contribution of the directional regularizer Ldir from the local-specialization losses (Lreg +αL local).
+With only Ldir, the model retains the directional control but loses local expansion control: composition becomes much more
+stable than the global baseline, but pairwise OOD recall drops to 78.4. Conversely, removing Ldir keeps pairwise OOD
+16
+Generalizable and Composable Multi-Model Embedding Translation
+recall at 89.8 but increases the mixing drop to 11.1% and the chaining drop to 16.7%. Combining both losses gives the best
+overall result.
+Table 8.Effect of removing each loss family ongemini→openai.H-MoE(full) uses bothL reg +αL local andL dir.
+Configuration OOD R@100 Mixing drop Chaining drop
+OnlyL dir 78.45.7% 3.5%
+H-MoEwithoutL dir 89.811.1% 16.7%
+H-MoE(full)93.42.3%1.8%
+E. Algorithm ofH-MoE
+ALGORITHM 1:Training Phase ofH-MoE
+Input:Paired training dataD train ={(x n,y n)}Nn=1 wherex n ∈R dA ,y n ∈R dB ; Number of leavesK.
+Output:Base parametersθ base, Expert setE={(A i,B i,µ i)}2K−1i=1 .
+// Stage 1: Global Base Alignment
+1Initialize base translatorf θbase (e.g., MLP);
+2θ base ←arg min θ
+PN
+n=1 ∥fθ(xn)−y n∥1;
+3Freezeθ base;
+// Stage 2: Hierarchical Manifold Partitioning
+4Perform hierarchical clustering (e.g., Agglomerative) on{x n}to build binary treeTwithKleaves;
+5Indexing nodesi∈ {1, . . . ,2K−1}(Root is node 1);
+6foreach nodeiinTdo
+7Identify training subsetC i ⊆ Dtrain associated with nodei;
+// Internal nodes contain union of children’s data;
+8Compute centroidµ i = 1|Ci| P(x,y)∈Ci x;
+// Stage 3: Expert Specialization (LoRA)
+9foreach nodei= 1to2K−1do
+10Initialize LoRA adaptersA i ∈R r×d,B i ∈R d×r;
+11Define expertf i(x) =f θbase (x) +B iAix;
+// Optimize with combined Regression + Local Structure loss
+12A i,B i ←arg min A,B
+P
+(x,y)∈Ci (Lreg +αL local);
+13returnθ base,{(A i,B i,µ i)}2K−1i=1 ;
+17
+Generalizable and Composable Multi-Model Embedding Translation
+ALGORITHM 2:Hierarchical Top-Down Routing & Inference
+Input:Queryx∈R dA, Tree structureT, Experts{f i}, Centroids{µ i}, Confidence Thresholdτ∈(0,1].
+Output:Translated embedding ˆy∈R dB .
+// Initialize at Root
+1v←Root(T);
+2whilevis not a Leafdo
+3Letu L, uR be the left and right children ofv;
+4Compute distances to children centroids:d L =∥x−µ uL ∥2,d R =∥x−µ uR ∥2;
+// Check ambiguity ratio (stop if query is equidistant)
+5ρ= min(d L, dR)/max(d L, dR);
+6ifρ > τthen
+// Ambiguous boundary: stop at current coarser expert
+7break;
+8else
+// Clear preference: descend to closer child
+9ifd L < dR then
+10v←u L;
+11else
+12v←u R;
+13i sel ←v;
+// Final Translation with Selected Expert
+14 ˆy=f θbase (x) +B isel Aisel x;
+15return ˆy;
+F. Benchmarks
+In this work, we use six datasets following the BEIR (Thakur et al., 2021) benchmarks. Here, we give a brief introduction to
+these works, and give the statistics of all the datasets.
+SciFact (Wadden et al., 2020) is a fact-checking dataset in the scientific domain. It requires models to retrieve evidence from
+a corpus of 5,183 scientific abstracts to verify given claims. The dataset features an average document length of 213.63
+words.
+NFCorpus (Boteva et al., 2016) is a bio-medical information retrieval dataset containing 3,633 documents. It is designed to
+test a model’s ability to bridge the lexical gap between natural language queries from non-experts and expert-level medical
+literature.
+ArguAna (Wachsmuth et al., 2018) focuses on argument retrieval from online debate forums. It contains 8,674 documents
+and is unique within the BEIR benchmark for its long-form queries, which have an average length of 192.98 words.
+SciDocs (Cohan et al., 2020) is a citation prediction dataset consisting of 25,657 documents. The task involves identifying
+relevant scientific papers based on article titles, evaluating the model’s capacity to capture citation-based relevance.
+FiQA-2018 (Maia et al., 2018) targets the financial domain for question answering. It contains 57,638 documents, requiring
+systems to retrieve relevant financial opinions and information from forum posts and articles.
+Fever (Thorne et al., 2018) is a large-scale fact extraction and verification dataset based on Wikipedia. With a corpus of
+5,416,568 documents, it tests the scalability and precision of retrieval systems in verifying natural language claims.
+G. Details of Evaluated Embedding Models
+In this appendix, we provide technical specifications and architectural details for the embedding models used in our
+evaluation. Following the current state-of-the-art on the MTEB leaderboard, we selected a diverse range of models from
+both open-source and proprietary providers. Table 10 summarizes their key statistics.
+• KaLM-Embedding-Gemma3-12B-2511(Zhao et al., 2025): A state-of-the-art model from Tencent based on Gemma
+3-12B. It features 11.76B parameters and supports Matryoshka Representation Learning (MRL), allowing for flexible
+18
+Generalizable and Composable Multi-Model Embedding Translation
+Table 9.Detailed statistics of the six selected datasets from the BEIR benchmark (Thakur et al., 2021). The benchmark covers
+diverse retrieval tasks and domains to evaluate the zero-shot generalization of models. #Corpus denotes the total number of
+documents in the collection; #Query indicates the number of queries in the test set; Avg. D/Q is the average number of relevant
+documents per query; Avg. Q and Avg. D represent the average word length of queries and documents, respectively.
+Dataset Task Domain #Corpus #Query Avg. D/Q Avg. Q Avg. D
+SciFact(Wadden et al., 2020) Fact Checking Scientific 5,183 300 1.1 12.37 213.63
+NFCorpus(Boteva et al., 2016) Bio-Medical IR Bio-Medical 3,633 323 38.2 3.30 232.26
+ArguAna(Wachsmuth et al., 2018) Argument Misc. 8,674 1,406 1.0 192.98 166.80
+SciDocs(Cohan et al., 2020) Citation-Pred. Scientific 25,657 1,000 4.9 9.38 176.19
+FiQA-2018(Maia et al., 2018) Question Answ. Finance 57,638 648 2.6 10.77 132.32
+Fever(Thorne et al., 2018) Fact Checking Wikipedia 5,416,568 6,666 1.2 8.13 84.76
+output dimensions up to 3840 and a context window of 32k tokens.
+• llama-embed-nemotron-8b(Babakhin et al., 2025): Developed by NVIDIA, this model is built on Llama-3.1-8B
+using bi-directional attention. It is specifically optimized for multilingual RAG and high-precision semantic similarity.
+• Qwen3-Embedding-8B(Zhang et al., 2025): The latest embedding series from the Qwen team, optimized for 100+
+languages and long-text understanding (32k context). It supports user-defined output dimensions via MRL.
+• gemini-embedding-001(Google, 2025): Google’s flagship embedding model via the Gemini API. It is optimized for
+multi-task performance and utilizes MRL to provide consistent performance across different vector sizes.
+• Linq-Embed-Mistral(Kim et al., 2024): Developed by Linq AI Research, this model enhances Mistral-7B through
+task-specific synthetic data generation and sophisticated negative mining.
+• multilingual-e5-large-instruct(Wang et al., 2024): A widely used multilingual model based on XLM-RoBERTa
+(560M parameters). Despite its smaller size, it remains highly competitive in cross-lingual retrieval tasks.
+• SFR-Embedding-Mistral(Meng et al., 2024): Salesforce’s 7B parameter model that improves upon Mistral-7B
+through multi-stage contrastive training and instruction tuning.
+• GritLM-7B(Muennighoff et al., 2024): A unified model trained via Generative Representational Instruction Tuning,
+capable of switching between generative and embedding modes while maintaining SOTA performance.
+• text-embedding-3-small(OpenAI, 2022): OpenAI’s most efficient third-generation model, supporting vector shorten-
+ing and highly optimized for large-scale retrieval applications.
+• mistral-embed(Jiang et al., 2023): Mistral AI’s official API-based embedding model. It provides a balanced 1024-
+dimensional vector space optimized for retrieval, clustering, and classification tasks.
+Table 10.Summary of Evaluated Embedding Models.
+Model Name Abbr. Params Dim Base Model
+KaLM-Gemma3-12B-2511kalm11.8B 3840 Gemma-3-12B
+llama-embed-nemotron-8bnemotron8.0B 4096 Llama-3.1-8B
+Qwen3-Embedding-8Bqwen8.0B 4096 Qwen-3
+gemini-embedding-001gemini- 3072 Unknown
+Linq-Embed-Mistrallinq7.0B 4096 Mistral-7B
+multilingual-e5-large-instructe50.6B 1024 XLM-R-Large
+SFR-Embedding-Mistralsfr7.0B 4096 Mistral-7B
+GritLM-7Bgritlm7.0B 4096 Mistral-7B
+text-embedding-3-smallopenai- 1536 Unknown
+mistral-embedmistral- 1024 Unknown
+H. Implementation Details
+We utilize the FiQA-2018→SciFact transfer setting for these experiments. Specifically, the translators are trained on the
+FiQA-2018 dataset (Source Domain) and evaluated on theSciFact dataset (Target Domain), representing an Out-of-Distribution
+19
+Generalizable and Composable Multi-Model Embedding Translation
+(OOD) scenario. We report theRecall@100 Drop (%)relative to the baseline performance (direct pairwise translation) to
+quantify the stability of the translation under complex composability scenarios.
+Mixing.Given the set of embedding models {nemotron, kalm, openai} , we designate nemotron as the shared target
+embedding space. Accordingly, we train translators kalm→nemotron and openai→nemotron . At inference time, the
+test collection is partitioned into three disjoint subsets, each of which is translated by its corresponding translator. The
+resulting translated embeddings are then merged into a single mixed corpus in the nemotron space for retrieval evaluation.
+Chaining.Given the embedding models {nemotron→openai via kalm} , we consider a mixing setting where kalm
+serves as the target embedding space, and nemotron is translated to kalm via the intermediate model openai. Specifically,
+we train the translators nemotron→openai and openai→kalm . At inference time, we first translate the embeddings
+from the nemotron space to the openai, and then translate to the kalm space. We finally compare the composite translation
+recall@100 with the directnemotron→openai.
+I. Related Work
+I.1. Sentence Embedding Alignment
+A substantial body of work studies cross-lingual embedding alignment (Mikolov et al., 2013; Artetxe et al., 2016; Smith et al.,
+2017; Joulin et al., 2018). Mikolov et al. (Mikolov et al., 2013) formulate the problem as supervised linear regression over
+seed word pairs. Subsequent studies introduce orthogonality constraints via Procrustes analysis (PA) (Smith et al., 2017),
+Canonical Correlation Analysis (CCA) (Artetxe et al., 2016), and optimal transport objectives such as Gromov–Wasserstein
+(GW) alignment (Chen et al., 2020). These approaches exploit the empirical observation that embeddings exhibitglobal
+geometric similarityacross languages, enabling alignment through a single global transformation.
+However, such embedding alignment methods are fundamentally limited in capturing the complex and nonlinear relationships
+induced by modern embedding models (Jha et al., 2025).
+I.2. Embedding Translation
+More recent work directly studiesembedding translationor embedding transformation, which learns a mapping between
+embedding spaces produced by different sentence encoders. Vec2Vec (Jha et al., 2025) proposes an unsupervised frame-
+work for cross-model embedding translation, motivated by the Platonic representation hypothesis (Huh et al., 2024). While
+effective in practice, Vec2Vec treats translation as a black box and does not explain when or why translation fails under
+distribution shift or composed mappings.
+Recent neural approaches, such as Embedding Converter ( EmbConv) (Yoon & Arik, 2025), further improve translation
+accuracy by employing expressive translation architectures and adversarial or contrastive objectives, and report strong
+empirical performance. Nevertheless, these methods still lack interpretable error models and do not account for error
+amplification under multi-model embedding mixing or translation chaining.
+In contrast, our work provides a geometric analysis of embedding translation, derives an explicit error bound that explains
+failure modes under OOD and multi-model settings, and introduces a geometry-aware translation framework that supports
+robust and risk-aware deployment in vector databases.
+J. Pairwise Translation Results.
+We summarize all translation directions among the 10 embedding models. The complete results are reported in Tables 11–22.
+Impact of different embedding translation methods.The poor performance of rigid methods such as GW and PA, as well
+as global linear models like CCA, can be attributed to their inability to accommodate the intrinsic non-linear anisotropy and
+local manifold divergences present in LLM embeddings. Neural approaches such as Vec2Vec offer increased flexibility
+but exhibit significant training instability due to their dependence on adversarial objectives, which are prone to convergence
+failures and high variance when the training corpus is limited (evidenced by the high standard deviations marked in red across
+Tables, e.g., Vec2Vec on ArguAna in Group 1). Although EmbConv increases expressivity via deeper architectures, its
+single-stream mapping still lacks the capacity for fine-grained adaptation, struggling to reconcile local semantic discrepancies
+20
+Generalizable and Composable Multi-Model Embedding Translation
+and achieve precise alignment in challenging cross-domain scenarios.
+Impact of different embedding model pairs.Beyond methodological differences, we observe thatarchitectural affinity
+influences the absolute difficulty of the translation task. Pairs sharing similar backbones or training lineages—such as the
+mistral-based cluster (including sfr, linq, and gritlm)—generally exhibit higher absolute recall ceilings due to their
+homologous embedding topologies. For instance, translating within this family, such asmistral→gritlm(Table Group
+12), yields an exceptionally high Recall@100 of 83.4%. Conversely, translating across fundamentally different architectures,
+such as from the encoder-only e5 to decoder-only LLMs (e.g., e5→mistral in Table Group 7), might presents a relatively
+larger topological gap, resulting in a comparatively lower baseline performance (74.5%). Crucially, however, our method
+demonstratesuniversal robustnessagainst these structural divergences. While baselines often collapse on heterogeneous
+pairs (e.g., EmbConv drops to 57.4% on e5→qwen ), H-MoE consistently maintains high performance gaps over the
+runner-up. This confirms that while model similarity aids transfer, our hierarchical expert design can be an important factor
+in successfully bridging diverse geometries, effectively decoupling translation quality from the ancestral proximity of the
+source and target models.
+K. Sensitivity Experiments
+To verify the robustness ofH-MoE against hyperparameter variations, we conducted a sensitivity analysis using theFiQA-2018
+→SciFact transfer setting. We focused on two representative translation directions: gemini→openai and kalm→qwen .
+Figure 10 illustrates the impact of the cluster countk, the local loss weightα, and the directional constraint weightβ.
+Impact of Cluster Count ( k).Figure 10a evaluates the effect of the number of experts (clusters) on OOD retrieval
+performance. We observe that performance improves sharply as k increases from 2 to 4, confirming that a single monolithic
+model (or too few experts) lacks the capacity to capture the complex local geometry of the embedding manifold. Performance
+stabilizes and reaches a plateau around k= 4 to k= 8 . While increasing k beyond this point offers diminishing returns,
+the performance remains stable without significant degradation, indicating that our hierarchical routing is robust to over-
+segmentation. Based on this, we adopted k= 4 as the default for most experiments to balance efficiency and effectiveness.
+Impact of Local Loss Weight (α).Figure 10b analyzes the sensitivity to α, which balances the global alignment loss and
+the local structure-preserving loss (Llocal). The results show that performance is suboptimal at α= 0 (pure regression),
+validating the necessity of local geometric constraints for OOD generalization. Recall@100 improves significantly as α
+increases and remains consistently high within the range α∈[0.3,0.6] . Excessively high values (α >0.8) lead to a slight
+performance dip for some pairs (e.g., gemini→openai ), likely because the optimization becomes overly constrained by
+local topology at the expense of global alignment. We setα= 0.5in the experiments.
+Impact of Directional Constraint Weight (β).Figure 10c reports theperformance drop(negative values denote degrada-
+tion) for multi-model Mixing and Chaining scenarios as we vary the weight β of the directional residual constraint (Ldir).
+At β= 0 (no directional control), we observe severe performance degradation (e.g.,a drop of over 12% for chaining). As β
+increases, the degradation is rapidly mitigated, with the drop converging to near-zero (approx. −2%) when β∈[0.4,0.9] .
+This confirms that enforcing directional consistency on residuals is critical for composability. The wide stable region
+suggests that H-MoE is not sensitive to the precise value of β, provided it is sufficiently non-zero to regularize the residual
+space. We setβ= 0.7in the experiments.
+Impact of the routing parameter (τ).Figure 10d visualizes the sensitivity of retrieval recall to the confidence threshold.
+The performance exhibits an inverted U-shape, consistently peaking at τ=0.8. This demonstrates that a calibrated threshold
+effectively balances the trade-off between utilizing specialized leaf experts and falling back to robust coarser experts for
+ambiguous queries. We setτ= 0.8in the experiments.
+21
+Generalizable and Composable Multi-Model Embedding Translation
+Table 11.Pairwise Model Translation Performance (Recall@100) - Group 1. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset gemini→nemotrongemini→qwen gemini→kalm gemini→linq gemini→e5 gemini→sfrgemini→gritlm
+GW
+SciDocs 0.2± 0.1 1.2±0.3 0.1±0.4 4.3±0.3 3.1±0.4 0.6±0.1 3.1±0.1
+FiQA-2018 3.7± 0.3 1.1±0.3 1.8±0.1 3.7±0.3 3.6±0.0 1.9±0.2 0.9±0.2
+ArguAna 0.5± 0.2 1.2±0.3 1.7±0.0 2.0±0.3 1.5±0.0 1.4±0.5 3.2±0.3
+Avg.1.5 1.1 1.2 3.3 2.7 1.3 2.4
+PA
+SciDocs 14.3± 5.7 6.0±2.1 10.2±4.6 10.9±4.4 1.2±0.6 16.1±7.1 10.6±1.2
+FiQA-2018 1.5± 0.6 15.4±3.8 4.5±2.2 2.0±0.7 9.5±1.6 8.9±1.2 9.5±3.8
+ArguAna 4.3± 2.1 4.9±1.6 2.4±0.5 9.4±4.6 2.8±0.9 14.8±2.6 1.0±0.5
+Avg.6.7 8.8 5.7 7.4 4.5 13.2 7.1
+CCA
+SciDocs 33.1± 8.4 41.2±7.8 40.3±6.7 32.3±5.1 30.7±8.3 33.6±7.9 35.8±8.9
+FiQA-2018 58.8± 4.3 60.8±6.4 60.3±5.6 54.0±5.2 56.4±7.3 58.1±4.5 56.9±5.7
+ArguAna 65.7± 4.4 69.0±8.4 68.0±6.2 67.6±7.2 67.9±8.7 66.9±6.3 69.1±5.0
+Avg.52.5 57.0 56.2 51.3 51.7 52.8 53.9
+Vec2Vec
+SciDocs 28.4± 7.9 36.7±12.8 27.6±12.9 34.4±7.1 30.1±12.0 22.4±12.2 24.1±11.0
+FiQA-2018 38.5± 9.1 37.0±7.2 35.7±9.2 39.4±10.1 39.2±6.6 31.9±10.3 27.9±10.7
+ArguAna 31.0± 6.4 24.3±8.8 39.1±13.0 35.0±6.4 31.9±10.7 31.7±9.7 26.3±11.3
+Avg.32.6 32.7 34.1 36.2 33.7 28.7 26.1
+EmbConv
+SciDocs 43.2± 3.5 48.6±1.4 49.2±2.7 35.9±1.5 42.9±1.0 44.0±3.2 39.3±3.0
+FiQA-2018 69.9± 1.5 64.5±2.5 70.4±1.3 64.9±2.2 62.6±1.7 63.8±3.1 61.4±1.5
+ArguAna 69.9± 3.2 74.7±1.0 73.9±1.7 70.9±1.2 74.1±2.1 77.8±1.3 78.1±3.0
+Avg.61.0 62.6 64.5 57.2 59.9 61.9 59.6
+SciDocs 59.4±1.9 62.5±3.3 62.4±3.3 52.1±3.6 55.4±3.3 56.5±3.9 58.7±3.8
+FiQA-2018 79.9±1.0 81.7±0.6 81.6±3.3 77.9±1.3 77.9±0.6 78.0±2.7 78.9±3.9
+ArguAna 90.5±3.5 90.7±1.7 89.8±3.3 89.2±2.1 88.5±1.6 88.9±3.9 89.0±3.9
+H-MoE(Ours)
+Avg. 76.6 78.3 77.9 73.1 73.9 74.5 75.6
+Table 12.Pairwise Model Translation Performance (Recall@100) - Group 2. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset gemini→mistralnemotron→gemininemotron→qwennemotron→kalmnemotron→e5nemotron→sfrnemotron→gritlm
+GW
+SciDocs 0.6± 0.2 3.6±0.0 3.4±0.2 1.5±0.1 0.1±0.1 4.5±0.4 3.4±0.1
+FiQA-2018 1.6± 0.3 2.7±0.4 4.3±0.4 4.7±0.3 2.9±0.3 0.5±0.3 0.2±0.1
+ArguAna 2.0± 0.3 3.4±0.2 1.6±0.2 3.1±0.2 2.3±0.1 1.7±0.4 4.3±0.0
+Avg.1.4 3.2 3.1 3.1 1.8 2.3 2.6
+PA
+SciDocs 11.0± 1.5 2.7±0.9 13.7±4.7 14.1±4.1 9.2±3.1 4.7±1.8 15.3±4.7
+FiQA-2018 8.8± 1.5 16.1±4.4 10.4±5.0 12.7±3.3 2.2±0.7 2.0±0.7 14.5±5.7
+ArguAna 1.1± 0.5 4.9±2.2 10.7±4.0 4.9±1.7 6.1±1.9 7.6±1.2 1.1±0.5
+Avg.6.9 7.9 11.6 10.6 5.8 4.7 10.3
+CCA
+SciDocs 34.9± 8.8 38.4±5.7 47.3±6.8 42.2±7.8 30.9±5.7 36.9±4.6 43.8±4.6
+FiQA-2018 55.8± 6.7 58.0±4.8 60.4±4.7 58.1±8.2 54.8±7.3 57.2±5.1 59.1±4.5
+ArguAna 68.8± 5.1 69.0±7.1 71.6±5.9 69.9±4.1 64.9±5.0 66.2±4.8 68.8±7.4
+Avg.53.1 55.1 59.8 56.7 50.2 53.5 57.3
+Vec2Vec
+SciDocs 27.9± 11.0 22.4±12.9 36.4±6.7 25.4±11.7 21.7±12.2 24.2±11.6 34.4±9.4
+FiQA-2018 33.8± 10.4 26.9±9.0 32.7±11.8 29.7±9.0 29.3±10.3 37.6±10.9 33.8±10.5
+ArguAna 35.4± 12.0 30.1±8.4 28.7±11.1 25.4±12.0 20.6±12.0 20.2±12.6 35.9±6.7
+Avg.32.4 26.5 32.6 26.8 23.9 27.4 34.7
+EmbConv
+SciDocs 41.2± 1.8 46.4±1.6 54.8±2.8 53.7±2.3 37.0±2.4 45.3±1.2 48.9±2.5
+FiQA-2018 65.1± 2.3 67.0±1.3 70.3±1.7 61.9±2.4 64.0±1.5 69.4±1.4 71.7±2.3
+ArguAna 72.1± 1.8 72.1±1.5 79.1±1.6 79.9±3.2 68.8±2.2 76.8±3.5 76.8±3.2
+Avg.59.4 61.8 68.1 65.2 56.6 63.8 65.8
+SciDocs 59.6±1.6 58.1±1.2 69.2±2.1 64.9±2.1 56.1±3.8 59.3±0.7 66.9±0.9
+FiQA-2018 79.9±2.6 80.0±1.0 84.7±1.5 82.5±3.7 78.3±2.4 79.0±1.6 83.7±2.9
+ArguAna 90.1±3.8 89.0±0.8 91.4±3.0 91.4±2.7 89.4±3.7 90.2±2.5 92.2±2.3
+H-MoE(Ours)
+Avg. 76.6 75.7 81.8 79.6 74.6 76.2 80.9
+22
+Generalizable and Composable Multi-Model Embedding Translation
+1 3 5 7 9 11 13 15 17 19
+/glyph1197 um ber of C lusters k
+85
+87
+89
+91
+93
+95Recall@100 (%)
+k * = 4
+gemini  openai
+kalm  qwen
+(a)Sensitivity tok
+0.0 0.2 0.4 0.6 0.8 1.0
+80
+82
+84
+86
+88
+90
+92
+94
+96
+98Recall@100 (%)
+* [0.3, 0.6]
+gemini  openai
+kalm  qwen
+ (b)Sensitivity toα
+0.0 0.2 0.4 0.6 0.8 1.0
+Chaining Constraint Weight 
+-14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+Mixing Performance Drop (%)
+* [0.4, 0.9]
+G  O (Mix)
+K  Q (Mix)
+G  O (Chain)
+K  Q (Chain)
+ -14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+Chaining Performance Drop (%)
+(c)Sensitivity toβ
+0.2 0.4 0.6 0.8 1.0
+70
+75
+80
+85
+90
+95
+100Recall@100 (%)
+* = 0.8
+gemini  openai
+kalm  qwen
+ (d)Sensitivity toτ(fixk= 4)
+Figure 10.Hyperparameter Sensitivity Analysis. Evaluation under FiQA-2018→SciFact transfer setting. (a) Number of clusters k:
+performance becomes stable after k= 4 . (b) Local loss weight α: results are consistent when α∈[0.3,0.6] , balancing regression
+and local structure preservation. (c) Directional constraint weight β: larger β effectively reduces performance drop in mixing and
+chaining scenarios. (d) Routing threshold τ (fix k= 4) : controls the hierarchical traversal depth; a balanced τ ensures expert
+specialization without over-routing.
+23
+Generalizable and Composable Multi-Model Embedding Translation
+Table 13.Pairwise Model Translation Performance (Recall@100) - Group 3. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset nemotron→openainemotron→mistralqwen→nemotron qwen→kalm qwen→linq qwen→e5 qwen→sfr
+GW
+SciDocs 0.5± 0.0 4.8±0.5 1.0±0.3 1.7±0.3 4.9±0.2 3.8±0.3 4.9±0.3
+FiQA-2018 1.7± 0.1 1.4±0.0 2.5±0.0 4.7±0.4 4.9±0.3 1.1±0.3 0.9±0.3
+ArguAna 4.8± 0.4 2.4±0.3 1.7±0.3 2.3±0.2 2.1±0.1 2.2±0.3 0.6±0.5
+Avg.2.3 2.9 1.7 2.9 4.0 2.4 2.1
+PA
+SciDocs 8.3± 0.9 4.9±1.6 7.6±3.6 3.3±1.1 10.0±1.6 14.0±6.9 9.3±2.4
+FiQA-2018 8.9± 3.3 15.6±4.2 14.0±2.3 9.7±2.9 1.7±0.8 1.6±0.6 7.5±2.6
+ArguAna 5.3± 2.3 14.7±2.4 10.3±5.1 6.1±1.0 13.8±3.0 14.7±6.5 8.4±4.1
+Avg.7.5 11.7 10.6 6.4 8.5 10.1 8.4
+CCA
+SciDocs 37.8± 7.2 46.4±4.2 46.3±8.4 46.4±6.7 33.6±4.7 35.3±6.2 36.1±6.4
+FiQA-2018 57.3± 8.3 60.5±8.6 61.0±8.5 59.5±4.8 58.3±5.3 55.2±7.2 56.3±6.9
+ArguAna 68.4± 7.6 69.1±6.2 67.0±5.5 66.1±7.1 64.7±8.5 67.7±8.2 69.2±8.9
+Avg.54.5 58.7 58.1 57.3 52.2 52.8 53.9
+Vec2Vec
+SciDocs 25.5± 10.0 36.0±10.2 32.6±12.3 34.9±7.2 36.5±9.4 37.2±11.1 29.1±10.7
+FiQA-2018 34.9± 6.3 32.7±10.3 26.2±9.1 30.8±12.8 34.9±8.4 39.3±11.6 31.7±11.8
+ArguAna 29.9± 12.3 34.4±10.6 34.6±6.6 38.3±11.8 39.3±7.0 35.8±6.1 22.2±7.6
+Avg.30.1 34.4 31.1 34.7 36.9 37.5 27.7
+EmbConv
+SciDocs 41.8± 2.4 58.6±3.4 53.1±3.4 47.6±1.1 39.0±1.9 40.1±1.1 45.9±3.2
+FiQA-2018 69.5± 1.2 69.2±1.2 67.0±1.4 68.6±3.4 67.6±1.3 66.6±1.3 67.8±3.3
+ArguAna 71.8± 1.8 81.3±2.1 80.7±2.2 81.1±2.7 75.8±2.7 78.6±2.9 70.1±1.4
+Avg.61.0 69.7 66.9 65.8 60.8 61.7 61.3
+SciDocs 60.8±1.4 70.8±1.3 70.3±3.1 67.3±3.8 58.6±3.9 55.8±3.7 58.2±2.7
+FiQA-2018 80.2±2.8 84.2±1.1 84.5±3.2 82.4±3.2 78.8±2.2 77.6±0.8 79.8±1.6
+ArguAna 89.3±0.6 91.0±3.1 91.9±0.9 92.1±2.3 89.5±2.9 89.3±0.7 90.7±2.4
+H-MoE(Ours)
+Avg. 76.8 82.0 82.2 80.6 75.6 74.2 76.2
+Table 14.Pairwise Model Translation Performance (Recall@100) - Group 4. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset qwen→gritlm qwen→openaiqwen→mistralkalm→geminikalm→nemotron kalm→qwen kalm→linq
+GW
+SciDocs 3.1± 0.0 1.2±0.2 4.6±0.0 2.9±0.2 3.0±0.2 3.8±0.3 4.7±0.4
+FiQA-2018 4.3± 0.3 2.1±0.0 0.6±0.0 1.8±0.3 1.1±0.3 4.2±0.5 1.0±0.4
+ArguAna 3.6± 0.1 3.4±0.2 4.1±0.3 4.4±0.4 0.6±0.4 3.1±0.3 1.8±0.0
+Avg.3.7 2.2 3.1 3.0 1.6 3.7 2.5
+PA
+SciDocs 9.9± 2.3 6.8±2.6 5.3±1.9 11.7±3.1 3.2±0.8 14.2±5.8 10.1±3.7
+FiQA-2018 11.0± 0.7 10.0±0.9 8.0±1.5 1.7±0.6 1.1±0.5 14.6±0.8 2.8±0.5
+ArguAna 4.4± 1.2 3.5±1.3 2.8±0.9 1.1±0.5 7.0±2.6 15.6±6.8 13.7±4.4
+Avg.8.5 6.8 5.4 4.9 3.8 14.8 8.8
+CCA
+SciDocs 43.4± 4.4 39.6±4.8 43.9±5.2 39.6±7.8 42.0±4.8 44.7±4.3 38.7±8.0
+FiQA-2018 62.8± 6.9 60.3±6.5 61.6±7.0 59.2±8.6 59.0±5.5 63.6±8.3 59.4±8.0
+ArguAna 69.4± 5.6 69.3±7.6 68.6±4.9 67.2±7.1 70.0±6.5 69.0±6.5 68.9±6.4
+Avg.58.5 56.4 58.0 55.3 57.0 59.1 55.7
+Vec2Vec
+SciDocs 21.2± 6.7 28.8±9.7 32.9±6.5 26.7±10.1 26.2±8.6 32.9±9.0 22.8±6.5
+FiQA-2018 26.9± 11.0 27.5±8.0 33.6±8.0 27.0±12.8 36.3±10.7 27.3±7.3 22.0±11.4
+ArguAna 23.5± 7.7 26.8±10.2 33.1±12.3 27.8±10.2 34.8±10.8 39.0±9.4 37.7±6.3
+Avg.23.9 27.7 33.2 27.2 32.4 33.0 27.5
+EmbConv
+SciDocs 49.3± 1.3 47.3±2.7 48.9±2.2 46.0±3.4 53.5±3.1 47.7±1.6 48.8±1.1
+FiQA-2018 71.5± 3.1 65.9±1.7 70.3±3.4 63.5±1.3 70.0±2.9 69.7±1.1 63.4±2.6
+ArguAna 73.8± 1.4 76.2±2.3 77.7±1.7 73.3±3.2 71.3±1.4 75.4±1.6 79.4±1.7
+Avg.64.9 63.2 65.6 61.0 64.9 64.3 63.9
+SciDocs 68.0±2.9 60.7±1.4 66.6±1.5 61.5±0.9 63.9±1.0 67.7±0.8 62.5±2.4
+FiQA-2018 82.6±3.0 81.6±2.4 82.9±0.7 81.7±2.6 82.0±2.7 84.3±0.7 80.7±2.1
+ArguAna 91.2±0.5 90.7±2.3 91.2±3.3 89.3±2.3 90.3±2.0 91.4±2.3 90.5±3.9
+H-MoE(Ours)
+Avg. 80.6 77.6 80.2 77.5 78.7 81.1 77.9
+24
+Generalizable and Composable Multi-Model Embedding Translation
+Table 15.Pairwise Model Translation Performance (Recall@100) - Group 5. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset kalm→e5 kalm→sfr kalm→gritlm kalm→openai kalm→mistrallinq→geminilinq→nemotron
+GW
+SciDocs 0.2± 0.4 2.8±0.4 3.9±0.2 2.8±0.1 1.9±0.4 2.6±0.4 3.3±0.2
+FiQA-2018 3.7± 0.3 3.9±0.2 0.3±0.1 1.0±0.2 4.5±0.2 0.5±0.3 2.2±0.3
+ArguAna 3.7± 0.2 3.2±0.4 4.7±0.3 4.3±0.2 2.5±0.2 2.8±0.2 0.3±0.4
+Avg.2.5 3.3 3.0 2.7 3.0 2.0 1.9
+PA
+SciDocs 16.8± 2.6 16.1±1.6 10.0±3.2 11.3±1.8 8.1±4.0 8.0±0.8 14.5±5.3
+FiQA-2018 16.0± 1.1 13.3±0.7 16.0±3.3 12.6±3.4 15.5±4.1 14.4±2.6 11.1±4.5
+ArguAna 6.7± 2.8 13.3±2.8 10.1±2.9 9.9±1.7 14.5±3.5 2.0±0.8 2.9±0.7
+Avg.13.2 14.2 12.0 11.3 12.7 8.1 9.5
+CCA
+SciDocs 34.0± 4.1 36.2±7.6 40.9±5.7 42.1±4.6 41.0±5.3 27.5±4.8 34.6±7.2
+FiQA-2018 57.9± 8.0 57.1±8.1 59.0±7.2 59.4±5.6 59.6±4.6 53.9±7.0 55.3±7.8
+ArguAna 66.7± 4.4 64.5±7.2 65.3±6.2 68.9±8.7 67.7±6.5 66.4±8.1 65.7±6.5
+Avg.52.9 52.6 55.1 56.8 56.1 49.3 51.9
+Vec2Vec
+SciDocs 25.8± 12.7 29.7±7.4 27.4±9.9 32.3±7.7 30.3±9.5 21.0±9.5 34.6±11.3
+FiQA-2018 36.1± 10.8 26.3±11.0 29.3±7.9 23.2±8.3 20.5±12.6 33.1±9.3 28.0±10.0
+ArguAna 21.5± 6.4 37.2±12.8 21.9±8.0 26.3±11.3 39.3±7.5 36.9±9.0 31.1±6.5
+Avg.27.8 31.1 26.2 27.3 30.0 30.3 31.2
+EmbConv
+SciDocs 41.0± 1.7 41.8±2.9 49.8±2.5 47.8±3.1 49.6±3.0 37.7±2.8 45.8±3.4
+FiQA-2018 63.8± 1.3 65.2±2.3 68.9±2.5 63.9±1.7 65.7±1.1 65.7±2.6 67.5±1.8
+ArguAna 76.7± 3.0 77.9±1.8 70.2±2.8 77.2±2.7 71.1±3.0 70.4±1.4 71.5±2.0
+Avg.60.5 61.7 63.0 62.9 62.1 57.9 61.6
+SciDocs 59.2±3.7 61.0±1.6 65.3±1.7 61.9±2.6 65.4±1.5 52.6±3.8 55.5±3.9
+FiQA-2018 80.4±3.1 81.2±2.3 81.8±3.2 80.3±1.4 81.7±1.2 77.8±1.5 79.1±3.8
+ArguAna 88.8±1.0 89.8±1.1 91.2±2.8 90.3±1.3 91.2±1.6 88.0±2.9 89.7±1.5
+H-MoE(Ours)
+Avg. 76.1 77.3 79.4 77.5 79.4 72.8 74.8
+Table 16.Pairwise Model Translation Performance (Recall@100) - Group 6. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset linq→qwen linq→kalm linq→sfr linq→openailinq→mistral e5→gemini e5→nemotron
+GW
+SciDocs 3.6± 0.2 0.8±0.3 3.6±0.1 2.4±0.1 3.6±0.5 2.5±0.5 1.5±0.5
+FiQA-2018 1.4± 0.2 1.3±0.3 0.1±0.3 1.7±0.3 1.0±0.4 4.6±0.4 2.5±0.5
+ArguAna 2.7± 0.5 3.2±0.0 2.1±0.5 0.5±0.3 4.6±0.5 2.9±0.1 2.4±0.1
+Avg.2.6 1.8 1.9 1.6 3.1 3.3 2.1
+PA
+SciDocs 3.6± 1.1 14.5±6.6 4.9±1.0 11.9±0.8 2.9±1.3 7.6±2.3 2.3±0.8
+FiQA-2018 3.9± 1.6 9.1±0.9 12.9±6.2 5.8±1.5 10.7±1.6 9.5±3.3 2.2±0.8
+ArguAna 10.0± 3.9 3.9±0.7 12.4±0.6 15.1±5.5 3.4±1.4 4.9±2.0 9.7±2.7
+Avg.5.8 9.2 10.1 11.0 5.7 7.3 4.7
+CCA
+SciDocs 38.1± 5.6 39.9±6.6 41.3±6.9 36.5±6.0 34.1±8.5 32.4±6.6 33.2±8.1
+FiQA-2018 59.1± 5.0 60.5±6.3 59.5±4.3 55.2±8.9 56.0±7.3 57.8±4.0 56.2±5.4
+ArguAna 69.4± 6.6 67.2±6.0 67.1±4.3 67.3±9.0 66.5±5.7 66.7±7.4 66.4±4.6
+Avg.55.5 55.9 56.0 53.0 52.2 52.3 51.9
+Vec2Vec
+SciDocs 28.4± 11.4 21.0±11.2 36.3±11.1 24.4±8.1 39.4±12.6 29.5±11.9 22.7±7.7
+FiQA-2018 20.3± 7.4 24.7±7.5 32.0±10.7 39.0±12.2 35.7±8.2 34.2±11.6 32.9±12.5
+ArguAna 20.7± 10.2 21.1±9.5 26.0±7.0 32.5±9.0 23.0±8.6 31.2±12.8 21.8±11.1
+Avg.23.1 22.3 31.4 32.0 32.7 31.6 25.8
+EmbConv
+SciDocs 45.4± 2.7 42.8±1.8 52.0±2.5 42.9±2.3 44.3±2.4 41.8±1.9 40.3±2.2
+FiQA-2018 61.1± 1.5 71.6±3.3 62.4±2.4 67.5±3.5 67.6±1.7 64.1±2.6 59.8±1.4
+ArguAna 72.9± 2.4 80.0±3.5 77.5±2.3 70.7±3.3 74.7±2.0 76.9±3.1 74.7±3.3
+Avg.59.8 64.8 64.0 60.3 62.2 60.9 58.3
+SciDocs 58.8±2.7 61.9±3.2 63.5±2.3 55.7±2.2 58.2±3.9 56.6±0.9 56.4±1.4
+FiQA-2018 78.8±0.6 80.7±3.4 81.9±2.7 77.5±2.4 78.7±3.3 77.6±1.0 78.2±1.8
+ArguAna 90.4±3.8 89.7±3.0 91.1±2.7 88.1±2.4 90.0±3.3 88.5±2.3 88.9±2.5
+H-MoE(Ours)
+Avg. 76.0 77.4 78.8 73.8 75.6 74.2 74.5
+25
+Generalizable and Composable Multi-Model Embedding Translation
+Table 17.Pairwise Model Translation Performance (Recall@100) - Group 7. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset e5→qwen e5→kalm e5→linq e5→gritlm e5→openai e5→mistral sfr→gemini
+GW
+SciDocs 1.2± 0.3 0.4±0.0 2.7±0.0 4.5±0.3 2.1±0.0 0.8±0.5 3.9±0.5
+FiQA-2018 3.3± 0.4 2.5±0.2 4.4±0.4 4.7±0.2 1.3±0.4 2.6±0.5 3.9±0.0
+ArguAna 0.6± 0.2 2.9±0.4 0.3±0.0 3.0±0.4 4.5±0.2 2.2±0.4 5.0±0.2
+Avg.1.7 1.9 2.5 4.0 2.6 1.9 4.2
+PA
+SciDocs 15.9± 3.7 3.4±1.4 5.3±0.8 10.4±2.0 10.0±1.3 8.7±0.8 16.0±3.0
+FiQA-2018 11.4± 0.9 12.7±2.4 8.1±2.5 5.6±1.4 3.2±0.8 4.9±1.7 13.7±2.6
+ArguAna 13.6± 5.0 1.1±0.5 1.4±0.6 15.2±6.9 2.0±0.7 4.1±0.7 13.9±6.0
+Avg.13.6 5.7 4.9 10.4 5.1 5.9 14.5
+CCA
+SciDocs 36.0± 5.6 36.6±6.9 44.8±7.4 35.0±8.0 36.0±9.0 37.5±8.5 35.9±8.9
+FiQA-2018 58.3± 5.6 57.3±8.1 58.7±6.3 57.0±7.2 56.4±6.5 56.5±4.4 56.8±7.8
+ArguAna 65.2± 5.5 68.9±6.8 69.6±5.5 65.9±7.6 66.5±6.7 66.9±5.8 67.9±4.1
+Avg.53.2 54.3 57.7 52.6 53.0 53.6 53.5
+Vec2Vec
+SciDocs 30.2± 9.6 26.9±6.2 29.1±7.4 22.3±11.9 31.2±12.7 23.9±10.1 37.4±7.3
+FiQA-2018 31.5± 9.1 28.3±12.7 29.5±9.1 33.5±7.2 28.1±7.3 34.1±7.4 29.2±7.8
+ArguAna 35.4± 10.1 38.8±7.0 26.4±8.1 24.9±7.2 28.6±6.2 36.2±6.4 30.6±10.5
+Avg.32.4 31.3 28.3 26.9 29.3 31.4 32.4
+EmbConv
+SciDocs 39.9± 2.5 48.0±1.3 52.8±1.5 44.8±2.1 40.8±2.7 45.5±2.3 37.3±3.1
+FiQA-2018 59.7± 2.5 65.8±1.5 66.7±2.6 65.2±1.0 59.9±2.2 64.4±2.9 60.0±1.1
+ArguAna 72.7± 1.7 74.9±2.0 76.8±2.2 70.8±3.4 78.0±2.9 74.7±1.3 74.1±3.5
+Avg.57.4 62.9 65.4 60.3 59.6 61.5 57.1
+SciDocs 55.0±3.4 58.4±3.4 68.0±2.6 57.9±1.2 55.9±1.6 59.6±2.9 56.8±3.5
+FiQA-2018 78.9±1.5 79.5±4.0 83.0±3.0 79.1±0.7 78.9±1.5 78.9±3.9 77.7±3.5
+ArguAna 90.1±2.1 90.2±1.3 91.6±1.1 89.4±1.5 88.6±3.5 90.2±3.7 88.6±3.0
+H-MoE(Ours)
+Avg. 74.7 76.0 80.9 75.5 74.5 76.2 74.4
+Table 18.Pairwise Model Translation Performance (Recall@100) - Group 8. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset sfr→nemotron sfr→qwen sfr→kalm sfr→linq sfr→e5 sfr→gritlm sfr→openai
+GW
+SciDocs 3.8± 0.3 0.6±0.3 3.7±0.4 1.1±0.1 0.3±0.0 1.1±0.3 1.9±0.5
+FiQA-2018 2.9± 0.1 4.7±0.2 3.4±0.2 1.8±0.3 2.4±0.1 3.3±0.1 2.0±0.2
+ArguAna 2.3± 0.3 1.7±0.0 2.7±0.1 2.5±0.2 2.3±0.0 1.4±0.3 1.2±0.3
+Avg.3.0 2.3 3.3 1.8 1.7 1.9 1.7
+PA
+SciDocs 1.0± 0.5 7.7±0.9 13.2±5.1 12.4±4.1 10.3±2.3 10.6±4.2 5.7±0.6
+FiQA-2018 4.6± 1.7 7.1±2.7 16.7±1.6 7.5±2.7 6.0±0.8 14.4±4.9 16.1±4.2
+ArguAna 12.0± 5.0 6.0±2.7 1.1±0.5 2.4±0.6 2.3±0.9 9.2±2.6 8.9±2.8
+Avg.5.9 6.9 10.3 7.4 6.2 11.4 10.2
+CCA
+SciDocs 33.8± 8.9 34.4±7.9 38.4±6.5 41.5±5.0 45.9±7.6 37.5±7.7 35.6±4.8
+FiQA-2018 59.9± 8.3 58.4±5.3 57.2±4.4 60.0±6.0 65.0±4.4 56.6±7.5 55.0±5.3
+ArguAna 68.0± 7.4 68.4±7.9 67.2±5.4 66.9±7.4 69.5±7.0 64.8±6.6 66.6±4.1
+Avg.53.9 53.7 54.3 56.1 60.1 52.9 52.4
+Vec2Vec
+SciDocs 25.4± 6.4 27.4±7.8 24.9±9.3 28.4±8.3 23.6±11.6 31.1±6.1 35.5±7.4
+FiQA-2018 31.5± 6.5 31.5±11.1 23.0±12.5 34.4±7.9 39.1±6.5 31.3±8.1 35.2±7.7
+ArguAna 27.2± 9.5 30.2±6.3 31.1±12.4 27.5±9.5 25.6±11.9 29.3±10.1 28.2±7.6
+Avg.28.1 29.7 26.3 30.1 29.4 30.5 33.0
+EmbConv
+SciDocs 40.0± 3.2 46.3±2.2 44.6±1.9 50.2±3.4 57.1±1.2 46.0±3.4 42.4±1.1
+FiQA-2018 70.6± 2.6 58.8±2.8 71.0±1.2 69.0±1.8 66.2±2.5 67.2±1.7 67.1±1.2
+ArguAna 73.1± 1.3 69.6±3.2 71.3±1.2 74.4±2.8 79.6±2.2 77.9±2.7 75.6±2.3
+Avg.61.2 58.3 62.3 64.5 67.6 63.7 61.7
+SciDocs 59.0±1.4 59.2±1.4 62.2±3.9 64.7±2.5 71.0±2.1 60.6±2.1 57.7±2.9
+FiQA-2018 80.6±0.6 79.6±3.3 80.2±3.4 81.6±3.3 83.8±3.7 80.2±2.5 79.0±1.3
+ArguAna 89.5±2.1 88.9±0.5 90.0±2.7 89.8±0.7 92.5±1.7 90.9±1.9 89.0±1.5
+H-MoE(Ours)
+Avg. 76.4 75.9 77.4 78.7 82.5 77.2 75.3
+26
+Generalizable and Composable Multi-Model Embedding Translation
+Table 19.Pairwise Model Translation Performance (Recall@100) - Group 9. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset sfr→mistralgritlm→geminigritlm→nemotrongritlm→qwen gritlm→kalm gritlm→linq gritlm→e5
+GW
+SciDocs 0.3± 0.3 1.1±0.4 2.8±0.2 3.9±0.0 1.4±0.4 4.2±0.4 4.7±0.3
+FiQA-2018 1.5± 0.2 3.2±0.4 2.6±0.2 2.7±0.4 0.4±0.5 3.0±0.4 1.0±0.5
+ArguAna 0.4± 0.1 4.9±0.4 1.7±0.1 4.9±0.1 4.2±0.4 4.6±0.0 2.5±0.2
+Avg.0.7 3.1 2.3 3.8 2.0 3.9 2.8
+PA
+SciDocs 2.4± 0.7 15.5±6.6 16.2±3.3 13.5±6.5 10.3±1.3 16.7±7.7 3.2±1.3
+FiQA-2018 9.3± 0.5 1.3±0.6 7.3±0.8 3.8±1.8 11.9±1.2 10.5±4.9 16.5±1.8
+ArguAna 4.2± 0.7 13.2±5.7 3.2±0.7 15.7±6.3 16.0±7.6 4.5±1.5 2.4±1.0
+Avg.5.3 10.0 8.9 11.0 12.7 10.6 7.4
+CCA
+SciDocs 37.4± 6.2 34.8±8.8 44.8±7.4 45.6±5.9 44.3±8.7 35.5±7.6 36.2±6.1
+FiQA-2018 59.2± 4.3 58.0±5.9 62.3±8.2 61.1±8.5 57.0±4.8 57.8±5.2 55.9±7.0
+ArguAna 69.2± 4.0 69.3±6.4 69.3±8.8 67.5±7.1 69.0±4.9 65.9±8.2 68.9±4.9
+Avg.55.3 54.0 58.8 58.1 56.7 53.0 53.7
+Vec2Vec
+SciDocs 21.6± 11.9 37.7±8.6 33.3±6.6 28.4±9.7 30.0±12.3 39.4±11.7 25.2±12.4
+FiQA-2018 27.9± 9.4 25.3±9.3 30.8±12.8 29.5±12.2 33.6±10.3 28.5±12.9 21.3±8.7
+ArguAna 21.8± 9.8 25.4±6.4 31.1±11.9 21.6±12.3 35.1±7.2 39.9±10.4 26.5±7.9
+Avg.23.8 29.4 31.8 26.5 32.9 36.0 24.3
+EmbConv
+SciDocs 42.7± 3.0 39.8±3.3 52.2±2.5 54.8±1.6 49.1±2.7 44.0±2.6 44.2±1.4
+FiQA-2018 65.9± 2.0 68.8±1.7 69.7±1.4 64.6±3.2 62.6±1.3 66.9±3.1 64.2±1.3
+ArguAna 78.6± 2.5 76.3±2.0 74.6±1.1 72.2±1.8 77.3±3.1 72.6±3.2 71.6±1.1
+Avg.62.4 61.6 65.5 63.9 63.0 61.2 60.0
+SciDocs 60.9±3.4 59.1±1.5 66.4±1.8 67.0±1.1 64.2±1.1 59.0±1.4 57.7±3.7
+FiQA-2018 81.6±1.4 80.3±2.3 83.5±1.1 84.1±3.1 82.3±3.9 79.5±0.6 80.0±2.6
+ArguAna 90.1±3.7 89.9±0.9 92.1±2.6 91.7±1.5 91.5±2.8 90.2±3.2 88.7±1.4
+H-MoE(Ours)
+Avg. 77.5 76.4 80.7 81.0 79.3 76.2 75.4
+Table 20.Pairwise Model Translation Performance (Recall@100) - Group 10. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset gritlm→sfrgritlm→openaigritlm→mistralopenai→geminiopenai→nemotronopenai→qwen openai→kalm
+GW
+SciDocs 1.6± 0.5 4.1±0.2 1.6±0.1 1.6±0.1 3.6±0.3 1.0±0.4 4.2±0.4
+FiQA-2018 2.2± 0.2 2.6±0.3 4.9±0.3 4.5±0.4 1.4±0.2 2.7±0.4 0.6±0.1
+ArguAna 1.3± 0.2 1.9±0.3 1.4±0.4 3.0±0.3 0.3±0.4 3.4±0.3 4.1±0.4
+Avg.1.7 2.9 2.6 3.0 1.8 2.4 3.0
+PA
+SciDocs 11.7± 2.3 5.6±2.5 14.7±3.1 15.3±3.8 1.1±0.5 11.0±2.5 14.2±1.8
+FiQA-2018 6.6± 2.6 14.7±4.5 1.9±0.9 12.3±4.9 3.7±1.5 7.1±0.6 10.9±1.7
+ArguAna 13.5± 2.6 2.1±1.0 4.2±1.1 11.0±1.4 13.1±1.0 6.9±0.5 6.4±0.9
+Avg.10.6 7.5 6.9 12.9 5.9 8.3 10.5
+CCA
+SciDocs 38.4± 4.8 37.4±5.7 48.9±4.7 43.9±6.7 39.5±6.7 40.5±7.0 39.8±5.0
+FiQA-2018 60.0± 5.5 59.9±4.9 63.3±4.8 56.2±7.3 60.1±7.5 56.0±4.5 57.8±5.0
+ArguAna 67.7± 5.7 66.5±6.0 68.9±4.2 71.0±7.4 69.0±7.3 70.1±4.6 69.2±4.2
+Avg.55.4 54.6 60.4 57.0 56.2 55.5 55.6
+Vec2Vec
+SciDocs 24.2± 12.5 21.8±9.6 22.0±7.2 20.9±12.0 36.3±7.3 35.9±6.8 33.6±7.3
+FiQA-2018 20.1± 10.7 22.0±7.8 25.8±11.6 23.4±8.5 39.2±7.9 21.2±12.6 27.2±6.2
+ArguAna 36.7± 10.7 39.8±8.1 34.8±6.7 32.4±12.1 37.0±11.6 28.3±10.1 36.8±12.8
+Avg.27.0 27.9 27.5 25.6 37.5 28.5 32.5
+EmbConv
+SciDocs 41.6± 1.3 46.3±2.4 60.9±1.9 53.2±3.1 48.4±2.6 50.3±2.2 45.6±1.8
+FiQA-2018 70.3± 1.7 65.1±1.8 72.3±3.1 64.1±1.2 68.3±2.1 70.2±2.0 68.8±2.7
+ArguAna 72.8± 2.7 73.3±1.2 72.7±1.1 78.4±3.4 76.3±3.1 80.3±1.2 77.5±1.1
+Avg.61.6 61.6 68.6 65.2 64.4 66.9 64.0
+SciDocs 61.0±2.1 62.0±0.9 74.0±1.5 63.7±3.0 62.4±1.9 61.4±3.7 61.9±3.8
+FiQA-2018 81.0±2.7 81.4±1.3 85.8±3.0 82.6±0.9 80.8±3.2 81.6±2.6 80.2±2.2
+ArguAna 90.2±2.8 89.9±3.4 91.5±1.1 91.0±1.2 90.7±0.9 90.8±2.1 90.3±0.7
+H-MoE(Ours)
+Avg. 77.4 77.8 83.8 79.1 78.0 77.9 77.4
+27
+Generalizable and Composable Multi-Model Embedding Translation
+Table 21.Pairwise Model Translation Performance (Recall@100) - Group 11. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset openai→linq openai→e5 openai→sfropenai→gritlmopenai→mistralmistral→geminimistral→nemotron
+GW
+SciDocs 4.2± 0.2 3.0±0.4 4.9±0.2 3.6±0.5 3.3±0.5 3.4±0.2 0.8±0.3
+FiQA-2018 4.6± 0.1 2.0±0.5 2.1±0.4 1.1±0.3 3.5±0.2 4.2±0.1 3.8±0.1
+ArguAna 3.7± 0.1 3.8±0.1 1.6±0.4 1.8±0.3 1.8±0.2 4.1±0.3 1.3±0.4
+Avg.4.2 3.0 2.8 2.2 2.9 3.9 2.0
+PA
+SciDocs 5.7± 2.3 9.9±1.6 16.4±2.8 15.4±5.6 3.8±1.5 10.2±1.7 10.7±3.7
+FiQA-2018 13.9± 1.2 13.6±2.3 1.2±0.5 12.9±3.8 3.7±1.2 12.2±1.4 10.0±2.1
+ArguAna 12.7± 5.6 15.6±3.3 13.3±5.9 13.3±6.4 7.8±2.4 6.1±0.6 6.0±1.1
+Avg.10.7 13.0 10.3 13.9 5.1 9.5 8.9
+CCA
+SciDocs 34.8± 6.5 34.4±7.8 34.0±7.1 38.6±5.4 41.4±6.6 35.1±8.3 45.8±7.7
+FiQA-2018 55.6± 4.5 53.5±8.1 55.1±7.4 57.6±5.9 60.9±8.8 59.0±6.7 61.6±5.7
+ArguAna 67.5± 5.7 70.0±7.3 64.7±8.7 68.6±4.2 70.3±4.3 65.2±7.9 70.8±8.0
+Avg.52.6 52.7 51.3 54.9 57.5 53.1 59.4
+Vec2Vec
+SciDocs 31.5± 7.6 32.8±10.3 26.0±6.6 27.8±11.6 27.5±12.6 26.1±11.2 36.7±7.4
+FiQA-2018 27.8± 10.4 31.7±10.9 28.8±8.8 39.2±7.0 31.1±6.9 26.9±8.9 36.0±12.0
+ArguAna 20.3± 10.7 38.6±6.7 29.5±9.7 38.3±11.6 31.9±9.8 30.3±7.1 38.6±13.0
+Avg.26.5 34.4 28.1 35.1 30.2 27.7 37.1
+EmbConv
+SciDocs 40.2± 1.7 45.1±2.5 45.2±1.8 50.9±2.8 43.4±3.1 42.6±1.1 56.5±2.9
+FiQA-2018 66.6± 2.8 66.1±2.1 69.5±1.6 67.0±1.9 64.8±1.7 65.8±2.5 72.1±2.9
+ArguAna 75.8± 1.3 76.3±2.5 71.7±2.1 74.3±1.4 80.2±1.2 75.0±2.4 79.4±2.2
+Avg.60.9 62.5 62.1 64.1 62.8 61.1 69.3
+SciDocs 55.8±1.9 56.0±1.1 59.0±3.9 61.5±0.7 61.3±2.1 59.1±2.3 69.6±2.8
+FiQA-2018 78.4±2.8 78.5±2.1 80.1±2.2 80.6±0.6 80.8±0.7 80.3±3.4 84.3±2.8
+ArguAna 89.8±3.3 88.5±3.8 89.4±1.3 89.6±3.7 91.2±1.6 89.2±2.4 92.6±2.3
+H-MoE(Ours)
+Avg. 74.7 74.3 76.2 77.3 77.8 76.2 82.1
+Table 22.Pairwise Model Translation Performance (Recall@100) - Group 12. Bold and underline denote the best and runner-up
+average results. Values highlighted in red indicate high-variance outcomes (std>10).
+Method Dataset mistral→qwenmistral→kalmmistral→linq mistral→e5 mistral→sfrmistral→gritlm
+GW
+SciDocs 4.5± 0.3 0.9±0.0 4.1±0.4 2.9±0.1 3.0±0.3 4.3±0.1
+FiQA-2018 4.4± 0.2 1.1±0.1 2.4±0.1 0.3±0.3 3.6±0.3 3.0±0.4
+ArguAna 3.1± 0.3 3.6±0.1 4.2±0.0 1.4±0.1 0.5±0.2 1.0±0.3
+Avg.4.0 1.9 3.6 1.5 2.4 2.8
+PA
+SciDocs 12.4± 2.5 9.0±2.2 2.9±0.9 6.9±0.6 13.0±4.7 7.5±1.1
+FiQA-2018 10.3± 1.6 2.5±0.9 10.5±4.4 4.6±2.0 3.1±1.0 13.5±4.1
+ArguAna 2.7± 0.7 1.6±0.7 13.2±4.5 7.0±2.3 14.6±2.4 1.1±0.5
+Avg.8.5 4.4 8.9 6.2 10.2 7.3
+CCA
+SciDocs 46.1± 5.8 40.6±7.8 36.6±7.5 36.9±6.0 40.1±4.7 48.0±7.1
+FiQA-2018 59.4± 5.3 58.0±6.4 55.9±7.3 56.6±7.5 59.6±4.3 62.3±7.0
+ArguAna 69.9± 5.8 67.7±5.3 67.9±7.5 69.3±8.8 69.3±4.2 68.9±7.2
+Avg.58.5 55.5 53.5 54.3 56.3 59.7
+Vec2Vec
+SciDocs 24.0± 10.6 20.7±7.7 30.4±11.2 25.5±10.2 25.9±12.6 31.3±11.4
+FiQA-2018 25.7± 6.2 23.1±13.0 21.8±8.0 38.6±10.0 39.1±12.1 39.2±9.2
+ArguAna 30.3± 7.6 27.1±8.8 38.3±8.4 28.1±6.7 31.5±10.9 31.7±6.2
+Avg.26.7 23.6 30.2 30.8 32.2 34.1
+EmbConv
+SciDocs 55.9± 2.6 45.1±1.6 39.4±1.7 47.3±1.5 45.7±2.9 55.2±2.2
+FiQA-2018 67.6± 1.6 64.6±3.1 63.7±3.3 63.0±1.4 70.5±2.2 67.6±1.7
+ArguAna 71.4± 2.3 70.6±2.2 77.7±2.8 69.7±2.7 75.5±3.5 76.1±1.1
+Avg.65.0 60.1 60.3 60.0 63.9 66.3
+SciDocs 67.9±2.2 63.8±3.9 58.1±2.5 58.1±2.1 62.0±1.8 73.3±1.3
+FiQA-2018 83.4±2.3 82.5±2.1 79.3±2.6 79.9±1.8 81.6±1.5 85.0±1.4
+ArguAna 91.1±2.9 91.2±0.5 89.2±2.4 89.7±1.2 89.6±1.0 91.9±2.0
+H-MoE(Ours)
+Avg. 80.8 79.2 75.5 75.9 77.7 83.4
+28

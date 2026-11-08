@@ -1,0 +1,10 @@
+{
+  "dataset": "synthetic",
+  "pair": "synthetic",
+  "seed": 17,
+  "budget": "75pct",
+  "method": "ridge_affine_l10_bias_regularized",
+  "endpoint_sha256": "801111412836f314aff84278f02887818cf1f294e75636b16e3e572fc33ed0f0",
+  "ranking_sha256": "3fb941dda2b19aa79e2df7bbe277f42b7ba82181e337591b8c2039ae69df2927",
+  "all_top100_ids_and_order_equal": true
+}

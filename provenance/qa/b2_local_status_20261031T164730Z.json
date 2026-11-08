@@ -1,0 +1,26 @@
+{
+  "checked_utc": "2026-10-31T16:47:57.064635+00:00",
+  "verified_files": 848,
+  "verified_bytes": 40196068953,
+  "last_events": [
+    {
+      "status": "POLL_VERIFIED",
+      "groups": 41,
+      "files": 848,
+      "pending": 3,
+      "unstable": 3,
+      "utc": "20261031T164637_027783Z"
+    },
+    {
+      "status": "POLL_VERIFIED",
+      "groups": 41,
+      "files": 848,
+      "pending": 3,
+      "unstable": 3,
+      "utc": "20261031T164738_623222Z"
+    }
+  ],
+  "manuscript_files_checked": 20,
+  "manuscript_changed": [],
+  "backup_complete": false
+}

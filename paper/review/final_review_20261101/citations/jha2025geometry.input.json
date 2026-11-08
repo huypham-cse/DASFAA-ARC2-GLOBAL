@@ -1,0 +1,21 @@
+{
+  "key": "jha2025geometry",
+  "bib_entry": "@inproceedings{jha2025geometry,\n  author = {Jha, Rishi and Zhang, Collin and Shmatikov, Vitaly and Morris, John},\n  title = {Harnessing the Universal Geometry of Embeddings},\n  booktitle = {Advances in Neural Information Processing Systems},\n  volume = {38, Main Conference},\n  pages = {45963--45987},\n  year = {2025},\n  doi = {10.52202/085713-1530},\n}",
+  "contexts": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 23,
+      "text": "\\paragraph{Geometric alignment and refinement.}\nOrthogonal Procrustes provides the classical least-squares alignment underlying our initialization~\\cite{schonemann1966procrustes}.\nRecent work connects approximate preservation of pairwise inner products to bounds on Procrustes alignment error and demonstrates interoperability across retrieval models~\\cite{maystre2025procrustes}.\nUnpaired translation pursues a different supervision regime: vec2vec learns translation through a shared latent representation without known correspondences~\\cite{jha2025geometry}, while mini-vec2vec combines pseudo-pair construction, Procrustes estimation, and iterative matching and clustering refinements~\\cite{dar2025mini}.\nThus, linear translation, Procrustes initialization, and refinement are all established ingredients.\nARC2-Global uses known document correspondences and a specific finite refinement: exactly two ridge-fitted tangent corrections to a centered rectangular Procrustes initialization.\nBoth corrections are folded into one affine coefficient matrix, followed by row normalization at application time.\nThis differs from discovering pseudo-correspondences, learning a latent translator, or routing documents among local maps."
+    }
+  ],
+  "primary_source_record": {
+    "key": "jha2025geometry",
+    "source_file": "citation_sources/jha2025geometry_conference_bib.txt",
+    "metadata_url": "https://proceedings.neurips.cc/paper_files/paper/28820-/bibtex",
+    "verification": "publisher-export",
+    "sha256": "7baf9e4f88272054bad4779681e8f7bc28456c114a75716c28a718168a325aa8",
+    "metadata_type": "inproceedings",
+    "status": "verified"
+  },
+  "bibliography_sha256": "c04d2e03b5df17f3e6e026bd7f8e7c942905055de4174c9a45f1fddeb7941de2"
+}

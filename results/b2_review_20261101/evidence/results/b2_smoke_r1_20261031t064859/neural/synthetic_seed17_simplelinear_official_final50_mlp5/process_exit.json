@@ -1,0 +1,17 @@
+{
+  "status": "EXITED",
+  "argv": [
+    "/network-volume/arc2_recovery_20261030/envs/gpu/bin/python",
+    "-u",
+    "/home/jovyan/arc2_b2_20261031/code_26feef1/ops/b1p_neural_worker.py",
+    "--request",
+    "/home/jovyan/arc2_b2_20261031/code_26feef1/results/b2_smoke_r1_20261031t064859/neural/synthetic_seed17_simplelinear_official_final50_mlp5/request.json"
+  ],
+  "started_utc": "2026-10-31T06:50:03.760398+00:00",
+  "pid": 253122,
+  "returncode": 0,
+  "signal_number": null,
+  "ended_utc": "2026-10-31T06:50:13.857778+00:00",
+  "stdout_sha256": "7cdee3c9e87a5ffcff1f614017108e358d2583cf63b9d337eb5418e288fd0534",
+  "stderr_sha256": "b03d5e4cec55c297974b5c7cd01b538e9c3d99173a6d6cf1a694f854c841692c"
+}

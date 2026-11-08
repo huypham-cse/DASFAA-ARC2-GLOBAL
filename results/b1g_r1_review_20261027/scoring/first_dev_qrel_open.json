@@ -1,0 +1,105 @@
+{
+  "first_dev_qrel_open_unix": 1793107862.8915524,
+  "code_commit": "515b3d10b8c09f1900c5215b5b709b47830f3236",
+  "lock_sha256": "ea12eb90173d9b1f9f93883f1efa157946c67a91169d3c6a57f35eef7c316c53",
+  "shards": [
+    {
+      "shard": "main",
+      "run": "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027",
+      "seal_sha256": "37a2e0ff7ee8af4395d5a325434262e3e3ecd719e760427b6a39ed1a6160bcee"
+    },
+    {
+      "shard": "mini",
+      "run": "/root/arc2_global_paper_20261025/b1g_import_mini_r1_20261027/mini",
+      "seal_sha256": "7ac44def85ed51a412d2e9b847d01b767b800497a99bc8d16437fe9ebd6db4e2"
+    }
+  ],
+  "complete_gallery_groups": 210,
+  "complete_partial_cases": 450,
+  "expected_sources": {
+    "NanoNQ": {
+      "format": "parquet",
+      "sha256": "ec0344cbf2075407a0472ab1cc91186b42a0ca5387f4b0af92cb260b19d8b6f5",
+      "bytes": 2020,
+      "implicit_binary_grade": 1,
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoNQ.parquet"
+    },
+    "NanoHotpotQA": {
+      "format": "parquet",
+      "sha256": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+      "bytes": 3424,
+      "implicit_binary_grade": 1,
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoHotpotQA.parquet"
+    },
+    "NanoFEVER": {
+      "format": "parquet",
+      "sha256": "cf09be06c30eeb422b688a6af06fcb15110549e7eb7d4df61082c5ba4ed3cf6f",
+      "bytes": 2730,
+      "implicit_binary_grade": 1,
+      "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoFEVER.parquet"
+    },
+    "FiQA": {
+      "format": "tsv",
+      "path": "/root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+      "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11"
+    }
+  },
+  "exposure": "Previously inspected DEV only; no independent confirmation",
+  "historical_metrics": [
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/cell_index.json",
+        "sha256": "06c4fa7251355dc4d4c955b974e21c1013e30dab7814203f1db787bae4d9ceb3"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoNQ/per_query.npy",
+        "sha256": "a53be45fba376c9ed072bbf326bdb6450599d7ed9605e87b50ed0decd9ca96e2"
+      },
+      "rows": 184
+    },
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/cell_index.json",
+        "sha256": "b0b710c3fc0074aabab239721db266dafbd5a51115e87fb0fd4827df186e4811"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoHotpotQA/per_query.npy",
+        "sha256": "d0e714342e6b3d08564ab3d988bc73f8a529db5b610a32b8d55a8bb12cb56799"
+      },
+      "rows": 184
+    },
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/cell_index.json",
+        "sha256": "31dea095fa0af0ea391de807d3a3ce7bc5a27b5e0d86e46bfa304b175428028a"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/NanoFEVER/per_query.npy",
+        "sha256": "9dc985097699befc5073e172d3609c73951086445138e065fa981645951b54eb"
+      },
+      "rows": 184
+    },
+    {
+      "cell_index": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/FiQA/cell_index.json",
+        "sha256": "ff35ab9114296da0b9ce2349edaf915180b84413589042113133292f5cb12601"
+      },
+      "per_query": {
+        "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/FiQA/per_query.npy",
+        "sha256": "4647bc64355eb1de7a5e94045993895078d350d9485a4fdba24c7205b8297a5c"
+      },
+      "rows": 184
+    },
+    {
+      "cell_index": {
+        "path": "results/b1p_r5_review_20261027/scoring/cell_index.json",
+        "sha256": "9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375"
+      },
+      "per_query": {
+        "path": "results/b1p_r5_review_20261027/scoring/per_query.npy",
+        "sha256": "551dc388059b6a530df550acbbd9a477de76cd0cc188ce54da0a1198be1434d1"
+      },
+      "rows": 124
+    }
+  ]
+}

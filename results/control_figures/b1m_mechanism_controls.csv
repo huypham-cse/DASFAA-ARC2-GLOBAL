@@ -1,0 +1,6 @@
+contrast,left,right,metric,delta,interval_low,interval_high,decision,per_interval_confidence,family_size,strata,scope
+ARC2 − zero-step Procrustes,arc2_global_tangent2_r1,procrustes_global,ndcg10,0.024325109040435233,0.01801533254696277,0.03102132243820168,above_zero,0.99,5,24,inspected DEV
+ARC2 − one tangent step,arc2_global_tangent2_r1,tangent1_l10,ndcg10,0.006923862939737235,0.003809388309482942,0.009959126205904258,above_zero,0.99,5,24,inspected DEV
+ARC2 − affine ridge,arc2_global_tangent2_r1,ridge_affine_l10_bias_regularized,ndcg10,0.09565304927282199,0.07535298921225946,0.11663127039230592,above_zero,0.99,5,24,inspected DEV
+λ=1 two-step − locked ARC2,tangent2_l1,arc2_global_tangent2_r1,ndcg10,0.0031974956912717346,-0.0018903844098364442,0.00830403326634241,unresolved,0.99,5,24,inspected DEV
+λ=100 two-step − locked ARC2,tangent2_l100,arc2_global_tangent2_r1,ndcg10,-0.00925533869678723,-0.01321398029023485,-0.005510245768211927,below_zero,0.99,5,24,inspected DEV

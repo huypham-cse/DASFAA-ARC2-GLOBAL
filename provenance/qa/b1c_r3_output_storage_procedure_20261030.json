@@ -1,0 +1,28 @@
+{
+  "status": "PRE_OPERATION_COMMITTED_PROCEDURE",
+  "scope": "Only active generated full-run output storage; not a new scientific run or algorithm change",
+  "operator_sha256": "d51ec101b256cdb79bc4e69452ffdef50729b73b6b16122e50a29e64bea200d3",
+  "source": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347",
+  "destination": "/home/jovyan/arc2_b1c_r3_outputs_20261030/b1c_r3_full_mini_r3b_20261030t0347",
+  "reason": "Actual shared NFS free space about8GB; remaining25converter groups need substantially more checkpoint space. XFS volume has599GB free.",
+  "procedure": [
+    "Validate exact owned controller identities",
+    "SIGSTOP two owned controllers only; current GPU worker finishes naturally",
+    "Verify no active worker or unexpected output writer remains",
+    "Copy/hash every opaque output file; preserve file modes/mtime",
+    "Verify immutable source dev/inode/size/mtime unchanged",
+    "Preserve original NFS output tree; switch only its logical directory alias to XFS",
+    "Resume exact same owned controller PIDs; retain wall/resource pause record"
+  ],
+  "no_raw_deletion": true,
+  "new_fits_or_rankings_by_operator": 0,
+  "scientific_deployment_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "scientific_lock_unchanged": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d",
+  "source_git_runtime_restored_inputs_remain_on_original_inodes": true,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "review_trace": ".aris/traces/research-review/2026-10-31_b1c_r3_storage/002-operator.response.md",
+  "linux_opaque_fixture": "PASS including root-symlink traversal; no scientific data/signals",
+  "cost_semantics": "Record pause in full wall time; no isolated cost/traffic/SLO claim",
+  "status_at_preparation": "283/358rankings; originalrun remains RUNNING until operator state receipts"
+}

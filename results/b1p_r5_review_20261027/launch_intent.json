@@ -1,0 +1,24 @@
+{
+  "status": "CPU_SCORING_RECOVERY_LAUNCH_INTENT",
+  "utc": "2026-10-27T03:20:34.507297+00:00",
+  "recovery_commit": "4062d96c353ac567fb90a6093cd8059d4647e252",
+  "generation_commit": "7530c8eb46b68c9d5937c4bb9ccfd929d1613e74",
+  "argv": [
+    "/root/arc2_p3h_20261020/venv/bin/python",
+    "-u",
+    "/root/arc2_global_paper_20261025/code_4062d96_score_recovery/ops/b1p_score_recovery.py",
+    "--stage",
+    "score",
+    "--lock",
+    "/root/arc2_global_paper_20261025/code_4062d96_score_recovery/configs/b1p_score_recovery_lock.json",
+    "--code-commit",
+    "4062d96c353ac567fb90a6093cd8059d4647e252",
+    "--output",
+    "/root/arc2_global_paper_20261025/code_7530c8e_mini_r5/results/b1p_full_mini_r5_20261026/scoring_recovery_r1_20261027",
+    "--smoke",
+    "/root/arc2_global_paper_20261025/code_4062d96_score_recovery/results/b1p_scoring_recovery_smoke_r1_20261027"
+  ],
+  "TREC_access": false,
+  "new_fitting": false,
+  "STOP": "after B1-P report"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "jha2025geometry",
+  "audit_date": "2026-11-01",
+  "review_status": "same-family/provisional",
+  "existence": "VERIFIED",
+  "metadata": {
+    "verdict": "MATCHES_OFFICIAL_CONFERENCE_EXPORT_WITH_PAGINATION_CONFLICT",
+    "type": "inproceedings",
+    "authors": ["Rishi Jha", "Collin Zhang", "Vitaly Shmatikov", "John Morris"],
+    "title": "Harnessing the Universal Geometry of Embeddings",
+    "booktitle": "Advances in Neural Information Processing Systems",
+    "volume": "38, Main Conference",
+    "year": 2025,
+    "pages": "45963--45987",
+    "doi": "10.52202/085713-1530",
+    "version": "NeurIPS 2025 Main Conference published paper",
+    "author_spelling_note": "Conference PDF and arXiv spell the last author John X. Morris; supplied John Morris matches official conference landing page and BibTeX export.",
+    "pagination_note": "Official live NeurIPS export gives 45963--45987; DOI-linked proceedings.com vendor gives 51335--51359. Preserve conference export; unresolved publisher-side conflict.",
+    "arxiv_note": "arXiv:2505.12540 first submitted 2025-05-18; current v4 revised 2026-01-26. Published conference remains 2025."
+  },
+  "sources": [
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/28820-/bibtex",
+      "primary": true,
+      "retrieval": "Live HTTP GET with PowerShell Invoke-WebRequest -UseBasicParsing; UTF-8 decoded response",
+      "facts": ["Exact supplied bibliography fields verified, including 2025, pages 45963--45987 and DOI"]
+    },
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/4175dee33d6145cb8f0323703d138a53-Abstract-Conference.html",
+      "primary": true,
+      "retrieval": "Live web open",
+      "facts": ["Title and authors", "NeurIPS 2025 Main Conference", "DOI 10.52202/085713-1530"]
+    },
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/4175dee33d6145cb8f0323703d138a53-Paper-Conference.pdf",
+      "primary": true,
+      "retrieval": "Live web PDF open",
+      "facts": ["Sections 2--3.1 establish no paired correspondence and shared latent translation", "Section 4.1 specifies disjoint training-document sets", "PDF spells John X. Morris"]
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.12540",
+      "primary": true,
+      "retrieval": "Live web open",
+      "facts": ["Initial submission 2025-05-18", "Latest v4 revision 2026-01-26"]
+    },
+    {
+      "url": "https://www.proceedings.com/085713-1530.html",
+      "primary": true,
+      "retrieval": "Live web open and search extraction",
+      "facts": ["DOI-linked proceedings vendor lists conflicting pagination 51335--51359"]
+    }
+  ],
+  "uses": [
+    {
+      "file": "sections/related-work.tex",
+      "line": 23,
+      "line_basis": "supplied context location",
+      "claim": "vec2vec learns translation through a shared latent representation without known correspondences",
+      "verdict": "SUPPORTS",
+      "reason": "Conference PDF sections 2--3.1 explicitly formulate translation without pairwise correspondence and use input adapters, a shared backbone and output adapters for common latent translation. Section 4.1 trains on disjoint document sets. Both the supervision regime and mechanism are directly supported.",
+      "evidence_locations": ["Conference PDF pp. 2--3, sections 2--3.1", "Conference PDF p. 5, section 4.1"],
+      "confidence": 0.98
+    }
+  ],
+  "decision": "KEEP",
+  "fix": null,
+  "confidence": {"existence": 0.99, "metadata": 0.90, "claim_support": 0.98},
+  "limitations": ["Same-family/provisional review", "Publisher-side pagination conflict remains unresolved", "Only the supplied jha2025geometry use was evaluated"]
+}

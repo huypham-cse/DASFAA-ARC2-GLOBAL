@@ -1,0 +1,2 @@
+{"unix": 1792954125.345008, "pid": 2879857, "process_tree_rss_bytes": 65486848, "host_available_memory_bytes": 2016519745536, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 39987 MiB, 100 %", "gpu_query_exit": 0}
+{"unix": 1792954126.3383172, "pid": 2879857, "process_tree_rss_bytes": 100970496, "host_available_memory_bytes": 2016041287680, "shared_gpu": "GPU-fc097b05-fa24-a5d9-6411-06cedd74e4ec, 39987 MiB, 95 %", "gpu_query_exit": 0}

@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "71e70cab8a5d14f1783b25f1515fcaef21e45d74443c947e0335c1d4a447ad13",
+  "bytes": 41871,
+  "source_root": "/root/arc2_global_paper_20261025/code_1eaac90/results",
+  "scope": "failed smoke receipt subset; full raw source/checkpoints preserved on H100",
+  "host_memory_available_GiB": 1875.407829284668,
+  "full_dense_refit_similarity_GiB": 3.0939830876886845,
+  "local_result": "D:\\DASFAA-2027-paper\\results\\b1p_first_smoke_receipts_20261026"
+}

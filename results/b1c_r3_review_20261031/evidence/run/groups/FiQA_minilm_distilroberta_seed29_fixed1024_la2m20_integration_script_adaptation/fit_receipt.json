@@ -1,0 +1,25 @@
+{
+  "status": "CPU_FIT_PASS",
+  "method": "la2m20_integration_script_adaptation",
+  "fit_pairs": 1024,
+  "fit_seconds": 0.9541371678933501,
+  "mapping_seconds": 0.6482927165925503,
+  "phases": {},
+  "parameters_sha256": "d2fbe8cb5cd0695438b47c7f87b0ffa50bfb3f097566c73a9f82e951fcdf5b5a",
+  "backend_id": null,
+  "new_physical_document_encodes": 0,
+  "new_fit": true,
+  "group_id": "FiQA_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation",
+  "dataset": "FiQA",
+  "pair": "minilm_distilroberta",
+  "seed": 29,
+  "regime": "fixed1024",
+  "paired_target_path": "groups/FiQA_minilm_distilroberta_seed29_fixed1024_la2m20_integration_script_adaptation/FiQA_anchor_targets.npy",
+  "paired_target_sha256": "927348ce94758a3a5ee6202ffdd4e2684ddd91c259d0828f894460b77832e4ca",
+  "anchor_target_source_budget": "75pct",
+  "shared_across_budgets": [
+    "25pct",
+    "50pct",
+    "75pct"
+  ]
+}

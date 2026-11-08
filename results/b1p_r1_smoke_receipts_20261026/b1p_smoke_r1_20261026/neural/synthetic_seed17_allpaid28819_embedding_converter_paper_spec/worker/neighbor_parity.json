@@ -1,0 +1,279 @@
+{
+  "implementation": "dense_float32_scores_stable_topk_r1",
+  "seed": 17,
+  "checks": [
+    {
+      "fixture": "random",
+      "k": 1,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "109c04f94a79d85299761901e1e92b04a01111427bb9e339bfe28dc9ac426e93"
+    },
+    {
+      "fixture": "random",
+      "k": 1,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "109c04f94a79d85299761901e1e92b04a01111427bb9e339bfe28dc9ac426e93"
+    },
+    {
+      "fixture": "random",
+      "k": 1,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "109c04f94a79d85299761901e1e92b04a01111427bb9e339bfe28dc9ac426e93"
+    },
+    {
+      "fixture": "random",
+      "k": 7,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "6dc286840cfbc622f867ad7bf80a0f4a14c8376a583aad12e39cb9dfd710c8c0"
+    },
+    {
+      "fixture": "random",
+      "k": 7,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "6dc286840cfbc622f867ad7bf80a0f4a14c8376a583aad12e39cb9dfd710c8c0"
+    },
+    {
+      "fixture": "random",
+      "k": 7,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "6dc286840cfbc622f867ad7bf80a0f4a14c8376a583aad12e39cb9dfd710c8c0"
+    },
+    {
+      "fixture": "random",
+      "k": 100,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "538262696fefad337efde105f25acf55d4a76bef6afc79fa7943b0b7dcdcb3cb"
+    },
+    {
+      "fixture": "random",
+      "k": 100,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "538262696fefad337efde105f25acf55d4a76bef6afc79fa7943b0b7dcdcb3cb"
+    },
+    {
+      "fixture": "random",
+      "k": 100,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "538262696fefad337efde105f25acf55d4a76bef6afc79fa7943b0b7dcdcb3cb"
+    },
+    {
+      "fixture": "random",
+      "k": 136,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "37ed0421d5ece581cd72852523b71b3ec583dca61fbff73634e14582c5ed4a0c"
+    },
+    {
+      "fixture": "random",
+      "k": 136,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "37ed0421d5ece581cd72852523b71b3ec583dca61fbff73634e14582c5ed4a0c"
+    },
+    {
+      "fixture": "random",
+      "k": 136,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "37ed0421d5ece581cd72852523b71b3ec583dca61fbff73634e14582c5ed4a0c"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 1,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "541f7a6ee4e8ad201b9a10a24a13973f1c0de501f828e383895f365cbdfea949"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 1,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "541f7a6ee4e8ad201b9a10a24a13973f1c0de501f828e383895f365cbdfea949"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 1,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "541f7a6ee4e8ad201b9a10a24a13973f1c0de501f828e383895f365cbdfea949"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 7,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "04eab336fa91f65e3aa915f82c54ffbcc43c52e3021e2df437ebd8dcf25abbdd"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 7,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "04eab336fa91f65e3aa915f82c54ffbcc43c52e3021e2df437ebd8dcf25abbdd"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 7,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "04eab336fa91f65e3aa915f82c54ffbcc43c52e3021e2df437ebd8dcf25abbdd"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 100,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "3e27320e1fac4cbc497751e88974b37a392e8185e8ad71bde94a14efb9cc9863"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 100,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "3e27320e1fac4cbc497751e88974b37a392e8185e8ad71bde94a14efb9cc9863"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 100,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "3e27320e1fac4cbc497751e88974b37a392e8185e8ad71bde94a14efb9cc9863"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 136,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "c74b2f9267b8d1f34c910b20399ea671e4c761607ec5295cf5d8847a69964ed8"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 136,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "c74b2f9267b8d1f34c910b20399ea671e4c761607ec5295cf5d8847a69964ed8"
+    },
+    {
+      "fixture": "duplicate_boundary_ties",
+      "k": 136,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "c74b2f9267b8d1f34c910b20399ea671e4c761607ec5295cf5d8847a69964ed8"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 1,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "1f855afc3f9069aa42b69b39ffc71f71308608a97ed868f4aef6a1f8bbdc76b1"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 1,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "1f855afc3f9069aa42b69b39ffc71f71308608a97ed868f4aef6a1f8bbdc76b1"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 1,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "1f855afc3f9069aa42b69b39ffc71f71308608a97ed868f4aef6a1f8bbdc76b1"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 7,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "51fb885b3fe6dadb9b16b3e27d6eeec37c2729177284945c0ce53d897cdd2da8"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 7,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "51fb885b3fe6dadb9b16b3e27d6eeec37c2729177284945c0ce53d897cdd2da8"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 7,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "51fb885b3fe6dadb9b16b3e27d6eeec37c2729177284945c0ce53d897cdd2da8"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 100,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "82d80033c055c9f8d718a20b70594c3cef03fb0cef9a9df79159e4aedfdbf8c6"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 100,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "82d80033c055c9f8d718a20b70594c3cef03fb0cef9a9df79159e4aedfdbf8c6"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 100,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "82d80033c055c9f8d718a20b70594c3cef03fb0cef9a9df79159e4aedfdbf8c6"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 136,
+      "block_rows": 16,
+      "dense_exact_ids_equal": true,
+      "sha256": "59f864313e36556a0c4837e59f8598e0711f78d907692dd96f6352eaa7ce1bc4"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 136,
+      "block_rows": 64,
+      "dense_exact_ids_equal": true,
+      "sha256": "59f864313e36556a0c4837e59f8598e0711f78d907692dd96f6352eaa7ce1bc4"
+    },
+    {
+      "fixture": "near_ties",
+      "k": 136,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "sha256": "59f864313e36556a0c4837e59f8598e0711f78d907692dd96f6352eaa7ce1bc4"
+    },
+    {
+      "fixture": "fullwidth_normal",
+      "rows": 1024,
+      "target_dim": 768,
+      "k": 100,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "max_float32_score_drift": 0.0,
+      "sha256": "84d7664ae4e9909df4d8ae2fe5dd16d8fb524fbad74fb6c5812e49cc75802080"
+    },
+    {
+      "fixture": "fullwidth_normal_offset",
+      "rows": 1024,
+      "target_dim": 768,
+      "k": 100,
+      "block_rows": 256,
+      "dense_exact_ids_equal": true,
+      "max_float32_score_drift": 0.0,
+      "sha256": "3abe9105d89c0105aa0907fd25bb9123432a811bedc6f215e35db39029bd0031"
+    }
+  ],
+  "reference": "original float32 dense @ and stable argsort; synthetic only"
+}

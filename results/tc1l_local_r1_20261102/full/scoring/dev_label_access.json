@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-02T01:26:43.481322+00:00",
+  "source": {
+    "archive": "provenance/qa/cloud_backup_20261030/local_transport_20261030.tar",
+    "member": "root/arc2_p3h_20261020/p8_r10_work_20261025/artifact/data/p4_fiqa_minilm_distilroberta/source/fiqa-extracted/fiqa/qrels/dev.tsv",
+    "sha256": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+    "already_inspected_development": true
+  },
+  "already_inspected_development_labels": true,
+  "all20rankings_sealed": true
+}

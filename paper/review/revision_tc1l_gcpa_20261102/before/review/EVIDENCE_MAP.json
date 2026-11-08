@@ -1,0 +1,4773 @@
+{
+  "schema": "arc2-paper-evidence-map-v1",
+  "generator": {
+    "path": "paper/scripts/build_evidence.py",
+    "sha256": "8f81be962794f48c68b8cdef917cb34fb95aaf8e2e911515c547b2289e3d2a16"
+  },
+  "policy": "All scientific values from completed raw-scored JSON/NPY; no qrels, fitting, encoding or search. Saved intervals are copied, never recomputed or pooled.",
+  "sources": {
+    "dev": {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/summary.json",
+      "sha256": "501f065498d7325d402fcf2eef616b1d4b602ecf91d042d9ac03f780f597fec5"
+    },
+    "mechanism": {
+      "path": "results/b1mp0_r1_review_20261026/b1m_full_r1_20261026/scoring_r2_binary/results_summary.json",
+      "sha256": "688d8b07a91b952f7ef96e859c5daa08cae4122c8ee69ae8dccf64dbe351eded"
+    },
+    "allpaid": {
+      "path": "results/b1p_r5_review_20261027/scoring/results_summary.json",
+      "sha256": "3ba283b580f6a7b2704a4c6746243987a9056c852e8e7f71ef78399984418fe7"
+    },
+    "gallery": {
+      "path": "results/b1g_r1_review_20261027/scoring/results_summary.json",
+      "sha256": "2b5dbab47bb470bb546ef79a3c591144c9093d0090c7cc7b2eace416353df70f"
+    },
+    "trec": {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/summary.json",
+      "sha256": "646b1f535db1138dc51a2d8d1296b97de89ba8354ead9f88e45080c9cb5f18c7"
+    },
+    "dev_lock": {
+      "path": "configs/b1c_r3_lock.json",
+      "sha256": "f567a4b6267baef3c59de1aca750d19ba3479d228109f7d098fd45d26586830d"
+    },
+    "trec_lock": {
+      "path": "configs/b2_lock.json",
+      "sha256": "e00c970a4061ce6d50f2af9817621243959a9372e6c12a0d4e9c9c9c9d2a93f5"
+    },
+    "paid_lock": {
+      "path": "configs/b1p_lock.json",
+      "sha256": "0224200454b0deb8f2176e509d8bd99da0f59c7ae7b12a2488ec6eadad7308ad"
+    },
+    "dataset_registry": {
+      "path": "configs/datasets.json",
+      "sha256": "c26318609b4959f2c07110c3e610de8f77befcad2c35d8de836d7821eb8a9b82"
+    },
+    "results/b1c_r3_review_20261031/evidence/run/scoring/cell_index.json": {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/cell_index.json",
+      "sha256": "c4d23f1730dbd10b3975590faf77ab0210869d19306c6adfe64785e3e7e515aa"
+    },
+    "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_FiQA.npy": {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_FiQA.npy",
+      "sha256": "3008af5125a8ab4d941aa1b8597507c9e30caa17dad2ab5c4f2c8eff3a15c9da"
+    },
+    "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoFEVER.npy": {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoFEVER.npy",
+      "sha256": "4dcb99a9ce16125b857721ec035f9a5d0ddbc78099ff1023d95bacfc11efac5d"
+    },
+    "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoHotpotQA.npy": {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoHotpotQA.npy",
+      "sha256": "46966df3fffc74b63b935082b77db720cbcbc5b97bd0a656d3b9d732c508c7ee"
+    },
+    "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoNQ.npy": {
+      "path": "results/b1c_r3_review_20261031/evidence/run/scoring/per_query_NanoNQ.npy",
+      "sha256": "59ff7a5599c53252d22680101e3804cef6effd189d8b73c158eb051add09d180"
+    },
+    "results/b1p_r5_review_20261027/scoring/cell_index.json": {
+      "path": "results/b1p_r5_review_20261027/scoring/cell_index.json",
+      "sha256": "9163fb3cdf52fffbfa9f11e2ee4685cd56a1785b6f67da91ab4b31c2e8381375"
+    },
+    "results/b1p_r5_review_20261027/scoring/per_query.npy": {
+      "path": "results/b1p_r5_review_20261027/scoring/per_query.npy",
+      "sha256": "551dc388059b6a530df550acbbd9a477de76cd0cc188ce54da0a1198be1434d1"
+    },
+    "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/cell_index.json": {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/cell_index.json",
+      "sha256": "d814ca87e947638e826d8f46bacab4f0f3526150ada9552c5ca59ca4b1776410"
+    },
+    "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/per_query.npy": {
+      "path": "results/b2_review_20261101/evidence/results/b2_full_r1_20261031t064859/scoring/per_query.npy",
+      "sha256": "ffae3f16c279f3968c430537694df82ea0e8ec7aaed58576125522c9fb1d24be"
+    }
+  },
+  "artifacts": {
+    "generated/dev_macro.tex": {
+      "sources": [
+        "dev"
+      ],
+      "operation": "Means: equal arithmetic average of 24 condition means; differences/intervals: aggregate_contrasts.ndcg10.",
+      "values": [
+        {
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.527477527300496,
+          "recall100": 0.8658612474562474
+        },
+        {
+          "method": "procrustes_global",
+          "ndcg10": 0.5031524182600609,
+          "recall100": 0.8660998378473379,
+          "delta": 0.024325109040435233,
+          "family_ci": [
+            0.018132175212397208,
+            0.030791640313948616
+          ]
+        },
+        {
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.42342257351929274,
+          "recall100": 0.7758335509398009,
+          "delta": 0.10405495378120326,
+          "family_ci": [
+            0.08607033208524335,
+            0.1229148044499058
+          ]
+        },
+        {
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.3553776623832738,
+          "recall100": 0.6129790412827912,
+          "delta": 0.1720998649172223,
+          "family_ci": [
+            0.1498621517850371,
+            0.19470300383538613
+          ]
+        },
+        {
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.4318244780276741,
+          "recall100": 0.7441268305305805,
+          "delta": 0.09565304927282199,
+          "family_ci": [
+            0.07540472081021199,
+            0.11642668663044543
+          ]
+        },
+        {
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.36631519310915567,
+          "recall100": 0.7641036175861177,
+          "delta": 0.16116233419134046,
+          "family_ci": [
+            0.14268641175964025,
+            0.17991558284155384
+          ]
+        }
+      ],
+      "sha256": "58e7543a91a5bbfcce75969e6277967cc1978ec1fc6e96d5461c60d821b3ff27"
+    },
+    "generated/trec_means.tex": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "means filtered by method/pair/budget; ndcg10.mean.",
+      "sha256": "354d8f8e46373015b3af96c5e66c3923777a5e88baef2f95be84728f99555dce"
+    },
+    "generated/allpaid.tex": {
+      "sources": [
+        "allpaid"
+      ],
+      "operation": "means filtered by method/pair/regime; fixed/all-paid cells use exactly the same paid IDs.",
+      "values": [
+        {
+          "method": "arc2_global_tangent2_r1",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.3075048582716371,
+          "allpaid_ndcg10": 0.36714602143626496,
+          "allpaid_recall100": 0.6922001554001553
+        },
+        {
+          "method": "arc2_global_tangent2_r1",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.3116352075358866,
+          "allpaid_ndcg10": 0.29186698206096195,
+          "allpaid_recall100": 0.5594899234099235
+        },
+        {
+          "method": "procrustes_global",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.28582824088854003,
+          "allpaid_ndcg10": 0.3333864741159597,
+          "allpaid_recall100": 0.6904948307248308
+        },
+        {
+          "method": "procrustes_global",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.31003589203103826,
+          "allpaid_ndcg10": 0.33620246107664287,
+          "allpaid_recall100": 0.653388922188922
+        },
+        {
+          "method": "la2m20_integration_script_adaptation",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.2376740142398725,
+          "allpaid_ndcg10": 0.3389234669245038,
+          "allpaid_recall100": 0.695005148185148
+        },
+        {
+          "method": "la2m20_integration_script_adaptation",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.22999031724981683,
+          "allpaid_ndcg10": 0.3293413014310004,
+          "allpaid_recall100": 0.6473306193806192
+        },
+        {
+          "method": "simplelinear_official_final50_mlp5",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.2359531204225403,
+          "allpaid_ndcg10": 0.3323162470088491,
+          "allpaid_recall100": 0.6777889244089242
+        },
+        {
+          "method": "simplelinear_official_final50_mlp5",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.1941674316269752,
+          "allpaid_ndcg10": 0.16794940738858383,
+          "allpaid_recall100": 0.3617845476745477
+        },
+        {
+          "method": "ridge_affine_l10_bias_regularized",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.28904545781234714,
+          "allpaid_ndcg10": 0.36726327671078884,
+          "allpaid_recall100": 0.6800430125430126
+        },
+        {
+          "method": "ridge_affine_l10_bias_regularized",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.14792156930525965,
+          "allpaid_ndcg10": 0.2270145751549427,
+          "allpaid_recall100": 0.42451112110112116
+        },
+        {
+          "method": "embedding_converter_paper_spec",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.24963647764120794,
+          "allpaid_ndcg10": 0.32576143937636975,
+          "allpaid_recall100": 0.6632694838494837
+        },
+        {
+          "method": "embedding_converter_paper_spec",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.1396653650449041,
+          "allpaid_ndcg10": 0.2625194643556271,
+          "allpaid_recall100": 0.5789074192474193
+        }
+      ],
+      "sha256": "bd28688f51a306c9990c0174f1c3b88786eb266a5e76bafffc0217c851de4c13"
+    },
+    "generated/allpaid_values.csv": {
+      "sources": [
+        "allpaid"
+      ],
+      "operation": "means filtered by method/pair/regime.",
+      "values": [
+        {
+          "method": "arc2_global_tangent2_r1",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.3075048582716371,
+          "allpaid_ndcg10": 0.36714602143626496,
+          "allpaid_recall100": 0.6922001554001553
+        },
+        {
+          "method": "arc2_global_tangent2_r1",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.3116352075358866,
+          "allpaid_ndcg10": 0.29186698206096195,
+          "allpaid_recall100": 0.5594899234099235
+        },
+        {
+          "method": "procrustes_global",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.28582824088854003,
+          "allpaid_ndcg10": 0.3333864741159597,
+          "allpaid_recall100": 0.6904948307248308
+        },
+        {
+          "method": "procrustes_global",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.31003589203103826,
+          "allpaid_ndcg10": 0.33620246107664287,
+          "allpaid_recall100": 0.653388922188922
+        },
+        {
+          "method": "la2m20_integration_script_adaptation",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.2376740142398725,
+          "allpaid_ndcg10": 0.3389234669245038,
+          "allpaid_recall100": 0.695005148185148
+        },
+        {
+          "method": "la2m20_integration_script_adaptation",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.22999031724981683,
+          "allpaid_ndcg10": 0.3293413014310004,
+          "allpaid_recall100": 0.6473306193806192
+        },
+        {
+          "method": "simplelinear_official_final50_mlp5",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.2359531204225403,
+          "allpaid_ndcg10": 0.3323162470088491,
+          "allpaid_recall100": 0.6777889244089242
+        },
+        {
+          "method": "simplelinear_official_final50_mlp5",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.1941674316269752,
+          "allpaid_ndcg10": 0.16794940738858383,
+          "allpaid_recall100": 0.3617845476745477
+        },
+        {
+          "method": "ridge_affine_l10_bias_regularized",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.28904545781234714,
+          "allpaid_ndcg10": 0.36726327671078884,
+          "allpaid_recall100": 0.6800430125430126
+        },
+        {
+          "method": "ridge_affine_l10_bias_regularized",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.14792156930525965,
+          "allpaid_ndcg10": 0.2270145751549427,
+          "allpaid_recall100": 0.42451112110112116
+        },
+        {
+          "method": "embedding_converter_paper_spec",
+          "pair": "minilm_distilroberta",
+          "fixed_ndcg10": 0.24963647764120794,
+          "allpaid_ndcg10": 0.32576143937636975,
+          "allpaid_recall100": 0.6632694838494837
+        },
+        {
+          "method": "embedding_converter_paper_spec",
+          "pair": "e5_small_base",
+          "fixed_ndcg10": 0.1396653650449041,
+          "allpaid_ndcg10": 0.2625194643556271,
+          "allpaid_recall100": 0.5789074192474193
+        }
+      ],
+      "sha256": "4905a9b31887212f501ef9e6755da3c436ed5aac49415fd9c6cb9ad62b4003c5"
+    },
+    "generated/ablation.tex": {
+      "sources": [
+        "mechanism"
+      ],
+      "operation": "overall_macro[*].ndcg10.delta and ci99_bonferroni_family95.",
+      "values": [
+        {
+          "contrast": "Two steps minus zero steps",
+          "left": "arc2_global_tangent2_r1",
+          "right": "procrustes_global",
+          "delta": 0.024325109040435233,
+          "low": 0.01801533254696277,
+          "high": 0.03102132243820168
+        },
+        {
+          "contrast": "Two steps minus one step",
+          "left": "arc2_global_tangent2_r1",
+          "right": "tangent1_l10",
+          "delta": 0.006923862939737235,
+          "low": 0.003809388309482942,
+          "high": 0.009959126205904258
+        },
+        {
+          "contrast": "ARC2 minus affine ridge",
+          "left": "arc2_global_tangent2_r1",
+          "right": "ridge_affine_l10_bias_regularized",
+          "delta": 0.09565304927282199,
+          "low": 0.07535298921225946,
+          "high": 0.11663127039230592
+        },
+        {
+          "contrast": "$\\lambda=1$ minus $\\lambda=10$",
+          "left": "tangent2_l1",
+          "right": "arc2_global_tangent2_r1",
+          "delta": 0.0031974956912717346,
+          "low": -0.0018903844098364442,
+          "high": 0.00830403326634241
+        },
+        {
+          "contrast": "$\\lambda=100$ minus $\\lambda=10$",
+          "left": "tangent2_l100",
+          "right": "arc2_global_tangent2_r1",
+          "delta": -0.00925533869678723,
+          "low": -0.01321398029023485,
+          "high": -0.005510245768211927
+        }
+      ],
+      "sha256": "024435422d3cd2e5c977fa680365e1a7983e763ad813c91a4d65eb4db847571e"
+    },
+    "generated/ablation_values.csv": {
+      "sources": [
+        "mechanism"
+      ],
+      "operation": "overall_macro, saved intervals; no new uncertainty calculation.",
+      "values": [
+        {
+          "contrast": "Two steps minus zero steps",
+          "left": "arc2_global_tangent2_r1",
+          "right": "procrustes_global",
+          "delta": 0.024325109040435233,
+          "low": 0.01801533254696277,
+          "high": 0.03102132243820168
+        },
+        {
+          "contrast": "Two steps minus one step",
+          "left": "arc2_global_tangent2_r1",
+          "right": "tangent1_l10",
+          "delta": 0.006923862939737235,
+          "low": 0.003809388309482942,
+          "high": 0.009959126205904258
+        },
+        {
+          "contrast": "ARC2 minus affine ridge",
+          "left": "arc2_global_tangent2_r1",
+          "right": "ridge_affine_l10_bias_regularized",
+          "delta": 0.09565304927282199,
+          "low": 0.07535298921225946,
+          "high": 0.11663127039230592
+        },
+        {
+          "contrast": "$\\lambda=1$ minus $\\lambda=10$",
+          "left": "tangent2_l1",
+          "right": "arc2_global_tangent2_r1",
+          "delta": 0.0031974956912717346,
+          "low": -0.0018903844098364442,
+          "high": 0.00830403326634241
+        },
+        {
+          "contrast": "$\\lambda=100$ minus $\\lambda=10$",
+          "left": "tangent2_l100",
+          "right": "arc2_global_tangent2_r1",
+          "delta": -0.00925533869678723,
+          "low": -0.01321398029023485,
+          "high": -0.005510245768211927
+        }
+      ],
+      "sha256": "41ea9930e90b3c65a7c9550c21b7510ea28691c87c4c60345bbcff9048f30a06"
+    },
+    "generated/trec_family_counts.csv": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "Count signs of saved contrasts.ndcg10.ci_bonferroni_family95, separately from point signs.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "procrustes_global",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 3
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "la2m20_integration_script_adaptation",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 2
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "simplelinear_official_final50_mlp5",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 1
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "ridge_affine_l10_bias_regularized",
+          "positive": 1,
+          "unresolved": 2,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "embedding_converter_paper_spec",
+          "positive": 2,
+          "unresolved": 1,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "procrustes_global",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 3
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "la2m20_integration_script_adaptation",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 1
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "simplelinear_official_final50_mlp5",
+          "positive": 2,
+          "unresolved": 1,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "ridge_affine_l10_bias_regularized",
+          "positive": 3,
+          "unresolved": 0,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "embedding_converter_paper_spec",
+          "positive": 3,
+          "unresolved": 0,
+          "negative": 0,
+          "negative_point_means": 0
+        }
+      ],
+      "sha256": "426ff2b2d8b3fed2a23f4cdc6b73a3cbb3904f5631b5996618ca18a43114c917"
+    },
+    "generated/trec_family.tex": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "Count family_interval_interpretation across all three budgets.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "procrustes_global",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 3
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "la2m20_integration_script_adaptation",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 2
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "simplelinear_official_final50_mlp5",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 1
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "ridge_affine_l10_bias_regularized",
+          "positive": 1,
+          "unresolved": 2,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "baseline": "embedding_converter_paper_spec",
+          "positive": 2,
+          "unresolved": 1,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "procrustes_global",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 3
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "la2m20_integration_script_adaptation",
+          "positive": 0,
+          "unresolved": 3,
+          "negative": 0,
+          "negative_point_means": 1
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "simplelinear_official_final50_mlp5",
+          "positive": 2,
+          "unresolved": 1,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "ridge_affine_l10_bias_regularized",
+          "positive": 3,
+          "unresolved": 0,
+          "negative": 0,
+          "negative_point_means": 0
+        },
+        {
+          "pair": "e5_small_base",
+          "baseline": "embedding_converter_paper_spec",
+          "positive": 3,
+          "unresolved": 0,
+          "negative": 0,
+          "negative_point_means": 0
+        }
+      ],
+      "sha256": "b249a6c58e87792b9bed0dee93e631e66d65c7f0381fb38d3c03f0a19ed4fc9e"
+    },
+    "generated/budget_leverage.tex": {
+      "sources": [
+        "dev",
+        "trec"
+      ],
+      "operation": "Saved means only; post-hoc cross-budget description, no new interval/test, interpolation or physical cost claim.",
+      "values": [
+        {
+          "dataset": "FiQA",
+          "role": "development",
+          "arc2_25": 0.27310684220470094,
+          "procrustes_25": 0.2717780394485493,
+          "la2m_25": 0.14157395302032982,
+          "simplelinear_75": 0.2781397818845367,
+          "ridge_75": 0.1609714907578672,
+          "converter_75": 0.2095336751807801,
+          "full_x": 0.3464782895762744,
+          "full_y": 0.3891325249294525,
+          "arc2_minus_converter75": 0.06357316702392085,
+          "arc2_minus_ridge75": 0.11213535144683373
+        },
+        {
+          "dataset": "NanoNQ",
+          "role": "development",
+          "arc2_25": 0.5071236847804641,
+          "procrustes_25": 0.48523704628244235,
+          "la2m_25": 0.36403641053270247,
+          "simplelinear_75": 0.48387757204577336,
+          "ridge_75": 0.44284099940693855,
+          "converter_75": 0.40208721230157407,
+          "full_x": 0.6595104530695758,
+          "full_y": 0.6669078991393519,
+          "arc2_minus_converter75": 0.10503647247889003,
+          "arc2_minus_ridge75": 0.06428268537352555
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "role": "development",
+          "arc2_25": 0.5844856557302884,
+          "procrustes_25": 0.5512346178902974,
+          "la2m_25": 0.38689849635905205,
+          "simplelinear_75": 0.6173880843274537,
+          "ridge_75": 0.5053470075849882,
+          "converter_75": 0.5016332374347163,
+          "full_x": 0.8277532428383954,
+          "full_y": 0.8192540193891485,
+          "arc2_minus_converter75": 0.0828524182955721,
+          "arc2_minus_ridge75": 0.07913864814530025
+        },
+        {
+          "dataset": "NanoFEVER",
+          "role": "development",
+          "arc2_25": 0.7554512732607813,
+          "procrustes_25": 0.714661665844085,
+          "la2m_25": 0.4990506224837599,
+          "simplelinear_75": 0.7087460112987809,
+          "ridge_75": 0.7289860142730652,
+          "converter_75": 0.7325762381767909,
+          "full_x": 0.898352760618845,
+          "full_y": 0.8963290572938694,
+          "arc2_minus_converter75": 0.02287503508399047,
+          "arc2_minus_ridge75": 0.026465258987716123
+        },
+        {
+          "dataset": "TREC-COVID",
+          "role": "prospective",
+          "arc2_25": 0.562801573213321,
+          "procrustes_25": 0.5660420017846071,
+          "la2m_25": 0.5205904360903386,
+          "simplelinear_75": 0.5784937222630202,
+          "ridge_75": 0.3277848331657977,
+          "converter_75": 0.40982778236858286,
+          "full_x": 0.6805416492225224,
+          "full_y": 0.6421134496001705,
+          "arc2_minus_converter75": 0.15297379084473817,
+          "arc2_minus_ridge75": 0.23501674004752332
+        }
+      ],
+      "sha256": "dc8d45d6b72643735ae2135c8f970687b0eca5a9d8849de46988976a77e6719b"
+    },
+    "generated/budget_leverage_values.csv": {
+      "sources": [
+        "dev",
+        "trec"
+      ],
+      "operation": "Exact values behind the post-hoc cross-budget table; no new scientific run.",
+      "values": [
+        {
+          "dataset": "FiQA",
+          "role": "development",
+          "arc2_25": 0.27310684220470094,
+          "procrustes_25": 0.2717780394485493,
+          "la2m_25": 0.14157395302032982,
+          "simplelinear_75": 0.2781397818845367,
+          "ridge_75": 0.1609714907578672,
+          "converter_75": 0.2095336751807801,
+          "full_x": 0.3464782895762744,
+          "full_y": 0.3891325249294525,
+          "arc2_minus_converter75": 0.06357316702392085,
+          "arc2_minus_ridge75": 0.11213535144683373
+        },
+        {
+          "dataset": "NanoNQ",
+          "role": "development",
+          "arc2_25": 0.5071236847804641,
+          "procrustes_25": 0.48523704628244235,
+          "la2m_25": 0.36403641053270247,
+          "simplelinear_75": 0.48387757204577336,
+          "ridge_75": 0.44284099940693855,
+          "converter_75": 0.40208721230157407,
+          "full_x": 0.6595104530695758,
+          "full_y": 0.6669078991393519,
+          "arc2_minus_converter75": 0.10503647247889003,
+          "arc2_minus_ridge75": 0.06428268537352555
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "role": "development",
+          "arc2_25": 0.5844856557302884,
+          "procrustes_25": 0.5512346178902974,
+          "la2m_25": 0.38689849635905205,
+          "simplelinear_75": 0.6173880843274537,
+          "ridge_75": 0.5053470075849882,
+          "converter_75": 0.5016332374347163,
+          "full_x": 0.8277532428383954,
+          "full_y": 0.8192540193891485,
+          "arc2_minus_converter75": 0.0828524182955721,
+          "arc2_minus_ridge75": 0.07913864814530025
+        },
+        {
+          "dataset": "NanoFEVER",
+          "role": "development",
+          "arc2_25": 0.7554512732607813,
+          "procrustes_25": 0.714661665844085,
+          "la2m_25": 0.4990506224837599,
+          "simplelinear_75": 0.7087460112987809,
+          "ridge_75": 0.7289860142730652,
+          "converter_75": 0.7325762381767909,
+          "full_x": 0.898352760618845,
+          "full_y": 0.8963290572938694,
+          "arc2_minus_converter75": 0.02287503508399047,
+          "arc2_minus_ridge75": 0.026465258987716123
+        },
+        {
+          "dataset": "TREC-COVID",
+          "role": "prospective",
+          "arc2_25": 0.562801573213321,
+          "procrustes_25": 0.5660420017846071,
+          "la2m_25": 0.5205904360903386,
+          "simplelinear_75": 0.5784937222630202,
+          "ridge_75": 0.3277848331657977,
+          "converter_75": 0.40982778236858286,
+          "full_x": 0.6805416492225224,
+          "full_y": 0.6421134496001705,
+          "arc2_minus_converter75": 0.15297379084473817,
+          "arc2_minus_ridge75": 0.23501674004752332
+        }
+      ],
+      "sha256": "e973457d4678afeb89d46e968fee289c2fa970aed98ab2bee7fbeff68436ce5a"
+    },
+    "generated/trec_recall.tex": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "All saved Recall@100 mean rows; complete point means also plotted in prospective figure.",
+      "sha256": "92fbea88b6557670feb56192669e114184b0b77a0b20baa083bc74fbc7b5fbdd"
+    },
+    "figures/dev_quality.pdf": {
+      "sources": [
+        "dev"
+      ],
+      "operation": "Each point is the saved five-seed condition mean averaged equally over all four DEV datasets. No fabricated interval bands. Full-X/Y are native reference operating points. Only measured budget points are connected.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.42428992358589934
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4696912465864418
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.5293507828654983
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.38567198046400736
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.44441309721009986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.516048066653468
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.29168680783261614
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.3839101402512261
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.4946881534080587
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.22518954703658575
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.3496666351077117
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.48007504368306986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.3933006064394224
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.44312846109263265
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5140509428066649
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.29277800147168376
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.38974573749237384
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.48846985822061734
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6023580898633671
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6045721900159988
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.5300418639940587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5767932236034541
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6346981231676242
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5057278423663435
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5483160712756545
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6187374515907917
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.34788987059896104
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.4475696254171741
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5747908436077206
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.19689591385601218
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.35840097222712686
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5220378623891362
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.36879902516480784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.4121314546568019
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.4595363780057148
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.23098025160021493
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3344597190965784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.4614575907734654
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6830236865257726
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6929058751879555
+        }
+      ],
+      "sha256": "f02d5ba22535634e2ba2c51ace9611c438ba3e57de9ed543e05196c2f946436b"
+    },
+    "figures/dev_quality.svg": {
+      "sources": [
+        "dev"
+      ],
+      "operation": "Each point is the saved five-seed condition mean averaged equally over all four DEV datasets. No fabricated interval bands. Full-X/Y are native reference operating points. Only measured budget points are connected.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.42428992358589934
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4696912465864418
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.5293507828654983
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.38567198046400736
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.44441309721009986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.516048066653468
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.29168680783261614
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.3839101402512261
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.4946881534080587
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.22518954703658575
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.3496666351077117
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.48007504368306986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.3933006064394224
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.44312846109263265
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5140509428066649
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.29277800147168376
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.38974573749237384
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.48846985822061734
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6023580898633671
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6045721900159988
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.5300418639940587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5767932236034541
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6346981231676242
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5057278423663435
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5483160712756545
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6187374515907917
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.34788987059896104
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.4475696254171741
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5747908436077206
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.19689591385601218
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.35840097222712686
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5220378623891362
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.36879902516480784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.4121314546568019
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.4595363780057148
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.23098025160021493
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3344597190965784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.4614575907734654
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6830236865257726
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6929058751879555
+        }
+      ],
+      "sha256": "4a0a140149bb265be28d406b930b1974431377b828b9d0f053a385ec76366236"
+    },
+    "figures/dev_quality.png": {
+      "sources": [
+        "dev"
+      ],
+      "operation": "Each point is the saved five-seed condition mean averaged equally over all four DEV datasets. No fabricated interval bands. Full-X/Y are native reference operating points. Only measured budget points are connected.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.42428992358589934
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4696912465864418
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.5293507828654983
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.38567198046400736
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.44441309721009986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.516048066653468
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.29168680783261614
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.3839101402512261
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.4946881534080587
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.22518954703658575
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.3496666351077117
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.48007504368306986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.3933006064394224
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.44312846109263265
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5140509428066649
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.29277800147168376
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.38974573749237384
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.48846985822061734
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6023580898633671
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6045721900159988
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.5300418639940587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5767932236034541
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6346981231676242
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5057278423663435
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5483160712756545
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6187374515907917
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.34788987059896104
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.4475696254171741
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5747908436077206
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.19689591385601218
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.35840097222712686
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5220378623891362
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.36879902516480784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.4121314546568019
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.4595363780057148
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.23098025160021493
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3344597190965784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.4614575907734654
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6830236865257726
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6929058751879555
+        }
+      ],
+      "sha256": "3a0962d627663ac8bcfe64f97121ca4ccfe2c3ef076e4eec3baae5fbe3bba05d"
+    },
+    "generated/dev_quality_values.csv": {
+      "sources": [
+        "dev"
+      ],
+      "operation": "Same values plotted, extracted from means.ndcg10.mean; equal dataset weight for DEV.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.42428992358589934
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4696912465864418
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.5293507828654983
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.38567198046400736
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.44441309721009986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.516048066653468
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.29168680783261614
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.3839101402512261
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.4946881534080587
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.22518954703658575
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.3496666351077117
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.48007504368306986
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.3933006064394224
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.44312846109263265
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5140509428066649
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.29277800147168376
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.38974573749237384
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.48846985822061734
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6023580898633671
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6045721900159988
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.5300418639940587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5767932236034541
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6346981231676242
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5057278423663435
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5483160712756545
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6187374515907917
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.34788987059896104
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.4475696254171741
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5747908436077206
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.19689591385601218
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.35840097222712686
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5220378623891362
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.36879902516480784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.4121314546568019
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.4595363780057148
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.23098025160021493
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3344597190965784
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.4614575907734654
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6830236865257726
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6929058751879555
+        }
+      ],
+      "sha256": "e51e7c0d3ba7fe213ef87bb6b2852af0c01b3faea54440c7b1a3fbbcb8a86026"
+    },
+    "figures/trec_quality.pdf": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "Each point is the saved five-seed condition mean; both primary nDCG and auxiliary Recall are shown. No fabricated interval bands. Full-X/Y are native reference operating points. Only measured budget points are connected.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.4619132237639601,
+          "recall100": 0.08963088480259038
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4999550226735597,
+          "recall100": 0.09529158965710632
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.519513052034007,
+          "recall100": 0.09983604059514704
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.46196458443251165,
+          "recall100": 0.08656849639226609
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5046218931387791,
+          "recall100": 0.09348540930621103
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.5195366169586203,
+          "recall100": 0.09942876429633421
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.4634176232530495,
+          "recall100": 0.07356777060172419
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5072760250312146,
+          "recall100": 0.08842284023887333
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5185617727755863,
+          "recall100": 0.09826954011884906
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.46104030699300225,
+          "recall100": 0.06257470519773327
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5075901623712186,
+          "recall100": 0.0844776701539496
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5193021992613991,
+          "recall100": 0.09701627700333974
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.4321704122423191,
+          "recall100": 0.06890134085023747
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.48543765007369555,
+          "recall100": 0.0779944968405071
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5012195177689744,
+          "recall100": 0.08563775429812863
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.4223735991713406,
+          "recall100": 0.06512050655177726
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.4780470274050105,
+          "recall100": 0.07717310564196894
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.5032547704761722,
+          "recall100": 0.08920092316113651
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.4934781848463412,
+          "recall100": 0.09355341420637212
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.5202728348242263,
+          "recall100": 0.10521378018323918
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.562801573213321,
+          "recall100": 0.0865798155941492
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5904061066004364,
+          "recall100": 0.09284227251463124
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6097818790197872,
+          "recall100": 0.09966692928143464
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5660420017846071,
+          "recall100": 0.08857103007611913
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.606727648648923,
+          "recall100": 0.09757526289269891
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6197938386784891,
+          "recall100": 0.10605638073803039
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.5205904360903386,
+          "recall100": 0.059325559835467855
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5898118524012599,
+          "recall100": 0.08234134077914587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.6187771807287994,
+          "recall100": 0.10159163083373099
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.42992858085823116,
+          "recall100": 0.029643592077240412
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5286762204098695,
+          "recall100": 0.05097373668709944
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5784937222630202,
+          "recall100": 0.06928258053412745
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.29862101762519416,
+          "recall100": 0.03726425994631427
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.3281386648638847,
+          "recall100": 0.038217266219315385
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.3277848331657977,
+          "recall100": 0.03657015555736688
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.3055679824401268,
+          "recall100": 0.042248049007770475
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3590215314302837,
+          "recall100": 0.04951179253245391
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.40982778236858286,
+          "recall100": 0.05824037110988424
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6805416492225224,
+          "recall100": 0.12353038057812048
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6421134496001705,
+          "recall100": 0.11624395516879528
+        }
+      ],
+      "sha256": "f37926ea97e1b5d2d9ab1544889bc4cf9264b8323ecd4b5ec76258c656434679"
+    },
+    "figures/trec_quality.svg": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "Each point is the saved five-seed condition mean; both primary nDCG and auxiliary Recall are shown. No fabricated interval bands. Full-X/Y are native reference operating points. Only measured budget points are connected.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.4619132237639601,
+          "recall100": 0.08963088480259038
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4999550226735597,
+          "recall100": 0.09529158965710632
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.519513052034007,
+          "recall100": 0.09983604059514704
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.46196458443251165,
+          "recall100": 0.08656849639226609
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5046218931387791,
+          "recall100": 0.09348540930621103
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.5195366169586203,
+          "recall100": 0.09942876429633421
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.4634176232530495,
+          "recall100": 0.07356777060172419
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5072760250312146,
+          "recall100": 0.08842284023887333
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5185617727755863,
+          "recall100": 0.09826954011884906
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.46104030699300225,
+          "recall100": 0.06257470519773327
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5075901623712186,
+          "recall100": 0.0844776701539496
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5193021992613991,
+          "recall100": 0.09701627700333974
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.4321704122423191,
+          "recall100": 0.06890134085023747
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.48543765007369555,
+          "recall100": 0.0779944968405071
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5012195177689744,
+          "recall100": 0.08563775429812863
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.4223735991713406,
+          "recall100": 0.06512050655177726
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.4780470274050105,
+          "recall100": 0.07717310564196894
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.5032547704761722,
+          "recall100": 0.08920092316113651
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.4934781848463412,
+          "recall100": 0.09355341420637212
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.5202728348242263,
+          "recall100": 0.10521378018323918
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.562801573213321,
+          "recall100": 0.0865798155941492
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5904061066004364,
+          "recall100": 0.09284227251463124
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6097818790197872,
+          "recall100": 0.09966692928143464
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5660420017846071,
+          "recall100": 0.08857103007611913
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.606727648648923,
+          "recall100": 0.09757526289269891
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6197938386784891,
+          "recall100": 0.10605638073803039
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.5205904360903386,
+          "recall100": 0.059325559835467855
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5898118524012599,
+          "recall100": 0.08234134077914587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.6187771807287994,
+          "recall100": 0.10159163083373099
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.42992858085823116,
+          "recall100": 0.029643592077240412
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5286762204098695,
+          "recall100": 0.05097373668709944
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5784937222630202,
+          "recall100": 0.06928258053412745
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.29862101762519416,
+          "recall100": 0.03726425994631427
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.3281386648638847,
+          "recall100": 0.038217266219315385
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.3277848331657977,
+          "recall100": 0.03657015555736688
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.3055679824401268,
+          "recall100": 0.042248049007770475
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3590215314302837,
+          "recall100": 0.04951179253245391
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.40982778236858286,
+          "recall100": 0.05824037110988424
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6805416492225224,
+          "recall100": 0.12353038057812048
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6421134496001705,
+          "recall100": 0.11624395516879528
+        }
+      ],
+      "sha256": "8bd31e9689f567ce32777a7484cb928409c18827f53faafc04b2bdc28ac62c9f"
+    },
+    "figures/trec_quality.png": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "Each point is the saved five-seed condition mean; both primary nDCG and auxiliary Recall are shown. No fabricated interval bands. Full-X/Y are native reference operating points. Only measured budget points are connected.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.4619132237639601,
+          "recall100": 0.08963088480259038
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4999550226735597,
+          "recall100": 0.09529158965710632
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.519513052034007,
+          "recall100": 0.09983604059514704
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.46196458443251165,
+          "recall100": 0.08656849639226609
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5046218931387791,
+          "recall100": 0.09348540930621103
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.5195366169586203,
+          "recall100": 0.09942876429633421
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.4634176232530495,
+          "recall100": 0.07356777060172419
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5072760250312146,
+          "recall100": 0.08842284023887333
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5185617727755863,
+          "recall100": 0.09826954011884906
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.46104030699300225,
+          "recall100": 0.06257470519773327
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5075901623712186,
+          "recall100": 0.0844776701539496
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5193021992613991,
+          "recall100": 0.09701627700333974
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.4321704122423191,
+          "recall100": 0.06890134085023747
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.48543765007369555,
+          "recall100": 0.0779944968405071
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5012195177689744,
+          "recall100": 0.08563775429812863
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.4223735991713406,
+          "recall100": 0.06512050655177726
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.4780470274050105,
+          "recall100": 0.07717310564196894
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.5032547704761722,
+          "recall100": 0.08920092316113651
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.4934781848463412,
+          "recall100": 0.09355341420637212
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.5202728348242263,
+          "recall100": 0.10521378018323918
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.562801573213321,
+          "recall100": 0.0865798155941492
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5904061066004364,
+          "recall100": 0.09284227251463124
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6097818790197872,
+          "recall100": 0.09966692928143464
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5660420017846071,
+          "recall100": 0.08857103007611913
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.606727648648923,
+          "recall100": 0.09757526289269891
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6197938386784891,
+          "recall100": 0.10605638073803039
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.5205904360903386,
+          "recall100": 0.059325559835467855
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5898118524012599,
+          "recall100": 0.08234134077914587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.6187771807287994,
+          "recall100": 0.10159163083373099
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.42992858085823116,
+          "recall100": 0.029643592077240412
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5286762204098695,
+          "recall100": 0.05097373668709944
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5784937222630202,
+          "recall100": 0.06928258053412745
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.29862101762519416,
+          "recall100": 0.03726425994631427
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.3281386648638847,
+          "recall100": 0.038217266219315385
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.3277848331657977,
+          "recall100": 0.03657015555736688
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.3055679824401268,
+          "recall100": 0.042248049007770475
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3590215314302837,
+          "recall100": 0.04951179253245391
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.40982778236858286,
+          "recall100": 0.05824037110988424
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6805416492225224,
+          "recall100": 0.12353038057812048
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6421134496001705,
+          "recall100": 0.11624395516879528
+        }
+      ],
+      "sha256": "9676db0cd2698fb9e881aa38bd7abfebed258c49538b75b1380ee8aee573068f"
+    },
+    "generated/trec_quality_values.csv": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "Same values plotted, extracted from means.ndcg10.mean; equal dataset weight for DEV.",
+      "values": [
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.4619132237639601,
+          "recall100": 0.08963088480259038
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.4999550226735597,
+          "recall100": 0.09529158965710632
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.519513052034007,
+          "recall100": 0.09983604059514704
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.46196458443251165,
+          "recall100": 0.08656849639226609
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.5046218931387791,
+          "recall100": 0.09348540930621103
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.5195366169586203,
+          "recall100": 0.09942876429633421
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.4634176232530495,
+          "recall100": 0.07356777060172419
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5072760250312146,
+          "recall100": 0.08842284023887333
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.5185617727755863,
+          "recall100": 0.09826954011884906
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.46104030699300225,
+          "recall100": 0.06257470519773327
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5075901623712186,
+          "recall100": 0.0844776701539496
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5193021992613991,
+          "recall100": 0.09701627700333974
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.4321704122423191,
+          "recall100": 0.06890134085023747
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.48543765007369555,
+          "recall100": 0.0779944968405071
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.5012195177689744,
+          "recall100": 0.08563775429812863
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.4223735991713406,
+          "recall100": 0.06512050655177726
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.4780470274050105,
+          "recall100": 0.07717310564196894
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.5032547704761722,
+          "recall100": 0.08920092316113651
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.4934781848463412,
+          "recall100": 0.09355341420637212
+        },
+        {
+          "pair": "minilm_distilroberta",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.5202728348242263,
+          "recall100": 0.10521378018323918
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "25pct",
+          "ndcg10": 0.562801573213321,
+          "recall100": 0.0865798155941492
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "50pct",
+          "ndcg10": 0.5904061066004364,
+          "recall100": 0.09284227251463124
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "arc2_global_tangent2_r1",
+          "budget": "75pct",
+          "ndcg10": 0.6097818790197872,
+          "recall100": 0.09966692928143464
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "25pct",
+          "ndcg10": 0.5660420017846071,
+          "recall100": 0.08857103007611913
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "50pct",
+          "ndcg10": 0.606727648648923,
+          "recall100": 0.09757526289269891
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "procrustes_global",
+          "budget": "75pct",
+          "ndcg10": 0.6197938386784891,
+          "recall100": 0.10605638073803039
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "25pct",
+          "ndcg10": 0.5205904360903386,
+          "recall100": 0.059325559835467855
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "50pct",
+          "ndcg10": 0.5898118524012599,
+          "recall100": 0.08234134077914587
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "la2m20_integration_script_adaptation",
+          "budget": "75pct",
+          "ndcg10": 0.6187771807287994,
+          "recall100": 0.10159163083373099
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "25pct",
+          "ndcg10": 0.42992858085823116,
+          "recall100": 0.029643592077240412
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "50pct",
+          "ndcg10": 0.5286762204098695,
+          "recall100": 0.05097373668709944
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "simplelinear_official_final50_mlp5",
+          "budget": "75pct",
+          "ndcg10": 0.5784937222630202,
+          "recall100": 0.06928258053412745
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "25pct",
+          "ndcg10": 0.29862101762519416,
+          "recall100": 0.03726425994631427
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "50pct",
+          "ndcg10": 0.3281386648638847,
+          "recall100": 0.038217266219315385
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "ridge_affine_l10_bias_regularized",
+          "budget": "75pct",
+          "ndcg10": 0.3277848331657977,
+          "recall100": 0.03657015555736688
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "25pct",
+          "ndcg10": 0.3055679824401268,
+          "recall100": 0.042248049007770475
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "50pct",
+          "ndcg10": 0.3590215314302837,
+          "recall100": 0.04951179253245391
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "embedding_converter_paper_spec",
+          "budget": "75pct",
+          "ndcg10": 0.40982778236858286,
+          "recall100": 0.05824037110988424
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_x",
+          "budget": "native",
+          "ndcg10": 0.6805416492225224,
+          "recall100": 0.12353038057812048
+        },
+        {
+          "pair": "e5_small_base",
+          "method": "full_y",
+          "budget": "native",
+          "ndcg10": 0.6421134496001705,
+          "recall100": 0.11624395516879528
+        }
+      ],
+      "sha256": "b820ec4191a0b579127bebefdf3b3d2091be85148fce7068d2abe38d01555932"
+    },
+    "figures/dev_ablation.pdf": {
+      "sources": [
+        "mechanism"
+      ],
+      "operation": "overall_macro; 99% saved five-contrast Bonferroni percentile intervals. No new test.",
+      "values": [
+        {
+          "contrast": "Two steps minus zero steps",
+          "left": "arc2_global_tangent2_r1",
+          "right": "procrustes_global",
+          "delta": 0.024325109040435233,
+          "low": 0.01801533254696277,
+          "high": 0.03102132243820168
+        },
+        {
+          "contrast": "Two steps minus one step",
+          "left": "arc2_global_tangent2_r1",
+          "right": "tangent1_l10",
+          "delta": 0.006923862939737235,
+          "low": 0.003809388309482942,
+          "high": 0.009959126205904258
+        },
+        {
+          "contrast": "ARC2 minus affine ridge",
+          "left": "arc2_global_tangent2_r1",
+          "right": "ridge_affine_l10_bias_regularized",
+          "delta": 0.09565304927282199,
+          "low": 0.07535298921225946,
+          "high": 0.11663127039230592
+        },
+        {
+          "contrast": "$\\lambda=1$ minus $\\lambda=10$",
+          "left": "tangent2_l1",
+          "right": "arc2_global_tangent2_r1",
+          "delta": 0.0031974956912717346,
+          "low": -0.0018903844098364442,
+          "high": 0.00830403326634241
+        },
+        {
+          "contrast": "$\\lambda=100$ minus $\\lambda=10$",
+          "left": "tangent2_l100",
+          "right": "arc2_global_tangent2_r1",
+          "delta": -0.00925533869678723,
+          "low": -0.01321398029023485,
+          "high": -0.005510245768211927
+        }
+      ],
+      "sha256": "b65b01f47ce3434dd7c44f93824a439a03da571f426c6ebda19c5abd57728ed2"
+    },
+    "figures/dev_ablation.svg": {
+      "sources": [
+        "mechanism"
+      ],
+      "operation": "overall_macro; 99% saved five-contrast Bonferroni percentile intervals. No new test.",
+      "values": [
+        {
+          "contrast": "Two steps minus zero steps",
+          "left": "arc2_global_tangent2_r1",
+          "right": "procrustes_global",
+          "delta": 0.024325109040435233,
+          "low": 0.01801533254696277,
+          "high": 0.03102132243820168
+        },
+        {
+          "contrast": "Two steps minus one step",
+          "left": "arc2_global_tangent2_r1",
+          "right": "tangent1_l10",
+          "delta": 0.006923862939737235,
+          "low": 0.003809388309482942,
+          "high": 0.009959126205904258
+        },
+        {
+          "contrast": "ARC2 minus affine ridge",
+          "left": "arc2_global_tangent2_r1",
+          "right": "ridge_affine_l10_bias_regularized",
+          "delta": 0.09565304927282199,
+          "low": 0.07535298921225946,
+          "high": 0.11663127039230592
+        },
+        {
+          "contrast": "$\\lambda=1$ minus $\\lambda=10$",
+          "left": "tangent2_l1",
+          "right": "arc2_global_tangent2_r1",
+          "delta": 0.0031974956912717346,
+          "low": -0.0018903844098364442,
+          "high": 0.00830403326634241
+        },
+        {
+          "contrast": "$\\lambda=100$ minus $\\lambda=10$",
+          "left": "tangent2_l100",
+          "right": "arc2_global_tangent2_r1",
+          "delta": -0.00925533869678723,
+          "low": -0.01321398029023485,
+          "high": -0.005510245768211927
+        }
+      ],
+      "sha256": "94822d2baaeca8ebcb920ef08a50bada04959b64bae95ed28b6acfce8db97b9e"
+    },
+    "figures/dev_ablation.png": {
+      "sources": [
+        "mechanism"
+      ],
+      "operation": "overall_macro; 99% saved five-contrast Bonferroni percentile intervals. No new test.",
+      "values": [
+        {
+          "contrast": "Two steps minus zero steps",
+          "left": "arc2_global_tangent2_r1",
+          "right": "procrustes_global",
+          "delta": 0.024325109040435233,
+          "low": 0.01801533254696277,
+          "high": 0.03102132243820168
+        },
+        {
+          "contrast": "Two steps minus one step",
+          "left": "arc2_global_tangent2_r1",
+          "right": "tangent1_l10",
+          "delta": 0.006923862939737235,
+          "low": 0.003809388309482942,
+          "high": 0.009959126205904258
+        },
+        {
+          "contrast": "ARC2 minus affine ridge",
+          "left": "arc2_global_tangent2_r1",
+          "right": "ridge_affine_l10_bias_regularized",
+          "delta": 0.09565304927282199,
+          "low": 0.07535298921225946,
+          "high": 0.11663127039230592
+        },
+        {
+          "contrast": "$\\lambda=1$ minus $\\lambda=10$",
+          "left": "tangent2_l1",
+          "right": "arc2_global_tangent2_r1",
+          "delta": 0.0031974956912717346,
+          "low": -0.0018903844098364442,
+          "high": 0.00830403326634241
+        },
+        {
+          "contrast": "$\\lambda=100$ minus $\\lambda=10$",
+          "left": "tangent2_l100",
+          "right": "arc2_global_tangent2_r1",
+          "delta": -0.00925533869678723,
+          "low": -0.01321398029023485,
+          "high": -0.005510245768211927
+        }
+      ],
+      "sha256": "e28344050dfb34c74bc08a2962fbdff3d645526095391be6e9454f0f0e5a65b9"
+    },
+    "generated/verification.json": {
+      "sources": [
+        "dev",
+        "allpaid",
+        "trec"
+      ],
+      "operation": "Checks saved means against all per-query arrays and matched point contrasts against arithmetic.",
+      "sha256": "d3f0d6419a0a0549782448c43b01c0a094f2c6bbd5f4dc442c280702f87e12ff"
+    },
+    "generated/dev_complete_means.csv": {
+      "sources": [
+        "dev"
+      ],
+      "operation": "All condition and native-reference means copied from the completed scorer JSON.",
+      "values": [
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.4421474665594668,
+          "recall100": 0.96
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.4888067441388958,
+          "recall100": 0.97
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.3478547196014138,
+          "recall100": 0.922
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.2221321633983953,
+          "recall100": 0.9219999999999999
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.48072307251014557,
+          "recall100": 0.922
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.3554170033685694,
+          "recall100": 0.9099999999999999
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.49951053267984646,
+          "recall100": 0.954
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.5266243358493717,
+          "recall100": 0.97
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.4257993728444197,
+          "recall100": 0.946
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.3638704493900139,
+          "recall100": 0.9200000000000002
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.5177694788530935,
+          "recall100": 0.93
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.4377775748796219,
+          "recall100": 0.924
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5714287380833541,
+          "recall100": 0.9620000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.5868325989029595,
+          "recall100": 0.976
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5452176440109116,
+          "recall100": 0.9559999999999998
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.513224484356314,
+          "recall100": 0.952
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.5854921376305764,
+          "recall100": 0.9480000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.5586760158253588,
+          "recall100": 0.9620000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.5930818641709094,
+          "recall100": 0.94
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.6784519860237529,
+          "recall100": 0.98
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.48523704628244235,
+          "recall100": 0.976
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.5071236847804641,
+          "recall100": 0.9559999999999998
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.36403641053270247,
+          "recall100": 0.876
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.17666965018483005,
+          "recall100": 0.33799999999999997
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.32191349953062004,
+          "recall100": 0.8400000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.21133988841832144,
+          "recall100": 0.8619999999999999
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5130905816541272,
+          "recall100": 0.968
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.5443482249965801,
+          "recall100": 0.9559999999999998
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.4275206293283027,
+          "recall100": 0.8880000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.31940166044801843,
+          "recall100": 0.502
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.38706436736717237,
+          "recall100": 0.78
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.2758896373577253,
+          "recall100": 0.8619999999999999
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5912391867128444,
+          "recall100": 0.9640000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.6100994013976802,
+          "recall100": 0.9640000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5406416014509232,
+          "recall100": 0.9380000000000001
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.48387757204577336,
+          "recall100": 0.7
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.44284099940693855,
+          "recall100": 0.7539999999999999
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.40208721230157407,
+          "recall100": 0.892
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.6595104530695758,
+          "recall100": 0.93
+        },
+        {
+          "dataset": "NanoNQ",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.6669078991393519,
+          "recall100": 0.96
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.3361789895394821,
+          "recall100": 0.808
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.3759806941732161,
+          "recall100": 0.8059999999999998
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.2628191545869763,
+          "recall100": 0.752
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.2177271244942442,
+          "recall100": 0.656
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.3505330164255123,
+          "recall100": 0.75
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.23065872400867932,
+          "recall100": 0.708
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.41095594754434084,
+          "recall100": 0.8240000000000001
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.44352166950173305,
+          "recall100": 0.8299999999999998
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.3680830210132103,
+          "recall100": 0.784
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.33999850398224873,
+          "recall100": 0.7220000000000001
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.4168792903254238,
+          "recall100": 0.766
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.3435069405413423,
+          "recall100": 0.78
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.4781144781321209,
+          "recall100": 0.842
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.4934344576599529,
+          "recall100": 0.844
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.4645688009273831,
+          "recall100": 0.806
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.44828968155710713,
+          "recall100": 0.788
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.47298218340889714,
+          "recall100": 0.782
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.4328840740944151,
+          "recall100": 0.8139999999999998
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.6005629906863896,
+          "recall100": 0.89
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.5859345871878446,
+          "recall100": 0.88
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5512346178902974,
+          "recall100": 0.916
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.5844856557302884,
+          "recall100": 0.914
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.38689849635905205,
+          "recall100": 0.818
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.25286464358424204,
+          "recall100": 0.32999999999999996
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.3804434538310715,
+          "recall100": 0.76
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.24039955198397736,
+          "recall100": 0.7860000000000001
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.6299280738561582,
+          "recall100": 0.9359999999999999
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.6722395262805705,
+          "recall100": 0.93
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5249576496056075,
+          "recall100": 0.858
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.44779748220028404,
+          "recall100": 0.536
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.44244607643961587,
+          "recall100": 0.72
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.358757227787614,
+          "recall100": 0.852
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.7202071233718543,
+          "recall100": 0.95
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.7463876036846113,
+          "recall100": 0.9480000000000001
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.6695335488595803,
+          "recall100": 0.916
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.6173880843274537,
+          "recall100": 0.728
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.5053470075849882,
+          "recall100": 0.6739999999999999
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.5016332374347163,
+          "recall100": 0.9180000000000001
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.8277532428383954,
+          "recall100": 0.95
+        },
+        {
+          "dataset": "NanoHotpotQA",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.8192540193891485,
+          "recall100": 0.97
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5073647679627136,
+          "recall100": 0.9259999999999998
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.5452528030559483,
+          "recall100": 0.9319999999999998
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.40704865817101615,
+          "recall100": 0.7986666666666666
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.31796502954205275,
+          "recall100": 0.818
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.49430944628311,
+          "recall100": 0.8699999999999999
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.41452690496526057,
+          "recall100": 0.8286666666666667
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5813576677276722,
+          "recall100": 0.9359999999999999
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.6011141227230251,
+          "recall100": 0.9419999999999998
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5040841529074018,
+          "recall100": 0.8326666666666667
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.4588444666360439,
+          "recall100": 0.868
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.5488196173796662,
+          "recall100": 0.9119999999999999
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.5275975059940837,
+          "recall100": 0.8799999999999999
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.6729049914551207,
+          "recall100": 0.9586666666666666
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.6870638447998484,
+          "recall100": 0.9666666666666668
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.6449831986518547,
+          "recall100": 0.9153333333333332
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.6353010687159966,
+          "recall100": 0.9286666666666668
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.6539848770190412,
+          "recall100": 0.9546666666666667
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.6379892071060809,
+          "recall100": 0.9306666666666666
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.8258260402612315,
+          "recall100": 0.9933333333333334
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.7491662160577056,
+          "recall100": 0.9833333333333334
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.714661665844085,
+          "recall100": 0.9873333333333333
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.7554512732607813,
+          "recall100": 0.982
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.4990506224837599,
+          "recall100": 0.9066666666666666
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.2516125145791343,
+          "recall100": 0.39266666666666666
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.6447846790943901,
+          "recall100": 0.9266666666666665
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.38516940609549094,
+          "recall100": 0.8573333333333334
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.7402097375612943,
+          "recall100": 0.9953333333333333
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.7789499356007792,
+          "recall100": 0.9886666666666667
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.6078099054849693,
+          "recall100": 0.9373333333333335
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.4722373146332296,
+          "recall100": 0.6126666666666666
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.6710938055151598,
+          "recall100": 0.8946666666666667
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.5621827497486398,
+          "recall100": 0.9213333333333333
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.8227354895648711,
+          "recall100": 0.9953333333333333
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.8451201684411112,
+          "recall100": 0.9940000000000001
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.776405370519557,
+          "recall100": 0.9646666666666667
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.7087460112987809,
+          "recall100": 0.8200000000000001
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.7289860142730652,
+          "recall100": 0.8666666666666666
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.7325762381767909,
+          "recall100": 0.9546666666666667
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.898352760618845,
+          "recall100": 0.99
+        },
+        {
+          "dataset": "NanoFEVER",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.8963290572938694,
+          "recall100": 1.0
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.256996697794367,
+          "recall100": 0.6579920967920969
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.28711945297553715,
+          "recall100": 0.665014498834499
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.1490246989710582,
+          "recall100": 0.3912398035298036
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.14293387071165078,
+          "recall100": 0.3673927084027083
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.24763689053892152,
+          "recall100": 0.620121713841714
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.1705093735442257,
+          "recall100": 0.47687376623376626
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.28582824088854003,
+          "recall100": 0.6687918004218006
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.3075048582716371,
+          "recall100": 0.6765693384393384
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.2376740142398725,
+          "recall100": 0.4655179331779332
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.2359531204225403,
+          "recall100": 0.4325114252414252
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.28904545781234714,
+          "recall100": 0.6373765623265621
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.2501009285544474,
+          "recall100": 0.5448212110112112
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.3417440589432764,
+          "recall100": 0.6831559351759353
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.35007223009923266,
+          "recall100": 0.6884809335109336
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.3239829700420852,
+          "recall100": 0.58078985014985
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.32348494010286194,
+          "recall100": 0.5707917549117547
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.34374457316814455,
+          "recall100": 0.6630869663669664
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.3243301358566147,
+          "recall100": 0.6257012376512379
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.38996146433493817,
+          "recall100": 0.7001835830835832
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.4047359707946925,
+          "recall100": 0.703892218892219
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.2717780394485493,
+          "recall100": 0.6027752691752692
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.27310684220470094,
+          "recall100": 0.599738104118104
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.14157395302032982,
+          "recall100": 0.3365635453435453
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.10643684707584236,
+          "recall100": 0.1367155932955933
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.1280544682031497,
+          "recall100": 0.3330451737151739
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.08701215990306999,
+          "recall100": 0.28010706737706736
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.31003589203103826,
+          "recall100": 0.6374290809190808
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.3116352075358866,
+          "recall100": 0.6209245754245754
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.22999031724981683,
+          "recall100": 0.45060435564435564
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.1941674316269752,
+          "recall100": 0.2601557031857032
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.14792156930525965,
+          "recall100": 0.3052699888999889
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.14100926149233467,
+          "recall100": 0.3378123010323012
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.34076800671359725,
+          "recall100": 0.6775852591852589
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.33718531914709376,
+          "recall100": 0.660609155289155
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.3125828536008219,
+          "recall100": 0.5799564013764013
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.2781397818845367,
+          "recall100": 0.4099298057498058
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.1609714907578672,
+          "recall100": 0.24947686091686086
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.2095336751807801,
+          "recall100": 0.43050457209457227
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.3464782895762744,
+          "recall100": 0.6453320235320233
+        },
+        {
+          "dataset": "FiQA",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.3891325249294525,
+          "recall100": 0.6967968586968585
+        }
+      ],
+      "sha256": "37c681e70ca0b4dbc4d28369a17e09d8ca5d0bacd0ba8ccecab59b0c71a186d7"
+    },
+    "generated/trec_complete_means.csv": {
+      "sources": [
+        "trec"
+      ],
+      "operation": "All condition and native-reference means copied from the completed scorer JSON.",
+      "values": [
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.46196458443251165,
+          "recall100": 0.08656849639226609
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.4619132237639601,
+          "recall100": 0.08963088480259038
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.4634176232530495,
+          "recall100": 0.07356777060172419
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.46104030699300225,
+          "recall100": 0.06257470519773327
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.4321704122423191,
+          "recall100": 0.06890134085023747
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.4223735991713406,
+          "recall100": 0.06512050655177726
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5046218931387791,
+          "recall100": 0.09348540930621103
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.4999550226735597,
+          "recall100": 0.09529158965710632
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5072760250312146,
+          "recall100": 0.08842284023887333
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.5075901623712186,
+          "recall100": 0.0844776701539496
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.48543765007369555,
+          "recall100": 0.0779944968405071
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.4780470274050105,
+          "recall100": 0.07717310564196894
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5195366169586203,
+          "recall100": 0.09942876429633421
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.519513052034007,
+          "recall100": 0.09983604059514704
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5185617727755863,
+          "recall100": 0.09826954011884906
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.5193021992613991,
+          "recall100": 0.09701627700333974
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.5012195177689744,
+          "recall100": 0.08563775429812863
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.5032547704761722,
+          "recall100": 0.08920092316113651
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.4934781848463412,
+          "recall100": 0.09355341420637212
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "minilm_distilroberta",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.5202728348242263,
+          "recall100": 0.10521378018323918
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.5660420017846071,
+          "recall100": 0.08857103007611913
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.562801573213321,
+          "recall100": 0.0865798155941492
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5205904360903386,
+          "recall100": 0.059325559835467855
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.42992858085823116,
+          "recall100": 0.029643592077240412
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.29862101762519416,
+          "recall100": 0.03726425994631427
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "25pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.3055679824401268,
+          "recall100": 0.042248049007770475
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.606727648648923,
+          "recall100": 0.09757526289269891
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.5904061066004364,
+          "recall100": 0.09284227251463124
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.5898118524012599,
+          "recall100": 0.08234134077914587
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.5286762204098695,
+          "recall100": 0.05097373668709944
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.3281386648638847,
+          "recall100": 0.038217266219315385
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "50pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.3590215314302837,
+          "recall100": 0.04951179253245391
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "procrustes_global",
+          "ndcg10": 0.6197938386784891,
+          "recall100": 0.10605638073803039
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "arc2_global_tangent2_r1",
+          "ndcg10": 0.6097818790197872,
+          "recall100": 0.09966692928143464
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "la2m20_integration_script_adaptation",
+          "ndcg10": 0.6187771807287994,
+          "recall100": 0.10159163083373099
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "simplelinear_official_final50_mlp5",
+          "ndcg10": 0.5784937222630202,
+          "recall100": 0.06928258053412745
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "ridge_affine_l10_bias_regularized",
+          "ndcg10": 0.3277848331657977,
+          "recall100": 0.03657015555736688
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "75pct",
+          "method": "embedding_converter_paper_spec",
+          "ndcg10": 0.40982778236858286,
+          "recall100": 0.05824037110988424
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_x",
+          "ndcg10": 0.6805416492225224,
+          "recall100": 0.12353038057812048
+        },
+        {
+          "dataset": "TREC-COVID",
+          "pair": "e5_small_base",
+          "budget": "full",
+          "method": "full_y",
+          "ndcg10": 0.6421134496001705,
+          "recall100": 0.11624395516879528
+        }
+      ],
+      "sha256": "be2d8d69af7da39ee4ff969b2f5dce3d9ac18c561e5728742a0c1ae8a1237d62"
+    },
+    "generated/numeric_claims.json": {
+      "sources": [
+        "dev",
+        "mechanism",
+        "trec",
+        "allpaid",
+        "gallery"
+      ],
+      "operation": "Exact raw-scored numeric ledger for prose; structural parameter arithmetic is not measured runtime/storage.",
+      "sha256": "28ff5ffea7a5360fd02976ab2c87efc3cb3502a6a2cf95af27c0bc1f34a68bd6"
+    },
+    "sections/experimental-setup.tex": {
+      "sources": [
+        "dev_lock",
+        "trec_lock",
+        "paid_lock",
+        "dev",
+        "gallery"
+      ],
+      "operation": "Collection query counts from qrel_stats; document counts from raw gallery case counts and TREC acquisition lock; dimensions and training policies from locks; selection/search policies from committed protocols and numerics.py.",
+      "sha256": "4924418bbb4d81b155a3ce4869294414d2c28a5f11310ae7e3ddc5251580a215"
+    },
+    "sections/results.tex": {
+      "sources": [
+        "dev",
+        "mechanism",
+        "trec",
+        "allpaid",
+        "gallery"
+      ],
+      "operation": "Numeric prose is rounded from generated/numeric_claims.json. DEV pair macros are equal-condition means. Full-native inequality is independently checked. G paid_top10: aggregate_five_seed_conditions filtered FiQA/e5_small_base/arc2_global_tangent2_r1/allpaid28819/50pct, paid_returned_share.after.top10.mean = 0.06472000000000001.",
+      "sha256": "9d8eb1ca94c1b86cd3e7b8ec18d3ec55b0636f9e0bec22f81615278a7376890d"
+    }
+  },
+  "verification": {
+    "dev": {
+      "conditions": 160,
+      "per_query_mean_max_error": 0.0
+    },
+    "allpaid": {
+      "conditions": 28,
+      "per_query_mean_max_error": 0.0
+    },
+    "trec": {
+      "conditions": 40,
+      "per_query_mean_max_error": 0.0
+    },
+    "trec_primary_counts": [
+      11,
+      19,
+      0
+    ],
+    "dev_ARC2_ndcg_below_native_references": {
+      "full_x": 24,
+      "full_y": 24
+    },
+    "no_new_experiment": "Only completed scoring JSON and saved per-query metric NPY read; qrels never read."
+  },
+  "prose_index_refresh": {
+    "at_utc": "2026-11-01T19:13:19.826575+00:00",
+    "script": "paper/scripts/summarize_reviews.py",
+    "changed_prose_paths": [],
+    "scope": "Refresh prose identity only. Existing empirical artifacts and all source hashes reverified unchanged; no re-render, fit, scoring or test-label access."
+  }
+}

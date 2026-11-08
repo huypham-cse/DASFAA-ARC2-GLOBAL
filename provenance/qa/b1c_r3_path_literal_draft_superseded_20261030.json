@@ -1,0 +1,19 @@
+{
+  "status": "PRE_RUN_UNCOMMITTED_DRAFT_SUPERSEDED",
+  "reason": "ARIS Round3 identified Windows Path serialization of remote POSIX restored_root",
+  "drafts": {
+    "b1c_r3_sources.json": {
+      "sha256": "447b56db5cb42e0c5a913dda185cfbe2ad5bf82da7690de1152ccb7b585d5d32",
+      "restored_root": "\\network-volume\\arc2_recovery_20261030\\restored"
+    },
+    "b1c_r3_existing.json": {
+      "sha256": "7a131a80f965bb561f3d5228be05d970b182950907c456a65e7cdd84fb1e2395"
+    },
+    "b1c_r3_lock.json": {
+      "sha256": "c18355b865b2bf2ba45f2cb3cda064ad7ef207163d2df2d6ea71fb806689d042",
+      "restored_root": "\\network-volume\\arc2_recovery_20261030\\restored"
+    }
+  },
+  "scientific_run_started": false,
+  "qrels_opened": false
+}

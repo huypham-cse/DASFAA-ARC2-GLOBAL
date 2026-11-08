@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-30T17:47:27.882752+00:00",
+  "progress": {
+    "stage": "R3_GROUP_START",
+    "group": "NanoHotpotQA_e5_small_base_seed67_fixed1024_embedding_converter_paper_spec",
+    "group_index": 109,
+    "groups_total": 120,
+    "rankings_complete": 325,
+    "rankings_total": 358
+  },
+  "observed_via": "authenticated SSH read of live progress.json after full00:47:09status snapshot"
+}

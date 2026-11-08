@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-27T13:41:18.501857+00:00",
+  "scope": "Raw-based table/export integrity plus manual inspection of PNG and Poppler PDF raster; not scientific inference",
+  "figure_conditions": 12,
+  "full_condition_rows": 90,
+  "full_seed_case_rows": 450,
+  "exports": [
+    "pdf",
+    "svg",
+    "png"
+  ],
+  "visual_checks": [
+    "Six panels readable without clipped labels/legend",
+    "Open=pristine proxy; filled=paid true replacement; paired endpoints correctly encoded",
+    "Fitting-pair counts1024/28819 explicit; paidpopulation50% reference",
+    "Negative effects present; descriptive means without uncertainty claims"
+  ],
+  "pdf_renderer": "MiKTeX pdftoppm 90dpi",
+  "svg_xml": "PASS; editable text",
+  "render_preview_sha256": "df7de6833b00e41a39c298a92dbf0710d4cfd0acde53496cfc3612d6c994c2ea",
+  "export_sha256": {
+    "SUMMARY.md": "0ab1114335049cf0e2e0b733903445837d235ddd35f9ccd588d17ce00582985c",
+    "diagnostic_tables.csv": "820a13c4425ed6b6977dae15a42ccd559d6ca4dd70e567765bd10578d1e1fa5e",
+    "diagnostic_cases.csv": "2949f45a1e14984789880ad9047aa991b1e155d6105853b159512a74fcd6de3a",
+    "figures/b1g_mixed_gallery_diagnostics.csv": "5bfcaf95255b642aef5bf1388698b933a6f85d6c26b2d16d2a00d049da84cd15",
+    "figures/b1g_mixed_gallery_diagnostics.pdf": "f90949434f6395aafca4e95eb7e993ad688006d663c8b782311293d0600fd8ba",
+    "figures/b1g_mixed_gallery_diagnostics.svg": "545dbc7f60e85f1d49b1986d5d31dd916e8acb4aca342fb85882ebc0df96cbab",
+    "figures/b1g_mixed_gallery_diagnostics.png": "e02e5f4974fe9d0b963bede9ec5b84cf2b0b4223eb2157a8fd03c30a2243f101"
+  },
+  "rendering_provenance_sha256": "8969c714ffbfc798504007b07d2e828314bff6eb2acadebf4ffecfdc319d0b53"
+}

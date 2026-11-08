@@ -1,0 +1,69 @@
+{
+  "status": "B1G_RANK_PASS",
+  "request_sha256": "631c1e915341302d61da7743fdf05b910721c3bcf88204d2a3d2d03d7eeae8b0",
+  "group_id": "NanoHotpotQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1",
+  "input_hashes": {
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_small_x_docs.npy": "fc8e4146062b1db19e54faae819c38f18061c05ac4cd7de23320ca0fc2e2b374",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoHotpotQA/e5_base_y_queries.npy": "3f692fa25f82f61cae9f178b5b0e0164fbb5bc050d1419e36e3ae40cc074619a",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/27728b4305817d662eb6697b212c2a8958b0827aa92f45e5a5ebc4acd0dce0a5.json": "27728b4305817d662eb6697b212c2a8958b0827aa92f45e5a5ebc4acd0dce0a5",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/74d7775befb9108c9348c1fe9990c17df67f59741ab356ccdbc1e197698fff03.npy": "74d7775befb9108c9348c1fe9990c17df67f59741ab356ccdbc1e197698fff03",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/sample_NanoHotpotQA_458d2dd0a83af0a4.npy": "f65d6f780744e649233decc0a07b4c4ae888369e832c8d219dc89bc19f268067",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/coefficients/NanoHotpotQA_e5_small_base_seed29/parameters.npz": "f503aacd7b4bf2e63064c992baa6b948148eb60c6651bf6e0a7ad92d2a88137f",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/b1a2388643327005d4bda86c81c2f4e38a666150ea617216f21da162fef0a113.npy": "b1a2388643327005d4bda86c81c2f4e38a666150ea617216f21da162fef0a113",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/7f9a60b15a4041541a2387e5d65670d209dd8585d5599fd3536a82de29c2f5a2.npy": "12acb47ae85e2e5aaf1727f6336f62abf823b4d829a7eae11b1a4c2729c845d3",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_e5_small_base_arc2_global_tangent2_r1_seed29_25pct.npy": "3946a1652f4725b48605ba816486ce4bf2d02e065c6207b1e30f489ebf811d33",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/2ec07747bd1721419d863b18c2acdc261be06c88246f73cd047c6589def90857.npy": "2ec07747bd1721419d863b18c2acdc261be06c88246f73cd047c6589def90857",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/6a48a7c019aa4a80e678ae220c38d3fafb6c2436efc98265a530d8d4ec3a2f97.npy": "f41416ff37675a4e4c133d9213ae4f4906599b07f40fddb7ac9316451780eb5d",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_e5_small_base_arc2_global_tangent2_r1_seed29_50pct.npy": "4b8142dcd94bffd0a2d9841a927e9050d245157c385233e2e040e13fa1279611",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/inputs/4802db2cefdca215934af465d86305255e0fcdd16a2533e362d17cd551706bf3.npy": "4802db2cefdca215934af465d86305255e0fcdd16a2533e362d17cd551706bf3",
+    "/root/arc2_global_paper_20261025/code_515b3d1_b1g/results/b1g_full_main_r1_20261027/execution_paid_targets/d1dc20f0050cdc4861827532aaf1567016db123931307451344c9a30f058a0e9.npy": "38b4a6f00b1ac46de56ae8f5d8be4d5ce201be1db443f2446bef4af9b15340ab",
+    "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/rankings/NanoHotpotQA_e5_small_base_arc2_global_tangent2_r1_seed29_75pct.npy": "9c5e1f8f5d14d1778dff256aa681ff18b0e5b21552e91285142df924273d1c35"
+  },
+  "failures": [],
+  "new_physical_document_encodes": 0,
+  "new_fits": 0,
+  "qrels_read": false,
+  "artificial_time_or_memory_caps": null,
+  "pid": 4055021,
+  "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+  "numpy": "2.4.6",
+  "started_unix": 1793083123.7857985,
+  "dataset": "NanoHotpotQA",
+  "pair": "e5_small_base",
+  "seed": 29,
+  "regime": "fixed1024",
+  "method": "arc2_global_tangent2_r1",
+  "documents": 5090,
+  "queries": 50,
+  "sample_documents": 512,
+  "proxy_semantics": "pristine prediction for every document, including anchors",
+  "score_arithmetic": "float32 query batch16 @ gallery.T; stable row-order ties; identical ID exclusion",
+  "cases": [
+    {
+      "case_id": "NanoHotpotQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1_25pct",
+      "status": "PASS",
+      "after_sha256": "3946a1652f4725b48605ba816486ce4bf2d02e065c6207b1e30f489ebf811d33"
+    },
+    {
+      "case_id": "NanoHotpotQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1_50pct",
+      "status": "PASS",
+      "after_sha256": "4b8142dcd94bffd0a2d9841a927e9050d245157c385233e2e040e13fa1279611"
+    },
+    {
+      "case_id": "NanoHotpotQA_e5_small_base_seed29_fixed1024_arc2_global_tangent2_r1_75pct",
+      "status": "PASS",
+      "after_sha256": "9c5e1f8f5d14d1778dff256aa681ff18b0e5b21552e91285142df924273d1c35"
+    }
+  ],
+  "artifacts": {
+    "before.npy": {
+      "sha256": "00b3fbe0e465e7a394c3bb8fe8ca35e3f60abe94c1e4647473d44ec683fe675e"
+    },
+    "sample_proxy.npy": {
+      "sha256": "1f8924118a082239294994ce851dcbc9bd1709a90bb20282770e6f77d7c03e36"
+    }
+  },
+  "wall_seconds": 0.37679188046604395,
+  "peak_process_rss_bytes": 559083520,
+  "ended_unix": 1793083124.162805
+}

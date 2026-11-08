@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "method": "simplelinear",
+  "regime": "anchors",
+  "seed": 29,
+  "lockpath": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/configs/b1c_r3_lock.json",
+  "output": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoFEVER_NanoFEVER_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/worker",
+  "paired_source": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoFEVER_NanoFEVER_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/NanoFEVER_paired_source.npy",
+  "paired_target": "/network-volume/arc2_recovery_20261030/code_61f7317_b1c_r3/results/b1c_r3_full_mini_r3b_20261030t0347/neural/NanoFEVER_NanoFEVER_minilm_distilroberta_seed29_fixed1024_simplelinear_official_final50_mlp5/NanoFEVER_paired_target.npy",
+  "full_source": "/network-volume/arc2_recovery_20261030/restored/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/vectors/NanoFEVER/minilm_x_docs.npy",
+  "code_commit": "61f73171b1869a186648aadd88f1b6f81a61376b",
+  "input_sha256": {
+    "paired_source": "891495a4c456424fda25bce373a4528091ee0bbab8b95f6b71a9660e8b27cbae",
+    "paired_target": "84c965f231568ae850b785b8e73b713a5fe8479804c72dfa6c971ed7648cb9ca",
+    "full_source": "1ec9e11882ea7138914d295241ce1a07f3be74dc359f1c6cde773694ecc4752c"
+  }
+}

@@ -1,0 +1,6 @@
+{"unix": 1792954126.583908, "pid": 2879890, "process_rss_bytes": 36896768, "host_available_memory_bytes": 2016393154560, "host_cpu_percent": 19.3}
+{"unix": 1792954127.584788, "pid": 2879890, "process_rss_bytes": 164904960, "host_available_memory_bytes": 2016412430336, "host_cpu_percent": 0.0}
+{"unix": 1792954128.5865378, "pid": 2879890, "process_rss_bytes": 164995072, "host_available_memory_bytes": 2016408584192, "host_cpu_percent": 15.8}
+{"unix": 1792954129.587479, "pid": 2879890, "process_rss_bytes": 79765504, "host_available_memory_bytes": 2016376410112, "host_cpu_percent": 16.5}
+{"unix": 1792954130.5884466, "pid": 2879890, "process_rss_bytes": 192004096, "host_available_memory_bytes": 2016132640768, "host_cpu_percent": 16.2}
+{"unix": 1792954130.8000238, "pid": 2879890, "process_rss_bytes": 82919424, "host_available_memory_bytes": 2016050360320, "host_cpu_percent": 16.5}

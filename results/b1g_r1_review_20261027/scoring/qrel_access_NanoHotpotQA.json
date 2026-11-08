@@ -1,0 +1,13 @@
+{
+  "dataset": "NanoHotpotQA",
+  "first_dev_qrel_open": "2026-10-27T13:31:03.372350+00:00",
+  "first_access_receipt": "first_dev_qrel_open.json",
+  "expected_source": {
+    "format": "parquet",
+    "sha256": "22cdc93f1f37ad3c39b1a94f902c115e79d2f0fe349d77ab960d80cdd5444be5",
+    "bytes": 3424,
+    "implicit_binary_grade": 1,
+    "path": "/root/arc2_global_paper_20261025/code_4056612/results/b1m_full_r1_20261026/scoring_r2_binary/qrels_NanoHotpotQA.parquet"
+  },
+  "exposure": "DEV, not independent confirmation"
+}

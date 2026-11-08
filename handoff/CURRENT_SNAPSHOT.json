@@ -1,0 +1,10 @@
+{
+  "source_commit": "c5cb744e00c97124f2670a5f9ad897537b79bbfd",
+  "previous_source_commit": "7d42ec802600816378f24617241d7cb7efe87c9f",
+  "client_date": "2026-11-02",
+  "paper_integrates_TC1L_and_GCPA": true,
+  "previous_files_preserved": 7110,
+  "R3_files_preserved": 6258,
+  "private_development_not_anonymous": true,
+  "new_scientific_run": false
+}

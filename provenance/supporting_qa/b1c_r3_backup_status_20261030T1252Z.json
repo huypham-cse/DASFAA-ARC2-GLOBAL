@@ -1,0 +1,13 @@
+{
+  "scope": "Current restarted backup session; partial coverage only",
+  "latest_event": {
+    "status": "FILES_COPIED_VERIFIED",
+    "files": 650,
+    "bytes": 20419491641,
+    "utc": "20261030T125150_814186Z"
+  },
+  "verified_files": 650,
+  "verified_bytes": 20419491641,
+  "inventory_files": 2010,
+  "local_root": "D:\\ARC2-B1c-R3-backup-20261030"
+}
